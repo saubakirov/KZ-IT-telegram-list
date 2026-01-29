@@ -40,6 +40,22 @@ def generate_toc(categories_used: list[str], category_names: dict) -> str:
     return "\n".join(lines)
 
 
+def format_member_count(count: int | None) -> str:
+    """Format member count as badge or empty string."""
+    if count is None:
+        return ""
+    if count >= 1000:
+        return f" `{count/1000:.1f}k`"
+    return f" `{count}`"
+
+
+def format_entry(entry: dict) -> str:
+    """Format a single entry with optional member count."""
+    count = entry.get("member_count")
+    count_str = format_member_count(count)
+    return f"- [{entry['name']}](https://t.me/{entry['handle']}){count_str} - {entry['description']}"
+
+
 def generate_groups_section(groups: list, category_names: dict) -> str:
     """Generate groups section organized by category."""
     lines = ["## Groups", ""]
@@ -55,9 +71,9 @@ def generate_groups_section(groups: list, category_names: dict) -> str:
         lines.append(f"### {cat_name}")
         lines.append("")
         
-        # Sort entries alphabetically
-        for entry in sorted(by_category[cat], key=lambda x: x["name"].lower()):
-            lines.append(f"- [{entry['name']}](https://t.me/{entry['handle']}) - {entry['description']}")
+        # Sort entries by member count (descending), then alphabetically
+        for entry in sorted(by_category[cat], key=lambda x: (-(x.get("member_count") or 0), x["name"].lower())):
+            lines.append(format_entry(entry))
         
         lines.append("")
     
@@ -68,8 +84,9 @@ def generate_channels_section(channels: list) -> str:
     """Generate channels section."""
     lines = ["## Channels", ""]
     
-    for entry in sorted(channels, key=lambda x: x["name"].lower()):
-        lines.append(f"- [{entry['name']}](https://t.me/{entry['handle']}) - {entry['description']}")
+    # Sort by member count descending, then alphabetically
+    for entry in sorted(channels, key=lambda x: (-(x.get("member_count") or 0), x["name"].lower())):
+        lines.append(format_entry(entry))
     
     lines.append("")
     return "\n".join(lines)
@@ -79,8 +96,9 @@ def generate_bots_section(bots: list) -> str:
     """Generate bots section."""
     lines = ["## Bots", "", "Bots created by Kazakhstan developers:", ""]
     
-    for entry in sorted(bots, key=lambda x: x["name"].lower()):
-        lines.append(f"- [{entry['name']}](https://t.me/{entry['handle']}) - {entry['description']}")
+    # Sort by member count descending, then alphabetically
+    for entry in sorted(bots, key=lambda x: (-(x.get("member_count") or 0), x["name"].lower())):
+        lines.append(format_entry(entry))
     
     lines.append("")
     return "\n".join(lines)

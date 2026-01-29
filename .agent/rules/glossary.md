@@ -1,72 +1,76 @@
-# HL__glossary.md — Глоссарий проекта KZ-IT-telegram-list
+# Project Glossary — KZ-IT-telegram-list
 
-## Термины Telegram
+## Telegram Terms
 
-| Термин | Определение |
-|--------|-------------|
-| **Группа (Group)** | Telegram-чат для интерактивных обсуждений. Участники могут писать сообщения. |
-| **Канал (Channel)** | Telegram-лента для односторонней публикации. Только администраторы публикуют контент. |
-| **Бот (Bot)** | Автоматизированный Telegram-сервис. Взаимодействие через команды. |
-| **Handle** | Уникальный идентификатор Telegram-сообщества (после `t.me/`). |
+| Term | Definition |
+|------|------------|
+| **Group** | Interactive Telegram chat where members can post messages |
+| **Channel** | One-way Telegram feed where only admins can post |
+| **Bot** | Automated Telegram service that responds to commands |
+| **Handle** | Unique Telegram identifier (the part after `t.me/`) |
+| **Member Count** | Number of users in a group/channel (subscribers for channels) |
 
-## Предметные области (категории сообществ)
+## Community Categories
 
-| Сокращение | Полное название |
-|------------|-----------------|
-| **BI** | Business Intelligence — бизнес-аналитика |
-| **Frontend** | Фронтенд-разработка (веб-интерфейсы) |
-| **Backend** | Бэкенд-разработка (серверная логика) |
-| **DevOps** | Развёртывание и инфраструктура |
-| **QA** | Quality Assurance — тестирование |
-| **DWH** | Data Warehouse — хранилища данных |
+| Slug | Display Name |
+|------|--------------|
+| `programming-languages` | Programming Languages |
+| `web-development` | Web Development |
+| `mobile` | Mobile Development |
+| `data-analytics` | Data & Analytics |
+| `devops-sysadmin` | DevOps & SysAdmin |
+| `security` | Security |
+| `qa-testing` | QA & Testing |
+| `gamedev` | Game Development |
+| `hardware` | Hardware & Electronics |
+| `blockchain` | Blockchain |
+| `management` | Engineering Management |
+| `general` | General IT |
+| `jobs` | Jobs & Careers |
+| `education` | Education & Learning |
+| `news` | News |
+| `events` | Events |
+| `startups` | Startups |
+| `marketplace` | Marketplace |
+
+## Technology Abbreviations
+
+| Abbr | Full Name |
+|------|-----------|
+| **BI** | Business Intelligence |
+| **DWH** | Data Warehouse |
 | **ML/DS** | Machine Learning / Data Science |
-| **InfoSec/ИБ** | Информационная безопасность |
-| **GameDev** | Разработка игр |
-| **VoIP** | Voice over IP — IP-телефония |
-| **CCTV** | Видеонаблюдение |
+| **QA** | Quality Assurance |
+| **DevOps** | Development Operations |
+| **InfoSec** | Information Security |
+| **VoIP** | Voice over IP |
 
-## Языки программирования и технологии
+## Kazakhstan-Specific Terms
 
-| Сокращение | Описание |
-|------------|----------|
-| **Python** | Язык программирования |
-| **Java/JUG** | Java User Group |
-| **Go/Golang** | Язык программирования от Google |
-| **PHP** | Серверный язык для веба |
-| **Ruby/Rails** | Ruby on Rails фреймворк |
-| **Flutter/Dart** | Кроссплатформенная мобильная разработка |
-| **.NET** | Microsoft .NET платформа |
-| **C/C++** | Системные языки программирования |
-| **Rust** | Язык для системного программирования |
-| **1С** | Платформа автоматизации бизнеса |
-| **MikroTik** | Сетевое оборудование |
+| Term | Description |
+|------|-------------|
+| **TSARKA** | Center for Analysis and Investigation of Cyber Attacks (KZ cybersec org) |
+| **1C** | Russian/CIS business automation platform, popular in KZ |
+| **Almaty** | Largest city in Kazakhstan |
+| **Astana** | Capital of Kazakhstan |
 
-## TFW (Trace-First Workflow)
+## Workflow Terms (TFW)
 
-| Термин | Определение |
-|--------|-------------|
-| **TFW** | Trace-First Workflow — методология воспроизводимой работы с ИИ |
-| **CL Mode** | Chat Loop — режим диалога (ИИ предлагает, человек выполняет) |
-| **AG Mode** | Autonomous — автономный режим работы ИИ с файлами |
-| **HL файл** | High Level — файл контекста/рамки |
-| **TS файл** | Task Spec — файл постановки задачи |
-| **RF файл** | Result File — файл результата |
-| **DoD** | Definition of Done — критерии завершённости |
-| **Summary** | Обязательная строка-резюме в конце каждого ответа агента |
+| Term | Definition |
+|------|------------|
+| **TFW** | Trace-First Workflow — methodology for reproducible AI-assisted work |
+| **HL** | High Level — context/framing document |
+| **TS** | Task Spec — task specification with inputs/outputs/DoD |
+| **RF** | Result File — deliverable or output |
+| **DoD** | Definition of Done — completion criteria |
+| **CL Mode** | Chat Loop — AI proposes, human validates |
+| **AG Mode** | Autonomous — AI executes without external validation |
 
-## Географические термины
+## Data Formats
 
-| Сокращение | Значение |
-|------------|----------|
-| **KZ/КЗ** | Казахстан |
-| **Алматы** | Крупнейший город Казахстана |
-| **Астана** | Столица Казахстана |
-| **ЦАРКА** | Центр анализа и расследования кибератак |
-
-## Форматы данных
-
-| Формат | Пример |
-|--------|--------|
-| **Ссылка** | `https://t.me/handle` |
-| **Участники** | `(1000+ человек, 12.05.2022)` |
-| **Дата** | `DD.MM.YYYY` |
+| Format | Example |
+|--------|---------|
+| **Date** | `2026-01-30` (ISO 8601: YYYY-MM-DD) |
+| **Handle** | `python_kz` (without @ or t.me/) |
+| **Link** | `https://t.me/python_kz` |
+| **Member Count** | `3200` (integer) or `3.2k` (display) |

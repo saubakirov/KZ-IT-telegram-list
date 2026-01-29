@@ -1,80 +1,78 @@
-# HL__conventions.md — Конвенции проекта KZ-IT-telegram-list (TFW v2)
+# Project Conventions — KZ-IT-telegram-list
 
-## 1) Цель проекта
-Поддержание актуального каталога IT Telegram-сообществ Казахстана:
-- Группы (чаты для обсуждений)
-- Каналы (информационные ленты)
-- Боты (сервисы казахстанских разработчиков)
+## 1) Project Purpose
+Maintain an up-to-date curated list of IT Telegram communities in Kazakhstan:
+- **Groups** — interactive chats for discussions
+- **Channels** — one-way news/content feeds
+- **Bots** — automated services by KZ developers
 
-## 2) Обязательный минимальный набор артефактов (корень)
-| Файл | Назначение |
-|------|------------|
-| `README.md` | Основной каталог сообществ |
-| `AGENTS.md` | Правила поведения ИИ-агента |
-| `TASK.md` | Текущие задачи, DoD, риски |
-| `STEPS.md` | Журнал итераций (Summary-строки) |
-| `/00_meta/HL_conventions.md` | Этот файл — конвенции проекта |
-| `/00_meta/HL_glossary.md` | Глоссарий проекта |
-| `/init/` | TFW v2 шаблонные инструкции |
+## 2) Project Structure
+| Path | Purpose |
+|------|---------|
+| `README.md` | Auto-generated Awesome List (DO NOT EDIT DIRECTLY) |
+| `data/communities.json` | Source of truth — all community data |
+| `scripts/` | Validation and generation scripts |
+| `CONTRIBUTING.md` | Contributor workflow guide |
+| `LICENSE` | CC0 Public Domain |
+| `.agent/rules/` | AI agent configuration |
+| `tasks/` | TFW task folders |
 
-## 3) Типы файлов (канонические)
-### HL__ (High Level)
-Контекст/рамка проекта. Не является задачей.
-
-### TS__ (Task Spec)
-Постановка задачи: входы/выходы/ограничения/DoD.
-
-### RF__ (Result File)
-Результат работы: данные, отчёты, статистика.
-
-## 4) Формат записи в каталоге
-```markdown
-N. [Описание сообщества](https://t.me/handle) - (N+ человек, DD.MM.YYYY)
+## 3) Workflow
+```
+Edit JSON → Validate Schema → Validate Links → Generate README → Commit
 ```
 
-### Обязательные элементы
-- Номер записи (сквозная нумерация в категории)
-- Описание на русском языке
-- Telegram ссылка формата `https://t.me/...`
-- Количество участников с пометкой `+` (примерное значение)
-- Дата актуализации
+### Scripts
+| Script | Purpose |
+|--------|---------|
+| `validate_schema.py` | Check JSON structure, categories, fields |
+| `validate_links.py` | Check links, fetch member counts |
+| `generate_readme.py` | Generate README.md from JSON |
 
-## 5) Категории каталога
-1. **Группы** — интерактивные чаты для обсуждений
-2. **Каналы** — информационные ленты (односторонняя публикация)
-3. **Боты** — автоматизированные сервисы
+## 4) JSON Entry Format
+```json
+{
+  "name": "Community Name",
+  "handle": "telegram_handle",
+  "description": "English description",
+  "description_ru": "Русское описание",
+  "category": "category-slug",
+  "member_count": 1234,
+  "last_verified": "YYYY-MM-DD"
+}
+```
 
-## 6) Критерии включения в каталог
-- Фокус на IT-тематику
-- Казахстанская аудитория или релевантность для КЗ
-- Минимальная активность (не мёртвые группы)
-- Отсутствие спама и коммерческой накрутки
+### Required Fields
+- `name`, `handle`, `description`, `last_verified`
+- `category` (for groups only)
 
-## 7) Режимы исполнения (TFW)
-### CL (Chat Loop) — по умолчанию
-- ИИ предлагает изменения
-- Человек валидирует ссылки, проверяет количество участников
-- ИИ не может напрямую проверить Telegram
+### Date Format
+- Use ISO format: `YYYY-MM-DD` (e.g., `2026-01-30`)
 
-### AG (Autonomous)
-- ИИ работает с файлами: реструктуризация, форматирование
-- Без внешней валидации данных
+## 5) Categories
+Defined in `data/communities.json` under `categories` key.
+Validation script enforces category membership.
 
-## 8) Качество данных
-- Никаких placeholder-ов
-- Ссылки должны быть проверяемыми
-- Даты актуализации обязательны
-- При добавлении новых записей указывать источник
+## 6) Inclusion Criteria
+- IT-focused topic
+- Kazakhstan audience or relevance
+- Active (not dead/archived)
+- Quality content (no spam, no commercial-only)
 
-## 9) Summary-строка
-Каждый ответ агента завершается строкой:
+## 7) Quality Standards
+- No placeholders or fake data
+- Links must be verified
+- Dates must be current
+- English descriptions required
+
+## 8) AI Agent Modes
+| Mode | When to Use |
+|------|-------------|
+| **AG** (Autonomous) | File operations, restructuring, formatting |
+| **CL** (Chat Loop) | External data validation, link checking |
+
+## 9) Summary Format
+Agent responses end with:
 ```
 [YYYY-MM-DD] **Summary**: Stage=... | Iteration=N | Goal=... | Task=... | Status/Problem=...
 ```
-
-## 10) Процесс обновления
-1. Предложение изменения (ИИ или человек)
-2. Валидация ссылок (человек)
-3. Актуализация дат и количества участников
-4. Коммит в репозиторий
-5. Запись в STEPS.md
