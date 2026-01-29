@@ -1,14 +1,28 @@
 # STEPS.md — Progress Log
 
-[2026-01-30] **Summary**: Stage=Init | Iteration=1 | Goal=TFW Initialization | Task=Create core TFW files | Status/Problem=AGENTS.md, TASK.md, STEPS.md created
-[2026-01-30] **Summary**: Stage=Implementation | Iteration=1 | Goal=Update 00_meta | Task=Customize HL_conventions.md and HL_glossary.md | Status/Problem=Completed for project context
-[2026-01-30] **Summary**: Stage=Planning | Iteration=1 | Goal=Awesome List Restructure | Task=TFW-01 Research | Status/Problem=Researched best practices from sindresorhus/awesome and ebertti/awesome-telegram
-[2026-01-30] **Summary**: Stage=Planning | Iteration=2 | Goal=Awesome List Restructure | Task=TFW-01 HL Created | Status/Problem=Architecture decisions documented, awaiting user approval
-[2026-01-30] **Summary**: Stage=Implementation | Iteration=3 | Goal=Awesome List Restructure | Task=TFW-01 Data Migration | Status/Problem=Created communities.json with 40 groups, 23 channels, 5 bots
+## Format
+```
+[DATE] **Summary**: Stage=... | Iteration=N | Goal=... | Task=... | Status/Problem=...
+```
+
+---
+
+## TFW-01: Awesome List Restructure
+
+[2026-01-30] **Summary**: Stage=Planning | Iteration=1 | Goal=Awesome List Restructure | Task=TFW-01 Init | Status/Problem=Created HL, researched best practices
+[2026-01-30] **Summary**: Stage=Planning | Iteration=2 | Goal=Awesome List Restructure | Task=TFW-01 TS | Status/Problem=Created Task Spec with decisions
+[2026-01-30] **Summary**: Stage=Implementation | Iteration=3 | Goal=Awesome List Restructure | Task=TFW-01 Data | Status/Problem=Created communities.json with 68 entries
 [2026-01-30] **Summary**: Stage=Implementation | Iteration=4 | Goal=Awesome List Restructure | Task=TFW-01 Scripts | Status/Problem=Created validate_links.py and generate_readme.py
-[2026-01-30] **Summary**: Stage=Implementation | Iteration=5 | Goal=Awesome List Restructure | Task=TFW-01 Community Files | Status/Problem=Created CONTRIBUTING.md, LICENSE (CC0)
+[2026-01-30] **Summary**: Stage=Implementation | Iteration=5 | Goal=Awesome List Restructure | Task=TFW-01 Docs | Status/Problem=Created CONTRIBUTING.md, LICENSE (CC0)
 [2026-01-30] **Summary**: Stage=Testing | Iteration=6 | Goal=Awesome List Restructure | Task=TFW-01 Validation | Status/Problem=All 68 links validated successfully
-[2026-01-30] **Summary**: Stage=Implementation | Iteration=1 | Goal=Enhanced Validation | Task=TFW-02 | Status/Problem=Created validate_schema.py and updated validate_links.py with member counts, rate limiting, retry
 
+---
 
+## TFW-02: Enhanced Validation & Cleanup
 
+[2026-01-30] **Summary**: Stage=Implementation | Iteration=1 | Goal=Enhanced Validation | Task=TFW-02 Scripts | Status/Problem=Created validate_schema.py, updated validate_links.py with rate limiting
+[2026-01-30] **Summary**: Stage=Testing | Iteration=2 | Goal=Enhanced Validation | Task=TFW-02 Test | Status/Problem=Schema valid, member counts parsed successfully
+[2026-01-30] **Summary**: Stage=Implementation | Iteration=3 | Goal=Enhanced Validation | Task=TFW-02 Cleanup | Status/Problem=Removed 12 dead communities
+[2026-01-30] **Summary**: Stage=Implementation | Iteration=4 | Goal=Enhanced Validation | Task=TFW-02 Add | Status/Problem=Added 7 new communities (devsecopskz, saubakirov, dsmlkz_news, cloudreadykz, cloudnativekz, devsecopskz_jobs, cleverskz)
+[2026-01-30] **Summary**: Stage=Implementation | Iteration=5 | Goal=Enhanced Validation | Task=TFW-02 Docs | Status/Problem=Updated AGENTS.md, conventions.md, glossary.md to English
+[2026-01-30] **Summary**: Stage=Complete | Iteration=6 | Goal=Enhanced Validation | Task=TFW-02 RF | Status/Problem=Created RF, updated TASK.md. Final: 40 groups, 18 channels, 5 bots

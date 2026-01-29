@@ -120,7 +120,7 @@ def generate_readme(data: dict) -> str:
     # Header
     lines.append("# Awesome Kazakhstan IT Telegram")
     lines.append("")
-    lines.append("[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)")
+    lines.append("[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) ![Kazakhstan](https://img.shields.io/badge/🇰🇿-Kazakhstan-00AFCA)")
     lines.append("")
     lines.append("> A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community.")
     lines.append("")

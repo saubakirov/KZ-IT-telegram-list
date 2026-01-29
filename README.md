@@ -1,6 +1,6 @@
 # Awesome Kazakhstan IT Telegram
 
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) ![Kazakhstan](https://img.shields.io/badge/🇰🇿-Kazakhstan-00AFCA)
 
 > A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community.
 

@@ -1,32 +1,42 @@
-# TASK.md — KZ-IT-telegram-list
+# TASK.md — Current Task Status
 
-## Current Task
-**TFW-INIT-01**: Инициализация TFW-структуры для проекта
+## Active Task: None
 
-## Scope
-- Создание AGENTS.md с правилами для ИИ-агента
-- Обновление файлов 00_meta под контекст проекта
-- Создание базовых TFW-артефактов (TASK.md, STEPS.md)
+All planned tasks completed.
 
-## Boundaries
-- **In scope**: TFW-структура, документация
-- **Out of scope**: Актуализация данных в README (количество участников, новые группы)
+---
 
-## Definition of Done (DoD)
-- [x] AGENTS.md создан и соответствует шаблону TFW
-- [x] HL_conventions.md обновлён под контекст
-- [x] HL_glossary.md расширен терминами проекта
-- [x] TASK.md создан
-- [x] STEPS.md создан
+## Completed Tasks
 
-## Risks
-| Риск | Митигация |
-|------|-----------|
-| Данные в README устарели | Отдельная задача на актуализацию |
-| Ссылки могут быть битыми | Периодическая валидация человеком |
+### TFW-02: Enhanced Validation & Community Cleanup ✅
+**Date:** 2026-01-30
 
-## Next Tasks (Backlog)
-- TFW-02: Актуализация количества участников в группах
-- TFW-03: Проверка валидности всех ссылок
-- TFW-04: Добавление новых сообществ (ML/AI, DevOps, SRE)
-- TFW-05: Категоризация по уровню активности
+**Deliverables:**
+- `scripts/validate_schema.py` — JSON validation
+- `scripts/validate_links.py` — Link + member count validation
+- Removed 12 dead communities
+- Added 7 new communities
+- Updated docs to English
+
+**Final:** 40 groups · 18 channels · 5 bots
+
+---
+
+### TFW-01: Awesome List Restructure ✅
+**Date:** 2026-01-30
+
+**Deliverables:**
+- `data/communities.json` — Source of truth
+- `scripts/generate_readme.py` — README generator
+- `CONTRIBUTING.md` — Contributor guide
+- `LICENSE` — CC0
+
+---
+
+## Backlog
+
+| ID | Task | Priority |
+|----|------|----------|
+| TFW-03 | GitHub Actions CI | Low |
+| TFW-04 | README.ru.md (Russian) | Low |
+| TFW-05 | Archive section for dead links | Low |
