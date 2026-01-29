@@ -1,0 +1,573 @@
+{
+    "meta": {
+        "title": "Awesome Kazakhstan IT Telegram",
+        "description": "A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community",
+        "last_updated": "2026-01-30",
+        "source_repo": "https://github.com/saubakirov/KZ-IT-telegram-list"
+    },
+    "groups": [
+        {
+            "name": "BI Analysts Kazakhstan",
+            "handle": "kz_bi",
+            "description": "Business Intelligence analysts community",
+            "description_ru": "Сообщество BI аналитиков",
+            "category": "data-analytics",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "TSARKA Cybersecurity",
+            "handle": "cyberseckz",
+            "description": "Cybersecurity discussions in Kazakhstan (TSARKA public group)",
+            "description_ru": "Публичная группа ЦАРКА. Обсуждение вопросов ИБ в Казахстане",
+            "category": "security",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Frontend Kazakhstan",
+            "handle": "frontendkz",
+            "description": "Frontend developers community",
+            "description_ru": "Сообщество фронтенд разработчиков Казахстана",
+            "category": "web-development",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "The Tech KZ Chat",
+            "handle": "thetechkzchat",
+            "description": "Discussion group for IT and startups news channel",
+            "description_ru": "Чат для участников канала Одним предложением об IT и стартапах",
+            "category": "general",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Automation KZ",
+            "handle": "automation_kz",
+            "description": "Industrial automation and process engineering",
+            "description_ru": "Помощь молодым инженерам в автоматизации процессов и производства",
+            "category": "devops-sysadmin",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Python Kazakhstan",
+            "handle": "python_kz",
+            "description": "Python developers community",
+            "description_ru": "Группа казахстанских питонистов",
+            "category": "programming-languages",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "SysAdm.in Forum",
+            "handle": "sysadm_in",
+            "description": "System administrators forum group",
+            "description_ru": "Группа сисадминов форума forum.sys-adm.in",
+            "category": "devops-sysadmin",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "IT Bazaar KZ",
+            "handle": "itbazarkz",
+            "description": "IT equipment buy/sell marketplace",
+            "description_ru": "IT барахолка КЗ",
+            "category": "marketplace",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "IT Freelance KZ",
+            "handle": "itmankz",
+            "description": "Freelance IT jobs in Kazakhstan",
+            "description_ru": "Разовые IT работы в Казахстане",
+            "category": "jobs",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Datanomika",
+            "handle": "datanomika",
+            "description": "Data visualization, dashboards, business intelligence",
+            "description_ru": "О визуализации данных, интерактивной отчетности, BI",
+            "category": "data-analytics",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Backend Developers Kazakhstan",
+            "handle": "backenderskz",
+            "description": "Backend developers community",
+            "description_ru": "BDK - Backend Developers of Kazakhstan",
+            "category": "web-development",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Astana JUG",
+            "handle": "astanajug",
+            "description": "Java User Group in Astana",
+            "description_ru": "Сообщество Java разработчиков",
+            "category": "programming-languages",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "iOS Developers KZ",
+            "handle": "iOSDevelopers_KZ",
+            "description": "iOS developers community",
+            "description_ru": "iOS Developers community",
+            "category": "mobile",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Programmers Kazakhstan",
+            "handle": "devkz",
+            "description": "General programmers community",
+            "description_ru": "Программисты Казахстана",
+            "category": "general",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "GameDev KZ",
+            "handle": "gamedevkz",
+            "description": "Game developers community",
+            "description_ru": "Сообщество GameDev",
+            "category": "gamedev",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Golang Kazakhstan",
+            "handle": "go_kz",
+            "description": "Go programming language community",
+            "description_ru": "Сообщество программистов и почитателей языка Go",
+            "category": "programming-languages",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "PHP Developers KZ",
+            "handle": "phpdevconf",
+            "description": "PHP developers community",
+            "description_ru": "Чат PHP разработчиков",
+            "category": "programming-languages",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Ruby Ata",
+            "handle": "rubyata",
+            "description": "Ruby and Ruby on Rails community",
+            "description_ru": "Коммюнити Ruby и Ruby On Rails",
+            "category": "programming-languages",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "1C Kazakhstan",
+            "handle": "kz_1C",
+            "description": "1C Enterprise platform discussions",
+            "description_ru": "Обсуждение 1С",
+            "category": "programming-languages",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Flutter Dart KZ",
+            "handle": "dart_kz",
+            "description": "Flutter and Dart developers community",
+            "description_ru": "Сообщество для разработчиков на Flutter/Dart",
+            "category": "mobile",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": ".NET Kazakhstan",
+            "handle": "dotnetgroup",
+            "description": ".NET developers community",
+            "description_ru": "Сообщество разработчиков .NET",
+            "category": "programming-languages",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "DevNull KZ",
+            "handle": "devnullkz",
+            "description": "Night owl IT admins chat",
+            "description_ru": "Полуночные айтишники. Админский чат",
+            "category": "devops-sysadmin",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "MikroTik KZ",
+            "handle": "MikroTikKZ",
+            "description": "MikroTik networking equipment",
+            "description_ru": "Все о MikroTik не только в КЗ",
+            "category": "devops-sysadmin",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Radiotech KZ",
+            "handle": "radiotechkz",
+            "description": "Electronics and radio engineering forum",
+            "description_ru": "Группа Radiotech.kz, форум по электронике",
+            "category": "hardware",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "R0 Crew KZ",
+            "handle": "r0crewKZ",
+            "description": "R0 security research group",
+            "description_ru": "Группа R0 в Казахстане",
+            "category": "security",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "VoIP Kazakhstan",
+            "handle": "sipvoipkz",
+            "description": "VoIP and SIP telephony",
+            "description_ru": "Обсуждаем VoIP в Казахстане",
+            "category": "devops-sysadmin",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Mobile Developers KZ",
+            "handle": "mobile_developers_kz",
+            "description": "Mobile app developers community",
+            "description_ru": "Группа для мобильных разработчиков",
+            "category": "mobile",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "DIY Kazakhstan",
+            "handle": "diykz",
+            "description": "DIY makers and hobbyists",
+            "description_ru": "Самоделкины DIY KZ",
+            "category": "hardware",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "KZLUG",
+            "handle": "kzlug",
+            "description": "Kazakhstan Linux Users Group",
+            "description_ru": "Kazakhstan Linux Users Group",
+            "category": "devops-sysadmin",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "CCTV Kazakhstan",
+            "handle": "cctvkz",
+            "description": "Video surveillance systems discussion",
+            "description_ru": "Обсуждение видеонаблюдения в Казахстане",
+            "category": "hardware",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "C/C++ Kazakhstan",
+            "handle": "cppkz",
+            "description": "C and C++ developers community",
+            "description_ru": "Сообщество С/С++ разработчиков",
+            "category": "programming-languages",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Rust Kazakhstan",
+            "handle": "rustlang_kz",
+            "description": "Rust programming language community",
+            "description_ru": "Сообщество Rust-разработчиков",
+            "category": "programming-languages",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Ruby KZ",
+            "handle": "rubykz",
+            "description": "Ruby developers community",
+            "description_ru": "Сообщество Ruby разработчиков Казахстана",
+            "category": "programming-languages",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "DWH Kazakhstan",
+            "handle": "dwhkz",
+            "description": "Data Warehouse and Big Data discussions",
+            "description_ru": "DWH Community Big Data. Задачи и проблемы в разработке",
+            "category": "data-analytics",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Blockchain KZ",
+            "handle": "kz_blockchain",
+            "description": "Blockchain platform development",
+            "description_ru": "Обсуждение разработки блокчейн платформ",
+            "category": "blockchain",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "QA Community KZ",
+            "handle": "kzqacommunity",
+            "description": "QA specialists community",
+            "description_ru": "Сообщество QA специалистов Казахстана",
+            "category": "qa-testing",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "AQA Kazakhstan",
+            "handle": "AQA_kz",
+            "description": "QA automation engineers community",
+            "description_ru": "Сообщество QA автоматизаторов Казахстана",
+            "category": "qa-testing",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Illuminati Inc",
+            "handle": "illuminatinc",
+            "description": "IT community for knowledge sharing",
+            "description_ru": "IT-сообщество для обмена опытом и полезной информацией",
+            "category": "general",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Team Leads KZ",
+            "handle": "teamleads_kz",
+            "description": "Team leads and engineering managers",
+            "description_ru": "Тимлид не кодит",
+            "category": "management",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Projects Kazakhstan",
+            "handle": "projects_kz",
+            "description": "Project management community",
+            "description_ru": "Проектное сообщество Казахстана",
+            "category": "management",
+            "last_verified": "2026-01-30"
+        }
+    ],
+    "channels": [
+        {
+            "name": "Code KZ",
+            "handle": "codekz",
+            "description": "Deep learning, software engineering, Austrian economics by Yerzat Dulat",
+            "description_ru": "Deep learning, software engineering, Австрийская школа экономики. Канал Ерзата Дулат",
+            "category": "education",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "IT Jobs KZ",
+            "handle": "itjobskz",
+            "description": "IT job postings",
+            "description_ru": "ITjobskz IT Вакансии",
+            "category": "jobs",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "IT Jobs KZ Full",
+            "handle": "ITjobsKZ_Full",
+            "description": "Detailed IT job descriptions",
+            "description_ru": "Развернутое описание вакансий канала @ITjobskz",
+            "category": "jobs",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Mobile Jobs KZ",
+            "handle": "mobilejobskz",
+            "description": "Mobile developer job postings",
+            "description_ru": "Вакансии для мобильных разработчиков",
+            "category": "jobs",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Tech Preneurs",
+            "handle": "techpreneurs",
+            "description": "Tech entrepreneurship publication",
+            "description_ru": "Издание о технологическом предпринимательстве",
+            "category": "startups",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Almaty CSS",
+            "handle": "AlmatyCSS",
+            "description": "Almaty frontend developers channel",
+            "description_ru": "Телеграм канал алматинских фронтендеров",
+            "category": "web-development",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "DevKZ Jobs",
+            "handle": "devkz_jobs",
+            "description": "Developer job postings",
+            "description_ru": "Вакансии для разработчиков",
+            "category": "jobs",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Dev Skills",
+            "handle": "DevSkills",
+            "description": "Free IT resources, materials, courses",
+            "description_ru": "ИТ полезности: ссылки на бесплатные ресурсы, материалы, курсы",
+            "category": "education",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "DS/ML KZ Events",
+            "handle": "main_ds_kz",
+            "description": "Data Science and ML events",
+            "description_ru": "Канал с основными ивентами DS/ML.kz",
+            "category": "data-analytics",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "ML Jobs KZ",
+            "handle": "ml_jobs_kz",
+            "description": "ML and Data Science job postings",
+            "description_ru": "Канал с вакансиями и прочим DS/ML.kz",
+            "category": "jobs",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "TSARKA News",
+            "handle": "certkznews",
+            "description": "TSARKA cybersecurity news",
+            "description_ru": "Все новости ЦАРКА (Центр анализа и расследования кибер атак)",
+            "category": "security",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "IT Analysts KZ",
+            "handle": "itanalystskz",
+            "description": "IT analysts meetups and education",
+            "description_ru": "Канал для размещения информации по аналитике, митапам и обучению",
+            "category": "education",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Web Jobs KZ",
+            "handle": "webjobskz",
+            "description": "SMM, SEO, Designer job postings",
+            "description_ru": "Вакансии SMM, SEO, Дизайнеров связанные с интернетом",
+            "category": "jobs",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "The Tech KZ",
+            "handle": "thetechkz",
+            "description": "IT and startup news in one sentence",
+            "description_ru": "Новости IT и стартапов в одном предложении",
+            "category": "news",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "HackNU Info",
+            "handle": "HackNUinfo",
+            "description": "HackNU hackathon official channel",
+            "description_ru": "Официальный информационный канал HackNU",
+            "category": "events",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "NU ACM-W",
+            "handle": "nu_acm_w",
+            "description": "Women in Computing at Nazarbayev University",
+            "description_ru": "Educational and career opportunities for females in CS",
+            "category": "education",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Yessenov Foundation",
+            "handle": "yessenovfoundation",
+            "description": "Scholarships, grants, internships",
+            "description_ru": "Стажировки, гранты, стипендии. Фонд им. академика Шахмардана Есенова",
+            "category": "education",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Bluescreen KZ",
+            "handle": "bluescreenkz",
+            "description": "Tech news, games, cybersecurity in simple language",
+            "description_ru": "Рассказывать о технологиях понятным языком — наше кредо",
+            "category": "news",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Work IT KZ",
+            "handle": "workitkz",
+            "description": "IT job postings Kazakhstan",
+            "description_ru": "IT Вакансии Казахстан",
+            "category": "jobs",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Chocodev",
+            "handle": "chocodev",
+            "description": "Meetups and conferences by Chocofamily",
+            "description_ru": "Митапы и конференции от IT-холдинга Chocofamily",
+            "category": "events",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "KZ IT Events",
+            "handle": "kz_it_events",
+            "description": "IT events announcements in Kazakhstan",
+            "description_ru": "Анонсы IT-событий в Казахстане и в онлайне",
+            "category": "events",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "SysAdm.in InfoSec",
+            "handle": "sysadm_in_channel",
+            "description": "InfoSec news and articles",
+            "description_ru": "Канал InfoSec новостей и статей",
+            "category": "security",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "SysAdm.in Articles",
+            "handle": "sysadm_in_up",
+            "description": "IT articles for expanding knowledge",
+            "description_ru": "ИТ статьи для расширения кругозора",
+            "category": "education",
+            "last_verified": "2026-01-30"
+        }
+    ],
+    "bots": [
+        {
+            "name": "KZ Quake Bot",
+            "handle": "kzquake",
+            "description": "Earthquake monitoring in Kazakhstan",
+            "description_ru": "Бот следит за землетрясениями в КЗ",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "KazPost Bot",
+            "handle": "KazPostBot",
+            "description": "Track parcels, currency rates, traffic fines via Kazpost",
+            "description_ru": "Отслеживание посылок, курс валют АО Казпочта, поиск штрафов ПДД",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Shtraf KZ Bot",
+            "handle": "ShtrafKZBot",
+            "description": "Check and track fines, taxes, penalties",
+            "description_ru": "Проверяет задолженности, уведомляет о штрафах/налогах/пени",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Get Telegram ID Bot",
+            "handle": "Get_Telegram_ID_bot",
+            "description": "Get user and channel IDs",
+            "description_ru": "Бот подсказывает ID людей и каналов",
+            "last_verified": "2026-01-30"
+        },
+        {
+            "name": "Chat Prettier Bot",
+            "handle": "chat_prettier_bot",
+            "description": "Moderation bot: warnings, bans, message cleanup",
+            "description_ru": "Бот считает предупреждения, банит, чистит сообщения о входе/выходе",
+            "last_verified": "2026-01-30"
+        }
+    ],
+    "categories": {
+        "programming-languages": "Programming Languages",
+        "web-development": "Web Development",
+        "mobile": "Mobile Development",
+        "data-analytics": "Data & Analytics",
+        "devops-sysadmin": "DevOps & SysAdmin",
+        "security": "Security",
+        "qa-testing": "QA & Testing",
+        "gamedev": "Game Development",
+        "hardware": "Hardware & Electronics",
+        "blockchain": "Blockchain",
+        "management": "Engineering Management",
+        "general": "General",
+        "jobs": "Jobs & Careers",
+        "education": "Education & Learning",
+        "news": "News",
+        "events": "Events",
+        "startups": "Startups",
+        "marketplace": "Marketplace"
+    }
+}

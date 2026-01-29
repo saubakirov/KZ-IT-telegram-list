@@ -1,84 +1,160 @@
-# Список IT телеграм групп и каналов
+# Awesome Kazakhstan IT Telegram
 
-Список интересных телеграм каналов и групп для неравнодушных к IT, к компьютерам и программированию. Список для казахстанской аудитории
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Если у вас есть интересные каналы, группы и чаты - пожалуйста присылайте свои пулреквесты или пишите на почту
+> A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community.
 
-# Казахстанские телеграм группы
+🇰🇿 Focused on Kazakhstan's IT ecosystem — from programming languages and DevOps to startups and job postings.
 
-1. [Сообщество BI аналитиков](https://t.me/kz_bi) - (6100+ человек, 09.09.2022)
-1. [Публичная группа ЦАРКА. Обсуждение вопросов ИБ в Казахстане. ](https://t.me/cyberseckz) - (3100+ человек, 12.05.2022)
-2. [Сообщество фронтенд разработчиков Казахстана](https://t.me/frontendkz) - (2450+ человек, 12.05.2022)
-3. [Чат для участников канала Одним предложением об IT и стартапах. ](https://t.me/thetechkzchat) - (2000+ человек, 12.05.2022)
-3. [Данная группа предназначена для помощи молодым инженерам, студентам и тем кто интересуется автоматизацией процессов и производства. Мы постараемся помочь вам ответить на ваши вопросы.](https://t.me/automation_kz) - (2000+, 25.09.22)
-4. [Группа казахстанских питонистов](https://t.me/python_kz) - (1950+ человек, 12.05.2022)
-5. [Группа сисадминов форума https://forum.sys-adm.in](https://telegram.me/sysadm_in) - (1750+ человек, 12.05.2022)
-6. [IT барахолка КЗ](http://t.me/itbazarkz) - (1650+ человек, 12.05.2022)
-7. [Разовые IT работы в казахстане](https://t.me/itmankz) - (1650+ человек, 12.05.2022)
-8. [О визуализации открытых наборов данных, интерактивной управленческой отчетности (kpi dashboards), business intelligence.](https://t.me/datanomika) - (1400+ человек, 12.05.2022)
-9. [BDK - Backend Developers of Kazakhstan](https://t.me/backenderskz) - (1300+ человек, 12.05.2022)
-10. [Astana JUG Cообщество java разработчиков](https://t.me/astanajug) - (1250+ человек, 12.05.2022)
-10. [iOS Developers community](https://t.me/iOSDevelopers_KZ) - (1000+, 25.09.2022)
-11. [Программисты Казахстана](https://t.me/devkz) - (900+ человек, 12.05.2022)
-12. [Сообщество GameDev](https://t.me/gamedevkz) - (900+ человек, 12.05.2022)
-13. [Golang — сообщество программистов и почитателей языка Go в Казахстане](https://t.me/go_kz) - (750+ человек, 12.05.2022)
-14. [Чат PHP разработчиков](https://t.me/phpdevconf) - (650+ человек, 12.05.2022)
-15. [Коммюнити Ruby и Ruby On Rails](https://t.me/rubyata) - (650+ человек, 12.05.2022)
-16. [Обсуждение 1С](https://t.me/kz_1C) - (650+ человек, 12.05.2022)
-17. [Сообщество для разработчиков на Flutter/Dart](https://t.me/dart_kz) — (600+ человек, 12.05.2022)
-18. [Сообщество разработчиков .NET](https://t.me/dotnetgroup) - (550+ человека, 12.05.2022)
-19. [Полуночные айтишники. Админский чат. Ожидайте ночных сообщений](https://t.me/devnullkz) - (450+ человек, 12.05.2022)
-20. [MikroTikKZ. Все о mikrotik не только в КЗ](https://t.me/MikroTikKZ) - (450+ человек, 12.05.2022)
-22. [Группа Radiotech.kz, форум по электронике](https://t.me/radiotechkz) - (400+ человек, 12.05.2022)
-23. [Группа R0 в Казахстане r0crewKZ](https://t.me/r0crewKZ) - (350+ человек, 12.05.2022)
-24. [Обсуждаем VoIP в Казахстане](https://t.me/sipvoipkz) - (300+ человек, 12.05.2022)
-25. [Группа для мобильных разработчиков](https://t.me/mobile_developers_kz) - (250+ человек, 12.05.2022)
-26. [Самоделкины DYI kz](https://t.me/diykz) - (250+ человек, 12.05.2022)
-27. [Kazakhstan Linux Users Group. KZLUG юзер группа про линукс](https://t.me/kzlug) - (200+ человек, 12.05.2022)
-28. [Обсуждение CCTV видеонаблюдения в Казахстане. Опыт, законы, правила, модели и т.д.](https://t.me/cctvkz) - (200+ человек, 12.05.2022)
-29. [Сообщество С/С++ разработчиков](https://t.me/cppkz) - (150+ человек, 12.05.2022)
-30. [Сообщество Rust-разработчиков](https://t.me/rustlang_kz) - (100+ человек, 12.05.2022)
-31. [Сообщество Ruby и Ruby on Rails разработчиков Казахстана](https://t.me/rubykz) - (50+ человек, 12.05.2022)
-32. [DWH Community Big Data Делимся обсуждаем задачи, проблемы в разработке](https://t.me/dwhkz) - (50+ человек, 12.05.2022)
-33. [Группа обсуждения разработки блокчейн платформ](https://t.me/kz_blockchain) - (40+ человек, 12.05.2022)
-34. [Группа сообщества QA специалистов Казахстана.](https://t.me/kzqacommunity) - (470+ человек, 10.11.2022)
-35. [Сообщество QA автоматизаторов Казахстана](https://t.me/AQA_kz) - (60+ человек, 10.11.2022)
-36. [IT-сообщество, в котором обмениваются опытом и делятся полезной информацией](https://t.me/illuminatinc) - (250+ человек, 08.11.2022)
-37. [Тимлид не кодит](https://t.me/teamleads_kz) - (400 человек, 06.10.2025)
-38. [Проектное сообщество Казахстана](https://t.me/projects_kz) - (1700 человек, 06.10.2025)
+**40** groups · **23** channels · **5** bots
 
+## Contents
 
-# Казахстанские телеграм каналы
+- [Groups](#groups)
+  - [Blockchain](#blockchain)
+  - [Data & Analytics](#data--analytics)
+  - [DevOps & SysAdmin](#devops--sysadmin)
+  - [Game Development](#game-development)
+  - [General](#general)
+  - [Hardware & Electronics](#hardware--electronics)
+  - [Jobs & Careers](#jobs--careers)
+  - [Engineering Management](#engineering-management)
+  - [Marketplace](#marketplace)
+  - [Mobile Development](#mobile-development)
+  - [Programming Languages](#programming-languages)
+  - [QA & Testing](#qa--testing)
+  - [Security](#security)
+  - [Web Development](#web-development)
+- [Channels](#channels)
+- [Bots](#bots)
+- [Contributing](#contributing)
 
-0. [Deep learning, software engineering, Австрийская школа экономики. Канал Ерзата Дулат](https://t.me/codekz) (200+)
-1. [ITjobskz IT Вакансии](https://t.me/itjobskz) - (1000+)
-2. [Развернутое описание вакансий канала @ITjobskz](https://t.me/ITjobsKZ_Full) - (800+)
-3. [Вакансии для мобильных разработчиков](https://t.me/mobilejobskz) - (20+)
-4. [Издание о технологическом предпринимательстве](https://t.me/techpreneurs) - (500+)
-5. [Телеграм канал алматинских фронтендеров](https://t.me/AlmatyCSS) - (20+)
-6. [Вакансии для разработчиков](https://t.me/devkz_jobs) - (500+)
-7. [ИТ полезности ссылки на бесплатные ресурсы, материалы, курсы](https://t.me/DevSkills) - (40+)
-8. [Канал с основными ивентами DS/ML.kz](https://t.me/main_ds_kz) - (400+)
-9. [Канал с вакансиями и прочим DS/ML.kz](https://t.me/ml_jobs_kz) - (400+)
-10. [Все новости ЦАРКА (Центр анализа и расследования кибер атак)](https://t.me/certkznews) - (1000+)
-11. [ITAnalystsKZ — Канал для размещения информации по аналитике, по мероприятиям (митапам, аналитическим играм и обучению)](https://t.me/itanalystskz) - (100+)
-12. [Вакансии SMM, SEO, Дизайнеров итд, связанные с интернетом и продвижением, контентом.](https://t.me/webjobskz) - (300+)
-13. [Новости IT и стартапов в одном предложении. Мы экономим ваше время!](https://t.me/thetechkz)
-14. [Официальный информационный канал HackNU 2019.](https://t.me/HackNUinfo) - (400+)
-15. [Chat to inform about the educational and career opportunities available to females in CS and to provide useful materials. Celebrate, inform and support women in computing!](https://t.me/nu_acm_w) - (100+)
-16. [Новости IT и стартапов в одном предложении.](https://t.me/thetechkz) - (6000+)
-17. [Стажировки, гранты, стипендии / Научно-образовательный фонд им. академика Шахмардана Есенова / Алматы, Казахстан](https://t.me/yessenovfoundation) - (600+)
-18. [bluescreen.kz - тщательно подобранные и классно поданные события про IT-технологии, игры, кибербезопасность, казахстанские и мировые тренды. Рассказывать о технологиях понятным языком — вот наше кредо.](https://t.me/bluescreenkz)
-19. [IT Вакансии Казахстан](https://t.me/workitkz)
-20. [Chocodev - Митапы и конференции от IT-холдинга Chocofamily](https://t.me/chocodev)
-21. [Анонсы IT-событий в Казахстане и в онлайне](https://t.me/kz_it_events)
-22. [Sys-Adm.in канал InfoSec новостей и статей](https://t.me/sysadm_in_channel) - (10k+)
-23. [ИТ статьи для расширения кругозора (Sys-Adm.in)](https://t.me/sysadm_in_up) - (500+)
+## Groups
 
-# Сделано нашими IT-шниками - каналы, группы и боты 
+### Blockchain
 
-1. [Бот следит за землетрясениями в КЗ](https://t.me/kzquake)
-2. [С помощью данного бота вы можете отслеживать свои посылки, узнать курс валют АО Казпочта, а также поиск штрафов ПДД](https://t.me/KazPostBot)
-3. [Проверяет наличие задолженностей, а так же отслеживает и уведомляет вас о новых штрафах/налогах/пени.](https://t.me/ShtrafKZBot)
-4. [Бот подсказывает IP людей и каналов](https://t.me/Get_Telegram_ID_bot)
-5. [Бот который может считать предупреждения, банить, чистить сообщения о входе/выходе из тг пабликах](https://t.me/chat_prettier_bot)
+- [Blockchain KZ](https://t.me/kz_blockchain) - Blockchain platform development
+
+### Data & Analytics
+
+- [BI Analysts Kazakhstan](https://t.me/kz_bi) - Business Intelligence analysts community
+- [Datanomika](https://t.me/datanomika) - Data visualization, dashboards, business intelligence
+- [DWH Kazakhstan](https://t.me/dwhkz) - Data Warehouse and Big Data discussions
+
+### DevOps & SysAdmin
+
+- [Automation KZ](https://t.me/automation_kz) - Industrial automation and process engineering
+- [DevNull KZ](https://t.me/devnullkz) - Night owl IT admins chat
+- [KZLUG](https://t.me/kzlug) - Kazakhstan Linux Users Group
+- [MikroTik KZ](https://t.me/MikroTikKZ) - MikroTik networking equipment
+- [SysAdm.in Forum](https://t.me/sysadm_in) - System administrators forum group
+- [VoIP Kazakhstan](https://t.me/sipvoipkz) - VoIP and SIP telephony
+
+### Game Development
+
+- [GameDev KZ](https://t.me/gamedevkz) - Game developers community
+
+### General
+
+- [Illuminati Inc](https://t.me/illuminatinc) - IT community for knowledge sharing
+- [Programmers Kazakhstan](https://t.me/devkz) - General programmers community
+- [The Tech KZ Chat](https://t.me/thetechkzchat) - Discussion group for IT and startups news channel
+
+### Hardware & Electronics
+
+- [CCTV Kazakhstan](https://t.me/cctvkz) - Video surveillance systems discussion
+- [DIY Kazakhstan](https://t.me/diykz) - DIY makers and hobbyists
+- [Radiotech KZ](https://t.me/radiotechkz) - Electronics and radio engineering forum
+
+### Jobs & Careers
+
+- [IT Freelance KZ](https://t.me/itmankz) - Freelance IT jobs in Kazakhstan
+
+### Engineering Management
+
+- [Projects Kazakhstan](https://t.me/projects_kz) - Project management community
+- [Team Leads KZ](https://t.me/teamleads_kz) - Team leads and engineering managers
+
+### Marketplace
+
+- [IT Bazaar KZ](https://t.me/itbazarkz) - IT equipment buy/sell marketplace
+
+### Mobile Development
+
+- [Flutter Dart KZ](https://t.me/dart_kz) - Flutter and Dart developers community
+- [iOS Developers KZ](https://t.me/iOSDevelopers_KZ) - iOS developers community
+- [Mobile Developers KZ](https://t.me/mobile_developers_kz) - Mobile app developers community
+
+### Programming Languages
+
+- [.NET Kazakhstan](https://t.me/dotnetgroup) - .NET developers community
+- [1C Kazakhstan](https://t.me/kz_1C) - 1C Enterprise platform discussions
+- [Astana JUG](https://t.me/astanajug) - Java User Group in Astana
+- [C/C++ Kazakhstan](https://t.me/cppkz) - C and C++ developers community
+- [Golang Kazakhstan](https://t.me/go_kz) - Go programming language community
+- [PHP Developers KZ](https://t.me/phpdevconf) - PHP developers community
+- [Python Kazakhstan](https://t.me/python_kz) - Python developers community
+- [Ruby Ata](https://t.me/rubyata) - Ruby and Ruby on Rails community
+- [Ruby KZ](https://t.me/rubykz) - Ruby developers community
+- [Rust Kazakhstan](https://t.me/rustlang_kz) - Rust programming language community
+
+### QA & Testing
+
+- [AQA Kazakhstan](https://t.me/AQA_kz) - QA automation engineers community
+- [QA Community KZ](https://t.me/kzqacommunity) - QA specialists community
+
+### Security
+
+- [R0 Crew KZ](https://t.me/r0crewKZ) - R0 security research group
+- [TSARKA Cybersecurity](https://t.me/cyberseckz) - Cybersecurity discussions in Kazakhstan (TSARKA public group)
+
+### Web Development
+
+- [Backend Developers Kazakhstan](https://t.me/backenderskz) - Backend developers community
+- [Frontend Kazakhstan](https://t.me/frontendkz) - Frontend developers community
+
+## Channels
+
+- [Almaty CSS](https://t.me/AlmatyCSS) - Almaty frontend developers channel
+- [Bluescreen KZ](https://t.me/bluescreenkz) - Tech news, games, cybersecurity in simple language
+- [Chocodev](https://t.me/chocodev) - Meetups and conferences by Chocofamily
+- [Code KZ](https://t.me/codekz) - Deep learning, software engineering, Austrian economics by Yerzat Dulat
+- [Dev Skills](https://t.me/DevSkills) - Free IT resources, materials, courses
+- [DevKZ Jobs](https://t.me/devkz_jobs) - Developer job postings
+- [DS/ML KZ Events](https://t.me/main_ds_kz) - Data Science and ML events
+- [HackNU Info](https://t.me/HackNUinfo) - HackNU hackathon official channel
+- [IT Analysts KZ](https://t.me/itanalystskz) - IT analysts meetups and education
+- [IT Jobs KZ](https://t.me/itjobskz) - IT job postings
+- [IT Jobs KZ Full](https://t.me/ITjobsKZ_Full) - Detailed IT job descriptions
+- [KZ IT Events](https://t.me/kz_it_events) - IT events announcements in Kazakhstan
+- [ML Jobs KZ](https://t.me/ml_jobs_kz) - ML and Data Science job postings
+- [Mobile Jobs KZ](https://t.me/mobilejobskz) - Mobile developer job postings
+- [NU ACM-W](https://t.me/nu_acm_w) - Women in Computing at Nazarbayev University
+- [SysAdm.in Articles](https://t.me/sysadm_in_up) - IT articles for expanding knowledge
+- [SysAdm.in InfoSec](https://t.me/sysadm_in_channel) - InfoSec news and articles
+- [Tech Preneurs](https://t.me/techpreneurs) - Tech entrepreneurship publication
+- [The Tech KZ](https://t.me/thetechkz) - IT and startup news in one sentence
+- [TSARKA News](https://t.me/certkznews) - TSARKA cybersecurity news
+- [Web Jobs KZ](https://t.me/webjobskz) - SMM, SEO, Designer job postings
+- [Work IT KZ](https://t.me/workitkz) - IT job postings Kazakhstan
+- [Yessenov Foundation](https://t.me/yessenovfoundation) - Scholarships, grants, internships
+
+## Bots
+
+Bots created by Kazakhstan developers:
+
+- [Chat Prettier Bot](https://t.me/chat_prettier_bot) - Moderation bot: warnings, bans, message cleanup
+- [Get Telegram ID Bot](https://t.me/Get_Telegram_ID_bot) - Get user and channel IDs
+- [KazPost Bot](https://t.me/KazPostBot) - Track parcels, currency rates, traffic fines via Kazpost
+- [KZ Quake Bot](https://t.me/kzquake) - Earthquake monitoring in Kazakhstan
+- [Shtraf KZ Bot](https://t.me/ShtrafKZBot) - Check and track fines, taxes, penalties
+
+## Contributing
+
+Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
+
+## License
+
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, the authors have waived all copyright and related rights to this work.
