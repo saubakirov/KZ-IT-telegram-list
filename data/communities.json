@@ -2,7 +2,7 @@
   "meta": {
     "title": "Awesome Kazakhstan IT Telegram",
     "description": "A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community",
-    "last_updated": "2026-01-30",
+    "last_updated": "2026-06-17",
     "source_repo": "https://github.com/saubakirov/KZ-IT-telegram-list"
   },
   "groups": [
@@ -41,6 +41,15 @@
       "category": "general",
       "last_verified": "2026-01-30",
       "member_count": 1313
+    },
+    {
+      "name": "Cursor Kazakhstan / AI Community",
+      "handle": "cursor_kz",
+      "description": "Cursor and AI coding community in Kazakhstan",
+      "description_ru": "Сообщество пользователей Cursor и AI-инструментов в Казахстане",
+      "category": "ai",
+      "last_verified": "2026-06-17",
+      "member_count": 167
     },
     {
       "name": "Automation KZ",
@@ -570,6 +579,7 @@
     }
   ],
   "categories": {
+    "ai": "AI",
     "programming-languages": "Programming Languages",
     "web-development": "Web Development",
     "mobile": "Mobile Development",

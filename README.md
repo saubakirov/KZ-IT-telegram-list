@@ -6,11 +6,12 @@
 
 🇰🇿 Focused on Kazakhstan's IT ecosystem — from programming languages and DevOps to startups and job postings.
 
-**40** groups · **18** channels · **5** bots
+**41** groups · **18** channels · **5** bots
 
 ## Contents
 
 - [Groups](#groups)
+  - [AI](#ai)
   - [Data & Analytics](#data--analytics)
   - [DevOps & SysAdmin](#devops--sysadmin)
   - [Game Development](#game-development)
@@ -29,6 +30,10 @@
 - [Contributing](#contributing)
 
 ## Groups
+
+### AI
+
+- [Cursor Kazakhstan / AI Community](https://t.me/cursor_kz) `167` - Cursor and AI coding community in Kazakhstan
 
 ### Data & Analytics
 
