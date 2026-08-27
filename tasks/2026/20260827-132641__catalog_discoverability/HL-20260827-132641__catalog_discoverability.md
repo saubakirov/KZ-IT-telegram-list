@@ -68,6 +68,15 @@ expected live and archive Telegram targets, while Pages loses interactive anchor
 finite locale inventory and exact dated coverage measurements are retained in Iteration 2 RES rather
 than copied here as mutable catalog constants.
 
+The Phase B pre-spec read-only checkpoint on 2026-08-27 authenticated the existing Pages source as
+branch `master`, folder `/(root)`, with the default domain and required HTTPS. Remote `master` was
+`e4986e787018dbe92f51733e243916eba60cd2c4`, behind the approved local Phase A base. The public root
+still had two H1s, `lang=en-US`, no reciprocal alternates or social image; `/ru/`, `/kk/`, and
+`/sitemap.xml` returned 404, while the canonical JSON returned 200 `application/json`. Repository
+discovery still used the old bilingual description, no homepage, four city/country/platform topics,
+and GitHub's default generated social preview. These are before-state observations only, not evidence
+that the Phase B candidate has been published.
+
 ## 3. Target State (To-Be) 🔒 FROZEN
 
 | Dimension | As-Is | To-Be |
@@ -288,9 +297,9 @@ catalog, record the failing evidence, and return through `/tfw-plan` for a bound
 | Qualified EN/RU/KK payloads and approval | 🟡 Phase A final acceptance gate; implementation prepares complete candidates, Antigravity reviews text quality independently, and the formal Reviewer verifies the findings, dispositions, and final digest under the owner's 2026-08-27 autonomous-pipeline mandate |
 | Reviewed intent membership across categories and exceptional handles | ✅ Exact five-intent definitions and entry audit complete for the current snapshot; future sets derive from data |
 | Cross-render and metadata evidence contract | ✅ Layered pre-publication and public assertions defined; expected target sets derive from source |
-| Authenticated GitHub Pages publishing-source inspection | ⬜ External owner-access boundary; verify before Phase B changes |
-| Owner-authorized repository description, homepage, topics, and social-preview changes | ⬜ Required in Phase B with before/after evidence |
-| Search Console access | ⬜ Optional evidence dependency; availability unknown |
+| Authenticated GitHub Pages publishing-source inspection | ✅ Read-only inspection confirms `master` / `/(root)` branch deployment; preserve it unchanged |
+| Owner-authorized repository description, homepage, topics, and social-preview changes | 🟡 Exact target package is specified in Phase B; mutation remains explicitly unauthorized until the external checkpoint |
+| Search Console access | ⬜ Optional post-publication evidence; unavailable and unauthorized in the repository-controlled run |
 | Public search, GitHub, GitHub Pages, and relevant official documentation | ✅ Read-only access available during planning |
 
 ## 9. Risks 🟢 FREE
@@ -377,6 +386,7 @@ questions:
 | S3 | The same result should be convenient for people, crawlers/bots, and AI systems; machine access must not become a separate truth. | stakeholder | User clarification, consumer scope |
 | S4 | “Best” means reaching the point where nothing unnecessary remains, not adding every plausible feature. | philosophy | User's original framing |
 | S5 | Language quality is reviewed only after the complete Phase A result is ready: Antigravity provides an independent advisory pass, and the formal Reviewer verifies its disposition and the final digest under the owner's autonomous Phase A mandate. | process | Owner mandate, 2026-08-27 |
+| S6 | Finish all repository-controlled Phase B work autonomously through one persistent Executor/Reviewer chain, but stop at the final pre-tag/pre-push report; public and settings evidence remains an explicit later authorization gate. | process | Owner mandate, 2026-08-27 |
 
 ## 12. Amendment Log 🟢 APPEND-ONLY
 
