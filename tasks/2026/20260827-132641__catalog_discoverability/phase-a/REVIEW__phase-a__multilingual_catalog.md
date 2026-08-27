@@ -100,7 +100,7 @@ out-of-scope debt. The prior language findings were fixed in Phase A rather than
 - [ ] Task/phase `status.md`, journal, and `tasks/00-INDEX.md` — intentionally not modified under the delegated Reviewer write boundary; the Coordinator owns the APPROVE transition and closure.
 - [ ] HL status — intentionally not modified; Coordinator owns phase lifecycle/next-phase preparation.
 - [x] Other project files checked for stale or unauthorized information; no Reviewer-authored implementation or Executor-trace edit occurred.
-- [ ] `tfw-docs`: deferred to the Coordinator by the explicit write boundary after this approval.
+- [x] `tfw-docs`: Applied — `KNOWLEDGE.md` §§1–2 record the multilingual projection architecture and D19, and `TECH_DEBT.md` records TD-5 as resolved; Coordinator commit `83bac3a2d693820650e29d7b9acc44d5241f3814`.
 - [x] `tfw-knowledge`: N/A — neither revised RF nor refreshed REVIEW contains a human-only fact candidate.
 
 The trace-update deferral is the only canonical-workflow deviation. It is required by the owner’s
