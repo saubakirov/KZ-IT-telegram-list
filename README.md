@@ -6,7 +6,18 @@
 
 🇰🇿 Focused on Kazakhstan's IT ecosystem — from programming languages and DevOps to startups and job postings.
 
-**41** groups · **18** channels · **5** bots
+**41** groups · **18** channels · **5** bots · **19** categories · verified **2026-01-30**
+
+## Purpose
+
+A catalog whose value is accuracy. Every entry is a live, verified, IT-relevant Kazakhstan Telegram community — verified by a dated network check, never by recollection.
+
+**This list is not:**
+
+- A directory of every Kazakhstan Telegram chat — IT relevance is a gate, not a hint.
+- A promotion channel — no purely commercial or paid-placement entries.
+- A hand-edited list — `README.md` is an artifact; the data is the product.
+- An estimator — an unverifiable member count is omitted, never guessed.
 
 ## Contents
 
@@ -14,11 +25,11 @@
   - [AI](#ai)
   - [Data & Analytics](#data--analytics)
   - [DevOps & SysAdmin](#devops--sysadmin)
+  - [Engineering Management](#engineering-management)
   - [Game Development](#game-development)
   - [General](#general)
   - [Hardware & Electronics](#hardware--electronics)
   - [Jobs & Careers](#jobs--careers)
-  - [Engineering Management](#engineering-management)
   - [Marketplace](#marketplace)
   - [Mobile Development](#mobile-development)
   - [Programming Languages](#programming-languages)
@@ -52,6 +63,11 @@
 - [VoIP Kazakhstan](https://t.me/sipvoipkz) `571` - VoIP and SIP telephony
 - [KZLUG](https://t.me/kzlug) `354` - Kazakhstan Linux Users Group
 
+### Engineering Management
+
+- [Projects Kazakhstan](https://t.me/projects_kz) `1.8k` - Project management community
+- [Team Leads KZ](https://t.me/teamleads_kz) `407` - Team leads and engineering managers
+
 ### Game Development
 
 - [GameDev KZ](https://t.me/gamedevkz) `1.7k` - Game developers community
@@ -71,11 +87,6 @@
 ### Jobs & Careers
 
 - [IT Freelance KZ](https://t.me/itmankz) `7.6k` - Freelance IT jobs in Kazakhstan
-
-### Engineering Management
-
-- [Projects Kazakhstan](https://t.me/projects_kz) `1.8k` - Project management community
-- [Team Leads KZ](https://t.me/teamleads_kz) `407` - Team leads and engineering managers
 
 ### Marketplace
 

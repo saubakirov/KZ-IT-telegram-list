@@ -53,6 +53,8 @@ data/communities.json ──► validate_schema.py ──► validate_links.py �
 | D10 | A project release is a dated verified snapshot tagged `data-YYYY-MM-DD`, not a semantic version | Catalog readers need to know when the data was true; the catalog has no API compatibility surface | [HL TFW-4](tasks/TFW-4__showcase_reorg/HL-TFW-4__showcase_reorg.md) |
 | D11 | The Project North Star lives in `data/communities.json` and is rendered later as `README.md § Purpose` | The README is generated, while structured product data can be schema-enforced and rendered without a second hand-maintained copy | [HL TFW-4](tasks/TFW-4__showcase_reorg/HL-TFW-4__showcase_reorg.md) |
 | D12 | Dead communities are archived with `died_on` and `reason`, never deleted | The record of a community's death is catalog data; retaining it avoids repeating the historical loss tracked by TD-4 | [HL TFW-4](tasks/TFW-4__showcase_reorg/HL-TFW-4__showcase_reorg.md) |
+| D13 | Catalog freshness is reported, not enforced, by schema validation | A valid old verification date is an operational signal for a live sweep; making age fatal would block unrelated contributions. Malformed or impossible dates remain schema errors | [RF TFW-4 Phase C](tasks/TFW-4__showcase_reorg/phase-c/RF__phase-c__pipeline_tooling.md) |
+| D14 | Project operations use the `kz-*` namespace while framework operations remain `tfw-*` | The namespace boundary keeps project-owned commands distinct from adapter content managed by `/tfw-update` | [RF TFW-4 Phase C](tasks/TFW-4__showcase_reorg/phase-c/RF__phase-c__pipeline_tooling.md) |
 
 ---
 

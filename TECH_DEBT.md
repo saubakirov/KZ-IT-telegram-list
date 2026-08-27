@@ -19,10 +19,8 @@
 |---|------|------|----------|--------|--------|
 | TD-1 | Legacy tasks `TFW-01` / `TFW-02` use zero-padded IDs and `HL__`/`TS__` filenames, deviating from `.tfw/conventions.md` §4 (`TFW-3`, `HL-TFW-3__…`) | convention | Low | 🟢 ACCEPTED | [RF TFW-3](tasks/TFW-3__tfw_init/RF__TFW-3__tfw_init.md) |
 | TD-2 | Every `last_verified` in `data/communities.json` reads `2026-01-30`. Link liveness and member counts are ~7 months stale | data-freshness | **High** | 🟡 PLANNED | [RES TFW-3 Q6](tasks/TFW-3__tfw_init/RES__TFW-3__tfw_init.md) |
-| TD-3 | No CI. Nothing runs `validate_schema.py` on a PR — an invalid contribution reaches `master` before anyone notices | tooling | Medium | 🟡 PLANNED | [Task Board backlog](tasks/README.md) |
 | TD-4 | TFW-02 deleted 12 dead communities with no archive. The list of what was removed, and why, exists only in a commit diff | trace-loss | Medium | 🟡 PLANNED | [RF TFW-02](tasks/TFW-02_enhanced_validation/RF__TFW-02__enhanced_validation.md) |
 | TD-5 | `scripts/` has no tests. `generate_readme.py` correctness is verified only by eyeballing the output | missing-test | Medium | 🔴 OPEN | [RF TFW-3](tasks/TFW-3__tfw_init/RF__TFW-3__tfw_init.md) |
-| TD-6 | `data/communities.json` `meta.last_updated` is `2026-01-30` and is not touched by any script — it drifts from reality on every data edit | data-integrity | Low | 🔴 OPEN | [RF TFW-3](tasks/TFW-3__tfw_init/RF__TFW-3__tfw_init.md) |
 | TD-8 | Legacy backlog items (CI, `README.ru.md`, archive section) were carried from the retired `TASK.md` without re-confirming they are still wanted | scope | Low | 🟡 PLANNED | [RES TFW-3 Q5](tasks/TFW-3__tfw_init/RES__TFW-3__tfw_init.md) |
 
 ---
@@ -46,12 +44,12 @@ merged, or changed handles, and every member count is stale.
 network and its verdicts need human review before dead entries are removed. Consider TD-4's
 archive question at the same time, so this sweep does not repeat TFW-02's silent deletion.
 
-### TD-6 — `meta.last_updated` drifts
+### TD-6 — `meta.last_updated` pipeline ownership (RESOLVED)
 
-`generate_readme.py` never reads `meta.last_updated` and no script writes it, so it records
-when someone last remembered to edit it by hand. Either wire it into the validation or
-generation step, or drop the field — a fact that nothing maintains is worse than an absent one.
-This is the same failure that produced the "23 channels" error corrected during TFW-3.
+`validate_links.py --update` now writes the run date to `meta.last_updated` when it persists
+observed link results. Explicit archive mutation also writes the evidence date. Phase C delivered
+the ownership mechanism without running a production sweep or changing the existing production
+value; Phase D remains responsible for the first observed refresh.
 
 ---
 
@@ -59,6 +57,8 @@ This is the same failure that produced the "23 channels" error corrected during 
 
 | # | Item | Resolved by | Date |
 |---|------|-------------|------|
+| TD-3 | ✅ RESOLVED — added offline CI for schema validation and the generator's non-mutating README-currency gate on pull requests and pushes to `master`; no remote run is claimed in Phase C | [RF TFW-4 Phase C](tasks/TFW-4__showcase_reorg/phase-c/RF__phase-c__pipeline_tooling.md) | 2026-08-27 |
+| TD-6 | ✅ RESOLVED — `validate_links.py` owns `meta.last_updated` whenever an observed update or explicit evidence-backed archive is persisted; production remains unchanged until Phase D | [RF TFW-4 Phase C](tasks/TFW-4__showcase_reorg/phase-c/RF__phase-c__pipeline_tooling.md) | 2026-08-27 |
 | TD-7 | ✅ RESOLVED — removed the obsolete `.agent/` adapter and its duplicate `conventions.md` / `glossary.md` copies; `.tfw/` remains canonical | [RF TFW-4 Phase A](tasks/TFW-4__showcase_reorg/phase-a/RF__phase-a__baseline_cleanup.md) | 2026-08-26 |
 | — | `AGENTS.md` claimed 23 channels; `data/communities.json` holds 18. Hand-maintained copy of a derived fact, unchecked by any script | [RF TFW-3](tasks/TFW-3__tfw_init/RF__TFW-3__tfw_init.md) | 2026-08-26 |
 | — | Two competing status systems (`STEPS.md` and `TASK.md`), already diverged | [RF TFW-3](tasks/TFW-3__tfw_init/RF__TFW-3__tfw_init.md) | 2026-08-26 |

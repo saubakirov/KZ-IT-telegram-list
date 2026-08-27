@@ -1,192 +1,324 @@
 #!/usr/bin/env python3
-"""
-Generate README.md from communities.json
+"""Generate or verify README.md from the structured community catalog.
 
 Usage:
     python scripts/generate_readme.py
-
-Generates a properly formatted Awesome List README.
+    python scripts/generate_readme.py --check
 """
 
+import argparse
 import json
-from pathlib import Path
-from datetime import datetime
+import re
+import sys
 from collections import defaultdict
+from pathlib import Path
 
-DATA_FILE = Path(__file__).parent.parent / "data" / "communities.json"
-README_FILE = Path(__file__).parent.parent / "README.md"
-
-
-def load_communities() -> dict:
-    """Load communities from JSON file."""
-    with open(DATA_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
+PROJECT_ROOT = Path(__file__).parent.parent
+DATA_FILE = PROJECT_ROOT / "data" / "communities.json"
+README_FILE = PROJECT_ROOT / "README.md"
 
 
-def generate_toc(categories_used: list[str], category_names: dict) -> str:
-    """Generate table of contents."""
-    lines = ["## Contents", ""]
-    
-    lines.append("- [Groups](#groups)")
-    for cat in sorted(categories_used):
-        if cat in category_names:
-            anchor = category_names[cat].lower().replace(" ", "-").replace("&", "")
-            lines.append(f"  - [{category_names[cat]}](#{anchor})")
-    
-    lines.append("- [Channels](#channels)")
-    lines.append("- [Bots](#bots)")
-    lines.append("- [Contributing](#contributing)")
-    lines.append("- [Project Workflow](#project-workflow)")
-    lines.append("")
+def load_communities(path: Path = DATA_FILE) -> dict:
+    """Load community data from a UTF-8 JSON file."""
+    with path.open("r", encoding="utf-8") as source:
+        return json.load(source)
+
+
+def normalize_newlines(value: str) -> str:
+    """Normalize platform line endings for the non-mutating currency check."""
+    return value.replace("\r\n", "\n").replace("\r", "\n")
+
+
+def github_slug(heading: str) -> str:
+    """Return the GitHub-compatible slug needed by current category headings."""
+    slug = re.sub(r"[^\w\s-]", "", heading.casefold())
+    return re.sub(r"\s", "-", slug)
+
+
+def ordered_categories(groups: list[dict], category_names: dict[str, str]) -> list[str]:
+    """Return used category keys ordered by their display names."""
+    used = {group.get("category", "general") for group in groups}
+    return sorted(
+        (key for key in used if key in category_names),
+        key=lambda key: (category_names[key].casefold(), key.casefold()),
+    )
+
+
+def generate_toc(
+    categories_used: list[str],
+    category_names: dict[str, str],
+    has_archive: bool,
+) -> str:
+    """Generate the table of contents."""
+    lines = ["## Contents", "", "- [Groups](#groups)"]
+    for category in categories_used:
+        display_name = category_names[category]
+        lines.append(f"  - [{display_name}](#{github_slug(display_name)})")
+
+    lines.extend(["- [Channels](#channels)", "- [Bots](#bots)"])
+    if has_archive:
+        lines.append("- [Archive](#archive)")
+    lines.extend(
+        [
+            "- [Contributing](#contributing)",
+            "- [Project Workflow](#project-workflow)",
+            "",
+        ]
+    )
     return "\n".join(lines)
 
 
 def format_member_count(count: int | None) -> str:
-    """Format member count as badge or empty string."""
+    """Format an optional live member count."""
     if count is None:
         return ""
     if count >= 1000:
-        return f" `{count/1000:.1f}k`"
+        return f" `{count / 1000:.1f}k`"
     return f" `{count}`"
 
 
 def format_entry(entry: dict) -> str:
-    """Format a single entry with optional member count."""
-    count = entry.get("member_count")
-    count_str = format_member_count(count)
-    return f"- [{entry['name']}](https://t.me/{entry['handle']}){count_str} - {entry['description']}"
+    """Format one live community entry."""
+    count = format_member_count(entry.get("member_count"))
+    return f"- [{entry['name']}](https://t.me/{entry['handle']}){count} - {entry['description']}"
 
 
-def generate_groups_section(groups: list, category_names: dict) -> str:
-    """Generate groups section organized by category."""
+def generate_groups_section(
+    groups: list[dict],
+    category_names: dict[str, str],
+    categories_used: list[str],
+) -> str:
+    """Generate groups organized by display-name-ordered category."""
     lines = ["## Groups", ""]
-    
-    # Group by category
-    by_category = defaultdict(list)
-    for g in groups:
-        by_category[g.get("category", "general")].append(g)
-    
-    # Sort categories
-    for cat in sorted(by_category.keys()):
-        cat_name = category_names.get(cat, cat.title())
-        lines.append(f"### {cat_name}")
+    by_category: dict[str, list[dict]] = defaultdict(list)
+    for group in groups:
+        by_category[group.get("category", "general")].append(group)
+
+    for category in categories_used:
+        lines.extend([f"### {category_names[category]}", ""])
+        entries = sorted(
+            by_category[category],
+            key=lambda entry: (
+                -(entry.get("member_count") or 0),
+                entry["name"].casefold(),
+            ),
+        )
+        lines.extend(format_entry(entry) for entry in entries)
         lines.append("")
-        
-        # Sort entries by member count (descending), then alphabetically
-        for entry in sorted(by_category[cat], key=lambda x: (-(x.get("member_count") or 0), x["name"].lower())):
-            lines.append(format_entry(entry))
-        
-        lines.append("")
-    
     return "\n".join(lines)
 
 
-def generate_channels_section(channels: list) -> str:
-    """Generate channels section."""
+def generate_channels_section(channels: list[dict]) -> str:
+    """Generate the live channels section."""
     lines = ["## Channels", ""]
-    
-    # Sort by member count descending, then alphabetically
-    for entry in sorted(channels, key=lambda x: (-(x.get("member_count") or 0), x["name"].lower())):
-        lines.append(format_entry(entry))
-    
+    entries = sorted(
+        channels,
+        key=lambda entry: (
+            -(entry.get("member_count") or 0),
+            entry["name"].casefold(),
+        ),
+    )
+    lines.extend(format_entry(entry) for entry in entries)
     lines.append("")
     return "\n".join(lines)
 
 
-def generate_bots_section(bots: list) -> str:
-    """Generate bots section."""
+def generate_bots_section(bots: list[dict]) -> str:
+    """Generate the live bots section."""
     lines = ["## Bots", "", "Bots created by Kazakhstan developers:", ""]
-    
-    # Sort by member count descending, then alphabetically
-    for entry in sorted(bots, key=lambda x: (-(x.get("member_count") or 0), x["name"].lower())):
-        lines.append(format_entry(entry))
-    
+    entries = sorted(
+        bots,
+        key=lambda entry: (
+            -(entry.get("member_count") or 0),
+            entry["name"].casefold(),
+        ),
+    )
+    lines.extend(format_entry(entry) for entry in entries)
     lines.append("")
     return "\n".join(lines)
+
+
+def table_cell(value: object) -> str:
+    """Escape one Markdown table cell."""
+    return str(value).replace("|", "\\|").replace("\r", " ").replace("\n", " ")
+
+
+def archive_count(value: object) -> str:
+    """Format an archive count as a last-known exact value."""
+    return str(value) if isinstance(value, int) else "—"
+
+
+def generate_archive_section(archive: list[dict]) -> str:
+    """Generate the collapsed archive table."""
+    type_labels = {"groups": "Group", "channels": "Channel", "bots": "Bot"}
+    lines = [
+        "## Archive",
+        "",
+        "<details>",
+        f"<summary>Archived communities ({len(archive)})</summary>",
+        "",
+        "| Type | Community | Description | Last known members | Last verified | Died on | Reason |",
+        "|------|-----------|-------------|--------------------|---------------|---------|--------|",
+    ]
+    entries = sorted(
+        archive,
+        key=lambda entry: (
+            str(entry.get("type", "")).casefold(),
+            str(entry.get("name", "")).casefold(),
+        ),
+    )
+    for entry in entries:
+        community = f"[{entry['name']}](https://t.me/{entry['handle']})"
+        cells = (
+            type_labels.get(entry.get("type"), str(entry.get("type", ""))),
+            community,
+            entry["description"],
+            archive_count(entry.get("member_count")),
+            entry["last_verified"],
+            entry["died_on"],
+            entry["reason"],
+        )
+        lines.append("| " + " | ".join(table_cell(cell) for cell in cells) + " |")
+    lines.extend(["", "</details>", ""])
+    return "\n".join(lines)
+
+
+def oldest_live_verification(*entry_sets: list[dict]) -> str:
+    """Return the conservative freshness date across all live entries."""
+    dates = [entry["last_verified"] for entries in entry_sets for entry in entries]
+    return min(dates)
 
 
 def generate_readme(data: dict) -> str:
-    """Generate complete README content."""
-    meta = data.get("meta", {})
+    """Render the complete README from parsed catalog data."""
     groups = data.get("groups", [])
     channels = data.get("channels", [])
     bots = data.get("bots", [])
+    archive = data.get("archive", [])
     category_names = data.get("categories", {})
-    
-    # Collect used categories
-    categories_used = set(g.get("category", "general") for g in groups)
-    
-    lines = []
-    
-    # Header
-    lines.append("# Awesome Kazakhstan IT Telegram")
+    north_star = data.get("north_star", {})
+    categories_used = ordered_categories(groups, category_names)
+    verification_date = oldest_live_verification(groups, channels, bots)
+
+    lines = [
+        "# Awesome Kazakhstan IT Telegram",
+        "",
+        "[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) ![Kazakhstan](https://img.shields.io/badge/🇰🇿-Kazakhstan-00AFCA)",
+        "",
+        "> A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community.",
+        "",
+        "🇰🇿 Focused on Kazakhstan's IT ecosystem — from programming languages and DevOps to startups and job postings.",
+        "",
+        f"**{len(groups)}** groups · **{len(channels)}** channels · **{len(bots)}** bots · "
+        f"**{len(category_names)}** categories · verified **{verification_date}**",
+        "",
+        "## Purpose",
+        "",
+        north_star["purpose"],
+        "",
+        "**This list is not:**",
+        "",
+    ]
+    lines.extend(f"- {non_goal}" for non_goal in north_star["non_goals"])
     lines.append("")
-    lines.append("[![Awesome](https://awesome.re/badge.svg)](https://awesome.re) ![Kazakhstan](https://img.shields.io/badge/🇰🇿-Kazakhstan-00AFCA)")
-    lines.append("")
-    lines.append("> A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community.")
-    lines.append("")
-    lines.append("🇰🇿 Focused on Kazakhstan's IT ecosystem — from programming languages and DevOps to startups and job postings.")
-    lines.append("")
-    
-    # Stats
-    lines.append(f"**{len(groups)}** groups · **{len(channels)}** channels · **{len(bots)}** bots")
-    lines.append("")
-    
-    # TOC
-    lines.append(generate_toc(list(categories_used), category_names))
-    
-    # Sections
-    lines.append(generate_groups_section(groups, category_names))
+    lines.append(generate_toc(categories_used, category_names, bool(archive)))
+    lines.append(generate_groups_section(groups, category_names, categories_used))
     lines.append(generate_channels_section(channels))
     lines.append(generate_bots_section(bots))
-    
-    # Contributing
-    lines.append("## Contributing")
-    lines.append("")
-    lines.append("Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.")
-    lines.append("")
+    if archive:
+        lines.append(generate_archive_section(archive))
 
-    # Project Workflow — pointer to the TFW trace artifacts.
-    # This README is regenerated in full on every run, so the Task Board itself lives in
-    # tasks/README.md; only this link is emitted here. See KNOWLEDGE.md D7.
-    lines.append("## Project Workflow")
-    lines.append("")
-    lines.append("This project is maintained with [Trace-First Workflow](https://github.com/saubakirov/trace-first-starter) — "
-                 "decisions and their reasoning are kept as durable traces, not lost in chat history.")
-    lines.append("")
-    lines.append("- **[Task Board](tasks/README.md)** — current and completed work")
-    lines.append("- **[KNOWLEDGE.md](KNOWLEDGE.md)** — architecture decisions and project principles")
-    lines.append("- **[AGENTS.md](AGENTS.md)** — how AI agents work in this repository")
-    lines.append("")
-    lines.append("> ⚠️ **This README is generated.** Edit [`data/communities.json`](data/communities.json) "
-                 "and run `python scripts/generate_readme.py` — direct edits here are overwritten.")
-    lines.append("")
-    lines.append("## License")
-    lines.append("")
-    lines.append("[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)")
-    lines.append("")
-    lines.append("To the extent possible under law, the authors have waived all copyright and related rights to this work.")
-    lines.append("")
-    
+    lines.extend(
+        [
+            "## Contributing",
+            "",
+            "Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.",
+            "",
+            "## Project Workflow",
+            "",
+            "This project is maintained with [Trace-First Workflow](https://github.com/saubakirov/trace-first-starter) — "
+            "decisions and their reasoning are kept as durable traces, not lost in chat history.",
+            "",
+            "- **[Task Board](tasks/README.md)** — current and completed work",
+            "- **[KNOWLEDGE.md](KNOWLEDGE.md)** — architecture decisions and project principles",
+            "- **[AGENTS.md](AGENTS.md)** — how AI agents work in this repository",
+            "",
+            "> ⚠️ **This README is generated.** Edit [`data/communities.json`](data/communities.json) "
+            "and run `python scripts/generate_readme.py` — direct edits here are overwritten.",
+            "",
+            "## License",
+            "",
+            "[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)",
+            "",
+            "To the extent possible under law, the authors have waived all copyright and related rights to this work.",
+            "",
+        ]
+    )
     return "\n".join(lines)
 
 
-def main():
-    if not DATA_FILE.exists():
-        print(f"[ERROR] Data file not found: {DATA_FILE}")
-        return
-    
-    data = load_communities()
-    readme_content = generate_readme(data)
-    
-    with open(README_FILE, "w", encoding="utf-8") as f:
-        f.write(readme_content)
-    
-    print(f"[OK] Generated {README_FILE}")
-    print(f"   Groups: {len(data.get('groups', []))}")
-    print(f"   Channels: {len(data.get('channels', []))}")
-    print(f"   Bots: {len(data.get('bots', []))}")
+def read_current(path: Path) -> str:
+    """Read a README candidate as UTF-8 without mutating it."""
+    with path.open("r", encoding="utf-8", newline="") as source:
+        return source.read()
+
+
+def is_current(generated: str, path: Path = README_FILE) -> bool:
+    """Compare generated/current content after explicit newline normalization."""
+    if not path.exists():
+        return False
+    return normalize_newlines(generated) == normalize_newlines(read_current(path))
+
+
+def write_readme(content: str, path: Path = README_FILE) -> None:
+    """Write generated README content with stable LF newlines."""
+    with path.open("w", encoding="utf-8", newline="\n") as destination:
+        destination.write(content)
+
+
+def parse_args() -> argparse.Namespace:
+    """Parse generator/check options."""
+    parser = argparse.ArgumentParser(description="Generate or verify README.md")
+    parser.add_argument("--check", action="store_true", help="Check currency without writing")
+    parser.add_argument("--data", type=Path, default=DATA_FILE, help="Catalog JSON path")
+    parser.add_argument("--readme", type=Path, default=README_FILE, help="README path")
+    return parser.parse_args()
+
+
+def main() -> int:
+    """Generate README or run the non-mutating currency gate."""
+    args = parse_args()
+    try:
+        data = load_communities(args.data)
+        content = generate_readme(data)
+    except (OSError, json.JSONDecodeError, KeyError, ValueError) as error:
+        print(f"[ERROR] Could not generate README content: {error}")
+        return 1
+
+    if args.check:
+        if is_current(content, args.readme):
+            print(f"[SUCCESS] README is generator-current: {args.readme}")
+            return 0
+        print(f"[ERROR] README differs from generator output: {args.readme}")
+        return 1
+
+    try:
+        write_readme(content, args.readme)
+    except OSError as error:
+        print(f"[ERROR] Could not write {args.readme}: {error}")
+        return 1
+
+    groups = data.get("groups", [])
+    channels = data.get("channels", [])
+    bots = data.get("bots", [])
+    print(f"[OK] Generated {args.readme}")
+    print(
+        f"[INFO] Live entries: groups={len(groups)}; channels={len(channels)}; "
+        f"bots={len(bots)}; categories={len(data.get('categories', {}))}; "
+        f"oldest_verified={oldest_live_verification(groups, channels, bots)}"
+    )
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
