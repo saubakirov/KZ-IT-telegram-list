@@ -1,6 +1,16 @@
 ---
+layout: default
 permalink: /
 lang: en
+title: "Awesome Kazakhstan IT Telegram"
+description: "A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community"
+canonical_url: "https://saubakirov.github.io/KZ-IT-telegram-list/"
+last_modified: 2026-08-27
+og_locale: en_US
+og_locale_alternates:
+  - ru_RU
+  - kk_KZ
+sitemap: true
 ---
 
 # Awesome Kazakhstan IT Telegram

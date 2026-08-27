@@ -1,0 +1,23 @@
+checked_at=2026-08-27T19:36:44.8983828+05:00
+image=ghcr.io/actions/jekyll-build-pages@sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041
+image_repository=official GitHub-maintained actions/jekyll-build-pages v1.0.13
+command=bundle exec jekyll build --source /github/workspace --destination /github/workspace/_site --trace
+jekyll_env=production
+version_probe:
+ruby 3.3.4 (2024-07-09 revision be1089c8ec) [x86_64-linux]
+Bundler version 2.5.11
+jekyll 3.10.0
+jekyll-sitemap (1.4.0)
+note=jekyll-sitemap is installed transitively by github-pages 232 but is intentionally not enabled; sitemap.xml is repository-owned per the approved Coordinator revision.
+build_output:
+Configuration file: /github/workspace/_config.yml
+To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+            Source: /github/workspace
+       Destination: /github/workspace/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 1.31 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+exit_code=0
+built_robots_txt=false
+built_sitemap_xml=true

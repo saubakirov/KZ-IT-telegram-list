@@ -1,6 +1,16 @@
 ---
+layout: default
 permalink: /kk/
 lang: kk
+title: "Қазақстанның Telegram-дағы IT қауымдастықтары"
+description: "Қазақстанның технологиялық қауымдастығына арналған тексерілген Telegram топтары, арналары мен боттарының каталогы"
+canonical_url: "https://saubakirov.github.io/KZ-IT-telegram-list/kk/"
+last_modified: 2026-08-27
+og_locale: kk_KZ
+og_locale_alternates:
+  - en_US
+  - ru_RU
+sitemap: true
 ---
 
 # Қазақстанның Telegram-дағы IT қауымдастықтары

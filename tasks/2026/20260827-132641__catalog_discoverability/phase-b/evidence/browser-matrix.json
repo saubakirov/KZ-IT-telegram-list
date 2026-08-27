@@ -1,0 +1,1001 @@
+{
+    "captured_at":  "2026-08-27T19:37:59.1692424+05:00",
+    "browser":  "Codex In-app Browser (Chromium)",
+    "server":  "read-only localhost build mounted at /KZ-IT-telegram-list",
+    "cases":  [
+                  {
+                      "actual_viewport":  {
+                                              "height":  844,
+                                              "width":  390
+                                          },
+                      "alternate_count":  4,
+                      "body_background":  "rgb(248, 250, 252)",
+                      "body_color":  "rgb(23, 32, 51)",
+                      "body_font":  "-apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+                      "canonical":  "https://saubakirov.github.io/KZ-IT-telegram-list/",
+                      "document_dimensions":  {
+                                                  "client_width":  375,
+                                                  "scroll_height":  8906,
+                                                  "scroll_width":  375
+                                              },
+                      "document_lang":  "en",
+                      "executable_script_count":  0,
+                      "external_script_count":  0,
+                      "fixed_or_sticky":  [
+
+                                          ],
+                      "h1_count":  1,
+                      "h1_text":  "Awesome Kazakhstan IT Telegram",
+                      "hidden_critical_count":  0,
+                      "horizontal_overflow":  false,
+                      "jsonld_count":  1,
+                      "local_link_checks":  [
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/#type-groups",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/#intent-ai",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                }
+                                            ],
+                      "locale":  "en",
+                      "og_count":  12,
+                      "representative_links":  [
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/",
+                                                       "raw":  "ru/",
+                                                       "text":  "RU"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/#type-groups",
+                                                       "raw":  "#type-groups",
+                                                       "text":  "Groups"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/#intent-ai",
+                                                       "raw":  "#intent-ai",
+                                                       "text":  "AI"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
+                                                       "raw":  "/KZ-IT-telegram-list/data/communities.json",
+                                                       "text":  "Download the canonical JSON catalog"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                       "raw":  "/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                       "text":  "CONTRIBUTING.md"
+                                                   }
+                                               ],
+                      "requested_viewport":  {
+                                                 "height":  844,
+                                                 "width":  390
+                                             },
+                      "stylesheet_loaded":  true,
+                      "title":  "Awesome Kazakhstan IT Telegram",
+                      "top_rects":  {
+                                        "first_telegram":  {
+                                                               "bottom":  1002,
+                                                               "height":  20,
+                                                               "width":  230,
+                                                               "x":  30,
+                                                               "y":  982
+                                                           },
+                                        "h1":  {
+                                                   "bottom":  91,
+                                                   "height":  72,
+                                                   "width":  356,
+                                                   "x":  9,
+                                                   "y":  19
+                                               },
+                                        "intents":  {
+                                                        "bottom":  384,
+                                                        "height":  47,
+                                                        "width":  356,
+                                                        "x":  9,
+                                                        "y":  338
+                                                    },
+                                        "languages":  {
+                                                          "bottom":  290,
+                                                          "height":  23,
+                                                          "width":  356,
+                                                          "x":  9,
+                                                          "y":  267
+                                                      },
+                                        "promise":  {
+                                                        "bottom":  197,
+                                                        "height":  94,
+                                                        "width":  356,
+                                                        "x":  9,
+                                                        "y":  103
+                                                    },
+                                        "stats":  {
+                                                      "bottom":  255,
+                                                      "height":  47,
+                                                      "width":  356,
+                                                      "x":  9,
+                                                      "y":  209
+                                                  },
+                                        "types":  {
+                                                      "bottom":  326,
+                                                      "height":  23,
+                                                      "width":  356,
+                                                      "x":  9,
+                                                      "y":  302
+                                                  }
+                                    },
+                      "twitter_count":  5,
+                      "url":  "http://127.0.0.1:4173/KZ-IT-telegram-list/",
+                      "screenshot":  {
+                                         "file":  "browser-390x844-en.png",
+                                         "bytes":  67389
+                                     },
+                      "one_action_type_navigation":  {
+                                                         "first_catalog_entry":  {
+                                                                                     "bottom":  115,
+                                                                                     "height":  20,
+                                                                                     "id":  null,
+                                                                                     "in_viewport":  true,
+                                                                                     "text":  "Cursor Kazakhstan / AI Community",
+                                                                                     "width":  230,
+                                                                                     "x":  30,
+                                                                                     "y":  95
+                                                                                 },
+                                                         "hash":  "#type-groups",
+                                                         "type_target":  {
+                                                                             "bottom":  30,
+                                                                             "height":  30,
+                                                                             "id":  "type-groups",
+                                                                             "in_viewport":  true,
+                                                                             "text":  "",
+                                                                             "width":  0,
+                                                                             "x":  9,
+                                                                             "y":  0
+                                                                         }
+                                                     }
+                  },
+                  {
+                      "actual_viewport":  {
+                                              "height":  844,
+                                              "width":  390
+                                          },
+                      "alternate_count":  4,
+                      "body_background":  "rgb(248, 250, 252)",
+                      "body_color":  "rgb(23, 32, 51)",
+                      "body_font":  "-apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+                      "canonical":  "https://saubakirov.github.io/KZ-IT-telegram-list/ru/",
+                      "document_dimensions":  {
+                                                  "client_width":  375,
+                                                  "scroll_height":  10098,
+                                                  "scroll_width":  375
+                                              },
+                      "document_lang":  "ru",
+                      "executable_script_count":  0,
+                      "external_script_count":  0,
+                      "fixed_or_sticky":  [
+
+                                          ],
+                      "h1_count":  1,
+                      "h1_text":  "IT-сообщества Казахстана в Telegram",
+                      "hidden_critical_count":  0,
+                      "horizontal_overflow":  false,
+                      "jsonld_count":  1,
+                      "local_link_checks":  [
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#type-groups",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#intent-ai",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                }
+                                            ],
+                      "locale":  "ru",
+                      "og_count":  12,
+                      "representative_links":  [
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#type-groups",
+                                                       "raw":  "#type-groups",
+                                                       "text":  "Группы"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#intent-ai",
+                                                       "raw":  "#intent-ai",
+                                                       "text":  "ИИ"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
+                                                       "raw":  "/KZ-IT-telegram-list/data/communities.json",
+                                                       "text":  "Скачать канонический каталог JSON"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                       "raw":  "/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                       "text":  "CONTRIBUTING.md"
+                                                   }
+                                               ],
+                      "requested_viewport":  {
+                                                 "height":  844,
+                                                 "width":  390
+                                             },
+                      "stylesheet_loaded":  true,
+                      "title":  "IT-сообщества Казахстана в Telegram",
+                      "top_rects":  {
+                                        "first_telegram":  {
+                                                               "bottom":  1072,
+                                                               "height":  20,
+                                                               "width":  230,
+                                                               "x":  30,
+                                                               "y":  1052
+                                                           },
+                                        "h1":  {
+                                                   "bottom":  91,
+                                                   "height":  72,
+                                                   "width":  356,
+                                                   "x":  9,
+                                                   "y":  19
+                                               },
+                                        "intents":  {
+                                                        "bottom":  384,
+                                                        "height":  47,
+                                                        "width":  356,
+                                                        "x":  9,
+                                                        "y":  338
+                                                    },
+                                        "languages":  {
+                                                          "bottom":  290,
+                                                          "height":  23,
+                                                          "width":  356,
+                                                          "x":  9,
+                                                          "y":  267
+                                                      },
+                                        "promise":  {
+                                                        "bottom":  197,
+                                                        "height":  94,
+                                                        "width":  356,
+                                                        "x":  9,
+                                                        "y":  103
+                                                    },
+                                        "stats":  {
+                                                      "bottom":  255,
+                                                      "height":  47,
+                                                      "width":  356,
+                                                      "x":  9,
+                                                      "y":  209
+                                                  },
+                                        "types":  {
+                                                      "bottom":  326,
+                                                      "height":  23,
+                                                      "width":  356,
+                                                      "x":  9,
+                                                      "y":  302
+                                                  }
+                                    },
+                      "twitter_count":  5,
+                      "url":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/",
+                      "screenshot":  {
+                                         "file":  "browser-390x844-ru.png",
+                                         "bytes":  67484
+                                     },
+                      "one_action_type_navigation":  {
+                                                         "first_catalog_entry":  {
+                                                                                     "bottom":  115,
+                                                                                     "height":  20,
+                                                                                     "id":  null,
+                                                                                     "in_viewport":  true,
+                                                                                     "text":  "Cursor Kazakhstan / AI Community",
+                                                                                     "width":  230,
+                                                                                     "x":  30,
+                                                                                     "y":  95
+                                                                                 },
+                                                         "hash":  "#type-groups",
+                                                         "type_target":  {
+                                                                             "bottom":  31,
+                                                                             "height":  30,
+                                                                             "id":  "type-groups",
+                                                                             "in_viewport":  true,
+                                                                             "text":  "",
+                                                                             "width":  0,
+                                                                             "x":  9,
+                                                                             "y":  0
+                                                                         }
+                                                     }
+                  },
+                  {
+                      "actual_viewport":  {
+                                              "height":  844,
+                                              "width":  390
+                                          },
+                      "alternate_count":  4,
+                      "body_background":  "rgb(248, 250, 252)",
+                      "body_color":  "rgb(23, 32, 51)",
+                      "body_font":  "-apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+                      "canonical":  "https://saubakirov.github.io/KZ-IT-telegram-list/kk/",
+                      "document_dimensions":  {
+                                                  "client_width":  375,
+                                                  "scroll_height":  10225,
+                                                  "scroll_width":  375
+                                              },
+                      "document_lang":  "kk",
+                      "executable_script_count":  0,
+                      "external_script_count":  0,
+                      "fixed_or_sticky":  [
+
+                                          ],
+                      "h1_count":  1,
+                      "h1_text":  "Қазақстанның Telegram-дағы IT қауымдастықтары",
+                      "hidden_critical_count":  0,
+                      "horizontal_overflow":  false,
+                      "jsonld_count":  1,
+                      "local_link_checks":  [
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#type-groups",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#intent-ai",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                }
+                                            ],
+                      "locale":  "kk",
+                      "og_count":  12,
+                      "representative_links":  [
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/",
+                                                       "raw":  "../ru/",
+                                                       "text":  "RU"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#type-groups",
+                                                       "raw":  "#type-groups",
+                                                       "text":  "Топтар"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#intent-ai",
+                                                       "raw":  "#intent-ai",
+                                                       "text":  "Жасанды интеллект"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
+                                                       "raw":  "/KZ-IT-telegram-list/data/communities.json",
+                                                       "text":  "Негізгі JSON каталогын жүктеу"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                       "raw":  "/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                       "text":  "CONTRIBUTING.md"
+                                                   }
+                                               ],
+                      "requested_viewport":  {
+                                                 "height":  844,
+                                                 "width":  390
+                                             },
+                      "stylesheet_loaded":  true,
+                      "title":  "Қазақстанның Telegram-дағы IT қауымдастықтары",
+                      "top_rects":  {
+                                        "first_telegram":  {
+                                                               "bottom":  1084,
+                                                               "height":  20,
+                                                               "width":  230,
+                                                               "x":  30,
+                                                               "y":  1064
+                                                           },
+                                        "h1":  {
+                                                   "bottom":  127,
+                                                   "height":  108,
+                                                   "width":  356,
+                                                   "x":  9,
+                                                   "y":  19
+                                               },
+                                        "intents":  {
+                                                        "bottom":  443,
+                                                        "height":  47,
+                                                        "width":  356,
+                                                        "x":  9,
+                                                        "y":  397
+                                                    },
+                                        "languages":  {
+                                                          "bottom":  350,
+                                                          "height":  23,
+                                                          "width":  356,
+                                                          "x":  9,
+                                                          "y":  326
+                                                      },
+                                        "promise":  {
+                                                        "bottom":  256,
+                                                        "height":  117,
+                                                        "width":  356,
+                                                        "x":  9,
+                                                        "y":  139
+                                                    },
+                                        "stats":  {
+                                                      "bottom":  314,
+                                                      "height":  47,
+                                                      "width":  356,
+                                                      "x":  9,
+                                                      "y":  268
+                                                  },
+                                        "types":  {
+                                                      "bottom":  385,
+                                                      "height":  23,
+                                                      "width":  356,
+                                                      "x":  9,
+                                                      "y":  362
+                                                  }
+                                    },
+                      "twitter_count":  5,
+                      "url":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/",
+                      "screenshot":  {
+                                         "file":  "browser-390x844-kk.png",
+                                         "bytes":  68471
+                                     },
+                      "one_action_type_navigation":  {
+                                                         "first_catalog_entry":  {
+                                                                                     "bottom":  115,
+                                                                                     "height":  20,
+                                                                                     "id":  null,
+                                                                                     "in_viewport":  true,
+                                                                                     "text":  "Cursor Kazakhstan / AI Community",
+                                                                                     "width":  230,
+                                                                                     "x":  30,
+                                                                                     "y":  95
+                                                                                 },
+                                                         "hash":  "#type-groups",
+                                                         "type_target":  {
+                                                                             "bottom":  30,
+                                                                             "height":  30,
+                                                                             "id":  "type-groups",
+                                                                             "in_viewport":  true,
+                                                                             "text":  "",
+                                                                             "width":  0,
+                                                                             "x":  9,
+                                                                             "y":  0
+                                                                         }
+                                                     }
+                  },
+                  {
+                      "actual_viewport":  {
+                                              "height":  768,
+                                              "width":  1366
+                                          },
+                      "alternate_count":  4,
+                      "body_background":  "rgb(248, 250, 252)",
+                      "body_color":  "rgb(23, 32, 51)",
+                      "body_font":  "-apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+                      "canonical":  "https://saubakirov.github.io/KZ-IT-telegram-list/",
+                      "document_dimensions":  {
+                                                  "client_width":  1351,
+                                                  "scroll_height":  5702,
+                                                  "scroll_width":  1351
+                                              },
+                      "document_lang":  "en",
+                      "executable_script_count":  0,
+                      "external_script_count":  0,
+                      "fixed_or_sticky":  [
+
+                                          ],
+                      "h1_count":  1,
+                      "h1_text":  "Awesome Kazakhstan IT Telegram",
+                      "hidden_critical_count":  0,
+                      "horizontal_overflow":  false,
+                      "jsonld_count":  1,
+                      "local_link_checks":  [
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/#type-groups",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/#intent-ai",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                }
+                                            ],
+                      "locale":  "en",
+                      "og_count":  12,
+                      "representative_links":  [
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/",
+                                                       "raw":  "ru/",
+                                                       "text":  "RU"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/#type-groups",
+                                                       "raw":  "#type-groups",
+                                                       "text":  "Groups"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/#intent-ai",
+                                                       "raw":  "#intent-ai",
+                                                       "text":  "AI"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
+                                                       "raw":  "/KZ-IT-telegram-list/data/communities.json",
+                                                       "text":  "Download the canonical JSON catalog"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                       "raw":  "/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                       "text":  "CONTRIBUTING.md"
+                                                   }
+                                               ],
+                      "requested_viewport":  {
+                                                 "height":  768,
+                                                 "width":  1366
+                                             },
+                      "stylesheet_loaded":  true,
+                      "title":  "Awesome Kazakhstan IT Telegram",
+                      "top_rects":  {
+                                        "first_telegram":  {
+                                                               "bottom":  751,
+                                                               "height":  22,
+                                                               "width":  246,
+                                                               "x":  121,
+                                                               "y":  729
+                                                           },
+                                        "h1":  {
+                                                   "bottom":  101,
+                                                   "height":  65,
+                                                   "width":  1152,
+                                                   "x":  100,
+                                                   "y":  36
+                                               },
+                                        "intents":  {
+                                                        "bottom":  315,
+                                                        "height":  25,
+                                                        "width":  1152,
+                                                        "x":  100,
+                                                        "y":  290
+                                                    },
+                                        "languages":  {
+                                                          "bottom":  240,
+                                                          "height":  25,
+                                                          "width":  1152,
+                                                          "x":  100,
+                                                          "y":  215
+                                                      },
+                                        "promise":  {
+                                                        "bottom":  164,
+                                                        "height":  50,
+                                                        "width":  1152,
+                                                        "x":  100,
+                                                        "y":  114
+                                                    },
+                                        "stats":  {
+                                                      "bottom":  202,
+                                                      "height":  25,
+                                                      "width":  1152,
+                                                      "x":  100,
+                                                      "y":  177
+                                                  },
+                                        "types":  {
+                                                      "bottom":  277,
+                                                      "height":  25,
+                                                      "width":  1152,
+                                                      "x":  100,
+                                                      "y":  252
+                                                  }
+                                    },
+                      "twitter_count":  5,
+                      "url":  "http://127.0.0.1:4173/KZ-IT-telegram-list/",
+                      "screenshot":  {
+                                         "file":  "browser-1366x768-en.png",
+                                         "bytes":  102342
+                                     },
+                      "one_action_type_navigation":  {
+                                                         "first_catalog_entry":  {
+                                                                                     "bottom":  138,
+                                                                                     "height":  22,
+                                                                                     "id":  null,
+                                                                                     "in_viewport":  true,
+                                                                                     "text":  "Cursor Kazakhstan / AI Community",
+                                                                                     "width":  246,
+                                                                                     "x":  121,
+                                                                                     "y":  117
+                                                                                 },
+                                                         "hash":  "#type-groups",
+                                                         "type_target":  {
+                                                                             "bottom":  44,
+                                                                             "height":  45,
+                                                                             "id":  "type-groups",
+                                                                             "in_viewport":  false,
+                                                                             "text":  "",
+                                                                             "width":  0,
+                                                                             "x":  100,
+                                                                             "y":  0
+                                                                         }
+                                                     }
+                  },
+                  {
+                      "actual_viewport":  {
+                                              "height":  768,
+                                              "width":  1366
+                                          },
+                      "alternate_count":  4,
+                      "body_background":  "rgb(248, 250, 252)",
+                      "body_color":  "rgb(23, 32, 51)",
+                      "body_font":  "-apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+                      "canonical":  "https://saubakirov.github.io/KZ-IT-telegram-list/ru/",
+                      "document_dimensions":  {
+                                                  "client_width":  1351,
+                                                  "scroll_height":  5901,
+                                                  "scroll_width":  1351
+                                              },
+                      "document_lang":  "ru",
+                      "executable_script_count":  0,
+                      "external_script_count":  0,
+                      "fixed_or_sticky":  [
+
+                                          ],
+                      "h1_count":  1,
+                      "h1_text":  "IT-сообщества Казахстана в Telegram",
+                      "hidden_critical_count":  0,
+                      "horizontal_overflow":  false,
+                      "jsonld_count":  1,
+                      "local_link_checks":  [
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#type-groups",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#intent-ai",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                }
+                                            ],
+                      "locale":  "ru",
+                      "og_count":  12,
+                      "representative_links":  [
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#type-groups",
+                                                       "raw":  "#type-groups",
+                                                       "text":  "Группы"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#intent-ai",
+                                                       "raw":  "#intent-ai",
+                                                       "text":  "ИИ"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
+                                                       "raw":  "/KZ-IT-telegram-list/data/communities.json",
+                                                       "text":  "Скачать канонический каталог JSON"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                       "raw":  "/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                       "text":  "CONTRIBUTING.md"
+                                                   }
+                                               ],
+                      "requested_viewport":  {
+                                                 "height":  768,
+                                                 "width":  1366
+                                             },
+                      "stylesheet_loaded":  true,
+                      "title":  "IT-сообщества Казахстана в Telegram",
+                      "top_rects":  {
+                                        "first_telegram":  {
+                                                               "bottom":  776,
+                                                               "height":  22,
+                                                               "width":  246,
+                                                               "x":  121,
+                                                               "y":  754
+                                                           },
+                                        "h1":  {
+                                                   "bottom":  101,
+                                                   "height":  65,
+                                                   "width":  1152,
+                                                   "x":  100,
+                                                   "y":  36
+                                               },
+                                        "intents":  {
+                                                        "bottom":  315,
+                                                        "height":  25,
+                                                        "width":  1152,
+                                                        "x":  100,
+                                                        "y":  290
+                                                    },
+                                        "languages":  {
+                                                          "bottom":  240,
+                                                          "height":  25,
+                                                          "width":  1152,
+                                                          "x":  100,
+                                                          "y":  215
+                                                      },
+                                        "promise":  {
+                                                        "bottom":  164,
+                                                        "height":  50,
+                                                        "width":  1152,
+                                                        "x":  100,
+                                                        "y":  114
+                                                    },
+                                        "stats":  {
+                                                      "bottom":  202,
+                                                      "height":  25,
+                                                      "width":  1152,
+                                                      "x":  100,
+                                                      "y":  177
+                                                  },
+                                        "types":  {
+                                                      "bottom":  277,
+                                                      "height":  25,
+                                                      "width":  1152,
+                                                      "x":  100,
+                                                      "y":  252
+                                                  }
+                                    },
+                      "twitter_count":  5,
+                      "url":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/",
+                      "screenshot":  {
+                                         "file":  "browser-1366x768-ru.png",
+                                         "bytes":  112347
+                                     },
+                      "one_action_type_navigation":  {
+                                                         "first_catalog_entry":  {
+                                                                                     "bottom":  138,
+                                                                                     "height":  22,
+                                                                                     "id":  null,
+                                                                                     "in_viewport":  true,
+                                                                                     "text":  "Cursor Kazakhstan / AI Community",
+                                                                                     "width":  246,
+                                                                                     "x":  121,
+                                                                                     "y":  117
+                                                                                 },
+                                                         "hash":  "#type-groups",
+                                                         "type_target":  {
+                                                                             "bottom":  44,
+                                                                             "height":  45,
+                                                                             "id":  "type-groups",
+                                                                             "in_viewport":  false,
+                                                                             "text":  "",
+                                                                             "width":  0,
+                                                                             "x":  100,
+                                                                             "y":  0
+                                                                         }
+                                                     }
+                  },
+                  {
+                      "actual_viewport":  {
+                                              "height":  768,
+                                              "width":  1366
+                                          },
+                      "alternate_count":  4,
+                      "body_background":  "rgb(248, 250, 252)",
+                      "body_color":  "rgb(23, 32, 51)",
+                      "body_font":  "-apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+                      "canonical":  "https://saubakirov.github.io/KZ-IT-telegram-list/kk/",
+                      "document_dimensions":  {
+                                                  "client_width":  1351,
+                                                  "scroll_height":  5942,
+                                                  "scroll_width":  1351
+                                              },
+                      "document_lang":  "kk",
+                      "executable_script_count":  0,
+                      "external_script_count":  0,
+                      "fixed_or_sticky":  [
+
+                                          ],
+                      "h1_count":  1,
+                      "h1_text":  "Қазақстанның Telegram-дағы IT қауымдастықтары",
+                      "hidden_critical_count":  0,
+                      "horizontal_overflow":  false,
+                      "jsonld_count":  1,
+                      "local_link_checks":  [
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#type-groups",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#intent-ai",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                },
+                                                {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                    "status":  200,
+                                                    "ok":  true
+                                                }
+                                            ],
+                      "locale":  "kk",
+                      "og_count":  12,
+                      "representative_links":  [
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/",
+                                                       "raw":  "../ru/",
+                                                       "text":  "RU"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#type-groups",
+                                                       "raw":  "#type-groups",
+                                                       "text":  "Топтар"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#intent-ai",
+                                                       "raw":  "#intent-ai",
+                                                       "text":  "Жасанды интеллект"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
+                                                       "raw":  "/KZ-IT-telegram-list/data/communities.json",
+                                                       "text":  "Негізгі JSON каталогын жүктеу"
+                                                   },
+                                                   {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                       "raw":  "/KZ-IT-telegram-list/CONTRIBUTING.md",
+                                                       "text":  "CONTRIBUTING.md"
+                                                   }
+                                               ],
+                      "requested_viewport":  {
+                                                 "height":  768,
+                                                 "width":  1366
+                                             },
+                      "stylesheet_loaded":  true,
+                      "title":  "Қазақстанның Telegram-дағы IT қауымдастықтары",
+                      "top_rects":  {
+                                        "first_telegram":  {
+                                                               "bottom":  816,
+                                                               "height":  22,
+                                                               "width":  246,
+                                                               "x":  121,
+                                                               "y":  795
+                                                           },
+                                        "h1":  {
+                                                   "bottom":  167,
+                                                   "height":  131,
+                                                   "width":  1152,
+                                                   "x":  100,
+                                                   "y":  36
+                                               },
+                                        "intents":  {
+                                                        "bottom":  380,
+                                                        "height":  25,
+                                                        "width":  1152,
+                                                        "x":  100,
+                                                        "y":  355
+                                                    },
+                                        "languages":  {
+                                                          "bottom":  305,
+                                                          "height":  25,
+                                                          "width":  1152,
+                                                          "x":  100,
+                                                          "y":  280
+                                                      },
+                                        "promise":  {
+                                                        "bottom":  230,
+                                                        "height":  50,
+                                                        "width":  1152,
+                                                        "x":  100,
+                                                        "y":  179
+                                                    },
+                                        "stats":  {
+                                                      "bottom":  267,
+                                                      "height":  25,
+                                                      "width":  1152,
+                                                      "x":  100,
+                                                      "y":  243
+                                                  },
+                                        "types":  {
+                                                      "bottom":  343,
+                                                      "height":  25,
+                                                      "width":  1152,
+                                                      "x":  100,
+                                                      "y":  318
+                                                  }
+                                    },
+                      "twitter_count":  5,
+                      "url":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/",
+                      "screenshot":  {
+                                         "file":  "browser-1366x768-kk.png",
+                                         "bytes":  110670
+                                     },
+                      "one_action_type_navigation":  {
+                                                         "first_catalog_entry":  {
+                                                                                     "bottom":  139,
+                                                                                     "height":  22,
+                                                                                     "id":  null,
+                                                                                     "in_viewport":  true,
+                                                                                     "text":  "Cursor Kazakhstan / AI Community",
+                                                                                     "width":  246,
+                                                                                     "x":  121,
+                                                                                     "y":  117
+                                                                                 },
+                                                         "hash":  "#type-groups",
+                                                         "type_target":  {
+                                                                             "bottom":  45,
+                                                                             "height":  45,
+                                                                             "id":  "type-groups",
+                                                                             "in_viewport":  true,
+                                                                             "text":  "",
+                                                                             "width":  0,
+                                                                             "x":  100,
+                                                                             "y":  0
+                                                                         }
+                                                     }
+                  }
+              ]
+}

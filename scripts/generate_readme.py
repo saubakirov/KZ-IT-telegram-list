@@ -42,6 +42,8 @@ OUTPUT_PATHS = {
     "ru": PROJECT_ROOT / "ru" / "index.md",
     "kk": PROJECT_ROOT / "kk" / "index.md",
 }
+PUBLIC_BASE_URL = "https://saubakirov.github.io/KZ-IT-telegram-list"
+OG_LOCALES = {"en": "en_US", "ru": "ru_RU", "kk": "kk_KZ"}
 
 
 @dataclass(frozen=True)
@@ -50,7 +52,7 @@ class Projection:
 
     key: str
     locale: str
-    front_matter: str
+    permalink: str | None
     language_links: tuple[tuple[str, str], ...]
     data_path: str
     contributing_path: str
@@ -61,7 +63,7 @@ PROJECTIONS = (
     Projection(
         key="readme",
         locale="en",
-        front_matter="",
+        permalink=None,
         language_links=(("EN", "README.md"), ("RU", "ru/index.md"), ("KK", "kk/index.md")),
         data_path="data/communities.json",
         contributing_path="CONTRIBUTING.md",
@@ -70,7 +72,7 @@ PROJECTIONS = (
     Projection(
         key="en",
         locale="en",
-        front_matter="---\npermalink: /\nlang: en\n---\n\n",
+        permalink="/",
         language_links=(("EN", "./"), ("RU", "ru/"), ("KK", "kk/")),
         data_path="data/communities.json",
         contributing_path="CONTRIBUTING.md",
@@ -78,7 +80,7 @@ PROJECTIONS = (
     Projection(
         key="ru",
         locale="ru",
-        front_matter="---\npermalink: /ru/\nlang: ru\n---\n\n",
+        permalink="/ru/",
         language_links=(("EN", "../"), ("RU", "./"), ("KK", "../kk/")),
         data_path="../data/communities.json",
         contributing_path="../CONTRIBUTING.md",
@@ -86,7 +88,7 @@ PROJECTIONS = (
     Projection(
         key="kk",
         locale="kk",
-        front_matter="---\npermalink: /kk/\nlang: kk\n---\n\n",
+        permalink="/kk/",
         language_links=(("EN", "../"), ("RU", "../ru/"), ("KK", "./")),
         data_path="../data/communities.json",
         contributing_path="../CONTRIBUTING.md",
@@ -115,6 +117,42 @@ def localized_value(container: dict, base: str, locale: str) -> str:
     if not isinstance(value, str):
         raise ValueError(f"{localized_key(base, locale)} must be a string")
     return value
+
+
+def yaml_string(value: str) -> str:
+    """Encode one UTF-8 string as a JSON-compatible YAML scalar."""
+    return json.dumps(value, ensure_ascii=False)
+
+
+def generate_front_matter(data: dict, projection: Projection) -> str:
+    """Generate Jekyll route fields without placing them in the visible body."""
+    if projection.permalink is None:
+        return ""
+    meta = data["meta"]
+    alternate_locales = [
+        value for locale, value in OG_LOCALES.items() if locale != projection.locale
+    ]
+    lines = [
+            "---",
+            "layout: default",
+            f"permalink: {projection.permalink}",
+            f"lang: {projection.locale}",
+            f"title: {yaml_string(localized_value(meta, 'title', projection.locale))}",
+            f"description: {yaml_string(localized_value(meta, 'description', projection.locale))}",
+            f"canonical_url: {yaml_string(PUBLIC_BASE_URL + projection.permalink)}",
+            f"last_modified: {meta['last_updated']}",
+            f"og_locale: {OG_LOCALES[projection.locale]}",
+            "og_locale_alternates:",
+    ]
+    lines.extend(f"  - {value}" for value in alternate_locales)
+    lines.extend(
+        [
+            "sitemap: true",
+            "---",
+            "",
+        ]
+    )
+    return "\n".join(lines)
 
 
 def category_names(data: dict, locale: str) -> dict[str, str]:
@@ -441,7 +479,7 @@ def render_projection(data: dict, projection: Projection) -> str:
         f"{markdown_text(ui['stats.verified'])} **{verification_date}**"
     )
     lines = [
-        projection.front_matter.rstrip("\n"),
+        generate_front_matter(data, projection).rstrip("\n"),
         f"# {markdown_text(localized_value(meta, 'title', locale))}",
         "",
         f"> {markdown_text(localized_value(meta, 'description', locale))}.",

@@ -1,0 +1,29 @@
+url: "https://saubakirov.github.io"
+baseurl: "/KZ-IT-telegram-list"
+title: "Awesome Kazakhstan IT Telegram"
+description: "A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community"
+lang: en
+
+exclude:
+  - .agents
+  - .claude
+  - .github
+  - .tfw
+  - _site
+  - docs
+  - knowledge
+  - scripts
+  - tasks
+  - team
+  - AGENTS.md
+  - CHANGELOG.md
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - KNOWLEDGE.md
+  - README.md
+  - RELEASE.md
+  - TECH_DEBT.md
+  - vendor
+
+strict_front_matter: true

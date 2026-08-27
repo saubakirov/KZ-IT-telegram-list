@@ -53,6 +53,44 @@ except ImportError:  # Direct script execution.
     )
 
 PROJECT_ROOT = Path(__file__).parent.parent
+APPROVED_PHASE_A_REF = "d9fe27c6dce80008326fa8eb731d3aff40fd3726"
+APPROVED_LOCALE_DIGEST = "51db402da00f85f25dd533d415c9d7941402c69b5892952882bafc6122d2a6fc"
+PHASE_A_TEST_NAMES = {
+    "test_production_schema_and_review_binding",
+    "test_all_outputs_are_current_and_semantically_valid",
+    "test_check_mode_is_non_mutating",
+    "test_projection_structure_and_exact_target_sets",
+    "test_intent_membership_matches_reviewed_snapshot",
+    "test_special_character_fixture_is_portable",
+    "test_missing_blank_placeholder_and_unknown_locale_fail",
+    "test_invalid_category_and_intent_references_fail",
+    "test_stale_digest_and_duplicate_destination_fail",
+    "test_broken_fragment_lost_anchor_and_duplicate_id_are_detected",
+    "test_existing_date_member_archive_and_north_star_rules_remain",
+    "test_canonical_digest_ignores_object_insertion_order",
+}
+
+
+def approved_bytes(path: Path) -> bytes:
+    """Read exact approved Phase A bytes from the immutable Git object."""
+    relative = path.relative_to(PROJECT_ROOT).as_posix()
+    return subprocess.run(
+        ["git", "show", f"{APPROVED_PHASE_A_REF}:{relative}"],
+        cwd=PROJECT_ROOT,
+        capture_output=True,
+        check=True,
+    ).stdout
+
+
+def strip_front_matter_bytes(content: bytes) -> bytes:
+    """Remove one leading YAML front-matter block without normalizing body bytes."""
+    if not content.startswith(b"---\n"):
+        return content
+    closing = content.find(b"\n---\n", 4)
+    if closing < 0:
+        raise AssertionError("front matter is not closed")
+    body = content[closing + len(b"\n---\n") :]
+    return body[1:] if body.startswith(b"\n") else body
 
 
 class CatalogGenerationTests(unittest.TestCase):
@@ -261,6 +299,27 @@ class CatalogGenerationTests(unittest.TestCase):
             reversed(list(reordered["category_labels"]["ru"].items()))
         )
         self.assertEqual(review_payload_sha256(self.data), review_payload_sha256(reordered))
+
+    def test_phase_a_body_digest_readme_and_test_contract_are_preserved(self) -> None:
+        self.assertEqual(APPROVED_LOCALE_DIGEST, review_payload_sha256(self.data))
+        self.assertEqual(
+            approved_bytes(PROJECT_ROOT / "data" / "communities.json"),
+            (PROJECT_ROOT / "data" / "communities.json").read_bytes(),
+        )
+        self.assertEqual(
+            approved_bytes(PROJECT_ROOT / "README.md"),
+            (PROJECT_ROOT / "README.md").read_bytes(),
+        )
+        for path in (PROJECT_ROOT / "index.md", PROJECT_ROOT / "ru" / "index.md", PROJECT_ROOT / "kk" / "index.md"):
+            with self.subTest(path=path.relative_to(PROJECT_ROOT)):
+                self.assertEqual(
+                    strip_front_matter_bytes(approved_bytes(path)),
+                    strip_front_matter_bytes(path.read_bytes()),
+                )
+        current_tests = {
+            name for name in dir(type(self)) if name.startswith("test_")
+        }
+        self.assertTrue(PHASE_A_TEST_NAMES.issubset(current_tests))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,146 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #172033;
+  background: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+}
+
+.catalog {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+  padding-block: 2.25rem 5rem;
+  overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3 {
+  color: #0f172a;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  margin: 3rem 0 1rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid #cbd5e1;
+  font-size: clamp(1.55rem, 3vw, 2.1rem);
+}
+
+h3 {
+  margin: 2rem 0 0.75rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+}
+
+p,
+blockquote,
+ul,
+table {
+  margin-block: 0.8rem;
+}
+
+blockquote {
+  margin-inline: 0;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid #0284c7;
+  color: #334155;
+  background: #f0f9ff;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+ul {
+  padding-left: 1.35rem;
+}
+
+li + li {
+  margin-top: 0.45rem;
+}
+
+a {
+  color: #075985;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+}
+
+a:hover {
+  color: #0c4a6e;
+}
+
+a:focus-visible {
+  border-radius: 0.15rem;
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+code {
+  padding: 0.1em 0.3em;
+  border-radius: 0.25rem;
+  color: #1e293b;
+  background: #e2e8f0;
+  white-space: normal;
+}
+
+table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  -webkit-overflow-scrolling: touch;
+}
+
+th,
+td {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: #0f172a;
+  background: #e2e8f0;
+}
+
+@media (max-width: 40rem) {
+  :root {
+    font-size: 15px;
+  }
+
+  .catalog {
+    width: min(100% - 1.25rem, 72rem);
+    padding-block: 1.25rem 3rem;
+  }
+
+  h2 {
+    margin-top: 2.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,6 +1,16 @@
 ---
+layout: default
 permalink: /ru/
 lang: ru
+title: "IT-сообщества Казахстана в Telegram"
+description: "Проверенный каталог IT-групп, каналов и ботов для технологического сообщества Казахстана"
+canonical_url: "https://saubakirov.github.io/KZ-IT-telegram-list/ru/"
+last_modified: 2026-08-27
+og_locale: ru_RU
+og_locale_alternates:
+  - en_US
+  - kk_KZ
+sitemap: true
 ---
 
 # IT-сообщества Казахстана в Telegram
