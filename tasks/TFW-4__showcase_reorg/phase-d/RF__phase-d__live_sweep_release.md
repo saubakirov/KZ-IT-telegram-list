@@ -2,10 +2,10 @@
 
 > **Date**: 2026-08-27
 > **Author**: saubakirov (via Codex)
-> **Status**: 🟠 RF — G2 checkpoint complete; G3–G4 deferred
+> **Status**: ✅ RF — Phase D complete; verified snapshot published
 > **Parent HL**: [Phase D HL](HL__phase-d__live_sweep_release.md)
 > **TS**: [TS Phase D](TS__phase-d__live_sweep_release.md)
-> **Completion boundary**: This is not a Phase D completion claim. No `/kz-release`, local release commit, tag, push, or publication was authorized.
+> **Completion boundary**: The verified snapshot was committed as `ee2e4f8f69b7bfc66b905801f950d8e832caa02f`, tagged `data-2026-08-27`, and published under the owner's explicit compact-history and push instruction.
 
 ---
 
@@ -25,9 +25,11 @@
 |------|---------|
 | `data/communities.json` | Retained the successful `datanomika` repair; completed the exact verified `kzquake` repair; moved the two independently evidenced, owner-approved dead communities into archive |
 | `README.md` | Regenerated end to end by the committed v2 generator from the final G2 data |
+| `CHANGELOG.md` | Added the evidence-bound `data-2026-08-27` catalog snapshot entry |
 
-The authoritative Phase D lifecycle was already `RF` at resume. Its status, four journal events,
-and current generated portfolio index were validated and left unchanged by this execution turn.
+The release history was compacted into one commit per TFW-4 phase. The Phase D snapshot commit is
+the annotated release target; the task-closing trace is intentionally a later commit so the tag
+continues to identify the exact catalog snapshot.
 
 ## 2. Key Decisions
 
@@ -41,8 +43,10 @@ and current generated portfolio index were validated and left unchanged by this 
 4. Applied the two archive decisions sequentially only after the local-date gate passed. Each
    command had an independent external candidate snapshot and exact owner-approved reason and
    evidence reference. `mobile_dev_kz` was not treated as a repair.
-5. Stopped before G3/G4. AC-6 through AC-8 remain deferred where they depend on `/kz-release`,
-   publication approval, or final project-memory closure.
+5. Completed G3/G4 under the owner's direct instruction: prepared the dated changelog, created the
+   reviewed Phase D snapshot commit, created the annotated tag, and pushed `master` plus the tag
+   with an exact force-with-lease correction after detecting Git newline normalization in one raw
+   evidence blob. Project memory and lifecycle closure were then completed in the task-closing commit.
 
 ## 3. Acceptance Criteria
 
@@ -51,9 +55,9 @@ and current generated portfolio index were validated and left unchanged by this 
 - [x] AC-3 — every G1 unresolved row has one retained exact retry and bounded fallback evidence.
 - [x] AC-4 — both exact repairs and both exact archives have evidence-backed owner dispositions and passed their candidate predicates.
 - [x] AC-5 — final schema, evidence coverage, generator write/currency, protected hashes, and diff gates passed.
-- [ ] AC-6 — DEFERRED: `/kz-release` was not invoked; no changelog snapshot or local release commit exists.
-- [ ] AC-7 — DEFERRED: no exact publication approval exists; no tag or push occurred.
-- [ ] AC-8 — DEFERRED: protected v2 state passed, but completion memory/debt transitions and task closure wait on AC-6/AC-7 and the frozen Master DoD.
+- [x] AC-6 — the evidence-bound root changelog and local Phase D snapshot commit were created.
+- [x] AC-7 — owner-authorized annotated tag `data-2026-08-27` and `origin/master` publication succeeded; the only rewritten refs used exact `--force-with-lease` expectations to preserve the approved raw evidence bytes.
+- [x] AC-8 — final review, knowledge/debt transitions, authoritative task states, journals, and derived index are complete.
 
 ## 4. Verification
 
@@ -68,6 +72,8 @@ and current generated portfolio index were validated and left unchanged by this 
 - Diff whitespace (`git diff --check -- data/communities.json README.md`): PASS.
 - v2 state (`python docs/scripts/gen_index.py --validate`): PASS.
 - Derived index (`python docs/scripts/gen_index.py --check`): PASS.
+- Publication (`git ls-remote origin refs/heads/master refs/tags/data-2026-08-27`): PASS;
+  the remote branch and peeled annotated tag identify the reviewed snapshot commit.
 
 One initial read-only Python aggregate-checker command hit Windows native-argument quoting before
 it could open the aggregate. It mutated nothing. The strict PowerShell verifier passed the same
@@ -77,7 +83,7 @@ required predicates immediately afterward.
 
 See [EV file](evidence/EV__phase-d__live_sweep_release.md) for evidence details.
 
-Evidence verdict: 5/8 VERIFIED, 3 DEFERRED, 0 BLOCKED, 0 N/A
+Evidence verdict: 8/8 VERIFIED, 0 DEFERRED, 0 BLOCKED, 0 N/A
 
 ## 6. Observations (out-of-scope, not modified)
 
@@ -88,6 +94,8 @@ No observations.
 | # | Category | Candidate | Source | Confidence |
 |---|----------|-----------|--------|------------|
 | 1 | domain | The owner directly checked Telegram and reported that the historical `mobile_developers_kz` and `kzqacommunity` communities no longer exist; RES3 supplies the historical-record binding used by the exact archive decisions | Phase D TS §6 owner death evidence binding; source task `01a03eef-e770-7271-82e3-727586c7d274` | High |
+
+> fact-candidates: processed 2026-08-27
 
 ## 8. Strategic Insights (Execution)
 

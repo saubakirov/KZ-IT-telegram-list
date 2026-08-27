@@ -18,8 +18,6 @@
 | # | Item | Type | Severity | Status | Source |
 |---|------|------|----------|--------|--------|
 | TD-1 | Legacy tasks `TFW-01` / `TFW-02` use zero-padded IDs and `HL__`/`TS__` filenames, deviating from `.tfw/conventions.md` §4 (`TFW-3`, `HL-TFW-3__…`) | convention | Low | 🟢 ACCEPTED | [RF TFW-3](tasks/TFW-3__tfw_init/RF__TFW-3__tfw_init.md) |
-| TD-2 | Every `last_verified` in `data/communities.json` reads `2026-01-30`. Link liveness and member counts are ~7 months stale | data-freshness | **High** | 🟡 PLANNED | [RES TFW-3 Q6](tasks/TFW-3__tfw_init/RES__TFW-3__tfw_init.md) |
-| TD-4 | TFW-02 deleted 12 dead communities with no archive. The list of what was removed, and why, exists only in a commit diff | trace-loss | Medium | 🟡 PLANNED | [RF TFW-02](tasks/TFW-02_enhanced_validation/RF__TFW-02__enhanced_validation.md) |
 | TD-5 | `scripts/` has no tests. `generate_readme.py` correctness is verified only by eyeballing the output | missing-test | Medium | 🔴 OPEN | [RF TFW-3](tasks/TFW-3__tfw_init/RF__TFW-3__tfw_init.md) |
 | TD-8 | Legacy backlog items (CI, `README.ru.md`, archive section) were carried from the retired `TASK.md` without re-confirming they are still wanted | scope | Low | 🟡 PLANNED | [RES TFW-3 Q5](tasks/TFW-3__tfw_init/RES__TFW-3__tfw_init.md) |
 | TD-9 | TFW-4's frozen Quality Contract hardcodes commit `agent=claude-code`, while `.tfw/conventions.md` §4 derives `agent` from the acting product. A non-Claude executor must violate one source or emit misleading trace attribution | trace-attribution | Medium | 🟡 PLANNED | [REVIEW TFW-4 Phase A](tasks/TFW-4__showcase_reorg/phase-a/REVIEW__phase-a__baseline_cleanup.md) |
@@ -50,16 +48,6 @@ framework install. Renaming them would rewrite trace history for cosmetic consis
 HL-TFW-3 §7 Principle 4 forbids it. `initial_seq: 3` sidesteps the `TFW-1`/`TFW-01` collision.
 Accepted permanently; new tasks follow the convention.
 
-### TD-2 — Stale verification dates (highest-value open item)
-
-All 63 entries carry `last_verified: 2026-01-30`. A curated list whose central promise is
-accuracy has not been verified in roughly seven months. Some communities have likely died,
-merged, or changed handles, and every member count is stale.
-
-**Resolution:** `python scripts/validate_links.py --update`, in CL mode — the run touches the
-network and its verdicts need human review before dead entries are removed. Consider TD-4's
-archive question at the same time, so this sweep does not repeat TFW-02's silent deletion.
-
 ### TD-6 — `meta.last_updated` pipeline ownership (RESOLVED)
 
 `validate_links.py --update` now writes the run date to `meta.last_updated` when it persists
@@ -73,6 +61,8 @@ value; Phase D remains responsible for the first observed refresh.
 
 | # | Item | Resolved by | Date |
 |---|------|-------------|------|
+| TD-2 | ✅ RESOLVED — all 62 surviving live communities have positive evidence and `last_verified: 2026-08-27`; counts were persisted only when observed, with exact supplemental rechecks for repaired entries | [RF TFW-4 Phase D](tasks/TFW-4__showcase_reorg/phase-d/RF__phase-d__live_sweep_release.md) | 2026-08-27 |
+| TD-4 | ✅ RESOLVED — dead-community handling now preserves complete source records in `archive` with `type`, evidence date, and owner-approved reason; the first two records were archived rather than deleted | [RF TFW-4 Phase D](tasks/TFW-4__showcase_reorg/phase-d/RF__phase-d__live_sweep_release.md) | 2026-08-27 |
 | TD-10 | ✅ RESOLVED — TFW 2.0.0 retired the Task Board entirely. The managed `AGENTS.md` block and all 11 Codex `SKILL.md` copies now name the selected task's `status.md` as the state carrier; no adapter names any board. The only remaining mention is the `BOARD-SNAPSHOT.md` history row | [TFW 2.0.0 update](.tfw/CHANGELOG.md) | 2026-08-27 |
 | TD-3 | ✅ RESOLVED — added offline CI for schema validation and the generator's non-mutating README-currency gate on pull requests and pushes to `master`; no remote run is claimed in Phase C | [RF TFW-4 Phase C](tasks/TFW-4__showcase_reorg/phase-c/RF__phase-c__pipeline_tooling.md) | 2026-08-27 |
 | TD-6 | ✅ RESOLVED — `validate_links.py` owns `meta.last_updated` whenever an observed update or explicit evidence-backed archive is persisted; production remains unchanged until Phase D | [RF TFW-4 Phase C](tasks/TFW-4__showcase_reorg/phase-c/RF__phase-c__pipeline_tooling.md) | 2026-08-27 |

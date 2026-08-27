@@ -74,6 +74,7 @@ data/communities.json ──► validate_schema.py ──► validate_links.py �
 | D15 | Task state lives in each task's own `status.md`; `tasks/README.md` is kept permanently as a hand-maintained route and as the home for the backlog and legacy-trace notes | A shared table serialized every lifecycle transition through one file. The route file survives because generated `README.md` cannot hold hand-maintained content (D7's reasoning) and the derived index must not — it is rebuilt and would discard it | [.tfw/CHANGELOG.md](.tfw/CHANGELOG.md) 2.0.0 |
 | D16 | TFW framework tooling lives in `docs/scripts/`, separate from project `scripts/` | `.tfw/conventions.md` and `.tfw/workflows/init.md` reference that literal path, and `gen_index.py` resolves the project root as `parents[2]` of its own file. Keeping the path leaves `.tfw/` byte-identical to upstream, so future `/tfw-update` runs stay trivial diffs | [docs/scripts/README.md](docs/scripts/README.md) |
 | D17 | One task container (`task_containers: [tasks]`), and the pre-2.0.0 corpus is not renamed | The corpus already lives in `tasks/`, so no second container is needed. Renaming legacy ids into the clock grammar was declined: a trace needing a translation table has lost the property the framework exists to provide. Cost recorded as TD-12 | [.tfw/project_config.yaml](.tfw/project_config.yaml) |
+| D18 | A catalog release is an evidence-complete dated snapshot: the immutable full-sweep evidence may be supplemented by exact handle rechecks, while type repairs and death archives require target-bound or owner-bound evidence before publication | The first release showed that a single HTTP shape is not enough: target identity, peer type, historical continuity, explicit archive authority, and a final exact-universe reconciliation prevent ambiguous Telegram responses from becoming catalog facts | [RF TFW-4 Phase D](tasks/TFW-4__showcase_reorg/phase-d/RF__phase-d__live_sweep_release.md) |
 
 ---
 
@@ -87,6 +88,7 @@ data/communities.json ──► validate_schema.py ──► validate_links.py �
 | TFW-4 Phase A | Baseline & cleanup | [RF TFW-4 Phase A](tasks/TFW-4__showcase_reorg/phase-a/RF__phase-a__baseline_cleanup.md) | Records the bounded removal of the obsolete singular adapter and establishes the preserved trace baseline for later TFW-4 phases |
 | TFW-4 Phase B | Contract & docs | [RF TFW-4 Phase B](tasks/TFW-4__showcase_reorg/phase-b/RF__phase-b__contract_docs.md) | Establishes the canonical agent contract, structured North Star, contributor policy, and dated-snapshot release vocabulary consumed by later phases |
 | TFW-4 Phase C | Pipeline & tooling | [RF TFW-4 Phase C](tasks/TFW-4__showcase_reorg/phase-c/RF__phase-c__pipeline_tooling.md) | Establishes the evidence-safe Telegram classifier, generated presentation/currency contract, offline CI, and bounded project operations that Phase D may later execute |
+| TFW-4 Phase D | Live sweep & first release | [RF TFW-4 Phase D](tasks/TFW-4__showcase_reorg/phase-d/RF__phase-d__live_sweep_release.md) | Records the verified 2026-08-27 catalog snapshot, exact repair/archive evidence, release commit, annotated tag, publication, and final task closure |
 
 ---
 
@@ -116,8 +118,7 @@ data/communities.json ──► validate_schema.py ──► validate_links.py �
 
 | Category | Count | Topic File |
 |----------|-------|------------|
-
-_No consolidation run yet — `last_consolidation_seq: 0`. First consolidation due after TFW-8 (`tfw.knowledge.interval: 5`)._
+| Domain | 2 | [knowledge/domain.md](knowledge/domain.md) |
 
 ---
 

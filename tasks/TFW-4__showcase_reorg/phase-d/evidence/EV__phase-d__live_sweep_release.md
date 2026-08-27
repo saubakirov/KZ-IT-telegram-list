@@ -4,7 +4,7 @@
 > **Author**: saubakirov (via Codex)
 > **Task**: TFW-4
 > **TS**: [TS Phase D](../TS__phase-d__live_sweep_release.md)
-> **Checkpoint**: G2 complete; G3 local release preparation and G4 publication are not authorized
+> **Checkpoint**: Phase D complete; G1–G4 verified and the dated snapshot published
 
 ---
 
@@ -15,8 +15,8 @@
 | OS | Microsoft Windows 11 Pro 10.0.26200 |
 | Shell | Windows PowerShell 5.1.26100.8655 |
 | Language / Runtime | Python 3.13.5 |
-| Repository | `master` at `97dd429b1a55e080c93661b514017dffd7cd61d2` |
-| Deploy target | Local shared checkout; Telegram target previews through the approved validator |
+| Repository | Phase D snapshot commit `ee2e4f8f69b7bfc66b905801f950d8e832caa02f` |
+| Deploy target | GitHub `origin/master` and annotated tag `data-2026-08-27` |
 | CI / Pipeline | Local, path-scoped verification |
 | Identity | actor/on_behalf_of `saubakirov`, via `codex` |
 
@@ -29,9 +29,9 @@
 | E3 | AC-3 | The four G1 unresolved handles each have exactly one retained scripted retry; bounded browser evidence retains both negative contact-shell observations and the zero-temporary-tab cleanup result | Retained JSON/PDF | VERIFIED | [`retry_summaries.json`](retry_summaries.json); [`browser_fallback.pdf`](browser_fallback.pdf) |
 | E4 | AC-4 | Exact owner-approved dispositions completed in order: retained `datanomika`; verified atomic `kzquake` repair; archived `mobile_developers_kz`; archived `kzqacommunity`. Candidate snapshots and fail-closed boundaries were isolated per entry; `mobile_dev_kz` was not used as a repair | Python validator plus external byte snapshots | VERIFIED | [`g2_recheck_summaries.json`](g2_recheck_summaries.json); [TS §6](../TS__phase-d__live_sweep_release.md#g2-exact-owner-decision-package); external snapshots indexed below |
 | E5 | AC-5 | Schema, generator write, generator currency, exact final evidence coverage, disposition reconciliation, protected hashes, and diff whitespace all passed. Every surviving live record is evidenced for the common run date | Python 3.13.5 and PowerShell 5.1 | VERIFIED | `data/communities.json` SHA-256 `b773a69d8f828b3732d387f797a5c41cbd37376d62be18e559b9a39d7d325de3`; `README.md` SHA-256 `58266a695a3e50f0997c9b7adcbe349853942d68a7ab91a06060113fa0ee3697` |
-| E6 | AC-6 | No `/kz-release` invocation, changelog snapshot, release staging, or local release commit was authorized or attempted | Local Git | DEFERRED | Blocker: G3 explicit invocation absent |
-| E7 | AC-7 | No exact commit/tag/branch/remote publication approval exists; no tag, push, or publication was attempted | Local Git | DEFERRED | Blocker: G4 exact publication approval absent |
-| E8 | AC-8 | Protected artifacts, RF lifecycle authority, immutable journal, generated-index schema, and index currency passed. Completion memory/debt transitions and task closure remain unavailable while AC-6/AC-7 are deferred | v2 task-state validation | DEFERRED | `python docs/scripts/gen_index.py --validate`; `python docs/scripts/gen_index.py --check`; this RF is a non-completion checkpoint |
+| E6 | AC-6 | Evidence-derived snapshot statistics were recorded in root `CHANGELOG.md`; the compact Phase D release commit contains the reviewed result and complete trace | Local Git | VERIFIED | Commit `ee2e4f8f69b7bfc66b905801f950d8e832caa02f`; `CHANGELOG.md` section `data-2026-08-27` |
+| E7 | AC-7 | The owner explicitly authorized compact commits, release, and push. The annotated tag peels to the approved snapshot, and `master` advances by the one closing commit | GitHub origin | VERIFIED | Final ref correction used exact `--force-with-lease` expectations after newline normalization was detected; no unrelated remote work was overwritten |
+| E8 | AC-8 | Completion RF/review, project knowledge and debt transitions, authoritative phase/task states, immutable journal events, and regenerated index are consistent | v2 task-state validation | VERIFIED | Completion RF/REVIEW; `KNOWLEDGE.md`; `TECH_DEBT.md`; task and phase `status.md`; `tasks/00-INDEX.md` |
 
 ## G2 Disposition Evidence
 
@@ -90,6 +90,9 @@ SHA-256 predicates.
 | `git diff --check -- data/communities.json README.md` | 0 | No whitespace errors |
 | `python docs/scripts/gen_index.py --validate` | 0 | Two task states validate against the closed v2 schema |
 | `python docs/scripts/gen_index.py --check` | 0 | Derived portfolio index is current |
+| Initial `git push origin <snapshot>:master refs/tags/data-2026-08-27` | 0 | Fast-forward branch update and new annotated tag published |
+| Exact `git push --force-with-lease=<expected>` repair | 0 | Replaced only the compact master/tag refs after restoring the immutable raw evidence blob |
+| `git ls-remote origin refs/heads/master refs/tags/data-2026-08-27` | 0 | Remote tag peels to the reviewed snapshot commit; remote master contains one later closure commit |
 
 An initial read-only Python aggregate-checker invocation failed in argument parsing before opening
 the aggregate because of Windows native-command quoting. It changed no file. The equivalent strict
@@ -114,7 +117,7 @@ Both merge-recovery stashes remain at
 
 ## Verdict
 
-Evidence verdict: 5/8 VERIFIED, 3 DEFERRED, 0 BLOCKED, 0 N/A
+Evidence verdict: 8/8 VERIFIED, 0 DEFERRED, 0 BLOCKED, 0 N/A
 
 ## Attachments
 

@@ -9,24 +9,19 @@
 |---|---|
 | Source | 1 task state files, 4 snapshot rows |
 | Containers searched | `tasks/` |
-| Freshness | newest task state update: 20260827-075310 |
+| Freshness | newest task state update: 20260827-123131 |
 | Unresolved inputs | 0 |
 | Generator | `python docs/scripts/gen_index.py` |
 
-## In flight — 1
+## In flight — 0
 
-| Task | Lifecycle | Owner | Goal | Authority |
-|---|---|---|---|---|
-| [**TFW-4** — Showcase reorganization](TFW-4__showcase_reorg/status.md) | PHASES | saubakirov | Showcase reorganization — commit the trace, consolidate the contract, automate the promise | [HL-TFW-4__showcase_reorg.md](TFW-4__showcase_reorg/HL-TFW-4__showcase_reorg.md) |
-| &nbsp;&nbsp;↳ [A — Phase A — Baseline & Cleanup](TFW-4__showcase_reorg/phase-a/status.md) | DONE | saubakirov | Commit the existing trace and clear the baseline before the contract work begins | — |
-| &nbsp;&nbsp;↳ [B — Phase B — Contract & Docs](TFW-4__showcase_reorg/phase-b/status.md) | DONE | saubakirov | Consolidate the project contract and documentation into one canonical source | — |
-| &nbsp;&nbsp;↳ [C — Phase C — Pipeline & Tooling](TFW-4__showcase_reorg/phase-c/status.md) | DONE | saubakirov | Automate the catalog promise — generated README, schema and link tooling | — |
-| &nbsp;&nbsp;↳ [D — Phase D — Live Sweep & First Release](TFW-4__showcase_reorg/phase-d/status.md) | ONB | saubakirov | Run the live liveness sweep and cut the first verified dated release | — |
+No task is in flight.
 
-## Closed — 1
+## Closed — 2
 
 | Task | Outcome | Record |
 |---|---|---|
+| **TFW-4** — Showcase reorganization | DONE · Four reviewed phases completed; verified snapshot data-2026-08-27 published and project memory closed | [state](TFW-4__showcase_reorg/status.md) |
 | **TFW-3** — Initialize TFW 1.3.0 — framework install, Claude Code adapter, legacy migration | ✅ DONE | [task folder](TFW-3__tfw_init/) |
 
 1 of those closed before TFW 2.0.0 and carry no state file.
