@@ -1,7 +1,7 @@
 {
-    "captured_at":  "2026-08-27T19:37:59.1692424+05:00",
+    "captured_at":  "2026-08-27T15:50:30.082Z",
     "browser":  "Codex In-app Browser (Chromium)",
-    "server":  "read-only localhost build mounted at /KZ-IT-telegram-list",
+    "server":  "read-only localhost supported build mounted at /KZ-IT-telegram-list",
     "cases":  [
                   {
                       "actual_viewport":  {
@@ -32,28 +32,28 @@
                       "local_link_checks":  [
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/#type-groups",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/#intent-ai",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 }
                                             ],
                       "locale":  "en",
@@ -194,49 +194,59 @@
 
                                           ],
                       "h1_count":  1,
-                      "h1_text":  "IT-сообщества Казахстана в Telegram",
+                      "h1_text":  "IT-ÑÐ¾Ð¾Ð±Ñ‰ÐµÑÑ‚Ð²Ð° ÐšÐ°Ð·Ð°Ñ…ÑÑ‚Ð°Ð½Ð° Ð² Telegram",
                       "hidden_critical_count":  0,
                       "horizontal_overflow":  false,
                       "jsonld_count":  1,
                       "local_link_checks":  [
                                                 {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/",
+                                                    "ok":  true,
+                                                    "status":  200
+                                                },
+                                                {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#type-groups",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#intent-ai",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 }
                                             ],
                       "locale":  "ru",
                       "og_count":  12,
                       "representative_links":  [
                                                    {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/",
+                                                       "raw":  "../",
+                                                       "text":  "EN"
+                                                   },
+                                                   {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#type-groups",
                                                        "raw":  "#type-groups",
-                                                       "text":  "Группы"
+                                                       "text":  "Ð“Ñ€ÑƒÐ¿Ð¿Ñ‹"
                                                    },
                                                    {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#intent-ai",
                                                        "raw":  "#intent-ai",
-                                                       "text":  "ИИ"
+                                                       "text":  "Ð˜Ð˜"
                                                    },
                                                    {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
                                                        "raw":  "/KZ-IT-telegram-list/data/communities.json",
-                                                       "text":  "Скачать канонический каталог JSON"
+                                                       "text":  "Ð¡ÐºÐ°Ñ‡Ð°Ñ‚ÑŒ ÐºÐ°Ð½Ð¾Ð½Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ ÐºÐ°Ñ‚Ð°Ð»Ð¾Ð³ JSON"
                                                    },
                                                    {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
@@ -249,7 +259,7 @@
                                                  "width":  390
                                              },
                       "stylesheet_loaded":  true,
-                      "title":  "IT-сообщества Казахстана в Telegram",
+                      "title":  "IT-ÑÐ¾Ð¾Ð±Ñ‰ÐµÑÑ‚Ð²Ð° ÐšÐ°Ð·Ð°Ñ…ÑÑ‚Ð°Ð½Ð° Ð² Telegram",
                       "top_rects":  {
                                         "first_telegram":  {
                                                                "bottom":  1072,
@@ -353,35 +363,35 @@
 
                                           ],
                       "h1_count":  1,
-                      "h1_text":  "Қазақстанның Telegram-дағы IT қауымдастықтары",
+                      "h1_text":  "ÒšÐ°Ð·Ð°Ò›ÑÑ‚Ð°Ð½Ð½Ñ‹Ò£ Telegram-Ð´Ð°Ò“Ñ‹ IT Ò›Ð°ÑƒÑ‹Ð¼Ð´Ð°ÑÑ‚Ñ‹Ò›Ñ‚Ð°Ñ€Ñ‹",
                       "hidden_critical_count":  0,
                       "horizontal_overflow":  false,
                       "jsonld_count":  1,
                       "local_link_checks":  [
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#type-groups",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#intent-ai",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 }
                                             ],
                       "locale":  "kk",
@@ -395,17 +405,17 @@
                                                    {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#type-groups",
                                                        "raw":  "#type-groups",
-                                                       "text":  "Топтар"
+                                                       "text":  "Ð¢Ð¾Ð¿Ñ‚Ð°Ñ€"
                                                    },
                                                    {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#intent-ai",
                                                        "raw":  "#intent-ai",
-                                                       "text":  "Жасанды интеллект"
+                                                       "text":  "Ð–Ð°ÑÐ°Ð½Ð´Ñ‹ Ð¸Ð½Ñ‚ÐµÐ»Ð»ÐµÐºÑ‚"
                                                    },
                                                    {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
                                                        "raw":  "/KZ-IT-telegram-list/data/communities.json",
-                                                       "text":  "Негізгі JSON каталогын жүктеу"
+                                                       "text":  "ÐÐµÐ³Ñ–Ð·Ð³Ñ– JSON ÐºÐ°Ñ‚Ð°Ð»Ð¾Ð³Ñ‹Ð½ Ð¶Ò¯ÐºÑ‚ÐµÑƒ"
                                                    },
                                                    {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
@@ -418,7 +428,7 @@
                                                  "width":  390
                                              },
                       "stylesheet_loaded":  true,
-                      "title":  "Қазақстанның Telegram-дағы IT қауымдастықтары",
+                      "title":  "ÒšÐ°Ð·Ð°Ò›ÑÑ‚Ð°Ð½Ð½Ñ‹Ò£ Telegram-Ð´Ð°Ò“Ñ‹ IT Ò›Ð°ÑƒÑ‹Ð¼Ð´Ð°ÑÑ‚Ñ‹Ò›Ñ‚Ð°Ñ€Ñ‹",
                       "top_rects":  {
                                         "first_telegram":  {
                                                                "bottom":  1084,
@@ -529,28 +539,28 @@
                       "local_link_checks":  [
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/#type-groups",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/#intent-ai",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 }
                                             ],
                       "locale":  "en",
@@ -691,49 +701,59 @@
 
                                           ],
                       "h1_count":  1,
-                      "h1_text":  "IT-сообщества Казахстана в Telegram",
+                      "h1_text":  "IT-ÑÐ¾Ð¾Ð±Ñ‰ÐµÑÑ‚Ð²Ð° ÐšÐ°Ð·Ð°Ñ…ÑÑ‚Ð°Ð½Ð° Ð² Telegram",
                       "hidden_critical_count":  0,
                       "horizontal_overflow":  false,
                       "jsonld_count":  1,
                       "local_link_checks":  [
                                                 {
+                                                    "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/",
+                                                    "ok":  true,
+                                                    "status":  200
+                                                },
+                                                {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#type-groups",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#intent-ai",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 }
                                             ],
                       "locale":  "ru",
                       "og_count":  12,
                       "representative_links":  [
                                                    {
+                                                       "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/",
+                                                       "raw":  "../",
+                                                       "text":  "EN"
+                                                   },
+                                                   {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#type-groups",
                                                        "raw":  "#type-groups",
-                                                       "text":  "Группы"
+                                                       "text":  "Ð“Ñ€ÑƒÐ¿Ð¿Ñ‹"
                                                    },
                                                    {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/#intent-ai",
                                                        "raw":  "#intent-ai",
-                                                       "text":  "ИИ"
+                                                       "text":  "Ð˜Ð˜"
                                                    },
                                                    {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
                                                        "raw":  "/KZ-IT-telegram-list/data/communities.json",
-                                                       "text":  "Скачать канонический каталог JSON"
+                                                       "text":  "Ð¡ÐºÐ°Ñ‡Ð°Ñ‚ÑŒ ÐºÐ°Ð½Ð¾Ð½Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ ÐºÐ°Ñ‚Ð°Ð»Ð¾Ð³ JSON"
                                                    },
                                                    {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
@@ -746,7 +766,7 @@
                                                  "width":  1366
                                              },
                       "stylesheet_loaded":  true,
-                      "title":  "IT-сообщества Казахстана в Telegram",
+                      "title":  "IT-ÑÐ¾Ð¾Ð±Ñ‰ÐµÑÑ‚Ð²Ð° ÐšÐ°Ð·Ð°Ñ…ÑÑ‚Ð°Ð½Ð° Ð² Telegram",
                       "top_rects":  {
                                         "first_telegram":  {
                                                                "bottom":  776,
@@ -850,35 +870,35 @@
 
                                           ],
                       "h1_count":  1,
-                      "h1_text":  "Қазақстанның Telegram-дағы IT қауымдастықтары",
+                      "h1_text":  "ÒšÐ°Ð·Ð°Ò›ÑÑ‚Ð°Ð½Ð½Ñ‹Ò£ Telegram-Ð´Ð°Ò“Ñ‹ IT Ò›Ð°ÑƒÑ‹Ð¼Ð´Ð°ÑÑ‚Ñ‹Ò›Ñ‚Ð°Ñ€Ñ‹",
                       "hidden_critical_count":  0,
                       "horizontal_overflow":  false,
                       "jsonld_count":  1,
                       "local_link_checks":  [
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/ru/",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#type-groups",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#intent-ai",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 },
                                                 {
                                                     "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
-                                                    "status":  200,
-                                                    "ok":  true
+                                                    "ok":  true,
+                                                    "status":  200
                                                 }
                                             ],
                       "locale":  "kk",
@@ -892,17 +912,17 @@
                                                    {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#type-groups",
                                                        "raw":  "#type-groups",
-                                                       "text":  "Топтар"
+                                                       "text":  "Ð¢Ð¾Ð¿Ñ‚Ð°Ñ€"
                                                    },
                                                    {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/kk/#intent-ai",
                                                        "raw":  "#intent-ai",
-                                                       "text":  "Жасанды интеллект"
+                                                       "text":  "Ð–Ð°ÑÐ°Ð½Ð´Ñ‹ Ð¸Ð½Ñ‚ÐµÐ»Ð»ÐµÐºÑ‚"
                                                    },
                                                    {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/data/communities.json",
                                                        "raw":  "/KZ-IT-telegram-list/data/communities.json",
-                                                       "text":  "Негізгі JSON каталогын жүктеу"
+                                                       "text":  "ÐÐµÐ³Ñ–Ð·Ð³Ñ– JSON ÐºÐ°Ñ‚Ð°Ð»Ð¾Ð³Ñ‹Ð½ Ð¶Ò¯ÐºÑ‚ÐµÑƒ"
                                                    },
                                                    {
                                                        "href":  "http://127.0.0.1:4173/KZ-IT-telegram-list/CONTRIBUTING.md",
@@ -915,7 +935,7 @@
                                                  "width":  1366
                                              },
                       "stylesheet_loaded":  true,
-                      "title":  "Қазақстанның Telegram-дағы IT қауымдастықтары",
+                      "title":  "ÒšÐ°Ð·Ð°Ò›ÑÑ‚Ð°Ð½Ð½Ñ‹Ò£ Telegram-Ð´Ð°Ò“Ñ‹ IT Ò›Ð°ÑƒÑ‹Ð¼Ð´Ð°ÑÑ‚Ñ‹Ò›Ñ‚Ð°Ñ€Ñ‹",
                       "top_rects":  {
                                         "first_telegram":  {
                                                                "bottom":  816,

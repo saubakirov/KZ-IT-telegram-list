@@ -1,23 +1,69 @@
-checked_at=2026-08-27T19:36:44.8983828+05:00
+checked_at=2026-08-27T20:47:30+05:00
+revise_base=4538836b80426980f7823495cffbabed1ceb0fb0
+source_method=exact git archive of revise_base, overlaid only with the regenerated assets/social-preview.png
 image=ghcr.io/actions/jekyll-build-pages@sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041
+image_id=sha256:ac7c0ad006b3868f2c25dd48296cd135971438675ce72caacd4c9dc6d3f958fa
 image_repository=official GitHub-maintained actions/jekyll-build-pages v1.0.13
-command=bundle exec jekyll build --source /github/workspace --destination /github/workspace/_site --trace
+entrypoint=/usr/local/bin/jekyll-build-pages
+command=docker run --rm -e GITHUB_WORKSPACE=/github/workspace -e INPUT_SOURCE=. -e INPUT_DESTINATION=_site_action -e INPUT_VERBOSE=false -e INPUT_FUTURE=false -e INPUT_BUILD_REVISION=4538836b80426980f7823495cffbabed1ceb0fb0 -e GITHUB_REPOSITORY=saubakirov/KZ-IT-telegram-list -e GITHUB_API_URL=https://api.github.com -v <archive-source>:/github/workspace ghcr.io/actions/jekyll-build-pages@sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041
 jekyll_env=production
 version_probe:
 ruby 3.3.4 (2024-07-09 revision be1089c8ec) [x86_64-linux]
 Bundler version 2.5.11
 jekyll 3.10.0
-jekyll-sitemap (1.4.0)
+github-pages 232
+jekyll-sitemap 1.4.0
 note=jekyll-sitemap is installed transitively by github-pages 232 but is intentionally not enabled; sitemap.xml is repository-owned per the approved Coordinator revision.
 build_output:
-Configuration file: /github/workspace/_config.yml
+Resolving dependencies...
+The Gemfile's dependencies are satisfied
 To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
-            Source: /github/workspace
-       Destination: /github/workspace/_site
+Configuration file: /github/workspace/./_config.yml
+            Source: /github/workspace/.
+       Destination: /github/workspace/_site_action
  Incremental build: disabled. Enable with --incremental
       Generating...
-                    done in 1.31 seconds.
+                    done in 1.459 seconds.
  Auto-regeneration: disabled. Use --watch to enable.
 exit_code=0
 built_robots_txt=false
+built_llms_txt=false
 built_sitemap_xml=true
+built_en=33669 bytes sha256=64597def18f8777f92739d131649299c1639af1923f7cccde34b86d7ea61de21
+built_ru=40530 bytes sha256=fef3499ecf2d5678a52fea4d1a93d51ce5d168d883652087bb02d776c144ec0f
+built_kk=41343 bytes sha256=2d4465e7dc55856683247bf036f113380b452db1053424d82935dff81d4fba49
+built_sitemap=338 bytes sha256=79dcb9bbd3dda14054fe33695f89f6f62cdeea08881a427ec059d5e2d1665767
+built_social_preview_png=27394 bytes sha256=13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d
+
+social_preview_reproduction:
+command=python -m cairosvg assets/social-preview.svg -o assets/social-preview.png -s 1
+fresh_command_1=python -m cairosvg assets/social-preview.svg -o E:\TEMP\codex-phase-b-revise-1e13d60c452644ba96eada9b82450e4a\social-preview-rerender-1.png -s 1
+fresh_command_2=python -m cairosvg assets/social-preview.svg -o E:\TEMP\codex-phase-b-revise-1e13d60c452644ba96eada9b82450e4a\social-preview-rerender-2.png -s 1
+python=3.13.5
+python_executable=D:\python\Python313\python.exe
+platform=Windows-11-10.0.26200-SP0
+windows_version=10.0.26200
+cairosvg=2.8.2
+cairo=1.18.4
+cairocffi=1.7.1
+cffi=2.0.0
+cssselect2=0.9.0
+defusedxml=0.7.1
+pillow=12.2.0
+tinycss2=1.5.1
+cairo_dll=D:\Programs\Poppler\poppler-26.02.0\Library\bin\cairo.dll
+cairo_dll_bytes=1040896
+cairo_dll_sha256=b13e3b0d401d73a38f9aa7228d723dae2d4c8f3fd7216c3442ee2c22d873b54a
+arial_regular=C:\Windows\Fonts\arial.ttf
+arial_regular_bytes=1045720
+arial_regular_sha256=b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a
+arial_bold=C:\Windows\Fonts\arialbd.ttf
+arial_bold_bytes=989780
+arial_bold_sha256=e8f4e3baf6cc35fed6fcce3a540e8b39e8f6cda1d22a28f2ec8f526fef7a43f5
+svg_source=1158 bytes sha256=9f46ff6812ab2b22d852fb11321f9075ef6e53184f7d97df949ae93214d19d82
+fresh_rerender_1=27394 bytes sha256=13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d
+fresh_rerender_2=27394 bytes sha256=13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d
+committed_candidate=1280x640 24-bit RGB 27394 bytes sha256=13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d
+inspection_attachment=27394 bytes sha256=13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d
+reproduction_verdict=PASS; both fresh rerenders are byte-identical to assets/social-preview.png and the inspection attachment
+trace_normalization=the single trailing ASCII space emitted after the Jekyll Generating label was removed from this text trace; build output semantics are unchanged

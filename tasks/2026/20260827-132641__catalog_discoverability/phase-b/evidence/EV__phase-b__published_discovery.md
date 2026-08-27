@@ -6,6 +6,7 @@
 > **TS**: [TS Phase B](../TS__phase-b__published_discovery.md)
 > **Approved handoff**: `4776edfa29304eb0955393af6f288a654fdac822`
 > **Approved Phase A base**: `d9fe27c6dce80008326fa8eb731d3aff40fd3726`
+> **Bounded REVISE base**: `4538836b80426980f7823495cffbabed1ceb0fb0`
 
 ---
 
@@ -13,8 +14,8 @@
 
 | Field | Value |
 |-------|-------|
-| OS | Microsoft Windows NT 10.0.26200.0 |
-| Language / Runtime | Python 3.13.5; Git 2.42.0.windows.1; PowerShell; CairoSVG 2.8.2 |
+| OS | Windows 11 `10.0.26200`; Python platform `Windows-11-10.0.26200-SP0` |
+| Language / Runtime | Python 3.13.5; Git 2.42.0.windows.1; PowerShell 5.1.26100.8655; CairoSVG 2.8.2 |
 | Deploy target | Local production Jekyll build only; no deployment or publication |
 | CI / Pipeline | Official GitHub-maintained `actions/jekyll-build-pages:v1.0.13` image at immutable digest `sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041`; Docker 24.0.6 |
 | Pages runtime | Ruby 3.3.4; Bundler 2.5.11; `github-pages` 232; Jekyll 3.10.0; `jekyll-sitemap` 1.4.0 installed transitively but intentionally not enabled |
@@ -27,7 +28,7 @@
 |---|----|--------------------|-------------|--------|----------|
 | E1 | AC-1 | Root-source candidate built successfully with the supported Pages dependency; one layout produced exactly EN/RU/KK routes plus the repository-owned sitemap; no built `robots.txt` | Pinned official Pages container | VERIFIED | `jekyll-build.txt` |
 | E2 | AC-2 | Exact locale, singleton title/description/canonical, and reciprocal `en`/`ru`/`kk`/`x-default` alternates on all built routes | Local parsed built HTML | N/A | `metadata-summary.json` |
-| E3 | AC-3 | Exact Open Graph, Twitter, Dataset JSON-LD, JSON distribution, and final 1280×640 preview bytes/text | Local parser plus final-byte image viewer | VERIFIED | `metadata-summary.json`; `social-preview-inspection.png` |
+| E3 | AC-3 | Exact Open Graph, Twitter, Dataset JSON-LD, JSON distribution, and final 1280×640 preview bytes/text; two fresh exact-command rerenders are byte-identical to the committed candidate | Local parser, pinned CairoSVG environment, and final-byte image viewer | VERIFIED | `metadata-summary.json`; `social-preview-inspection.png`; `jekyll-build.txt` |
 | E4 | AC-4 | Built sitemap contains exactly canonical `/`, `/ru/`, `/kk/`; source and build contain no project `robots.txt` or `llms.txt` | Supported build plus XML assertion | N/A | `metadata-summary.json`; `jekyll-build.txt` |
 | E5 | AC-5 | EN/RU/KK at 390×844 and 1366×768 have zero horizontal overflow, zero hidden critical elements, zero executable/external scripts, loaded CSS, working representative links, and a one-action type jump that leaves the first entry in view | In-app Chromium browser | VERIFIED | `browser-matrix.json`; six screenshots |
 | E6 | AC-6 | Phase A digest, source facts, README bytes, visible bodies, all targets/fragments, and all twelve predecessor tests are preserved; one preservation test was added and 13/13 pass | Local Python/Git immutable-base comparison | N/A | Commands and hashes below |
@@ -79,13 +80,15 @@ Exact preservation bindings:
 - Built RU: 40,530 bytes; SHA-256 `fef3499ecf2d5678a52fea4d1a93d51ce5d168d883652087bb02d776c144ec0f`.
 - Built KK: 41,343 bytes; SHA-256 `2d4465e7dc55856683247bf036f113380b452db1053424d82935dff81d4fba49`.
 - Built sitemap: 338 bytes; SHA-256 `79dcb9bbd3dda14054fe33695f89f6f62cdeea08881a427ec059d5e2d1665767`.
-- Metadata summary: SHA-256 `84f36a217871ab6ad4116e8077902c4c3d726f1fea7489016ab8e9e96e96e547`.
+- Metadata summary: 11,097 bytes; SHA-256 `bbf30af0cdf5fbc26d547a80e97d9199035841e47b370cd2b0dc238a527f0552`.
 - Final CSS: 2,035 bytes; SHA-256 `6079176c27db6ced57ff8ad71c7671cbd694a13a39322566da4d2b9b3f157b6d`.
 
 ## Browser and asset bindings
 
-`browser-matrix.json` SHA-256 is
-`b83d6fdcbda447a0baa810b13bca8542b29f2e67becc54087a1fc9ba9fccb025`.
+The final canonical-LF `browser-matrix.json` is 70,133 bytes with SHA-256
+`f96aa96e6a60a8d26d46d570e463f516944ca60dbc0995121e34a6bcd29cb269`.
+The binding was computed from the staged Git blob and must match the final committed blob; it has
+zero CRLF pairs and 1,021 LF bytes.
 Every matrix case reports its exact viewport, DOM rectangles, head counts, local response checks,
 overflow/visibility/script facts, screenshot byte count, and post-click fragment/entry position.
 
@@ -100,10 +103,18 @@ overflow/visibility/script facts, screenshot byte count, and post-click fragment
 
 The deterministic vector source is 1,158 bytes, SHA-256
 `9f46ff6812ab2b22d852fb11321f9075ef6e53184f7d97df949ae93214d19d82`.
-CairoSVG 2.8.2 produced a 24-bit RGB PNG at exactly 1280×640, 27,391 bytes, SHA-256
-`323c124343db406b32170dfa9fe6ec18e5d14479f57691dc6b638f99df2ce9c5`.
+CairoSVG 2.8.2 produced a 24-bit RGB PNG at exactly 1280×640, 27,394 bytes, SHA-256
+`13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d`.
 Final-byte inspection confirmed legible unclipped text and no counts, dates, ranking, verification,
 publisher, or other unsupported claim. The inspection attachment is byte-identical to the PNG.
+
+The exact producing command is
+`python -m cairosvg assets/social-preview.svg -o assets/social-preview.png -s 1`. Two fresh outputs
+made with that command (changing only the temporary output path) are each 27,394 bytes with the same
+`13e34836…` SHA-256, proving byte identity with the candidate PNG. The complete producing probes in
+`jekyll-build.txt` bind Python 3.13.5, CairoSVG 2.8.2, Cairo 1.18.4, cairocffi 1.7.1, cffi 2.0.0,
+cssselect2 0.9.0, defusedxml 0.7.1, Pillow 12.2.0, tinycss2 1.5.1, the exact Cairo DLL, and the exact
+Arial regular/bold font bytes and hashes.
 
 The repository-local image workflow selected deterministic SVG plus raster output because exact
 typography is load-bearing; AI bitmap generation was correctly not used for this code-native asset.
@@ -123,11 +134,11 @@ Invocation contract: executable `C:\Users\c0rpa\AppData\Local\agy\bin\agy.exe`; 
 UTF-8 object-valued `user` event containing complete built EN/RU/KK HTML bytes, sitemap, config,
 layout, CSS, SVG source, artifact hashes, PNG facts, README binding, catalog binding, and locale digest.
 
-- Prompt content: 127,190 bytes; SHA-256 `722e0e1b5dffe7a4c33925a79bd55342f12da51f9e19916d201ea0c0687af759`.
-- Input NDJSON: 132,079 bytes; SHA-256 `c74627cd6ba8800287a4604420af6c7f8a549577b7d3fc0fa2d4b9480a0f46ef`.
-- Output NDJSON: 3,168 bytes, six object-valued lines; SHA-256 `0b9bb339c374d64950f2fa74246b4f90cbc973199d57dce95e98eead6e497a09`.
-- Conversation: `4e1d1d0d-5343-4cee-a6a4-840088a02947`; status `SUCCESS`; permission mode `request-review`; tool steps `0`.
-- Usage: input 57,547; output 8,513; thinking 8,240; cache-read 0; total 66,060 tokens.
+- Prompt content: 129,122 bytes; SHA-256 `e789f8d7301d0825a98a4c532121bdb4385affc31ae8f358cd96d038cdf960fb`.
+- Input NDJSON: 170,401 bytes, one object-valued UTF-8 line; SHA-256 `aba88a1bcc48a36f7fd3ac06268c4464ae37965dc2c30b6e118dbbbabddde8ba`.
+- Output NDJSON: 3,342 bytes, seven object-valued lines; SHA-256 `b560698faada053bc896d8da0a4ba106683e2fcbde96eb970c8f474fb0b07d86`.
+- Conversation: `5f3edb10-3f79-4dbf-8aa8-2c3885dbc28c`; status `SUCCESS`; permission mode `request-review`; tool steps `0`.
+- Usage: input 58,569; output 7,096; thinking 6,823; cache-read 0; total 65,665 tokens.
 - Response SHA-256: `7ce63b5f0a4207b1ebd7e153f55319933f6133432ffe46c86e3ed006fe28dbaf`.
 - Advisory: `VERDICT: PASS`; `DISPOSITION_REQUIRED: NO`; `FINDINGS: NONE`; `NITS: NONE`.
 - Disposition: no material finding or nit exists; no source change is requested or accepted.
@@ -135,6 +146,13 @@ layout, CSS, SVG source, artifact hashes, PNG facts, README binding, catalog bin
 Antigravity is advisory evidence only and does not replace the formal TFW Reviewer.
 
 ## Coordinator revision and no-mutation record
+
+Formal Reviewer finding F1 is resolved by regenerating the checked-in PNG through the exact SVG
+command and pinned producing environment, rebinding every asset/metadata/external/advisory fact, and
+proving two independent fresh rerenders hash-identical. Formal Reviewer finding F2 is resolved by a
+fresh complete six-case browser run and a canonical-LF Git-blob binding; final post-commit verification
+is required before handoff. Coordinator-owned F3 was already corrected in the exact REVISE base and
+was not touched by the Executor.
 
 The initial plugin-backed sitemap approach was abandoned after the Coordinator identified that
 `jekyll-sitemap` 1.4.0 unavoidably emits project-path `robots.txt`, contradicting RES-1 D7 and the

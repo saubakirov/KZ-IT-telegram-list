@@ -1,6 +1,6 @@
 # External checkpoint — 20260827-132641__catalog_discoverability / Phase B
 
-> **Captured**: 2026-08-27T19:32:47.9281967+05:00
+> **Captured**: 2026-08-27T21:03:26.2750969+05:00
 > **Mode**: authenticated read-only GitHub API, unauthenticated public HTTP, and `git ls-remote`
 > **Authenticated actor**: `saubakirov`
 > **Mutation count**: 0
@@ -79,8 +79,8 @@ working-tree state, abbreviated SHA, or later unreviewed commit is eligible.
    settings and confirm source remains `master` / `/`; do not click Save or change the source.
 5. Only under the same explicit settings authorization, update the repository description, homepage,
    and the exact twelve-topic set above. Upload only the reviewed `assets/social-preview.png` whose
-   required facts are 1280×640, 27,391 bytes, SHA-256
-   `323c124343db406b32170dfa9fe6ec18e5d14479f57691dc6b638f99df2ce9c5`.
+   required facts are 1280×640, 27,394 bytes, SHA-256
+   `13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d`.
 6. Fetch `/`, `/ru/`, `/kk/`, `/sitemap.xml`, and `/data/communities.json`; require HTTP 200. Assert
    the sitemap contains exactly the canonical root, `/ru/`, and `/kk/` URLs, with no deployed
    project-path `robots.txt` or `llms.txt`. Parse every route for its exact singleton title,
