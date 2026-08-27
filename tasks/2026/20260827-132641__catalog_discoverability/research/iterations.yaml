@@ -11,5 +11,5 @@ iterations:
   - number: 2
     focus: Close the multilingual review, exact intent-membership, and executable cross-render evidence contracts without reopening the selected static architecture
     hypotheses: [H1, H2, H3, H4]
-    status: pending
+    status: complete
     res_file: research/iter2/RES.md
