@@ -7,15 +7,18 @@
 
 | | |
 |---|---|
-| Source | 1 task state files, 4 snapshot rows |
+| Source | 2 task state files, 4 snapshot rows |
 | Containers searched | `tasks/` |
-| Freshness | newest task state update: 20260827-123131 |
+| Freshness | newest task state update: 20260827-160632 |
 | Unresolved inputs | 0 |
 | Generator | `python docs/scripts/gen_index.py` |
 
-## In flight — 0
+## In flight — 1
 
-No task is in flight.
+| Task | Lifecycle | Owner | Goal | Authority |
+|---|---|---|---|---|
+| [**20260827-132641__catalog_discoverability** — Catalog discoverability and multilingual presentation](2026/20260827-132641__catalog_discoverability/status.md) | PHASES | saubakirov | Make the narrow Kazakhstan IT and startup Telegram catalog easier to discover, understand, and use in English, Russian, and Kazakh | [HL-20260827-132641__catalog_discoverability.md](2026/20260827-132641__catalog_discoverability/HL-20260827-132641__catalog_discoverability.md) |
+| &nbsp;&nbsp;↳ [A — Phase A — One-source multilingual catalog](2026/20260827-132641__catalog_discoverability/phase-a/status.md) | TS_DRAFT | saubakirov | Produce complete generated EN/RU/KK catalog projections with validated intent navigation and cross-render safety | — |
 
 ## Closed — 2
 

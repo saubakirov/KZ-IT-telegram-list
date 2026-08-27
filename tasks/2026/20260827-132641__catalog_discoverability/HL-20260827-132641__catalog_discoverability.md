@@ -285,7 +285,7 @@ catalog, record the failing evidence, and return through `/tfw-plan` for a bound
 | Multilingual architecture, comparable catalogs, Pages behavior, and supported metadata | ✅ Research complete after Iterations 1–2; no further broad research recommended |
 | Native Jekyll routes, layout, SEO tag, and sitemap capability | ✅ Verified within GitHub Pages' supported dependency set |
 | Finite locale inventory, review binding, and fail-closed behavior | ✅ Contract complete; exact per-locale payload sizes remain derived from current source |
-| Qualified EN/RU/KK payloads and approvals | ⬜ Phase A input gate; owner designates competent human reviewers and approved digest-bound payloads |
+| Qualified EN/RU/KK payloads and approvals | ⬜ Phase A final acceptance gate; implementation may prepare complete candidates, then Antigravity reviews text quality independently and saubakirov gives the final digest-bound verdict on the ready renders |
 | Reviewed intent membership across categories and exceptional handles | ✅ Exact five-intent definitions and entry audit complete for the current snapshot; future sets derive from data |
 | Cross-render and metadata evidence contract | ✅ Layered pre-publication and public assertions defined; expected target sets derive from source |
 | Authenticated GitHub Pages publishing-source inspection | ⬜ External owner-access boundary; verify before Phase B changes |
@@ -309,6 +309,7 @@ catalog, record the failing evidence, and return through `/tfw-plan` for a bound
 | A translation approval remains marked current after its source payload changes | Medium | High | Bind approval to canonical payload digest, immutable prior approved ref, and recomputed exact changed-key set; fail all locale generation on mismatch |
 | The broad Engineering intent appears authoritative but encodes disputed semantics | Medium | Medium | Keep the reviewed category-plus-exception definition and dated entry audit explicit; future semantic changes require source review rather than keyword inference |
 | GitHub and Pages silently expose different target sets | High | High | Derive expected anchor text/URL pairs from source and require exact parity across generated Markdown, GitHub render, local Jekyll, and deployed DOM |
+| Final-only text review discovers broad language problems late | Medium | High | Stabilize structure and completeness first, present all ready renders plus changed-key manifest together, and repeat the deterministic generation/check loop after every requested wording change |
 
 ## 10. RESEARCH Case 🟢 FREE
 
@@ -346,8 +347,9 @@ Research is complete after two iterations; no further broad SEO/AEO or architect
 recommended. The remaining items are typed execution inputs and evidence boundaries, not research
 questions:
 
-1. owner-designated qualified reviewers must supply complete digest-bound EN/RU/KK payloads before
-   Phase A generation; machine output may propose wording but cannot approve it;
+1. Phase A may prepare complete EN/RU/KK candidates, but acceptance waits until Antigravity has
+   independently reviewed text quality and saubakirov has approved the ready rendered result bound
+   to its final digest; machine output may propose wording but cannot approve it;
 2. authenticated Pages source and exact owner-approved repository setting values enter before their
    Phase B operations;
 3. Search Console is conditional evidence; rank, indexing latency, and AI inclusion remain timestamped
@@ -372,6 +374,7 @@ questions:
 | S2 | English, Russian, and Kazakh are all product languages rather than optional later translations. | convention | User clarification, language contract |
 | S3 | The same result should be convenient for people, crawlers/bots, and AI systems; machine access must not become a separate truth. | stakeholder | User clarification, consumer scope |
 | S4 | “Best” means reaching the point where nothing unnecessary remains, not adding every plausible feature. | philosophy | User's original framing |
+| S5 | Language quality is reviewed only after the complete Phase A result is ready: Antigravity may provide an independent advisory pass, while saubakirov gives the final verdict. | process | Owner direction before Phase A TS, 2026-08-27 |
 
 ## 12. Amendment Log 🟢 APPEND-ONLY
 
