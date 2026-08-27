@@ -6,8 +6,10 @@
 > **Parent HL**: [Phase B HL](HL__phase-b__published_discovery.md)
 > **Master HL**: [Master HL](../HL-20260827-132641__catalog_discoverability.md)
 > **TS**: [TS Phase B](TS__phase-b__published_discovery.md)
-> **Implementation/evidence commit**: `07bf62b77e5a1d6a1233bba47b63dc9e93ea9a7c`
+> **Implementation/evidence commit**: `de4060bf817bfb69441f08344f82dd14bc856649`
+> **Initial implementation/evidence commit**: `07bf62b77e5a1d6a1233bba47b63dc9e93ea9a7c`
 > **Approved handoff**: `4776edfa29304eb0955393af6f288a654fdac822`
+> **Bounded REVISE base**: `4538836b80426980f7823495cffbabed1ceb0fb0`
 
 ---
 
@@ -22,7 +24,7 @@
 | `_layouts/default.html` | One repository-owned layout with exact locale/canonical/alternate/social/Dataset head and no executable JavaScript |
 | `assets/css/catalog.css` | Restrained responsive, focus-visible, overflow-safe static presentation |
 | `assets/social-preview.svg` | Deterministic 1280×640 vector source with the exact approved visible text |
-| `assets/social-preview.png` | Reproducible 1280×640 raster output, 27,391 bytes |
+| `assets/social-preview.png` | Reproducible 1280×640 raster output, 27,394 bytes |
 | `sitemap.xml` | Repository-owned Jekyll/Liquid sitemap for exactly `/`, `/ru/`, `/kk/` |
 | `scripts/test_site_metadata.py` | Built-output parser/assertions for routes, metadata, Dataset, pairs, fragments, sitemap, preview, and no robots/llms output |
 | `phase-b/evidence/` | EV, complete build/metadata/browser/image/advisory/external-checkpoint evidence bundle |
@@ -47,8 +49,10 @@ trace attachments rather than implementation-budget paths.
    canonical, locale, social, or Dataset metadata and keeps all three routes structurally identical.
 2. The generator owns route front matter. Visible Markdown bodies remain generated from the accepted
    Phase A source, while title/description/canonical/locale values cannot drift from it.
-3. The social asset uses deterministic SVG source plus CairoSVG 2.8.2 rasterization. Exact typography
-   is load-bearing, and the final PNG contains no mutable counts, dates, rankings, or unsupported claim.
+3. The social asset uses deterministic SVG source plus CairoSVG 2.8.2 rasterization. The exact
+   checked-in SVG command produces the checked-in PNG, and two fresh rerenders are byte-identical.
+   Exact typography is load-bearing, and the final PNG contains no mutable counts, dates, rankings,
+   or unsupported claim.
 4. The Coordinator-authorized sitemap revision replaces the initially planned `jekyll-sitemap`
    activation. Version 1.4.0 unavoidably emits a project-path `robots.txt`; the final repository-owned
    Liquid sitemap produces the exact three URLs and no robots file while remaining within the supported
@@ -65,7 +69,7 @@ trace attachments rather than implementation-budget paths.
 - [x] AC-5 — all six required browser cases pass responsive, visibility, script, link, and one-action entry checks.
 - [x] AC-6 — Phase A digest, catalog/source facts, README bytes, visible bodies, targets, fragments, and all twelve predecessor tests are preserved; test suite extended to 13.
 - [x] AC-7 — current settings/public state, exact proposed targets, no-mutation record, and authorization/public-verification runbook are complete; post-deploy claims remain deferred.
-- [ ] AC-8 — Executor advisory/evidence contract is complete; the separate formal `/tfw-review` verdict is intentionally pending under the Executor role lock.
+- [ ] AC-8 — Executor advisory/evidence contract is complete and formal REVIEW findings F1/F2 are resolved; renewed formal approval by the same Reviewer remains pending under the Executor role lock.
 - [x] AC-9 — implementation/evidence scope, attribution, resumability, and outstanding external gate are explicit; no HL, TS, or REVIEW was modified/created.
 
 ## 4. Verification
@@ -75,9 +79,9 @@ trace attachments rather than implementation-budget paths.
 - Tests (`python -m unittest scripts.test_catalog_generation -v`): PASS — 13/13, including all twelve Phase A test names.
 - Supported build: PASS — pinned official Pages container, Ruby 3.3.4, Bundler 2.5.11, Jekyll 3.10.0; no built robots; exact sitemap built.
 - Metadata (`python scripts/test_site_metadata.py --site _site --summary ...`): PASS — all three built routes and assets valid.
-- Browser: PASS — EN/RU/KK at 390×844 and 1366×768, zero overflow/hidden critical content/executable scripts, representative links 200, first entry visible after one type action.
-- Asset: PASS — SVG SHA-256 `9f46ff6812ab2b22d852fb11321f9075ef6e53184f7d97df949ae93214d19d82`; PNG SHA-256 `323c124343db406b32170dfa9fe6ec18e5d14479f57691dc6b638f99df2ce9c5`; 1280×640; 27,391 bytes; visually inspected.
-- Antigravity: PASS — pinned model, plan+sandbox, object-valued UTF-8 NDJSON, request-review permissions, zero tool steps, no bypass, `SUCCESS`, no findings/nits.
+- Browser: PASS — fresh EN/RU/KK at 390×844 and 1366×768, zero overflow/hidden critical content/executable scripts, representative links 200, first entry visible after one type action; committed canonical-LF matrix 70,133 bytes / SHA-256 `f96aa96e6a60a8d26d46d570e463f516944ca60dbc0995121e34a6bcd29cb269`.
+- Asset: PASS — SVG SHA-256 `9f46ff6812ab2b22d852fb11321f9075ef6e53184f7d97df949ae93214d19d82`; PNG SHA-256 `13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d`; 1280×640; 27,394 bytes; two fresh rerenders and the visual-inspection attachment are byte-identical.
+- Antigravity: PASS — CLI 1.1.22 / executable SHA-256 `059b96c1069206158d340ee2a8912894eca5002195e62b8cd281c26c01cd794e`; exact pinned model, plan+sandbox, object-valued UTF-8 stream-JSON, request-review permissions, zero tool steps, no bypass, `SUCCESS`, no findings/nits.
 - Whitespace (`git diff --check`): PASS — no output.
 
 ## 5. Evidence
@@ -86,10 +90,11 @@ See [EV file](evidence/EV__phase-b__published_discovery.md) for evidence details
 
 Evidence verdict: 4/9 VERIFIED, 1 DEFERRED, 0 BLOCKED, 4 N/A
 
-Key advisory bindings: prompt `722e0e1b5dffe7a4c33925a79bd55342f12da51f9e19916d201ea0c0687af759`;
-input `c74627cd6ba8800287a4604420af6c7f8a549577b7d3fc0fa2d4b9480a0f46ef`;
-output `0b9bb339c374d64950f2fa74246b4f90cbc973199d57dce95e98eead6e497a09`;
-conversation `4e1d1d0d-5343-4cee-a6a4-840088a02947`; `PASS`; findings/nits none.
+Key advisory bindings: prompt `e789f8d7301d0825a98a4c532121bdb4385affc31ae8f358cd96d038cdf960fb`;
+input `aba88a1bcc48a36f7fd3ac06268c4464ae37965dc2c30b6e118dbbbabddde8ba`;
+output `b560698faada053bc896d8da0a4ba106683e2fcbde96eb970c8f474fb0b07d86`;
+conversation `5f3edb10-3f79-4dbf-8aa8-2c3885dbc28c`; `PASS`; findings/nits none.
+Advisory usage: 58,569 input, 7,096 output, 6,823 thinking, 0 cache-read, 65,665 total tokens.
 
 ## 6. Observations (out-of-scope, not modified)
 
@@ -132,6 +137,9 @@ sitemap.xml (Liquid) ──► exact three canonical URLs; no robots.txt
 
 | Item | Disposition |
 |---|---|
+| Formal REVIEW F1 — documented PNG rerender did not match the checked-in asset | Resolved in `de4060bf817bfb69441f08344f82dd14bc856649`: regenerated by the exact SVG command under the fully probed CairoSVG 2.8.2 environment; two fresh rerenders, the checked-in PNG, and the inspection attachment are all 27,394 bytes / `13e34836…`; every affected build, metadata, external proposed-upload, Antigravity, EV, and RF fact was rebound. |
+| Formal REVIEW F2 — EV hash did not bind the committed browser matrix | Resolved in `de4060bf817bfb69441f08344f82dd14bc856649`: complete six-case matrix/screenshots recaptured; canonical-LF matrix is 70,133 bytes / `f96aa96e…`, first checked from the staged blob and then independently from exact committed bytes with `git show`; zero CRLF pairs. |
+| Formal REVIEW F3 — Phase HL plugin wording | Already corrected by the Coordinator in exact base `4538836b80426980f7823495cffbabed1ceb0fb0`; preserved unchanged under the Executor role lock. |
 | Original plugin-backed sitemap plan produced an unavoidable `robots.txt` | Replaced by the owner-preauthorized Coordinator revision with repository-owned Liquid `sitemap.xml`; implementation count changed to 13 paths / 8 new / 5 modified. |
 | Native Windows Ruby/Bundler unavailable | Used the TS-authorized pinned official GitHub Pages build container and recorded image/version/digest. |
 | Local project-path browser serving | Used a read-only localhost handler that maps `/KZ-IT-telegram-list` to built `_site`; no built byte was rewritten. |

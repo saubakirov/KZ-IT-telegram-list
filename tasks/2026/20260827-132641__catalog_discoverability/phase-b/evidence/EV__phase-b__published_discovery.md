@@ -87,8 +87,9 @@ Exact preservation bindings:
 
 The final canonical-LF `browser-matrix.json` is 70,133 bytes with SHA-256
 `f96aa96e6a60a8d26d46d570e463f516944ca60dbc0995121e34a6bcd29cb269`.
-The binding was computed from the staged Git blob and must match the final committed blob; it has
-zero CRLF pairs and 1,021 LF bytes.
+The binding was computed first from the staged Git blob, then independently verified from
+`git show de4060bf817bfb69441f08344f82dd14bc856649:tasks/2026/20260827-132641__catalog_discoverability/phase-b/evidence/browser-matrix.json`.
+The durable committed blob is exact: zero CRLF pairs and 1,021 LF bytes.
 Every matrix case reports its exact viewport, DOM rectangles, head counts, local response checks,
 overflow/visibility/script facts, screenshot byte count, and post-click fragment/entry position.
 
@@ -150,9 +151,9 @@ Antigravity is advisory evidence only and does not replace the formal TFW Review
 Formal Reviewer finding F1 is resolved by regenerating the checked-in PNG through the exact SVG
 command and pinned producing environment, rebinding every asset/metadata/external/advisory fact, and
 proving two independent fresh rerenders hash-identical. Formal Reviewer finding F2 is resolved by a
-fresh complete six-case browser run and a canonical-LF Git-blob binding; final post-commit verification
-is required before handoff. Coordinator-owned F3 was already corrected in the exact REVISE base and
-was not touched by the Executor.
+fresh complete six-case browser run and a canonical-LF Git-blob binding verified from exact commit
+`de4060bf817bfb69441f08344f82dd14bc856649`. Coordinator-owned F3 was already corrected in the exact
+REVISE base and was not touched by the Executor.
 
 The initial plugin-backed sitemap approach was abandoned after the Coordinator identified that
 `jekyll-sitemap` 1.4.0 unavoidably emits project-path `robots.txt`, contradicting RES-1 D7 and the
