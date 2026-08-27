@@ -1,10 +1,15 @@
+---
+permalink: /
+lang: en
+---
+
 # Awesome Kazakhstan IT Telegram
 
 > A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community.
 
 **38** groups · **20** channels · **4** bots · **19** categories · verified **2026-08-27**
 
-**Languages:** [EN](README.md) · [RU](ru/index.md) · [KK](kk/index.md)
+**Languages:** [EN](./) · [RU](ru/) · [KK](kk/)
 
 **Browse by type:** [Groups](#type-groups) · [Channels](#type-channels) · [Bots](#type-bots)
 
@@ -205,14 +210,6 @@ A catalog whose value is accuracy. Every entry is a live, verified, IT-relevant 
 ## Contributing
 
 Contributions are welcome! Please read the contribution guidelines first. [CONTRIBUTING.md](CONTRIBUTING.md)
-
-## Project workflow
-
-This project uses Trace-First Workflow: decisions and their reasoning remain as durable traces instead of disappearing in chat history.
-
-- **[Task portfolio](tasks/00-INDEX.md):** every task, lifecycle, and owner; each task's status.md is authoritative
-- **[Project knowledge](KNOWLEDGE.md):** architecture decisions and project principles
-- **[Agent contract](AGENTS.md):** how AI agents work in this repository
 
 > This catalog is generated. Edit data/communities.json and run python scripts/generate\_readme.py; direct edits are overwritten.
 
