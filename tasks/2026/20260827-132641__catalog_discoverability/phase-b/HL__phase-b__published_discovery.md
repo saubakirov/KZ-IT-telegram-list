@@ -82,7 +82,7 @@ approved Phase A source + unchanged locale digest
 The local candidate has one responsive static layout and one generated body contract. Each route
 has a self-canonical URL, reciprocal `en`/`ru`/`kk` alternates plus English `x-default`, localized
 head/social fields, and the same accurate Dataset description of the canonical JSON. The sitemap is
-produced by the supported GitHub Pages plugin. Styling changes reading comfort and first-screen
+rendered from the repository-owned Jekyll/Liquid page. Styling changes reading comfort and first-screen
 reach without hiding body content, introducing client-side behavior, or turning the catalog into a
 marketing page.
 
