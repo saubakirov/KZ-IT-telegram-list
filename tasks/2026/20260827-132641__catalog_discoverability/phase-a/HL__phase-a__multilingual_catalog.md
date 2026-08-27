@@ -2,13 +2,14 @@
 
 > **Date**: 2026-08-27
 > **Author**: Coordinator (Codex)
-> **Status**: 🟡 TS_DRAFT — derivation complete; awaiting owner approval
+> **Status**: ✅ TS APPROVED — owner mandate, 2026-08-27
 > **Contract**: DERIVATION-ONLY — inherits frozen Master HL baseline `00a21bb`
 > **Parent HL**: [Master HL](../HL-20260827-132641__catalog_discoverability.md)
 > **Research**: [Iteration 1 RES](../research/iter1/RES.md) · [Iteration 2 RES](../research/iter2/RES.md)
-> **Authority**: The owner authorized Phase A planning on 2026-08-27 and moved language-quality
-> approval to the end of the ready result. Antigravity may provide an independent advisory text
-> review; saubakirov retains the final verdict.
+> **Authority**: The owner approved the Phase A TS in substance on 2026-08-27, authorized autonomous
+> completion, and delegated the final language verdict to the pipeline. Antigravity provides an
+> independent advisory text review; the formal Reviewer verifies its findings, dispositions, and
+> the final digest. No separate human chat approval is represented.
 
 > This Phase HL adds execution context only. It does not define an independent vision,
 > acceptance contract, failure contract, or principles. Master HL §§1, 5, 6, and 7 remain the
@@ -33,7 +34,7 @@ Research selected the smallest architecture that preserves the existing product:
 | Browsing | Type-first catalog plus one compact AI/startups/jobs/events/engineering map | RES-1 D4; RES-2 D12–D13 |
 | Generated surfaces | `README.md`, `index.md`, `ru/index.md`, `kk/index.md` from one renderer | RES-1 D2–D3 |
 | Portability | Stable explicit destinations, escaped Markdown, derived Telegram target parity | RES-1 D8; RES-2 D13–D14 |
-| Language approval | Complete candidates first; Antigravity advisory review; final owner approval bound to the ready content digest | Owner direction 2026-08-27; Master HL S5 |
+| Language approval | Complete candidates first; Antigravity advisory review; formal Reviewer verification of findings, dispositions, and the ready content digest | Owner mandate 2026-08-27; Master HL S5 |
 
 The final-review direction refines a free dependency and does not amend the frozen contract. The
 contract forbids shipping unreviewed or fallback language; it does not require review before the
@@ -59,7 +60,7 @@ data/communities.json
  schema · currency · stable IDs · escaping · target parity
              │
              ▼
- Antigravity text-quality advice → saubakirov final rendered-text verdict
+ Antigravity text-quality advice → formal Reviewer digest-bound verdict
              │
              ▼
  Phase A accepted and ready for Phase B metadata/layout/publication work
@@ -93,9 +94,10 @@ Sequence:
 2. Produce complete candidate strings and the four generated projections.
 3. Prove source, currency, structure, special-character, stable-anchor, and GitHub-render parity.
 4. Run the independent Antigravity text-quality pass on the ready renders.
-5. Present the ready renders, review findings, and exact changed-key/digest record to saubakirov.
-6. Apply requested wording changes and repeat generation/checks until the owner approves the exact
-   final result; only then may Phase A RF claim acceptance.
+5. Disposition the review findings against the exact changed-key/digest record and rerun all checks
+   after any wording change.
+6. Submit the final ready renders, Antigravity record, dispositions, and exact digest to the formal
+   Reviewer; only a defensible APPROVE may close Phase A.
 
 ### Scope Budget
 
@@ -119,8 +121,8 @@ language surface exceeds this phase and requires re-planning rather than a budge
 | Research architecture and evidence contracts | ✅ Iterations 1–2 sufficient |
 | Existing structured catalog, generator, and validators | ✅ available and passing |
 | Complete candidate EN/RU/KK wording | 🟡 produced during Phase A; existing RU presence is not inherited approval |
-| Independent Antigravity language-quality review | ⬜ final advisory gate; owner may explicitly waive only if unavailable |
-| saubakirov final rendered-text approval | ⬜ required Phase A acceptance gate; must bind to the final digest |
+| Independent Antigravity language-quality review | ⬜ final advisory gate; use the requested Gemini Flash 3.7 model as exposed by `agy`, or the nearest supported Gemini Flash 3.x fallback with the exact reason recorded |
+| Formal Reviewer language verdict | ⬜ required Phase A acceptance gate; must verify Antigravity findings/dispositions and bind to the final digest under the owner mandate |
 | Authenticated Pages publishing source | N/A — Phase B gate, not required to prepare Phase A bodies |
 | Repository settings or Search Console access | N/A — Phase B only |
 | Push or public deployment | N/A — not authorized by this phase |
@@ -130,8 +132,8 @@ language surface exceeds this phase and requires re-planning rather than a budge
 | Risk | Probability | Impact | Mitigation |
 |------|-------------|--------|------------|
 | Final-only language review causes late rework | Medium | High | Stabilize structure first; review all ready renders together; regenerate and re-run deterministic gates after every wording change |
-| Machine-drafted Kazakh sounds fluent but changes meaning | High | High | Treat all text as candidate; independent advisory review plus owner final approval; no fallback or automatic certification |
-| Antigravity and owner recommendations conflict | Medium | Medium | Antigravity is advisory; record the conflict and use the owner's final verdict as authority |
+| Machine-drafted Kazakh sounds fluent but changes meaning | High | High | Treat all text as candidate; independent advisory review plus formal Reviewer verification; no fallback or automatic certification |
+| Antigravity findings are incompletely dispositioned | Medium | High | Record each material finding against the final digest and require the formal Reviewer to verify the disposition before APPROVE |
 | Intent navigation looks complete while silently omitting entries | Medium | High | Use the researched category-plus-exception rules and derive future memberships from validated data |
 | Generated projections become four drifting catalogs | Medium | High | One renderer and one currency command must fail when any output differs |
 | Markdown passes locally but GitHub loses links or destinations | High | High | Test exact anchor text/URL pairs and internal fragments against GitHub-rendered Markdown |

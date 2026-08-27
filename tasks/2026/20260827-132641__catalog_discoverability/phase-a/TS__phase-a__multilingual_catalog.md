@@ -2,11 +2,12 @@
 
 > **Date**: 2026-08-27
 > **Author**: Coordinator (Codex)
-> **Status**: 🟡 TS_DRAFT — Awaiting approval
+> **Status**: ✅ APPROVED — owner mandate, 2026-08-27
 > **Parent Phase HL**: [Phase A HL](HL__phase-a__multilingual_catalog.md)
 > **Parent Master HL**: [Master HL](../HL-20260827-132641__catalog_discoverability.md)
 > **Research**: [Iteration 1 RES](../research/iter1/RES.md) · [Iteration 2 RES](../research/iter2/RES.md)
-> **Mode**: AG for approved local implementation; CL for read-only GitHub-render evidence and final Antigravity/owner language review; no push
+> **Mode**: AG for approved local implementation; read-only GitHub-render and Antigravity calls are allowed; no owner re-approval loop, push, tag, release, publication, or external mutation
+> **Approval boundary**: Autonomous Phase A completion and formal review only. The Reviewer verifies the Antigravity findings, their dispositions, and the final digest; Phase B and every external mutation remain forbidden.
 
 ---
 
@@ -33,8 +34,9 @@ leaving site metadata, styling, deployment, and external repository settings to 
   regression fixtures for special characters and missing/stale locale or intent data.
 - Validate exact GitHub-rendered Markdown behavior through a read-only renderer call bound to the
   generated README bytes or an exact owner-authorized ref; make no external mutation.
-- At the very end, obtain a separate Antigravity text-quality assessment, then saubakirov's final
-  approval of the complete ready renders and their exact content digest.
+- At the very end, obtain a separate Antigravity text-quality assessment and submit the complete
+  ready renders, findings/dispositions, and exact content digest to the formal Reviewer for the
+  delegated autonomous language verdict.
 - Produce Phase A ONB, evidence, and RF through `/tfw-handoff` after this TS is approved.
 
 ### Out of Scope
@@ -49,14 +51,14 @@ leaving site metadata, styling, deployment, and external repository settings to 
 - `llms.txt`, a project-path `robots.txt`, query/keyword pages, client-side search, a web app, CMS,
   or an agent-only content surface.
 - Hand-editing any generated catalog file or maintaining language copies independently.
-- Treating Antigravity as the formal TFW Reviewer or as authority over the owner's final language verdict.
+- Treating Antigravity as the formal TFW Reviewer or as the unverified final authority over the language verdict.
 
 ## 3. Principles Check
 
 | # | Principle (from Master HL §7) | Enforced by | Gate |
 |---|-------------------------------|-------------|------|
 | P1 | Subtract before adding | AC-3, AC-7 | One compact type/intent navigation layer; no Phase B or speculative machine surface |
-| P2 | Accuracy before reach | AC-1, AC-6 | Facts remain invariant and no language passes without final content-bound owner approval |
+| P2 | Accuracy before reach | AC-1, AC-6 | Facts remain invariant and no language passes without the formal Reviewer's content-bound verdict |
 | P3 | One truth, many projections | AC-1, AC-2 | One validated source and one currency command own all four generated outputs |
 | P4 | People first, machines through clarity | AC-3, AC-4 | Visible catalog-first structure and semantic links serve people and rendered consumers together |
 | P5 | Narrow is valuable | AC-3, AC-7 | Only the researched Kazakhstan IT/startup intents appear; no traffic-driven scope expansion |
@@ -87,7 +89,7 @@ contain at most 14 new files. No override is authorized; exceeding any limit req
 
 The source represents exactly English, Russian, and Kazakh without fallback, preserves all
 invariant community facts, and contains the complete localized semantic/UI inventory and the five
-researched intent definitions. Before AC-6 these values are complete candidates, not approved copy.
+researched intent definitions. Before AC-6 these values are complete candidates, not accepted copy.
 
 - [ ] Locale keys are exactly `en`, `ru`, and `kk`; every required semantic/UI key is present,
   non-blank, non-placeholder, and explicitly valued even when a technical term is intentionally equal.
@@ -183,35 +185,39 @@ Gate: `python scripts/validate_schema.py`; `python scripts/generate_readme.py --
 
 Evidence: N/A — deterministic local tests are the authoritative evidence; record command output in EV.
 
-### AC-6: Obtain final independent and owner text-quality verdicts  [depends: AC-3, AC-4, AC-5]
+### AC-6: Obtain independent text review and a digest-bound pipeline verdict  [depends: AC-3, AC-4, AC-5]
 
 Language review happens only after the complete rendered result is ready. Antigravity supplies an
-independent advisory quality pass; saubakirov reviews the final ready renders after that pass and is
-the sole authority for Phase A language acceptance.
+independent advisory quality pass; the formal TFW Reviewer independently verifies its findings,
+their dispositions, and the exact final digest under the owner's 2026-08-27 autonomous mandate.
 
 - [ ] Antigravity reviews all three ready projections for semantic fidelity, natural language,
   Kazakhstan IT/Telegram terminology, concision, tone, and keyword-stuffing risk against the exact
-  candidate digest; findings and dispositions are recorded in EV. If unavailable, only an explicit
-  owner waiver recorded at this gate may substitute for the advisory pass.
-- [ ] saubakirov receives the complete EN/RU/KK renders, Antigravity findings/dispositions, canonical
-  payload digest, prior approved reference when one exists, and exact changed-key set.
-- [ ] The owner records `APPROVED` or `REVISE` against the exact final digest. `REVISE` returns to
-  source edits, regeneration, AC-2–AC-5, and a new final verdict.
+  candidate digest; findings and dispositions are recorded in EV. Use the requested Gemini Flash
+  3.7 model exactly as exposed by the installed `agy` CLI, or the nearest supported Gemini Flash
+  3.x option with the exact fallback and reason recorded when that model is unavailable.
+- [ ] EV packages the complete EN/RU/KK renders, Antigravity findings/dispositions, canonical payload
+  digest, prior approved reference when one exists, and exact changed-key set for the formal Reviewer.
+- [ ] During `/tfw-review`, the formal Reviewer records `APPROVE` or `REVISE` against the exact final
+  digest. `REVISE` returns to source edits, regeneration, AC-2–AC-5, a refreshed Antigravity record
+  when wording changed, and a new review verdict by the same Reviewer task.
 - [ ] Any text change after approval invalidates the verdict; no stale approval, machine self-review,
-  provider approval, partial-locale approval, or hidden fallback can pass.
-- [ ] Phase A RF and formal `/tfw-review` start only after the exact final digest is owner-approved.
+  provider approval, partial-locale approval, fabricated human approval, or hidden fallback can pass.
+- [ ] Phase A RF may record the ready digest and advisory pass, but Phase A acceptance occurs only
+  through formal `/tfw-review`; Antigravity is not the TFW Reviewer.
 
-Gate: Recompute the canonical NFC/key-sorted payload and changed-key set; match them with the
-Antigravity assessment or explicit waiver and the owner's final verdict recorded in EV; rerun every
-AC-2–AC-5 command after the last language change.
+Gate: Before RF, recompute the canonical NFC/key-sorted payload and changed-key set, match them with
+the Antigravity assessment and recorded findings/dispositions, and rerun every AC-2–AC-5 command
+after the last language change. Formal REVIEW supplies the final verdict on that unchanged package.
 
 Evidence: surface: complete rendered EN/RU/KK catalog and review record; environment: final local
-candidate plus independent Antigravity assessment and owner chat decision; method: review the exact
-digest and changed-key set after all deterministic gates; artifact:
-`evidence/EV__phase-a__multilingual_catalog.md`; fallback: Antigravity may be explicitly waived by
-saubakirov if unavailable, but owner final approval has no fallback and remains blocking.
+candidate plus independent Antigravity assessment; method: formal Reviewer audit of the exact digest,
+changed-key set, findings, and dispositions after all deterministic gates; artifacts:
+`evidence/EV__phase-a__multilingual_catalog.md` and `REVIEW__phase-a__multilingual_catalog.md`;
+fallback: only the nearest supported Gemini Flash 3.x model is allowed when the requested CLI model
+is unavailable, with the exact model and reason recorded; the formal Reviewer verdict has no fallback.
 
-### AC-7: Preserve the Phase A boundary  [depends: AC-6]
+### AC-7: Preserve the Phase A boundary  [depends: AC-5]
 
 The accepted result contains only the eight implementation paths in §4 plus mandatory Phase A trace
 artifacts. It is ready for Phase B but does not perform any Phase B or external mutation.
@@ -234,7 +240,7 @@ Evidence: N/A — the repository diff, command log, and explicit absence of exte
 
 | File | Description |
 |------|-------------|
-| `evidence/EV__phase-a__multilingual_catalog.md` | Required environment header, per-AC verdicts, command/render evidence, final payload digest and changed-key set, Antigravity findings or owner waiver, and saubakirov's exact final verdict |
+| `evidence/EV__phase-a__multilingual_catalog.md` | Required environment header, per-AC verdicts, command/render evidence, final payload digest and changed-key set, exact `agy` invocation/model, Antigravity findings, and dispositions |
 
 The Antigravity language-quality pass is advisory evidence inside EV, not the formal TFW REVIEW.
 After RF, `/tfw-review` independently judges the implementation, evidence, Master HL, and this TS.
@@ -262,8 +268,8 @@ After RF, `/tfw-review` independently judges the implementation, evidence, Maste
 - Prefer extending the existing standard-library scripts and one `unittest` file; do not introduce a
   new runtime or build dependency. The read-only GitHub renderer check may use the project's declared
   `requests` dependency or an equivalent recorded call without external mutation.
-- Candidate copy may be machine-assisted, but every candidate remains unapproved until AC-6. Render
-  the complete result before asking Antigravity or the owner to assess text quality.
+- Candidate copy may be machine-assisted, but every candidate remains unaccepted until AC-6. Render
+  the complete result before asking Antigravity to assess text quality and the Reviewer to rule.
 - `README.md`, `index.md`, `ru/index.md`, and `kk/index.md` are generated outputs. Every requested text
   change returns to source and regeneration; direct fixes are prohibited.
 
@@ -271,9 +277,9 @@ After RF, `/tfw-review` independently judges the implementation, evidence, Maste
 
 - ❌ A generated catalog is hand-edited or any language/community fact is independently duplicated.
 - ❌ English, Russian, or Kazakh is missing, partial, placeholder-filled, silently falls back, or is
-  accepted without saubakirov's final verdict on the exact ready digest.
-- ❌ Antigravity advice is presented as owner approval or formal TFW REVIEW, or its absence is silently ignored.
-- ❌ Text changes after owner approval ship without a new digest, checks, and owner verdict.
+  accepted without the formal Reviewer's verdict on the exact ready digest and Antigravity disposition record.
+- ❌ Antigravity advice is presented as formal TFW REVIEW or as self-proving final authority, or its absence is silently ignored.
+- ❌ Text changes after formal approval ship without a new digest, checks, and Reviewer verdict.
 - ❌ Community identity, liveness, membership, archive, verification, or scope facts change without
   separate evidence and authority.
 - ❌ The intent layer uses keywords/localized prose, duplicates full entries, expands the narrow
@@ -287,15 +293,16 @@ After RF, `/tfw-review` independently judges the implementation, evidence, Maste
 - ❌ Any push, tag, release, or external mutation occurs.
 - ❌ The phase exceeds a scope budget without returning to `/tfw-plan`.
 
-Any failure must be corrected before RF. A blocked read-only renderer or final owner review is
-reported as a specific blocker; it is never converted into a partial approval.
+Any deterministic or advisory-gate failure must be corrected before RF. A blocked read-only renderer
+or required advisory review is reported as a specific blocker; formal Reviewer findings return
+through the same Executor task and are never converted into a partial approval.
 
 ## 8. Phase Risks
 
 | Risk | Mitigation |
 |------|------------|
 | Final review causes wide wording churn | Freeze structure first; review complete renders together; regenerate and rerun all checks after changes |
-| Kazakh candidate is fluent but semantically inaccurate | Antigravity advisory plus owner final authority; explicit invariants and no fallback |
+| Kazakh candidate is fluent but semantically inaccurate | Antigravity advisory plus formal Reviewer verification under the owner mandate; explicit invariants and no fallback |
 | Existing Russian text is assumed approved | Treat every RU value as candidate and include it in the same final digest/review gate |
 | Broad Engineering intent misleads users | Preserve the researched category/exception semantics and exclusions; derive membership from source |
 | Four outputs drift | One renderer and currency command fail the whole set |

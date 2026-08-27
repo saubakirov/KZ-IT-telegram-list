@@ -18,7 +18,7 @@
 | Task | Lifecycle | Owner | Goal | Authority |
 |---|---|---|---|---|
 | [**20260827-132641__catalog_discoverability** — Catalog discoverability and multilingual presentation](2026/20260827-132641__catalog_discoverability/status.md) | PHASES | saubakirov | Make the narrow Kazakhstan IT and startup Telegram catalog easier to discover, understand, and use in English, Russian, and Kazakh | [HL-20260827-132641__catalog_discoverability.md](2026/20260827-132641__catalog_discoverability/HL-20260827-132641__catalog_discoverability.md) |
-| &nbsp;&nbsp;↳ [A — Phase A — One-source multilingual catalog](2026/20260827-132641__catalog_discoverability/phase-a/status.md) | TS_DRAFT | saubakirov | Produce complete generated EN/RU/KK catalog projections with validated intent navigation and cross-render safety | — |
+| &nbsp;&nbsp;↳ [A — Phase A — One-source multilingual catalog](2026/20260827-132641__catalog_discoverability/phase-a/status.md) | ONB | saubakirov | Produce complete generated EN/RU/KK catalog projections with validated intent navigation and cross-render safety | — |
 
 ## Closed — 2
 
