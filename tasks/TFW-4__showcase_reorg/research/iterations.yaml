@@ -1,0 +1,99 @@
+# Research control file — TFW-4
+# Created by coordinator (plan.md Step 6b) before launching /tfw-research.
+# Researcher reads this at start; coordinator updates it after each iteration returns.
+
+task_id: TFW-4
+title: "verify the pipeline's empirical assumptions before Phase C is designed"
+min_iterations: 2       # tfw.research.min_iterations
+max_iterations: 5       # soft ceiling
+mode: focused           # tfw.research.default_mode
+
+# Contract baseline this research runs against — conventions.md §3 rules 13-16
+baseline_commit: 70ddfa6
+baseline_subject: "[claude-code/TFW-4/freeze/coordinator] re-freeze after A2 approved"
+baseline_history:
+  - 2b1f0d2  # initial freeze on owner approval
+  - f871951  # re-freeze after A3 (RESTRICT, DoF 14) applied
+  - 70ddfa6  # re-freeze after A2 (SUPERSEDE, DoD 3) approved and applied
+
+iterations:
+  - number: 1
+    focus: >-
+      Verify the three empirical assumptions Phase C would otherwise be written against.
+      H1 is the blocking one: if t.me no longer exposes member counts to the existing
+      regexes, /kz-stats ships looking correct while measuring nothing, and DoD 22 passes
+      on a technicality — every entry freshly dated with no observation behind it.
+    hypotheses: [H1, H2, H4]
+    status: pending
+    res_file: research/iter1/RES.md
+    sources: [external, codebase]
+    # Stage-level guidance — HL §10 "Proposed RESEARCH Focus"
+    gather: >-
+      Fetch two live t.me pages (one high-count group, one channel) plus one deliberately
+      invalid handle. Record the raw markup around the count and the error page. Test each
+      of the three MEMBER_PATTERNS in validate_links.py:40-44 against the actual bytes.
+      Confirm tgme_page_error still marks a dead handle. → H1
+    extract: >-
+      Probe ~8 handles spanning groups, channels and bots, including all 4 entries that
+      currently lack member_count, at the existing throttle (BATCH_SIZE 3 / BATCH_DELAY
+      1.5s). Measure the dead rate and whether any HTTP 429 appears. → H2, and the
+      rate-limit risk in HL §9
+    challenge: >-
+      Compare GitHub's rendered heading anchors for the live README against the generator's
+      emitted TOC hrefs for all 18 category names, not only the &-free ones. → H4.
+      Then: if H1 is refuted, does fixing the parser belong inside Phase C's scope, or does
+      it become TFW-5 with Phase D deferred behind it?
+
+  # Iteration 2 is added by the coordinator at the Step 6c gate, with its focus drawn from
+  # iteration 1's gaps and open threads. min_iterations: 2 means it is mandatory unless the
+  # coordinator overrides with documented justification.
+
+# Constraints carried from the HL — the researcher is bound by these
+constraints:
+  - "Read-only. Research writes RES and research/ stage files only — no code, no HL, no TS
+     (conventions.md §15 Role Lock)."
+  - "Network probes are bounded: ~3 requests for gather, ~8 for extract. The full 63-entry
+     sweep is Phase D's, not research's (HL §4 Phase D, KNOWLEDGE.md P4)."
+  - "Preserve the existing rate limiting when probing — KNOWLEDGE.md D3 records that
+     unthrottled scraping produces false dead verdicts."
+  - "No entry in data/communities.json is modified. Research observes; it does not write data."
+  - "Findings that touch a frozen section (§1, §3, §4, §5, §6, §7) are transcribed into
+     HL §12 as PROPOSED amendments — never applied. Free sections (§2, §7.2, §8, §9, §10,
+     §11) are updated directly (conventions.md §3 rules 2-3)."
+
+# Open amendment at launch — the researcher should know the contract is not fully settled
+# No amendment is open at launch. Log state for the researcher's context:
+#   A1 RESTRICT  APPLIED    Phase A deliverables 2-3 already satisfied by 0fe6c67
+#   A2 SUPERSEDE APPROVED   DoD 3 widened to permit historical references
+#   A3 RESTRICT  APPLIED    DoF 14 -- .agents/ must survive
+#   A4 EXTEND    WITHDRAWN  legacy trace deletion declined (conventions.md §13)
+open_amendments: []
+
+closed_amendments:
+  - id: A3
+    section: "§6 DoF"
+    type: RESTRICT
+    status: "APPLIED"
+    note: >-
+      DoF 14 added: .agents/ (plural, live Codex adapter) must survive. Phase A deletes
+      .agent/ (singular, dead Antigravity adapter). Applies on filing per rule 10.
+      Relevant to research only as a do-not-touch: research writes no code and deletes
+      nothing.
+  - id: A2
+    section: "§5 DoD 3"
+    type: SUPERSEDE
+    status: "APPROVED — saubakirov, 2026-08-26"
+    note: >-
+      DoD 3 now reads "no surviving file references them as live instructions", with
+      historical references permitted in tasks/**, KNOWLEDGE.md, TECH_DEBT.md,
+      tasks/README.md and .tfw/. Research may cite STEPS.md/TASK.md historically without
+      creating a DoD violation.
+  - id: A4
+    section: "§3 out-of-scope, §6 DoF 10"
+    type: EXTEND
+    status: "WITHDRAWN — coordinator, 2026-08-26"
+    note: >-
+      Owner offered to delete the legacy TFW-01/TFW-02 traces. Declined: conventions.md
+      §13 makes trace deletion prohibited. The legacy folders stay. Research must not
+      propose removing them; if it finds they misrepresent TFW, the finding is a labelling
+      recommendation for Phase A, not a deletion.

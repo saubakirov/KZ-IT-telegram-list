@@ -1,1 +1,11 @@
 /.idea/
+
+# TFW
+.tfw/.upstream/
+.user_preferences.md
+*.local.md
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/

@@ -36,6 +36,7 @@ def generate_toc(categories_used: list[str], category_names: dict) -> str:
     lines.append("- [Channels](#channels)")
     lines.append("- [Bots](#bots)")
     lines.append("- [Contributing](#contributing)")
+    lines.append("- [Project Workflow](#project-workflow)")
     lines.append("")
     return "\n".join(lines)
 
@@ -143,6 +144,22 @@ def generate_readme(data: dict) -> str:
     lines.append("## Contributing")
     lines.append("")
     lines.append("Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.")
+    lines.append("")
+
+    # Project Workflow — pointer to the TFW trace artifacts.
+    # This README is regenerated in full on every run, so the Task Board itself lives in
+    # tasks/README.md; only this link is emitted here. See KNOWLEDGE.md D7.
+    lines.append("## Project Workflow")
+    lines.append("")
+    lines.append("This project is maintained with [Trace-First Workflow](https://github.com/saubakirov/trace-first-starter) — "
+                 "decisions and their reasoning are kept as durable traces, not lost in chat history.")
+    lines.append("")
+    lines.append("- **[Task Board](tasks/README.md)** — current and completed work")
+    lines.append("- **[KNOWLEDGE.md](KNOWLEDGE.md)** — architecture decisions and project principles")
+    lines.append("- **[AGENTS.md](AGENTS.md)** — how AI agents work in this repository")
+    lines.append("")
+    lines.append("> ⚠️ **This README is generated.** Edit [`data/communities.json`](data/communities.json) "
+                 "and run `python scripts/generate_readme.py` — direct edits here are overwritten.")
     lines.append("")
     lines.append("## License")
     lines.append("")

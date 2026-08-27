@@ -1,0 +1,128 @@
+# TFW Project Configuration
+# Fields marked ← PROJECT: set during init, preserved during update
+# Fields marked ← FRAMEWORK: updated by tfw-update from upstream
+
+project:                              # ← PROJECT: set during init
+  name: KZ-IT-telegram-list
+  repo: saubakirov/KZ-IT-telegram-list
+  branch: master
+
+tfw:
+  version: "1.3.0"                    # ← FRAMEWORK: updated by tfw-update
+  upstream: "https://github.com/saubakirov/trace-first-starter"  # ← FRAMEWORK
+  task_prefix: TFW                   # ← PROJECT: set during init
+  id_format: "{prefix}-{seq}"
+  initial_seq: 3                      # ← PROJECT: set during init
+  content_language: en                # ← PROJECT: set during init
+
+  scope_budgets:                      # ← FRAMEWORK: updated by tfw-update
+    max_files_per_phase: 30
+    max_new_files: 15
+    max_loc: 3000
+    max_modified_files: 30
+
+  templates:                          # ← FRAMEWORK: updated by tfw-update
+    hl: .tfw/templates/HL.md
+    ts: .tfw/templates/TS.md
+    res: .tfw/templates/RES.md
+    rf: .tfw/templates/RF.md
+    onb: .tfw/templates/ONB.md
+    review: .tfw/templates/REVIEW.md
+    knowledge: .tfw/templates/KNOWLEDGE.md
+    release: .tfw/templates/RELEASE.md
+
+  workflows:                          # ← FRAMEWORK: updated by tfw-update
+    plan: .tfw/workflows/plan.md
+    research: .tfw/workflows/research/base.md
+    handoff: .tfw/workflows/handoff.md
+    review: .tfw/workflows/review.md
+    resume: .tfw/workflows/resume.md
+    docs: .tfw/workflows/docs.md
+    release: .tfw/workflows/release.md
+    update: .tfw/workflows/update.md
+    init: .tfw/workflows/init.md
+    knowledge: .tfw/workflows/knowledge.md
+    config: .tfw/workflows/config.md
+
+  research:                           # ← FRAMEWORK: updated by tfw-update
+    max_web_queries_per_stage: 5
+    max_files_per_stage: 15
+    max_questions_per_turn: 3
+    max_passes: 3
+    min_iterations: 2
+    default_mode: focused
+    modes:
+      focused:
+        loops_per_stage: 1
+        verify_user_tech_claims: true
+      deep:
+        loops_per_stage: 3
+        verify_user_tech_claims: true
+        require_counter_evidence: true
+
+  review:                             # ← FRAMEWORK: updated by tfw-update
+    min_verify_ratio: 0.42
+
+  knowledge:                          # ← FRAMEWORK: updated by tfw-update
+    interval: 5
+    gate_mode: hard
+    max_index_lines: 200
+    max_index_facts_lines: 30
+    max_facts_per_topic: 50
+    max_topic_files: 8
+
+  statuses:                           # ← FRAMEWORK: updated by tfw-update
+    - id: TODO
+      emoji: "⬜"
+      description: "Task registered, work not started"
+    - id: HL_DRAFT
+      emoji: "📝"
+      description: "HL being drafted or discussed"
+      role: coordinator
+    - id: RES
+      emoji: "🔬"
+      description: "Research in progress (optional)"
+      role: researcher
+    - id: TS_DRAFT
+      emoji: "🟡"
+      description: "TS written, awaiting approval"
+      role: coordinator
+    - id: ONB
+      emoji: "🟠"
+      description: "Executor onboarding"
+      role: executor
+    - id: RF
+      emoji: "🟢"
+      description: "Execution complete, RF written"
+      role: executor
+    - id: REV
+      emoji: "🔍"
+      description: "Review in progress"
+      role: reviewer
+    - id: KNW
+      emoji: "📚"
+      description: "Knowledge capture (tfw-docs + tfw-knowledge)"
+      role: coordinator
+    - id: DONE
+      emoji: "✅"
+      description: "Task closed"
+    - id: BLOCKED
+      emoji: "❌"
+      description: "Blocked by dependency"
+    - id: REJECTED
+      emoji: "❌"
+      description: "Closed unsuccessfully, terminal, trace retained"
+
+build:                                # ← PROJECT: set during init
+  lint: python scripts/validate_schema.py
+  test: python scripts/validate_links.py
+  verify: python scripts/validate_schema.py && python scripts/generate_readme.py
+
+stack:                                # ← PROJECT: set during init
+  language: python
+  runtime: "python 3.10+"
+  data_source: data/communities.json
+  generated_artifacts:
+    - README.md
+  dependencies:
+    - requests

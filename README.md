@@ -28,6 +28,7 @@
 - [Channels](#channels)
 - [Bots](#bots)
 - [Contributing](#contributing)
+- [Project Workflow](#project-workflow)
 
 ## Groups
 
@@ -148,6 +149,16 @@ Bots created by Kazakhstan developers:
 ## Contributing
 
 Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
+
+## Project Workflow
+
+This project is maintained with [Trace-First Workflow](https://github.com/saubakirov/trace-first-starter) — decisions and their reasoning are kept as durable traces, not lost in chat history.
+
+- **[Task Board](tasks/README.md)** — current and completed work
+- **[KNOWLEDGE.md](KNOWLEDGE.md)** — architecture decisions and project principles
+- **[AGENTS.md](AGENTS.md)** — how AI agents work in this repository
+
+> ⚠️ **This README is generated.** Edit [`data/communities.json`](data/communities.json) and run `python scripts/generate_readme.py` — direct edits here are overwritten.
 
 ## License
 

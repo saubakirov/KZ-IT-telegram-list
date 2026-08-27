@@ -1,0 +1,55 @@
+# {Project Name} — Claude Code Rules
+
+## Project Identity
+- Name: {project_name}
+- Stack: {stack}
+- Owner: {owner}
+
+## Mandatory Rules
+1. **No sycophancy**: Be direct, precise, concrete.
+2. **No placeholders**: Provide complete working code/config.
+3. **Language**: Reply in the user's latest message language.
+4. **TFW task discipline**: Follow `.tfw/workflows/` for every task.
+5. **Critical mindset**: Question assumptions, flag risks.
+
+## TFW {version}
+This project follows Trace-First Workflow {version}. Read `.tfw/README.md` for philosophy and lifecycle.
+
+### Context Loading (new session)
+1. `CLAUDE.md` — this file (auto-loaded)
+2. `AGENTS.md` — AI role and mission
+3. `.tfw/conventions.md` — TFW conventions
+4. `.tfw/glossary.md` — glossary
+5. `KNOWLEDGE.md` (if exists)
+6. Relevant HL/TS/RF for current task
+
+### Slash Commands
+
+| Command | Workflow | Role | Purpose |
+|---------|----------|------|---------|
+| `/tfw-plan` | `.tfw/workflows/plan.md` | Coordinator | Research, write HL, RESEARCH gate, write TS |
+| `/tfw-research` | `.tfw/workflows/research.md` | Coordinator | Structured investigation — pipeline or standalone |
+| `/tfw-handoff` | `.tfw/workflows/handoff.md` | Executor | ONB, implement, RF |
+| `/tfw-review` | `.tfw/workflows/review.md` | Reviewer | Review RF against checklist, write REVIEW |
+| `/tfw-resume` | `.tfw/workflows/resume.md` | Coordinator | Status matrix, decide next phase |
+| `/tfw-docs` | `.tfw/workflows/docs.md` | Coordinator | Update KNOWLEDGE.md and TECH_DEBT.md |
+| `/tfw-task` | Meta-workflow | Coordinator | Full lifecycle: plan + handoff with hard stop |
+| `/tfw-release` | `.tfw/workflows/release.md` | Coordinator | Version bump, CHANGELOG, tag |
+| `/tfw-init` | `.tfw/workflows/init.md` | Coordinator | Initialize TFW in a project — discover, interview, setup |
+| `/tfw-update` | `.tfw/workflows/update.md` | Coordinator | Fetch upstream, compare, sync adapters |
+
+### Templates
+Canonical artifact templates in `.tfw/templates/` — see `tfw.templates` in `.tfw/project_config.yaml` for the full list.
+
+### Key References
+- `.tfw/README.md` — philosophy
+- `.tfw/conventions.md` — all formal rules
+- `.tfw/CHANGELOG.md` — version history
+- `.tfw/project_config.yaml` — project parameters
+
+## Execution Mode
+**Default: CL (Chat Loop)** — AI proposes, user approves.
+**AG (Autonomous):** Only after user approves the plan.
+
+## Code Standards
+{project-specific code standards}
