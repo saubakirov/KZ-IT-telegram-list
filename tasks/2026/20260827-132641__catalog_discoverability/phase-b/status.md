@@ -7,7 +7,7 @@ lifecycle: ONB
 owner: saubakirov
 authority: HL__phase-b__published_discovery.md
 created: 20260827-185009
-updated: 20260827-185632
+updated: 20260827-190153
 ---
 
 **Task state.** This file is the only authority for this task's live state. The portfolio index is derived from it and never outranks it.
