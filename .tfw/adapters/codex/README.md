@@ -58,9 +58,9 @@ Run this procedure from the repository root. It is idempotent.
 ### 1. Detect project state
 
 1. If `.tfw/` is absent, stop. Obtain the TFW core first, then run `/tfw-init`.
-2. If `.tfw/` exists but the project has no configured Task Board or task traces,
+2. If `.tfw/` exists but the project has no configured task container or task traces,
    continue the full `.tfw/workflows/init.md` workflow.
-3. If `.tfw/`, a configured Task Board, and task traces already exist, treat this as
+3. If `.tfw/`, a configured task container, and task traces already exist, treat this as
    **Codex attach/repair**. Do not recreate or reset `project_config.yaml`,
    `knowledge_state.yaml`, `KNOWLEDGE.md`, `TECH_DEBT.md`, `README.md`, or `tasks/`.
 

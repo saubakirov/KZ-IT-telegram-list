@@ -76,7 +76,7 @@ For each changed file, classify:
 - `.tfw/conventions.md` — project may have added project-specific conventions
 - `.tfw/glossary.md` — project may have added project-specific terms
 - `.tfw/project_config.yaml` — project has custom values
-  **Project sections** (preserve): `project.*`, `tfw.task_prefix`, `tfw.initial_seq`,
+  **Project sections** (preserve): `project.*`, `tfw.task_containers`, `tfw.task_prefix`,
   `tfw.content_language`, `build.*`, `stack.*`, `tfw.user_preferences`
   **Framework sections** (update): `tfw.version`, `tfw.templates`, `tfw.workflows`,
   `tfw.statuses`, `tfw.scope_budgets`, `tfw.research`, `tfw.review`, `tfw.knowledge`

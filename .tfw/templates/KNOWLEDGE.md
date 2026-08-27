@@ -11,8 +11,8 @@
 
 | # | Principle | Source |
 |---|-----------|--------|
-| P1 | _Describe your first principle_ | HL-{PREFIX}-{N} |
-| P2 | _Second principle_ | RF {PREFIX}-{N} |
+| P1 | _Describe your first principle_ | HL-{ID} |
+| P2 | _Second principle_ | RF {ID} |
 
 ---
 
@@ -31,7 +31,7 @@
 
 | # | Decision | Rationale | Source |
 |---|----------|-----------|--------|
-| D1 | _e.g., Chose PostgreSQL over MongoDB_ | _ACID compliance needed_ | RF {PREFIX}-{N} |
+| D1 | _e.g., Chose PostgreSQL over MongoDB_ | _ACID compliance needed_ | RF {ID} |
 
 ---
 
@@ -41,7 +41,7 @@
 
 | Task | Title | Key Artifact | Why Important |
 |------|-------|-------------|---------------|
-| _PROJ-1_ | _Initial setup_ | RF {PREFIX}-1 | _Foundation decisions_ |
+| _20260826-143000_ | _Initial setup_ | RF {ID} | _Foundation decisions_ |
 
 ---
 
@@ -51,7 +51,7 @@
 
 | Item | Status | When | Replacement | Source |
 |------|--------|------|-------------|--------|
-| _e.g., Old auth module_ | Deprecated | _2026-01_ | _OAuth2 flow_ | RF {PREFIX}-{N} |
+| _e.g., Old auth module_ | Deprecated | _2026-01_ | _OAuth2 flow_ | RF {ID} |
 
 ---
 

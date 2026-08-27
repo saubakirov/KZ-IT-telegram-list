@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "handle": "datanomika",
+      "source_path": "E:\\TEMP\\TFW-4-phase-d-g2-datanomika-93ab85a59ed141e695f1ba12572fee96\\raw_summary.json",
+      "raw_byte_length": 734,
+      "raw_sha256": "39ef51989d671cd5f339b77fbe55a7b387ff7005e24276bad2d29ab27de9f939",
+      "raw_base64": "ewogICJzY2hlbWFfdmVyc2lvbiI6IDEsCiAgInJ1bl9kYXRlIjogIjIwMjYtMDgtMjciLAogICJ0b3RhbHMiOiB7CiAgICAidmVyaWZpZWQiOiAxLAogICAgImFtYmlndW91cyI6IDAsCiAgICAibm9uX3RhcmdldCI6IDAsCiAgICAiZmFpbGVkIjogMCwKICAgICJncmV3IjogMCwKICAgICJzaHJhbmsiOiAxLAogICAgInVuY2hhbmdlZCI6IDAsCiAgICAiZmlyc3RfY291bnQiOiAwLAogICAgInRvdGFsIjogMSwKICAgICJtZW1iZXJfZGVsdGEiOiAtNjkKICB9LAogICJlbnRyaWVzIjogWwogICAgewogICAgICAidHlwZSI6ICJjaGFubmVscyIsCiAgICAgICJuYW1lIjogIkRhdGFub21pa2EiLAogICAgICAiaGFuZGxlIjogImRhdGFub21pa2EiLAogICAgICAiY2xhc3NpZmljYXRpb24iOiAidmVyaWZpZWQiLAogICAgICAicmVhc29uIjogInRhcmdldF9wcmV2aWV3X3ZlcmlmaWVkIiwKICAgICAgImRlY2xhcmVkX3R5cGUiOiAiY2hhbm5lbHMiLAogICAgICAib2JzZXJ2ZWRfdHlwZSI6ICJjaGFubmVscyIsCiAgICAgICJ0YXJnZXRfYm91bmQiOiB0cnVlLAogICAgICAidmlzaWJsZV9uYW1lIjogIkRhdGFub21pa2EiLAogICAgICAib2xkX2NvdW50IjogMjgwMCwKICAgICAgIm9ic2VydmVkX2NvdW50IjogMjczMSwKICAgICAgImNvdW50X291dGNvbWUiOiAic2hyYW5rIiwKICAgICAgImRlbHRhIjogLTY5LAogICAgICAiYXJjaGl2ZV9jYW5kaWRhdGUiOiBmYWxzZQogICAgfQogIF0KfQo=",
+      "summary": {
+        "schema_version": 1,
+        "run_date": "2026-08-27",
+        "totals": {
+          "verified": 1,
+          "ambiguous": 0,
+          "non_target": 0,
+          "failed": 0,
+          "grew": 0,
+          "shrank": 1,
+          "unchanged": 0,
+          "first_count": 0,
+          "total": 1,
+          "member_delta": -69
+        },
+        "entries": [
+          {
+            "type": "channels",
+            "name": "Datanomika",
+            "handle": "datanomika",
+            "classification": "verified",
+            "reason": "target_preview_verified",
+            "declared_type": "channels",
+            "observed_type": "channels",
+            "target_bound": true,
+            "visible_name": "Datanomika",
+            "old_count": 2800,
+            "observed_count": 2731,
+            "count_outcome": "shrank",
+            "delta": -69,
+            "archive_candidate": false
+          }
+        ]
+      }
+    },
+    {
+      "handle": "kzquake",
+      "source_path": "E:\\TEMP\\TFW-4-phase-d-g2-kzquake-resume-62255e7458ae4ef594f162019056cced\\raw_summary.json",
+      "raw_byte_length": 807,
+      "raw_sha256": "a994a18ecc89e5340b4d56c74eca4ea928f2e988366b11b989014be09e225760",
+      "raw_base64": "ewogICJzY2hlbWFfdmVyc2lvbiI6IDEsCiAgInJ1bl9kYXRlIjogIjIwMjYtMDgtMjciLAogICJ0b3RhbHMiOiB7CiAgICAidmVyaWZpZWQiOiAxLAogICAgImFtYmlndW91cyI6IDAsCiAgICAibm9uX3RhcmdldCI6IDAsCiAgICAiZmFpbGVkIjogMCwKICAgICJncmV3IjogMCwKICAgICJzaHJhbmsiOiAxLAogICAgInVuY2hhbmdlZCI6IDAsCiAgICAiZmlyc3RfY291bnQiOiAwLAogICAgInRvdGFsIjogMSwKICAgICJtZW1iZXJfZGVsdGEiOiAtMTg1CiAgfSwKICAiZW50cmllcyI6IFsKICAgIHsKICAgICAgInR5cGUiOiAiY2hhbm5lbHMiLAogICAgICAibmFtZSI6ICLQl9C10LzQu9C10YLRgNGP0YHQtdC90LjRjyB8INCa0LDQt9Cw0YXRgdGC0LDQvSIsCiAgICAgICJoYW5kbGUiOiAia3pxdWFrZSIsCiAgICAgICJjbGFzc2lmaWNhdGlvbiI6ICJ2ZXJpZmllZCIsCiAgICAgICJyZWFzb24iOiAidGFyZ2V0X3ByZXZpZXdfdmVyaWZpZWQiLAogICAgICAiZGVjbGFyZWRfdHlwZSI6ICJjaGFubmVscyIsCiAgICAgICJvYnNlcnZlZF90eXBlIjogImNoYW5uZWxzIiwKICAgICAgInRhcmdldF9ib3VuZCI6IHRydWUsCiAgICAgICJ2aXNpYmxlX25hbWUiOiAi0JfQtdC80LvQtdGC0YDRj9GB0LXQvdC40Y8gfCDQmtCw0LfQsNGF0YHRgtCw0L0iLAogICAgICAib2xkX2NvdW50IjogMjE2OCwKICAgICAgIm9ic2VydmVkX2NvdW50IjogMTk4MywKICAgICAgImNvdW50X291dGNvbWUiOiAic2hyYW5rIiwKICAgICAgImRlbHRhIjogLTE4NSwKICAgICAgImFyY2hpdmVfY2FuZGlkYXRlIjogZmFsc2UKICAgIH0KICBdCn0K",
+      "summary": {
+        "schema_version": 1,
+        "run_date": "2026-08-27",
+        "totals": {
+          "verified": 1,
+          "ambiguous": 0,
+          "non_target": 0,
+          "failed": 0,
+          "grew": 0,
+          "shrank": 1,
+          "unchanged": 0,
+          "first_count": 0,
+          "total": 1,
+          "member_delta": -185
+        },
+        "entries": [
+          {
+            "type": "channels",
+            "name": "Землетрясения | Казахстан",
+            "handle": "kzquake",
+            "classification": "verified",
+            "reason": "target_preview_verified",
+            "declared_type": "channels",
+            "observed_type": "channels",
+            "target_bound": true,
+            "visible_name": "Землетрясения | Казахстан",
+            "old_count": 2168,
+            "observed_count": 1983,
+            "count_outcome": "shrank",
+            "delta": -185,
+            "archive_candidate": false
+          }
+        ]
+      }
+    }
+  ]
+}

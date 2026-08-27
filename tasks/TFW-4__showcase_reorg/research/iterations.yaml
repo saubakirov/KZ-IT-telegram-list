@@ -24,7 +24,7 @@ iterations:
       regexes, /kz-stats ships looking correct while measuring nothing, and DoD 22 passes
       on a technicality — every entry freshly dated with no observation behind it.
     hypotheses: [H1, H2, H4]
-    status: pending
+    status: complete
     res_file: research/iter1/RES.md
     sources: [external, codebase]
     # Stage-level guidance — HL §10 "Proposed RESEARCH Focus"
@@ -44,9 +44,31 @@ iterations:
       Then: if H1 is refuted, does fixing the parser belong inside Phase C's scope, or does
       it become TFW-5 with Phase D deferred behind it?
 
-  # Iteration 2 is added by the coordinator at the Step 6c gate, with its focus drawn from
-  # iteration 1's gaps and open threads. min_iterations: 2 means it is mandatory unless the
-  # coordinator overrides with documented justification.
+  - number: 2
+    focus: >-
+      Resolve the C4 target-identity gap without repeating iteration 1 or expanding into the
+      63-entry Phase D sweep. Test bounded, read-only signals that could distinguish a
+      legitimate private/contact-only handle from an absent handle; define what evidence may
+      refresh last_verified or justify owner-evidenced archive triage; and determine whether
+      frozen DoD 22 remains achievable for mobile_developers_kz. If no independent signal is
+      sufficient, return evidence for a separate §5 proposal rather than weakening the claim.
+    hypotheses: [H1, H2]
+    status: complete
+    res_file: research/iter2/RES.md
+    sources: [external, codebase]
+
+  - number: 3
+    focus: >-
+      Close the Phase D G2 evidence gap for datanomika, kzquake,
+      mobile_developers_kz, and kzqacommunity. Establish target binding, peer kind,
+      historical continuity, and independent replacement/death evidence strongly enough
+      to recommend one exact per-entry disposition: reclassification, link repair,
+      archive, or unresolved. Generic contact shells and vacancies are not target evidence.
+    hypotheses: [H1, H2]
+    status: complete
+    res_file: research/iter3/RES.md
+    agent: codex
+    sources: [external, repository-history, phase-d-evidence]
 
 # Constraints carried from the HL — the researcher is bound by these
 constraints:
@@ -61,15 +83,24 @@ constraints:
      HL §12 as PROPOSED amendments — never applied. Free sections (§2, §7.2, §8, §9, §10,
      §11) are updated directly (conventions.md §3 rules 2-3)."
 
-# Open amendment at launch — the researcher should know the contract is not fully settled
-# No amendment is open at launch. Log state for the researcher's context:
+# Amendment history and current control state. At iteration 2 launch, A5 was filed but not yet
+# applied. The owner later approved it on 2026-08-26; it is now closed in the frozen Master.
 #   A1 RESTRICT  APPLIED    Phase A deliverables 2-3 already satisfied by 0fe6c67
 #   A2 SUPERSEDE APPROVED   DoD 3 widened to permit historical references
 #   A3 RESTRICT  APPLIED    DoF 14 -- .agents/ must survive
 #   A4 EXTEND    WITHDRAWN  legacy trace deletion declined (conventions.md §13)
+#   A5 EXTEND    APPROVED   classifier acceptance gate before Phase D
 open_amendments: []
 
 closed_amendments:
+  - id: A1
+    section: "§4 Phase A"
+    type: RESTRICT
+    status: "APPLIED — no owner verdict required"
+    note: >-
+      Phase A deliverables 2-3 were already satisfied by commit 0fe6c67, so the phase narrows
+      to deliverables 1, 4 and 5. Dropping a deliverable is RESTRICT and applies on filing per
+      conventions.md §3 rule 10.
   - id: A3
     section: "§6 DoF"
     type: RESTRICT
@@ -97,3 +128,13 @@ closed_amendments:
       §13 makes trace deletion prohibited. The legacy folders stay. Research must not
       propose removing them; if it finds they misrepresent TFW, the finding is a labelling
       recommendation for Phase A, not a deletion.
+  - id: A5
+    section: "§5 Definition of Done"
+    type: EXTEND
+    status: "APPROVED — saubakirov, 2026-08-26"
+    note: >-
+      Adds the target-evidence classifier gate before Phase D: a target-specific public preview
+      may verify a live target without a numeric count; an HTTP 200 contact shell without
+      positive preview evidence remains ambiguous and cannot refresh last_verified or become an
+      automatic archive candidate; member counts come only from target-specific preview content.
+      Applied as Master DoD 26 in frozen baseline d31e60d. Iterations 1-3 remain complete.

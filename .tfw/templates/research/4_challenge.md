@@ -1,7 +1,7 @@
 # Challenge — "What do we NOT expect?"
 > **Mindset:** Critic. You built the configurations. Now attack them. Every survivor needs evidence. Every elimination needs a reason.
 > **Test:** "Would my surviving configurations hold if a different researcher attacked them?"
-> Parent: [HL-{PREFIX}-{N}](../../HL-{PREFIX}-{N}__{title}.md)
+> Parent: [HL-{ID}](../../HL-{ID}.md)
 > Goal: {from HL §1 Vision — one sentence}
 
 ## Consistency Check

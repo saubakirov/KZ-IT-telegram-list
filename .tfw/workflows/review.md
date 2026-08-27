@@ -37,6 +37,21 @@ When starting as reviewer, load in order:
 > beside the point — goals, values and the north star are yours to defend, and they alone can
 > ground a block. Trust evidence, not declarations.
 
+## Who Is Acting
+
+Resolve the acting handle **before the first durable write** — before any `status.md` change,
+any journal event, any commit. Once per session, not per turn.
+
+| Situation | What happens |
+|---|---|
+| One profile in `team/` | it is used, silently |
+| Several profiles | read the binding on **this machine** — `~/.tfw/bindings.yaml`, or `%LOCALAPPDATA%\tfw\bindings.yaml` |
+| No binding · a shared device · a copied binding · a handle whose profile is gone | **ask exactly one short question**, then proceed |
+
+Identity is never inferred from an OS username, hostname, folder name or account display
+string. Every event this session writes carries `actor`, `on_behalf_of` (always a human) and
+`via` (the tool). → `conventions.md` §4
+
 ## Trust Protocol (Review)
 
 | RF Claim Type | Trust Level | Reviewer Action |
@@ -66,6 +81,11 @@ Complete self-check gate. If any unchecked → go back and do it.
 Copy `templates/review/verify.md` → fill verification log.
 Every action in it is unconditional — verification depth is set by the ratio below, never by the kind of work under review.
 Check evidence: verify.md includes an Evidence Verification section — audit evidence artifacts against RF §5 claims.
+Scan Project Values priorities 0–4 in full and 5–7 by relevance. For every HL §7.2 and ONB §7
+citation, verify link resolution, item existence, semantic match, and relevance to the asserted
+application. Check priority 0 against the purpose/principle/non-goal clause claimed and priority 1
+against the methodology-value clause claimed, even when both share a README. A resolving but wrong
+or irrelevant citation is a discrepancy and triggers the same 100% escalation as any other mismatch.
 
 > From `project_config.yaml` (`tfw.review`). Defaults below.
 
@@ -113,9 +133,9 @@ After reviewing, the reviewer MUST:
 ## Step 6: Update Traces
 
 After verdict:
-1. **Update Task Board** in `README.md` — set status per verdict
+1. **Set the task's own state** — `lifecycle` in `{task}/status.md` per verdict, with a `transition` event in `{task}/journal/` as `{YYYYMMDD-HHMMSS}__{kind}__{actor}.md`, with the time read from the clock
 2. **Update TECH_DEBT.md** — append any new items from Tech Debt Collected
-3. If ✅ APPROVE: mark task as 📚 KNW in Task Board (not ✅ DONE yet)
+3. If ✅ APPROVE: set `lifecycle: KNW` in the task's `status.md` (not `DONE` yet)
 
 ## Step 7: Knowledge Capture (KNW)
 
@@ -123,7 +143,7 @@ After ✅ APPROVE verdict:
 1. Run `/tfw-docs` — update KNOWLEDGE.md §1-§3 + TECH_DEBT.md
 2. If Fact Candidates exist in RF/REVIEW/RES → run `/tfw-knowledge`
 3. Mark both in REVIEW §6: `tfw-docs: Applied/N/A` | `tfw-knowledge: Applied/N/A`
-4. When both markers are set → update Task Board status to ✅ DONE
+4. When both markers are set → set `lifecycle: DONE` and fill `outcome` in the task's `status.md`
 
 For trivial tasks: reviewer pre-marks both as N/A during review.
 

@@ -1,0 +1,236 @@
+{
+    "schema_version":  1,
+    "run_date":  "2026-08-27",
+    "source_full_sweep":  {
+                              "path":  "live_sweep_summary.json",
+                              "sha256":  "bb99e525814c70a5f47510159ba162cffb617c5dc879436b50f13a26bab3ffa7",
+                              "unresolved_count":  4
+                          },
+    "retry_count":  4,
+    "retries":  [
+                    {
+                        "handle":  "datanomika",
+                        "original_entry":  {
+                                               "type":  "groups",
+                                               "name":  "Datanomika",
+                                               "handle":  "datanomika",
+                                               "classification":  "ambiguous",
+                                               "reason":  "declared_type_mismatch",
+                                               "declared_type":  "groups",
+                                               "observed_type":  "channels",
+                                               "target_bound":  true,
+                                               "visible_name":  "Datanomika",
+                                               "old_count":  2800,
+                                               "observed_count":  null,
+                                               "count_outcome":  "unavailable",
+                                               "delta":  null,
+                                               "archive_candidate":  false
+                                           },
+                        "command_exit":  1,
+                        "raw_summary_bytes":  734,
+                        "raw_summary_sha256":  "5473e9c132841180c2d329c9fa29475726b7519c3e3ee93504d2bfcab21d2d28",
+                        "raw_summary":  {
+                                            "schema_version":  1,
+                                            "run_date":  "2026-08-27",
+                                            "totals":  {
+                                                           "verified":  0,
+                                                           "ambiguous":  1,
+                                                           "non_target":  0,
+                                                           "failed":  0,
+                                                           "grew":  0,
+                                                           "shrank":  0,
+                                                           "unchanged":  0,
+                                                           "first_count":  0,
+                                                           "total":  1,
+                                                           "member_delta":  0
+                                                       },
+                                            "entries":  [
+                                                            {
+                                                                "type":  "groups",
+                                                                "name":  "Datanomika",
+                                                                "handle":  "datanomika",
+                                                                "classification":  "ambiguous",
+                                                                "reason":  "declared_type_mismatch",
+                                                                "declared_type":  "groups",
+                                                                "observed_type":  "channels",
+                                                                "target_bound":  true,
+                                                                "visible_name":  "Datanomika",
+                                                                "old_count":  2800,
+                                                                "observed_count":  null,
+                                                                "count_outcome":  "unavailable",
+                                                                "delta":  null,
+                                                                "archive_candidate":  false
+                                                            }
+                                                        ]
+                                        }
+                    },
+                    {
+                        "handle":  "mobile_developers_kz",
+                        "original_entry":  {
+                                               "type":  "groups",
+                                               "name":  "Mobile Developers KZ",
+                                               "handle":  "mobile_developers_kz",
+                                               "classification":  "ambiguous",
+                                               "reason":  "contact_shell_without_preview",
+                                               "declared_type":  "groups",
+                                               "observed_type":  null,
+                                               "target_bound":  false,
+                                               "visible_name":  null,
+                                               "old_count":  null,
+                                               "observed_count":  null,
+                                               "count_outcome":  "unavailable",
+                                               "delta":  null,
+                                               "archive_candidate":  false
+                                           },
+                        "command_exit":  1,
+                        "raw_summary_bytes":  748,
+                        "raw_summary_sha256":  "ad36687a827b021d1db17befce7d08aa0d88e67696e522b40ec2a1ae8301c368",
+                        "raw_summary":  {
+                                            "schema_version":  1,
+                                            "run_date":  "2026-08-27",
+                                            "totals":  {
+                                                           "verified":  0,
+                                                           "ambiguous":  1,
+                                                           "non_target":  0,
+                                                           "failed":  0,
+                                                           "grew":  0,
+                                                           "shrank":  0,
+                                                           "unchanged":  0,
+                                                           "first_count":  0,
+                                                           "total":  1,
+                                                           "member_delta":  0
+                                                       },
+                                            "entries":  [
+                                                            {
+                                                                "type":  "groups",
+                                                                "name":  "Mobile Developers KZ",
+                                                                "handle":  "mobile_developers_kz",
+                                                                "classification":  "ambiguous",
+                                                                "reason":  "contact_shell_without_preview",
+                                                                "declared_type":  "groups",
+                                                                "observed_type":  null,
+                                                                "target_bound":  false,
+                                                                "visible_name":  null,
+                                                                "old_count":  null,
+                                                                "observed_count":  null,
+                                                                "count_outcome":  "unavailable",
+                                                                "delta":  null,
+                                                                "archive_candidate":  false
+                                                            }
+                                                        ]
+                                        }
+                    },
+                    {
+                        "handle":  "kzqacommunity",
+                        "original_entry":  {
+                                               "type":  "groups",
+                                               "name":  "QA Community KZ",
+                                               "handle":  "kzqacommunity",
+                                               "classification":  "ambiguous",
+                                               "reason":  "contact_shell_without_preview",
+                                               "declared_type":  "groups",
+                                               "observed_type":  null,
+                                               "target_bound":  false,
+                                               "visible_name":  null,
+                                               "old_count":  762,
+                                               "observed_count":  null,
+                                               "count_outcome":  "unavailable",
+                                               "delta":  null,
+                                               "archive_candidate":  false
+                                           },
+                        "command_exit":  1,
+                        "raw_summary_bytes":  735,
+                        "raw_summary_sha256":  "ba7b4b5420f6fbc007dca76a9d6a3532eefade318ff6d2baa3d287e287d27c8c",
+                        "raw_summary":  {
+                                            "schema_version":  1,
+                                            "run_date":  "2026-08-27",
+                                            "totals":  {
+                                                           "verified":  0,
+                                                           "ambiguous":  1,
+                                                           "non_target":  0,
+                                                           "failed":  0,
+                                                           "grew":  0,
+                                                           "shrank":  0,
+                                                           "unchanged":  0,
+                                                           "first_count":  0,
+                                                           "total":  1,
+                                                           "member_delta":  0
+                                                       },
+                                            "entries":  [
+                                                            {
+                                                                "type":  "groups",
+                                                                "name":  "QA Community KZ",
+                                                                "handle":  "kzqacommunity",
+                                                                "classification":  "ambiguous",
+                                                                "reason":  "contact_shell_without_preview",
+                                                                "declared_type":  "groups",
+                                                                "observed_type":  null,
+                                                                "target_bound":  false,
+                                                                "visible_name":  null,
+                                                                "old_count":  762,
+                                                                "observed_count":  null,
+                                                                "count_outcome":  "unavailable",
+                                                                "delta":  null,
+                                                                "archive_candidate":  false
+                                                            }
+                                                        ]
+                                        }
+                    },
+                    {
+                        "handle":  "kzquake",
+                        "original_entry":  {
+                                               "type":  "bots",
+                                               "name":  "KZ Quake Bot",
+                                               "handle":  "kzquake",
+                                               "classification":  "ambiguous",
+                                               "reason":  "declared_type_mismatch",
+                                               "declared_type":  "bots",
+                                               "observed_type":  "channels",
+                                               "target_bound":  true,
+                                               "visible_name":  "Землетрясения | Казахстан",
+                                               "old_count":  2168,
+                                               "observed_count":  null,
+                                               "count_outcome":  "unavailable",
+                                               "delta":  null,
+                                               "archive_candidate":  false
+                                           },
+                        "command_exit":  1,
+                        "raw_summary_bytes":  766,
+                        "raw_summary_sha256":  "0c774ba23062a7c249fc3334ee8ff9a5a6a45d87d076a23776dcff132482212f",
+                        "raw_summary":  {
+                                            "schema_version":  1,
+                                            "run_date":  "2026-08-27",
+                                            "totals":  {
+                                                           "verified":  0,
+                                                           "ambiguous":  1,
+                                                           "non_target":  0,
+                                                           "failed":  0,
+                                                           "grew":  0,
+                                                           "shrank":  0,
+                                                           "unchanged":  0,
+                                                           "first_count":  0,
+                                                           "total":  1,
+                                                           "member_delta":  0
+                                                       },
+                                            "entries":  [
+                                                            {
+                                                                "type":  "bots",
+                                                                "name":  "KZ Quake Bot",
+                                                                "handle":  "kzquake",
+                                                                "classification":  "ambiguous",
+                                                                "reason":  "declared_type_mismatch",
+                                                                "declared_type":  "bots",
+                                                                "observed_type":  "channels",
+                                                                "target_bound":  true,
+                                                                "visible_name":  "Землетрясения | Казахстан",
+                                                                "old_count":  2168,
+                                                                "observed_count":  null,
+                                                                "count_outcome":  "unavailable",
+                                                                "delta":  null,
+                                                                "archive_candidate":  false
+                                                            }
+                                                        ]
+                                        }
+                    }
+                ]
+}

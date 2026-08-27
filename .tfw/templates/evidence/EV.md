@@ -1,8 +1,8 @@
-# EV — {PREFIX}-{N} / Phase {X}: {Title}
+# EV — {ID} / Phase {X}: {Title}
 
 > **Date**: YYYY-MM-DD
 > **Author**: {executor}
-> **Task**: {PREFIX}-{N}
+> **Task**: {ID}
 > **TS**: [TS Phase {X}](path-to-TS)
 
 ---
@@ -46,7 +46,7 @@ Evidence verdict: {N}/{M} VERIFIED, {X} DEFERRED, {Y} BLOCKED, {Z} N/A
 ---
 
 > **File naming:**
-> - Single-phase: `EV__{PREFIX}-{N}__{title}.md`
+> - Single-phase: `EV__{ID}.md`
 > - Multi-phase: `EV__phase-{x}__{title}.md`
 
-*EV — {PREFIX}-{N} / Phase {X}: {Title} | YYYY-MM-DD*
+*EV — {ID} / Phase {X}: {Title} | YYYY-MM-DD*

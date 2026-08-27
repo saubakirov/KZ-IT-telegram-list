@@ -51,7 +51,7 @@
 > Customize this list for your project.
 
 - [ ] All in-scope tasks are ✅ DONE
-- [ ] Task Board is current
+- [ ] every task closed in this release carries `lifecycle: DONE` and a filled `outcome` in its own `status.md`
 - [ ] TECH_DEBT.md reviewed — no critical items blocking release
 - [ ] KNOWLEDGE.md updated (if applicable)
 - [ ] {Add project-specific checks}

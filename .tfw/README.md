@@ -1,165 +1,132 @@
-# Trace-First Workflow (TFW)
-
-> *"The thinking is the product. Everything else is output."*
+# Philosophy of Trace and Trace-First Workflow
 
 <p align="center">
   <img src="../docs/brand/philosophy.png" alt="TFW Philosophy">
 </p>
 
----
+## When work disappears
 
-## The Problem: Knowledge Evaporates
+AI can produce a plan, analysis, decision, design, or program in minutes. Yet the visible result is often the smallest part of the work. Before it appears, someone identifies what matters, frames the problem, tests assumptions, rejects plausible alternatives, makes trade-offs, and decides what “good” means. If only the output survives, that intellectual work becomes invisible.
 
-Most work with AI happens in dialogue. You explain the project. You negotiate constraints. You make trade-offs. The AI produces something useful. And then the chat ends.
+The loss appears at the next handoff. A new person or agent sees the result but not the purpose it served, the limits that shaped it, or the uncertainty that remains. They must find the original specialist, reconstruct an old conversation, or repeat earlier mistakes. Fast generation then creates more isolated outputs without creating continuity.
 
-Tomorrow you open a new session. The context is gone. You re-explain everything from scratch. The model doesn't remember your architecture, your naming conventions, why you chose one technology over another, which algorithm fit the constraints, or the three approaches you already rejected. You start over.
+This is the problem TFW addresses: when people delegate part of intellectual work to AI agents, how can the work remain understandable, governable, inspectable, and continuable?
 
-This is not a minor annoyance — it is the fundamental bottleneck of AI-assisted work.
+## Chat is raw material, not memory
 
-Scale this to a team and the problem becomes structural. Your colleague opens a new session — and the context you built yesterday is invisible. A product manager's strategic decision doesn't reach the developer implementing it. An analyst's finding doesn't reach the team member who needs it. Knowledge lives in people's heads, in Slack threads, in meeting notes that nobody re-reads.
+A chat history is useful. It contains questions, corrections, candidate decisions, and context that may exist nowhere else. But chronology is not authority. An early answer may have been superseded; a confident claim may be unverified; the accepted result may be buried among abandoned branches.
 
-**The symptoms are everywhere:**
-- Threads branch and drift. There is no single source of truth.
-- You keep answering "what is this project again?" in every new chat.
-- Model resets and forced new sessions wipe working memory.
-- Context windows silently truncate key decisions.
-- Deliverables ship without the "why" — making them hard to maintain or evolve.
-- Agents waste tokens re-reading long, unstructured histories.
+Organizational memory requires selection. It must distinguish what matters now from what merely happened, and it must remain available to the people and systems entitled to use it. A service conversation can contribute to that memory, but no vendor’s chat should be its only home.
 
-**The common fixes don't work:**
-- **One giant prompt** becomes brittle, expensive, and stale within days.
-- **Pinned notes** without a ritual decay into uncurated scrapbooks nobody reads.
-- **Chat exports** are linear blobs — impossible to search, impossible to use for onboarding a new agent.
+## What a Trace is
 
-What's needed is not a better tool. It's a better **discipline**.
+A **Trace** is a selected, durable, inspectable material record of work. It preserves enough of the purpose, material context, boundaries, decisions, result or current state, and continuation point for another authorized person or agent to inspect the work and proceed.
 
----
+A Trace is not a transcript of everything said. It does not require hidden chain-of-thought, pretend to contain complete memory, or turn a recorded statement into truth. It may be a short note, a connected set of documents, a decision record, evidence, or another form suited to the work. Its value is functional: it makes the work easier to reconstruct, compare, correct, hand over, and continue.
 
-## The Thesis: Traces Over Code
+A good Trace does not promise that repeating a process will produce an identical result. Conditions, models, and judgment change. It preserves the grounds needed to understand what was done, evaluate the current result, and make the next decision without replaying the entire original conversation.
 
-Trace-First Workflow is built on a simple observation:
+## What makes work continuable
 
-**The most valuable artifact of any AI session is not the code or the document it produces. It is the trace — the record of intent, decisions, constraints, and rejected alternatives that led to the result.**
+Continuity begins before execution. A **Goal** names the change sought. **Value** says for whom and why that change matters. A **Question** exposes an uncertainty instead of hiding it behind a premature answer. A **Task** bounds a piece of work. **Context** supplies the material needed to understand it, while **Boundaries** say what the executor may decide, what is out of scope, who may accept the result, and when to stop or escalate.
 
-Code can be regenerated. A well-structured prompt with the right context will produce the same output again and again. But the *reasoning* behind the prompt — why you asked for this, what you tried before, what constraints you imposed — that is the irreplaceable knowledge that makes future work possible.
+These ideas are not a demand for one universal form. They are a completeness test for delegation. The person keeps purpose and legitimate authority. The agent receives bounded work. The work leaves a selected Trace that includes its result or current state. It ends with an authoritative next step or an explicit close.
 
-TFW inverts the traditional priority:
+Evidence, review, and verified knowledge add assurance when consequences justify their cost. A small, reversible task may need a compact trace and a direct check. High-risk work may require independent review, stronger evidence, and stricter authority boundaries. More ceremony is not automatically more reliable.
 
-| Traditional | Trace-First |
-|:--|:--|
-| Code is the artifact; docs are an afterthought | Traces are the artifact; code is a reproducible output |
-| Context lives in the developer's head | Context lives in files that any agent or human can read |
-| Onboarding = "read the codebase" | Onboarding = read AGENTS → HL → TS → RF |
-| New chat = start from zero | New chat = load traces, resume from last checkpoint |
-| Team knowledge lives in Slack threads and meetings | Team knowledge lives in structured traces that any member can read |
+## What remains human
 
-Traces are the team's shared memory. When any team member — human or AI — reads the HL, TS, and RF chain, they understand not just what exists, but why it exists, what was considered, and what was rejected.
+Delegation transfers work, not responsibility. People or legitimate institutions retain purpose, authority, judgment, acceptance, accountability, and the responsibility to stop. An agent can analyze, propose, create, test, and coordinate inside the authority it has been given; it cannot create legitimate authority for itself.
 
-This is closely related to the **AI-First** philosophy: if AI is going to produce most of the code, then the architecture, the processes, and the knowledge must be organized for the AI, not just for the human developer. The human's job shifts from *writing* code to *managing* the context that the AI needs to produce correct code.
+Useful delegation does not require a person to master every domain detail in advance. It requires enough understanding to state the purpose, provide material context, set boundaries and acceptance conditions, identify the accepting authority, and define when uncertainty or risk must return to a human.
 
-Unlike knowledge tools that require someone to write and maintain documentation, TFW generates knowledge as a byproduct of the methodology itself. The traces left by working *are* the documentation.
+Observability makes correction possible; it does not guarantee correctness. Likewise, ownership and access to work memory depend on context. Employees, employers, clients, data subjects, and other parties may have legitimate privacy, security, contractual, or intellectual-property interests. The stable rule is narrower: important memory must not be trapped by default inside the service that helped produce it.
 
-TFW is the methodology for that management.
+## Work that can describe its own state
 
----
+A TFW project is sometimes called **self-aware** in an operational sense. From durable traces, it can answer:
 
-## How TFW Works
+1. What are we trying to do and why?
+2. What do we currently know, assume, and not know?
+3. Which material decisions were made, rejected, or superseded, and on what evidence?
+4. What is the current state of the work?
+5. Who or what has authority for the next decision?
+6. How can another human or agent continue without reconstructing the original chat?
 
-TFW is a ritual with a predictable structure and one unbreakable rule: **every task produces a trace.**
+This capability implies neither consciousness nor independent authority or accountability. It means the state of work is inspectable. This repository is self-applying because it uses its own traces to change its method, and self-describing because those traces explain the change. It is a reference example, not the only valid realization.
 
-A task moves through a deterministic lifecycle — Plan → Research → Specify → Onboard → Execute → Deliver → Review → Close. Each stage produces a specific artifact (HL, RES, TS, ONB, RF, REVIEW). The artifacts are files. The files are the project's memory.
+## What TFW is
 
-When you start a new chat, the new agent reads the Task Board and relevant traces — and knows where the project stands. No re-explanation needed. No context lost. The traces live where the work lives.
+The **Philosophy of Trace** is the foundation: significant delegated intellectual work should leave selected continuity, because an isolated output is not enough to govern, inspect, or continue the work.
 
-The methodology is domain-agnostic. The same ritual works for code, analytics, writing, education, and business processes. It is tool-agnostic — the same `.tfw/` core works in Claude Code, Cursor, Antigravity, or a plain chat window.
+**Trace-First Workflow is a methodology for joint work between people and AI when people delegate part of intellectual work to agents. People retain purpose, legitimate authority, judgment, acceptance, accountability, and stop responsibility; agents perform bounded work; selected durable traces preserve enough material context, decisions, result or current state, and continuation for the work to be inspected and resumed.**
 
-The same ritual works whether you're a product manager planning strategy, a data analyst building iterative research, or an engineer implementing architecture. TFW is for teams and individuals who can't afford to lose context.
+Workflows and implementations realize that methodology under particular conditions. The word *methodology* is an owner-selected position expressed through this function, composition, and its exclusions; it is not a claim that research proved a new category or that TFW invented provenance, documentation, oversight, or knowledge management.
 
-> For the full reference — artifact types, naming rules, lifecycle statuses, scope budgets — see [conventions.md](conventions.md) and [glossary.md](glossary.md).
+## Proportional realizations
 
----
+[Light, Assisted, and Full](../editions/README.md) preserve the same semantic continuity at different levels of coordination and assurance. Light keeps the minimum visible by hand. Assisted adds bounded support where routine discipline is likely to fail. Full adds explicit roles, gates, evidence, and review for work whose complexity or risk warrants them.
 
-## Values and Principles
+Moving from one visible problem to the next has worked as one founder-led teaching route. It is not a universal maturity law or proof of superior learning, retention, transfer, adoption, or field effect. A realization should be chosen for the work and risk, not as a badge of advancement.
 
-### Traces Over Code
+<a id="ns1"></a>
+## NS1 — Purpose
 
-The trace is the product — intent, decisions, constraints, and alternatives matter more than the implementation itself. A codebase without traces is a black box. TFW captures not just *what* was built, but *why*, *what else was considered*, and *what was rejected*.
+TFW exists to protect purposeful, human-governed continuity when intellectual work is delegated to AI. Its value is not the production of more text or more process. Its value is that another authorized person or agent can understand what the work is for, inspect its material grounds and current result, see where authority remains, and continue without rebuilding the original conversation.
 
-### Candor Over Flattery
+Work that increases output while obscuring purpose, authority, inspectability, or continuation is contrary to this North Star even if it is polished and technically correct.
 
-AI agents trained on human feedback develop a habit of agreeing with users and praising their ideas. TFW agents are explicitly instructed: **Don't be sycophantic.** Be direct, precise, concrete. Flag risks. Disagree when evidence supports it. The coordinator's job is to ask uncomfortable questions and catch implicit assumptions — quality of planning matters more than speed of pipeline progression.
+<a id="ns2"></a>
+## NS2 — Principles
 
-### Completeness Over Speed
+1. **Purpose before activity.** State the Goal and Value before optimizing Tasks; reject work that cannot explain the change it serves.
+2. **Questions before premature answers.** Make consequential uncertainty visible; do not let fluent output conceal an undefined problem.
+3. **Selected Trace, not transcript.** Preserve material context, decisions, state, and continuation; do not archive everything or demand private reasoning.
+4. **Human authority, bounded delegation.** Name boundaries, acceptance authority, accountability, stop conditions, and escalation before granting autonomy.
+5. **Continuation over isolated output.** Finish with an inspectable result or current state and an authoritative next step or explicit close.
+6. **Assurance proportional to risk.** Add evidence, review, and durable verified knowledge when their expected value exceeds their cost; subtract ceremony that does not protect the purpose.
 
-When asked to implement, provide complete, usable output. **No placeholders.** No `// TODO: implement this`. If you can't produce a complete solution, say what's missing — don't fill the gap with a stub.
+Each principle must change a work choice. If it only decorates a document, it is not functioning as a principle.
 
-### Honesty Over Convincingness
+<a id="methodology-values"></a>
+### Methodology values
 
-AI agents that sound confident while being wrong are more dangerous than agents that refuse to answer. TFW agents must never fabricate data, claim untested results, or simulate external systems. When context is insufficient, the correct behavior is to ask, not guess. Confidence without correctness is the deadliest failure mode.
+Four values govern how these principles are practiced:
 
-### Structural Enforcement
+- **Candor Over Flattery.** Disagree when evidence supports it, surface risk and uncertainty, and never substitute sycophantic agreement for judgment.
+- **Structural Enforcement.** Put important gates in observable structure or state, not in prose exhortation alone; a rule that cannot reveal its own violation is only advice.
+- **Naming Creates Behavior.** Use precise terms that cue the intended cognitive role and action, while remembering that a name can guide behavior but cannot guarantee compliance.
+- **Portability.** Keep durable project context in ordinary, provider-independent files or equivalent inspectable forms; no vendor may become the sole home of project memory.
 
-Gates should be structural — file existence, folder structure, required artifacts — not procedural (checkboxes in documents, state tables in headers). If a stage isn't done, the file doesn't exist. No parsing needed, no format compliance required, no update discipline to enforce. The filesystem is the state machine.
+The selected-Trace principle preserves material intent, rationale, and continuity without treating code or any other output as disposable or identically regenerable. A complete, usable, bounded result plus an explicit close or continuation carries completeness over speed. Visible uncertainty, source boundaries, and refusal to fabricate evidence carry honesty over convincingness. [Where truth belongs](#where-truth-belongs) assigns one authoritative owner to each kind of truth rather than forcing every truth into one monolithic file.
 
-### Naming Creates Behavior
+<a id="ns3"></a>
+## NS3 — Non-goals
 
-Right terminology triggers right associations in AI agents. A small prompt with precise terms is more effective than a long prompt with explanations. TFW adopted OODA, Sufficiency Verdict, Trust Protocol, Progressive Disclosure — each term replaced paragraphs of instructions. If you have to explain what a step does, the step is named wrong.
+TFW must not become:
 
-### Single Source of Truth
+- a prompt collection, raw chat archive, or store of every intermediate message;
+- a deterministic generator that treats code or other outputs as disposable and promises identical reproduction;
+- a replacement for human purpose, judgment, legitimate authority, acceptance, accountability, or stop decisions;
+- a maximum-documentation bureaucracy or documentation factory that measures success by artifact count;
+- a vendor-bound tool, runtime, model, interface, or memory feature;
+- a vehicle for untested claims of novelty, correctness, comprehension, learning, autonomy, adoption, or other capability.
 
-`.tfw/` contains exactly one copy of each convention, template, and workflow. Tool adapters reference it, never duplicate. If you need to change a rule, change it in one place.
-
-### Portability
-
-Everything is Markdown. No vendor lock-in. The files work in Obsidian, VS Code, GitHub, or a plain text editor. The knowledge belongs to you, not to a platform.
-
----
-
-## Anti-patterns
-
-> Full list → [conventions.md §14](conventions.md#14-anti-patterns-prohibited)
-
-These exist because every single one has happened and caused real problems.
-
----
-
+<a id="success-criteria"></a>
 ## Success Criteria
 
-A TFW project is successful when:
+A TFW project is succeeding when:
 
-1. **Any team member can resume from any checkpoint** — a new person (human or AI) reads the Task Board and relevant traces, and picks up where the previous one left off. No re-explanation needed. No context lost.
-2. **Every decision is traceable** — for any choice in the project, you can find the reasoning: what prompted it, what alternatives existed, what was rejected and why.
-3. **Knowledge compounds over time** — the project accumulates structured knowledge that makes every next decision better, every onboarding faster, and every context switch lossless.
-4. **The output requires no manual editing** — if the result is wrong, you fix the prompt and the context, not the output. The traces are complete enough to produce correct results.
+1. **An authorized participant can resume from a durable checkpoint.** A person or agent can inspect the relevant state and continue without reconstructing the original chat; this does not promise lossless context.
+2. **Material decisions are traceable.** The project preserves consequential choices, grounds, alternatives, and dispositions rather than claiming that every message or minor action deserves a permanent record.
+3. **Verified knowledge can compound.** Reviewed findings can improve later decisions and onboarding; raw notes and fluent claims do not become truth automatically.
+4. **The result is ready for acceptance.** It is complete, usable, inspectable, free of placeholders, and does not require the recipient to reconstruct missing work, while authorized human judgment and acceptance remain necessary.
 
----
+<a id="where-truth-belongs"></a>
+## Where truth belongs
 
-## How TFW Compares
+This Project North Star owns TFW’s stable purpose, principles, boundaries, and non-goals. Current reference-implementation mechanics belong to the [conventions](conventions.md), [glossary](glossary.md), [workflows](workflows/plan.md), [templates](templates/HL.md), and [Editions](../editions/README.md). Start with the [Quick Start](quickstart.md) when the practical question is how to use TFW.
 
-TFW occupies a different category from most tools people compare it to.
+The [portfolio index and task traces](../workspace/00-INDEX.md), [verified knowledge](../KNOWLEDGE.md), and Git history preserve why the project became what it is. A future approved and versioned Body of Knowledge may expand concepts, contradictions, hypotheses, and evidence limits, but it will remain subordinate to this North Star and requires a separate task. A working draft outside this repository is not current authority.
 
-**Knowledge storage tools (Confluence, Notion, wikis)**
-These tools protect existing knowledge — through enforcement (Confluence) or usability (Notion). But someone must write the documentation. Someone must maintain it. And when nobody does, knowledge decays, goes stale, and stops being read.
-
-TFW doesn't store knowledge — it generates it. The traces produced by planning, researching, executing, and reviewing ARE the documentation. Nobody writes it separately. Nobody maintains it separately. The methodology produces it as a byproduct of working.
-
-**AI coding assistants (Cursor, Claude Code, Copilot)**
-These tools help you write code faster. TFW helps you preserve the context that makes code maintainable. They're complementary: TFW works inside these tools (via adapters) to add traceability, knowledge capture, and structured decision-making to the AI-assisted workflow.
-
-**No methodology (ad-hoc AI chat)**
-Knowledge evaporates between sessions. Decisions don't propagate. New team members start from zero. The project can't explain itself.
-
-TFW exists because none of these alternatives solve the core problem: growing teams lose knowledge when decisions don't propagate.
-
----
-
-## Version History
-
-For the full evolution of TFW (v1 → v2 → v3) and detailed changelog → [CHANGELOG.md](CHANGELOG.md)
-
----
-
-## Links
-
-- **Repository:** [github.com/saubakirov/trace-first-starter](https://github.com/saubakirov/trace-first-starter)
-- **Author:** [saubakirov.kz](https://saubakirov.kz)
+That separation lets stable meaning remain clear while implementations, evidence, and explanations continue to change.

@@ -36,21 +36,56 @@ Read `conventions.md` §10 (Context Loading) and load anything on that list you 
 1. **Identify context** — read relevant code, existing HL files, knowledge items
 2. **Understand the problem deeply** — what is broken, what is missing, and what does the user actually need vs what they asked for?
 3. **Study references** — how similar problems were solved before (existing Architecture Decisions)
-4. **Scan Project Values (PV)** — the `glossary.md` PV Index: priorities 1-4 in full, 5-7 skimmed.
-      Fill HL §7.2 Knowledge Citations, each item linked. If none: "No applicable knowledge items."
-      New projects add: "— project in bootstrap phase."
+4. **Scan Project Values (PV)** — the `glossary.md` PV Index: priorities 0-4 in full, 5-7 by relevance.
+      Fill HL §7.2 Knowledge Citations with the exact clause/item read, a link, and its concrete
+      application. Record priority 0 and priority 1 as distinct semantic items even when they share
+      a file; a file-only citation is insufficient. Explicit N/A is allowed only after the required
+      scan and must state why. New projects add: "No applicable knowledge items — project in bootstrap phase."
 5. **Ask clarifying questions** — batch all questions, max 3-5
 🛑 WAIT for user answers
 
 ## Step 4: Write HL
 
-1. **Create task folder** — `tasks/{PREFIX}-{N}__{description}/`
-   → Read `tfw.task_prefix` and `tfw.initial_seq` from `project_config.yaml`
-2. **Create HL file** — use `templates/HL.md` as canonical format
-3. **Fill §3.1** — the visualization gate is mandatory; its four properties and format options are in the template.
-4. **Fill §10 (RESEARCH Case)** — 2-4 hypotheses. The filter and the remaining subsections are in the template.
-5. **Update the task board** — status `📝 HL_DRAFT`; row format in `conventions.md` §5
-6. **Capture Strategic Insights** — review the conversation history, fill HL §11. The test and the categories are in the template.
+1. **Know who is acting.** Before the first durable write of the session, resolve the acting
+   handle: one profile in `team/` → use it silently; several → read the binding on this
+   machine (`~/.tfw/bindings.yaml`, or `%LOCALAPPDATA%\tfw\bindings.yaml`); no binding, a
+   copied binding, or a handle whose profile is gone → **ask exactly one short question**,
+   once, then proceed. Never infer identity from an OS username, hostname or folder name.
+
+2. **Create the task folder.**
+
+   ```
+   container = tfw.task_containers[0]          # from project_config.yaml
+   stamp     = system clock, read now, as YYYYMMDD-HHMMSS
+   repeat at most tfw.id_max_retries times:
+       dir = {container}/{stamp[0:4]}/{stamp}__{slug}
+       if dir does not exist:  create it and stop
+       stamp = system clock, read AGAIN                 # a new actual reading
+   otherwise: STOP and report — the clock is not advancing
+   ```
+
+   **The whole directory name is the identifier**, not the timestamp: two participants
+   offline from each other can reach the same second, and only the slug tells them apart.
+   Same second *and* same slug means they created the same task — a signal, not a collision.
+
+   The bound matters. A wall clock that steps backwards — an NTP correction, a resumed
+   machine, a restored image — can re-offer a used value forever, and an unbounded retry
+   would spin silently instead of saying so.
+
+   **Read no counter, no project-wide maximum and no other task's contents.** The one
+   existence check above is what lets two offline participants stay safe with nothing shared
+   between them.
+
+3. **Write the task's own state and its first event** — `status.md` from
+   `.tfw/templates/status.md`, and a `created` event in `journal/` named
+   `{stamp}__created__{actor}.md`, carrying `actor`, `on_behalf_of` and `via`. The event's
+   `time` is read from the clock, never typed.
+
+4. **Create HL file** — use `templates/HL.md` as canonical format
+5. **Fill §3.1** — the visualization gate is mandatory; its four properties and format options are in the template.
+6. **Fill §10 (RESEARCH Case)** — 2-4 hypotheses. The filter and the remaining subsections are in the template.
+7. **Set the task's own state** — `lifecycle: HL_DRAFT` in `{task}/status.md`; fields and bounds in `conventions.md` §4
+8. **Capture Strategic Insights** — review the conversation history, fill HL §11. The test and the categories are in the template.
 
 **GATE: User approves HL**
 🛑 WAIT — present HL for review. Incorporate feedback. Repeat until approved.
@@ -143,4 +178,3 @@ Each phase: HL → TS → `/tfw-handoff` → ONB → RF → `/tfw-review` → RE
 
 **Footer — Self-check before submitting:**
 Read `conventions.md` §14 (Anti-patterns) — did I violate any? Then §5 (status transitions).
-

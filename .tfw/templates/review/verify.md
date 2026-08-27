@@ -56,12 +56,16 @@
 
 ## Knowledge Citations Verified
 
-> Verify that HL §7.2 and ONB §7 citation links resolve to real items.
-> If ANY link doesn't resolve → flag as hallucination in Discrepancies.
+> Scan PV priorities 0–4 in full and 5–7 by relevance. Verify that every HL §7.2 and ONB §7
+> citation resolves, names a real item, matches the meaning claimed, and is relevant to the
+> asserted application. Priority 0 must match the cited purpose/principle/non-goal clause;
+> priority 1 must match the cited methodology-value clause. Check them separately even when
+> they share a file. A resolving link to an absent, wrong, or irrelevant item is a discrepancy
+> and triggers 100% verification; an unresolved citation is also a hallucination.
 
-| # | Artifact | Citation | Link resolves? | Item exists? |
-|---|----------|----------|----------------|--------------|
-| 1 | HL §7.2 #{N} | {KNOWLEDGE.md D-number or knowledge/*.md F-number} | ✅ / ❌ | ✅ / ❌ |
+| # | Artifact | Priority + exact citation | Link resolves? | Item exists? | Meaning matches? | Relevant to asserted application? |
+|---|----------|---------------------------|----------------|--------------|------------------|-----------------------------------|
+| 1 | HL §7.2 #{N} | {PV priority and exact clause/item} | ✅ / ❌ | ✅ / ❌ | ✅ / ❌ — {comparison} | ✅ / ❌ — {application check} |
 
 > If HL §7.2 says "No applicable knowledge items" — write "N/A — no citations to verify."
 
@@ -73,8 +77,8 @@
 - [ ] Claim & Source Checks filled — 2-3 key claims spot-checked, every citation traced to a real artifact, data claims checked against a primary source (or explicit N/A with a reason)?
 - [ ] Each RF §3 (AC) checkmark verified against actual file?
 - [ ] KNOWLEDGE.md checked — contradictions with changes documented?
-- [ ] Knowledge Citations from HL §7.2 and ONB §7 verified (links resolve, items exist)?
-  - Total citations: {N}, verified: {M}, hallucinations: {H}
+- [ ] Knowledge Citations from HL §7.2 and ONB §7 verified (links resolve, items exist, meanings match, applications are relevant)?
+  - Total: {N}, resolved: {R}, semantically verified: {M}, irrelevant: {I}, hallucinated: {H}
 - [ ] Evidence artifacts from RF §5 verified (files exist, claims match)?
   - Total evidence items: {N}, verified: {M}, missing: {H}
 

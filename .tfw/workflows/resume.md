@@ -15,9 +15,24 @@ description: TFW Resume — locate task, build status matrix, decide next phase
 
 > Context loading: verify conventions.md §10 core context is loaded before proceeding.
 
+## Who Is Acting
+
+Resolve the acting handle **before the first durable write** — before any `status.md` change,
+any journal event, any commit. Once per session, not per turn.
+
+| Situation | What happens |
+|---|---|
+| One profile in `team/` | it is used, silently |
+| Several profiles | read the binding on **this machine** — `~/.tfw/bindings.yaml`, or `%LOCALAPPDATA%\tfw\bindings.yaml` |
+| No binding · a shared device · a copied binding · a handle whose profile is gone | **ask exactly one short question**, then proceed |
+
+Identity is never inferred from an OS username, hostname, folder name or account display
+string. Every event this session writes carries `actor`, `on_behalf_of` (always a human) and
+`via` (the tool). → `conventions.md` §4
+
 ## Phase 1: Locate Task
 
-1. User specifies task folder path (e.g. `tasks/PROJ-3__admin_ui/`)
+1. User specifies task folder path (e.g. `workspace/2026/20260826-143000__admin_ui/`), or names a task from the portfolio index. **Re-read that task's `status.md` before acting** — the index may be stale, and acting on a projection is what makes it authoritative.
 2. List the task folder contents — identify Master HL, Master TS, and all phase artifacts
 3. Read **Master HL** — extract:
    - Vision (section 1) — one-liner
@@ -57,7 +72,7 @@ description: TFW Resume — locate task, build status matrix, decide next phase
 10. Present structured status report to user:
 
 ```markdown
-## Resume Report — {PREFIX}-{N}
+## Resume Report — {ID}
 
 **Task**: [title from Master HL]
 **Progress**: X of Y phases complete

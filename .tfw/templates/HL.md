@@ -1,4 +1,4 @@
-# HL — {PREFIX}-{N}: {Title}
+# HL — {ID}: {Title}
 
 > **Date**: YYYY-MM-DD
 > **Author**: {author}
@@ -15,7 +15,7 @@
 > A frozen section may not be edited afterwards: propose in §12, wait for the verdict.
 > Rules: conventions.md §3 → HL Contract. Add further header fields below this block, not inside it.
 
-> **Project North Star**: {one or more designated README sections — e.g. `README.md § Purpose` · `.tfw/README.md § Values and Principles`} · or `N/A — no project north star designated`
+> **Project North Star**: {one or more designated README sections — e.g. `README.md § How It Works` · `.tfw/README.md #ns1 · #ns2 · #ns3`} · or `N/A — no project north star designated`
 
 > **Project North Star field** — the reviewer's Purpose Check reads this before anything else. It takes a **list**:
 > a project whose product is its own method designates sections of more than one file. With no north star
@@ -157,14 +157,17 @@ Only needed for tasks where consistency across phases matters.
 ### 7.2 Knowledge Citations 🟢 FREE
 
 > Coordinator: scan PV Index (glossary.md → Project Values).
-> Full scan of priorities 1-4 (README Values, philosophy.md, KNOWLEDGE.md §1, conventions.md).
-> Skim priorities 5-7 for relevant items.
-> Reviewer will verify these links resolve to real items.
+> Full scan of priorities 0-4 (Project North Star, methodology values, philosophy.md,
+> KNOWLEDGE.md §1, conventions.md); scan priorities 5-7 by relevance.
+> Name the exact clause/item read and its concrete application. Record priorities 0 and 1
+> as distinct rows even when they share a file; a file-only citation is insufficient.
+> Reviewer will verify link resolution, item existence, semantic match, and asserted relevance.
 
 | # | Source | Item | How it applies |
 |---|--------|------|----------------|
 
-> For new projects with empty KNOWLEDGE.md: "No applicable knowledge items — project in bootstrap phase."
+> Explicit N/A is allowed only after the required scan and must state the reason. For new projects
+> with empty KNOWLEDGE.md: "No applicable knowledge items — project in bootstrap phase."
 
 ## 8. Dependencies 🟢 FREE
 | Dependency | Status |
@@ -263,4 +266,4 @@ Only needed for tasks where consistency across phases matters.
 
 ---
 
-*HL — {PREFIX}-{N}: {Title} | YYYY-MM-DD*
+*HL — {ID}: {Title} | YYYY-MM-DD*

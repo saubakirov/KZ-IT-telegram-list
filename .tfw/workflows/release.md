@@ -13,7 +13,22 @@ description: TFW Release — cut a versioned release of the project
 1. Read `RELEASE.md` — understand what a release means for this project
 2. Read `.tfw/CHANGELOG.md` — see the last released version
 3. Read `.tfw/VERSION` — confirm current version
-4. Read Task Board — identify tasks completed since last release
+4. Read task state across the configured containers — identify tasks whose `lifecycle` reached `DONE` since the last release. The portfolio index is a convenience for finding them; the task's own `status.md` is what the release records.
+
+## Who Is Acting
+
+Resolve the acting handle **before the first durable write** — before any `status.md` change,
+any journal event, any commit. Once per session, not per turn.
+
+| Situation | What happens |
+|---|---|
+| One profile in `team/` | it is used, silently |
+| Several profiles | read the binding on **this machine** — `~/.tfw/bindings.yaml`, or `%LOCALAPPDATA%\tfw\bindings.yaml` |
+| No binding · a shared device · a copied binding · a handle whose profile is gone | **ask exactly one short question**, then proceed |
+
+Identity is never inferred from an OS username, hostname, folder name or account display
+string. Every event this session writes carries `actor`, `on_behalf_of` (always a human) and
+`via` (the tool). → `conventions.md` §4
 
 ## Step 1: Scope the Release
 

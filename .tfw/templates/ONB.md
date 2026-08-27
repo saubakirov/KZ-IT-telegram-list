@@ -1,9 +1,9 @@
-# ONB — {PREFIX}-{N} / Phase {X}: {Title}
+# ONB — {ID} / Phase {X}: {Title}
 
 > **Date**: YYYY-MM-DD
 > **Author**: {executor}
 > **Status**: 🟠 ONB — Awaiting answers
-> **Parent HL**: [HL-{PREFIX}-{N}](path-to-HL)
+> **Parent HL**: [HL-{ID}](path-to-HL)
 > **TS**: [TS Phase {X}](path-to-TS)
 
 ---
@@ -46,4 +46,4 @@
 
 ---
 
-*ONB — {PREFIX}-{N} / Phase {X}: {Title} | YYYY-MM-DD*
+*ONB — {ID} / Phase {X}: {Title} | YYYY-MM-DD*

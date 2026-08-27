@@ -31,6 +31,21 @@ When starting as executor, load in order:
 8. Related HL/TS/RF files referenced in the task
 9. Relevant code files listed in TS
 
+## Who Is Acting
+
+Resolve the acting handle **before the first durable write** — before any `status.md` change,
+any journal event, any commit. Once per session, not per turn.
+
+| Situation | What happens |
+|---|---|
+| One profile in `team/` | it is used, silently |
+| Several profiles | read the binding on **this machine** — `~/.tfw/bindings.yaml`, or `%LOCALAPPDATA%\tfw\bindings.yaml` |
+| No binding · a shared device · a copied binding · a handle whose profile is gone | **ask exactly one short question**, then proceed |
+
+Identity is never inferred from an OS username, hostname, folder name or account display
+string. Every event this session writes carries `actor`, `on_behalf_of` (always a human) and
+`via` (the tool). → `conventions.md` §4
+
 ## Phase 1: Executor Onboarding
 
 1. **Read all context** — HL, TS, referenced files, relevant code
@@ -66,11 +81,11 @@ When starting as executor, load in order:
 
    > **Coordinator ONB answer protocol:** When answering blocking questions — if the answer is not explicitly stated in HL, TS, or KNOWLEDGE.md, present 2-3 options with tradeoffs. Do not decide on behalf of the stakeholder.
 
-6. **Update project task board** — status to `🟠 ONB`
+6. **Set the task's own state** — `lifecycle: ONB` and `updated` in `{task}/status.md`, and append a `handoff` event to `{task}/journal/` as `{YYYYMMDD-HHMMSS}__{kind}__{actor}.md`, with the time read from the clock. No file outside this task directory changes.
 
 ## Phase 2: Execution
 
-7. **Update project task board** — change status to `🟢 RF` (in progress)
+7. **Set the task's own state** — `lifecycle: RF` in `{task}/status.md`, with a `transition` event in `{task}/journal/` as `{YYYYMMDD-HHMMSS}__{kind}__{actor}.md`, with the time read from the clock
 8. **Implement** — follow TS step by step:
    - For code changes: write production-ready code, no placeholders
    - For CL tasks: present commands/SQL to user, wait for execution
@@ -84,7 +99,7 @@ When starting as executor, load in order:
 
 11. **Collect evidence** — create the evidence folder and populate the EV file:
     1. Create `evidence/` folder in task directory (or phase directory for multi-phase tasks).
-    2. Copy `.tfw/templates/evidence/EV.md` to `evidence/EV__{PREFIX}-{N}__{title}.md` (or `EV__phase-{x}__{title}.md` for multi-phase).
+    2. Copy `.tfw/templates/evidence/EV.md` to `evidence/EV__{ID}.md` (or `EV__phase-{x}__{title}.md` for multi-phase).
     3. Fill the Environment header with actual verification environment details.
     4. Walk through each TS AC item — for each, add a row to the evidence table with what was verified, the environment, the result (VERIFIED / DEFERRED / BLOCKED / N/A), and an artifact reference.
     5. Write the Verdict summary line with counts per status.

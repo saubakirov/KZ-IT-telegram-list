@@ -22,5 +22,29 @@ This is catalog history. Trace-First Workflow framework changes are recorded sep
 - Reworked contributor guidance to point at canonical data and rules, enforce the North Star,
   and require evidence-backed archive-not-delete handling.
 
-No dated snapshot is recorded yet. Snapshot entries are created only after a catalog-wide live
-verification and the explicit owner gates in `RELEASE.md`.
+## [data-2026-08-27] - 2026-08-27
+
+Verified snapshot: 62 live communities (38 groups, 20 channels, and 4 bots) across 19
+categories, plus 2 archived records. All 62 live entries were positively verified on
+2026-08-27.
+
+### Added
+
+- Added and target-bound verified the `cursor_kz` group from the accepted upstream catalog
+  change.
+
+### Changed
+
+- Repaired `datanomika` from a group to its target-bound channel, preserving its catalog copy.
+- Repaired `kzquake` from a bot to its target-bound channel and aligned its name and Russian
+  description with the verified target.
+- Refreshed `last_verified` to 2026-08-27 for all 62 live entries.
+- Recorded 58 observed numeric member counts: 38 grew, 18 shrank, and 2 were unchanged, for a
+  signed aggregate delta of +16,815 from their stored baselines.
+
+### Archived
+
+- Archived `mobile_developers_kz` after the owner verified that the historical community no
+  longer exists.
+- Archived `kzqacommunity` after the owner verified that the historical community no longer
+  exists.

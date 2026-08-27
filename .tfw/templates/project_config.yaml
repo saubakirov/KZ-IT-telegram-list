@@ -8,12 +8,27 @@ project:                              # ← PROJECT: set during init
   branch: main
 
 tfw:
-  version: "0.8.4"                    # ← FRAMEWORK: updated by tfw-update
+  version: "2.0.0"                    # ← FRAMEWORK: updated by tfw-update
   upstream: "https://github.com/saubakirov/trace-first-starter"  # ← FRAMEWORK
-  task_prefix: PROJ                   # ← PROJECT: set during init
-  id_format: "{prefix}-{seq}"
-  initial_seq: 1                      # ← PROJECT: set during init
   content_language: en                # ← PROJECT: set during init
+
+  # Ordered task containers. A task is CREATED in the first entry; a task is RESOLVED by
+  # searching every entry in order. A new project needs exactly one. A project migrating
+  # from a pre-2.0.0 layout lists its old container second so old paths keep resolving —
+  # that is one setting with two values, not two supported layouts.
+  task_containers: [tasks]            # ← PROJECT: set during init
+
+  # Identifier grammar. The WHOLE directory name is the identifier — the timestamp alone
+  # is not one, because two people offline from each other can reach the same second and
+  # only the slug tells them apart. Clock-derived: creating a task reads no counter and no
+  # other task directory.
+  id_format: "{YYYYMMDD}-{HHMMSS}__{slug}"   # ← FRAMEWORK
+  id_max_retries: 5                   # ← FRAMEWORK: bounded retry, then fail visibly
+  legacy_id_format: "{prefix}-{seq}"  # ← FRAMEWORK: readable, never issued
+  task_prefix: PROJ                   # ← PROJECT: legacy prefix only, if one exists
+
+  journal:                            # ← FRAMEWORK
+    max_summary_length: 120           # code points; raise only against a measurement
 
   scope_budgets:                      # ← FRAMEWORK: updated by tfw-update
     max_files_per_phase: 30
@@ -83,6 +98,10 @@ tfw:
       emoji: "🔬"
       description: "Research in progress (optional)"
       role: researcher
+    - id: PHASES
+      emoji: "🧩"
+      description: "Phases are running; each phase carries its own state"
+      role: coordinator
     - id: TS_DRAFT
       emoji: "🟡"
       description: "TS written, awaiting approval"
@@ -117,3 +136,5 @@ build:                                # ← PROJECT: set during init
   lint: echo "configure your lint command"
   test: echo "configure your test command"
   verify: echo "configure your verify command"
+# Set these to real commands during init. A placeholder here means the executor's
+# build gate in handoff.md verifies nothing.

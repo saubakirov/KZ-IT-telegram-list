@@ -24,6 +24,21 @@ IF resuming (not fresh start): re-read this workflow + mode file.
 Check current iteration's subfolder (`research/iterN/`): which stage files exist? → `research/iterN/RES.md` exists?
 Resume from first missing stage. If RES.md for this iteration exists → this iteration complete.
 
+## Who Is Acting
+
+Resolve the acting handle **before the first durable write** — before any `status.md` change,
+any journal event, any commit. Once per session, not per turn.
+
+| Situation | What happens |
+|---|---|
+| One profile in `team/` | it is used, silently |
+| Several profiles | read the binding on **this machine** — `~/.tfw/bindings.yaml`, or `%LOCALAPPDATA%\tfw\bindings.yaml` |
+| No binding · a shared device · a copied binding · a handle whose profile is gone | **ask exactly one short question**, then proceed |
+
+Identity is never inferred from an OS username, hostname, folder name or account display
+string. Every event this session writes carries `actor`, `on_behalf_of` (always a human) and
+`via` (the tool). → `conventions.md` §4
+
 ## Step 1: Load Context
 
 Read `conventions.md` §10. Verify loaded: AGENTS.md, conventions.md, glossary.md, KNOWLEDGE.md, Master HL (pipeline), relevant code.
@@ -34,7 +49,7 @@ Read `project_config.yaml` → `tfw.research.default_mode`.
 Present: "Recommend [{mode}]. Reason: {specific}. Switch? [focused/deep]"
 🛑 WAIT — then load `research/{mode}.md`.
 
-**Entry:** Pipeline (task exists, RES in task folder) or Standalone (create task folder, Task Board `🔬 RES`).
+**Entry:** Pipeline (task exists, RES in task folder) or Standalone (create the task folder in the first configured container, `lifecycle: RES` in its `status.md`).
 
 ## Step 3: Create Research Subfolder
 

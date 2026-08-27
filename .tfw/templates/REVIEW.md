@@ -1,4 +1,4 @@
-# REVIEW — {PREFIX}-{N} / Phase {X}: {Title}
+# REVIEW — {ID} / Phase {X}: {Title}
 
 > **Date**: YYYY-MM-DD
 > **Author**: {reviewer}
@@ -66,9 +66,9 @@
 
 ## 6. Traces Updated
 
-- [ ] README Task Board — status updated
+- [ ] the task's `status.md` — `lifecycle` set per verdict, with a `transition` event in its `journal/`, named `{YYYYMMDD-HHMMSS}__{kind}__{actor}.md`, with the time read from the clock
 - [ ] HL status — updated if phase completes
-- [ ] project_config.yaml — initial_seq incremented if needed
+- [ ] the task's `status.md` — `updated` reflects this review. No counter is incremented: identifiers are clock-derived and nothing allocates them
 - [ ] Other project files — checked for stale info
 - [ ] tfw-docs: {Applied — updated Sections X, Y / N/A (minor)}
 - [ ] tfw-knowledge: {Applied / N/A / Deferred to batch}
@@ -98,4 +98,4 @@
 
 ---
 
-*REVIEW — {PREFIX}-{N} / Phase {X}: {Title} | YYYY-MM-DD*
+*REVIEW — {ID} / Phase {X}: {Title} | YYYY-MM-DD*

@@ -1,7 +1,7 @@
 # Briefing — "What should we investigate?"
 > **Mindset:** Strategist. You're planning an investigation, not doing it. Frame what matters. Resist solving.
 > **Test:** "Can I explain WHY we're investigating this and what would change our approach?"
-> Parent: [HL-{PREFIX}-{N}](../../HL-{PREFIX}-{N}__{title}.md)
+> Parent: [HL-{ID}](../../HL-{ID}.md)
 > Goal: {from HL §1 Vision — one sentence}
 
 ## Research Plan

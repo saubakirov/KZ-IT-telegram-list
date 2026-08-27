@@ -239,7 +239,8 @@ def generate_readme(data: dict) -> str:
             "This project is maintained with [Trace-First Workflow](https://github.com/saubakirov/trace-first-starter) — "
             "decisions and their reasoning are kept as durable traces, not lost in chat history.",
             "",
-            "- **[Task Board](tasks/README.md)** — current and completed work",
+            "- **[Task portfolio](tasks/00-INDEX.md)** — every task, its lifecycle and owner "
+            "(derived from each task's own `status.md`; a task's own `status.md` is the authority)",
             "- **[KNOWLEDGE.md](KNOWLEDGE.md)** — architecture decisions and project principles",
             "- **[AGENTS.md](AGENTS.md)** — how AI agents work in this repository",
             "",

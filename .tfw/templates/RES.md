@@ -1,9 +1,9 @@
-# RES — {PREFIX}-{N}: {Title}
+# RES — {ID}: {Title}
 
 > **Date**: YYYY-MM-DD
 > **Author**: {author}
 > **Status**: 🔬 RES — In progress
-> **Parent HL**: [HL-{PREFIX}-{N}](path) _(pipeline only)_
+> **Parent HL**: [HL-{ID}](path) _(pipeline only)_
 > **Mode**: Pipeline / Standalone
 
 ---
@@ -141,4 +141,4 @@
 
 ---
 
-*RES — {PREFIX}-{N}: {Title} | YYYY-MM-DD*
+*RES — {ID}: {Title} | YYYY-MM-DD*

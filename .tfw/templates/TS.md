@@ -1,9 +1,9 @@
-# TS — {PREFIX}-{N} / Phase {X}: {Title}
+# TS — {ID} / Phase {X}: {Title}
 
 > **Date**: YYYY-MM-DD
 > **Author**: {author}
 > **Status**: 🟡 TS_DRAFT — Awaiting approval
-> **Parent HL**: [HL-{PREFIX}-{N}](path-to-HL)
+> **Parent HL**: [HL-{ID}](path-to-HL)
 
 ---
 
@@ -67,7 +67,7 @@ Evidence: {What to verify in real environment — or N/A with reason}
 
 | File | Description |
 |------|-------------|
-| `evidence/EV__{PREFIX}-{N}__{title}.md` | Structured evidence: environment header, per-AC table, verdict _(required)_ |
+| `evidence/EV__{ID}.md` | Structured evidence: environment header, per-AC table, verdict _(required)_ |
 | `evidence/{additional_file}` | {description} _(if applicable)_ |
 
 ## 6. Technical Guidance
@@ -97,4 +97,4 @@ Evidence: {What to verify in real environment — or N/A with reason}
 
 ---
 
-*TS — {PREFIX}-{N} / Phase {X}: {Title} | YYYY-MM-DD*
+*TS — {ID} / Phase {X}: {Title} | YYYY-MM-DD*

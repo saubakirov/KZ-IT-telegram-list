@@ -1,6 +1,6 @@
 # 🤖 AI Agent — KZ-IT-telegram-list
 
-> **Methodology:** [Trace-First Workflow (TFW)](https://github.com/saubakirov/trace-first-starter) v1.3.0
+> **Methodology:** [Trace-First Workflow (TFW)](https://github.com/saubakirov/trace-first-starter) v2.0.0-dirty
 > **Framework files:** `.tfw/` · **Conventions:** `.tfw/conventions.md` · **Glossary:** `.tfw/glossary.md`
 
 ## AI Role & Mission
@@ -45,7 +45,13 @@ disappears on the next run. To change what README contains, change the generator
 | `README.md` | Generated Awesome List (do not edit) |
 | `CONTRIBUTING.md` | Contributor workflow guide |
 | `tasks/` | TFW task folders (traces) |
-| `tasks/README.md` | **Task Board** — current and historical work |
+| `tasks/README.md` | Permanent hand-maintained route into task state, plus the backlog and legacy-trace notes. No live table (KNOWLEDGE.md D15) |
+| `tasks/00-INDEX.md` | Derived portfolio view — rebuilt by `python docs/scripts/gen_index.py` |
+| `tasks/{task}/status.md` | **The only authority for that task's live state** |
+| `tasks/{task}/journal/` | One immutable file per coordination event |
+| `tasks/BOARD-SNAPSHOT.md` | The retired Task Board, verbatim. History — never edited |
+| `team/` | One profile per participant (declared attribution) |
+| `docs/scripts/` | TFW framework tooling (index generator, board migration) |
 | `KNOWLEDGE.md` | Project knowledge index |
 | `TECH_DEBT.md` | Known debt and deferred work |
 | `.tfw/` | TFW framework (workflows, templates, conventions) |
@@ -59,7 +65,7 @@ disappears on the next run. To change what README contains, change the generator
 2. `AGENTS.md` (this file)
 3. `.tfw/conventions.md`, `.tfw/glossary.md`
 4. `KNOWLEDGE.md`
-5. `tasks/README.md` — the Task Board
+5. `tasks/00-INDEX.md` to locate the task, then that task's `status.md` — the authority
 6. HL/TS/RF of the active task
 
 ### Doing work
@@ -192,6 +198,6 @@ For every command:
 4. Use `/tfw-*` when recommending the next workflow.
 
 On a new session, load `AGENTS.md`, `.tfw/conventions.md`, `.tfw/glossary.md`,
-`KNOWLEDGE.md` if present, the `README.md` Task Board, and then only the artifacts
+`KNOWLEDGE.md` if present, the selected task's `status.md`, and then only the artifacts
 relevant to the active task.
 <!-- TFW:CODEX:END -->

@@ -117,7 +117,7 @@ A declared structured prefix in the first-line subject of an AI-authored commit 
 
 ## Task Naming
 
-Format: `{PREFIX}-{N}__{short-title}`. Full naming rules and file conventions → conventions.md §4
+Format: `{YYYYMMDD-HHMMSS}__{short-title}`, and the whole name is the identifier. Legacy tasks keep `{PREFIX}-{N}__{short-title}` and are never renamed. Full naming rules → conventions.md §4
 
 ## Status Flow
 
@@ -127,7 +127,27 @@ Full status diagram, transitions, and review verdicts → conventions.md §5
 ⬜ TODO → 📝 HL_DRAFT → 🔬 RES → 🟡 TS_DRAFT → 🟠 ONB → (develop) → 🟢 RF → 🔍 REV → 📚 KNW → ✅ DONE
 ```
 
-9 pipeline statuses: TODO, HL_DRAFT, RES, TS_DRAFT, ONB, RF, REV, KNW, DONE. RES and KNW are optional. Two statuses sit outside the pipeline: ❌ BLOCKED — waiting, the task resumes when the dependency clears; ❌ REJECTED — closed unsuccessfully, terminal, the trace is kept. `❌ REJECTED` here is a **task status** — not the review verdict `❌ REJECT`, and not the HL §12 amendment verdict `❌ REJECTED`; neither of those is terminal.
+10 pipeline statuses: TODO, HL_DRAFT, RES, PHASES, TS_DRAFT, ONB, RF, REV, KNW, DONE. `PHASES` belongs to a multi-phase task only, and never summarizes what its phases are doing. RES and KNW are optional. Two statuses sit outside the pipeline: ❌ BLOCKED — waiting, the task resumes when the dependency clears; ❌ REJECTED — closed unsuccessfully, terminal, the trace is kept. `❌ REJECTED` here is a **task status** — not the review verdict `❌ REJECT`, and not the HL §12 amendment verdict `❌ REJECTED`; neither of those is terminal.
+
+**The legend.** This is the full declared vocabulary, and it lives here — with the terms it defines — rather than beside a table of tasks. It moved here at 2.0.0 when the root Task Board was removed.
+
+| | Status | Meaning |
+|---|---|---|
+| ⬜ | `TODO` | registered, work not started |
+| 📝 | `HL_DRAFT` | the HL is being drafted or discussed |
+| 🔬 | `RES` | research in progress — optional |
+| 🧩 | `PHASES` | a multi-phase task whose phases are running; each phase has its own `status.md` |
+| 🟡 | `TS_DRAFT` | the TS is written, awaiting approval |
+| 🟠 | `ONB` | the executor is onboarding |
+| 🟢 | `RF` | execution complete, the RF is written |
+| 🔍 | `REV` | review in progress |
+| 📚 | `KNW` | knowledge capture — optional |
+| ✅ | `DONE` | closed, terminal |
+| ❌ | `BLOCKED` | waiting on a dependency, resumes when it clears |
+| ❌ | `REJECTED` | closed unsuccessfully, terminal, the trace is kept |
+
+### UNDECLARED
+Not a status anyone selects. A task carrier records `UNDECLARED` when its source held a value outside the vocabulary above, and keeps that value verbatim in `lifecycle_verbatim`. A consumer treats it as non-actionable and reports it. **Normalizing such a value to a declared one is prohibited** — it would silently rewrite a recorded fact to make a listing look tidy. `❄️ FROZEN` in the 2.0.0 board snapshot is the worked example.
 
 ### KNW (Knowledge Capture)
 Post-review status indicating docs and knowledge workflows have been applied. Triggered after REVIEW ✅ APPROVE. Markers in REVIEW §4: `tfw-docs: Applied/N/A`, `tfw-knowledge: Applied/N/A`. Both markers set → status transitions to ✅ DONE. For trivial tasks, reviewer pre-marks both as N/A during review. → conventions.md §5
@@ -148,7 +168,7 @@ Post-review status indicating docs and knowledge workflows have been applied. Tr
 Approves HL and TS before execution. Provides secrets via env vars. Reviews RF outputs. Final authority on task closure.
 
 ### Coordinator (AI)
-Writes HL and TS. Manages Task Board. Hands off to researcher, executor, and reviewer.
+Writes HL and TS. Advances task state and appends coordination events to the task's journal. Hands off to researcher, executor, and reviewer.
 
 ### Researcher (AI)
 Dedicated research agent. Writes RES and stage files in `research/` subfolder. Follows OODA loop per stage. Hard Stop: after writing RES, says "Research complete. Continue with `/tfw-plan`."
@@ -254,8 +274,8 @@ The complete set of accumulated project context that MUST inform decisions. When
 
 | Priority | Source | What it contains |
 |----------|--------|-----------------|
-| 0 | **Project North Star** — designated section(s) of a README | What we are building, why, and **what we are deliberately not building**. Distinct in kind from everything below it: priorities 1-7 all describe *how we build*. Defined in `conventions.md` §3. A project may not have one — fall back to the master HL §1 at its contract baseline; a review is never blocked on a missing north star |
-| 1 | `.tfw/README.md` § Values and Principles — **methodology** values | Core beliefs (e.g., Traces Over Code, Structural Enforcement). This section is byte-identical across projects, so it carries methodology values and no project information — which is why priority 0 exists |
+| 0 | **Project North Star** — designated README sections; in this starter: root `README.md` opening / § How It Works and `.tfw/README.md` `NS1`–`NS3` | What we are building, why, and **what we are deliberately not building**. Distinct in kind from everything below it: priorities 1-7 all describe *how we build*. Defined in `conventions.md` §3. A project may not have one — fall back to the master HL §1 at its contract baseline; a review is never blocked on a missing north star |
+| 1 | `.tfw/README.md` § Methodology values / § Success Criteria — **methodology** values and outcomes | How TFW work is practiced and what observable success looks like: candor, structural enforcement, naming, portability, complete bounded results, honest claims, owned truth, authorized resumption, traceable material decisions, and verified knowledge compounding |
 | 2 | `knowledge/philosophy.md` | Validated principles and design rationale |
 | 3 | `KNOWLEDGE.md` §1 | Architecture Decisions (D-records) |
 | 4 | `conventions.md` §3, §11, §14 | Naming rules, Design rules, Anti-patterns |
@@ -268,8 +288,8 @@ The complete set of accumulated project context that MUST inform decisions. When
 > North Star.
 
 **Who scans PV:**
-- **Coordinator** — full scan during planning. Output: HL §7.2 Knowledge Citations table.
-- **Reviewer** — full scan during verification. Output: verify.md Knowledge Citations Verified section.
+- **Coordinator** — priorities 0–4 in full and 5–7 by relevance during planning. Output: HL §7.2 Knowledge Citations table naming the exact clause/item and its concrete application; priorities 0 and 1 remain separate even when they share a file.
+- **Reviewer** — priorities 0–4 in full and 5–7 by relevance during verification. Output: verify.md Knowledge Citations Verified section checking resolution, item existence, semantic match, and relevance to the asserted application.
 - **Executor** — reads coordinator's citations from HL §7.2. Output: ONB §7 confirming read + any new items found.
 - **Researcher** — reads HL §7.2 citations. Cross-references in RES Fact Candidates.
 
@@ -279,8 +299,20 @@ A table in `config.md` workflow mapping `project_config.yaml` keys to their inli
 ## Tool Adapter
 A tool-specific entry point (CLAUDE.md, .cursor/rules, .agent/workflows/, or Codex root `AGENTS.md` + `.agents/skills/tfw-*/SKILL.md`) that references `.tfw/` as the single source of truth. Across tools, `/tfw-*` is the primary human-facing command contract. Codex implements the commands with repository-local skills and uses AGENTS.md as always-on recognition and fallback routing. → conventions.md §9
 
-## Task Board
-Markdown table in `README.md` — single source of truth for task statuses. Updated by every TFW workflow.
+## status.md
+The task's own state file, and the **only** authority for its live state. Closed key set, bounded fields, no free-text body. Lives inside the task directory, so advancing one task writes nothing another task is reading. Retired the root Task Board at 2.0.0. → conventions.md §4
+
+## journal/
+A directory inside a task holding **one immutable file per coordination event**, each named from the clock — the filename *is* the event identifier, so nothing allocates one and nothing counts. Two participants appending at the same moment create two files rather than contending for a byte range. A written event is never edited; a correction is a new event. Entries carry references, not copied artifact prose, under a measured length ceiling. → conventions.md §4
+
+## Portfolio index
+`{first container}/00-INDEX.md` — a **derived, non-authoritative** view rebuilt from task state by `docs/scripts/gen_index.py`. It declares its source count and freshness and reports every unresolved input. A workflow acting on a task re-reads that task's `status.md` first; absent or stale, the index degrades discovery and changes nothing. → conventions.md §4
+
+## team/
+One file per participant, human or agent alike. A profile is **declared attribution, not authentication**: it says who a handle refers to, and grants nothing. The binding from a machine to a handle is held outside the project tree, because a per-user file that is gitignored is still not sync-ignored. → conventions.md §4
+
+## Task Board *(retired at 2.0.0)*
+A Markdown table in `README.md` that was the single source of truth for every task's status until TFW 2.0.0. Every lifecycle transition rewrote it, so two people advancing unrelated tasks collided in one file. Replaced by per-task `status.md` plus a derived index. The table as it stood on the day it was removed is preserved verbatim in `tasks/BOARD-SNAPSHOT.md`.
 
 ## project_config.yaml
 Per-project configuration file in `.tfw/`. Defines: stack, build commands, task prefix, execution engine, template paths, scope budgets, knowledge settings.

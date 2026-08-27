@@ -12,7 +12,7 @@ Claude Code auto-loads this file. For a new session, continue in this order:
 2. `.tfw/conventions.md`
 3. `.tfw/glossary.md`
 4. `KNOWLEDGE.md`, when present
-5. `tasks/README.md`
+5. `tasks/00-INDEX.md` to locate the task, then that task's own `status.md`
 6. Only the HL, TS, RF, and other traces relevant to the active task
 
 ## Slash-Command Routing

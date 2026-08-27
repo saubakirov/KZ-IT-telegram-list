@@ -20,12 +20,12 @@ All `.md` files below are compilable. The utility walks these paths:
 | 8 | `knowledge/*.md` | `knowledge/{filename}.md` | Copy each + frontmatter |
 | 9 | `TECH_DEBT.md` | `reference/tech-debt.md` | Copy + frontmatter |
 | 10 | `RELEASE.md` | `reference/release.md` | Copy + frontmatter. Optional — skip if absent |
-| 11 | `tasks/**/*.md` | `tasks/{same relative path}` | Copy + frontmatter. Preserve folder structure |
+| 11 | `{container}/**/*.md` for each `tfw.task_containers` entry | `tasks/{same relative path}` | Copy + frontmatter. Preserve folder structure. Containers are configuration; the output prefix stays `tasks/` |
 | 12 | `.tfw/workflows/**/*.md` | `reference/workflows/{path}` | Copy + frontmatter |
 | 13 | `.tfw/templates/**/*.md` | `reference/templates/{path}` | Copy + frontmatter |
 | 14 | `.tfw/compilable_contract.md` | `reference/compilable-contract.md` | Copy + frontmatter |
 
-> **Principle:** `tasks/` preserve their folder structure in output so that all relative links
+> **Principle:** task containers preserve their folder structure in output so that all relative links
 > between artifacts (HL→TS, RF→HL, REVIEW→RF) work without rewriting.
 
 File existence rules:
@@ -38,7 +38,7 @@ File existence rules:
 | `knowledge/` | Optional | WARNING, skip section |
 | `TECH_DEBT.md` | Optional | WARNING, skip page |
 | `RELEASE.md` | Optional | Skip silently |
-| `tasks/` | Optional | Skip silently |
+| task containers | Optional | Skip silently |
 | `docs/index.md` | Optional | Falls back to README.md |
 
 ## 2) Reference Format
@@ -51,10 +51,10 @@ Standard reference patterns:
 
 | Pattern | Example | Resolves to |
 |---------|---------|-------------|
-| `{TYPE} {PREFIX}-{N}` | `RF TFW-18` | `tasks/TFW-18*/RF__*.md` (glob) |
-| `{TYPE} {PREFIX}-{N} §{section}` | `RF TFW-18 §6` | Same file, anchor to section |
-| `{TYPE} {PREFIX}-{N}/{PHASE}` | `RF TFW-18/A` | `tasks/TFW-18*/phase-a/RF__phase-a*.md` |
-| `HL-{PREFIX}-{N}` | `HL-TFW-19` | `tasks/TFW-19*/HL-TFW-19*.md` |
+| `{TYPE} {ID}` | `RF TFW-18` | `{container}/**/TFW-18*/RF__*.md` (glob, every container) |
+| `{TYPE} {ID} §{section}` | `RF TFW-18 §6` | Same file, anchor to section |
+| `{TYPE} {ID}/{PHASE}` | `RF TFW-18/A` | `{container}/**/TFW-18*/phase-a/RF__phase-a*.md` |
+| `HL-{ID}` | `HL-TFW-19` | `{container}/**/TFW-19*/HL-TFW-19*.md` |
 | `D{N}` | `D24` | KNOWLEDGE.md §1 Architecture Decisions row |
 | `P{N}` | `P7` | HL §7 Principles row (task-local) |
 | `PP{N}` | `PP2` | Project principle registry row — `KNOWLEDGE.md` §0 where a project keeps one. Reserved: no resolution in a project without §0 |
@@ -73,11 +73,11 @@ Where references appear:
 - Any inline mention in artifact prose
 
 Resolution rules:
-- Resolver uses `tfw.task_prefix` from project_config.yaml to know the prefix
-- Glob-based: `{TYPE} TFW-18` → find `tasks/TFW-18*/{TYPE}__*.md`
+- Resolver reads `tfw.task_containers` and searches every container, with and without year nesting. `tfw.task_prefix` is consulted only to recognise legacy identifiers
+- Glob-based: `{TYPE} TFW-18` → find `{container}/**/TFW-18*/{TYPE}__*.md` across every configured container
 - If glob returns multiple matches → use first alphabetically, emit WARNING
 - If glob returns zero matches → leave as text, emit WARNING
-- Phase references: `RF TFW-18/A` → search in `tasks/TFW-18*/phase-a/` first, then task root
+- Phase references: `RF TFW-18/A` → search in `TFW-18*/phase-a/` first, then task root
 - `D{N}`, `P{N}`, `F{N}`, `PP{N}`, `NS{N}`, `TD-{N}` → anchor links within the appropriate index page
 - Resolver runs as a post-processing step on generated pages (regex scan + replacement)
 
@@ -95,7 +95,7 @@ source: "{relative path to source file}"
 ## 4) Output Navigation Structure
 
 ```
-Home                              <- README.md (full, with Task Board)
+Home                              <- README.md (full, with the route to the index)
 Getting Started                   <- .tfw/quickstart.md
 Concepts/
   Philosophy                      <- .tfw/README.md
@@ -113,5 +113,5 @@ Reference/
   Workflows/                      <- .tfw/workflows/**/*.md
   Templates/                      <- .tfw/templates/**/*.md
 Tasks/
-  {task folders with all artifacts} <- tasks/**/*.md (preserved structure)
+  {task folders with all artifacts} <- every task container (preserved structure)
 ```
