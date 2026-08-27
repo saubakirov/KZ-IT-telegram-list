@@ -2,57 +2,68 @@
 > **Mindset:** Experienced newcomer. Understand before judging.
 > **RF:** [Phase B RF](../RF__phase-b__published_discovery.md)
 > **TS:** [Phase B TS](../TS__phase-b__published_discovery.md)
-> **Reviewed base:** `ae4898df0b0b5050cf6f23179d4e090ff04f93db`
+> **Reviewed base:** `b16aac00a7f2b94cbc2e1be29c7c30eaea9350d9`
+> **Prior verdict:** 🔄 REVISE on `ae4898df0b0b5050cf6f23179d4e090ff04f93db`; Reviewer source `96ea6d965525d14963b9b22251a762eb9682ec95`, integrated as `82ada1c10eabd7eda3c67a5c024a97e342a99764`
 
 ## Understanding
 
 The Executor added a repository-controlled GitHub Pages/Jekyll projection for the approved Phase A
-EN/RU/KK catalog. The implementation supplies one layout and stylesheet, generated route front
-matter, exact canonical/alternate/social/Dataset metadata, a repository-owned Liquid sitemap, and a
-checked-in SVG/PNG preview while preserving the Phase A body/digest contract. It also extends the
-existing deterministic tests, adds built-site assertions, records local browser/build/advisory
-evidence, and stops before every external mutation and public-outcome claim.
+EN/RU/KK catalog. The implementation supplies one layout and responsive stylesheet, generated route
+front matter, exact canonical/alternate/social/Dataset metadata, a repository-owned Liquid sitemap,
+and a deterministic SVG/PNG preview while preserving the Phase A body/digest contract. It extends
+the existing twelve deterministic tests, adds built-site assertions, records local browser/build/
+advisory evidence, and stops before every external mutation and public-outcome claim.
 
-The Coordinator revised the original plugin-backed sitemap plan before execution: `jekyll-sitemap`
-1.4.0 remains transitively installed but is not enabled, and checked-in `sitemap.xml` owns the exact
-three-route output. The final integrated implementation is commit
-`5217d928ae0ce04f7f83d1e8d3b02bdb0075c220`, equivalent on every implementation/evidence path to
-Executor commit `07bf62b77e5a1d6a1233bba47b63dc9e93ea9a7c`; commit
-`d6c2c2c679033d06f1d1f4361227e8485de1be48` then removed one trailing space from the Jekyll log only.
+The first formal review returned three bounded findings. On the revised base, the Executor replaced
+the preview PNG with the exact 27,394-byte output of the checked-in CairoSVG command, regenerated the
+complete six-case browser matrix as a canonical-LF committed blob, and refreshed every affected
+metadata/advisory/evidence binding. The Coordinator corrected the derived Phase B HL sentence so all
+Phase HL/TS/implementation references now name the repository-owned Jekyll/Liquid sitemap. The
+frozen Master HL remains byte-exact in every frozen section.
+
+The final integrated correction preserves authorship and scope. Executor source commit
+`de4060bf817bfb69441f08344f82dd14bc856649` and integrated commit
+`cd1a233bef3e10c1fe15e82949360e73a623937b` have the identical tree
+`d7ae8114751dfdfb6bbfb61b12bbdee23d45669c`; later commits refresh RF/EV wording and reopen this same
+Reviewer task. The earlier `d6c2c2c679033d06f1d1f4361227e8485de1be48` commit remains a one-file,
+one-trailing-space evidence-trace correction only.
 
 ## TS ↔ RF Alignment
 
-| TS requirement | RF claim | Aligned? |
+| TS requirement | Revised RF claim | Aligned? |
 |---|---|---|
-| AC-1 — supported three-route Jekyll surface | Pinned `github-pages` 232 build; one layout; exact EN/RU/KK output | ✅ Claimed |
-| AC-2 — exact locale, canonical, and reciprocal language metadata | Singleton localized head values, self canonicals, `en`/`ru`/`kk`/`x-default` alternates | ✅ Claimed |
-| AC-3 — visible-content-consistent Dataset/social metadata and reproducible preview | Exact Dataset/OG/Twitter assertions and CairoSVG 2.8.2 SVG-to-PNG record | ✅ Claimed |
-| AC-4 — exact repository-owned sitemap, no robots/llms surface | Liquid sitemap with three URLs; plugin disabled; no forbidden output | ✅ Claimed |
-| AC-5 — responsive local-browser presentation | Six EN/RU/KK cases at 390×844 and 1366×768 with link/navigation assertions | ✅ Claimed |
-| AC-6 — Phase A body/digest/regression preservation | Digest `51db402d…`, unchanged data/README/body, all twelve predecessor tests plus one new test | ✅ Claimed |
-| AC-7 — prepare but do not apply publication/settings | Read-only checkpoint, exact target package and runbook; public results deferred | ✅ Claimed |
-| AC-8 — independent advice and formal review | Hash-bound Antigravity PASS recorded; this formal review remained pending | ✅ Claimed as pending formal verdict |
-| AC-9 — minimal, traceable, resumable scope | 13 implementation paths, task-local evidence, clean integrated base, external gate retained | ✅ Claimed |
+| AC-1 — supported three-route Jekyll surface | Pinned `github-pages` 232 build; one layout; exact EN/RU/KK output | ✅ |
+| AC-2 — exact locale, canonical, and reciprocal language metadata | Singleton localized head values, self canonicals, `en`/`ru`/`kk`/`x-default` alternates | ✅ |
+| AC-3 — visible-content-consistent Dataset/social metadata and reproducible preview | Exact Dataset/OG/Twitter assertions; two fresh checked-in-command rerenders match the committed PNG | ✅ |
+| AC-4 — exact repository-owned sitemap, no robots/llms surface | Liquid sitemap with three URLs; plugin disabled; no forbidden output | ✅ |
+| AC-5 — responsive local-browser presentation | Six EN/RU/KK cases at 390×844 and 1366×768 with link and type/intent/language navigation assertions | ✅ |
+| AC-6 — Phase A body/digest/regression preservation | Digest `51db402d…`, unchanged data/README/body, all twelve predecessor tests plus one new test | ✅ |
+| AC-7 — prepare but do not apply publication/settings | Read-only checkpoint, exact target package and runbook; public results deferred | ✅ |
+| AC-8 — independent advice and formal review | Hash-bound refreshed Antigravity PASS; this REVIEW supplies the formal verdict | ✅ |
+| AC-9 — minimal, traceable, resumable scope | 13 implementation paths, task-local evidence, clean exact base, external gate retained | ✅ |
 
 ## Deviations from TS
 
 - Public deployment, repository settings, upload, Search Console, indexing, retrieval, and outcome
-  evidence are intentionally deferred exactly as AC-7 requires; the RF does not claim publication.
-- The RF describes 13 implementation paths (8 new, 5 modified) plus mandatory task-local trace and
-  evidence artifacts, consistent with the Coordinator-revised TS budget.
-- The integrated commit identity differs from the Executor-source commit identity because the
-  Coordinator revision and dispatch traces were already in the integration ancestry; implementation
-  and evidence blobs are identical between the two commits.
+  evidence remain intentionally deferred exactly as AC-7 requires. Nothing in this review claims the
+  repository-controlled candidate is published.
+- The Coordinator-authorized `jekyll-sitemap` → repository-owned Liquid revision is the documented
+  pre-execution revision already represented in the final Phase HL and TS. No frozen contract
+  amendment exists or is needed.
+- The Reviewer updates only the existing review-stage traces and REVIEW under the delegated write
+  boundary. Phase status/journal transitions remain Coordinator-owned.
 
 ## Checkpoint
 
 **Self-check:**
-- [x] Read RF §1–§9 completely.
-- [x] Read TS DoD and matched AC-1 through AC-9 to RF §3.
+- [x] Read the revised RF §§1–9 and all changed evidence completely.
+- [x] Read the prior REVIEW and stage traces; F1–F3 are preserved as prior-verdict history rather than
+  retroactively erased.
+- [x] Read the Phase B TS DoD and matched AC-1 through AC-9 to the revised RF.
 - [x] Read frozen Master HL §7 principles: subtract unnecessary surfaces, protect accuracy and one
   source, serve people through clear projections, keep the catalog narrow, measure controllable
   evidence, and preserve one experience across EN/RU/KK.
-- [x] Read ONB; it records no blocking questions and names the plugin/robots risk, immutable Phase A
-  boundary, evidence inventory, external stop, and all knowledge citations.
+- [x] Read Phase B ONB; it records no blocking questions and names the plugin/robots risk, immutable
+  Phase A boundary, evidence inventory, external stop, and all knowledge citations.
 
 Stage complete: YES

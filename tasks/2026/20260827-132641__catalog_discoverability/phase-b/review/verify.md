@@ -2,46 +2,55 @@
 > **Mindset:** Auditor. The RF is a declaration, not a fact.
 > **Min verify ratio:** 0.42
 > **RF implementation files claimed:** 13
-> **Initial files required:** `ceil(13 × 0.42) = 6`
-> **Actual implementation files opened:** 13/13 (100%; discrepancies triggered full verification)
-> **Reviewed base:** `ae4898df0b0b5050cf6f23179d4e090ff04f93db`
+> **Files required:** `ceil(13 × 0.42) = 6`
+> **Actual implementation files opened:** 13/13 (100%; retained from the first pass and re-opened proportionally for the revision)
+> **Reviewed base:** `b16aac00a7f2b94cbc2e1be29c7c30eaea9350d9`
+> **Prior formal pass:** 🔄 REVISE on `ae4898df0b0b5050cf6f23179d4e090ff04f93db`; F1–F3 are dispositioned below.
 
 ## Verification Log
 
-| # | File | RF claim | Actual | Match |
+| # | File | Revised RF claim | Actual | Match |
 |---|---|---|---|---|
-| V1 | `Gemfile` | Supported Pages dependency pinned | Pins `github-pages` exactly to 232 | ✅ |
-| V2 | `_config.yml` | Root-source Pages config and exclusions | Exact `url`/`baseurl`, strict front matter, and trace/tool exclusions; no sitemap plugin enabled | ✅ |
+| V1 | `Gemfile` | Supported Pages dependency pinned | Pins `github-pages` exactly to 232; fresh pinned-container build resolves it | ✅ |
+| V2 | `_config.yml` | Root-source Pages config and exclusions | Exact `url`/`baseurl`, strict front matter, trace/tool exclusions; no sitemap plugin enabled | ✅ |
 | V3 | `_layouts/default.html` | One localized semantic head/layout | Singleton title/description/canonical, four alternates, OG/Twitter, Dataset JSON-LD, one stylesheet, no executable JS | ✅ |
 | V4 | `assets/css/catalog.css` | Restrained responsive presentation | 146-line static stylesheet with system fonts, focus-visible state, overflow-safe tables, mobile rule, and reduced-motion handling | ✅ |
-| V5 | `assets/social-preview.svg` | Deterministic editable 1280×640 source | Exact dimensions/text and a documented CairoSVG 2.8.2 command are present | ⚠️ Partial — see F1 |
-| V6 | `assets/social-preview.png` | Reproducible 1280×640 raster, 27,391 bytes | Valid 1280×640 RGB PNG, 27,391 bytes, hash `323c1243…`, legible and claim-safe; documented regeneration does not reproduce it | ❌ F1 |
+| V5 | `assets/social-preview.svg` | Deterministic editable 1280×640 source | Exact dimensions/text and checked-in CairoSVG 2.8.2 command; source is 1,158 bytes / `9f46ff68…` | ✅ |
+| V6 | `assets/social-preview.png` | Reproducible 1280×640 raster, 27,394 bytes | Valid 1280×640 RGB PNG, 27,394 bytes / `13e34836…`; two fresh exact-command rerenders are byte-identical to it | ✅ F1 closed |
 | V7 | `sitemap.xml` | Repository-owned Liquid sitemap | Checked-in front matter/Liquid emits only canonical EN/RU/KK URLs | ✅ |
-| V8 | `scripts/generate_readme.py` | Add Phase B route/head inputs without changing approved body | Adds the projection/front-matter model while retaining one source renderer; Phase A preservation test and immutable-base comparison pass | ✅ |
-| V9 | `scripts/test_catalog_generation.py` | Extend, never weaken, twelve Phase A tests | Diff from Phase A adds constants/helpers and one preservation test; no predecessor test definition is removed or changed; 13/13 pass | ✅ |
-| V10 | `scripts/test_site_metadata.py` | Built route/head/sitemap/Dataset/social/asset assertions | 393-line independent parser validates the claimed route and metadata contract, but validates asset dimensions/bytes only and does not reproduce SVG→PNG | ⚠️ Partial — see F1 |
-| V11 | `index.md` | Generated EN front matter with Phase A-equivalent body | Exact Phase B front matter; stripped body and digest preservation gate pass | ✅ |
-| V12 | `ru/index.md` | Generated RU front matter with Phase A-equivalent body | Exact Phase B front matter; stripped body and digest preservation gate pass | ✅ |
-| V13 | `kk/index.md` | Generated KK front matter with Phase A-equivalent body | Exact Phase B front matter; stripped body and digest preservation gate pass | ✅ |
+| V8 | `scripts/generate_readme.py` | Add Phase B route/head inputs without changing approved body | Adds deterministic front matter while retaining the one-source renderer; Phase A preservation checks pass | ✅ |
+| V9 | `scripts/test_catalog_generation.py` | Extend, never weaken, twelve Phase A tests | AST comparison shows all 12 predecessor test methods byte-semantically unchanged; one preservation test is added; 13/13 pass | ✅ |
+| V10 | `scripts/test_site_metadata.py` | Built route/head/sitemap/Dataset/social/asset assertions | Independent parser validates the exact route, metadata, Dataset, target/fragment, sitemap, no-robots/llms, and asset-shape contract | ✅ |
+| V11 | `index.md` | Generated EN front matter with Phase A-equivalent body | Exact Phase B front matter; stripped body hash `c26880eb…` is byte-identical to Phase A | ✅ |
+| V12 | `ru/index.md` | Generated RU front matter with Phase A-equivalent body | Exact Phase B front matter; stripped body hash `127cf17b…` is byte-identical to Phase A | ✅ |
+| V13 | `kk/index.md` | Generated KK front matter with Phase A-equivalent body | Exact Phase B front matter; stripped body hash `92b32502…` is byte-identical to Phase A | ✅ |
 
-Implementation scope is exactly 13 paths: 8 added and 5 modified. Text delta is 789 additions and
-6 deletions (795 total); the binary PNG is counted as one added path. `data/communities.json` and
-`README.md` are byte-identical to the approved Phase A base
-`d9fe27c6dce80008326fa8eb731d3aff40fd3726`.
+The implementation scope remains exactly 13 paths: 8 added and 5 modified. The bounded revision
+changes one implementation path (`assets/social-preview.png`) plus task-local evidence/RF and
+Coordinator-owned lifecycle/Phase-HL traces. Executor source commit `de4060bf…` and integrated commit
+`cd1a233b…` have the identical tree `d7ae8114751dfdfb6bbfb61b12bbdee23d45669c`.
+
+## Prior Finding Disposition
+
+| Finding | Required correction | Independent disposition | Status |
+|---|---|---|---|
+| F1 — preview did not reproduce | Make the committed PNG equal the documented checked-in-command output and refresh bindings | Exact Git blob is 27,394 bytes / `13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d`; two fresh `python -m cairosvg assets/social-preview.svg -o <temp>.png -s 1` runs produce those exact bytes; producing library/DLL/font probes match EV | ✅ Closed |
+| F2 — matrix EV hash did not bind to a committed file | Commit a final canonical matrix and bind EV/RF to its bytes | Exact `HEAD` Git blob (not worktree text) is 70,133 bytes / `f96aa96e6a60a8d26d46d570e463f516944ca60dbc0995121e34a6bcd29cb269`, with zero CRLF pairs and 1,021 LF bytes; six cases and 30 local checks parse cleanly | ✅ Closed |
+| F3 — Phase HL retained rejected-plugin wording | Correct the free derived Phase HL sentence | Phase B HL §3 now says, “The sitemap is rendered from the repository-owned Jekyll/Liquid page”; Phase HL §§2/4/8, TS, RF, implementation, and EV consistently reject plugin activation | ✅ Closed |
 
 ## Acceptance-Criteria Verification
 
 | AC | Independent result | Evidence |
 |---|---|---|
-| AC-1 | ✅ Holds | Fresh build from the exact reviewed commit archive passed in GitHub's pinned `jekyll-build-pages` image; EN/RU/KK are the only HTML catalog routes and share one layout/stylesheet. |
+| AC-1 | ✅ Holds | Fresh build from exact `b16aac00…` Git archive passed in the pinned official `jekyll-build-pages` image; only EN/RU/KK HTML routes plus repository-owned sitemap were emitted. |
 | AC-2 | ✅ Holds | Fresh metadata test and six browser cases confirm exact `lang`, self-canonical, and reciprocal `en`/`ru`/`kk`/`x-default` singleton links on every route. |
-| AC-3 | ❌ Does not fully hold | Dataset and social fields match visible/source facts, and the PNG is valid/legible, but the checked-in raster is not reproduced by its documented CairoSVG 2.8.2 command (F1). |
-| AC-4 | ✅ Holds | Fresh sitemap is 338 bytes with exactly three canonical URLs; source/build/local HTTP have no project `robots.txt` or `llms.txt`. |
-| AC-5 | ✅ Holds | Independent in-app Chromium QA at 390×844 and 1366×768 for all locales found no horizontal overflow, hidden critical content, or executable scripts; one visible type action brings the first entry into view. |
-| AC-6 | ✅ Holds | Digest remains exactly `51db402da00f85f25dd533d415c9d7941402c69b5892952882bafc6122d2a6fc`; schema/generator/13 tests pass; prior data/README/bodies/tests are preserved. |
+| AC-3 | ✅ Holds | Dataset and social fields equal visible/source title, description, locale, date, canonical, license, and JSON distribution; preview is valid, legible, claim-safe, and exactly reproducible (F1). |
+| AC-4 | ✅ Holds | Fresh sitemap is 338 bytes / `79dcb9bb…` with exactly three canonical URLs; exact source/archive/build contain no project `robots.txt` or `llms.txt`. |
+| AC-5 | ✅ Holds | Independent in-app Chromium QA at 390×844 and 1366×768 for all locales found exact viewports, no overflow, no hidden critical content, no executable/external scripts, and working type/intent/language navigation; 30/30 representative local links returned 200. |
+| AC-6 | ✅ Holds | Digest remains exactly `51db402d…`; schema/generator/13 tests pass; data/README/bodies and all twelve predecessor tests are preserved exactly. |
 | AC-7 | ✅ Holds within repository boundary | Authenticated current state, exact target settings, safe publication runbook, existing-tag non-reuse, and zero mutations are recorded; every public outcome remains correctly DEFERRED. |
-| AC-8 | ⚠️ Advisory half holds; formal criterion pending | Antigravity provenance and PASS are exact. This formal review cannot approve while F1–F3 remain. |
-| AC-9 | ⚠️ Scope holds; trace integrity does not | Scope/history/clean-base requirements hold, but the stale Phase HL plugin sentence (F3) and incorrect evidence hash binding (F2) make the continuation trace internally inconsistent. |
+| AC-8 | ✅ Holds | Refreshed Antigravity provenance and PASS are exact; this formal REVIEW independently verifies the candidate and issues APPROVE for repository-controlled bytes only. |
+| AC-9 | ✅ Holds | Thirteen-path implementation scope, role attribution, task-local evidence, clean integrated base, prior-verdict history, and outstanding external checkpoint are all traceable and resumable. |
 
 ## Commands Executed
 
@@ -49,74 +58,75 @@ Implementation scope is exactly 13 paths: 8 added and 5 modified. Text delta is 
 |---|---|---|
 | 1 | `python scripts/validate_schema.py` | PASS — 38 groups, 20 channels, 4 bots, 19 categories, 2 archived; zero errors; digest exact. |
 | 2 | `python scripts/generate_readme.py --check` | PASS — all four projections current; digest exact. |
-| 3 | `python -m unittest scripts.test_catalog_generation -v` | PASS — 13/13, including the new Phase A preservation contract. |
-| 4 | Immutable-base Git diffs and `git diff --check` | PASS — Phase A data/README unchanged; 13-path budget exact; frozen Master HL sections unchanged from `00a21bb9e1475568a9baef4a9be3b0a8e72e383e`. |
-| 5 | Pinned official Pages container build from `git archive ae4898…` | PASS — Ruby 3.3.4, Bundler 2.5.11, Jekyll 3.10.0; fresh EN/RU/KK/sitemap/CSS/PNG hashes match EV. A preliminary read-only source bind was unsuitable because Bundler writes `Gemfile.lock`; the exact archive build is the authoritative rerun. |
-| 6 | `python scripts/test_site_metadata.py --site <fresh-site>` | PASS — routes, heads, Dataset, target/fragment parity, sitemap, asset shape, and absent robots/llms. |
-| 7 | Local HTTP checks for `/`, `/ru/`, `/kk/`, sitemap, JSON, robots, llms | 200/200/200/200/200/404/404. |
-| 8 | In-app Chromium, EN/RU/KK × 390×844 and 1366×768 | PASS — exact viewport and DOM/navigation checks; screenshots visually inspected. |
-| 9 | `python -m cairosvg assets/social-preview.svg -o <temp>.png -s 1` with CairoSVG 2.8.2 | FAIL contract — repeat runs are stable at 27,394 bytes / `13e34836…`, but differ from the checked-in 27,391-byte / `323c1243…` PNG by 72 pixels (maximum channel delta 19). |
-| 10 | SHA-256 audit of all Phase B evidence attachments | F2 — every asserted attachment hash checked; `browser-matrix.json` is `7ea6616a…`, not EV's `b83d6fdc…`. |
-| 11 | Authenticated GitHub REST GET, public HTTP GET, and `git ls-remote` | Current state matches the checkpoint; zero mutation. |
-| 12 | Antigravity NDJSON/provenance/hash audit | PASS — exact executable/model/mode/sandbox/permissions/conversation and prompt/input/output bindings; no findings/nits. |
-| 13 | HL/ONB knowledge-citation resolution and official-source checks | 21/21 citation rows semantically checked; 9/9 local targets resolve and all 20 unique official endpoints returned 200 (one transient retry). |
+| 3 | `python -m unittest scripts.test_catalog_generation -v` | PASS — 13/13; AST audit proves the 12 Phase A test methods are unchanged and the preservation test is the only addition. |
+| 4 | Immutable-base Git diffs and `git diff --check` | PASS — Phase A data/README/bodies exact; 13-path budget exact; all frozen Master HL sections byte-identical to `00a21bb9e1475568a9baef4a9be3b0a8e72e383e`. |
+| 5 | Pinned official Pages container build from exact `git archive b16aac00…` | PASS — Ruby 3.3.4, Bundler 2.5.11, Jekyll 3.10.0; EN/RU/KK/sitemap/CSS/PNG and regenerated metadata-summary hashes match EV exactly. |
+| 6 | Exact-archive `python scripts/test_site_metadata.py --site <fresh-site>` | PASS — routes, heads, Dataset, target/fragment parity, sitemap, asset shape, and absent robots/llms. |
+| 7 | Local HTTP checks for `/`, `/ru/`, `/kk/`, sitemap, JSON, robots, llms | 200/200/200/200/200/404/404 on the exact-archive build. |
+| 8 | In-app Chromium, EN/RU/KK × 390×844 and 1366×768 | PASS — six fresh viewport/DOM/navigation checks and visual inspections; all type/intent/language clicks work. |
+| 9 | Thirty representative exact-archive local-link GETs | PASS — language, type, intent, JSON, and contribution link in every browser case returned 200. |
+| 10 | Checked-in CairoSVG command twice plus complete producing probes | PASS — both outputs and candidate are 27,394 bytes / `13e34836…`; Python 3.13.5, CairoSVG 2.8.2, Cairo 1.18.4, dependencies, exact Cairo DLL, and Arial regular/bold hashes match EV. |
+| 11 | Exact final Git-blob hash/newline audit of all Phase B attachments | PASS — F2 matrix binding exact; metadata, build, screenshots, preview, external checkpoint, and Antigravity streams match recorded bindings. |
+| 12 | Authenticated GitHub REST/GraphQL GET, public HTTP GET, and `git ls-remote` | Current state matches checkpoint; public Phase B bytes remain undeployed; zero mutation. |
+| 13 | Antigravity NDJSON/provenance/hash audit | PASS — exact executable/model/mode/sandbox/permissions/conversation and prompt/input/output bindings; no findings/nits. |
+| 14 | Coordinator/Executor history and tree audit | PASS — sitemap revision affects Coordinator artifacts only; trace-only whitespace commit changes one evidence line; Executor source/integration trees match. |
+
+One reviewer-side visibility probe initially used an English-specific text selector for the Russian
+intent-navigation label. The probe—not the candidate—was corrected to inspect the actual first six
+critical DOM elements; every RU mobile/desktop element was visible. No candidate finding results.
 
 ## Claim & Source Checks
 
 | # | Claim / citation checked | Where it appears | Traces to | Holds? |
 |---|---|---|---|---|
-| C1 | Phase A approved body/digest contract is unchanged | TS AC-6; RF §§2–4 | Phase A RF + final REVIEW, immutable base `d9fe27c6…`, generator tests, current artifacts | ✅ Exact digest `51db402d…`; prior twelve tests extended, not weakened |
-| C2 | Repository-owned Liquid sitemap is supported and avoids project robots output | Revised Phase B HL/TS; RF §§2–4 | Coordinator revision `b08d0f1…`, Jekyll source, pinned supported build, Google/RFC primary guidance | ✅ Implementation/output holds; Phase HL retains one contradictory plugin sentence (F3) |
-| C3 | Current Pages/repository/public state is unchanged and no tag/settings mutation occurred | TS AC-7; external checkpoint; RF boundary | Authenticated GitHub GETs, public HTTP bytes, `git ls-remote` | ✅ `master=e4986e…`; Pages legacy `master:/`; tag ref `45d9c3…` (peeled commit `ee2e4f8…`); public RU/KK/sitemap still 404 |
-| C4 | Preview is reproducibly generated from the checked-in vector | TS AC-3; RF §§1–4; EV | Checked-in SVG command and independent CairoSVG 2.8.2 rerender | ❌ F1 |
+| C1 | Phase A approved body/digest contract is unchanged | TS AC-6; RF §§2–4 | Actual Phase A RF/final REVIEW, immutable base `d9fe27c6…`, generator tests, current blobs | ✅ Exact digest `51db402d…`; data/README/bodies exact; prior twelve tests unchanged |
+| C2 | Repository-owned Liquid sitemap is supported and emits no project robots output | Revised Phase B HL/TS; RF §§2–4 | Coordinator revision `b08d0f1…`, Jekyll source, pinned supported build, exact build inventory | ✅ F3 closed; plugin installed transitively but disabled |
+| C3 | Current Pages/repository/public state is unchanged and no tag/settings mutation occurred | TS AC-7; external checkpoint; RF boundary | Authenticated GitHub GETs, public HTTP bytes, `git ls-remote` | ✅ `master=e4986e…`; Pages legacy `master:/`; tag ref `45d9c3…` peels to `ee2e4f8…`; public RU/KK/sitemap remain 404 |
+| C4 | Preview is reproducibly generated from the checked-in vector | TS AC-3; RF/EV | Checked-in SVG command and two independent CairoSVG 2.8.2 rerenders | ✅ F1 closed; all three byte sequences are `13e34836…` |
 
 ## Discrepancies Found
 
-### F1 — Preview raster is not reproducible by its checked-in command (material)
-
-`assets/social-preview.svg` instructs `python -m cairosvg ... -s 1`, and RF/EV claim CairoSVG 2.8.2
-reproducibility. On the reviewed host, that exact command with CairoSVG 2.8.2 produces stable bytes
-`13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d` (27,394 bytes), not checked-in
-`323c124343db406b32170dfa9fe6ec18e5d14479f57691dc6b638f99df2ce9c5` (27,391 bytes). Pixel comparison
-finds 72 changed pixels within the text raster (maximum channel delta 19). The visual asset is good,
-but the acceptance/evidence claim is not established. Pin and document the complete producing
-environment or regenerate the raster through the documented method, then rerun every affected hash,
-metadata, visual, advisory, EV, and RF binding.
-
-### F2 — EV binds `browser-matrix.json` to a nonexistent hash (material evidence defect)
-
-EV records `b83d6fdcbda447a0baa810b13bca8542b29f2e67becc54087a1fc9ba9fccb025`, while the reviewed file is
-`7ea6616ad428e74530015b14e984ffc4c84ff2ef38820e5a81d641041049da48` (67,908 bytes). Both the Executor
-commit `07bf62b…` and integrated commit `5217d92…` contain the latter bytes; no committed version of
-this path has the asserted EV hash. The matrix content independently passes, but the durable byte
-binding must be corrected by the Executor and re-audited.
-
-### F3 — Phase B HL still states the rejected plugin produces the sitemap (material trace defect)
-
-The Coordinator revision correctly changes Phase B HL §§2, 4, and 8 and the TS to the
-repository-owned Liquid sitemap, but Phase B HL §3 still says, “The sitemap is produced by the
-supported GitHub Pages plugin.” That directly contradicts the final architecture and could cause a
-future continuation to re-enable the rejected plugin and recreate the forbidden project robots
-surface. The Coordinator must correct this free, derived Phase HL sentence; the Reviewer role lock
-forbids editing it here.
+No current discrepancies. The prior formal findings F1–F3 are fully dispositioned on the exact
+reviewed base. The initial reviewer-side RU selector described above was corrected before judgment
+and did not identify a candidate defect.
 
 ## Evidence Verification
 
 | # | RF evidence ref | Artifact exists? | Matches claim? |
 |---|---|---|---|
-| E1 / AC-1 | EV + `jekyll-build.txt` | ✅ | ✅ Fresh supported build matches recorded output |
-| E2 / AC-2 | Deterministic built-output assertions | ✅ Inline/test | ✅ Exact head contract independently verified |
-| E3 / AC-3 | `metadata-summary.json`; preview inspection | ✅ | ❌ Metadata/visual facts hold, but SVG→PNG reproducibility does not (F1) |
-| E4 / AC-4 | Metadata summary + build log | ✅ | ✅ Exact sitemap/no robots/no llms |
-| E5 / AC-5 | `browser-matrix.json`; six screenshots | ✅ | ⚠️ Contents/screenshots independently pass; EV byte binding is wrong (F2) |
-| E6 / AC-6 | Commands and hashes in EV | ✅ | ✅ Digest/body/data/README/test preservation exact |
-| E7 / AC-7 | `external-checkpoint.md` | ✅ | ✅ Correctly DEFERRED; fresh read-only state matches |
-| E8 / AC-8 | Antigravity input/output | ✅ | ✅ Exact PASS/no findings/no nits provenance verified |
-| E9 / AC-9 | Git/path/role audit | ✅ | ⚠️ Scope holds; F2/F3 reduce trace integrity |
+| E1 / AC-1 | EV + `jekyll-build.txt` | ✅ | ✅ Fresh exact-archive supported build matches recorded output |
+| E2 / AC-2 | `metadata-summary.json` + deterministic assertions | ✅ | ✅ Exact head contract independently verified on all routes |
+| E3 / AC-3 | metadata summary; SVG/PNG; inspection attachment | ✅ | ✅ Reproduction, visual facts, dimensions, text, and all bytes exact |
+| E4 / AC-4 | metadata summary + build log | ✅ | ✅ Exact sitemap; no robots/llms source or output |
+| E5 / AC-5 | canonical-LF matrix + six screenshots | ✅ | ✅ Final Git blob exact; all six cases and attachment hashes independently match |
+| E6 / AC-6 | commands and hashes in EV | ✅ | ✅ Digest/body/data/README/test preservation exact |
+| E7 / AC-7 | `external-checkpoint.md` | ✅ | ✅ Correctly DEFERRED; fresh read-only state matches; exact runbook and tag rule retained |
+| E8 / AC-8 | Antigravity input/output | ✅ | ✅ Exact refreshed PASS/no findings/no nits provenance and bytes |
+| E9 / AC-9 | Git/path/role audit | ✅ | ✅ Scope, authorship, integration tree, same-task continuation, and external stop hold |
 
-Evidence artifacts: 9/9 references exist; 6 fully match, 2 partially match, 1 fails its offered
-reproducibility claim. Because discrepancies exist, all 13 implementation files and all attachments
-were verified.
+Attachment audit: all 9 RF evidence references exist and match. The six committed screenshot hashes
+are `76b3e944…`, `f3d7f090…`, `9647f0ac…`, `0516e47f…`, `a2a623b0…`, and `d1f2adc6…`; the inspection
+attachment is byte-identical to the final `13e34836…` PNG. `metadata-summary.json` is 11,097 bytes /
+`bbf30af0…`; Antigravity input/output are 170,401 / 3,342 bytes with the exact hashes below.
+
+## Antigravity Provenance Audit
+
+- Executable: `C:\Users\c0rpa\AppData\Local\agy\bin\agy.exe`; version 1.1.22; 186,767,512 bytes;
+  SHA-256 `059b96c1069206158d340ee2a8912894eca5002195e62b8cd281c26c01cd794e`.
+- Exact model `gemini-3.7-flash-high`; `--mode plan`; `--sandbox`; object-valued UTF-8
+  `--input-format stream-json` / `--output-format stream-json`; request-review permissions; no
+  `--dangerously-skip-permissions`; zero tool steps.
+- Conversation `5f3edb10-3f79-4dbf-8aa8-2c3885dbc28c`; status `SUCCESS`.
+- Prompt: 129,122 UTF-8 bytes / SHA-256
+  `e789f8d7301d0825a98a4c532121bdb4385affc31ae8f358cd96d038cdf960fb`.
+- Input: one object-valued UTF-8 line, 170,401 bytes / SHA-256
+  `aba88a1bcc48a36f7fd3ac06268c4464ae37965dc2c30b6e118dbbbabddde8ba`.
+- Output: seven object-valued records, 3,342 bytes / SHA-256
+  `b560698faada053bc896d8da0a4ba106683e2fcbde96eb970c8f474fb0b07d86`.
+- Response SHA-256 `7ce63b5f0a4207b1ebd7e153f55319933f6133432ffe46c86e3ed006fe28dbaf`;
+  `VERDICT: PASS`; `DISPOSITION_REQUIRED: NO`; `FINDINGS: NONE`; `NITS: NONE`.
+
+Antigravity is advisory only. This Reviewer issues the formal TFW verdict.
 
 ## Knowledge Citations Verified
 
@@ -133,7 +143,7 @@ were verified.
 | 9 | HL/ONB | PV4b — Conventions §11 Quality Standard | ✅ | ✅ No placeholders/manual cleanup | ✅ |
 | 10 | HL/ONB | PV5–6 — optional convention/process topic files absent | ✅ absence | ✅ Existing authorities used | ✅ |
 | 11 | HL/ONB | PV7 — `knowledge/domain.md` F1–F2 | ✅ | ✅ Archive facts preserved | ✅ |
-| 12 | HL/ONB | PV8 — Jekyll front matter/permalinks/Pages dependencies | ✅ | ✅ Jekyll/Liquid/root source is supported; plugin is transitive but disabled | ✅, with F3 trace correction required |
+| 12 | HL/ONB | PV8 — Jekyll front matter/permalinks/Pages dependencies | ✅ | ✅ Jekyll/Liquid/root source supported; plugin disabled | ✅ |
 | 13 | HL/ONB | PV9 — Google localized pages/sitemaps | ✅ | ✅ Self canonicals and reciprocal alternates/sitemap | ✅ |
 | 14 | HL/ONB | PV10 — Google AI guidance/OpenAI crawler roles | ✅ | ✅ Ordinary visible clarity; no AI promise | ✅ |
 | 15 | HL/ONB | PV11 — IANA `kk` and RFC 9309 | ✅ | ✅ `kk`; host-root robots semantics | ✅ |
@@ -145,18 +155,18 @@ were verified.
 | 21 | HL/ONB | PV17 — URL Inspection/Playwright assertions | ✅ | ✅ Local executable checks; public indexing deferred | ✅ |
 
 Citation totals: 21 rows checked; 21 resolved or correctly documented as absent; 21 semantically
-verified; 0 irrelevant; 0 hallucinated. The independent PV scan covered PV0–PV4 in full and PV7 by
-relevance; optional PV2/PV5/PV6 files are absent as recorded.
+verified; 0 irrelevant; 0 hallucinated. The revision changed no citation target or asserted meaning.
 
 ## Checkpoint
 
 **Self-check:**
-- [x] Opened 13/13 claimed implementation files, exceeding `ceil(13 × 0.42) = 6`; discrepancies escalated verification to 100%.
+- [x] Opened 13/13 claimed implementation files, exceeding `ceil(13 × 0.42) = 6`; revision artifacts and every prior green gate were rechecked proportionally.
 - [x] Ran build, unit, schema, generation, metadata, browser, rasterization, hash, Git, and read-only external checks.
-- [x] Claim/source checks include the approved digest, sitemap architecture, primary GitHub state, and raster reproducibility.
+- [x] Claim/source checks cover Phase A approval, final sitemap architecture, primary current GitHub state, and preview reproducibility.
 - [x] Verified every RF §3 acceptance claim against actual files and independent output.
-- [x] Checked `KNOWLEDGE.md`; no implementation contradiction exists.
+- [x] Checked `KNOWLEDGE.md`; no contradiction exists.
 - [x] Verified all 21 HL §7.2 / ONB §7 citation rows: 21 resolved/legitimate absences, 21 semantic matches, 0 irrelevant, 0 hallucinated.
-- [x] Verified all 9 RF §5 evidence references: 9 exist, 6 fully match, 2 partially match, 1 fails the offered claim.
+- [x] Verified all 9 RF §5 evidence references and every attachment: 9 exist and 9 match.
+- [x] Formally dispositioned F1–F3 and preserved the prior REVISE as history.
 
 Stage complete: YES
