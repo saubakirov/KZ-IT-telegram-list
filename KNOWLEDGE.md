@@ -48,6 +48,11 @@ data/communities.json ──► validate_schema.py ──► validate_links.py �
 | D5 | CC0 license | Maximally permissive for a community catalog; matches Awesome List norms | `LICENSE` |
 | D6 | Adopt TFW 1.3.0 with prefix `TFW`, `initial_seq: 3` | Legacy traces TFW-01/TFW-02 predate the framework install; keeping the prefix preserves them without renaming history | [RF TFW-3](tasks/TFW-3__tfw_init/RF__TFW-3__tfw_init.md) |
 | D7 | Task Board lives in `tasks/README.md`, linked from generated `README.md` | `README.md` is fully overwritten by the generator — a board placed there would be destroyed. The generator emits a link instead | [RF TFW-3](tasks/TFW-3__tfw_init/RF__TFW-3__tfw_init.md) |
+| D8 | Preserve the late TFW-3 trace honestly, with current authorship dates and no reconstructed history | A late, explicit trace is verifiable; backdating would make the repository's methodology showcase false | [RF TFW-4 Phase A](tasks/TFW-4__showcase_reorg/phase-a/RF__phase-a__baseline_cleanup.md) |
+| D9 | `AGENTS.md` is the canonical project contract; `CLAUDE.md` is a thin Claude Code adapter | A pointer is a mechanism for agreement; duplicated rules rely on habit and reproduce the drift removed in Phase A | [HL TFW-4](tasks/TFW-4__showcase_reorg/HL-TFW-4__showcase_reorg.md) |
+| D10 | A project release is a dated verified snapshot tagged `data-YYYY-MM-DD`, not a semantic version | Catalog readers need to know when the data was true; the catalog has no API compatibility surface | [HL TFW-4](tasks/TFW-4__showcase_reorg/HL-TFW-4__showcase_reorg.md) |
+| D11 | The Project North Star lives in `data/communities.json` and is rendered later as `README.md § Purpose` | The README is generated, while structured product data can be schema-enforced and rendered without a second hand-maintained copy | [HL TFW-4](tasks/TFW-4__showcase_reorg/HL-TFW-4__showcase_reorg.md) |
+| D12 | Dead communities are archived with `died_on` and `reason`, never deleted | The record of a community's death is catalog data; retaining it avoids repeating the historical loss tracked by TD-4 | [HL TFW-4](tasks/TFW-4__showcase_reorg/HL-TFW-4__showcase_reorg.md) |
 
 ---
 
@@ -58,6 +63,7 @@ data/communities.json ──► validate_schema.py ──► validate_links.py �
 | TFW-01 | Awesome List restructure | [TS TFW-01](tasks/TFW-01_awesome_list_restructure/TS__TFW-01__awesome_list_restructure.md) | Establishes the JSON-as-source-of-truth architecture the whole project rests on |
 | TFW-02 | Enhanced validation & cleanup | [RF TFW-02](tasks/TFW-02_enhanced_validation/RF__TFW-02__enhanced_validation.md) | Establishes the validation discipline; records the first data purge (12 dead communities removed) |
 | TFW-3 | TFW 1.3.0 initialization | [RF TFW-3](tasks/TFW-3__tfw_init/RF__TFW-3__tfw_init.md) | Records the framework install, adapter choice, and legacy migration |
+| TFW-4 Phase A | Baseline & cleanup | [RF TFW-4 Phase A](tasks/TFW-4__showcase_reorg/phase-a/RF__phase-a__baseline_cleanup.md) | Records the bounded removal of the obsolete singular adapter and establishes the preserved trace baseline for later TFW-4 phases |
 
 ---
 
@@ -68,6 +74,7 @@ data/communities.json ──► validate_schema.py ──► validate_links.py �
 | `STEPS.md` — freeform progress log | Removed | 2026-08-26 | Task traces in `tasks/` + Task Board in `tasks/README.md` | [RF TFW-3](tasks/TFW-3__tfw_init/RF__TFW-3__tfw_init.md) |
 | `TASK.md` — current-task + backlog file | Removed | 2026-08-26 | Task Board in `tasks/README.md` | [RF TFW-3](tasks/TFW-3__tfw_init/RF__TFW-3__tfw_init.md) |
 | `.agent/rules/agents.md` — duplicate of root AGENTS.md | Removed | 2026-08-26 | Root `AGENTS.md` | [RF TFW-3](tasks/TFW-3__tfw_init/RF__TFW-3__tfw_init.md) |
+| Remaining singular `.agent/` adapter copies (`conventions.md`, `glossary.md`) | Removed | 2026-08-26 | Canonical `.tfw/` documents; Codex entry points in root `AGENTS.md` and `.agents/skills/` | [RF TFW-4 Phase A](tasks/TFW-4__showcase_reorg/phase-a/RF__phase-a__baseline_cleanup.md) |
 | Ad-hoc pre-1.0 TFW layout (HL/TS/RF only, no lifecycle) | Superseded | 2026-08-26 | TFW 1.3.0 lifecycle `HL_DRAFT → RES → TS_DRAFT → ONB → RF → REV → KNW → DONE` | [RF TFW-3](tasks/TFW-3__tfw_init/RF__TFW-3__tfw_init.md) |
 | Task ID zero-padding (`TFW-01`) | Frozen | 2026-08-26 | Unpadded `TFW-3` onward per `.tfw/conventions.md` §4 | [TECH_DEBT.md](TECH_DEBT.md) |
 

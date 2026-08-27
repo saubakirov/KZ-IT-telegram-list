@@ -5,6 +5,15 @@
     "last_updated": "2026-06-17",
     "source_repo": "https://github.com/saubakirov/KZ-IT-telegram-list"
   },
+  "north_star": {
+    "purpose": "A catalog whose value is accuracy. Every entry is a live, verified, IT-relevant Kazakhstan Telegram community — verified by a dated network check, never by recollection.",
+    "non_goals": [
+      "A directory of every Kazakhstan Telegram chat — IT relevance is a gate, not a hint.",
+      "A promotion channel — no purely commercial or paid-placement entries.",
+      "A hand-edited list — `README.md` is an artifact; the data is the product.",
+      "An estimator — an unverifiable member count is omitted, never guessed."
+    ]
+  },
   "groups": [
     {
       "name": "BI Analysts Kazakhstan",

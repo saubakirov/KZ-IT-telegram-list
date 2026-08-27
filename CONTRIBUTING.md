@@ -1,174 +1,87 @@
 # Contributing to Awesome Kazakhstan IT Telegram
 
-Thank you for contributing! This list is the go-to directory for Kazakhstan's IT Telegram community.
+Thank you for helping maintain a trustworthy catalog of Kazakhstan IT Telegram communities.
+Accuracy matters more than list size: submit only information that can be checked.
 
-## Quick Start
+## Canonical Sources
+
+- [`data/communities.json`](data/communities.json) is the product and the source of truth.
+- [`AGENTS.md`](AGENTS.md) owns the generation contract, data rules, validation commands,
+  inclusion criteria, and change procedure.
+- `README.md` is generated output. Never edit it directly.
+
+Read the [JSON entry format](AGENTS.md#json-entry-format), [change
+procedure](AGENTS.md#change-procedure), and [script reference](AGENTS.md#scripts) before making
+a contribution. This guide intentionally does not copy those mutable rules.
+
+## Inclusion Gate
+
+The approved Project North Star is stored in the top-level `north_star` object in
+[`data/communities.json`](data/communities.json). A proposed entry must serve its purpose and
+must pass every non-goal:
+
+1. A directory of every Kazakhstan Telegram chat — IT relevance is a gate, not a hint.
+2. A promotion channel — no purely commercial or paid-placement entries.
+3. A hand-edited list — `README.md` is an artifact; the data is the product.
+4. An estimator — an unverifiable member count is omitted, never guessed.
+
+In practical terms, an entry must be IT-focused, relevant to Kazakhstan, active, and useful to
+the community. Spam and purely commercial placements are rejected.
+
+## Contribution Workflow
+
+1. Fork the repository and clone your fork.
+2. Edit [`data/communities.json`](data/communities.json), never `README.md` directly.
+3. Follow the canonical [`AGENTS.md` change procedure](AGENTS.md#change-procedure) exactly. This
+   guide deliberately does not reproduce or shorten its commands.
+4. Commit the source data and generated artifact together, then open a pull request against
+   `master`.
+
+The canonical procedure includes a live-state step. If that environment is unavailable, disclose
+the missing evidence and leave the affected facts unchanged; do not substitute a different
+command and call the canonical procedure complete.
+
+## Categories
+
+Use a key that exists in the current `categories` map in
+[`data/communities.json`](data/communities.json). The map is intentionally not copied into this
+guide. List the current keys and display names from the source with:
 
 ```bash
-# 1. Fork and clone
-git clone https://github.com/YOUR_USERNAME/KZ-IT-telegram-list.git
-cd KZ-IT-telegram-list
-
-# 2. Edit data (NOT README directly!)
-# Edit: data/communities.json
-
-# 3. Validate your changes
-python scripts/validate_schema.py    # check JSON structure
-python scripts/validate_links.py     # check links + fetch member counts
-
-# 4. Regenerate README
-python scripts/generate_readme.py
-
-# 5. Commit and push
-git add .
-git commit -m "Add: YourCommunityName"
-git push origin main
-
-# 6. Create Pull Request
+python -c "import json; d=json.load(open('data/communities.json', encoding='utf-8')); print('\n'.join(f'{k}: {v}' for k, v in d['categories'].items()))"
 ```
 
-## Workflow Diagram
+## Verification and Member Counts
 
-```
-Edit JSON → Validate Schema → Validate Links → Generate README → PR
-```
+- A `last_verified` date records an actual link check, not the date a contributor remembered or
+  edited the entry.
+- Add or change `member_count` only from an observed Telegram response. Omit an unverifiable
+  count.
+- Keep handles bare: no `@` and no `t.me/` prefix.
+- Provide the English description required by the canonical data rules.
 
-## Entry Requirements
+## Dead-Link and Archive Policy
 
-- **IT-related** (programming, data, design, DevOps, etc.)
-- **Kazakhstan-focused** or relevant to KZ audience
-- **Active** (not archived/dead groups)
-- **Quality** (no spam, bots, or purely commercial groups)
-
-## JSON Entry Format
-
-Add your entry to the appropriate section (`groups`, `channels`, or `bots`):
-
-```json
-{
-  "name": "Community Name",
-  "handle": "telegram_handle",
-  "description": "Short description in English",
-  "description_ru": "Описание на русском",
-  "category": "programming-languages",
-  "last_verified": "2026-01-30"
-}
-```
-
-### Required Fields
-
-| Field | Description |
-|-------|-------------|
-| `name` | Display name |
-| `handle` | Telegram handle (without `@` or `t.me/`) |
-| `description` | Short English description |
-| `category` | One of the allowed categories (see below) |
-| `last_verified` | Date in `YYYY-MM-DD` format |
-
-### Optional Fields
-
-| Field | Description |
-|-------|-------------|
-| `description_ru` | Russian description |
-| `member_count` | Auto-filled by validation script |
-
-## Allowed Categories
-
-| Category | Description |
-|----------|-------------|
-| `programming-languages` | Python, Java, Go, Rust, Ruby, etc. |
-| `web-development` | Frontend, Backend |
-| `mobile` | iOS, Android, Flutter |
-| `data-analytics` | BI, Data Science, ML |
-| `devops-sysadmin` | DevOps, SysAdmin, Linux |
-| `security` | InfoSec, Cybersecurity |
-| `qa-testing` | QA, Test Automation |
-| `gamedev` | Game Development |
-| `hardware` | Electronics, IoT |
-| `blockchain` | Crypto, Web3 |
-| `management` | Tech leads, PMs |
-| `general` | General IT |
-| `jobs` | Job postings |
-| `education` | Learning resources |
-| `news` | Tech news |
-| `events` | Meetups, conferences |
-| `startups` | Startup ecosystem |
-| `marketplace` | Buy/sell IT goods |
-
-## Validation Scripts
-
-### 1. Schema Validation
-```bash
-python scripts/validate_schema.py
-```
-Checks:
-- Required fields present
-- Category is from allowed list
-- No duplicate handles
-- Date format is valid
-- Handle format is valid (5-32 chars, alphanumeric + underscore)
-
-### 2. Link Validation
-```bash
-python scripts/validate_links.py           # just validate
-python scripts/validate_links.py --update  # validate + save member counts
-```
-Features:
-- Checks if t.me links are accessible
-- Parses member/subscriber counts from HTML
-- Rate limited (3 req/1.5s) to avoid bans
-- Retries with exponential backoff
-
-### 3. README Generation
-```bash
-python scripts/generate_readme.py
-```
-- Auto-generates `README.md` from `communities.json`
-- Sorts by member count (popular first)
-- Shows member counts as badges
+Never silently delete a community. A non-response is retried, then presented with its evidence
+for owner triage. Only a community supported by evidence of death is moved from the live catalog
+to `archive`, where its original identity is retained with `died_on` and a non-empty `reason`.
+Ambiguous or unavailable evidence leaves the entry unresolved rather than guessed dead.
 
 ## Pull Request Checklist
 
-- [ ] Entry added to `data/communities.json`
-- [ ] `handle` is correct (without `@` or `t.me/`)
-- [ ] `description` is in English, concise (< 100 chars)
-- [ ] `category` matches one from the list above
-- [ ] `last_verified` is today's date
-- [ ] `python scripts/validate_schema.py` passes
-- [ ] `python scripts/validate_links.py` passes
-- [ ] `python scripts/generate_readme.py` executed
-- [ ] README.md regenerated and committed
-
-## Common Mistakes
-
-| Mistake | Fix |
-|---------|-----|
-| Editing README.md directly | Edit `data/communities.json` instead |
-| Wrong category | Check allowed categories list |
-| Forgetting `last_verified` | Add today's date |
-| Handle with `@` | Remove the `@` prefix |
-| Handle with full URL | Use only the handle part |
-
-## For Maintainers
-
-### Periodic Validation
-```bash
-# Update all member counts and check links
-python scripts/validate_links.py --update
-python scripts/generate_readme.py
-git commit -am "chore: update member counts"
-```
-
-### Handle Dead Links
-1. Run `validate_links.py` to identify dead links
-2. Option A: Remove from JSON
-3. Option B: Move to `archive` section (TODO)
-4. Regenerate README
+- [ ] The proposal passes every North Star inclusion gate.
+- [ ] Only canonical source data was edited by hand; `README.md` was regenerated.
+- [ ] Every new or changed fact has observable evidence.
+- [ ] The canonical `AGENTS.md` change procedure was followed without substituting shorter
+      commands; any unavailable live evidence is disclosed and the affected facts remain unchanged.
+- [ ] The source JSON and generated README are committed together.
+- [ ] The target branch is `master`.
 
 ## Code of Conduct
 
-Be respectful. No spam. Focus on quality over quantity.
+Be respectful, avoid spam, and prefer verifiable quality over quantity.
 
-## Questions?
+## Questions
 
-Open an issue or contact the maintainers.
+Open an issue and include the proposed handle plus the evidence available for its relevance and
+current liveness.

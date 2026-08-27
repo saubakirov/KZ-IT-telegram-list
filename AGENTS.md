@@ -24,8 +24,8 @@ TFW artifact content (HL/TS/RES/RF/REVIEW) is written in **English** — see
 ### Purpose
 A data-driven catalog of Kazakhstan IT Telegram communities, published as an Awesome List.
 
-**Current scale:** 40 groups · 18 channels · 5 bots · 18 categories
-(counts are derived from `data/communities.json` — never hardcode them elsewhere)
+**Current scale:** derive group, channel, bot, and category totals from
+`data/communities.json`; never copy those mutable counts into documentation.
 
 ### Generation contract
 ```
@@ -50,7 +50,7 @@ disappears on the next run. To change what README contains, change the generator
 | `TECH_DEBT.md` | Known debt and deferred work |
 | `.tfw/` | TFW framework (workflows, templates, conventions) |
 | `.claude/commands/` | Claude Code slash-command adapters |
-| `.agent/rules/` | Antigravity-era project rules (project-specific, retained) |
+| `.agents/skills/` | Codex `/tfw-*` command adapters; generated and managed separately |
 
 ## Working Process
 
@@ -83,6 +83,16 @@ but still end with schema validation and README regeneration.
 | `validate_schema.py` | Check JSON structure, required fields, category membership | `python scripts/validate_schema.py` |
 | `validate_links.py` | Check link liveness, fetch member counts | `python scripts/validate_links.py --update` |
 | `generate_readme.py` | Regenerate README from JSON | `python scripts/generate_readme.py` |
+
+## Project Operations
+
+| Command | Purpose | Execution boundary |
+|---------|---------|--------------------|
+| `/kz-stats` | Validate the catalog, show liveness and count deltas, and prepare owner-triaged archive changes | CL; the adapter and pipeline behavior ship in TFW-4 Phase C |
+| `/kz-release` | Prepare a dated verified catalog snapshot under `RELEASE.md` | CL; the adapter ships in TFW-4 Phase C and must stop for explicit owner approval before tag or push |
+
+These names are part of the project contract. Until their Phase C adapters exist, do not claim
+that they are invocable or that a release operation has run.
 
 ## JSON Entry Format
 ```json
@@ -149,3 +159,39 @@ does not rewrite the spec.
 ---
 
 **Don't Be Sycophantic | No Placeholders | Be Direct**
+
+<!-- TFW:CODEX:START -->
+## Trace-First Workflow Commands
+
+This project uses Trace-First Workflow (TFW). Treat `.tfw/` as the process source of
+truth and the filesystem traces as project memory.
+
+When user input starts with a command below, route it to the matching repository-local
+skill in `.agents/skills/tfw-*/SKILL.md`. If that skill is unavailable, read and follow
+the canonical workflow directly. The command must still work without a wrapper.
+
+| Command | Canonical workflow |
+|---------|--------------------|
+| `/tfw-plan` | `.tfw/workflows/plan.md` |
+| `/tfw-research` | `.tfw/workflows/research/base.md` |
+| `/tfw-handoff` | `.tfw/workflows/handoff.md` |
+| `/tfw-review` | `.tfw/workflows/review.md` |
+| `/tfw-resume` | `.tfw/workflows/resume.md` |
+| `/tfw-docs` | `.tfw/workflows/docs.md` |
+| `/tfw-knowledge` | `.tfw/workflows/knowledge.md` |
+| `/tfw-release` | `.tfw/workflows/release.md` |
+| `/tfw-update` | `.tfw/workflows/update.md` |
+| `/tfw-config` | `.tfw/workflows/config.md` |
+| `/tfw-init` | `.tfw/workflows/init.md` |
+
+For every command:
+
+1. Read the canonical workflow completely before acting.
+2. Load its required context in the specified order.
+3. Enforce its role lock, gates, templates, evidence rules, and hard stop.
+4. Use `/tfw-*` when recommending the next workflow.
+
+On a new session, load `AGENTS.md`, `.tfw/conventions.md`, `.tfw/glossary.md`,
+`KNOWLEDGE.md` if present, the `README.md` Task Board, and then only the artifacts
+relevant to the active task.
+<!-- TFW:CODEX:END -->
