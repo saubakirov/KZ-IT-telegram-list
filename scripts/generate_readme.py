@@ -208,7 +208,7 @@ def generate_type_section(
 ) -> str:
     """Generate one type-first live catalog section."""
     heading = ui[f"section.{entry_type}"]
-    lines = [f'<a id="{type_id(entry_type)}"></a>', f"## {markdown_text(heading)}", ""]
+    lines = [f'## <a id="{type_id(entry_type)}"></a>{markdown_text(heading)}', ""]
     entries = data[entry_type]
     uncategorized, categorized = entries_by_category(entries)
     lines.extend(format_entry(entry, locale, ui) for entry in sorted_entries(uncategorized))
@@ -222,8 +222,8 @@ def generate_type_section(
             continue
         lines.extend(
             [
-                f'<a id="{category_id(entry_type, category)}"></a>',
-                f"### {markdown_text(heading)} · {markdown_text(labels[category])}",
+                f'### <a id="{category_id(entry_type, category)}"></a>'
+                f"{markdown_text(heading)} · {markdown_text(labels[category])}",
                 "",
             ]
         )
@@ -290,11 +290,9 @@ def generate_navigation(data: dict, projection: Projection, ui: dict[str, str]) 
     ]
     for intent in INTENT_IDS:
         links = intent_links(data, intent, projection.locale, ui)
-        lines.extend(
-            [
-                f'<a id="{intent_id(intent)}"></a>',
-                f"- **{markdown_text(ui[f'intent.{intent}'])}:** " + " · ".join(links),
-            ]
+        lines.append(
+            f'- <a id="{intent_id(intent)}"></a>'
+            f"**{markdown_text(ui[f'intent.{intent}'])}:** " + " · ".join(links)
         )
     lines.append("")
     return "\n".join(lines)
