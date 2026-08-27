@@ -55,6 +55,13 @@ The current baseline is healthy: `validate_schema.py` and `generate_readme.py --
 This task must preserve that contract and change presentation through structured data and
 generators rather than editing generated output.
 
+Iteration 1 refined the data boundary without copying mutable catalog totals into this document:
+
+- every current live record has a Russian description, while no Kazakh description field exists;
+- categories are required and validated only for groups, even though many channels carry category
+  values; bots currently carry no category;
+- the canonical JSON is already public and responds as `application/json` on GitHub Pages.
+
 ## 3. Target State (To-Be) 🔒 FROZEN
 
 | Dimension | As-Is | To-Be |
@@ -252,17 +259,24 @@ catalog, record the failing evidence, and return through `/tfw-plan` for a bound
 | PV4b | [Conventions §11 — Quality Standard](../../../.tfw/conventions.md#11-quality-standard-no-compromises) | No placeholders; results usable without manual edits | Partial translations and post-handoff manual SEO cleanup cannot satisfy the task. |
 | PV5–6 | `knowledge/convention.md`; `knowledge/process.md` | N/A — neither optional topic file exists after the required scan | Project-specific standards come from the cited architecture and conventions instead. |
 | PV7 | [`knowledge/domain.md`](../../../knowledge/domain.md) | F1–F2 concern two archived communities | Read in the required scan; not applicable to presentation architecture, except that archive facts must remain intact. |
+| PV8 | [Jekyll front matter](https://jekyllrb.com/docs/front-matter/), [permalinks](https://jekyllrb.com/docs/permalinks/), and [GitHub Pages dependencies](https://pages.github.com/versions/) | Native pages, explicit route metadata, supported SEO and sitemap plugins | Three generated static routes and one repository-owned layout are supported without a custom application or build service. |
+| PV9 | [Google localized versions](https://developers.google.com/search/docs/specialty/international/localized-versions) and [sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap) | Reciprocal language alternates, self-canonicals, and sitemap hints | Every language route must name itself and all peers; these signals support discovery but do not guarantee crawling or rank. |
+| PV10 | [Google AI search guidance](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) and [OpenAI crawler roles](https://developers.openai.com/api/docs/bots) | Ordinary search foundations and crawler eligibility | Visible clarity, access, and accurate metadata are the baseline; no AI-specific prose or inclusion promise is justified. |
+| PV11 | [IANA language-subtag registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) and [RFC 9309](https://www.rfc-editor.org/rfc/rfc9309.html) | Kazakh is `kk`; robots rules live at the host root | Use `/kk/` and `lang=kk`; do not add a misleading project-path `robots.txt`. |
+| PV12 | [Google Dataset guidance](https://developers.google.com/search/docs/appearance/structured-data/dataset), [Schema.org Dataset](https://schema.org/Dataset), and [DataDownload](https://schema.org/DataDownload) | Factual linkage from visible catalog to its public JSON distribution | Dataset markup has a bounded programmatic-discovery job when it describes the same catalog and real download URL. |
 
 ## 8. Dependencies 🟢 FREE
 
 | Dependency | Status |
 |------------|--------|
 | Current structured catalog, validators, generator, and generator-current README | ✅ Available and passing |
-| Owner validation of strategic scope and HL contract | ⬜ Awaiting HL approval |
-| Research into multilingual architecture, query intent, comparable catalogs, Pages behavior, and supported metadata | ⬜ Required before TS |
-| Reliable Kazakh terminology and meaning review | ⬜ Required; validation method to be selected in research |
-| GitHub Pages publishing configuration and current Jekyll constraints | ⬜ To verify in research |
-| Owner-authorized repository settings changes | ⬜ Required in Phase B |
+| Owner validation of strategic scope and HL contract | ✅ Approved and frozen 2026-08-27 |
+| Multilingual architecture, comparable catalogs, Pages behavior, and supported metadata | ✅ Iteration 1 complete; Iteration 2 narrows wording, intent membership, and executable evidence |
+| Native Jekyll routes, layout, SEO tag, and sitemap capability | ✅ Verified within GitHub Pages' supported dependency set |
+| Reliable Kazakh terminology and meaning review | ⬜ Qualified human review required; research defines a finite inventory and fail-closed gate, not translations by inference |
+| Reviewed intent membership across categories and exceptional handles | ⬜ Exact five-intent matrix required in Iteration 2 |
+| Authenticated GitHub Pages publishing-source inspection | ⬜ External owner-access boundary; verify before Phase B changes |
+| Owner-authorized repository description, homepage, topics, and social-preview changes | ⬜ Required in Phase B with before/after evidence |
 | Search Console access | ⬜ Optional evidence dependency; availability unknown |
 | Public search, GitHub, GitHub Pages, and relevant official documentation | ✅ Read-only access available during planning |
 
@@ -277,6 +291,8 @@ catalog, record the failing evidence, and return through `/tfw-plan` for a bound
 | Structured data is technically valid but unsupported or misleading | Medium | Medium | Use only documented types that match visible content and validate rendered output |
 | Search and AI results remain stale or variable after publication | High | Medium | Measure indexability and source freshness, document recrawl latency, and never use rank as DoD |
 | Repository settings change outside Git and lose traceability | Medium | Medium | Record before/after evidence and require explicit owner validation for external changes |
+| A derived intent map silently omits or falsely includes a relevant entry | Medium | High | Use reviewed category-plus-handle definitions and validate every category, handle, anchor, and generated destination |
+| Generic HTML validation passes while a rendered catalog link or identity is semantically broken | High | High | Add special-character fixtures plus semantic DOM, heading, route, link-target, and cross-render assertions |
 
 ## 10. RESEARCH Case 🟢 FREE
 
@@ -295,10 +311,10 @@ catalog, record the failing evidence, and return through `/tfw-plan` for a bound
 
 | # | Hypothesis | Status |
 |---|------------|--------|
-| H1 | Separate generated language entry points linked above the fold produce a smaller and clearer experience than one trilingual README while preserving one catalog | confirmed in principle — owner selects separate pages where GitHub Pages supports them; exact routes and generator design remain research; 2026-08-27 |
-| H2 | Clear first-screen structure, accurate repository/site metadata, stable facts, and crawlable source data create more defensible search/AI discoverability than `llms.txt`, keyword blocks, or agent-only prose | needs-research — owner does not know; 2026-08-27 |
-| H3 | A small derived intent model can expose AI, startups, jobs, events, and engineering across groups/channels/bots without duplicate entries or scope expansion | needs-research — owner does not know; 2026-08-27 |
-| H4 | Lightweight GitHub Pages configuration can create one coherent page identity and multilingual metadata while keeping GitHub's README experience intact | needs-research — owner does not know; 2026-08-27 |
+| H1 | Separate generated language entry points linked above the fold produce a smaller and clearer experience than one trilingual README while preserving one catalog | confirmed design — English `/`, Russian `/ru/`, Kazakh `/kk/`; generated `README.md` plus dedicated generated Pages indexes from one locale-aware renderer; Iteration 1 D1–D3 |
+| H2 | Clear first-screen structure, accurate repository/site metadata, stable facts, and crawlable source data create more defensible search/AI discoverability than `llms.txt`, keyword blocks, or agent-only prose | supported with external-outcome limit — visible structure, reciprocal routes, coherent metadata, sitemap, public JSON, crawler access, and accurate Dataset linkage have bounded jobs; omit `llms.txt`; never guarantee rank or AI inclusion; Iteration 1 D6–D7/D9 |
+| H3 | A small derived intent model can expose AI, startups, jobs, events, and engineering across groups/channels/bots without duplicate entries or scope expansion | conditionally supported — central definitions over validated categories plus reviewed exceptional handles; exact membership moves to Iteration 2; Iteration 1 D4–D5 |
+| H4 | Lightweight GitHub Pages configuration can create one coherent page identity and multilingual metadata while keeping GitHub's README experience intact | technically confirmed with external setting dependency — repository-owned Jekyll layout, explicit generated page front matter, supported SEO/sitemap plugins, no custom Actions build; publishing source must be authenticated before Phase B; Iteration 1 D2–D3/D6/D9 |
 
 ### Risks of Not Researching
 
@@ -310,12 +326,16 @@ execution.
 
 ### Proposed RESEARCH Focus
 
-1. **Gather**: compare compact high-quality Awesome catalogs, current EN/RU/KZ search intent,
-   official GitHub/Google/OpenAI guidance, and the actual GitHub/Pages rendering pipeline.
-2. **Extract**: select the smallest multilingual information architecture, data changes, metadata
-   contract, and intent model that satisfy all three consumer classes.
-3. **Challenge**: test mobile and desktop first screens, Markdown/Jekyll edge cases, translation
-   drift, unsupported metadata, crawler access, stale snippets, and the no-new-portal constraint.
+Iteration 2 must not repeat broad SEO/AEO comparison. It should close only the TS-critical gaps:
+
+1. inventory the finite EN/RU/KK UI, category, purpose, non-goal, and description strings; define
+   qualified review ownership, completeness rules, and fail-closed behavior without inventing Kazakh;
+2. review the current catalog entry by entry for the exact AI, startups, jobs, events, and engineering
+   category-plus-exception matrix, including semantics, exclusions, and stable-anchor requirements;
+3. specify an executable GitHub/Pages render and metadata evidence contract that catches heading,
+   special-character, route, canonical, alternate, Dataset, anchor, and mobile-first-screen defects;
+4. classify authenticated Pages source, repository settings, Search Console, ranking, and AI inclusion
+   as explicit Phase B evidence gates rather than unresolved implementation design.
 
 ### Why Not Just...?
 

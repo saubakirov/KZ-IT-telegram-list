@@ -6,5 +6,10 @@ iterations:
   - number: 1
     focus: Compare multilingual routes, search and AI signals, intent navigation, and lightweight GitHub Pages integration
     hypotheses: [H2, H3, H4]
-    status: pending
+    status: complete
     res_file: research/iter1/RES.md
+  - number: 2
+    focus: Close the multilingual review, exact intent-membership, and executable cross-render evidence contracts without reopening the selected static architecture
+    hypotheses: [H1, H2, H3, H4]
+    status: pending
+    res_file: research/iter2/RES.md
