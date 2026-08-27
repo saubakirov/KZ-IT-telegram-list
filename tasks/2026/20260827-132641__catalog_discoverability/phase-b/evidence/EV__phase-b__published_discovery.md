@@ -30,7 +30,7 @@
 | E2 | AC-2 | Exact locale, singleton title/description/canonical, and reciprocal `en`/`ru`/`kk`/`x-default` alternates on all built routes | Local parsed built HTML | N/A | `metadata-summary.json` |
 | E3 | AC-3 | Exact Open Graph, Twitter, Dataset JSON-LD, JSON distribution, and final 1280×640 preview bytes/text; two fresh exact-command rerenders are byte-identical to the committed candidate | Local parser, pinned CairoSVG environment, and final-byte image viewer | VERIFIED | `metadata-summary.json`; `social-preview-inspection.png`; `jekyll-build.txt` |
 | E4 | AC-4 | Built sitemap contains exactly canonical `/`, `/ru/`, `/kk/`; source and build contain no project `robots.txt` or `llms.txt` | Supported build plus XML assertion | N/A | `metadata-summary.json`; `jekyll-build.txt` |
-| E5 | AC-5 | EN/RU/KK at 390×844 and 1366×768 have zero horizontal overflow, zero hidden critical elements, zero executable/external scripts, loaded CSS, working representative links, and a one-action type jump that leaves the first entry in view | In-app Chromium browser | VERIFIED | `browser-matrix.json`; six screenshots |
+| E5 | AC-5 | EN/RU/KK at 390×844 and 1366×768 have zero horizontal overflow, zero hidden critical elements, zero executable/external scripts, loaded CSS, working representative links, and a one-action type jump that leaves the first entry in view | In-app Chromium browser plus read-only localhost HTTP status probe | VERIFIED | `browser-matrix.json`; six screenshots |
 | E6 | AC-6 | Phase A digest, source facts, README bytes, visible bodies, all targets/fragments, and all twelve predecessor tests are preserved; one preservation test was added and 13/13 pass | Local Python/Git immutable-base comparison | N/A | Commands and hashes below |
 | E7 | AC-7 | Current repository/Pages/settings/public state captured through authenticated read-only APIs and public HTTP; exact proposed settings and later runbook recorded; every post-deploy outcome remains deferred | GitHub REST/GraphQL, Pages HTTP, `git ls-remote` | DEFERRED | `external-checkpoint.md` |
 | E8 | AC-8 | Exact final content-fed copy/metadata bundle received `PASS`, no findings, no nits from pinned Antigravity in request-review permission mode, with object-valued UTF-8 NDJSON and no tool calls or permission bypass | Antigravity CLI | VERIFIED | `antigravity-input.txt`; `antigravity-output.jsonl` |
@@ -84,6 +84,12 @@ Exact preservation bindings:
 - Final CSS: 2,035 bytes; SHA-256 `6079176c27db6ced57ff8ad71c7671cbd694a13a39322566da4d2b9b3f157b6d`.
 
 ## Browser and asset bindings
+
+The in-app browser supplied every viewport, DOM/head/style/visibility/overflow, screenshot, and
+one-action navigation assertion. Its read-only page-evaluation scope did not expose `fetch`, so the
+exact representative hrefs captured from each browser case were status-checked against the same
+read-only localhost server with an ordinary HTTP GET before canonical-LF serialization. All 30 case
+checks are HTTP 200; no public or repository state was mutated.
 
 The final canonical-LF `browser-matrix.json` is 70,133 bytes with SHA-256
 `f96aa96e6a60a8d26d46d570e463f516944ca60dbc0995121e34a6bcd29cb269`.

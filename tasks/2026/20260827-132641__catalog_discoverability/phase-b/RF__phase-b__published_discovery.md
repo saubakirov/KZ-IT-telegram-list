@@ -143,6 +143,7 @@ sitemap.xml (Liquid) ──► exact three canonical URLs; no robots.txt
 | Original plugin-backed sitemap plan produced an unavoidable `robots.txt` | Replaced by the owner-preauthorized Coordinator revision with repository-owned Liquid `sitemap.xml`; implementation count changed to 13 paths / 8 new / 5 modified. |
 | Native Windows Ruby/Bundler unavailable | Used the TS-authorized pinned official GitHub Pages build container and recorded image/version/digest. |
 | Local project-path browser serving | Used a read-only localhost handler that maps `/KZ-IT-telegram-list` to built `_site`; no built byte was rewritten. |
+| Browser page-evaluation scope lacked `fetch` for representative-link status checks | Kept all viewport/DOM/head/style/overflow/screenshot/one-action assertions in the in-app browser, then status-checked the exact captured hrefs against the same read-only localhost server with ordinary HTTP GETs before canonical-LF matrix serialization; all 30 checks returned 200. |
 | Authenticated GitHub settings UI unavailable in the in-app browser | Used authenticated read-only REST/GraphQL through the configured credential helper without printing/storing credentials; captured the same required settings surface. |
 | `Gemfile.lock` and `_site/` generated locally | Build-only artifacts; excluded from commits and removed before clean handoff. |
 | External operations | Zero push/tag/release/deploy/settings/source/upload/Search Console/other external mutations. |
