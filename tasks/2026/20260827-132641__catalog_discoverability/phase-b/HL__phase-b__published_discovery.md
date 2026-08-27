@@ -42,10 +42,16 @@ inspection on 2026-08-27 established the publication boundary:
 | Repository social preview | General settings offers “Upload an image”; repository OG uses GitHub's generated fallback | Prepare and validate the upload asset; do not upload it in this run |
 
 Official capability remains proportional: GitHub Pages dependency version 232 supports Jekyll
-3.10.0 and `jekyll-sitemap` 1.4.0; Jekyll front matter and repository-owned layouts are native;
+3.10.0; Jekyll front matter, Liquid pages, and repository-owned layouts are native;
 Google's localized-page guidance calls for reciprocal alternates; and Dataset markup has a bounded
 job when its name/description and JSON distribution match visible content. No custom application,
 Actions build, `llms.txt`, project-path robots file, or second content system is needed.
+
+The pinned `jekyll-sitemap` 1.4.0 plugin was rejected during the first local build because it
+unconditionally emitted a project-path `robots.txt`. That output has no controlling job at a
+subdirectory site and conflicts with Research Iteration 1 D7. Phase B instead uses a supported
+Jekyll/Liquid `sitemap.xml` page and proves the same exact canonical three-route result without the
+redundant robots surface.
 
 ## 3. Derived Phase Outcome
 
@@ -94,7 +100,7 @@ The exact external target package is:
 
 | Path | Phase action | Boundary |
 |------|--------------|----------|
-| `_config.yml` | CREATE | Root-source GitHub Pages/Jekyll config and supported sitemap plugin only |
+| `_config.yml` | CREATE | Root-source GitHub Pages/Jekyll config and public-source exclusions |
 | `Gemfile` | CREATE | Reproducible local build through the supported `github-pages` dependency |
 | `_layouts/default.html` | CREATE | One semantic layout/head for locale, canonical/alternates, Dataset and social metadata |
 | `assets/css/catalog.css` | CREATE | Restrained responsive styling with no client-side runtime |
@@ -103,13 +109,14 @@ The exact external target package is:
 | `scripts/generate_readme.py` | MODIFY | Add generated route/head fields without changing approved body or review payload |
 | `scripts/test_catalog_generation.py` | MODIFY | Preserve and extend all Phase A source/body/digest assertions |
 | `scripts/test_site_metadata.py` | CREATE | Deterministic Jekyll-output, metadata, sitemap, asset, and DOM contract checks |
+| `sitemap.xml` | CREATE | Supported Jekyll/Liquid sitemap page for the exact three canonical routes |
 | `index.md`, `ru/index.md`, `kk/index.md` | MODIFY — GENERATED | Add generated Phase B front matter; body bytes after front matter remain Phase A-equivalent |
 
 Sequence:
 
 1. Freeze the Phase A body/digest baseline in tests before adding any Phase B field.
 2. Add supported Jekyll configuration, generated per-route head inputs, one layout, and one stylesheet.
-3. Add sitemap, visible-content-consistent Dataset metadata, social metadata, and the deterministic preview asset.
+3. Add the Jekyll/Liquid sitemap, visible-content-consistent Dataset metadata, social metadata, and the deterministic preview asset.
 4. Extend the deterministic suite and build the site through the supported GitHub Pages dependency.
 5. Inspect local EN/RU/KK routes at 390×844 and 1366×768, including first-screen navigation,
    headings, targets, metadata, overflow, and representative intent paths.
@@ -123,8 +130,8 @@ Sequence:
 
 | Measure | Estimate | Limit | Result |
 |---------|----------|-------|--------|
-| Implementation paths | 12 | 30 | Within budget |
-| New implementation files | 7 | 15 | Within budget |
+| Implementation paths | 13 | 30 | Within budget |
+| New implementation files | 8 | 15 | Within budget |
 | Modified implementation files | 5 | 30 | Within budget |
 | Estimated implementation/generated delta | <2500 LOC | 3000 | Within budget |
 
@@ -139,7 +146,7 @@ unlisted content surface, or scope-budget overrun returns to `/tfw-plan`.
 | Actual Phase A result and verdict | ✅ RF and REVIEW read; digest `51db402d…` approved at base `d9fe27c6…` |
 | Two completed research iterations | ✅ D1–D16 retained; no broad research reopened |
 | Pages source | ✅ authenticated read-only inspection: `master` / `/(root)` / branch deployment |
-| Supported Jekyll/sitemap capability | ✅ GitHub Pages 232, Jekyll 3.10.0, `jekyll-sitemap` 1.4.0 |
+| Supported Jekyll/sitemap capability | ✅ GitHub Pages 232 and Jekyll 3.10.0; a Liquid sitemap page avoids the plugin's project-robots side effect |
 | Repository-controlled planning/implementation/revision/local acceptance | ✅ owner mandate, 2026-08-27 |
 | Push, tag, release, settings upload/edit, Pages mutation, Search Console | ⬜ explicitly unauthorized in this run |
 | Public post-deploy evidence | ⬜ unavailable until authorized push/deploy; must remain deferred, not fabricated |
