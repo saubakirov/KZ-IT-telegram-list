@@ -1,0 +1,10 @@
+task_id: 20260827-132641__catalog_discoverability
+title: Multilingual catalog discoverability and GitHub Pages architecture
+min_iterations: 2
+max_iterations: 5
+iterations:
+  - number: 1
+    focus: Compare multilingual routes, search and AI signals, intent navigation, and lightweight GitHub Pages integration
+    hypotheses: [H2, H3, H4]
+    status: pending
+    res_file: research/iter1/RES.md

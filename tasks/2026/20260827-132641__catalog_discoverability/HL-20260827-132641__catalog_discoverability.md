@@ -295,10 +295,10 @@ catalog, record the failing evidence, and return through `/tfw-plan` for a bound
 
 | # | Hypothesis | Status |
 |---|------------|--------|
-| H1 | Separate generated language entry points linked above the fold produce a smaller and clearer experience than one trilingual README while preserving one catalog | open |
-| H2 | Clear first-screen structure, accurate repository/site metadata, stable facts, and crawlable source data create more defensible search/AI discoverability than `llms.txt`, keyword blocks, or agent-only prose | open |
-| H3 | A small derived intent model can expose AI, startups, jobs, events, and engineering across groups/channels/bots without duplicate entries or scope expansion | open |
-| H4 | Lightweight GitHub Pages configuration can create one coherent page identity and multilingual metadata while keeping GitHub's README experience intact | open |
+| H1 | Separate generated language entry points linked above the fold produce a smaller and clearer experience than one trilingual README while preserving one catalog | confirmed in principle — owner selects separate pages where GitHub Pages supports them; exact routes and generator design remain research; 2026-08-27 |
+| H2 | Clear first-screen structure, accurate repository/site metadata, stable facts, and crawlable source data create more defensible search/AI discoverability than `llms.txt`, keyword blocks, or agent-only prose | needs-research — owner does not know; 2026-08-27 |
+| H3 | A small derived intent model can expose AI, startups, jobs, events, and engineering across groups/channels/bots without duplicate entries or scope expansion | needs-research — owner does not know; 2026-08-27 |
+| H4 | Lightweight GitHub Pages configuration can create one coherent page identity and multilingual metadata while keeping GitHub's README experience intact | needs-research — owner does not know; 2026-08-27 |
 
 ### Risks of Not Researching
 
