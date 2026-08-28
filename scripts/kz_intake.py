@@ -451,7 +451,8 @@ def validate_observation(row: dict[str, object]) -> None:
             transport["attempts"] == validate_links.RETRY_ATTEMPTS
             and (reason == "max_retries_exceeded" or reason.startswith(("url_error:", "error:")))
         ) if status is None else (
-            transport["attempts"] == 1 and status != 429 and reason == f"http_{status}"
+            transport["attempts"] == 1 and status != 429 and not 200 <= status < 300
+            and reason == f"http_{status}"
         )
         if row["body_sha256"] is not None or results or not possible_reason:
             raise IntakeError("failed transport exposes body/result facts")

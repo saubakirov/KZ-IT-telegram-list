@@ -366,6 +366,42 @@ class PreviewApplyTests(unittest.TestCase):
             with self.subTest(proposed=field), self.assertRaisesRegex(intake.IntakeError, "observation"):
                 intake.validate_preview(tampered)
 
+    def test_failed_http_rejects_full_2xx_range_and_preserves_fetched_2xx(self):
+        failed = json.loads(json.dumps(self.preview["observations"][0]))
+        failed.update({
+            "status": "unresolved", "canonical_handle": None, "observed_type": None,
+            "visible_name": None, "member_count": None, "target_bound": False,
+            "body_sha256": None, "type_results": [],
+        })
+        for status in range(200, 300):
+            failed["reason"] = failed["transport"]["reason"] = f"http_{status}"
+            failed["transport"].update({"ok": False, "status_code": status, "attempts": 1})
+            with self.subTest(failed_status=status), \
+                    self.assertRaisesRegex(intake.IntakeError, "failed transport"):
+                intake.validate_observation(failed)
+
+        for status in (300, 400, 500, 599):
+            failed["reason"] = failed["transport"]["reason"] = f"http_{status}"
+            failed["transport"].update({"ok": False, "status_code": status, "attempts": 1})
+            with self.subTest(terminal_status=status):
+                intake.validate_observation(failed)
+
+        for status in range(200, 300):
+            for attempts in range(1, validate_links.RETRY_ATTEMPTS + 1):
+                success = json.loads(json.dumps(self.preview))
+                success["observations"][0]["transport"].update(
+                    {"status_code": status, "attempts": attempts}
+                )
+                with self.subTest(fetched_status=status, attempts=attempts):
+                    intake.validate_preview(success)
+
+        for status in (199, 300):
+            success = json.loads(json.dumps(self.preview))
+            success["observations"][0]["transport"]["status_code"] = status
+            with self.subTest(non_2xx_fetched_status=status), \
+                    self.assertRaisesRegex(intake.IntakeError, "successful transport"):
+                intake.validate_preview(success)
+
     def test_approval_binds_payload_actions_exact_set_and_owner_record(self):
         for field, value in (("payload_sha256", "0" * 64), ("actions_sha256", "0" * 64),
                              ("approved_candidate_ids", [])):
