@@ -13,7 +13,7 @@ iterations:
   - number: 2
     focus: "close URL grammar, payload/envelope contract, command-copy source and runtime evidence, sealed holdout allocation, architecture boundary, and batch provenance"
     hypotheses: [H2, H3, H4]
-    status: pending
+    status: complete
     res_file: research/iter2/RES.md
     agent: codex-researcher
     sources: [external, codebase]

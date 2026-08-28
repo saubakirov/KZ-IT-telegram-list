@@ -9,7 +9,7 @@
 |---|---|
 | Source | 3 task state files, 4 snapshot rows |
 | Containers searched | `tasks/` |
-| Freshness | newest task state update: 20260828-203220 |
+| Freshness | newest task state update: 20260828-212100 |
 | Unresolved inputs | 0 |
 | Generator | `python docs/scripts/gen_index.py` |
 
@@ -17,7 +17,7 @@
 
 | Task | Lifecycle | Owner | Goal | Authority |
 |---|---|---|---|---|
-| [**20260828-201343__catalog_intake_commands** — Verified candidate intake and cross-tool catalog commands](2026/20260828-201343__catalog_intake_commands/status.md) | RES | saubakirov | Create a safe reusable command for validating and adding one or many Telegram candidates from links or a file | [HL-20260828-201343__catalog_intake_commands.md](2026/20260828-201343__catalog_intake_commands/HL-20260828-201343__catalog_intake_commands.md) |
+| [**20260828-201343__catalog_intake_commands** — Verified candidate intake and cross-tool catalog commands](2026/20260828-201343__catalog_intake_commands/status.md) | TS_DRAFT | saubakirov | Create a safe reusable command for validating and adding one or many Telegram candidates from links or a file | [HL-20260828-201343__catalog_intake_commands.md](2026/20260828-201343__catalog_intake_commands/HL-20260828-201343__catalog_intake_commands.md) |
 
 ## Closed — 3
 
