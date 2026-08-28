@@ -1,79 +1,83 @@
 # Judge — "Is the quality sufficient?"
 > **Mindset:** Judge. Every status below is grounded in [verify.md](verify.md).
-> **Reviewed base:** `bd7af42165c341d653e3efbb20091c131c9f7a40`
-> **Prior verdicts:** 🔄 REVISE on `ae4898df0b0b5050cf6f23179d4e090ff04f93db`; ✅ repository-candidate APPROVE on `b16aac00a7f2b94cbc2e1be29c7c30eaea9350d9`; F1–F3 remain closed.
+> **Reviewed base:** `a67e353573ddb36183c8e5764017adff5c38a6fb`
+> **Deployed repository SHA:** `bd7af42165c341d653e3efbb20091c131c9f7a40`
+> **Prior repository-candidate approval remains valid for the exact deployed repository bytes.**
 
 ## Universal Checklist
 
 | # | Check | Status | Evidence |
 |---|---|---|---|
-| 1 | DoD met? | ✅ | AC-1–AC-9 hold for exact `bd7af421…`. The two post-approval commits are trace-only, F1–F3 remain closed, and the exact archive reproduces every deployment-critical hash. Owner authorization is now present; publication evidence remains deferred. |
-| 2 | **(a) Purpose Check**; **(b) Design soundness** | ✅ | **(a)** The frozen baseline says the result lets a visitor “choose English, Russian, or Kazakh, and reach the right verified community” while the README North Star says “A catalog whose value is accuracy”; the candidate serves both without adjacent surfaces, preventing catalog drift, unsupported discovery claims, and first-screen friction. **(b)** One generated source, three static routes, one layout, a repository-owned Liquid sitemap, exact visible-consistent metadata, and a hard external stop are sound against frozen HL §7. |
-| 3 | Tech debt documented | ✅ | RF §6 explicitly records no observations. The prior F1–F3 items were fixed in scope rather than deferred; `TECH_DEBT.md` correctly remains unchanged. |
-| 4 | Style & standards | ✅ | Implementation naming, generated ownership, static CSS, supported dependencies, task-local evidence, trace wording, and exact byte bindings now follow project conventions. |
-| 5 | Observations collected | ✅ | RF distinguishes no observations from execution decisions/facts. Full revised review found no separate out-of-scope issue. |
-| 6 | RF completeness (§7–9) | ✅ | RF contains §7 Fact Candidates (“No fact candidates”), §8 a relevant execution insight, §9 an architecture/evidence diagram, and an explicit prior-finding disposition table. |
-| 7 | Evidence completeness — does it exist? | ✅ | All 9 RF evidence references and every named attachment exist; the owner authorization is explicitly recorded by the Coordinator delegation, and deployed public evidence is correctly still absent/pending. |
-| 8 | Evidence sufficiency — does it establish the claim? | ✅ | Exact final-base archive build/metadata/raster/test/Git checks reproduce the deployment-critical signals; trace-only ancestry binds the unchanged prior browser/advisory evidence to the same implementation bytes. Authorization establishes permission, not publication. |
-| 9 | Backward compatibility | ✅ | Consumers are GitHub README readers, generator users/tests, JSON clients, locale routes, stable fragment links, and Phase A approval. Data/README/bodies/digest/targets/fragments remain exact; all twelve predecessor test methods are unchanged and one preservation test is added. |
-| 10 | Safety | ✅ | No credential value was persisted or printed and no push/tag/deploy/settings/upload/Search Console mutation occurred. The newly present authorization was not exercised during review; the runbook prohibits force push and tag reuse and stops on drift. |
+| 1 | DoD met? | ❌ / 🔄 | AC-1–AC-6 and AC-9 pass. AC-7 is incomplete because the repository-card custom preview remains GitHub's generated fallback; AC-8 therefore cannot close with a full post-publication APPROVE. |
+| 2 | **(a) Purpose Check**; **(b) Design soundness** | ✅ | **(a)** The frozen baseline requires a visitor to “choose English, Russian, or Kazakh, and reach the right verified community,” and the North Star is “A catalog whose value is accuracy”; the deployed surface serves both, avoiding material language-access and wrong-destination harm. **(b)** One generated source, three static routes, one layout, a Liquid sitemap, visible-consistent metadata, and an explicit external stop remain sound against frozen HL §7. |
+| 3 | Tech debt documented | ✅ | No separate debt exists. F1–F3 were fixed; F4 is an active acceptance blocker, not deferred technical debt. |
+| 4 | Style & standards | ✅ | Supported static implementation, generated ownership, naming, responsive CSS, evidence bindings, and trace wording conform. |
+| 5 | Observations collected | ✅ | The RF records the external custom-preview blocker honestly; review found no additional observation or nit. |
+| 6 | RF completeness (§7–9) | ✅ | Fact Candidates, Strategic Insights, and Diagrams are present and remain appropriate; no human-only fact candidate was introduced. |
+| 7 | Evidence completeness — does it exist? | ✅ | Every E1–E9 reference and attachment exists, including explicit evidence that the repository-card custom image is still fallback. |
+| 8 | Evidence sufficiency — does it establish the claim? | ❌ / 🔄 | Evidence proves exact deployment, metadata, pages, settings, and page-level image, but affirmatively disproves completion of the repository-card custom-preview setting. |
+| 9 | Backward compatibility | ✅ | Phase A data/README/bodies/digest/targets/fragments remain exact; all 12 predecessor tests are retained and one preservation test added. |
+| 10 | Safety | ✅ | Read-only verification only; no push, upload, tag/release, setting, permission, unofficial endpoint, or Search Console mutation. |
 
-Rows 7 and 8 differ intentionally: row 7 confirms the complete inventory exists; row 8 records why
-the exact archive, byte, render, navigation, external-state, and provenance checks establish the
-claims those artifacts are offered to prove.
+Rows 7 and 8 intentionally differ: the evidence inventory is complete, and that complete evidence
+is precisely why the full post-publication claim cannot yet be approved.
 
 ## Purpose Check Detail
 
-- **Excess and adjacency:** no. The candidate adds only the frozen outcome's static discovery
-  projection and explicitly excludes a portal, query pages, custom runtime, robots/llms files, and
-  external mutation.
-- **Deferral confession:** no improper shipment. Owner authorization for the exact recorded runbook
-  is now present, but execution and public evidence remain a later Coordinator action rather than
-  being inferred from permission or implemented under a different name.
-- **Materiality:** the candidate materially reduces language-access, rendering, and metadata
-  ambiguity while preserving the accuracy contract. The prior assurance defects were repaired and
-  no current harm remains.
+- **Served clause and harm:** the frozen requirement to let a visitor “choose English, Russian, or
+  Kazakh, and reach the right verified community” and the North Star “A catalog whose value is
+  accuracy” are both served; failing them would materially create language-access friction or send a
+  visitor to the wrong community.
+- **Excess and adjacency:** none. The implementation remains within the frozen static discovery
+  outcome and does not add a portal, query runtime, robots/llms surface, or unrelated publishing work.
+- **Deferral confession:** one explicit owner-side UI prerequisite remains. It is not hidden under a
+  partial-approval label and is not misrepresented as a repository implementation defect.
+- **Materiality:** the public catalog itself is correct and useful, but the Phase B settings package
+  expressly includes the repository-card preview. Its continued fallback state is therefore material
+  to full phase acceptance.
 
-## Contradictions with KNOWLEDGE.md
+## Contradictions with Project Knowledge
 
-None. D1/D11/D13 remain intact: JSON plus one generator owns catalog content, Purpose remains
-generated/data-owned, and freshness remains reported rather than converted into a schema failure.
-`knowledge/domain.md` F1–F2 archive facts remain exact. The corrected Phase B HL now also agrees with
-the final repository-owned sitemap architecture.
+None. `KNOWLEDGE.md` D1/D11/D13 and `knowledge/domain.md` F1–F2 remain intact. The frozen Master HL
+is untouched, and Phase B HL/TS/implementation consistently describe the repository-owned Liquid
+sitemap.
 
 ## Fact Candidates Review
 
-RF reports no fact candidates. The review discovered only agent-verifiable implementation/evidence
-facts, so no human-only Fact Candidate is added.
+None. Deployment SHA, output hashes, settings state, and UI blocker are independently discoverable
+facts or lifecycle state, not human-only reusable knowledge.
 
 ## Verdict Basis
 
-The exact repository-controlled candidate at `bd7af42165c341d653e3efbb20091c131c9f7a40`
-passes the supported build, EN/RU/KK route/head/Dataset/social/sitemap contract, six-case responsive/
-browser matrix, Phase A preservation contract, external checkpoint, and refreshed Antigravity
-provenance audit. Its complete delta from the previously approved base is trace-only. The three prior
-formal findings remain closed without scope or frozen-contract drift. The correct formal verdict is
-**✅ APPROVE** for repository-controlled bytes only.
+The repository-controlled candidate approved at `bd7af42165c341d653e3efbb20091c131c9f7a40`
+is deployed exactly. Public EN/RU/KK routes, metadata, Liquid sitemap, JSON, CSS, preview asset,
+responsive evidence, Phase A preservation, description, homepage, topics, tag boundary, and
+Antigravity provenance all pass. That prior exact-byte approval remains valid.
 
-Approval does not claim publication. Phase B is already `BLOCKED`; explicit owner authorization now
-satisfies the permission prerequisite for the exact checkpoint runbook, but deployed public evidence
-is still outstanding. The Coordinator may execute only that exact non-force, tag-preserving runbook
-against the reviewed SHA, keep the phase `BLOCKED`, refresh EV/RF with deployed evidence, and return
-to the same Reviewer pipeline before any publication-complete verdict or closure.
+The full post-publication Phase B acceptance boundary does not pass on evidence base
+`a67e353573ddb36183c8e5764017adff5c38a6fb`: authenticated GraphQL still returns GitHub's generated
+repository-card Open Graph image. The canonical formal verdict is **🔄 REVISE** with sole finding F4.
+
+## Required Lifecycle Route
+
+Keep Phase B `BLOCKED`. The owner must manually enable the ChatGPT Chrome extension's **Allow access
+to file URLs** permission. The Coordinator may then resume the same phase, use only the already
+authorized official GitHub UI upload for `assets/social-preview.png`, collect read-only proof that
+GraphQL no longer returns the generated fallback, have the Executor refresh EV/RF, and return to
+`/tfw-review`.
+
+Only after a future full `✅ APPROVE` may the Coordinator move to `KNW`, run `/tfw-docs`, and run
+`/tfw-knowledge` only if fact candidates exist (currently N/A), then move to `DONE`. Search Console
+remains deferred and unauthorized; it is not a material blocker for this verdict.
 
 ## Checkpoint
 
 **Self-check:**
-- [x] Every checklist item has distinct evidence.
-- [x] No N/A status is used.
-- [x] Row 2(a) uses the frozen Master HL baseline and Project North Star, quotes the served clauses,
-  and names the concrete harms; it does not use the TS or Phase HL as authority.
-- [x] Rows 7 and 8 answer existence and sufficiency separately.
-- [x] DoD assessment references verify.md F1–F3 dispositions and AC-1 through AC-9.
-- [x] RF §§7–9 were checked for presence and quality.
-- [x] `KNOWLEDGE.md` and `knowledge/domain.md` were cross-referenced; no contradiction exists.
-- [x] RF Fact Candidates were challenged; none requires promotion.
-- [x] Verdict and lifecycle distinguish present owner authorization from outstanding execution and
-  public-evidence gates; Phase B remains `BLOCKED`.
+- [x] Every checklist status has distinct evidence.
+- [x] DoD and evidence sufficiency reflect F4 without weakening prior exact-byte approval.
+- [x] Purpose/design judgment uses frozen authority and the project North Star.
+- [x] RF §§7–9 and project knowledge were checked.
+- [x] Verdict uses canonical vocabulary.
+- [x] Lifecycle route preserves Reviewer role lock and external authorization boundaries.
 
 Stage complete: YES

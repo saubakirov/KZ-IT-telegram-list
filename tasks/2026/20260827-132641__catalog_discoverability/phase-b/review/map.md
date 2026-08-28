@@ -2,83 +2,91 @@
 > **Mindset:** Experienced newcomer. Understand before judging.
 > **RF:** [Phase B RF](../RF__phase-b__published_discovery.md)
 > **TS:** [Phase B TS](../TS__phase-b__published_discovery.md)
-> **Reviewed base:** `bd7af42165c341d653e3efbb20091c131c9f7a40`
-> **Prior verdict:** 🔄 REVISE on `ae4898df0b0b5050cf6f23179d4e090ff04f93db`; Reviewer source `96ea6d965525d14963b9b22251a762eb9682ec95`, integrated as `82ada1c10eabd7eda3c67a5c024a97e342a99764`
-> **Prior repository approval:** ✅ APPROVE on `b16aac00a7f2b94cbc2e1be29c7c30eaea9350d9`; Reviewer source `2379b3a607b8378adcd081feb9172212287fbd36`, integrated as `53b7bba8544c26e2455ee8055af4f0c97d755ad2`
+> **Reviewed base:** `a67e353573ddb36183c8e5764017adff5c38a6fb`
+> **Parent:** `3280a618b6d9f1a1afd87a51ef382f6922baa0ae`
+> **Deployed repository SHA:** `bd7af42165c341d653e3efbb20091c131c9f7a40`
 
 ## Understanding
 
-The Executor added a repository-controlled GitHub Pages/Jekyll projection for the approved Phase A
-EN/RU/KK catalog. The implementation supplies one layout and responsive stylesheet, generated route
-front matter, exact canonical/alternate/social/Dataset metadata, a repository-owned Liquid sitemap,
-and a deterministic SVG/PNG preview while preserving the Phase A body/digest contract. It extends
-the existing twelve deterministic tests, adds built-site assertions, records local browser/build/
-advisory evidence, and stops before every external mutation and public-outcome claim.
+Phase B projects the approved Phase A catalog through a repository-controlled GitHub Pages/Jekyll
+surface. It provides exact EN, RU, and KK routes; localized canonical, reciprocal hreflang, social,
+and Dataset metadata; a repository-owned Liquid sitemap; responsive language/type/intent navigation;
+and a deterministic social-preview asset. It preserves the Phase A catalog bodies and digest while
+extending the existing deterministic tests.
 
-The first formal review returned three bounded findings. On the revised base, the Executor replaced
-the preview PNG with the exact 27,394-byte output of the checked-in CairoSVG command, regenerated the
-complete six-case browser matrix as a canonical-LF committed blob, and refreshed every affected
-metadata/advisory/evidence binding. The Coordinator corrected the derived Phase B HL sentence so all
-Phase HL/TS/implementation references now name the repository-owned Jekyll/Liquid sitemap. The
-frozen Master HL remains byte-exact in every frozen section.
+The review history is preserved rather than overwritten:
 
-The final integrated correction preserves authorship and scope. Executor source commit
-`de4060bf817bfb69441f08344f82dd14bc856649` and integrated commit
-`cd1a233bef3e10c1fe15e82949360e73a623937b` have the identical tree
-`d7ae8114751dfdfb6bbfb61b12bbdee23d45669c`; later commits refresh RF/EV wording and reopen this same
-Reviewer task. The earlier `d6c2c2c679033d06f1d1f4361227e8485de1be48` commit remains a one-file,
-one-trailing-space evidence-trace correction only.
+| Pass | Exact base | Result |
+|---|---|---|
+| Initial | `ae4898df0b0b5050cf6f23179d4e090ff04f93db` | 🔄 REVISE — F1–F3 |
+| Corrected repository candidate | `b16aac00a7f2b94cbc2e1be29c7c30eaea9350d9` | ✅ APPROVE — repository-controlled candidate |
+| Pre-publication rebind | `bd7af42165c341d653e3efbb20091c131c9f7a40` | ✅ APPROVE — exact deployable repository candidate |
+| Post-publication evidence | `a67e353573ddb36183c8e5764017adff5c38a6fb` | 🔄 REVISE — custom repository-card preview remains unapplied |
 
-This pre-publication pass rebinds that repository approval to the final integrated Coordinator base.
-The complete ancestry after `b16aac00…` contains exactly two commits: integrated Reviewer commit
-`53b7bba8544c26e2455ee8055af4f0c97d755ad2`, which changes only the existing REVIEW and three review
-stage files, and Coordinator checkpoint commit `bd7af42165c341d653e3efbb20091c131c9f7a40`, which changes only
-Phase B `status.md`, one immutable transition event, and the derived `tasks/00-INDEX.md`. No
-implementation, RF, EV, evidence attachment, HL, TS, or ONB blob changed after the previously approved
-base. The owner has now explicitly authorized the exact push/Pages cycle and exact repository settings
-recorded in `evidence/external-checkpoint.md`; no authorized operation has yet been executed, so public
-deployment evidence remains pending.
+The current base is an evidence-only continuation. Its parent is the prior Reviewer commit, and the
+current Executor commit changes RF/EV and ten evidence attachments only. The implementation, HL, TS,
+ONB, status, and journal are unchanged. A direct comparison from deployed SHA `bd7af421…` confirms
+zero implementation-path changes. GitHub Pages reports an exact `bd7af421…` build; public EN/RU/KK,
+sitemap, JSON, CSS, and preview bytes match the supported local build. Repository description,
+homepage, and twelve topics are applied.
+
+One externally visible acceptance item remains incomplete: authenticated GitHub GraphQL still
+reports the generated `opengraph.githubassets.com` fallback for the repository card. The official
+GitHub custom-image flow is UI-only in this environment and is blocked until the owner manually
+enables the ChatGPT Chrome extension's **Allow access to file URLs** permission. That owner-only
+dependency is recorded honestly; no unofficial upload path or external mutation was attempted.
 
 ## TS ↔ RF Alignment
 
-| TS requirement | Revised RF claim | Aligned? |
+| TS requirement | Current RF/evidence result | Aligned? |
 |---|---|---|
-| AC-1 — supported three-route Jekyll surface | Pinned `github-pages` 232 build; one layout; exact EN/RU/KK output | ✅ |
-| AC-2 — exact locale, canonical, and reciprocal language metadata | Singleton localized head values, self canonicals, `en`/`ru`/`kk`/`x-default` alternates | ✅ |
-| AC-3 — visible-content-consistent Dataset/social metadata and reproducible preview | Exact Dataset/OG/Twitter assertions; two fresh checked-in-command rerenders match the committed PNG | ✅ |
-| AC-4 — exact repository-owned sitemap, no robots/llms surface | Liquid sitemap with three URLs; plugin disabled; no forbidden output | ✅ |
-| AC-5 — responsive local-browser presentation | Six EN/RU/KK cases at 390×844 and 1366×768 with link and type/intent/language navigation assertions | ✅ |
-| AC-6 — Phase A body/digest/regression preservation | Digest `51db402d…`, unchanged data/README/body, all twelve predecessor tests plus one new test | ✅ |
-| AC-7 — prepare but do not apply publication/settings | Exact target package and runbook unchanged; owner authorization now present, no mutation performed, public results still deferred | ✅ |
-| AC-8 — independent advice and formal review | Hash-bound refreshed Antigravity PASS; this REVIEW supplies the formal verdict | ✅ |
-| AC-9 — minimal, traceable, resumable scope | 13 implementation paths, task-local evidence, clean exact base, external gate retained | ✅ |
+| AC-1 — supported three-route Jekyll surface | Exact `bd7af421…` Pages build; public `/`, `/ru/`, `/kk/` hashes match supported pinned build | ✅ |
+| AC-2 — exact locale, canonical, reciprocal language metadata | One H1, correct route language, self-canonical, and `en`/`ru`/`kk`/`x-default` alternates on all routes | ✅ |
+| AC-3 — visible-consistent Dataset/social metadata and reproducible preview | Page metadata and public 1280×640 PNG match; two independent rerenders reproduce 27,394 exact bytes | ✅ |
+| AC-4 — repository-owned sitemap and no robots/llms surface | Three-route Liquid sitemap exact; public and built robots/llms both absent | ✅ |
+| AC-5 — responsive browser presentation | Six committed 390×844/1366×768 EN/RU/KK cases and 30 representative links pass; images inspected | ✅ |
+| AC-6 — Phase A preservation | Digest `51db402d…`, data/README/bodies exact, 12 predecessor tests unchanged, one preservation test added | ✅ |
+| AC-7 — approved publication/settings package applied and evidenced | Pages, description, homepage, and topics applied; repository-card custom preview is still fallback | ❌ BLOCKED |
+| AC-8 — advisory and formal independent review | Antigravity PASS is exact; this formal review returns REVISE because AC-7 is incomplete | 🔄 |
+| AC-9 — minimal, traceable, resumable scope | Evidence-only current commit, clean ownership, no unauthorized mutation | ✅ |
+
+## Findings
+
+| ID | Finding | Materiality | Required disposition |
+|---|---|---|---|
+| F4 | The repository card still uses GitHub's generated Open Graph fallback; the approved custom `assets/social-preview.png` has not been uploaded through the official UI. | Material to the Phase B publication/settings acceptance boundary (AC-7); not an implementation defect. | Owner manually enables the Chrome extension file-URL permission; Coordinator uses only the already-authorized official GitHub UI flow; read-only GraphQL verifies a non-fallback custom image; Executor refreshes RF/EV; Reviewer reruns. |
+
+F1–F3 remain closed. No additional finding or nit was identified.
 
 ## Deviations from TS
 
-- Public deployment, repository settings, upload, Search Console, indexing, retrieval, and outcome
-  evidence remain intentionally deferred exactly as AC-7 requires. The owner authorization activates
-  the recorded continuation but does not itself establish that any operation ran or any byte is public.
-- The Coordinator-authorized `jekyll-sitemap` → repository-owned Liquid revision is the documented
-  pre-execution revision already represented in the final Phase HL and TS. No frozen contract
-  amendment exists or is needed.
-- The Reviewer updates only the existing review-stage traces and REVIEW under the delegated write
-  boundary. Phase status/journal transitions remain Coordinator-owned.
+- No unauthorized implementation deviation was found. AC-7 is incomplete, not silently narrowed:
+  the repository-level custom preview remains the generated fallback.
+- Search Console remains explicitly deferred and unauthorized under the approved boundary; it is
+  not work that was shipped under a different name and is not a finding.
+- The browser interruption and handoff identity transformation below are execution-harness
+  deviations only. Neither changes repository bytes, authority, or evidence truth.
+
+## Harness / Session Deviations
+
+- A fresh six-case live browser rerun was interrupted by the harness after the public-root probe.
+  This is not a repository finding: the exact committed matrix was parsed from the final Git blob,
+  all six screenshots were independently inspected, every public output hash was freshly fetched,
+  and the public root was additionally inspected live.
+- Codex handoff operation `exec-17c43827-2136-4159-a79d-2e68677e7636` moved source task
+  `01a04383-b2eb-78b2-80e3-0b0fc62e00d9` to destination
+  `01a04881-4c15-7f21-a3c9-4a50ddcf9daa`. All five transfer steps completed and no
+  `create_thread` call occurred. This identity transformation is a harness/session deviation, not a
+  repository or evidence finding.
 
 ## Checkpoint
 
 **Self-check:**
-- [x] Read the revised RF §§1–9 and all changed evidence completely.
-- [x] Read the prior REVIEW and stage traces; F1–F3 are preserved as prior-verdict history rather than
-  retroactively erased.
-- [x] Read the Phase B TS DoD and matched AC-1 through AC-9 to the revised RF.
-- [x] Read frozen Master HL §7 principles: subtract unnecessary surfaces, protect accuracy and one
-  source, serve people through clear projections, keep the catalog narrow, measure controllable
-  evidence, and preserve one experience across EN/RU/KK.
-- [x] Read Phase B ONB; it records no blocking questions and names the plugin/robots risk, immutable
-  Phase A boundary, evidence inventory, external stop, and all knowledge citations.
-- [x] Proved the complete `b16aac00…` → `bd7af421…` delta is trace-only and reran the proportional
-  deployment-critical gates on an exact archive of the final Coordinator base.
-- [x] Distinguished newly present owner authorization from still-missing deployment/public evidence;
-  no external mutation was performed during this rebind.
+- [x] Exact reviewed base and parent identified.
+- [x] Current evidence-only scope and deployed implementation binding proved.
+- [x] Every TS acceptance criterion mapped to current RF/evidence.
+- [x] Prior verdict history and F1–F3 closure preserved.
+- [x] Sole material blocker separated from harness/session deviations.
+- [x] No external mutation performed.
 
 Stage complete: YES
