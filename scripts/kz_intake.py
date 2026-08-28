@@ -138,12 +138,13 @@ def _exact(value: object, schema: object, path: str = "$") -> None:
         for index, item in enumerate(value):
             _exact(item, schema[0], f"{path}[{index}]")
     elif isinstance(schema, tuple):
-        if not isinstance(value, schema):
+        if not any((type(value) is int if expected is int else isinstance(value, expected))
+                   for expected in schema):
             raise IntakeError(f"{path}: expected {'/'.join(t.__name__ for t in schema)}")
     elif schema is None:
         if value is not None:
             raise IntakeError(f"{path}: expected null")
-    elif not isinstance(value, schema):
+    elif (type(value) is not int if schema is int else not isinstance(value, schema)):
         raise IntakeError(f"{path}: expected {schema.__name__}")
 
 
@@ -233,7 +234,7 @@ def classify_token(token: str) -> tuple[str, str | None]:
             return "port", None
     except ValueError:
         return "port", None
-    host = (parsed.hostname or "").casefold().rstrip(".")
+    host = (parsed.hostname or "").casefold()
     if host not in ROOT_HOSTS:
         if any(root in host for root in ROOT_HOSTS):
             return "spoofed_authority", None
@@ -441,7 +442,8 @@ def validate_observation(row: dict[str, object]) -> None:
     accepted = len(verified) == 1 and len(mismatches) == 2 and all(
         item["observed_type"] == verified[0]["declared_type"] for item in mismatches)
     if row["status"] == "verified":
-        if not accepted or row["canonical_handle"].casefold() != row["requested_handle"].casefold() or \
+        if not row["transport"]["ok"] or not accepted or \
+                row["canonical_handle"].casefold() != row["requested_handle"].casefold() or \
                 not row["target_bound"] or any(row[field] != verified[0][field] for field in
                                                 ("observed_type", "visible_name", "member_count")):
             raise IntakeError("verified observation tuple differs")
@@ -473,6 +475,8 @@ def validate_preview(preview: dict[str, object]) -> None:
     observations = {row["candidate_id"]: row for row in preview["observations"]}
     collisions = {row["candidate_id"]: row for row in preview["collisions"]}
     editorial = {row["candidate_id"]: row for row in preview["editorial"]}
+    if any(not ref.strip() for row in preview["editorial"] for ref in row["evidence_refs"]):
+        raise IntakeError("editorial evidence references must be non-blank")
     allowed = {"add", "reject", "duplicate", "unresolved"}
     for action in preview["actions"]:
         if action["action"] not in allowed or not action["reason"].strip():
@@ -642,21 +646,26 @@ def apply_preview(
     state = []
     for path in CONTROLLED_PATHS:
         current = file_sha256(root / path)
-        state.append("B" if current == expected[path]["before_sha256"] else
-                     "A" if current == expected[path]["after_sha256"] else "X")
+        before = expected[path]["before_sha256"]
+        after = expected[path]["after_sha256"]
+        if before == after:
+            state.append("N" if current == before else "X")
+        else:
+            state.append("B" if current == before else "A" if current == after else "X")
+    changing_state = {item for item in state if item != "N"}
     marker = _marker(preview, approval)
     existing_marker = None
     if pending_path.exists():
         existing_marker = parse_closed_json(pending_path.read_text(encoding="utf-8"))
         if existing_marker != marker:
             raise IntakeError("pending marker differs")
-    if "X" in state or (len(set(state)) > 1 and existing_marker is None):
+    if "X" in state or ({"B", "A"} <= changing_state and existing_marker is None):
         raise IntakeError("unknown or unmarked mixed controlled-path state")
-    if set(state) == {"B"}:
+    if changing_state <= {"B"}:
         recheck_catalog_gates(root, preview)
     validations = preflight(stage_root)
     applied_ids = [row["candidate_id"] for row in preview["actions"] if row["action"] == "add"]
-    if set(state) == {"A"}:
+    if "B" not in changing_state:
         outcome = "already_applied_exact"
     else:
         if existing_marker is None:
@@ -668,7 +677,7 @@ def apply_preview(
                 writes += 1
                 if fail_after == writes:
                     raise RuntimeError("injected apply interruption")
-        outcome = "recovered_exact" if "A" in state else "applied_exact"
+        outcome = "recovered_exact" if "A" in changing_state else "applied_exact"
     final = path_hashes(root)
     if any(final[path] != expected[path]["after_sha256"] for path in CONTROLLED_PATHS):
         raise IntakeError("final controlled paths differ")

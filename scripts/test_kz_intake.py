@@ -16,6 +16,7 @@ class SourceTests(unittest.TestCase):
         values = [
             "https://t.me/Valid_Name", "https://telegram.me/valid_name/",
             "https://telegram.dog/VALID_NAME).", "http://t.me/valid_name",
+            "https://t.me./valid_name",
             "https://www.t.me/valid_name", "https://t.me.evil/valid_name",
             "https://user@t.me/valid_name", "https://t.me:443/valid_name",
             "https://t.me/valid%5Fname", "https://t.me/+secret",
@@ -25,8 +26,8 @@ class SourceTests(unittest.TestCase):
             "https://evil.example/t.me/valid_name", "https://t.me/abc",
         ]
         source = intake.parse_source("Ω " + "\n".join(values), "fixture")
-        self.assertEqual(source["totals"], {"occurrences": 18, "candidates": 1,
-                                             "non_candidates": 15})
+        self.assertEqual(source["totals"], {"occurrences": 19, "candidates": 1,
+                                             "non_candidates": 16})
         self.assertEqual(len(source["candidates"][0]["occurrence_ids"]), 3)
         self.assertEqual(source["occurrences"][0]["byte_start"], 3)
         wrapped = source["occurrences"][2]
@@ -36,6 +37,8 @@ class SourceTests(unittest.TestCase):
         self.assertTrue({"candidate", "unsupported_scheme", "spoofed_authority", "userinfo",
                          "port", "percent_encoded", "private_invite", "message_path",
                          "query_or_fragment", "reserved_action", "invalid_handle"} <= kinds)
+        self.assertEqual(intake.classify_token("https://t.me./valid_name"),
+                         ("spoofed_authority", None))
         for index, row in enumerate(source["occurrences"], 1):
             self.assertEqual(row["ordinal"], index)
             raw = ("Ω " + "\n".join(values)).encode()[row["byte_start"]:row["byte_end"]]
@@ -147,6 +150,13 @@ class CanonicalTests(unittest.TestCase):
         value = intake.parse_closed_json('{"z":"Ж","a":1}')
         self.assertEqual(intake.canonical_bytes(value), '{"a":1,"z":"Ж"}\n'.encode())
 
+    def test_exact_integer_type_excludes_boolean_recursively(self):
+        intake._exact(1, int)
+        intake._exact(None, (int, type(None)))
+        for value, schema in ((True, int), (False, (int, type(None)))):
+            with self.subTest(value=value, schema=schema), self.assertRaises(intake.IntakeError):
+                intake._exact(value, schema)
+
 
 class PreviewApplyTests(unittest.TestCase):
     def setUp(self):
@@ -246,6 +256,27 @@ class PreviewApplyTests(unittest.TestCase):
         with self.assertRaises(intake.IntakeError):
             intake.validate_preview(tampered)
 
+    def test_recursive_integer_editorial_and_transport_constraints(self):
+        intake.validate_preview(self.preview)
+        for field_path in (("totals", "add"), ("source", "totals", "occurrences")):
+            tampered = json.loads(json.dumps(self.preview))
+            target = tampered
+            for key in field_path[:-1]:
+                target = target[key]
+            target[field_path[-1]] = True
+            with self.subTest(field_path=field_path), self.assertRaises(intake.IntakeError):
+                intake.validate_preview(tampered)
+        for reference in ("", " \t "):
+            tampered = json.loads(json.dumps(self.preview))
+            tampered["editorial"][0]["evidence_refs"] = [reference]
+            with self.subTest(reference=reference), self.assertRaisesRegex(
+                    intake.IntakeError, "non-blank"):
+                intake.validate_preview(tampered)
+        tampered = json.loads(json.dumps(self.preview))
+        tampered["observations"][0]["transport"]["ok"] = False
+        with self.assertRaisesRegex(intake.IntakeError, "verified observation"):
+            intake.validate_preview(tampered)
+
     def test_approval_binds_payload_actions_exact_set_and_owner_record(self):
         for field, value in (("payload_sha256", "0" * 64), ("actions_sha256", "0" * 64),
                              ("approved_candidate_ids", [])):
@@ -263,6 +294,38 @@ class PreviewApplyTests(unittest.TestCase):
         (self.root / "README.md").write_text("unknown", encoding="utf-8")
         with self.assertRaises(intake.IntakeError):
             self._apply()
+
+    def test_equal_paths_are_neutral_for_first_apply_and_exact_rerun(self):
+        neutral_path = "README.md"
+        (self.stage / neutral_path).write_bytes((self.root / neutral_path).read_bytes())
+        preview = self._preview()
+        approval = self._approval(preview)
+        first = self._apply(preview, approval)
+        self.assertEqual(first["outcome"], "applied_exact")
+        self.assertEqual(first["before_state"][intake.CONTROLLED_PATHS.index(neutral_path)], "N")
+        self.assertEqual(self._apply(preview, approval)["outcome"], "already_applied_exact")
+
+    def test_equal_path_remains_neutral_during_marked_recovery(self):
+        neutral_path = "README.md"
+        (self.stage / neutral_path).write_bytes((self.root / neutral_path).read_bytes())
+        preview = self._preview()
+        approval = self._approval(preview)
+        with self.assertRaisesRegex(RuntimeError, "injected"):
+            self._apply(preview, approval, fail_after=1)
+        self.assertTrue(self.pending.exists())
+        receipt = self._apply(preview, approval)
+        self.assertEqual(receipt["outcome"], "recovered_exact")
+        self.assertEqual(receipt["before_state"][intake.CONTROLLED_PATHS.index(neutral_path)], "N")
+
+    def test_wholly_unchanged_stage_is_exact_noop_and_unknown_still_stops(self):
+        self._write_tree(self.stage, False)
+        preview = self._preview()
+        approval = self._approval(preview)
+        self.assertEqual(self._apply(preview, approval)["outcome"], "already_applied_exact")
+        self.assertEqual(self._apply(preview, approval)["outcome"], "already_applied_exact")
+        (self.root / "README.md").write_text("unknown", encoding="utf-8")
+        with self.assertRaises(intake.IntakeError):
+            self._apply(preview, approval)
 
     def test_marked_recovery_and_unmarked_or_corrupt_mixture_stop(self):
         with self.assertRaisesRegex(RuntimeError, "injected"):
