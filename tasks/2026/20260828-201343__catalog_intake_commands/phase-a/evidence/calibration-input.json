@@ -1,0 +1,137 @@
+{
+    "schema_version":  "kz-intake-calibration/v1",
+    "partition_manifest_sha256":  "5b9fb0dd028ac19d02b2c413bca45e8fa3e0e05e8de9b20087bfa883fe2cb732",
+    "method_version":  "kz-intake-content-split/v1",
+    "case_count":  8,
+    "cases":  [
+                  {
+                      "case_key":  "0ae62429cdcd9b353c740a9e23d01df8e667cdd53b43a80b0bc0bfc0f9075efe",
+                      "derived_url":  "https://t.me/it_jobs_kz",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "byte_start":  6024,
+                                              "byte_end":  6034,
+                                              "raw_span":  "it_jobs_kz",
+                                              "raw_span_sha256":  "cff4e8bae9901e96279f3e5c55a60ec0a68f88e7b01cb214d4e59f391dea7d6d",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/it_jobs_kz"
+                                          }
+                                      ]
+                  },
+                  {
+                      "case_key":  "1579b752bfd7b55d6e0738ebcecee421fe56806a720dd4c9455a1f4d481868df",
+                      "derived_url":  "https://t.me/devopskaz",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "byte_start":  3851,
+                                              "byte_end":  3860,
+                                              "raw_span":  "devopskaz",
+                                              "raw_span_sha256":  "9d2c0dadaab8ebb19bdab40b717c1eef3ffef55eb87ff66ec28e8e22fd71a0b5",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/devopskaz"
+                                          }
+                                      ]
+                  },
+                  {
+                      "case_key":  "4e85be5a3dd41856ee86b52106869dec47bfb0fc438bb4bc86f8725d834125d5",
+                      "derived_url":  "https://t.me/hackathon_kz",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "byte_start":  3033,
+                                              "byte_end":  3045,
+                                              "raw_span":  "hackathon_kz",
+                                              "raw_span_sha256":  "83cd54841f08b9a51068e1d5d494bdf7f5f8454264fe2f504eb2ed01ae1fb6ab",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/hackathon_kz"
+                                          }
+                                      ]
+                  },
+                  {
+                      "case_key":  "5af5e32e91f9276aa13436c8a5476d01e3a3282dec7c15e3b5c7b325a909fda5",
+                      "derived_url":  "https://t.me/aws_kz",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "byte_start":  5100,
+                                              "byte_end":  5106,
+                                              "raw_span":  "aws_kz",
+                                              "raw_span_sha256":  "232d39d3497907df4212332b12ebc5e496974d9f0c30df92eba19a183947b7d0",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/aws_kz"
+                                          },
+                                          {
+                                              "source_id":  "owner_note",
+                                              "byte_start":  0,
+                                              "byte_end":  19,
+                                              "raw_span":  "https://t.me/aws_kz",
+                                              "raw_span_sha256":  "01d0a667f9dd4a35f8de9c98b5e77729aff6e70027f84ace6ce178c1f5514041",
+                                              "input_kind":  "public_root_url",
+                                              "derived_url":  "https://t.me/aws_kz"
+                                          }
+                                      ]
+                  },
+                  {
+                      "case_key":  "6f2fda382c02d18ba417b9a43b73cb96d4d1b3eb0ff842cd0189337cc34e3c68",
+                      "derived_url":  "https://t.me/devs_kz",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "byte_start":  3648,
+                                              "byte_end":  3655,
+                                              "raw_span":  "devs_kz",
+                                              "raw_span_sha256":  "974dcca1c12e7409274b6028e5bf91dcd56a7e10dc9aab1544742038f2ab5196",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/devs_kz"
+                                          }
+                                      ]
+                  },
+                  {
+                      "case_key":  "76f5a4a78aff0c031caf9e39774aecf374a5658bc5ac5ee7ff34d75f7785474e",
+                      "derived_url":  "https://t.me/tvkrg",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "byte_start":  4726,
+                                              "byte_end":  4731,
+                                              "raw_span":  "tvkrg",
+                                              "raw_span_sha256":  "11cf37837a61ec16f24f04b09ca2b2b1d8d471f93ba0222641e1c5034a50e7b1",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/tvkrg"
+                                          }
+                                      ]
+                  },
+                  {
+                      "case_key":  "d98a86300f88e89f5a6e2290beb33207b144fdd5912a2956193e5581d9f8ce5f",
+                      "derived_url":  "https://t.me/kz_bi_jobs",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "byte_start":  6117,
+                                              "byte_end":  6127,
+                                              "raw_span":  "kz_bi_jobs",
+                                              "raw_span_sha256":  "d418133ca24e14c77bd44785a5e279f885a87734339504a5edad7c8dddc03303",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/kz_bi_jobs"
+                                          }
+                                      ]
+                  },
+                  {
+                      "case_key":  "da82d786985166742f5b541c9f564ab3d9dfb86e04fed6335dfa33ec4889d811",
+                      "derived_url":  "https://t.me/itbazarkzchannel",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "byte_start":  2628,
+                                              "byte_end":  2644,
+                                              "raw_span":  "itbazarkzchannel",
+                                              "raw_span_sha256":  "180da944cc81380699bfb4bf32e047e58b84476c400da93a3d00bcc3f8e26cc1",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/itbazarkzchannel"
+                                          }
+                                      ]
+                  }
+              ]
+}
