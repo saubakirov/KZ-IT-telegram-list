@@ -2,7 +2,7 @@
 
 > **Date**: 2026-08-28
 > **Author**: Coordinator (Codex)
-> **Status**: 📝 TS_DRAFT — two deep research iterations complete; I2-C1R selected
+> **Status**: 🧩 PHASES — Phase A TS approved under the owner's autonomous-continuation mandate
 > **Contract**: 🔒 FROZEN — approved by saubakirov 2026-08-28
 > **Frozen**: §1 · §3 · §4 · §5 · §6 · §7 — locked on owner approval
 > **Free**: §2 · §7.2 · §8 · §9 · §10 · §11 — research updates these directly
