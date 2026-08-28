@@ -1,6 +1,6 @@
-Phase A revised exact-SHA Jekyll build record
-captured_at=2026-08-28T23:02:41+05:00
-implementation_sha=20c19505d5e156c3f0fe563877a03f387322aca2
+Phase A final exact-SHA Jekyll build record
+captured_at=2026-08-28T23:50:40+05:00
+implementation_sha=731b3d6a3350bb3fe41115a4ae9213aaa86bbc6f
 host=Windows-11-10.0.26200-SP0
 python=3.13.5
 docker_client=24.0.6
@@ -14,7 +14,7 @@ output_mount=isolated writable nested bind
 status_before=clean
 
 BUILD COMMAND
-docker run --rm --mount 'type=bind,source=C:\Users\c0rpa\.codex\worktrees\kz-intake-phase-a,target=/github/workspace,readonly' --mount 'type=bind,source=C:\Users\c0rpa\.codex\worktrees\kz-intake-phase-a\tasks\2026\20260828-201343__catalog_intake_commands\phase-a\evidence\site-revision,target=/github/workspace/tasks/2026/20260828-201343__catalog_intake_commands/phase-a/evidence/site-revision' -e GITHUB_WORKSPACE=/github/workspace -e INPUT_SOURCE=. -e INPUT_DESTINATION=tasks/2026/20260828-201343__catalog_intake_commands/phase-a/evidence/site-revision -e INPUT_VERBOSE=false -e INPUT_FUTURE=false -e INPUT_BUILD_REVISION=20c19505d5e156c3f0fe563877a03f387322aca2 -e GITHUB_REPOSITORY=saubakirov/KZ-IT-telegram-list -e GITHUB_API_URL=https://api.github.com ghcr.io/actions/jekyll-build-pages@sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041
+docker run --rm --network none --mount 'type=bind,source=C:\Users\c0rpa\.codex\worktrees\d9a3\KZ-IT-telegram-list,target=/github/workspace,readonly' --mount 'type=bind,source=C:\Users\c0rpa\.codex\worktrees\d9a3\KZ-IT-telegram-list\tasks\2026\20260828-201343__catalog_intake_commands\phase-a\evidence\site-final,target=/github/workspace/tasks/2026/20260828-201343__catalog_intake_commands/phase-a/evidence/site-final' -e GITHUB_WORKSPACE=/github/workspace -e INPUT_SOURCE=. -e INPUT_DESTINATION=tasks/2026/20260828-201343__catalog_intake_commands/phase-a/evidence/site-final -e INPUT_VERBOSE=false -e INPUT_FUTURE=false -e INPUT_BUILD_REVISION=731b3d6a3350bb3fe41115a4ae9213aaa86bbc6f -e GITHUB_REPOSITORY=saubakirov/KZ-IT-telegram-list -e GITHUB_API_URL=https://api.github.com ghcr.io/actions/jekyll-build-pages@sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041
 
 BUILD EXIT
 0
@@ -25,14 +25,14 @@ The Gemfile's dependencies are satisfied
 To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
 Configuration file: /github/workspace/./_config.yml
             Source: /github/workspace/.
-       Destination: /github/workspace/tasks/2026/20260828-201343__catalog_intake_commands/phase-a/evidence/site-revision
+       Destination: /github/workspace/tasks/2026/20260828-201343__catalog_intake_commands/phase-a/evidence/site-final
  Incremental build: disabled. Enable with --incremental
       Generating...
-                    done in 1.364 seconds.
+                    done in 1.301 seconds.
  Auto-regeneration: disabled. Use --watch to enable.
 
 VALIDATION COMMAND
-python scripts/test_site_metadata.py --site 'tasks/2026/20260828-201343__catalog_intake_commands/phase-a/evidence/site-revision' --summary 'tasks/2026/20260828-201343__catalog_intake_commands/phase-a/evidence/site-revision-summary.json'
+python scripts/test_site_metadata.py --site 'tasks/2026/20260828-201343__catalog_intake_commands/phase-a/evidence/site-final' --summary 'tasks/2026/20260828-201343__catalog_intake_commands/phase-a/evidence/site-final-summary.json'
 
 VALIDATION EXIT
 0
@@ -50,14 +50,15 @@ kk/index.html    bytes=41343 sha256=2d4465e7dc55856683247bf036f113380b452db10534
 sitemap.xml      bytes=338 sha256=79dcb9bbd3dda14054fe33695f89f6f62cdeea08881a427ec059d5e2d1665767
 
 POLICY AND MUTATION NOTES
-- This Executor reproduction was not policy-rejected; both build and validation started and exited 0.
-- The formal Reviewer's earlier attempted reproduction was policy-rejected before process start,
-  as recorded in REVIEW/verify. That rejected attempt is not represented as a build result here.
+- The accepted final build and validation both started and exited 0 with container networking disabled.
+- One earlier compound build/cleanup command was policy-rejected before process start. A separate
+  first directory-creation attempt failed on an unsupported PowerShell parameter before creating
+  anything. Neither attempt is represented as a build result.
 - The container received the repository read-only and wrote only the temporary nested build mount.
 - No deployment, image pull, production catalog/projection write, tag, push, release, or external
   service mutation occurred.
-- Temporary `site-revision/` and `site-revision-summary.json` outputs were removed after hashing;
+- Temporary `site-final/` and `site-final-summary.json` outputs were removed after hashing;
   the complete command/output record and byte-identical retained `site-metadata-summary.json` remain.
-- Two PowerShell `Remove-Item` cleanup attempts were policy-rejected before process start. A scoped
-  `git clean -nd` preview named only those two untracked temporary targets; the matching scoped
-  `git clean -fd` then removed them. Neither rejected cleanup attempt changed files.
+- One PowerShell `Remove-Item` cleanup attempt was policy-rejected before process start. A scoped
+  `git clean -nd` preview named only those two generated untracked targets; the matching scoped
+  `git clean -fd` removed them. The rejected cleanup attempt changed nothing.

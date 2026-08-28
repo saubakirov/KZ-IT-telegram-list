@@ -7,7 +7,7 @@
 > **Phase HL**: [Phase A HL](HL__phase-a__intake_engine.md)
 > **TS**: [TS Phase A](TS__phase-a__intake_engine.md)
 > **Revision source**: [Formal REVIEW](REVIEW__phase-a__intake_engine.md) (`REVISE`)
-> **Revised implementation SHA**: `20c19505d5e156c3f0fe563877a03f387322aca2`
+> **Final implementation SHA**: `731b3d6a3350bb3fe41115a4ae9213aaa86bbc6f`
 > **Accepted unchanged-command smoke SHA**: `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a`
 
 ---
@@ -28,6 +28,10 @@ non-revealing allocation receipt, and retains a complete revised-SHA official-im
 The re-review revision closes the remaining F1/F2 findings by deriving every staged byte from the
 fixed ADD action projection and by validating serialized observations as exact possible outputs of
 the unchanged classifier and transport producer before preview, authority, or apply can proceed.
+The final exact-findings revision preserves the source byte-for-byte for zero ADDs, mechanically
+rebinds localization-review metadata for exact 1/N ADDs under the project's JSON/LF serializer,
+derives locale cardinality invariants from catalog structure, and restricts failed observations to
+the precise attempt/status/reason tuples the retry producer can emit.
 
 ### New Files
 
@@ -35,7 +39,7 @@ the unchanged classifier and transport producer before preview, authority, or ap
 |------|-------------|
 | `scripts/kz_intake.py` | Source parsing, observation reconciliation, closed canonical preview/envelope contracts, neutral-aware exact-state apply orchestration, and CLI. |
 | `scripts/sync_kz_commands.py` | Exact three-command inventory, completeness/parity validator, and explicit Claude-to-Codex sync. |
-| `scripts/test_kz_intake.py` | Synthetic adversarial parser, recursive schema, classifier, authority, neutral-path idempotency/failure, and recovery tests. |
+| `scripts/test_kz_intake.py` | Adversarial parser, recursive schema, classifier, authority, real 0/1/N preflight, neutral-path idempotency/failure, and recovery tests. |
 | `scripts/test_kz_commands.py` | Inventory, metadata, body completeness, parity, drift, and sync-direction tests. |
 | `.claude/commands/kz-add.md` | Complete location-neutral Claude `/kz-add` runtime contract. |
 | `.agents/skills/kz-add/SKILL.md` | Byte-identical Codex `/kz-add` runtime contract. |
@@ -55,11 +59,12 @@ the unchanged classifier and transport producer before preview, authority, or ap
 | File | Changes |
 |------|---------|
 | `scripts/validate_links.py` | Added the minimum immutable fetch/retry seam; existing classifier authority bodies remain unchanged. |
+| `scripts/validate_schema.py` | Replaced fixed locale acceptance cardinalities with an independently data-derived structural invariant while preserving truthful baseline output. |
 | `.claude/commands/kz-stats.md` | Made the existing complete owner-triage command location-neutral and parity-ready without weakening repair/archive authority. |
 | `.claude/commands/kz-release.md` | Made the existing complete release command location-neutral and parity-ready while preserving pre-tag/pre-push approval. |
 | `AGENTS.md` | Registered the truthful three-command project inventory and distinguished availability from execution evidence. |
 
-The implementation budget is exactly 12 paths: 8 new, 4 modified, and 2,230 total
+The implementation budget is exactly 13 paths: 8 new, 5 modified, and 2,369 total
 insertion+deletion lines. Evidence and lifecycle traces are outside that implementation budget.
 
 ## 2. Key Decisions
@@ -76,8 +81,10 @@ insertion+deletion lines. Evidence and lifecycle traces are outside that impleme
    fields exclude JSON booleans, evidence references must be non-blank, and verified observations
    require successful transport.
 4. Preview payload, current owner approval, pending recovery marker, and receipt remain separate
-   objects. Preview first derives the catalog as baseline plus exactly each proposed ADD row and
-   requires all four generator-exact projections; zero-add projections must remain unchanged.
+   objects. Preview derives the catalog as baseline plus exactly each proposed ADD row, mechanically
+   updates localization-review payload hash/cardinality, and requires all four generator-exact
+   projections. Zero ADDs require every controlled byte to remain identical, so semantic-only
+   reserialization is rejected before marker creation or any write.
    Apply rederives and rehashes that state before every write. A path whose approved before/after
    hash is equal is neutral/both; changing paths still use B/A/X. Catalog-last replacement retains
    the baseline through partial recovery; A plus neutral is an exact no-op and every unknown,
@@ -86,14 +93,17 @@ insertion+deletion lines. Evidence and lifecycle traces are outside that impleme
    standalone bodies. Exact byte parity and fresh runtime behavior jointly establish portability.
 6. The original implementation was committed cleanly before AC-7. Fresh Claude and non-forked
    Codex smokes ran at that exact SHA; their complete accepted records now live in the repository.
-   The revised SHA changes only intake code/tests, while all command bodies remain byte-identical,
-   so the Coordinator did not require a model rerun.
+   The final revision changes only intake code/tests/schema validation, while all command bodies
+   remain byte-identical, so the Coordinator did not require a model rerun.
 7. Phase A used only the approved predecessor offline matrices and exactly eight disclosed
    calibration probes. It did not run the generic live full-catalog validator or use browser/auth
    fallback. The existing observation artifact remains byte-identical and validates under the
    stricter contract, so calibration was not refreshed.
 8. Coordinator-owned `partition-audit.json` supplies allocation authority without revealing any
    holdout identity or path. The Executor cites it but did not seek sealed material.
+9. Locale acceptance counts are derived independently from catalog categories, live/archive entry
+   structure, UI registries, and locale non-goals. The baseline report remains
+   `keys=en:139,ru:131,kk:131`, but valid 1/N staged catalogs no longer fail a frozen count.
 
 ## 3. Acceptance Criteria
 
@@ -108,9 +118,9 @@ insertion+deletion lines. Evidence and lifecycle traces are outside that impleme
 
 ## 4. Verification
 
-- Tests: `python -m unittest scripts.test_catalog_generation scripts.test_kz_intake scripts.test_kz_commands -v` — PASS, 42 tests, including every D1–D3 and F1/F2 counterexample, real-schema/generator action-stage derivation, exact observation tuples, and neutral-path failure/idempotency branches.
+- Tests: `python -m unittest scripts.test_catalog_generation scripts.test_kz_intake scripts.test_kz_commands -q` — PASS, 44 tests, including D1–D6, both prior F1/F2 closures, all three formal-review exploits, real 0/1/N schema/generator preflight, exact producer tuple families, and neutral-path failure/idempotency branches.
 - Command parity: `python scripts/sync_kz_commands.py --check` — PASS, exact `kz-add`, `kz-stats`, `kz-release` inventory.
-- Compile: `python -m py_compile ...` for all five changed/new Python runtime/test modules — PASS.
+- Compile: `python -m py_compile ...` for all six changed/new Python runtime/test/schema modules — PASS.
 - Schema: `python scripts/validate_schema.py` — PASS, 0 errors across 38 groups, 20 channels, 4 bots, 19 categories, and 2 archive entries.
 - Projection currency: `python scripts/generate_readme.py --check` — PASS, all 4 projections current.
 - Index: `python docs/scripts/gen_index.py --validate` — PASS, 4 tasks validate.
@@ -119,7 +129,7 @@ insertion+deletion lines. Evidence and lifecycle traces are outside that impleme
   and stats/release command behavior.
 - Classifier audit: six authority bodies match base
   `be830d3766ca4de12ff18198a680253ed133894f` exactly — PASS.
-- Built site: official local `actions/jekyll-build-pages:v1.0.13` read-only build at revised SHA
+- Built site: official local `actions/jekyll-build-pages:v1.0.13` read-only, network-disabled build at final implementation SHA
   followed by `python scripts/test_site_metadata.py --site <temporary-build>` — PASS for EN/RU/KK
   routes; complete command/environment/output retained in `evidence/jekyll-build-revision.txt`.
 - Calibration: one bounded probe for each of exactly eight disclosed candidates — 8 fetched,
@@ -130,9 +140,10 @@ insertion+deletion lines. Evidence and lifecycle traces are outside that impleme
   without holdout disclosure — PASS.
 - AC-7 runtime: three fresh Claude sessions and one fresh non-forked Codex task at
   `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a` — PASS with complete accepted results, exact
-  runtime hashes, and clean before/after state. Commands are unchanged at revised SHA `20c19505…`.
-- Scope: implementation commit contains exactly 12 implementation paths, 8 new/4 modified,
-  2,230 insertion+deletion lines — PASS.
+  runtime hashes, and clean before/after state. Commands are unchanged at final implementation SHA `731b3d6a…`.
+- Scope: relative to original implementation base `be830d3766ca4de12ff18198a680253ed133894f`,
+  the implementation contains exactly 13 paths, 8 new/5 modified, and 2,369 insertion+deletion
+  lines — PASS, below the 2,500-line ceiling.
 - Formatting/state: `git diff --check`, final status/staging audit, and five controlled-path hashes
   — PASS; production hashes are unchanged at every checkpoint.
 
@@ -152,7 +163,7 @@ Exact deviations:
   source plus matching literal-command behavior and the independently bound local path/hash/parity;
   Codex separately reports absolute loaded paths and hashes.
 - The formal Reviewer's attempted fresh Jekyll reproduction was policy-rejected before process
-  start. This Executor's later supported official-image reproduction at revised SHA started and
+  start. This Executor's later supported official-image reproduction at final implementation SHA started and
   exited 0; the rejected attempt is retained as a limitation, not converted into success.
 - Two post-hash PowerShell cleanup attempts for the temporary built-site directory were policy-
   rejected before process start. A scoped `git clean -nd` preview followed by the identical scoped
