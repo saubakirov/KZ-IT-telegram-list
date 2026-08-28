@@ -136,6 +136,21 @@ class ObservationTests(unittest.TestCase):
         self.assertEqual((failed.ok, failed.reason, failed.attempts),
                          (False, "url_error:offline", 3))
         self.assertEqual([call.args[0] for call in sleep.call_args_list], [1.0, 2.0])
+        producer_failures = (
+            (HTTPError("https://t.me/SamplePeer", 500, "server", None, None), "http_500", 1),
+            (RuntimeError("offline"), "error:offline", 3),
+            (HTTPError("https://t.me/SamplePeer", 429, "rate", None, None),
+             "max_retries_exceeded", 3),
+        )
+        for error, reason, attempts in producer_failures:
+            with self.subTest(reason=reason), \
+                    patch.object(validate_links, "urlopen", side_effect=error), \
+                    patch.object(validate_links.time, "sleep"):
+                produced = validate_links.fetch_preview_with_retry("SamplePeer")
+                self.assertEqual((produced.reason, produced.attempts), (reason, attempts))
+                intake.validate_observation(
+                    intake.observe_candidate("SamplePeer", lambda _handle: produced, "2026-08-28")
+                )
         with patch.object(validate_links, "fetch_preview_with_retry",
                           return_value=validate_links.FetchResult(True, "fetched", body, 200, 1)):
             result = validate_links.check_link_with_retry("SamplePeer", "groups")
@@ -316,12 +331,35 @@ class PreviewApplyTests(unittest.TestCase):
         observation["target_bound"] = False
         observation["transport"] = {"ok": False, "reason": "http_500", "status_code": 500, "attempts": 1}
         with self.assertRaisesRegex(intake.IntakeError, "failed transport"):
-            intake.validate_preview(failed)
+            intake.validate_observation(observation)
         failed["observations"][0]["body_sha256"] = None
         failed["observations"][0]["type_results"] = []
         failed["observations"][0]["transport"]["reason"] = "arbitrary"
         with self.assertRaisesRegex(intake.IntakeError, "failed transport"):
-            intake.validate_preview(failed)
+            intake.validate_observation(observation)
+        observation = failed["observations"][0]
+        for reason, status, attempts in (("http_500", 500, 1), ("url_error:offline", None, 3),
+                                         ("error:offline", None, 3),
+                                         ("max_retries_exceeded", None, 3)):
+            observation["reason"] = observation["transport"]["reason"] = reason
+            observation["transport"]["status_code"] = status
+            observation["transport"]["attempts"] = attempts
+            intake.validate_observation(observation)
+        for reason, status, attempts in (("max_retries_exceeded", None, 1),
+                                         ("url_error:offline", None, 1),
+                                         ("error:offline", None, 2),
+                                         ("http_429", 429, 1), ("http_429", 429, 3),
+                                         ("http_500", 500, 2)):
+            observation["reason"] = observation["transport"]["reason"] = reason
+            observation["transport"]["status_code"] = status
+            observation["transport"]["attempts"] = attempts
+            with self.subTest(transport=(reason, status, attempts)), \
+                    self.assertRaisesRegex(intake.IntakeError, "failed transport"):
+                intake.validate_observation(observation)
+        for attempts in (1, 2, 3):
+            success = json.loads(json.dumps(self.preview))
+            success["observations"][0]["transport"]["attempts"] = attempts
+            intake.validate_preview(success)
         for field, value in (("type", "channels"), ("handle", "other_peer"), ("name", "Other")):
             tampered = json.loads(json.dumps(self.preview))
             tampered["actions"][0]["proposed_entry"][field] = value
@@ -373,7 +411,7 @@ class PreviewApplyTests(unittest.TestCase):
         self._write_tree(self.stage, False)
         preview = self._preview()
         approval = self._approval(preview)
-        with self.assertRaisesRegex(intake.IntakeError, "catalog"):
+        with self.assertRaisesRegex(intake.IntakeError, "catalog|localization review"):
             intake.apply_preview(self.root, self.stage, preview, approval,
                                  {"owner-event-1"}, self.pending, lambda _stage: [])
         (self.root / "README.md").write_text("unknown", encoding="utf-8")
@@ -439,37 +477,47 @@ class ActionStageBindingTests(unittest.TestCase):
     def tearDown(self):
         self.temporary.cleanup()
 
-    def _bundle(self, action="add"):
-        source = intake.parse_source("https://t.me/synthetic_peer", "synthetic")
-        candidate_id = source["candidates"][0]["candidate_id"]
-        typed = [
-            validate_links.result("verified" if kind == "groups" else "ambiguous",
-                                  "target_preview_verified" if kind == "groups" else "declared_type_mismatch",
-                                  kind, 7 if kind == "groups" else None, "Synthetic Peer", "groups", True)
-            for kind in validate_links.ENTRY_TYPES
-        ]
-        observation = {"candidate_id": candidate_id, "requested_handle": "synthetic_peer",
-                       "status": "verified", "reason": "one_verified_two_bound_mismatches",
-                       "canonical_handle": "synthetic_peer", "observed_type": "groups",
-                       "visible_name": "Synthetic Peer", "member_count": 7, "target_bound": True,
-                       "observed_at": date.today().isoformat(),
-                       "source_classification": "public_telegram_preview", "body_sha256": "b" * 64,
-                       "transport": {"ok": True, "reason": "fetched", "status_code": 200, "attempts": 1},
-                       "type_results": typed}
-        proposed = {"type": "groups", "name": "Synthetic Peer", "handle": "synthetic_peer",
-                    "description": "Synthetic fixture", "description_ru": "Synthetic RU",
-                    "description_kk": "Synthetic KK", "category": next(iter(self.baseline["categories"])),
-                    "last_verified": date.today().isoformat(), "member_count": 7}
-        return {"source": source,
-                "collisions": [{"candidate_id": candidate_id, "status": "clear", "matched_handles": [],
-                                "cross_input_duplicate": False}],
-                "observations": [observation],
-                "editorial": [{"candidate_id": candidate_id, "it_relevant": True,
-                               "kazakhstan_relevant": True, "purely_commercial": False,
-                               "category_valid": True, "locales_complete": True,
-                               "evidence_refs": ["synthetic:editorial"]}],
-                "actions": [{"candidate_id": candidate_id, "action": action, "reason": "synthetic",
-                             "proposed_entry": proposed if action == "add" else None}]}
+    def _bundle(self, action="add", handles=("synthetic_peer",)):
+        source = intake.parse_source(
+            " ".join(f"https://t.me/{handle}" for handle in handles), "synthetic"
+        )
+        collisions, observations, editorial, actions = [], [], [], []
+        for index, candidate in enumerate(source["candidates"], 1):
+            candidate_id, handle = candidate["candidate_id"], candidate["handle"]
+            name, count = f"Synthetic Peer {index}", 6 + index
+            typed = [validate_links.result(
+                "verified" if kind == "groups" else "ambiguous",
+                "target_preview_verified" if kind == "groups" else "declared_type_mismatch",
+                kind, count if kind == "groups" else None, name, "groups", True)
+                for kind in validate_links.ENTRY_TYPES]
+            observations.append({
+                "candidate_id": candidate_id, "requested_handle": handle,
+                "status": "verified", "reason": "one_verified_two_bound_mismatches",
+                "canonical_handle": handle, "observed_type": "groups",
+                "visible_name": name, "member_count": count, "target_bound": True,
+                "observed_at": date.today().isoformat(),
+                "source_classification": "public_telegram_preview", "body_sha256": "b" * 64,
+                "transport": {"ok": True, "reason": "fetched", "status_code": 200, "attempts": 1},
+                "type_results": typed,
+            })
+            collisions.append({"candidate_id": candidate_id, "status": "clear",
+                               "matched_handles": [], "cross_input_duplicate": False})
+            editorial.append({"candidate_id": candidate_id, "it_relevant": True,
+                              "kazakhstan_relevant": True, "purely_commercial": False,
+                              "category_valid": True, "locales_complete": True,
+                              "evidence_refs": ["synthetic:editorial"]})
+            proposed = {
+                "type": "groups", "name": name, "handle": handle,
+                "description": f"Synthetic fixture {index}",
+                "description_ru": f"Synthetic RU {index}",
+                "description_kk": f"Synthetic KK {index}",
+                "category": next(iter(self.baseline["categories"])),
+                "last_verified": date.today().isoformat(), "member_count": count,
+            }
+            actions.append({"candidate_id": candidate_id, "action": action,
+                            "reason": "synthetic", "proposed_entry": proposed if action == "add" else None})
+        return {"source": source, "collisions": collisions, "observations": observations,
+                "editorial": editorial, "actions": actions}
 
     def _write_stage(self, data, stale_projection=False):
         (self.stage / "data/communities.json").write_text(
@@ -482,10 +530,25 @@ class ActionStageBindingTests(unittest.TestCase):
             shutil.copyfile(self.root / "README.md", self.stage / "README.md")
 
     def _exact_add_data(self):
-        data = copy.deepcopy(self.baseline)
-        proposed = dict(self.bundle["actions"][0]["proposed_entry"])
-        data[proposed.pop("type")].append(proposed)
-        return data
+        body = intake.expected_action_stage(
+            self.root, self.bundle["actions"]
+        )["data/communities.json"]
+        return json.loads(body.decode("utf-8"))
+
+    def _write_expected(self, bundle=None):
+        for path, body in intake.expected_action_stage(
+                self.root, (bundle or self.bundle)["actions"]).items():
+            (self.stage / path).write_bytes(body)
+
+    def _approval(self, preview, approved=None):
+        return {"schema_version": intake.APPROVAL_VERSION,
+                "canonical_profile": intake.CANONICAL_PROFILE,
+                "payload_sha256": intake.preview_sha256(preview),
+                "actions_sha256": intake.actions_sha256(preview["actions"]),
+                "approved_candidate_ids": approved if approved is not None else sorted(
+                    row["candidate_id"] for row in preview["actions"] if row["action"] == "add"),
+                "owner_handle": "owner", "owner_evidence_ref": "owner:synthetic",
+                "approved_at": date.today().isoformat()}
 
     def test_reject_only_cannot_bind_unrelated_real_valid_delta(self):
         data = copy.deepcopy(self.baseline)
@@ -494,7 +557,7 @@ class ActionStageBindingTests(unittest.TestCase):
         self._write_stage(data)
         self.assertEqual(intake.validate_staged_project(self.stage),
                          ["scripts/validate_schema.py", "scripts/generate_readme.py --check"])
-        with self.assertRaisesRegex(intake.IntakeError, "exactly baseline"):
+        with self.assertRaisesRegex(intake.IntakeError, "exact action result"):
             intake.build_preview(**self._bundle("reject"), root=self.root, stage_root=self.stage)
 
     def test_reject_only_exact_unchanged_stage_is_a_noop(self):
@@ -509,22 +572,49 @@ class ActionStageBindingTests(unittest.TestCase):
                                        self.stage.parent / "pending.json")
         self.assertEqual(receipt["outcome"], "already_applied_exact")
 
+    def test_zero_add_reformat_is_rejected_despite_real_preflight(self):
+        data = json.loads((self.root / "data/communities.json").read_text(encoding="utf-8"))
+        (self.stage / "data/communities.json").write_text(
+            json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8"
+        )
+        self.assertEqual(intake.validate_staged_project(self.stage),
+                         ["scripts/validate_schema.py", "scripts/generate_readme.py --check"])
+        before = intake.path_hashes(self.root)
+        with self.assertRaisesRegex(intake.IntakeError, "exact action result"):
+            intake.build_preview(**self._bundle("reject"), root=self.root, stage_root=self.stage)
+        self.assertEqual(intake.path_hashes(self.root), before)
+        self.assertFalse((self.stage.parent / "pending.json").exists())
+
     def test_exact_add_is_bound_and_apply_accepts_only_its_generated_stage(self):
-        self._write_stage(self._exact_add_data())
+        self._write_expected()
         preview = intake.build_preview(**self.bundle, root=self.root, stage_root=self.stage)
-        approval = {"schema_version": intake.APPROVAL_VERSION,
-                    "canonical_profile": intake.CANONICAL_PROFILE,
-                    "payload_sha256": intake.preview_sha256(preview),
-                    "actions_sha256": intake.actions_sha256(preview["actions"]),
-                    "approved_candidate_ids": ["candidate:synthetic_peer"], "owner_handle": "owner",
-                    "owner_evidence_ref": "owner:synthetic", "approved_at": date.today().isoformat()}
-        receipt = intake.apply_preview(self.root, self.stage, preview, approval, {"owner:synthetic"},
-                                       self.stage.parent / "pending.json", lambda _stage: ["synthetic"])
+        staged = json.loads((self.stage / "data/communities.json").read_text(encoding="utf-8"))
+        self.assertEqual(staged["localization_review"]["changed_key_count"], 404)
+        self.assertEqual(staged["localization_review"]["payload_sha256"],
+                         validate_schema.review_payload_sha256(staged))
+        receipt = intake.apply_preview(self.root, self.stage, preview, self._approval(preview),
+                                       {"owner:synthetic"}, self.stage.parent / "pending.json")
         self.assertEqual((receipt["outcome"], receipt["applied_candidate_ids"]),
                          ("applied_exact", ["candidate:synthetic_peer"]))
 
+    def test_multiple_adds_and_catalog_last_recovery_pass_real_preflight(self):
+        bundle = self._bundle(handles=("synthetic_peer", "synthetic_second"))
+        self._write_expected(bundle)
+        preview = intake.build_preview(**bundle, root=self.root, stage_root=self.stage)
+        approval, pending = self._approval(preview), self.stage.parent / "pending.json"
+        with self.assertRaisesRegex(RuntimeError, "injected"):
+            intake.apply_preview(self.root, self.stage, preview, approval, {"owner:synthetic"},
+                                 pending, fail_after=1)
+        self.assertEqual((self.root / "data/communities.json").read_bytes(),
+                         (Path(__file__).parent.parent / "data/communities.json").read_bytes())
+        receipt = intake.apply_preview(self.root, self.stage, preview, approval,
+                                       {"owner:synthetic"}, pending)
+        self.assertEqual((receipt["outcome"], len(receipt["applied_candidate_ids"])),
+                         ("recovered_exact", 2))
+
     def test_extra_edit_delete_reorder_wrong_type_field_and_stale_projection_stop(self):
-        for case in ("extra", "edit", "delete", "reorder", "wrong_type", "proposed", "stale"):
+        for case in ("extra", "edit", "delete", "reorder", "wrong_type", "proposed", "stale",
+                     "review_digest", "review_count", "metadata", "reformat"):
             with self.subTest(case=case):
                 data, bundle = self._exact_add_data(), copy.deepcopy(self.bundle)
                 if case == "extra": data["groups"].append(dict(data["groups"][-1], handle="synthetic_extra"))
@@ -533,12 +623,19 @@ class ActionStageBindingTests(unittest.TestCase):
                 elif case == "reorder": data["groups"][0], data["groups"][1] = data["groups"][1], data["groups"][0]
                 elif case == "wrong_type": data["channels"].append(data["groups"].pop())
                 elif case == "proposed": bundle["actions"][0]["proposed_entry"]["description"] = "Changed"
+                elif case == "review_digest": data["localization_review"]["payload_sha256"] = "0" * 64
+                elif case == "review_count": data["localization_review"]["changed_key_count"] += 1
+                elif case == "metadata": data["meta"]["last_updated"] = "2026-08-28"
                 self._write_stage(data, case == "stale")
+                if case == "reformat":
+                    (self.stage / "data/communities.json").write_text(
+                        json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n",
+                        encoding="utf-8")
                 with self.assertRaises(intake.IntakeError):
                     intake.build_preview(**bundle, root=self.root, stage_root=self.stage)
 
     def test_owner_subset_requires_a_successor_preview(self):
-        self._write_stage(self._exact_add_data())
+        self._write_expected()
         preview = intake.build_preview(**self.bundle, root=self.root, stage_root=self.stage)
         approval = {"schema_version": intake.APPROVAL_VERSION,
                     "canonical_profile": intake.CANONICAL_PROFILE,

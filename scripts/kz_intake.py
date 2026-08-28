@@ -18,10 +18,11 @@ from typing import Callable
 from urllib.parse import urlsplit
 
 try:
-    from . import generate_readme, validate_links
+    from . import generate_readme, validate_links, validate_schema
 except ImportError:  # Direct script execution.
     import generate_readme
     import validate_links
+    import validate_schema
 
 CANONICAL_PROFILE = "kz-canonical-json/v1"
 SOURCE_VERSION = "kz-intake-source/v1"
@@ -445,8 +446,13 @@ def validate_observation(row: dict[str, object]) -> None:
             raise IntakeError("successful transport/body tuple differs")
     else:
         reason = transport["reason"]
-        possible_reason = reason == "max_retries_exceeded" or reason.startswith(("url_error:", "error:")) \
-            if transport["status_code"] is None else reason == f"http_{transport['status_code']}"
+        status = transport["status_code"]
+        possible_reason = (
+            transport["attempts"] == validate_links.RETRY_ATTEMPTS
+            and (reason == "max_retries_exceeded" or reason.startswith(("url_error:", "error:")))
+        ) if status is None else (
+            transport["attempts"] == 1 and status != 429 and reason == f"http_{status}"
+        )
         if row["body_sha256"] is not None or results or not possible_reason:
             raise IntakeError("failed transport exposes body/result facts")
     if results and [item["declared_type"] for item in results] != list(validate_links.ENTRY_TYPES):
@@ -638,32 +644,44 @@ def validate_staged_project(stage_root: Path) -> list[str]:
     return results
 
 
-def validate_action_stage(root: Path, stage_root: Path,
-                          actions: list[dict[str, object]]) -> dict[str, str]:
-    """Prove staged catalog/projections are baseline plus exactly the add actions."""
-    baseline = parse_closed_json((root / CONTROLLED_PATHS[0]).read_text(encoding="utf-8"))
-    staged_data = parse_closed_json((stage_root / CONTROLLED_PATHS[0]).read_text(encoding="utf-8"))
-    if not isinstance(baseline, dict) or not isinstance(staged_data, dict):
+def expected_action_stage(root: Path, actions: list[dict[str, object]]) -> dict[str, bytes]:
+    """Derive exact project bytes for baseline plus only the proposed add rows."""
+    baseline_body = (root / CONTROLLED_PATHS[0]).read_bytes()
+    add_actions = [action for action in actions if action["action"] == "add"]
+    if not add_actions:
+        return {path: (root / path).read_bytes() for path in CONTROLLED_PATHS}
+    baseline = parse_closed_json(baseline_body.decode("utf-8"))
+    if not isinstance(baseline, dict):
         raise IntakeError("catalog must be an object")
     expected = copy.deepcopy(baseline)
-    for action in actions:
-        if action["action"] != "add":
-            continue
+    for action in add_actions:
         proposed = dict(action["proposed_entry"])
         entry_type = proposed.pop("type")
         if entry_type not in validate_links.ENTRY_TYPES or not isinstance(expected.get(entry_type), list):
             raise IntakeError("proposed catalog type differs")
         expected[entry_type].append(proposed)
-    if staged_data != expected:
-        raise IntakeError("staged catalog is not exactly baseline plus proposed adds")
+    review = expected.get("localization_review")
+    if not isinstance(review, dict):
+        raise IntakeError("localization review binding is absent")
+    review["changed_key_count"] = len(validate_schema.review_payload_keys(expected))
+    review["payload_sha256"] = validate_schema.review_payload_sha256(expected)
+    expected_data = (json.dumps(expected, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+    if baseline_body != (json.dumps(baseline, ensure_ascii=False, indent=2) + "\n").encode("utf-8"):
+        raise IntakeError("baseline catalog serialization differs from project format")
     generated = generate_readme.generated_outputs(expected)
-    for path in CONTROLLED_PATHS[1:]:
-        expected_body = generated[generate_readme.PROJECT_ROOT / path].encode("utf-8")
-        if (stage_root / path).read_bytes() != expected_body:
-            raise IntakeError(f"staged projection is not generator-exact: {path}")
-        if not any(action["action"] == "add" for action in actions) and \
-                (root / path).read_bytes() != expected_body:
-            raise IntakeError(f"zero-add projection differs from baseline: {path}")
+    return {CONTROLLED_PATHS[0]: expected_data, **{
+        path: generated[generate_readme.PROJECT_ROOT / path].encode("utf-8")
+        for path in CONTROLLED_PATHS[1:]
+    }}
+
+
+def validate_action_stage(root: Path, stage_root: Path,
+                          actions: list[dict[str, object]]) -> dict[str, str]:
+    """Prove all staged bytes are the exact mechanically derived action result."""
+    expected = expected_action_stage(root, actions)
+    for path, body in expected.items():
+        if (stage_root / path).read_bytes() != body:
+            raise IntakeError(f"staged bytes are not the exact action result: {path}")
     return path_hashes(stage_root)
 
 

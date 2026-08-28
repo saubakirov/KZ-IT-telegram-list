@@ -176,7 +176,7 @@ def category_names(data: dict, locale: str) -> object:
 
 
 def build_locale_payload(data: dict, locale: str) -> dict[str, str]:
-    """Build the exact reviewed 131-key payload for one locale."""
+    """Build the exact reviewed payload for one locale."""
     payload: dict[str, str] = {}
 
     meta = data.get("meta", {})
@@ -249,6 +249,22 @@ def review_payload_keys(data: dict) -> list[str]:
         for locale, values in payload.items()
         for key in values
     )
+
+
+def expected_locale_payload_counts(data: dict) -> dict[str, int]:
+    """Derive locale payload cardinalities independently from catalog structure."""
+    categories = data.get("categories", {})
+    archive = data.get("archive", [])
+    north_star = data.get("north_star", {})
+    common = (
+        3 + len(categories) + len(all_live_entries(data)) + 2 * len(archive) + len(UI_KEYS)
+    )
+    counts = {}
+    for locale in LOCALES:
+        non_goals = localized_value(north_star, "non_goals", locale)
+        counts[locale] = common + len(non_goals)
+    counts["en"] += len(README_UI_KEYS)
+    return counts
 
 
 def parse_iso_date(
@@ -392,11 +408,12 @@ def validate_localizations(data: dict) -> list[str]:
 
     if not errors:
         payload = build_review_payload(data)
+        expected_counts = expected_locale_payload_counts(data)
         common_keys = {
             key for key in payload["en"] if not key.startswith("readme_ui.")
         }
         for locale in LOCALES:
-            expected_count = 139 if locale == "en" else 131
+            expected_count = expected_counts[locale]
             if len(payload[locale]) != expected_count:
                 errors.append(
                     f"[localization.{locale}]: expected {expected_count} reviewed keys, got {len(payload[locale])}"
@@ -707,9 +724,10 @@ def main() -> int:
     print(f"[INFO] Categories: {len(categories) if isinstance(categories, dict) else 0}")
     print(f"[INFO] Archive entries: {len(archive) if isinstance(archive, list) else 0}")
     if not validate_localizations(data):
+        payload = build_review_payload(data)
         print(
             "[INFO] Locale payload: "
-            "keys=en:139,ru:131,kk:131; "
+            f"keys={','.join(f'{locale}:{len(payload[locale])}' for locale in LOCALES)}; "
             f"sha256={review_payload_sha256(data)}"
         )
     print(f"[INFO] Errors: {len(errors)}")
