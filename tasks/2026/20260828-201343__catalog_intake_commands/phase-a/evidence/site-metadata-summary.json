@@ -1,0 +1,294 @@
+{
+  "routes": {
+    "en": {
+      "alternates": {
+        "en": "https://saubakirov.github.io/KZ-IT-telegram-list/",
+        "kk": "https://saubakirov.github.io/KZ-IT-telegram-list/kk/",
+        "ru": "https://saubakirov.github.io/KZ-IT-telegram-list/ru/",
+        "x-default": "https://saubakirov.github.io/KZ-IT-telegram-list/"
+      },
+      "canonical": "https://saubakirov.github.io/KZ-IT-telegram-list/",
+      "dataset": {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "dateModified": "2026-08-27",
+        "description": "A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community",
+        "distribution": {
+          "@type": "DataDownload",
+          "contentUrl": "https://saubakirov.github.io/KZ-IT-telegram-list/data/communities.json",
+          "encodingFormat": "application/json"
+        },
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "name": "Awesome Kazakhstan IT Telegram",
+        "sameAs": "https://github.com/saubakirov/KZ-IT-telegram-list",
+        "spatialCoverage": {
+          "@type": "Place",
+          "name": "Kazakhstan"
+        },
+        "url": "https://saubakirov.github.io/KZ-IT-telegram-list/"
+      },
+      "description": "A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community",
+      "h1": [
+        "Awesome Kazakhstan IT Telegram"
+      ],
+      "lang": "en",
+      "open_graph": {
+        "og:description": [
+          "A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community"
+        ],
+        "og:image": [
+          "https://saubakirov.github.io/KZ-IT-telegram-list/assets/social-preview.png"
+        ],
+        "og:image:alt": [
+          "Awesome Kazakhstan IT Telegram"
+        ],
+        "og:image:height": [
+          "640"
+        ],
+        "og:image:width": [
+          "1280"
+        ],
+        "og:locale": [
+          "en_US"
+        ],
+        "og:locale:alternate": [
+          "ru_RU",
+          "kk_KZ"
+        ],
+        "og:site_name": [
+          "Awesome Kazakhstan IT Telegram"
+        ],
+        "og:title": [
+          "Awesome Kazakhstan IT Telegram"
+        ],
+        "og:type": [
+          "website"
+        ],
+        "og:url": [
+          "https://saubakirov.github.io/KZ-IT-telegram-list/"
+        ]
+      },
+      "stable_fragment_count": 93,
+      "telegram_pair_count": 64,
+      "title": "Awesome Kazakhstan IT Telegram",
+      "twitter": {
+        "twitter:card": [
+          "summary_large_image"
+        ],
+        "twitter:description": [
+          "A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community"
+        ],
+        "twitter:image": [
+          "https://saubakirov.github.io/KZ-IT-telegram-list/assets/social-preview.png"
+        ],
+        "twitter:image:alt": [
+          "Awesome Kazakhstan IT Telegram"
+        ],
+        "twitter:title": [
+          "Awesome Kazakhstan IT Telegram"
+        ]
+      }
+    },
+    "kk": {
+      "alternates": {
+        "en": "https://saubakirov.github.io/KZ-IT-telegram-list/",
+        "kk": "https://saubakirov.github.io/KZ-IT-telegram-list/kk/",
+        "ru": "https://saubakirov.github.io/KZ-IT-telegram-list/ru/",
+        "x-default": "https://saubakirov.github.io/KZ-IT-telegram-list/"
+      },
+      "canonical": "https://saubakirov.github.io/KZ-IT-telegram-list/kk/",
+      "dataset": {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "dateModified": "2026-08-27",
+        "description": "Қазақстанның технологиялық қауымдастығына арналған тексерілген Telegram топтары, арналары мен боттарының каталогы",
+        "distribution": {
+          "@type": "DataDownload",
+          "contentUrl": "https://saubakirov.github.io/KZ-IT-telegram-list/data/communities.json",
+          "encodingFormat": "application/json"
+        },
+        "inLanguage": "kk",
+        "isAccessibleForFree": true,
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "name": "Қазақстанның Telegram-дағы IT қауымдастықтары",
+        "sameAs": "https://github.com/saubakirov/KZ-IT-telegram-list",
+        "spatialCoverage": {
+          "@type": "Place",
+          "name": "Kazakhstan"
+        },
+        "url": "https://saubakirov.github.io/KZ-IT-telegram-list/kk/"
+      },
+      "description": "Қазақстанның технологиялық қауымдастығына арналған тексерілген Telegram топтары, арналары мен боттарының каталогы",
+      "h1": [
+        "Қазақстанның Telegram-дағы IT қауымдастықтары"
+      ],
+      "lang": "kk",
+      "open_graph": {
+        "og:description": [
+          "Қазақстанның технологиялық қауымдастығына арналған тексерілген Telegram топтары, арналары мен боттарының каталогы"
+        ],
+        "og:image": [
+          "https://saubakirov.github.io/KZ-IT-telegram-list/assets/social-preview.png"
+        ],
+        "og:image:alt": [
+          "Қазақстанның Telegram-дағы IT қауымдастықтары"
+        ],
+        "og:image:height": [
+          "640"
+        ],
+        "og:image:width": [
+          "1280"
+        ],
+        "og:locale": [
+          "kk_KZ"
+        ],
+        "og:locale:alternate": [
+          "en_US",
+          "ru_RU"
+        ],
+        "og:site_name": [
+          "Awesome Kazakhstan IT Telegram"
+        ],
+        "og:title": [
+          "Қазақстанның Telegram-дағы IT қауымдастықтары"
+        ],
+        "og:type": [
+          "website"
+        ],
+        "og:url": [
+          "https://saubakirov.github.io/KZ-IT-telegram-list/kk/"
+        ]
+      },
+      "stable_fragment_count": 93,
+      "telegram_pair_count": 64,
+      "title": "Қазақстанның Telegram-дағы IT қауымдастықтары",
+      "twitter": {
+        "twitter:card": [
+          "summary_large_image"
+        ],
+        "twitter:description": [
+          "Қазақстанның технологиялық қауымдастығына арналған тексерілген Telegram топтары, арналары мен боттарының каталогы"
+        ],
+        "twitter:image": [
+          "https://saubakirov.github.io/KZ-IT-telegram-list/assets/social-preview.png"
+        ],
+        "twitter:image:alt": [
+          "Қазақстанның Telegram-дағы IT қауымдастықтары"
+        ],
+        "twitter:title": [
+          "Қазақстанның Telegram-дағы IT қауымдастықтары"
+        ]
+      }
+    },
+    "ru": {
+      "alternates": {
+        "en": "https://saubakirov.github.io/KZ-IT-telegram-list/",
+        "kk": "https://saubakirov.github.io/KZ-IT-telegram-list/kk/",
+        "ru": "https://saubakirov.github.io/KZ-IT-telegram-list/ru/",
+        "x-default": "https://saubakirov.github.io/KZ-IT-telegram-list/"
+      },
+      "canonical": "https://saubakirov.github.io/KZ-IT-telegram-list/ru/",
+      "dataset": {
+        "@context": "https://schema.org",
+        "@type": "Dataset",
+        "dateModified": "2026-08-27",
+        "description": "Проверенный каталог IT-групп, каналов и ботов для технологического сообщества Казахстана",
+        "distribution": {
+          "@type": "DataDownload",
+          "contentUrl": "https://saubakirov.github.io/KZ-IT-telegram-list/data/communities.json",
+          "encodingFormat": "application/json"
+        },
+        "inLanguage": "ru",
+        "isAccessibleForFree": true,
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "name": "IT-сообщества Казахстана в Telegram",
+        "sameAs": "https://github.com/saubakirov/KZ-IT-telegram-list",
+        "spatialCoverage": {
+          "@type": "Place",
+          "name": "Kazakhstan"
+        },
+        "url": "https://saubakirov.github.io/KZ-IT-telegram-list/ru/"
+      },
+      "description": "Проверенный каталог IT-групп, каналов и ботов для технологического сообщества Казахстана",
+      "h1": [
+        "IT-сообщества Казахстана в Telegram"
+      ],
+      "lang": "ru",
+      "open_graph": {
+        "og:description": [
+          "Проверенный каталог IT-групп, каналов и ботов для технологического сообщества Казахстана"
+        ],
+        "og:image": [
+          "https://saubakirov.github.io/KZ-IT-telegram-list/assets/social-preview.png"
+        ],
+        "og:image:alt": [
+          "IT-сообщества Казахстана в Telegram"
+        ],
+        "og:image:height": [
+          "640"
+        ],
+        "og:image:width": [
+          "1280"
+        ],
+        "og:locale": [
+          "ru_RU"
+        ],
+        "og:locale:alternate": [
+          "en_US",
+          "kk_KZ"
+        ],
+        "og:site_name": [
+          "Awesome Kazakhstan IT Telegram"
+        ],
+        "og:title": [
+          "IT-сообщества Казахстана в Telegram"
+        ],
+        "og:type": [
+          "website"
+        ],
+        "og:url": [
+          "https://saubakirov.github.io/KZ-IT-telegram-list/ru/"
+        ]
+      },
+      "stable_fragment_count": 93,
+      "telegram_pair_count": 64,
+      "title": "IT-сообщества Казахстана в Telegram",
+      "twitter": {
+        "twitter:card": [
+          "summary_large_image"
+        ],
+        "twitter:description": [
+          "Проверенный каталог IT-групп, каналов и ботов для технологического сообщества Казахстана"
+        ],
+        "twitter:image": [
+          "https://saubakirov.github.io/KZ-IT-telegram-list/assets/social-preview.png"
+        ],
+        "twitter:image:alt": [
+          "IT-сообщества Казахстана в Telegram"
+        ],
+        "twitter:title": [
+          "IT-сообщества Казахстана в Telegram"
+        ]
+      }
+    }
+  },
+  "sitemap_urls": [
+    "https://saubakirov.github.io/KZ-IT-telegram-list/",
+    "https://saubakirov.github.io/KZ-IT-telegram-list/ru/",
+    "https://saubakirov.github.io/KZ-IT-telegram-list/kk/"
+  ],
+  "social_preview": {
+    "png_bytes": 27394,
+    "png_height": 640,
+    "png_sha256": "13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d",
+    "png_width": 1280,
+    "svg_sha256": "9f46ff6812ab2b22d852fb11321f9075ef6e53184f7d97df949ae93214d19d82",
+    "visible_text": [
+      "Awesome Kazakhstan",
+      "IT Telegram",
+      "EN · RU · KK"
+    ]
+  }
+}

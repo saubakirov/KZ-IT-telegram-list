@@ -94,11 +94,12 @@ but still end with schema validation and README regeneration.
 
 | Command | Purpose | Execution boundary |
 |---------|---------|--------------------|
+| `/kz-add` | Parse, probe, preview, and apply one or many candidate links with exact owner approval | CL; parsing/preview are non-mutating and any catalog write requires current exact owner authority |
 | `/kz-stats` | Validate the catalog, show liveness and count deltas, and prepare owner-triaged archive changes | CL; the adapter and pipeline behavior ship in TFW-4 Phase C |
 | `/kz-release` | Prepare a dated verified catalog snapshot under `RELEASE.md` | CL; the adapter ships in TFW-4 Phase C and must stop for explicit owner approval before tag or push |
 
-These names are part of the project contract. Until their Phase C adapters exist, do not claim
-that they are invocable or that a release operation has run.
+These names and their complete synchronized Claude/Codex copies are part of the project contract.
+Command availability is not evidence that any live sweep, intake apply, or release operation ran.
 
 ## JSON Entry Format
 ```json

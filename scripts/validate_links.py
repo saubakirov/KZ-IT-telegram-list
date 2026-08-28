@@ -16,6 +16,7 @@ import json
 import re
 import sys
 import time
+from dataclasses import dataclass
 from datetime import date, datetime
 from html.parser import HTMLParser
 from pathlib import Path
@@ -41,6 +42,17 @@ COUNT_PATTERN = re.compile(
 )
 HANDLE_IN_TEXT_PATTERN = re.compile(r"@([a-zA-Z][a-zA-Z0-9_]{4,31})")
 CONTACT_TITLE_PATTERN = re.compile(r"Telegram:\s*Contact\s*@([a-zA-Z][a-zA-Z0-9_]{4,31})", re.IGNORECASE)
+
+
+@dataclass(frozen=True)
+class FetchResult:
+    """One immutable transport result, deliberately free of identity interpretation."""
+
+    ok: bool
+    reason: str
+    body: bytes | None
+    status_code: int | None
+    attempts: int
 
 
 class TelegramPreviewParser(HTMLParser):
@@ -273,8 +285,8 @@ def classify_response(html: str, handle: str, entry_type: str) -> dict[str, obje
     )
 
 
-def check_link_with_retry(handle: str, entry_type: str) -> dict[str, object]:
-    """Fetch and classify one Telegram target with the existing retry semantics."""
+def fetch_preview_with_retry(handle: str) -> FetchResult:
+    """Fetch one Telegram preview without interpreting identity or peer type."""
     url = f"https://t.me/{handle}"
     for attempt in range(RETRY_ATTEMPTS):
         try:
@@ -286,29 +298,39 @@ def check_link_with_retry(handle: str, entry_type: str) -> dict[str, object]:
                 },
             )
             with urlopen(request, timeout=TIMEOUT) as response:
-                html = response.read().decode("utf-8", errors="ignore")
-            return classify_response(html, handle, entry_type)
+                body = response.read()
+                status = getattr(response, "status", None)
+            return FetchResult(True, "fetched", body, status, attempt + 1)
         except HTTPError as error:
             if error.code == 429:
                 wait = RETRY_BACKOFF ** (attempt + 1)
                 print(f"[WARNING] Rate limited; waiting {wait}s before retry")
                 time.sleep(wait)
                 continue
-            return result("failed", f"http_{error.code}", entry_type)
+            return FetchResult(False, f"http_{error.code}", None, error.code, attempt + 1)
         except URLError as error:
             if attempt < RETRY_ATTEMPTS - 1:
                 wait = RETRY_BACKOFF ** attempt
                 time.sleep(wait)
                 continue
-            return result("failed", f"url_error:{error.reason}", entry_type)
+            return FetchResult(False, f"url_error:{error.reason}", None, None, attempt + 1)
         except Exception as error:
             if attempt < RETRY_ATTEMPTS - 1:
                 wait = RETRY_BACKOFF ** attempt
                 time.sleep(wait)
                 continue
-            return result("failed", f"error:{error}", entry_type)
+            return FetchResult(False, f"error:{error}", None, None, attempt + 1)
 
-    return result("failed", "max_retries_exceeded", entry_type)
+    return FetchResult(False, "max_retries_exceeded", None, None, RETRY_ATTEMPTS)
+
+
+def check_link_with_retry(handle: str, entry_type: str) -> dict[str, object]:
+    """Fetch and classify one Telegram target with the existing retry semantics."""
+    fetched = fetch_preview_with_retry(handle)
+    if not fetched.ok or fetched.body is None:
+        return result("failed", fetched.reason, entry_type)
+    html = fetched.body.decode("utf-8", errors="ignore")
+    return classify_response(html, handle, entry_type)
 
 
 def load_data(path: Path = DATA_FILE) -> dict:
