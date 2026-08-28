@@ -87,8 +87,8 @@ Evidence verdict: 7/9 VERIFIED, 0 DEFERRED, 0 BLOCKED, 2 N/A
 
 Primary refreshed bindings:
 
-- `public-http.json`: 17,255 bytes / `2a5d501b9b9a0c66c246e2d66c08badfc749a893c484db1c8acf945e2565cdf0`, canonical LF.
-- `external-checkpoint.md`: 8,341 bytes / `dd859005a2024f43b505829a33e05aacff3524ec9a76d2ec0ef644e5ef3ea979`.
+- `public-http.json`: 17,259 bytes / `11f508d8b92021bd37f0707b43b8d8efc086749c174c59982729d7d8411f84c7`, canonical LF.
+- `external-checkpoint.md`: 8,345 bytes / `5bc71240b68e27e71163eb4fccfb76c4777dddbf069ed87c0c983aead8ce6b83`.
 - `browser-matrix.json`: 87,008 bytes / `35378c30a592629b1b4275f748d1d68c04a766f4820baef62cf40f9032135bd8`; zero CRLF; 6 cases; 30/30 links.
 - Public EN/RU/KK: 33,669 / 40,530 / 41,343 bytes with exact reviewed hashes.
 - Public sitemap/JSON/CSS/PNG: 338 / 45,260 / 2,035 / 27,394 bytes with exact reviewed hashes.

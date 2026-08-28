@@ -4,7 +4,7 @@
 > **Revalidated after harness recovery**: 2026-08-28T19:25:03.0692872+05:00
 > **Mode**: authenticated read-only GitHub REST/GraphQL, read-only Git ref/history probes,
 > unauthenticated public GET/HEAD, and live Chrome inspection
-> **Authenticated actor**: `saubakirov`
+> **Authenticated actor**: `c0rp-aubakirov`
 > **Executor mutation count**: 0
 > **Eligible reviewed deployment**: `bd7af42165c341d653e3efbb20091c131c9f7a40`
 

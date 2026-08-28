@@ -20,7 +20,7 @@
 | CI / Pipeline | Pages `legacy` build from `master` `/`; latest authenticated build is `built` at exact `bd7af421…` |
 | Local build | Official `actions/jekyll-build-pages:v1.0.13` image at digest `sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041` |
 | Browser | Existing six-case live Google Chrome matrix plus fresh authenticated Chrome Settings card inspection; no control activated |
-| GitHub API | Authenticated read-only REST/GraphQL as `saubakirov`; credential value neither printed nor stored |
+| GitHub API | Authenticated read-only REST/GraphQL as `c0rp-aubakirov`; credential value neither printed nor stored |
 | Advisory | Existing bound Antigravity `gemini-3.7-flash-high` result; no rerun because visible copy, metadata, SVG, and PNG bytes are unchanged |
 
 ## Evidence
@@ -109,10 +109,10 @@ returned GET/HEAD 404. The public sitemap contains exactly `/`, `/ru/`, and `/kk
 as 38 groups, 20 channels, 4 bots, 19 categories, 2 archived entries, and
 `last_updated=2026-08-27`.
 
-`public-http.json` is canonical LF, 17,255 bytes, SHA-256
-`2a5d501b9b9a0c66c246e2d66c08badfc749a893c484db1c8acf945e2565cdf0`.
-`external-checkpoint.md` is 8,341 bytes, SHA-256
-`dd859005a2024f43b505829a33e05aacff3524ec9a76d2ec0ef644e5ef3ea979`.
+`public-http.json` is canonical LF, 17,259 bytes, SHA-256
+`11f508d8b92021bd37f0707b43b8d8efc086749c174c59982729d7d8411f84c7`.
+`external-checkpoint.md` is 8,345 bytes, SHA-256
+`5bc71240b68e27e71163eb4fccfb76c4777dddbf069ed87c0c983aead8ce6b83`.
 The refreshed `jekyll-build.txt` is 5,899 bytes, SHA-256
 `d03d372e69d73061fecd8a07b6ce03932a5c3a15c685fb25ccb6cc4ae92c65de`.
 The parsed metadata summary remains 11,097 bytes, SHA-256
