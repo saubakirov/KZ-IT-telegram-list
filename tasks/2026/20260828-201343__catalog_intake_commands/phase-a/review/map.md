@@ -6,48 +6,43 @@
 
 ## Understanding
 
-The Executor added a loss-accountable Telegram candidate intake engine, a fetch-once seam around
-the existing classifier, closed preview/approval/receipt records, and a fixture-only exact-state
-apply boundary. It also installed complete synchronized Claude/Codex copies of `kz-add`,
-`kz-stats`, and `kz-release`, then bound calibration, runtime, scope, production-hash, regression,
-and built-site evidence without applying a production candidate.
+The Executor revised the candidate-intake authority boundary after the prior review. The revision
+derives a staged catalog from the baseline plus proposed ADD rows, requires four generator-exact
+projections, rederives that state during apply, writes the catalog last for recoverability, and
+validates serialized observations against enumerated classifier and transport families.
 
 The revision changes only `scripts/kz_intake.py` and `scripts/test_kz_intake.py` after the accepted
-runtime smokes. It addresses the six findings from the first formal review: literal trailing-dot
-authority rejection, recursive integer/evidence/transport validation, neutral controlled paths,
-complete runtime records, a non-revealing partition receipt, and an exact-revision Jekyll log.
+command-runtime smokes. The RF otherwise carries forward the already-reviewed lossless source
+parser, preserved classifier seam, closed preview/approval/marker/receipt objects, synchronized
+Claude/Codex commands, calibration artifacts, production hashes, and exact-SHA site-build record.
 
 ## TS ↔ RF Alignment
 
 This table maps requirements to RF claims only. Whether the claims hold is deferred to Verify.
 
-| TS requirement | RF claim | Addressed? |
-|----------------|----------|------------|
-| AC-1 — lossless closed candidate source grammar | RF §3 claims occurrence-first accounting, literal fixed HTTPS authorities, and explicit trailing-dot rejection. | ✅ |
-| AC-2 — non-mutating arbitrary-candidate observation | RF §3 claims fetch-once three-type reconciliation through unchanged classifier calls and fail-closed handling of every non-exact tuple. | ✅ |
-| AC-3 — closed preview and separate current authority | RF §3 claims recursive closed schemas, complete rendering, exact action binding, and a separate durable owner envelope. | ✅ |
-| AC-4 — strict idempotent crash-aware apply | RF §3 claims staged validation, neutral-aware B/A/X state, exact no-op/recovery behavior, and a separate receipt. | ✅ |
-| AC-5 — complete synchronized command inventory | RF §3 claims exactly three complete byte-identical command pairs with path neutrality and preserved stats/release authority stops. | ✅ |
-| AC-6 — sealed evaluation boundary | RF §3 claims only the eight disclosed calibration cases entered execution and cites a non-revealing receipt for exact full-partition membership. | ✅ |
-| AC-7 — fresh Claude and Codex literal behavior | RF §3 claims complete fresh accepted records, with Claude's local-load proof expressly limited and Codex reporting absolute loaded paths/hashes. | ✅ |
-| AC-8 — regression, build, scope, and no mutation | RF §3 claims all deterministic gates, official-image build, exact 12-path/1,957-line scope, controlled hashes, and zero external/production mutation. | ✅ |
+| TS requirement | RF claim | Aligned? |
+|----------------|----------|----------|
+| AC-1 — lossless closed candidate source grammar | RF §3 claims occurrence-first accounting, fixed literal HTTPS authorities, and explicit non-candidate dispositions. | ✅ |
+| AC-2 — non-mutating arbitrary-candidate observation | RF §3 claims one fetch, three unchanged classifier calls, and acceptance of only exact producer-possible transport/classifier tuples. | ✅ |
+| AC-3 — closed preview and separate current authority | RF §3 claims recursively closed records, exact action/stage derivation, complete rendering, and a separate durable owner envelope. | ✅ |
+| AC-4 — strict idempotent crash-aware apply | RF §3 claims apply-time semantic rederivation, real schema/currency preflight, neutral B/A/X state, catalog-last recovery, exact no-op, and receipt binding. | ✅ |
+| AC-5 — complete synchronized command inventory | RF §3 claims exactly three standalone byte-identical command pairs with path neutrality and preserved authority stops. | ✅ |
+| AC-6 — sealed evaluation boundary | RF §3 claims only the eight disclosed calibration cases entered execution and cites the non-revealing full-partition receipt. | ✅ |
+| AC-7 — fresh Claude and Codex literal behavior | RF §3 claims complete accepted records, with Claude's behavior/static binding limitation distinguished from Codex's explicit loaded-path report. | ✅ |
+| AC-8 — regression, build, scope, and no mutation | RF §3 claims 42 tests, predecessor matrices, classifier preservation, exact 12-path/2,230-line scope, official-image build, controlled hashes, and zero mutation. | ✅ |
 
 ## Deviations from TS
 
-- The configured generic full-catalog live validator was not run. The approved Phase A boundary
-  replaces it with predecessor offline matrices and exactly eight disclosed calibration probes.
-- The historical Phase C harness's full `main()` was not used because its fixed oldest-date
-  assertion is stale. Its TS-relevant link and command matrices were invoked directly.
-- Three pre-acceptance Claude harness deviations are retained and excluded. The accepted Claude
-  records establish project-setting use and local-body-matching behavior plus static path/hash
-  parity, but Claude did not echo an absolute loaded path. Codex separately reports absolute
-  loaded paths and hashes.
-- Runtime smokes remain bound to `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a`; the revised
-  implementation SHA changes only intake code/tests and leaves all command bodies byte-identical.
-- The allocation receipt is Coordinator-owned. Under the review's explicit post-freeze authority,
-  the Reviewer may reproduce it from sealed material without disclosing or using holdout content.
-- Production apply, full-catalog live sweep, browser/authenticated fallback, release, tag, push,
-  and deployment remain outside Phase A and were not performed.
+- The configured generic full-catalog live validator was not run. The approved phase boundary uses
+  predecessor offline matrices plus exactly eight disclosed calibration probes.
+- The historical Phase C harness's complete `main()` remains inapplicable because its fixed
+  oldest-live assertion is stale; its TS-relevant link and command matrices were invoked directly.
+- Accepted Claude/Codex smokes remain at `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a` because only
+  intake code/tests changed later. Claude proves behavior plus static local path/hash binding but
+  did not echo its loaded absolute path; Codex explicitly reports loaded absolute paths/hashes.
+- The exact-SHA build log binds revised implementation `20c19505d5e156c3f0fe563877a03f387322aca2`.
+- Production apply, holdout execution, full-catalog live sweep, browser/authenticated fallback,
+  release, tag, push, and deployment remain outside Phase A and were not performed.
 
 ## Checkpoint
 
