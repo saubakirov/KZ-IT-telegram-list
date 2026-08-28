@@ -67,3 +67,26 @@ committed_candidate=1280x640 24-bit RGB 27394 bytes sha256=13e34836df46d850b6a3f
 inspection_attachment=27394 bytes sha256=13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d
 reproduction_verdict=PASS; both fresh rerenders are byte-identical to assets/social-preview.png and the inspection attachment
 trace_normalization=the single trailing ASCII space emitted after the Jekyll Generating label was removed from this text trace; build output semantics are unchanged
+
+post_publication_revalidation:
+checked_at=2026-08-28T18:10:03.0522358+05:00
+deploy_sha=bd7af42165c341d653e3efbb20091c131c9f7a40
+source_method=exact git archive of deploy_sha
+image=ghcr.io/actions/jekyll-build-pages@sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041
+image_id=sha256:ac7c0ad006b3868f2c25dd48296cd135971438675ce72caacd4c9dc6d3f958fa
+build_exit=0
+metadata_test=PASS; Built EN/RU/KK route structure is valid
+public_metadata_test=PASS; public mirror without the expected 404 bodies is valid
+metadata_summary=11097 bytes sha256=bbf30af0cdf5fbc26d547a80e97d9199035841e47b370cd2b0dc238a527f0552
+metadata_summary_public_equals_local=true
+public_en_equals_local=true; 33669 bytes sha256=64597def18f8777f92739d131649299c1639af1923f7cccde34b86d7ea61de21
+public_ru_equals_local=true; 40530 bytes sha256=fef3499ecf2d5678a52fea4d1a93d51ce5d168d883652087bb02d776c144ec0f
+public_kk_equals_local=true; 41343 bytes sha256=2d4465e7dc55856683247bf036f113380b452db1053424d82935dff81d4fba49
+public_sitemap_equals_local=true; 338 bytes sha256=79dcb9bbd3dda14054fe33695f89f6f62cdeea08881a427ec059d5e2d1665767
+public_json_equals_local=true; 45260 bytes sha256=a46f893d6d73e2ecc760913be9075873b79470b675807cc585933cb457cf963d
+public_css_equals_local=true; 2035 bytes sha256=6079176c27db6ced57ff8ad71c7671cbd694a13a39322566da4d2b9b3f157b6d
+public_png_equals_local=true; 27394 bytes sha256=13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d
+built_robots_txt=false
+built_llms_txt=false
+public_project_robots_status=404
+public_project_llms_status=404

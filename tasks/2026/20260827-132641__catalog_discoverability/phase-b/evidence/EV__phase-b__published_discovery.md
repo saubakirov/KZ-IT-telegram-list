@@ -1,50 +1,52 @@
 # EV — 20260827-132641__catalog_discoverability / Phase B: Published Discovery
 
-> **Date**: 2026-08-27
+> **Date**: 2026-08-28
 > **Author**: saubakirov (Codex Executor)
 > **Task**: 20260827-132641__catalog_discoverability
 > **TS**: [TS Phase B](../TS__phase-b__published_discovery.md)
-> **Approved handoff**: `4776edfa29304eb0955393af6f288a654fdac822`
+> **Integrated pre-execution base**: `3280a618b6d9f1a1afd87a51ef382f6922baa0ae`
+> **Reviewed deployed SHA**: `bd7af42165c341d653e3efbb20091c131c9f7a40`
 > **Approved Phase A base**: `d9fe27c6dce80008326fa8eb731d3aff40fd3726`
-> **Bounded REVISE base**: `4538836b80426980f7823495cffbabed1ceb0fb0`
 
 ---
 
 ## Environment
 
 | Field | Value |
-|-------|-------|
-| OS | Windows 11 `10.0.26200`; Python platform `Windows-11-10.0.26200-SP0` |
-| Language / Runtime | Python 3.13.5; Git 2.42.0.windows.1; PowerShell 5.1.26100.8655; CairoSVG 2.8.2 |
-| Deploy target | Local production Jekyll build only; no deployment or publication |
-| CI / Pipeline | Official GitHub-maintained `actions/jekyll-build-pages:v1.0.13` image at immutable digest `sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041`; Docker 24.0.6 |
-| Pages runtime | Ruby 3.3.4; Bundler 2.5.11; `github-pages` 232; Jekyll 3.10.0; `jekyll-sitemap` 1.4.0 installed transitively but intentionally not enabled |
-| Browser | Codex in-app Chromium browser against read-only localhost build |
-| Advisory | Antigravity CLI `agy.exe`; exact `gemini-3.7-flash-high`; plan+sandbox |
+|---|---|
+| OS | Windows 11 `10.0.26200`; PowerShell 5.1.26100.8655 |
+| Language / Runtime | Python 3.13.5; Git 2.42.0.windows.1 |
+| Deploy target | Public GitHub Pages project site at `https://saubakirov.github.io/KZ-IT-telegram-list/` |
+| CI / Pipeline | Pages `legacy` build from `master` `/`; latest authenticated build is `built` at exact `bd7af421…` |
+| Local build | Official `actions/jekyll-build-pages:v1.0.13` image at digest `sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041` |
+| Browser | Live Google Chrome through the ChatGPT browser extension; exact 390×844 and 1366×768 viewport overrides |
+| GitHub API | Authenticated read-only REST/GraphQL as `c0rp-aubakirov`; credential value neither printed nor stored |
+| Advisory | Existing bound Antigravity `gemini-3.7-flash-high` result; no rerun because visible copy, metadata, SVG, and PNG bytes are unchanged |
 
 ## Evidence
 
 | # | AC | What was verified | Environment | Result | Artifact |
-|---|----|--------------------|-------------|--------|----------|
-| E1 | AC-1 | Root-source candidate built successfully with the supported Pages dependency; one layout produced exactly EN/RU/KK routes plus the repository-owned sitemap; no built `robots.txt` | Pinned official Pages container | VERIFIED | `jekyll-build.txt` |
-| E2 | AC-2 | Exact locale, singleton title/description/canonical, and reciprocal `en`/`ru`/`kk`/`x-default` alternates on all built routes | Local parsed built HTML | N/A | `metadata-summary.json` |
-| E3 | AC-3 | Exact Open Graph, Twitter, Dataset JSON-LD, JSON distribution, and final 1280×640 preview bytes/text; two fresh exact-command rerenders are byte-identical to the committed candidate | Local parser, pinned CairoSVG environment, and final-byte image viewer | VERIFIED | `metadata-summary.json`; `social-preview-inspection.png`; `jekyll-build.txt` |
-| E4 | AC-4 | Built sitemap contains exactly canonical `/`, `/ru/`, `/kk/`; source and build contain no project `robots.txt` or `llms.txt` | Supported build plus XML assertion | N/A | `metadata-summary.json`; `jekyll-build.txt` |
-| E5 | AC-5 | EN/RU/KK at 390×844 and 1366×768 have zero horizontal overflow, zero hidden critical elements, zero executable/external scripts, loaded CSS, working representative links, and a one-action type jump that leaves the first entry in view | In-app Chromium browser plus read-only localhost HTTP status probe | VERIFIED | `browser-matrix.json`; six screenshots |
-| E6 | AC-6 | Phase A digest, source facts, README bytes, visible bodies, all targets/fragments, and all twelve predecessor tests are preserved; one preservation test was added and 13/13 pass | Local Python/Git immutable-base comparison | N/A | Commands and hashes below |
-| E7 | AC-7 | Current repository/Pages/settings/public state captured through authenticated read-only APIs and public HTTP; exact proposed settings and later runbook recorded; every post-deploy outcome remains deferred | GitHub REST/GraphQL, Pages HTTP, `git ls-remote` | DEFERRED | `external-checkpoint.md` |
-| E8 | AC-8 | Exact final content-fed copy/metadata bundle received `PASS`, no findings, no nits from pinned Antigravity in request-review permission mode, with object-valued UTF-8 NDJSON and no tool calls or permission bypass | Antigravity CLI | VERIFIED | `antigravity-input.txt`; `antigravity-output.jsonl` |
-| E9 | AC-9 | Implementation stays at the Coordinator-revised 13-path boundary (8 new, 5 modified), and all evidence is task-local; formal REVIEW remains outside Executor ownership | Git/path/role audit | N/A | Scope record below |
+|---|---|---|---|---|---|
+| E1 | AC-1 | Exact deployed SHA rebuilds through the supported Pages surface; public EN/RU/KK, JSON, CSS, PNG, and sitemap bodies are byte-identical to that fresh build | Pinned Pages container plus public GET/HEAD | VERIFIED | `jekyll-build.txt`; `public-http.json` |
+| E2 | AC-2 | Public EN/RU/KK have exact language, singleton title/description/canonical, and reciprocal `en`/`ru`/`kk`/`x-default` metadata; public parser output is byte-identical to local | Public route bodies and metadata parser | VERIFIED | `metadata-summary.json`; `public-http.json` |
+| E3 | AC-3 | Public Open Graph, Twitter, Dataset JSON-LD, JSON distribution, and page-level preview point to the reviewed 1280×640 PNG; asset bytes and reproduction contract remain exact | Public route heads/assets plus prior deterministic raster proof | VERIFIED | `metadata-summary.json`; `public-http.json`; `social-preview-inspection.png`; `jekyll-build.txt` |
+| E4 | AC-4 | Public Liquid sitemap is exactly the three canonical routes; project `robots.txt` and `llms.txt` return GET/HEAD 404 and are absent from the local build | Public GET/HEAD plus XML/local build assertions | VERIFIED | `public-http.json`; `jekyll-build.txt` |
+| E5 | AC-5 | Fresh live EN/RU/KK cases at both exact viewports have no overflow, hidden critical content, scripts, clipping, or obstruction; type navigation works; exact observed links pass 30/30 | Live Chrome plus read-only HEAD checks | VERIFIED | `browser-matrix.json`; six fresh screenshots |
+| E6 | AC-6 | Phase A digest/source/README/visible-body/target/fragment/test contract is unchanged; generator/schema gates and all 13 tests pass | Local immutable-base and Python checks | N/A | Deterministic gates below |
+| E7 | AC-7 | Exact deploy/ref/build/settings/public/tag state is captured with zero Executor mutation, but the repository-card custom social preview still resolves to GitHub's generated fallback | Authenticated GitHub REST/GraphQL, Git history, public HTTP | BLOCKED | `external-checkpoint.md`; `public-http.json` |
+| E8 | AC-8 | Exact visible copy/metadata/asset bytes remain those formally approved and previously passed by the bound Antigravity advisory; refreshed deployed evidence is ready for the same Reviewer | Existing advisory and formal candidate REVIEW plus byte comparison | VERIFIED | `antigravity-input.txt`; `antigravity-output.jsonl`; `public-http.json` |
+| E9 | AC-9 | This refresh changes only Executor-owned EV/RF/evidence; implementation remains the approved 13-path boundary, lifecycle remains `BLOCKED`, and forbidden Coordinator/Reviewer artifacts are untouched | Git path/role audit | N/A | RF and final Git audit |
 
 ## Verdict
 
-Evidence verdict: 4/9 VERIFIED, 1 DEFERRED, 0 BLOCKED, 4 N/A
+Evidence verdict: 6/9 VERIFIED, 0 DEFERRED, 1 BLOCKED, 2 N/A
 
-This verdict covers the repository-controlled candidate only. Formal acceptance belongs to the
-existing Reviewer task. Public deployment, settings effects, indexing, search visibility, and
-retrieval remain deferred pending explicit authorization.
+This is not a complete-publication verdict. The sole material blocker is the repository-level custom
+social-preview setting. Search Console submission/index coverage also remains explicitly DEFERRED and
+unauthorized, but it is not represented as a second blocking failure. Formal disposition belongs to
+the same Reviewer task.
 
-## Deterministic gates
+## Deterministic gates and preservation
 
 ```text
 python scripts/generate_readme.py --check
@@ -56,136 +58,152 @@ python scripts/validate_schema.py
 
 python -m unittest scripts.test_catalog_generation -v
   -> Ran 13 tests; OK
-  -> original Phase A test-name set is an asserted subset of the current suite
+  -> all twelve Phase A predecessor tests remain present
 
-python scripts/test_site_metadata.py --site _site --summary evidence/metadata-summary.json
+python scripts/test_site_metadata.py --site <exact-deploy-build> --summary <local-summary>
   -> Built EN/RU/KK route structure is valid
+
+python scripts/test_site_metadata.py --site <public-success-mirror> --summary <public-summary>
+  -> Built EN/RU/KK route structure is valid
+  -> public and local summaries are byte-identical
 
 git diff --check
   -> no output
 ```
 
-Exact preservation bindings:
+- Locale payload digest: exact approved
+  `51db402da00f85f25dd533d415c9d7941402c69b5892952882bafc6122d2a6fc`.
+- README: 16,627 bytes / `3b1d70624d7f529c6e7f712574783d468afe5025d6c1bc0173466dd80d5c016d`,
+  byte-identical to Phase A.
+- `data/communities.json`: 45,260 bytes /
+  `a46f893d6d73e2ecc760913be9075873b79470b675807cc585933cb457cf963d`,
+  byte-identical to Phase A and the public response.
+- Stripped EN/RU/KK body hashes remain `c26880eb87025557b3426d870b04d6ef352cd610693c7cfaf6b40a6c57eaf038`,
+  `127cf17b024367a3ac484ab29883db2b52d97e331e817f3b4880121f6c4d2d7e`, and
+  `92b32502cf67768e58fd818a62d0da00375dfdd8db0a7ac418ea07b4f4b2d1f1`.
 
-- README: 16,627 bytes, SHA-256 `3b1d70624d7f529c6e7f712574783d468afe5025d6c1bc0173466dd80d5c016d`, byte-identical to Phase A.
-- `data/communities.json`: SHA-256 `a46f893d6d73e2ecc760913be9075873b79470b675807cc585933cb457cf963d`, byte-identical to Phase A.
-- Locale payload: exact approved digest `51db402da00f85f25dd533d415c9d7941402c69b5892952882bafc6122d2a6fc`.
-- Stripped EN body: SHA-256 `c26880eb87025557b3426d870b04d6ef352cd610693c7cfaf6b40a6c57eaf038`, byte-identical to Phase A.
-- Stripped RU body: SHA-256 `127cf17b024367a3ac484ab29883db2b52d97e331e817f3b4880121f6c4d2d7e`, byte-identical to Phase A.
-- Stripped KK body: SHA-256 `92b32502cf67768e58fd818a62d0da00375dfdd8db0a7ac418ea07b4f4b2d1f1`, byte-identical to Phase A.
+## Deployment, settings, and public-byte bindings
 
-## Build and metadata bindings
+- Authenticated `master`: `bd7af42165c341d653e3efbb20091c131c9f7a40`.
+- Exactly one local remote-tracking `update by push` reflog entry targets that SHA. Prior remote
+  `e4986e787018dbe92f51733e243916eba60cd2c4` is its exact merge base/ancestor; authenticated
+  comparison is ahead 43, behind 0.
+- Latest Pages build: `built` at exact `bd7af421…`, created `2026-08-28T12:44:30Z`, updated
+  `2026-08-28T12:45:02Z`, no error; source remains `master` `/`, HTTPS enforced.
+- Description, homepage, and the exact sorted twelve-topic set match the authorized targets.
+- Historical `data-2026-08-27` tag remains object
+  `45d9c3cb12c1e71c7df7429f1da32028bcfbeb89`, peeled commit
+  `ee2e4f8f69b7bfc66b905801f950d8e832caa02f`.
 
-- Built EN: 33,669 bytes; SHA-256 `64597def18f8777f92739d131649299c1639af1923f7cccde34b86d7ea61de21`.
-- Built RU: 40,530 bytes; SHA-256 `fef3499ecf2d5678a52fea4d1a93d51ce5d168d883652087bb02d776c144ec0f`.
-- Built KK: 41,343 bytes; SHA-256 `2d4465e7dc55856683247bf036f113380b452db1053424d82935dff81d4fba49`.
-- Built sitemap: 338 bytes; SHA-256 `79dcb9bbd3dda14054fe33695f89f6f62cdeea08881a427ec059d5e2d1665767`.
-- Metadata summary: 11,097 bytes; SHA-256 `bbf30af0cdf5fbc26d547a80e97d9199035841e47b370cd2b0dc238a527f0552`.
-- Final CSS: 2,035 bytes; SHA-256 `6079176c27db6ced57ff8ad71c7671cbd694a13a39322566da4d2b9b3f157b6d`.
+| Public output | Status | Bytes | SHA-256 | Exact deploy build |
+|---|---:|---:|---|---|
+| EN `/` | 200 | 33,669 | `64597def18f8777f92739d131649299c1639af1923f7cccde34b86d7ea61de21` | identical |
+| RU `/ru/` | 200 | 40,530 | `fef3499ecf2d5678a52fea4d1a93d51ce5d168d883652087bb02d776c144ec0f` | identical |
+| KK `/kk/` | 200 | 41,343 | `2d4465e7dc55856683247bf036f113380b452db1053424d82935dff81d4fba49` | identical |
+| Sitemap | 200 | 338 | `79dcb9bbd3dda14054fe33695f89f6f62cdeea08881a427ec059d5e2d1665767` | identical |
+| JSON | 200 | 45,260 | `a46f893d6d73e2ecc760913be9075873b79470b675807cc585933cb457cf963d` | identical |
+| CSS | 200 | 2,035 | `6079176c27db6ced57ff8ad71c7671cbd694a13a39322566da4d2b9b3f157b6d` | identical |
+| Page preview PNG | 200 | 27,394 | `13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d` | identical |
 
-## Browser and asset bindings
+GET and HEAD both returned 200 for those seven outputs. Project `robots.txt` and `llms.txt` both
+returned GET/HEAD 404. The public sitemap contains exactly `/`, `/ru/`, and `/kk/`. Public JSON parses
+as 38 groups, 20 channels, 4 bots, 19 categories, 2 archived entries, and
+`last_updated=2026-08-27`.
 
-The in-app browser supplied every viewport, DOM/head/style/visibility/overflow, screenshot, and
-one-action navigation assertion. Its read-only page-evaluation scope did not expose `fetch`, so the
-exact representative hrefs captured from each browser case were status-checked against the same
-read-only localhost server with an ordinary HTTP GET before canonical-LF serialization. All 30 case
-checks are HTTP 200; no public or repository state was mutated.
+`public-http.json` is canonical LF, 14,666 bytes, SHA-256
+`133cd56811d202577b7f0dca9198a2ba0831d3702d232c317f31f8203af43bf8`.
+`external-checkpoint.md` is 7,454 bytes, SHA-256
+`ec75b1176ab19bbba21935bf10f89bb9afe4940a79d21f7eb06f9788aa4b877d`.
+The refreshed `jekyll-build.txt` is 5,899 bytes, SHA-256
+`d03d372e69d73061fecd8a07b6ce03932a5c3a15c685fb25ccb6cc4ae92c65de`.
+The parsed metadata summary remains 11,097 bytes, SHA-256
+`bbf30af0cdf5fbc26d547a80e97d9199035841e47b370cd2b0dc238a527f0552`.
 
-The final canonical-LF `browser-matrix.json` is 70,133 bytes with SHA-256
-`f96aa96e6a60a8d26d46d570e463f516944ca60dbc0995121e34a6bcd29cb269`.
-The binding was computed first from the staged Git blob, then independently verified from
-`git show de4060bf817bfb69441f08344f82dd14bc856649:tasks/2026/20260827-132641__catalog_discoverability/phase-b/evidence/browser-matrix.json`.
-The durable committed blob is exact: zero CRLF pairs and 1,021 LF bytes.
-Every matrix case reports its exact viewport, DOM rectangles, head counts, local response checks,
-overflow/visibility/script facts, screenshot byte count, and post-click fragment/entry position.
+## Live browser bindings
 
-| Screenshot | SHA-256 |
-|---|---|
-| `browser-390x844-en.png` | `76b3e944089d80a0885964c301338b426bd99510bc47fe26fb9d387437a6b1ab` |
-| `browser-390x844-ru.png` | `f3d7f090841c933a68021d700671949a265e6c71af606cdba57a5e77aafe82ed` |
-| `browser-390x844-kk.png` | `9647f0ac5409a20cbc923567a1e640a9d557ba43ebf71a1a136fcfa164e2ec0d` |
-| `browser-1366x768-en.png` | `0516e47f42a98279c6d19324d5ce83072029e6225f9e5430176971fecaa9ce5e` |
-| `browser-1366x768-ru.png` | `a2a623b09cf435b997eea15c79a02692e3ab43092dccb0f53a26d8c9b9e76396` |
-| `browser-1366x768-kk.png` | `d1f2adc666d454013ec05cbcace4a84c5e14d9c0a76316808a6af1a6301434ff` |
+The browser supplied exact viewport, DOM/head/style/visibility/overflow, screenshot, and one-action
+navigation facts. Its read-only page-evaluation scope did not expose `fetch`; the exact five hrefs
+captured from each of the six live cases were therefore checked with 30 read-only HEAD requests before
+canonical-LF serialization. All 30 returned 200.
 
-The deterministic vector source is 1,158 bytes, SHA-256
-`9f46ff6812ab2b22d852fb11321f9075ef6e53184f7d97df949ae93214d19d82`.
-CairoSVG 2.8.2 produced a 24-bit RGB PNG at exactly 1280×640, 27,394 bytes, SHA-256
-`13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d`.
-Final-byte inspection confirmed legible unclipped text and no counts, dates, ranking, verification,
-publisher, or other unsupported claim. The inspection attachment is byte-identical to the PNG.
+The final canonical-LF `browser-matrix.json` is 87,008 bytes, SHA-256
+`35378c30a592629b1b4275f748d1d68c04a766f4820baef62cf40f9032135bd8`, with zero CRLF pairs.
 
-The exact producing command is
-`python -m cairosvg assets/social-preview.svg -o assets/social-preview.png -s 1`. Two fresh outputs
-made with that command (changing only the temporary output path) are each 27,394 bytes with the same
-`13e34836…` SHA-256, proving byte identity with the candidate PNG. The complete producing probes in
-`jekyll-build.txt` bind Python 3.13.5, CairoSVG 2.8.2, Cairo 1.18.4, cairocffi 1.7.1, cffi 2.0.0,
-cssselect2 0.9.0, defusedxml 0.7.1, Pillow 12.2.0, tinycss2 1.5.1, the exact Cairo DLL, and the exact
-Arial regular/bold font bytes and hashes.
+| Screenshot | Bytes | SHA-256 |
+|---|---:|---|
+| `browser-390x844-en.png` | 64,133 | `67cccfc84fb4d74dd34804157fd1fc05d87a99eb86376252b9a86e14a4d063f2` |
+| `browser-390x844-ru.png` | 63,218 | `63dcb0b8b0d5fa5c9bbb964f8596ce2e76df559fbb7b59c0972d575adf7f062c` |
+| `browser-390x844-kk.png` | 66,705 | `0d6ff536ed289c61f671b09635cb92c8b6841d38f21a384e95fc0c1377a1d2e8` |
+| `browser-1366x768-en.png` | 98,772 | `3789e840b6306d697e68e65d971fb1b3892b8bb37cbd5a52c92521a7b02f63a4` |
+| `browser-1366x768-ru.png` | 108,403 | `0a5f710c65db0c12a5fdee2d2ebc7183d54fd8d51a696ae4dd131af8c4548ad9` |
+| `browser-1366x768-kk.png` | 106,523 | `2180c1fbcfb4770eaf605deff4e6000c40cfc590900a30bb8aeab2b3357179a9` |
 
-The repository-local image workflow selected deterministic SVG plus raster output because exact
-typography is load-bearing; AI bitmap generation was correctly not used for this code-native asset.
+All six screenshots were visually inspected. The required identity, promise, freshness, language,
+type, and intent controls are legible without horizontal clipping; the matrix confirms the useful
+first catalog entry after one type-navigation action.
+
+## Social preview boundary
+
+The page-level `og:image` and `twitter:image` on every route resolve to the reviewed 200 PNG above.
+The source remains 1,158 bytes /
+`9f46ff6812ab2b22d852fb11321f9075ef6e53184f7d97df949ae93214d19d82`; the PNG and inspection
+attachment remain byte-identical at 27,394 bytes /
+`13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d`. The exact CairoSVG 2.8.2
+command and producing environment remain fully bound in `jekyll-build.txt`.
+
+The distinct repository-level GraphQL `openGraphImageUrl` is still GitHub's generated
+`opengraph.githubassets.com` fallback. The Coordinator reported that Chrome's file chooser cannot
+access the local file because the ChatGPT extension lacks local-file URL permission and other
+compliant UI handoffs produced no setting change. This Executor independently verified the fallback
+but made no upload attempt. That exact setting is **BLOCKED** pending Coordinator resolution.
 
 ## Antigravity advisory record
 
-Installed-surface discovery:
+No rerun was required: no visible copy, head metadata, Dataset field, SVG source, PNG byte, or proposed
+setting string changed. The existing content-fed result remains bound to executable
+`C:\Users\c0rpa\AppData\Local\agy\bin\agy.exe`, version 1.1.22, model
+`gemini-3.7-flash-high`, plan+sandbox, object-valued UTF-8 stream-json, request-review permissions,
+zero tool steps, and no bypass.
 
-- `agy.exe --help` exposed `--model`, `--mode`, `--sandbox`, `--input-format`,
-  `--output-format`, `--print-timeout`, and the disabled-by-contract
-  `--dangerously-skip-permissions` option.
-- `agy.exe models` exposed exact `gemini-3.7-flash-high` (`Gemini 3.7 Flash (High)`); no fallback.
+- Prompt: `e789f8d7301d0825a98a4c532121bdb4385affc31ae8f358cd96d038cdf960fb`.
+- Input: 170,401 bytes / `aba88a1bcc48a36f7fd3ac06268c4464ae37965dc2c30b6e118dbbbabddde8ba`.
+- Output: 3,342 bytes / `b560698faada053bc896d8da0a4ba106683e2fcbde96eb970c8f474fb0b07d86`.
+- Conversation: `5f3edb10-3f79-4dbf-8aa8-2c3885dbc28c`; `SUCCESS`; `PASS`; findings none;
+  nits none; disposition not required.
+- Usage: 58,569 input, 7,096 output, 6,823 thinking, 0 cache-read, 65,665 total tokens.
 
-Invocation contract: executable `C:\Users\c0rpa\AppData\Local\agy\bin\agy.exe`; model
-`gemini-3.7-flash-high`; `--mode plan`; `--sandbox`; `--input-format stream-json`;
-`--output-format stream-json`; `--print-timeout 15m`; no permission-bypass flag. The input was one
-UTF-8 object-valued `user` event containing complete built EN/RU/KK HTML bytes, sitemap, config,
-layout, CSS, SVG source, artifact hashes, PNG facts, README binding, catalog binding, and locale digest.
+Antigravity remains advisory and does not replace formal TFW review.
 
-- Prompt content: 129,122 bytes; SHA-256 `e789f8d7301d0825a98a4c532121bdb4385affc31ae8f358cd96d038cdf960fb`.
-- Input NDJSON: 170,401 bytes, one object-valued UTF-8 line; SHA-256 `aba88a1bcc48a36f7fd3ac06268c4464ae37965dc2c30b6e118dbbbabddde8ba`.
-- Output NDJSON: 3,342 bytes, seven object-valued lines; SHA-256 `b560698faada053bc896d8da0a4ba106683e2fcbde96eb970c8f474fb0b07d86`.
-- Conversation: `5f3edb10-3f79-4dbf-8aa8-2c3885dbc28c`; status `SUCCESS`; permission mode `request-review`; tool steps `0`.
-- Usage: input 58,569; output 7,096; thinking 6,823; cache-read 0; total 65,665 tokens.
-- Response SHA-256: `7ce63b5f0a4207b1ebd7e153f55319933f6133432ffe46c86e3ed006fe28dbaf`.
-- Advisory: `VERDICT: PASS`; `DISPOSITION_REQUIRED: NO`; `FINDINGS: NONE`; `NITS: NONE`.
-- Disposition: no material finding or nit exists; no source change is requested or accepted.
+## No-mutation and continuation record
 
-Antigravity is advisory evidence only and does not replace the formal TFW Reviewer.
+This Executor used authenticated read-only REST/GraphQL, public GET/HEAD, Git read-only probes, a
+local exact-SHA build, and live browser reads only. There was no push, tag, release, deploy,
+repository/Pages/settings change, upload, Search Console action, or other external mutation.
 
-## Coordinator revision and no-mutation record
-
-Formal Reviewer finding F1 is resolved by regenerating the checked-in PNG through the exact SVG
-command and pinned producing environment, rebinding every asset/metadata/external/advisory fact, and
-proving two independent fresh rerenders hash-identical. Formal Reviewer finding F2 is resolved by a
-fresh complete six-case browser run and a canonical-LF Git-blob binding verified from exact commit
-`de4060bf817bfb69441f08344f82dd14bc856649`. Coordinator-owned F3 was already corrected in the exact
-REVISE base and was not touched by the Executor.
-
-The initial plugin-backed sitemap approach was abandoned after the Coordinator identified that
-`jekyll-sitemap` 1.4.0 unavoidably emits project-path `robots.txt`, contradicting RES-1 D7 and the
-approved no-robots outcome. Under the owner-preauthorized Coordinator revision, the final candidate
-does not enable that plugin, owns `sitemap.xml` as a Jekyll/Liquid source page, asserts exactly three
-URLs, and emits no `robots.txt`. The revised implementation budget is 13 paths, 8 new and 5 modified.
-The Executor did not edit HL or TS.
-
-Authenticated read-only GitHub API, public GET, Antigravity advisory, and `git ls-remote` calls caused
-zero external mutations. There was no push, tag, release, deploy, Pages-source/settings edit,
-description/homepage/topics/social-preview mutation, upload, Search Console action, or other external
-write. Exact proposed settings and later authorization/public-verification steps are in
-`external-checkpoint.md`; all public outcomes remain deferred.
+Phase B remains `BLOCKED`. The Coordinator must resolve the repository custom-preview upload through
+an authorized compliant UI surface, capture the resulting authenticated GraphQL state, and return
+this refreshed RF/EV to the same Reviewer. Search Console remains separately DEFERRED and
+unauthorized. Complete publication is not claimed.
 
 ## Attachments
 
 | File | Description |
-|------|-------------|
-| `browser-390x844-en.png` | EN mobile viewport |
-| `browser-390x844-ru.png` | RU mobile viewport |
-| `browser-390x844-kk.png` | KK mobile viewport |
-| `browser-1366x768-en.png` | EN desktop viewport |
-| `browser-1366x768-ru.png` | RU desktop viewport |
-| `browser-1366x768-kk.png` | KK desktop viewport |
-| `social-preview-inspection.png` | Byte-identical final social-preview visual-inspection attachment |
+|---|---|
+| `public-http.json` | Canonical-LF authenticated repository/Pages/ref/tag and exact public GET/HEAD/body/hash evidence |
+| `external-checkpoint.md` | Human-readable deployed-state, blocker, tag, continuation, and no-mutation checkpoint |
+| `jekyll-build.txt` | Original deterministic build/raster proof plus exact-SHA post-publication build comparison |
+| `metadata-summary.json` | Exact local/public-identical route metadata and Dataset summary |
+| `browser-matrix.json` | Canonical-LF six-case live Chrome DOM/head/overflow/navigation/link matrix |
+| `browser-390x844-en.png` | Fresh live EN mobile viewport |
+| `browser-390x844-ru.png` | Fresh live RU mobile viewport |
+| `browser-390x844-kk.png` | Fresh live KK mobile viewport |
+| `browser-1366x768-en.png` | Fresh live EN desktop viewport |
+| `browser-1366x768-ru.png` | Fresh live RU desktop viewport |
+| `browser-1366x768-kk.png` | Fresh live KK desktop viewport |
+| `social-preview-inspection.png` | Byte-identical final page-preview visual-inspection attachment |
+| `antigravity-input.txt` | Existing complete content-fed advisory input |
+| `antigravity-output.jsonl` | Existing object-valued stream-json advisory output |
 
 ---
 
-*EV — 20260827-132641__catalog_discoverability / Phase B: Published Discovery | 2026-08-27*
+*EV — 20260827-132641__catalog_discoverability / Phase B: Published Discovery | 2026-08-28*
