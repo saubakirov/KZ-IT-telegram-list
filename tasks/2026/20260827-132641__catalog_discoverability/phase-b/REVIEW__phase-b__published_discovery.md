@@ -120,8 +120,8 @@ None. F1–F4 are closed; Search Console is an unauthorized/N/A external surface
 - [x] This REVIEW and existing `review/map.md`, `review/verify.md`, and `review/judge.md` refreshed.
 - [x] Prior verdict history preserved.
 - [x] Status, journal, index, implementation, HL, TS, ONB, RF, EV, evidence, knowledge, and debt left unchanged under the Reviewer role lock.
-- [x] `/tfw-docs`: deferred to the Coordinator after this APPROVE.
-- [x] `/tfw-knowledge`: candidate scan routed to the Coordinator; expected N/A because no Fact Candidate exists.
+- [x] `/tfw-docs`: Applied — updated KNOWLEDGE.md §§1–2 with the published discovery architecture, contract, D20, and key artifact.
+- [x] `/tfw-knowledge`: N/A — candidate scan found no human-only Fact Candidate in Phase A/B RF, REVIEW, RES, or owner context.
 
 ## 7. Fact Candidates
 

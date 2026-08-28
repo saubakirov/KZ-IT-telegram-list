@@ -9,23 +9,20 @@
 |---|---|
 | Source | 2 task state files, 4 snapshot rows |
 | Containers searched | `tasks/` |
-| Freshness | newest task state update: 20260827-160632 |
+| Freshness | newest task state update: 20260828-195203 |
 | Unresolved inputs | 0 |
 | Generator | `python docs/scripts/gen_index.py` |
 
-## In flight — 1
+## In flight — 0
 
-| Task | Lifecycle | Owner | Goal | Authority |
-|---|---|---|---|---|
-| [**20260827-132641__catalog_discoverability** — Catalog discoverability and multilingual presentation](2026/20260827-132641__catalog_discoverability/status.md) | PHASES | saubakirov | Make the narrow Kazakhstan IT and startup Telegram catalog easier to discover, understand, and use in English, Russian, and Kazakh | [HL-20260827-132641__catalog_discoverability.md](2026/20260827-132641__catalog_discoverability/HL-20260827-132641__catalog_discoverability.md) |
-| &nbsp;&nbsp;↳ [A — Phase A — One-source multilingual catalog](2026/20260827-132641__catalog_discoverability/phase-a/status.md) | DONE | saubakirov | Produce complete generated EN/RU/KK catalog projections with validated intent navigation and cross-render safety | — |
-| &nbsp;&nbsp;↳ [B — Phase B — Published discovery surface](2026/20260827-132641__catalog_discoverability/phase-b/status.md) | KNW | saubakirov | Produce a release-ready multilingual Jekyll discovery surface and exact publication evidence checkpoint | — |
+No task is in flight.
 
-## Closed — 2
+## Closed — 3
 
 | Task | Outcome | Record |
 |---|---|---|
 | **TFW-4** — Showcase reorganization | DONE · Four reviewed phases completed; verified snapshot data-2026-08-27 published and project memory closed | [state](TFW-4__showcase_reorg/status.md) |
+| **20260827-132641__catalog_discoverability** — Catalog discoverability and multilingual presentation | DONE · Published and verified the multilingual discovery surface while preserving the approved catalog data and generated-body contract | [state](2026/20260827-132641__catalog_discoverability/status.md) |
 | **TFW-3** — Initialize TFW 1.3.0 — framework install, Claude Code adapter, legacy migration | ✅ DONE | [task folder](TFW-3__tfw_init/) |
 
 1 of those closed before TFW 2.0.0 and carry no state file.

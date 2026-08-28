@@ -27,6 +27,7 @@
 | Schema validator | Enforces North Star, live-entry, archive, collision, and strict-date contracts; reports valid staleness without making age fatal | `scripts/validate_schema.py` |
 | Link validator | Classifies Telegram responses against authoritative target identity and declared type; emits machine-readable results and exposes separate evidence-safe update/archive paths | `scripts/validate_links.py` |
 | Catalog generator | Sole writer for the GitHub mirror and EN/RU/KK catalog projections; renders locale-complete UI, intent navigation, derived stats, categories, entries, and conditional archive output; provides normalized non-mutating `--check` | `scripts/generate_readme.py`, `README.md`, `index.md`, `ru/index.md`, `kk/index.md` |
+| Published discovery surface | Repository-owned Jekyll layout/head logic, responsive CSS, Liquid sitemap, and reviewed preview asset publish the generated EN/RU/KK catalog with self-canonical and reciprocal hreflang, Dataset, Open Graph, and Twitter metadata | `_layouts/default.html`, `_config.yml`, `sitemap.xml`, `assets/css/catalog.css`, `assets/social-preview.svg`, `assets/social-preview.png` |
 | Agent contract | Count-free canonical project rules and project-operation authority boundaries | `AGENTS.md` |
 | TFW framework | Workflows, templates, conventions driving all task work | `.tfw/` |
 | Task state carrier | Each task's own `status.md` is the only authority for its lifecycle, owner and outcome; a phase carries one per phase directory. Coordination events are immutable files in `journal/` | `tasks/{task}/status.md`, `tasks/{task}/journal/` |
@@ -48,6 +49,10 @@ data/communities.json
           ├──► index.md
           ├──► ru/index.md
           └──► kk/index.md
+
+index.md + ru/index.md + kk/index.md
+  └──► Jekyll layout/head + CSS + Liquid sitemap
+          └──► GitHub Pages EN/RU/KK discovery surface
 ```
 
 ### Operational Contracts
@@ -59,6 +64,7 @@ data/communities.json
 | Offline CI | CI runs schema validation and generator currency checks only; it does not call Telegram, mutate data/README, archive entries, or perform release actions | [RF TFW-4 Phase C](tasks/TFW-4__showcase_reorg/phase-c/RF__phase-c__pipeline_tooling.md) |
 | Project-command authority | `/kz-stats` preserves four-way owner/evidence triage; `/kz-release` validates completeness and stops before tag/push for explicit owner approval. Command definitions are not evidence that either operation ran | [RF TFW-4 Phase C](tasks/TFW-4__showcase_reorg/phase-c/RF__phase-c__pipeline_tooling.md) |
 | Multilingual projection integrity | Every EN/RU/KK value and intent destination is explicit in the source; missing, blank, placeholder, or unknown values fail validation. One renderer writes all four projections, and a digest binds language review to exact locale bytes; any locale-content change invalidates that verdict | [REVIEW catalog discoverability Phase A](tasks/2026/20260827-132641__catalog_discoverability/phase-a/REVIEW__phase-a__multilingual_catalog.md) |
+| Published discovery integrity | The public surface is the supported GitHub Pages/Jekyll build of the generated EN/RU/KK projections. Each route has one self-canonical and reciprocal `en`/`ru`/`kk`/`x-default` hreflang set; the repository-owned Liquid sitemap contains those three canonicals; Dataset and social metadata stay consistent with visible content and the reviewed preview PNG; project `robots.txt` and `llms.txt` are not emitted | [REVIEW catalog discoverability Phase B](tasks/2026/20260827-132641__catalog_discoverability/phase-b/REVIEW__phase-b__published_discovery.md) |
 
 ### Architecture Decisions
 
@@ -83,6 +89,7 @@ data/communities.json
 | D17 | One task container (`task_containers: [tasks]`), and the pre-2.0.0 corpus is not renamed | The corpus already lives in `tasks/`, so no second container is needed. Renaming legacy ids into the clock grammar was declined: a trace needing a translation table has lost the property the framework exists to provide. Cost recorded as TD-12 | [.tfw/project_config.yaml](.tfw/project_config.yaml) |
 | D18 | A catalog release is an evidence-complete dated snapshot: the immutable full-sweep evidence may be supplemented by exact handle rechecks, while type repairs and death archives require target-bound or owner-bound evidence before publication | The first release showed that a single HTTP shape is not enough: target identity, peer type, historical continuity, explicit archive authority, and a final exact-universe reconciliation prevent ambiguous Telegram responses from becoming catalog facts | [RF TFW-4 Phase D](tasks/TFW-4__showcase_reorg/phase-d/RF__phase-d__live_sweep_release.md) |
 | D19 | Store locale/UI/intent content explicitly in `data/communities.json` and generate the GitHub mirror plus EN/RU/KK projections through one renderer with no fallback | Explicit completeness and one generation path prevent translation drift, preserve locale-invariant community facts, and allow advisory and formal language review to bind to one exact digest | [REVIEW catalog discoverability Phase A](tasks/2026/20260827-132641__catalog_discoverability/phase-a/REVIEW__phase-a__multilingual_catalog.md) |
+| D20 | Publish the generated multilingual catalog through repository-owned Jekyll layout/head/CSS and a Liquid sitemap, using supported GitHub Pages capability and no project robots/llms surface | One static build keeps visible content, canonical/hreflang, Dataset, social metadata, navigation, sitemap, and preview bytes mutually verifiable without a runtime application or unsupported plugin | [REVIEW catalog discoverability Phase B](tasks/2026/20260827-132641__catalog_discoverability/phase-b/REVIEW__phase-b__published_discovery.md) |
 
 ---
 
@@ -98,6 +105,7 @@ data/communities.json
 | TFW-4 Phase C | Pipeline & tooling | [RF TFW-4 Phase C](tasks/TFW-4__showcase_reorg/phase-c/RF__phase-c__pipeline_tooling.md) | Establishes the evidence-safe Telegram classifier, generated presentation/currency contract, offline CI, and bounded project operations that Phase D may later execute |
 | TFW-4 Phase D | Live sweep & first release | [RF TFW-4 Phase D](tasks/TFW-4__showcase_reorg/phase-d/RF__phase-d__live_sweep_release.md) | Records the verified 2026-08-27 catalog snapshot, exact repair/archive evidence, release commit, annotated tag, publication, and final task closure |
 | Catalog discoverability Phase A | One-source multilingual catalog | [REVIEW Phase A](tasks/2026/20260827-132641__catalog_discoverability/phase-a/REVIEW__phase-a__multilingual_catalog.md) | Approves the digest-bound EN/RU/KK source, one-renderer/four-projection contract, intent navigation, and deterministic regression suite |
+| Catalog discoverability Phase B | Published discovery surface | [REVIEW Phase B](tasks/2026/20260827-132641__catalog_discoverability/phase-b/REVIEW__phase-b__published_discovery.md) | Approves the deployed GitHub Pages/Jekyll routes, canonical/hreflang and Dataset/social metadata, Liquid sitemap, responsive navigation, repository preview, and exact public evidence |
 
 ---
 
