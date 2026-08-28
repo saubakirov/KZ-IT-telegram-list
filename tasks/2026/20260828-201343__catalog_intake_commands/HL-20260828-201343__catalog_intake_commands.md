@@ -18,7 +18,8 @@
 The catalog has one small, safe intake command: `/kz-add <source>`. A person can give it one
 Telegram link, several links, or a Markdown/text file, and receive an evidence-backed candidate
 table before any catalog byte changes. The same literal `kz-*` command surface works in Claude
-Code and Codex from provider-neutral project workflows rather than duplicated instructions.
+Code and Codex through complete self-contained command/skill copies whose content parity is
+generated or otherwise structurally enforced rather than maintained by convention.
 
 The first complete run processes the owner-supplied six-link file together with the existing
 23-candidate discovery batch. Every unique candidate receives a durable disposition; only
@@ -77,7 +78,7 @@ multilingual AI community. HTTP success alone therefore cannot determine admissi
 | Dimension | As-Is | To-Be |
 |---|---|---|
 | Human command surface | Two Claude-only operations and no intake command | `/kz-add`, `/kz-stats`, and `/kz-release` are discoverable in Claude Code and Codex |
-| Workflow authority | Behavior embedded in Claude adapter files | One provider-neutral project-operation source per command; adapters contain routing only |
+| Cross-agent command content | Behavior exists only in Claude adapter files | Every supported agent receives a complete self-contained copy of each command; a reproducible source/copy mechanism and parity gate prevent drift |
 | Input shape | Manual handle extraction | One command accepts a Telegram URL, multiple URLs, or a Markdown/text file and reports malformed/duplicate inputs |
 | Candidate observation | Candidate must first be inserted into live data | Arbitrary candidates are probed without catalog mutation and emit stable machine-readable evidence |
 | Editorial validation | Ad hoc agent judgement | Explicit gates cover identity, declared/observed type, liveness, duplicate/alias, IT, Kazakhstan, commerciality, category, and locale completeness |
@@ -125,15 +126,17 @@ FINAL
 The repository surface after both phases is intentionally small:
 
 ```text
-project-operation source
-├── kz-add       [Phase A] one/many/file intake with preview and approval gate
-├── kz-stats     [Phase A] existing contract, moved without semantic drift
-└── kz-release   [Phase A] existing contract, moved without semantic drift
+project command source/copy contract
+├── kz-add       [Phase A] complete one/many/file intake with preview and approval gate
+├── kz-stats     [Phase A] complete existing contract, preserved without semantic drift
+└── kz-release   [Phase A] complete existing contract, preserved without semantic drift
 
 .claude/commands/                     .agents/skills/
-├── kz-add.md       ── thin route     ├── kz-add/SKILL.md
-├── kz-stats.md     ── thin route     ├── kz-stats/SKILL.md
-└── kz-release.md   ── thin route     └── kz-release/SKILL.md
+├── kz-add.md       ── full copy      ├── kz-add/SKILL.md       ── full copy
+├── kz-stats.md     ── full copy      ├── kz-stats/SKILL.md     ── full copy
+└── kz-release.md   ── full copy      └── kz-release/SKILL.md   ── full copy
+
+              parity gate: every agent copy is complete and synchronized
 
 scripts + tests [Phase A]             catalog + evidence [Phase B]
 └── non-mutating candidate probe      └── clean holdout run, approved additions
@@ -180,8 +183,8 @@ graph LR
 
 ### Phase A: Intake engine and cross-tool commands 🔴
 
-- Establish one provider-neutral workflow authority for each of `/kz-add`, `/kz-stats`, and
-  `/kz-release`; replace Claude bodies with thin routes and add equivalent repository Codex skills.
+- Establish a reproducible source/copy contract for `/kz-add`, `/kz-stats`, and `/kz-release`;
+  install complete self-contained command bodies for Claude Code and Codex and enforce parity.
 - Extend or compose the existing Telegram classifier so an arbitrary candidate can be probed
   without first entering the catalog, with a stable non-mutating machine summary.
 - Accept a single URL, multiple URLs, or a Markdown/text file; normalize handles, deduplicate
@@ -190,7 +193,7 @@ graph LR
   by an exact owner-approval boundary before any source mutation.
 - Build deterministic negative fixtures and use a declared subset of real candidates only as a
   calibration set. Seal a disjoint holdout manifest before calibration results can influence it.
-- Prove Claude/Codex command discoverability and routing without copying canonical workflow bodies.
+- Prove Claude/Codex command discoverability, self-contained execution, and copy synchronization.
 - Do not add a production candidate in Phase A.
 
 ### Phase B: Clean candidate run and catalog integration 🟡
@@ -219,7 +222,8 @@ graph LR
 - ✅ 4. Preview and evidence creation write no catalog facts. Only an exact owner-approved subset
   that still passes every gate can modify `data/communities.json`.
 - ✅ 5. `/kz-add`, `/kz-stats`, and `/kz-release` are discoverable and behaviorally equivalent in
-  Claude Code and Codex, with one provider-neutral workflow body per command and thin adapters.
+  Claude Code and Codex; every agent adapter contains the complete command instructions, and a
+  reproducible source/copy mechanism plus parity gate prevents drift.
 - ✅ 6. Synthetic positive/negative tests cover parsing, duplicate forms, identity conflict,
   wrong type, dead/private/ambiguous targets, commercial/non-IT/non-KZ rejection, incomplete
   locales, approval absence, partial failure, and idempotent rerun behavior.
@@ -254,8 +258,10 @@ graph LR
   candidate set, or the applied set differs from what was approved.
 - ❌ 7. Holdout candidates or their expected dispositions influence calibration rules/tests before
   the clean holdout run, making the end-to-end evidence circular.
-- ❌ 8. Claude and Codex receive copied workflow bodies that may drift, a `kz-*` operation is placed
-  inside framework-owned `.tfw/workflows/`, or either tool lacks literal command discoverability.
+- ❌ 8. A Claude or Codex adapter is a thin runtime link, contains an incomplete command body,
+  differs from another supported agent copy without a declared format-only transformation, lacks
+  a reproducible parity gate, places a `kz-*` operation inside framework-owned `.tfw/workflows/`,
+  or lacks literal command discoverability.
 - ❌ 9. Existing `kz-stats`/`kz-release` safety semantics weaken, generated projections are edited
   by hand, predecessor tests regress, or unrelated dirty work is staged or overwritten.
 - ❌ 10. The report says “all candidates added” when some failed a gate, or omits rejected,
@@ -273,8 +279,9 @@ identity/editorial/authority decision. Never weaken a gate to make the batch pas
    product criteria and owner approval establish admission.
 3. **Preview before mutation** — parsing, probing, triage, and approval bind to one exact candidate
    set before source facts move.
-4. **One command, one truth per behavior** — keep the human surface minimal and the workflow body
-   provider-neutral; adapters make commands discoverable but do not redefine them.
+4. **Complete copies, enforced parity** — keep the human surface minimal, give each supported
+   agent a self-contained command body, and make synchronization a reproducible checked property
+   rather than an instruction maintainers must remember.
 5. **Fail closed and account for every input** — ambiguity produces an unresolved/rejected row,
    never a guessed record or silent omission.
 6. **Holdout evidence must be honest** — final candidates cannot prove generality if their outcomes
@@ -297,6 +304,9 @@ identity/editorial/authority decision. Never weaken a gate to make the batch pas
   never enter repository artifacts.
 - Existing unrelated changes to `tasks/README.md` and `tasks/CANDIDATES-2026-08-28.md` are preserved
   exactly unless the later approved TS explicitly adopts a path and provenance is retained.
+- Claude and Codex copies must remain complete enough to execute without opening another command
+  body; exact-byte parity is preferred, and any unavoidable format transformation must be
+  generated, declared, and tested for semantic parity.
 
 ### 7.2 Knowledge Citations 🟢 FREE
 
@@ -304,7 +314,7 @@ identity/editorial/authority decision. Never weaken a gate to make the batch pas
 |---|---|---|---|
 | PV0-1 | [`README.md § Purpose`](../../../README.md#purpose) | “A catalog whose value is accuracy”; IT/Kazakhstan/live/date gates; non-goals exclude promotion, hand-edited output, and estimates | Makes candidate admission stricter than link resolution and forbids guessed facts or commercial placement |
 | PV1-1 | [`.tfw/README.md NS2`](../../../.tfw/README.md#ns2) | Purpose before activity; questions before premature answers; human authority; assurance proportional to risk | Requires product-fit questions, an owner approval boundary, and evidence proportional to catalog-fact risk |
-| PV1-2 | [`.tfw/README.md Methodology values`](../../../.tfw/README.md#methodology-values) | Structural Enforcement and Portability | Moves gates into versioned summaries/tests and keeps workflow truth provider-neutral across Claude and Codex |
+| PV1-2 | [`.tfw/README.md Methodology values`](../../../.tfw/README.md#methodology-values) | Structural Enforcement and Portability | Moves gates into versioned summaries/tests and makes complete Claude/Codex copies reproducible rather than manually synchronized |
 | PV2-1 | `knowledge/philosophy.md` | N/A — the required priority-2 file does not exist after a full PV scan | No additional validated philosophy item is available beyond PV0/PV1 and `KNOWLEDGE.md §0` |
 | PV3-1 | [`KNOWLEDGE.md D1`](../../../KNOWLEDGE.md) | JSON source of truth; README is generated output | Intake mutates `data/communities.json`, never README directly |
 | PV3-2 | [`KNOWLEDGE.md D2`](../../../KNOWLEDGE.md) | Separate offline schema/generation work from network-bound link validation | Keeps parsing/tests deterministic and candidate observation explicitly live/CL |
@@ -313,7 +323,7 @@ identity/editorial/authority decision. Never weaken a gate to make the batch pas
 | PV3-5 | [`KNOWLEDGE.md D18`](../../../KNOWLEDGE.md) | Catalog facts require target-bound evidence and exact-universe reconciliation | Extends the proven identity/evidence boundary to new-candidate admission and final accounting |
 | PV3-6 | [`KNOWLEDGE.md D19`](../../../KNOWLEDGE.md) | Explicit EN/RU/KK content with one renderer and no fallback | Makes locale completeness/review a hard add gate |
 | PV4-1 | [`.tfw/conventions.md §3 Evidence`](../../../.tfw/conventions.md) | Evidence is real-environment observation, distinct from synthetic verification | Separates live candidate evidence from parser/schema/unit-test results |
-| PV4-2 | [`.tfw/conventions.md §9`](../../../.tfw/conventions.md) | Tool adapters reference one tool-agnostic core | Provides the architectural pattern for thin Claude commands and Codex skills |
+| PV4-2 | [`.tfw/conventions.md §9`](../../../.tfw/conventions.md) | Tool adapters normally reference one tool-agnostic core | Establishes the default pattern that owner-approved amendment A1 intentionally replaces for `kz-*` with complete synchronized copies |
 | PV4-3 | [`.tfw/conventions.md §11`](../../../.tfw/conventions.md) | No placeholders; results usable without manual repair | Prevents incomplete locale rows and half-applied batches |
 | PV4-4 | [`.tfw/conventions.md §14`](../../../.tfw/conventions.md) | No bonus scope, invented evidence, or provider-bound durable truth | Bounds both phases and makes unrelated dirty-work preservation explicit |
 | PV7-1 | [`knowledge/domain.md F1–F2`](../../../knowledge/domain.md) | Historical dead communities are archived rather than deleted | Candidate dedupe checks the archive and avoids resurrecting historical handles as fresh rows without continuity evidence |
@@ -342,7 +352,7 @@ identity/editorial/authority decision. Never weaken a gate to make the batch pas
 | Alias/URL/case variants bypass exact-handle dedupe | Medium | High | Normalize before probing; compare live, archive, cross-input, canonical, and known-replacement identities |
 | Generated multilingual body digest changes with accepted descriptions | High | Medium | Treat locale change as expected reviewed Phase B output and rebind exact digest after copy review |
 | Rate limits or private previews leave partial batches | Medium | Medium | Resume from versioned per-candidate evidence; never apply a partial unaccounted set |
-| Canonical workflow extraction changes existing stats/release behavior | Medium | High | Characterize existing contracts and require semantic parity tests before thin-adapter replacement |
+| Full self-contained command copies drift between agent surfaces | High | High | Research a reproducible source/copy mechanism and enforce exact or semantic parity in tests |
 | Shared untracked discovery work is overwritten or accidentally staged | Medium | High | Snapshot hashes/provenance read-only; use path-scoped edits/commits; stop on unexplained drift |
 | “Add everything” is misread as bypassing eligibility gates | Medium | High | Define completion as 28 dispositions and all qualified approved additions, never unconditional insertion |
 
@@ -350,8 +360,8 @@ identity/editorial/authority decision. Never weaken a gate to make the batch pas
 
 ### Blind Spots
 
-- The smallest provider-neutral project-operation layout that both Claude Code and Codex can
-  discover reliably without putting project behavior inside framework-managed `.tfw/`.
+- The smallest source/copy layout that gives Claude Code and Codex complete self-contained command
+  instructions while keeping every agent copy reproducibly synchronized and outside framework-managed `.tfw/`.
 - Whether extending `validate_links.py` with a non-mutating arbitrary-candidate mode preserves its
   current identity guarantees cleanly, or whether a separate composition layer is safer.
 - How to prove literal command discoverability in both tools with reproducible evidence rather
@@ -365,7 +375,7 @@ identity/editorial/authority decision. Never weaken a gate to make the batch pas
 
 | # | Hypothesis | Status |
 |---|---|---|
-| H1 | Claude Code commands and Codex repository skills can route the same literal `kz-*` surface to provider-neutral project workflows, including the two existing operations, without copied behavior | open |
+| H1 | Claude Code commands and Codex repository skills can route the same literal `kz-*` surface to provider-neutral project workflows, including the two existing operations, without copied behavior | refuted — cross-tool feasibility confirmed by owner; thin-link/no-copy architecture superseded by approved A1 requiring full synchronized copies |
 | H2 | The existing Telegram classifier can expose an arbitrary non-mutating candidate probe with a stable summary while preserving every current identity/type/update/archive safety property | open |
 | H3 | One `/kz-add <source>` grammar can unambiguously cover a single URL, multiple URLs, and Markdown/text files while remaining idempotent and accounting for every malformed/duplicate input | open |
 | H4 | The 28-candidate universe can be partitioned into calibration and holdout sets so automated evidence narrows owner work without pretending that theme, Kazakhstan relevance, or commerciality are purely machine facts | open |
@@ -381,8 +391,8 @@ keeps human-governed.
 
 1. **Gather:** Map current Claude/Codex discovery contracts, existing `kz-*` semantics, classifier
    extension seams, candidate data shapes, and comparable safe intake patterns.
-2. **Extract:** Compare provider-neutral workflow locations, probe/composition architectures,
-   input grammar designs, approval-state representations, and calibration/holdout partitions.
+2. **Extract:** Compare reproducible full-copy source/synchronization layouts, probe/composition
+   architectures, input grammar designs, approval-state representations, and calibration/holdout partitions.
 3. **Challenge:** Test identity conflicts, aliases, private/dead/wrong-type previews, partial
    failures, duplicate forms, editorial ambiguity, adapter drift, and holdout leakage.
 
@@ -393,8 +403,9 @@ keeps human-governed.
 - Why not create `/kz-import` beside `/kz-add`? — The user action is the same; source cardinality
   is input syntax, not a second operation. A second command is justified only if research proves
   the safety or approval semantics genuinely differ.
-- Why not copy the Claude command bodies into Codex skills? — Copies drift and violate the
-  provider-neutral adapter pattern the repository already uses for TFW.
+- Why not use thin routes into one canonical workflow? — The owner explicitly requires every
+  supported agent command/skill to contain a complete self-contained copy. Research must retain
+  this runtime property while making copy parity structurally verifiable rather than habitual.
 - Why not auto-add every verified HTTP target? — Liveness does not establish correct identity,
   declared type, uniqueness, IT/Kazakhstan relevance, non-commercial fit, or multilingual quality.
 
@@ -407,10 +418,13 @@ keeps human-governed.
 | S3 | Safety is interactive: candidates must be previewed as an exact set and approved before mutation | process | User approved the two-stage boundary |
 | S4 | The real candidate corpus must do double duty without invalidating the final proof: some candidates calibrate the tooling, while a disjoint set remains unseen for a clean end-to-end run | constraint | User explicitly requested calibration plus clean final candidates |
 | S5 | “Add all” means the workflow must fully process the combined corpus, but the project's value and goal still outrank coverage; ineligible or unverifiable candidates need explicit non-add dispositions | philosophy | User clarified that normal duplicate/topic/liveness validation and project purpose govern every candidate |
+| S6 | Cross-agent commands must be self-contained complete copies, not thin runtime links; synchronization must therefore be enforced by source/copy tooling and parity checks | constraint | User correction during H1 iteration |
 
 ## 12. Amendment Log 🟢 APPEND-ONLY
 
-**No amendments.**
+| # | Date | § | Type | Proposer | Proposed change | Evidence | Cost | Alternatives considered | Verdict |
+|---|---|---|---|---|---|---|---|---|---|
+| A1 | 2026-08-28 | §§1, 3, 4, 5, 6, 7 | `SUPERSEDE` | saubakirov | Replace thin runtime routing and a single referenced workflow body with complete self-contained command/skill copies for every supported agent; require generated or otherwise reproducible synchronization and parity gates | Owner H1 correction: existing projects/adapters demonstrate cross-tool feasibility, but every agent skill must contain the full instructions with no thin links | Additional maintained bytes, a source/copy convention, synchronization tooling/tests, and an explicit task-level exception to the default thin-adapter pattern | Keep the frozen thin-adapter design (lowest drift risk but violates the stated runtime requirement); hand-copy full bodies without enforcement (meets self-containment but makes drift likely) | `✅ APPROVED — saubakirov, 2026-08-28` |
 
 ---
 
