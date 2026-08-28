@@ -8,6 +8,9 @@
 > **Research**: [Iteration 1 RES](../research/iter1/RES.md) · [Iteration 2 RES](../research/iter2/RES.md)
 > **Mode**: AG for local implementation and deterministic tests; CL/read-only for calibration and
 > fresh runtime evidence. No production candidate addition, push, tag, release, or external mutation.
+> **Revision**: Owner-approved narrow replan on 2026-08-28 adds `scripts/validate_schema.py` as
+> implementation path 13 / modified path 5 to close formal REVIEW F1b. The 2500-line ceiling,
+> every Master HL frozen claim, and all other scope boundaries remain unchanged.
 
 ---
 
@@ -31,6 +34,9 @@ without exposing the twenty-case holdout or changing a production catalog fact.
   separately; positive IT/KZ/commercial/category/locale decisions remain evidenced proposals.
 - Produce and validate a closed canonical preview, separate approval envelope, pending execution
   marker, and receipt with exact controlled-path B/A/X semantics.
+- Require zero-ADD stages to preserve all five controlled files byte-for-byte; for exact ADDs,
+  mechanically rebind localization review metadata and pass the real schema/generator preflight.
+- Accept only observation attempt/reason/status tuples that `fetch_preview_with_retry` can produce.
 - Implement complete location-neutral command copies and deterministic inventory/sync/parity gates.
 - Use synthetic fixtures and the eight disclosed calibration cases; retain calibration evidence
   without adding them to `data/communities.json`.
@@ -68,6 +74,7 @@ without exposing the twenty-case holdout or changing a production catalog fact.
 | `scripts/test_kz_intake.py` | CREATE | Deterministic parser/canonical/authority/apply/observation tests |
 | `scripts/test_kz_commands.py` | CREATE | Inventory, loader, path-neutrality, completeness, and parity tests |
 | `scripts/validate_links.py` | MODIFY | Minimum fetch-once seam while preserving classifier and stats behavior |
+| `scripts/validate_schema.py` | MODIFY | Replace fixed locale-review cardinalities with a data-derived invariant while preserving baseline validation and truthful output |
 | `.claude/commands/kz-add.md` | CREATE | Complete `/kz-add` command body and exact authoring copy |
 | `.claude/commands/kz-stats.md` | MODIFY | Location-neutral complete body; safety semantics unchanged |
 | `.claude/commands/kz-release.md` | MODIFY | Location-neutral complete body; pre-tag/push stop unchanged |
@@ -76,7 +83,7 @@ without exposing the twenty-case holdout or changing a production catalog fact.
 | `.agents/skills/kz-release/SKILL.md` | CREATE | Exact complete Codex copy |
 | `AGENTS.md` | MODIFY | Truthfully register the three available project commands |
 
-**Implementation budget:** 8 new files, 4 modifications, 12 paths, at most 2500
+**Implementation budget:** 8 new files, 5 modifications, 13 paths, at most 2500
 insertion-plus-deletion lines. Generated calibration/TFW evidence is not implementation scope.
 Exceeding any limit or adding a dependency requires re-planning.
 
@@ -105,6 +112,9 @@ Evidence: N/A — deterministic source parsing has no live dependency.
   exactly one verified result and two target-bound matching declared-type mismatches.
 - [ ] Zero/multiple verified results, target disagreement, unexpected tuples, conflict, private,
   dead, or transport failure are unresolved and expose no downstream fact as approved.
+- [ ] Observation transport tuples are exactly producer-closed: fetched HTTP 2xx may report
+  attempts 1 through 3; terminal non-429 HTTP may report attempt 1 only; terminal URL/general
+  error and `max_retries_exceeded` may report attempt 3 only; `http_429` is never accepted.
 - [ ] Existing stats summary, retry, identity/decoy, update, and archive tests remain exact.
 
 Gate: predecessor suite plus `python -m unittest scripts.test_kz_intake -v`; source audit confirms
@@ -141,10 +151,18 @@ Evidence: N/A for Phase A production authority; synthetic approval fixtures prov
   first replacement; unmarked/corrupt/mismatched mixtures stop.
 - [ ] Receipt is separate and binds payload, envelope, execution, before/final path hashes,
   validations, exact applied IDs, and outcome.
+- [ ] A zero-ADD stage requires exact baseline bytes for all five controlled paths and rejects
+  semantic-only catalog reserialization before marker creation or any write.
+- [ ] A 1/N-ADD stage contains only the exact localized ADD rows plus the mechanically derived
+  `localization_review.payload_sha256` and `changed_key_count`; source JSON/LF style remains exact,
+  and the schema validator derives locale-review cardinality from current data instead of fixed
+  `139/131/131` acceptance counts while preserving truthful baseline output and prior tests.
 - [ ] Production `data/communities.json`, README, and three site projections remain byte-identical
   throughout Phase A; apply tests use isolated temporary copies only.
 
-Gate: failure-injection/idempotency/stale-state tests plus before/after production hashes.
+Gate: failure-injection/idempotency/stale-state tests plus before/after production hashes. Zero-ADD
+and 0/1/N-ADD preflight tests use the real `validate_staged_project` schema/generator gate, never a
+synthetic success callback, and reproduce every formal REVIEW F1a/F1b exploit.
 
 Evidence: N/A — production mutation is forbidden in Phase A.
 
@@ -197,6 +215,8 @@ Evidence: Phase A EV plus redacted complete fresh-runtime transcripts; no extern
 ### AC-8: Preserve scope and predecessor behavior  [depends: AC-2, AC-4, AC-5, AC-6, AC-7]
 
 - [ ] Schema, all existing generation/site tests, new intake/command tests, and index validation pass.
+- [ ] Schema validation keeps the current catalog's accepted semantics and truthful locale-key
+  reporting while accepting mechanically rebound exact localized ADD stages.
 - [ ] No production candidate/count/date/archive fact or generated projection byte changes.
 - [ ] No holdout/source snapshot is adopted, no release/tag/push occurs, and unrelated dirty paths
   are not staged, overwritten, or claimed clean.
@@ -221,12 +241,16 @@ explicit zero external mutation.
 
 - Preserve `classify_response` as the sole identity/type authority. Extract only the minimum
   immutable fetch/retry result needed to reuse the same HTML across declared types.
+- Treat `fetch_preview_with_retry` as the sole authority for accepted transport provenance; the
+  validator must recognize its exact retry/terminal families rather than a broader shape grammar.
 - Keep runtime dependencies in the Python standard library. `kz-canonical-json/v1` is a closed
   domain, not a general JCS claim.
 - Treat the operation as deterministic scripts plus complete agent orchestration instructions;
   agent prose is not parser/classifier evidence.
 - Controlled production paths are `data/communities.json`, `README.md`, `index.md`, `ru/index.md`,
   and `kk/index.md`; Phase A expects their before and after hashes to be equal.
+- Derive localization-review cardinality from the source payload. Do not replace the fixed
+  `139/131/131` acceptance check with a different mutable constant or weaken digest binding.
 - Command paths are literal repository-root text, not Markdown links relative to runtime files.
 - The Coordinator supplies only the committed calibration manifest. Do not search outside the
   dedicated worktree or inspect the original untracked/external sources.
