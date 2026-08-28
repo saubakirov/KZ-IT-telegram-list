@@ -4,7 +4,8 @@
 > **Author**: Executor (Codex)
 > **Task**: 20260828-201343__catalog_intake_commands
 > **TS**: [TS Phase A](../TS__phase-a__intake_engine.md)
-> **Implementation SHA**: `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a`
+> **Revised implementation SHA**: `3b06f143102bb90b3bd47f994607371bb3f0df45`
+> **Accepted unchanged-command smoke SHA**: `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a`
 
 ---
 
@@ -23,14 +24,14 @@
 
 | # | AC | What was verified | Environment | Result | Artifact |
 |---|----|--------------------|-------------|--------|----------|
-| E1 | AC-1 | Exclusive UTF-8 source modes, byte-exact occurrence ledger, fixed root-URL grammar, explicit non-candidate dispositions, and occurrence-first case-insensitive grouping passed adversarial synthetic tests. | Python unit tests | VERIFIED | `scripts/test_kz_intake.py`; implementation SHA |
+| E1 | AC-1 | Exclusive UTF-8 source modes, byte-exact occurrence ledger, literal fixed-host root-URL grammar, explicit non-candidate dispositions, trailing-dot/spoofed-authority rejection, and occurrence-first case-insensitive grouping passed adversarial synthetic tests. | Python unit tests | VERIFIED | `scripts/test_kz_intake.py`; revised implementation SHA |
 | E2 | AC-2 | Immutable fetch seam fetched once, fed identical decoded content through all three unchanged typed classifier calls, accepted only the exact one-verified/two-bound-mismatch tuple, and failed closed for every conflict/dead/private/transport branch. Existing retry, identity-decoy, update, and archive matrices also passed. Exactly eight disclosed calibration candidates were each probed once. | Python unit tests; Phase C predecessor harness; bounded public Telegram previews | VERIFIED | [`calibration-observations.json`](calibration-observations.json) |
-| E3 | AC-3 | Closed `kz-canonical-json/v1` rejected duplicate/unknown fields, lexical numeric variants, unsafe values, invalid Unicode/keys/order/references/totals; preview rendering, digest binding, envelope separation, owner-evidence binding, subset and replay rejection all passed. | Python synthetic fixtures | VERIFIED | `scripts/test_kz_intake.py`; implementation SHA |
-| E4 | AC-4 | All-before apply, exact all-after no-op, marked mixed recovery, unmarked/corrupt/unknown stops, preflight ordering, stale/collision/staged-tamper rejection, and separate receipt binding passed in isolated temporary projects. No production controlled byte changed. | Python temporary directories; SHA-256 checkpoints | VERIFIED | [`production-hashes-pre-calibration.json`](production-hashes-pre-calibration.json); [`production-hashes-post-calibration.json`](production-hashes-post-calibration.json); [`production-hashes-final.json`](production-hashes-final.json) |
+| E3 | AC-3 | Closed `kz-canonical-json/v1` rejected duplicate/unknown fields, lexical numeric variants, JSON booleans at every recursive integer position, unsafe values, invalid Unicode/keys/order/references/totals, blank/whitespace evidence references, and verified observations with unsuccessful transport; complete positive preview, rendering, envelope, owner, subset, and replay checks passed. | Python synthetic fixtures | VERIFIED | `scripts/test_kz_intake.py`; revised implementation SHA |
+| E4 | AC-4 | Changing paths use exact B/A/X state while equal approved before/after paths are neutral. First apply, exact rerun/no-op, wholly unchanged output, neutral-path marked recovery, true unmarked mixture, unknown X, corrupt marker, preflight, stale/collision, and staged-tamper tests passed. No production controlled byte changed. | Python temporary directories; SHA-256 checkpoints | VERIFIED | [`production-hashes-pre-calibration.json`](production-hashes-pre-calibration.json); [`production-hashes-post-calibration.json`](production-hashes-post-calibration.json); [`production-hashes-final.json`](production-hashes-final.json) |
 | E5 | AC-5 | Exact three-command inventory exists at both runtime locations; every pair is byte-identical and self-contained with common metadata, root-neutral paths, complete authority/operation/failure/stops, and preserved stats/release boundaries. Check mode was non-mutating and detected drift/missing/extra/thin copies; sync direction was Claude-to-Codex. | Static parity tests and standalone-body inspection | VERIFIED | `scripts/test_kz_commands.py`; `scripts/sync_kz_commands.py`; runtime hashes in both smoke artifacts |
-| E6 | AC-6 | Public commitment and disclosed calibration input hashes/count/method matched; only the eight disclosed cases entered live calibration. Derived root URLs were consumed without admitting bare handles to production grammar. No holdout/source material was accessed, adopted, or written by the Executor. | Dedicated worktree and committed manifest audit | VERIFIED | [`input-commitment.json`](input-commitment.json); [`calibration-input.json`](calibration-input.json); [`calibration-observations.json`](calibration-observations.json) |
-| E7 | AC-7 | At the clean exact implementation SHA, three fresh nonpersistent tools-disabled Claude invocations and one fresh non-forked read-only Codex task loaded exact local runtime bytes, routed literal `/kz-add` sentinels without candidate network/apply, reproduced stats triage and release exact-current-approval stops, and preserved clean HEAD/status/controlled hashes. | Detached smoke worktree; Claude and Codex fresh runtimes | VERIFIED | [`claude-runtime-smoke.jsonl`](claude-runtime-smoke.jsonl); [`codex-runtime-smoke.md`](codex-runtime-smoke.md) |
-| E8 | AC-8 | All 31 approved generation/intake/command tests, compile, schema, four projection checks, built-site metadata, command parity, index validation, predecessor matrices, diff/scope/LOC audit, and final hashes passed. Exactly 12 implementation paths remained 8 new/4 modified and 1,885 insertion+deletion lines. No production, release, tag, push, or external mutation occurred. | Exact implementation commit plus final local worktree | VERIFIED | [`site-metadata-summary.json`](site-metadata-summary.json); [`production-hashes-final.json`](production-hashes-final.json); RF §4 |
+| E6 | AC-6 | Public commitment, disclosed input, observations, and Coordinator allocation-authority receipt bind the full partition `5b9fb0dd…` and prove 29 occurrences / 28 unique / 1 overlap / 8 calibration / 20 holdout, eight-lowest allocation, and disclosed calibration key/occurrence equality without revealing holdout material. Derived root URLs did not broaden production grammar. | Dedicated worktree; public artifacts; supplemental non-revealing allocation audit | VERIFIED | [`input-commitment.json`](input-commitment.json); [`calibration-input.json`](calibration-input.json); [`calibration-observations.json`](calibration-observations.json); [`partition-audit.json`](partition-audit.json) |
+| E7 | AC-7 | Self-contained complete redacted records retain all three exact Claude invocations and accepted result texts plus the complete fresh non-forked Codex report. Claude's project-setting/local-body proof is stated within its actual limit; Codex explicitly reports absolute loaded paths/hashes. Both preserve literal routing and clean state. Command files are byte-identical at revised SHA, so Coordinator instruction did not require rerunning models. | Detached smoke worktree; Claude and Codex fresh runtimes; revised static parity | VERIFIED | [`claude-runtime-smoke.jsonl`](claude-runtime-smoke.jsonl); [`codex-runtime-smoke.md`](codex-runtime-smoke.md) |
+| E8 | AC-8 | All 36 approved generation/intake/command tests, compile, schema, four projection checks, supported official-image site build, command parity, index validation, predecessor matrices, diff/scope/LOC audit, and revised final hashes passed. Exactly 12 implementation paths remain 8 new/4 modified and 1,957 insertion+deletion lines. No production, release, tag, push, or external mutation occurred. | Revised exact implementation commit plus final local worktree | VERIFIED | [`jekyll-build-revision.txt`](jekyll-build-revision.txt); [`site-metadata-summary.json`](site-metadata-summary.json); [`production-hashes-final.json`](production-hashes-final.json); RF §4 |
 
 ## Verification commands and results
 
@@ -38,7 +39,7 @@ The final approved gate set ran after AC-7 evidence was supplied:
 
 ```text
 python -m unittest scripts.test_catalog_generation scripts.test_kz_intake scripts.test_kz_commands -v
-  PASS — 31 tests
+  PASS — 36 tests
 python scripts/sync_kz_commands.py --check
   PASS — kz-add, kz-stats, kz-release exact synchronized inventory
 python -m py_compile scripts/kz_intake.py scripts/sync_kz_commands.py scripts/test_kz_intake.py scripts/test_kz_commands.py scripts/validate_links.py
@@ -49,7 +50,7 @@ python scripts/generate_readme.py --check
   PASS — all 4 catalog projections generator-current
 python docs/scripts/gen_index.py --validate
   PASS — 4 tasks validate against the closed schema
-python scripts/test_site_metadata.py --site <fresh read-only official-image build>
+python scripts/test_site_metadata.py --site <revised exact-SHA read-only official-image build>
   PASS — built EN/RU/KK route structure valid
 python -c "<load Phase C offline_harness.py; run_link_matrix(validate_links); run_command_matrix()>"
   PASS — classifier/retry/identity/update/archive and command predecessor matrices
@@ -57,9 +58,13 @@ git diff --check
   PASS
 ```
 
-The official Jekyll image was already present locally and was run with the repository bind-mounted
-read-only plus one temporary nested output mount. The temporary build was removed after the
-metadata test. No image pull, deployment, or external service write occurred.
+The official Jekyll image was already present locally and ran at revised SHA `3b06f143…` with the
+repository bind-mounted read-only plus one temporary nested output mount. The complete command,
+environment, exit code, output, validation, and output hashes are retained in
+[`jekyll-build-revision.txt`](jekyll-build-revision.txt). The generated metadata summary was
+byte-identical to the retained 11,097-byte summary; temporary build files were then removed. No
+image pull, deployment, or external-service write occurred. The earlier Reviewer reproduction was
+policy-rejected before start and is not represented as a successful run.
 
 The generic configured full-catalog live `python scripts/validate_links.py` command was not run:
 the approved TS and Coordinator instruction replace it for Phase A with the predecessor offline
@@ -78,17 +83,24 @@ An AST/source audit compared `TelegramPreviewParser`, `parse_member_count`, `han
 | Public commitment SHA-256 | `f7d4530d79e3597453ef5aa62d08295d48304cc1887a7ca1ee1495589aa0255e` |
 | Calibration input SHA-256 | `cbdf4f48f859e012445628daa5353c775192c5fd19db6b49e49b0a8cff8eb6d8` |
 | Calibration observations SHA-256 | `507938e38a5b655a9373d46bd41edb37be9f0cbd9508522878a504e0ba84c061` |
+| Allocation receipt SHA-256 | `6febc8793a7b763d5212cfaff4e96d7c12b9f9525427fb88e0ffdb65c3c2fbff` |
+| Full partition SHA-256 | `5b9fb0dd028ac19d02b2c413bca45e8fa3e0e05e8de9b20087bfa883fe2cb732` |
+| Partition allocation | `29` occurrences / `28` unique / `1` overlap / `8` calibration / `20` holdout; eight lowest scores are calibration |
 | Disclosed cases / unique candidates | `8 / 8` |
 | Source ledger | `18` URL occurrences retained because the JSON input repeats disclosed URLs across fields |
 | Probe outcome | `8` fetched HTTP 200; `8` verified exact reconciliation; `0` unresolved |
+| Revision validation | Existing eight observations all pass the stricter schema; artifact remains byte-identical, so no network refresh occurred |
 | Escalation | No browser or authenticated fallback; no second calibration run |
 
 Calibration outcomes are dated observations only. They were not hardcoded as current product facts
-and did not authorize a catalog addition.
+and did not authorize a catalog addition. `partition-audit.json` is a Coordinator-owned
+allocation-authority receipt that exposes no holdout identity, URL, raw text, key, score, source
+path, or expected outcome. The formal Reviewer may reproduce it from sealed material after the
+implementation freeze; the Executor did not seek or name that material.
 
 ## Fresh runtime binding
 
-The exact smoke commit was `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a`; detached smoke
+The accepted smoke commit was `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a`; detached smoke
 worktree HEAD and empty porcelain status were unchanged before/after. Exact runtime bindings were:
 
 | Runtime file pair | Bytes | SHA-256 |
@@ -98,16 +110,22 @@ worktree HEAD and empty porcelain status were unchanged before/after. Exact runt
 | `kz-stats` Claude/Codex pair | 3761 each | `063e7d6043f205bb214d9019c4ad95c02a1e517aa4ac30aa28e53e3d915fcbbe` |
 | `kz-release` Claude/Codex pair | 3532 each | `2d40318e9f4f6e12c4a2d6ed54e9d4119ac007769c0fbe63014d36260ceda8fc` |
 
-Claude accepted three separate one-turn, exit-0, nonpersistent plan-mode invocations with project
-settings, literal quoted empty tools value, and an explicit routing-only system prompt. They made
-zero tool/server/web steps and no network/write. The rejected harness attempts are retained in the
-JSONL and are not accepted evidence: one lost the empty tools argument and exited before model
-execution; one ProcessStartInfo launch was policy-rejected before start; one exploratory quoting
-probe returned unexecuted tool-call proposal text and was superseded.
+`claude-runtime-smoke.jsonl` is now self-contained: it records executable/version/cwd, exact literal
+commands and CLI modes, session IDs, complete accepted result text, exit/success/turn/stop fields,
+zero tool/server/web steps, per-command local path/hash/parity bindings, and before/after controlled
+hashes. Its exact limitation is explicit: Claude used the project setting source and produced
+behavior matching the independently bound complete local body, but did not itself echo an absolute
+loaded path. The three excluded harness attempts remain separate and are not accepted evidence.
 
 The Codex evidence came from genuinely fresh non-forked task `/root/phase_a_codex_smoke`, not this
-contextualized Executor and not a `$kz-add`/static-file substitute. Its full final report remains in
-the Coordinator mailbox; the attached Markdown transcribes and binds the supplied result.
+contextualized Executor and not a `$kz-add`/static-file substitute. Its complete final report,
+exact task identity/input, absolute loaded paths/hashes, complete outputs, and before/after state
+are contained directly in the Markdown artifact.
+
+Revised implementation SHA `3b06f143102bb90b3bd47f994607371bb3f0df45` changes only
+`scripts/kz_intake.py` and `scripts/test_kz_intake.py` after the accepted smokes. `AGENTS.md` and
+all six runtime command files remain byte-identical; per Coordinator instruction no fresh model
+rerun was required.
 
 ## Controlled production hashes and mutation log
 
