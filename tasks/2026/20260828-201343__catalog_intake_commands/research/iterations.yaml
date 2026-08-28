@@ -6,7 +6,14 @@ iterations:
   - number: 1
     focus: "test H2-H4 and establish feasible full-copy adapter, candidate-probe, input, approval, and holdout configurations"
     hypotheses: [H2, H3, H4]
-    status: pending
+    status: complete
     res_file: research/iter1/RES.md
+    agent: codex-researcher
+    sources: [external, codebase]
+  - number: 2
+    focus: "close URL grammar, payload/envelope contract, command-copy source and runtime evidence, sealed holdout allocation, architecture boundary, and batch provenance"
+    hypotheses: [H2, H3, H4]
+    status: pending
+    res_file: research/iter2/RES.md
     agent: codex-researcher
     sources: [external, codebase]

@@ -63,6 +63,21 @@ The supplied links already expose non-trivial cases: one requested handle presen
 canonical identity, one preview advertises a commercial service, and another is a plausible
 multilingual AI community. HTTP success alone therefore cannot determine admission.
 
+### Iteration 1 verified boundaries
+
+- `scripts/validate_links.py` already separates pure target classification and retry from
+  catalog update/archive behavior; the catalog-only limitation lives in CLI selection and
+  enrichment. Candidate intake should reuse that reviewed seam rather than create a second
+  identity classifier.
+- The classifier is typed: requested, observed, and unresolved type must remain distinct, and
+  target identity must bind before type, visible name, or count can become candidate facts.
+- Completeness has two levels: 29 source occurrences and 28 normalized candidates. An occurrence
+  ledger must precede deduplication so malformed, unsupported, repeated, and multi-link inputs do
+  not disappear.
+- Historical Phase C review proved that descriptive links can bind a foreign target if identity
+  sources are broadened carelessly. Intake parsing must not modify the reviewed target-identity
+  semantics merely to accept more source syntax.
+
 ### Mutation and content constraints
 
 - `data/communities.json` is the only catalog source; the four Markdown projections are generated.
@@ -328,6 +343,19 @@ identity/editorial/authority decision. Never weaken a gate to make the batch pas
 | PV4-4 | [`.tfw/conventions.md §14`](../../../.tfw/conventions.md) | No bonus scope, invented evidence, or provider-bound durable truth | Bounds both phases and makes unrelated dirty-work preservation explicit |
 | PV7-1 | [`knowledge/domain.md F1–F2`](../../../knowledge/domain.md) | Historical dead communities are archived rather than deleted | Candidate dedupe checks the archive and avoids resurrecting historical handles as fresh rows without continuity evidence |
 
+#### Research-derived constraints
+
+- Candidate parsing classifies Telegram link kind before normalization. Stable public-peer forms
+  may yield candidates; invite, phone, reserved action, message, malformed, and unsupported forms
+  remain explicit occurrence dispositions rather than guessed handles.
+- Approval is a two-layer contract: an immutable versioned preview payload is canonically
+  serialized and hashed, then an owner authority envelope references that digest and exact
+  approved IDs/rows. Apply recomputes the current catalog baseline and every eligibility gate;
+  any significant change invalidates the approval.
+- The present holdout is procedural no-tuning evidence, not a claim that candidate identities were
+  globally unknown. Allocation precedes implementation, and any holdout-driven change to parser
+  rules, fixtures, smokes, or expected outcomes invalidates the clean-run evidence cycle.
+
 ## 8. Dependencies 🟢 FREE
 
 | Dependency | Status |
@@ -335,7 +363,9 @@ identity/editorial/authority decision. Never weaken a gate to make the batch pas
 | Owner decisions: one `/kz-add`, preview/approval boundary, combined real batch, calibration/holdout split | ✅ Confirmed 2026-08-28 |
 | Existing conflict-safe classifier and summary/update primitives in `scripts/validate_links.py` | ✅ Present; arbitrary-candidate path absent |
 | Existing reviewed Claude contracts for `/kz-stats` and `/kz-release` | ✅ Present; Codex project skills absent |
-| Claude command discovery and Codex repository-skill discovery behavior | ⬜ Requires research and executable smoke design |
+| Exact-byte complete command copies at `.claude/commands` and `.agents/skills` frozen paths | ✅ Official loader front-matter intersection supports the same full document; source direction remains open |
+| Fresh Claude/Codex literal command discovery, argument receipt, no-mutation, and hard-stop evidence | ⬜ Requires Iteration 2 smoke design/evidence; file parity alone is insufficient |
+| Canonical preview payload and owner approval envelope profile | ⬜ Two-layer contract established; exact fields, serialization, digest, baseline, and freshness remain open |
 | Six-link owner input | ✅ Read; absolute machine path must not become durable project state |
 | `tasks/CANDIDATES-2026-08-28.md` 23-candidate discovery batch | ⬜ Present as unrelated untracked work; provenance/adoption boundary must be resolved before execution |
 | Live Telegram public previews and rate-limited access during Phase B | ⬜ External dependency; failures remain unresolved rather than inferred |
@@ -355,30 +385,36 @@ identity/editorial/authority decision. Never weaken a gate to make the batch pas
 | Full self-contained command copies drift between agent surfaces | High | High | Research a reproducible source/copy mechanism and enforce exact or semantic parity in tests |
 | Shared untracked discovery work is overwritten or accidentally staged | Medium | High | Snapshot hashes/provenance read-only; use path-scoped edits/commits; stop on unexplained drift |
 | “Add everything” is misread as bypassing eligibility gates | Medium | High | Define completion as 28 dispositions and all qualified approved additions, never unconditional insertion |
+| Reserved/private/message Telegram syntax is normalized as a public handle | Medium | High | Separate occurrence parser; enumerate supported public-peer grammar; preserve explicit unsupported dispositions |
+| Approved preview is replayed after proposed rows, evidence, or catalog baseline changes | Medium | High | Immutable payload digest + owner envelope + apply-time baseline/freshness/gate recheck |
+| Claude/Codex files are byte-identical but thin, incomplete, undiscoverable, or behaviorally different | Medium | High | Verify command inventory, standalone completeness, exact-copy parity, fresh loading, arguments, and hard stops separately |
+| Holdout leaks through parser fixtures or adapter smoke before live probing | Medium | High | Seal raw allocation before implementation; synthetic smokes only; invalidate any holdout-influenced rule cycle |
 
 ## 10. RESEARCH Case 🟢 FREE
 
 ### Blind Spots
 
-- The smallest source/copy layout that gives Claude Code and Codex complete self-contained command
-  instructions while keeping every agent copy reproducibly synchronized and outside framework-managed `.tfw/`.
-- Whether extending `validate_links.py` with a non-mutating arbitrary-candidate mode preserves its
-  current identity guarantees cleanly, or whether a separate composition layer is safer.
-- How to prove literal command discoverability in both tools with reproducible evidence rather
-  than only checking that adapter files exist.
-- Which evidence fields can support IT/Kazakhstan/commercial pre-classification and which require
-  explicit owner judgement per candidate.
-- A defensible calibration/holdout partition that covers hard cases without leaking expected
-  holdout dispositions into Phase A design.
+- Exact accepted public-peer URL forms and explicit dispositions for message, invite, phone,
+  reserved action, query, punctuation, and multi-link forms.
+- The smallest canonical preview-payload and approval-envelope schema, named serialization
+  profile, digest boundary, baseline binding, freshness rule, and retry lineage.
+- Source direction for complete byte-identical command copies and fresh Claude/Codex evidence for
+  literal routing, argument receipt, preview/no-mutation, stats triage, and release hard stops.
+- The exact pre-implementation calibration/holdout allocation, overlap ownership, neutral strata,
+  access discipline, and invalidation rule without expected outcomes.
+- Whether orchestration around the current classifier is sufficient or a shared observation
+  module reduces proof cost enough to justify the larger refactor.
+- Durable adoption of the untracked 23-candidate batch without overwriting parallel work or
+  promoting its preliminary notes to verified facts.
 
 ### Hypotheses
 
 | # | Hypothesis | Status |
 |---|---|---|
 | H1 | Claude Code commands and Codex repository skills can route the same literal `kz-*` surface to provider-neutral project workflows, including the two existing operations, without copied behavior | refuted — cross-tool feasibility confirmed by owner; thin-link/no-copy architecture superseded by approved A1 requiring full synchronized copies |
-| H2 | The existing Telegram classifier can expose an arbitrary non-mutating candidate probe with a stable summary while preserving every current identity/type/update/archive safety property | needs-research — owner does not know |
-| H3 | One `/kz-add <source>` grammar can unambiguously cover a single URL, multiple URLs, and Markdown/text files while remaining idempotent and accounting for every malformed/duplicate input | needs-research — owner does not know |
-| H4 | The 28-candidate universe can be partitioned into calibration and holdout sets so automated evidence narrows owner work without pretending that theme, Kazakhstan relevance, or commerciality are purely machine facts | needs-research — owner does not know |
+| H2 | The existing Telegram classifier can expose an arbitrary non-mutating candidate probe with a stable summary while preserving every current identity/type/update/archive safety property | supported with conditions — reuse pure classifier/retry seam, keep identity first, type explicit, mutation separate; exact boundary pending Iteration 2 |
+| H3 | One `/kz-add <source>` grammar can unambiguously cover a single URL, multiple URLs, and Markdown/text files while remaining idempotent and accounting for every malformed/duplicate input | supported with conditions — occurrence-first parsing and candidate grouping work; accepted URL taxonomy and payload schema pending Iteration 2 |
+| H4 | The 28-candidate universe can be partitioned into calibration and holdout sets so automated evidence narrows owner work without pretending that theme, Kazakhstan relevance, or commerciality are purely machine facts | supported procedurally — allocation must be sealed before implementation and cannot claim global blindness; exact partition pending Iteration 2 |
 
 ### Risks of Not Researching
 
@@ -389,12 +425,12 @@ keeps human-governed.
 
 ### Proposed RESEARCH Focus
 
-1. **Gather:** Map current Claude/Codex discovery contracts, existing `kz-*` semantics, classifier
-   extension seams, candidate data shapes, and comparable safe intake patterns.
-2. **Extract:** Compare reproducible full-copy source/synchronization layouts, probe/composition
-   architectures, input grammar designs, approval-state representations, and calibration/holdout partitions.
-3. **Challenge:** Test identity conflicts, aliases, private/dead/wrong-type previews, partial
-   failures, duplicate forms, editorial ambiguity, adapter drift, and holdout leakage.
+1. **Gather:** Close the exact Telegram public-peer grammar, canonical payload/envelope fields,
+   full-copy source-direction evidence, and raw allocation/provenance constraints.
+2. **Extract:** Compare the C2 orchestrated family against conservative C3 and shared-module C4,
+   and bind one source/copy, approval, and holdout configuration suitable for a bounded TS.
+3. **Challenge:** Run safe loader/routing probes where possible and attack stale approval,
+   parser loss, identity/type conflict, partial failure, command incompleteness, and holdout leakage.
 
 ### Why Not Just...?
 
@@ -416,7 +452,7 @@ keeps human-governed.
 | S1 | The owner wants command/workflow/skill terminology treated as implementation detail; the durable product is one literal operation available in both Claude and Codex | stakeholder | User, initial request |
 | S2 | Minimality matters: one command should accept a link or a list instead of multiplying commands for source shape | philosophy | User approved the single-command recommendation |
 | S3 | Safety is interactive: candidates must be previewed as an exact set and approved before mutation | process | User approved the two-stage boundary |
-| S4 | The real candidate corpus must do double duty without invalidating the final proof: some candidates calibrate the tooling, while a disjoint set remains unseen for a clean end-to-end run | constraint | User explicitly requested calibration plus clean final candidates |
+| S4 | The real candidate corpus must do double duty without invalidating the final proof: some candidates calibrate the tooling, while a disjoint set is sealed against tuning until a clean end-to-end run; “unseen” does not claim identities were historically unknown | constraint | User explicitly requested calibration plus clean final candidates; refined by RES Iteration 1 GD3/CD5 |
 | S5 | “Add all” means the workflow must fully process the combined corpus, but the project's value and goal still outrank coverage; ineligible or unverifiable candidates need explicit non-add dispositions | philosophy | User clarified that normal duplicate/topic/liveness validation and project purpose govern every candidate |
 | S6 | Cross-agent commands must be self-contained complete copies, not thin runtime links; synchronization must therefore be enforced by source/copy tooling and parity checks | constraint | User correction during H1 iteration |
 
