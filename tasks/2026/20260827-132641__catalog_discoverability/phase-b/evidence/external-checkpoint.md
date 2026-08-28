@@ -1,9 +1,10 @@
 # External checkpoint — 20260827-132641__catalog_discoverability / Phase B
 
-> **Captured**: 2026-08-28T18:10:03.0522358+05:00
+> **Captured**: 2026-08-28T19:18:20.7169478+05:00
+> **Revalidated after harness recovery**: 2026-08-28T19:25:03.0692872+05:00
 > **Mode**: authenticated read-only GitHub REST/GraphQL, read-only Git ref/history probes,
 > unauthenticated public GET/HEAD, and live Chrome inspection
-> **Authenticated actor**: `c0rp-aubakirov`
+> **Authenticated actor**: `saubakirov`
 > **Executor mutation count**: 0
 > **Eligible reviewed deployment**: `bd7af42165c341d653e3efbb20091c131c9f7a40`
 
@@ -12,6 +13,8 @@
 The configured Git credential helper was used only for authenticated read-only requests. No
 credential value was printed or stored. This checkpoint independently observed the external state
 created before this Executor run; it did not create, retry, or alter that state.
+The post-recovery recheck returned the same custom-image URL/bytes, repository settings, remote
+master, Pages state/build, and protected tag facts recorded below.
 
 | Field | Observed value |
 |---|---|
@@ -38,13 +41,17 @@ history.
 | Homepage | `https://saubakirov.github.io/KZ-IT-telegram-list/` | exact target applied |
 | Topics | `almaty`, `artificial-intelligence`, `astana`, `awesome-list`, `developer-community`, `it`, `jobs`, `kazakh-language`, `kazakhstan`, `russian-language`, `startups`, `telegram` | exact sorted 12-topic set applied |
 | Default branch / Pages source | `master`; branch `master`, folder `/` | unchanged as required |
-| Repository social preview | GraphQL `openGraphImageUrl` is `https://opengraph.githubassets.com/cbd407a7587fae10ef793aeb690a8ab206a10c7d963767bcffe31a4e0c25ba71/saubakirov/KZ-IT-telegram-list` | **BLOCKED** — still GitHub-generated fallback |
+| Repository social preview | GraphQL `openGraphImageUrl` is `https://repository-images.githubusercontent.com/92145063/3d01cb70-f0b7-406e-b18e-82b18df39588` | **VERIFIED** — non-fallback custom repository image |
 
-The repository-level custom social-preview upload has not succeeded. The Coordinator reported that
-Chrome's file chooser is blocked because the ChatGPT extension lacks local-file URL permission and
-that other compliant UI handoff attempts caused no change. This Executor did not retry an upload or
-exercise any UI mutation; the current generated fallback was independently verified by authenticated
-GraphQL. Resolution remains with the Coordinator.
+The Coordinator delegation attributes the completed official-UI upload to the owner. This Executor
+did not upload, retry, edit, or activate any setting. The resulting external state was independently
+verified three ways: authenticated GraphQL returned the exact non-fallback URL above; GET and HEAD
+both returned 200 `image/png`, 27,394 bytes, SHA-256
+`13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d`, byte-identical to
+`assets/social-preview.png`; and authenticated Chrome Settings visibly rendered the same URL as a
+640×320 repository card. The fresh 955×510 screenshot is
+`repository-social-preview-settings.png`, 30,121 bytes, SHA-256
+`e9d158759aa3df45f2eeffde09bccb3c8aed362df3b4bbab30e8c1256860119d`.
 
 ## Public HTTP and exact-byte state
 
@@ -74,8 +81,8 @@ parses as 38 groups, 20 channels, 4 bots, 19 categories, 2 archived entries, and
 `last_updated=2026-08-27`.
 
 Each public route's `og:image` and `twitter:image` points to the 200 response for the reviewed
-27,394-byte PNG. That page-level metadata is **VERIFIED** and is distinct from the **BLOCKED**
-repository-setting preview above.
+27,394-byte PNG. That page-level metadata remains **VERIFIED** and is byte-identical to the now
+**VERIFIED** repository-setting preview above.
 
 Full status, response-header, hash, settings, Pages, ref, tag, and parsed-contract facts are bound in
 canonical-LF `public-http.json`.
@@ -89,6 +96,10 @@ one-action `#type-groups` jump that leaves the first catalog entry in view. The 
 browser-observed representative hrefs per case passed 30/30 read-only HEAD checks. The canonical-LF
 matrix and six fresh screenshots are task-local attachments.
 
+A separate fresh authenticated Chrome Settings read inspected the visible `Social preview` card.
+The card's computed background URL exactly matched GraphQL and rendered at 640×320. The visible
+`Edit` control was not activated. The bound screenshot is the task-local attachment named above.
+
 ## Tag preservation
 
 - `refs/tags/data-2026-08-27` remains annotated-tag object
@@ -98,16 +109,16 @@ matrix and six fresh screenshots are task-local attachments.
 
 ## Remaining continuation
 
-Phase B must remain **BLOCKED**. The Coordinator may resolve only the repository-level custom preview
-through an authorized compliant UI surface, then re-read authenticated GraphQL and bind the resulting
-repository image. Search Console submission and index-coverage checks remain **DEFERRED** because no
-authorization or evidence exists. After the custom-preview result is captured, refresh Executor
-evidence as needed and return to the same formal Reviewer; do not claim complete publication before
-that review.
+F4's repository-level custom-preview evidence condition is now satisfied. Phase B status remains
+unchanged under the Executor role lock until the same formal Reviewer judges this refreshed RF/EV.
+Search Console submission and index-coverage checks remain **DEFERRED** because no authorization or
+evidence exists. Return this exact closure evidence to the persistent Reviewer; do not claim complete
+publication or close the phase before that review.
 
 ## No-mutation record
 
 This Executor performed authenticated GET/GraphQL queries, public GET/HEAD requests, Git read-only
-ref/history checks, a local build, and live browser reads only. There was no push, tag, release,
-deployment, repository/Pages/settings edit, upload, Search Console action, or other external
-mutation during this evidence refresh.
+ref/history checks, proportional local gates, and authenticated browser reads/screenshots only.
+There was no push, tag, release, deployment, repository/Pages/settings edit, upload, Search Console
+action, or other external mutation during this evidence refresh. The owner-performed upload occurred
+before this Executor capture and is distinguished from the zero-mutation Executor record above.

@@ -2,11 +2,11 @@
 
 > **Date**: 2026-08-28
 > **Author**: saubakirov (Codex Executor)
-> **Status**: 🟠 RF — Deployed evidence refreshed; repository custom preview BLOCKED
+> **Status**: 🟢 RF — F4 closure evidence refreshed; formal review pending
 > **Parent HL**: [Phase B HL](HL__phase-b__published_discovery.md)
 > **Master HL**: [Master HL](../HL-20260827-132641__catalog_discoverability.md)
 > **TS**: [TS Phase B](TS__phase-b__published_discovery.md)
-> **Integrated pre-execution base**: `3280a618b6d9f1a1afd87a51ef382f6922baa0ae`
+> **Integrated pre-execution base**: `f97c890c98440a8442cc51e689c39b5d013da754`
 > **Reviewed deployed SHA**: `bd7af42165c341d653e3efbb20091c131c9f7a40`
 > **Implementation/evidence source commit**: `de4060bf817bfb69441f08344f82dd14bc856649`
 
@@ -14,26 +14,23 @@
 
 ## 1. What Was Done
 
-No implementation byte changed. This bounded continuation independently refreshed only deployed
-Phase B evidence and this RF.
+No implementation byte changed. This bounded continuation independently verified the owner-uploaded
+repository social preview and refreshed only Phase B evidence and this RF to close formal finding F4.
 
 ### New Files
 
 | File | Description |
 |---|---|
-| `phase-b/evidence/public-http.json` | Canonical-LF authenticated repository/Pages/ref/tag state and exact public GET/HEAD/body/hash evidence |
+| `phase-b/evidence/repository-social-preview-settings.png` | Fresh authenticated GitHub Settings card showing the custom repository preview |
 
 ### Modified Files
 
 | File | Changes |
 |---|---|
-| `phase-b/evidence/EV__phase-b__published_discovery.md` | Reconciles deployed, public, browser, blocker, no-mutation, and attachment evidence |
-| `phase-b/evidence/external-checkpoint.md` | Replaces the pre-publication before-state with the observed exact deployment/settings/public state and remaining blocker |
-| `phase-b/evidence/jekyll-build.txt` | Adds exact-`bd7af421…` rebuild and public byte-comparison facts while preserving the deterministic PNG proof |
-| `phase-b/evidence/browser-matrix.json` | Fresh canonical-LF live Chrome matrix for six required cases and 30/30 representative link checks |
-| `phase-b/evidence/browser-390x844-{en,ru,kk}.png` | Fresh live mobile screenshots |
-| `phase-b/evidence/browser-1366x768-{en,ru,kk}.png` | Fresh live desktop screenshots |
-| `phase-b/RF__phase-b__published_discovery.md` | Records the bounded post-publication evidence result and continuation |
+| `phase-b/evidence/EV__phase-b__published_discovery.md` | Reconciles F4 closure, exact custom-image bytes, zero Executor mutation, and Reviewer continuation |
+| `phase-b/evidence/external-checkpoint.md` | Replaces the custom-preview blocker with independently verified GraphQL/HTTP/Chrome evidence |
+| `phase-b/evidence/public-http.json` | Refreshes authenticated repository/settings state and binds custom-image/UI evidence in canonical LF |
+| `phase-b/RF__phase-b__published_discovery.md` | Records the bounded F4 evidence closure and same-Reviewer handoff |
 
 The approved implementation boundary remains exactly 13 paths: 8 new and 5 modified. Phase A
 source, README, visible bodies, locale digest, implementation, settings, status, HL, TS, REVIEW,
@@ -41,19 +38,17 @@ review stages, journal, index, knowledge, and debt were not modified by this Exe
 
 ## 2. Key Decisions
 
-1. Public claims are split by surface. The route-level `og:image`/`twitter:image` is verified because
-   it resolves to the reviewed PNG, while GitHub's repository-card `openGraphImageUrl` remains a
-   generated fallback and is the sole material blocker.
-2. Public byte identity is established against a fresh supported build from an exact Git archive of
-   deployed `bd7af421…`, not against a mutable working tree or a hash-only assumption.
-3. The six browser cases use the live public URLs at the exact required viewports. Browser-observed
-   hrefs are status-checked separately because the browser's read-only evaluation surface exposes no
-   `fetch`; all 30 checks are nevertheless bound in the canonical-LF matrix.
+1. Repository-preview proof requires three aligned surfaces: authenticated GraphQL must return a
+   non-fallback URL, its HTTP bytes must match the reviewed PNG, and authenticated Settings must
+   visibly render that same URL. All three now agree exactly.
+2. The Coordinator delegation attributes the upload to the owner. This Executor records that actor
+   boundary separately from the independently verified resulting state and made zero external mutation.
+3. Existing deployed/public/browser/build evidence remains current because remote master, Pages build,
+   public hashes, tag, settings, implementation bytes, and the six-case matrix are unchanged.
 4. Antigravity was not rerun because no reviewed visible copy, metadata, setting string, SVG, or PNG
    byte changed. The existing exact advisory binding remains applicable under TS AC-8.
-5. This Executor observed previously created external state but made zero external mutation. The
-   phase stays `BLOCKED` and returns to the same Reviewer only after Coordinator resolution of the
-   repository custom-preview setting.
+5. F4 evidence is closed, but formal disposition still belongs to the persistent Reviewer. Status,
+   REVIEW, and review-stage files remain untouched under the Executor role lock.
 
 ## 3. Acceptance Criteria
 
@@ -63,7 +58,7 @@ review stages, journal, index, knowledge, and debt were not modified by this Exe
 - [x] AC-4 — public sitemap is exactly the three canonical routes; project `robots.txt` and `llms.txt` are 404 and absent from the local build.
 - [x] AC-5 — all six fresh live Chrome cases pass viewport, visibility, overflow, script, navigation, and 30/30 representative-link checks.
 - [x] AC-6 — Phase A digest, catalog/source facts, README, stripped bodies, targets, fragments, all twelve predecessor tests, and the preservation extension remain exact; 13/13 tests pass.
-- [ ] AC-7 — deploy/ref/build/description/homepage/topics/public/tag evidence is complete, but the repository custom-preview upload has not succeeded; Search Console remains DEFERRED and unauthorized.
+- [x] AC-7 — deploy/ref/build/description/homepage/topics/public/tag evidence remains exact; the owner-uploaded repository preview is independently verified by authenticated GraphQL, exact HTTP bytes, and visible Settings UI; Search Console remains DEFERRED and unauthorized.
 - [ ] AC-8 — repository candidate approval and exact Antigravity advice remain valid; this refreshed deployed evidence still requires disposition by the same formal Reviewer.
 - [x] AC-9 — the refresh is limited to Executor-owned EV/RF/evidence, the phase remains `BLOCKED`, attribution and continuation are explicit, and forbidden lifecycle/spec/review files are untouched.
 
@@ -78,7 +73,7 @@ Complete publication is not claimed.
 - Local metadata: PASS — exact EN/RU/KK structure, head, Dataset, targets/fragments, sitemap, and preview.
 - Public metadata: PASS — downloaded successful-response mirror produces the same 11,097-byte metadata summary as the local build.
 - Public HTTP: PASS for approved route/asset surface — GET/HEAD 200 on EN/RU/KK/sitemap/JSON/CSS/PNG; all seven bodies byte-identical to the exact deployed build; project robots/llms GET/HEAD 404.
-- Repository/Pages/settings: PASS except custom preview — authenticated `master` and latest built Pages SHA are exact `bd7af421…`; description, homepage, 12 topics exact; Pages source unchanged; historical tag unchanged; GraphQL preview remains fallback.
+- Repository/Pages/settings: PASS — authenticated `master` and latest built Pages SHA are exact `bd7af421…`; description, homepage, 12 topics exact; Pages source unchanged; historical tag unchanged; GraphQL returns the exact non-fallback repository image.
 - Browser: PASS — live EN/RU/KK at 390×844 and 1366×768; zero overflow/hidden critical content/executable scripts/fixed obstruction; type jump works; 30/30 links 200. Matrix: 87,008 bytes / `35378c30a592629b1b4275f748d1d68c04a766f4820baef62cf40f9032135bd8`, canonical LF.
 - Asset: PASS — public/repository/inspection PNG is 1280×640, 27,394 bytes / `13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d`; exact CairoSVG reproduction proof unchanged.
 - Antigravity: PASS, unchanged binding — conversation `5f3edb10-3f79-4dbf-8aa8-2c3885dbc28c`; exact model/plan+sandbox/object stream-json/no bypass; findings/nits none.
@@ -88,16 +83,18 @@ Complete publication is not claimed.
 
 See [EV file](evidence/EV__phase-b__published_discovery.md) for evidence details.
 
-Evidence verdict: 6/9 VERIFIED, 0 DEFERRED, 1 BLOCKED, 2 N/A
+Evidence verdict: 7/9 VERIFIED, 0 DEFERRED, 0 BLOCKED, 2 N/A
 
 Primary refreshed bindings:
 
-- `public-http.json`: 14,666 bytes / `133cd56811d202577b7f0dca9198a2ba0831d3702d232c317f31f8203af43bf8`.
+- `public-http.json`: 17,255 bytes / `2a5d501b9b9a0c66c246e2d66c08badfc749a893c484db1c8acf945e2565cdf0`, canonical LF.
+- `external-checkpoint.md`: 8,341 bytes / `dd859005a2024f43b505829a33e05aacff3524ec9a76d2ec0ef644e5ef3ea979`.
 - `browser-matrix.json`: 87,008 bytes / `35378c30a592629b1b4275f748d1d68c04a766f4820baef62cf40f9032135bd8`; zero CRLF; 6 cases; 30/30 links.
 - Public EN/RU/KK: 33,669 / 40,530 / 41,343 bytes with exact reviewed hashes.
 - Public sitemap/JSON/CSS/PNG: 338 / 45,260 / 2,035 / 27,394 bytes with exact reviewed hashes.
 - Page-level preview: VERIFIED at exact reviewed PNG.
-- Repository-level preview: BLOCKED at generated `opengraph.githubassets.com` fallback.
+- Repository-level preview: VERIFIED at `https://repository-images.githubusercontent.com/92145063/3d01cb70-f0b7-406e-b18e-82b18df39588`; 200 `image/png`, 27,394 bytes, exact reviewed SHA-256 and bytes.
+- Authenticated Settings visual: `repository-social-preview-settings.png`, 955×510, 30,121 bytes / `e9d158759aa3df45f2eeffde09bccb3c8aed362df3b4bbab30e8c1256860119d`.
 - Executor external mutation count: 0.
 
 ## 6. Observations (out-of-scope, not modified)
@@ -106,8 +103,8 @@ No observations.
 
 ## 7. Fact Candidates
 
-No fact candidates. The custom-preview file-chooser limitation is a task-specific external blocker
-already recorded in EV/RF, not reusable human-only project knowledge.
+No fact candidates. The owner-upload attribution is delegated execution context; the resulting
+GraphQL/HTTP/Settings state is independently discoverable task evidence, not reusable human-only knowledge.
 
 ## 8. Strategic Insights (Execution)
 
@@ -117,22 +114,22 @@ surfaces was explicit in the delegated execution boundary and is applied directl
 ## 9. Diagrams
 
 ```text
-reviewed deploy bd7af421… ──► Pages build at bd7af421… ──► public routes/assets exact
-          │                                                   │
-          │                                                   ├── page OG/Twitter PNG: VERIFIED
-          │                                                   └── live browser matrix: PASS
-          │
-          └── GitHub repository card preview: generated fallback ──► BLOCKED
+reviewed PNG bytes ──► public page OG/Twitter PNG ──► exact 200 bytes
+         │
+         └── owner upload ──► GraphQL custom URL ──► exact 200 bytes
+                                      │
+                                      └── authenticated Settings card: visible
 ```
 
 ## Execution Deviations and Boundaries
 
 | Item | Disposition |
 |---|---|
-| Harness recovery moved the interrupted dirty state into `D:\projects\KZ-IT-telegram-list` | Inspected both locations first; recovered checkout remained at exact `3280a618…` with the complete intended evidence-only delta, while the former worktree was clean. Work continued only on the preserved recovered state. |
+| Prior deployed-evidence loop harness recovery | Preserved from the earlier RF history: the recovered checkout was based on exact `3280a618…`; that loop produced `a67e353…` before the F4 review. This closure began cleanly at exact integrated base `f97c890…`. |
 | Browser page evaluation exposes no `fetch` | Captured every exact href in live Chrome, then ran read-only HEAD checks on those 30 hrefs before matrix serialization; recorded in EV/matrix. |
 | Public mirror initially included saved 404 bodies for robots/llms | Metadata validation used a second mirror containing only the seven successful approved outputs; robots/llms remained separately bound as GET/HEAD 404. No public byte was rewritten. |
-| Repository custom-preview upload | BLOCKED. Authenticated GraphQL still returns the generated fallback; Coordinator-reported Chrome chooser/local-file permission limitation remains unresolved. Executor attempted no upload. |
+| Repository custom-preview upload | Owner-performed before this capture, per Coordinator delegation. Executor independently verified the resulting GraphQL/HTTP/Settings state and performed no upload or setting mutation. |
+| Chrome Settings capture | The pre-existing Settings tab was controlled by the Coordinator session, so the Executor opened a separate authenticated read-only tab. Two framing scroll calls reported bounded timeouts after applying the scroll; fresh DOM rectangles confirmed the state, the final screenshot succeeded, and no control was activated. |
 | Search Console | DEFERRED and unauthorized; no submission or indexing claim. |
 | Antigravity | Not rerun because reviewed copy/metadata/asset/setting-string bytes are unchanged; prior exact result remains bound. |
 | Build-only artifacts | Created only under an external temporary directory; no `_site/` or `Gemfile.lock` was created or committed in the repository. |
@@ -140,10 +137,9 @@ reviewed deploy bd7af421… ──► Pages build at bd7af421… ──► publi
 
 ## Continuation
 
-Phase B remains `BLOCKED`. The Coordinator must resolve the repository-level custom-preview upload
-through an authorized compliant UI surface, capture the resulting authenticated GraphQL value, and
-return this same Phase B RF/EV to the persistent Reviewer. Do not close the phase or claim complete
-publication before that formal review.
+F4's evidence condition is satisfied. Phase B task status remains unchanged under the Executor role
+lock; return this exact RF/EV/evidence refresh to the persistent Reviewer. Do not close the phase or
+claim complete publication before that formal review.
 
 ---
 

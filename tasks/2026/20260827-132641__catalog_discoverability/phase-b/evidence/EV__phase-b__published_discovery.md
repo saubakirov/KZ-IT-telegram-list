@@ -4,7 +4,7 @@
 > **Author**: saubakirov (Codex Executor)
 > **Task**: 20260827-132641__catalog_discoverability
 > **TS**: [TS Phase B](../TS__phase-b__published_discovery.md)
-> **Integrated pre-execution base**: `3280a618b6d9f1a1afd87a51ef382f6922baa0ae`
+> **Integrated pre-execution base**: `f97c890c98440a8442cc51e689c39b5d013da754`
 > **Reviewed deployed SHA**: `bd7af42165c341d653e3efbb20091c131c9f7a40`
 > **Approved Phase A base**: `d9fe27c6dce80008326fa8eb731d3aff40fd3726`
 
@@ -19,8 +19,8 @@
 | Deploy target | Public GitHub Pages project site at `https://saubakirov.github.io/KZ-IT-telegram-list/` |
 | CI / Pipeline | Pages `legacy` build from `master` `/`; latest authenticated build is `built` at exact `bd7af421…` |
 | Local build | Official `actions/jekyll-build-pages:v1.0.13` image at digest `sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041` |
-| Browser | Live Google Chrome through the ChatGPT browser extension; exact 390×844 and 1366×768 viewport overrides |
-| GitHub API | Authenticated read-only REST/GraphQL as `c0rp-aubakirov`; credential value neither printed nor stored |
+| Browser | Existing six-case live Google Chrome matrix plus fresh authenticated Chrome Settings card inspection; no control activated |
+| GitHub API | Authenticated read-only REST/GraphQL as `saubakirov`; credential value neither printed nor stored |
 | Advisory | Existing bound Antigravity `gemini-3.7-flash-high` result; no rerun because visible copy, metadata, SVG, and PNG bytes are unchanged |
 
 ## Evidence
@@ -33,18 +33,17 @@
 | E4 | AC-4 | Public Liquid sitemap is exactly the three canonical routes; project `robots.txt` and `llms.txt` return GET/HEAD 404 and are absent from the local build | Public GET/HEAD plus XML/local build assertions | VERIFIED | `public-http.json`; `jekyll-build.txt` |
 | E5 | AC-5 | Fresh live EN/RU/KK cases at both exact viewports have no overflow, hidden critical content, scripts, clipping, or obstruction; type navigation works; exact observed links pass 30/30 | Live Chrome plus read-only HEAD checks | VERIFIED | `browser-matrix.json`; six fresh screenshots |
 | E6 | AC-6 | Phase A digest/source/README/visible-body/target/fragment/test contract is unchanged; generator/schema gates and all 13 tests pass | Local immutable-base and Python checks | N/A | Deterministic gates below |
-| E7 | AC-7 | Exact deploy/ref/build/settings/public/tag state is captured with zero Executor mutation, but the repository-card custom social preview still resolves to GitHub's generated fallback | Authenticated GitHub REST/GraphQL, Git history, public HTTP | BLOCKED | `external-checkpoint.md`; `public-http.json` |
+| E7 | AC-7 | Exact deploy/ref/build/settings/public/tag state is captured with zero Executor mutation; the owner-uploaded repository preview resolves to the exact reviewed PNG through authenticated GraphQL, HTTP, and visible Settings UI evidence | Authenticated GitHub REST/GraphQL and Chrome, Git history, public HTTP | VERIFIED | `external-checkpoint.md`; `public-http.json`; `repository-social-preview-settings.png` |
 | E8 | AC-8 | Exact visible copy/metadata/asset bytes remain those formally approved and previously passed by the bound Antigravity advisory; refreshed deployed evidence is ready for the same Reviewer | Existing advisory and formal candidate REVIEW plus byte comparison | VERIFIED | `antigravity-input.txt`; `antigravity-output.jsonl`; `public-http.json` |
 | E9 | AC-9 | This refresh changes only Executor-owned EV/RF/evidence; implementation remains the approved 13-path boundary, lifecycle remains `BLOCKED`, and forbidden Coordinator/Reviewer artifacts are untouched | Git path/role audit | N/A | RF and final Git audit |
 
 ## Verdict
 
-Evidence verdict: 6/9 VERIFIED, 0 DEFERRED, 1 BLOCKED, 2 N/A
+Evidence verdict: 7/9 VERIFIED, 0 DEFERRED, 0 BLOCKED, 2 N/A
 
-This is not a complete-publication verdict. The sole material blocker is the repository-level custom
-social-preview setting. Search Console submission/index coverage also remains explicitly DEFERRED and
-unauthorized, but it is not represented as a second blocking failure. Formal disposition belongs to
-the same Reviewer task.
+F4's evidence condition is satisfied, but this is not the formal Phase B verdict. Search Console
+submission/index coverage remains explicitly DEFERRED and unauthorized. Phase status stays unchanged
+under the Executor role lock until the same Reviewer judges this refreshed RF/EV.
 
 ## Deterministic gates and preservation
 
@@ -110,10 +109,10 @@ returned GET/HEAD 404. The public sitemap contains exactly `/`, `/ru/`, and `/kk
 as 38 groups, 20 channels, 4 bots, 19 categories, 2 archived entries, and
 `last_updated=2026-08-27`.
 
-`public-http.json` is canonical LF, 14,666 bytes, SHA-256
-`133cd56811d202577b7f0dca9198a2ba0831d3702d232c317f31f8203af43bf8`.
-`external-checkpoint.md` is 7,454 bytes, SHA-256
-`ec75b1176ab19bbba21935bf10f89bb9afe4940a79d21f7eb06f9788aa4b877d`.
+`public-http.json` is canonical LF, 17,255 bytes, SHA-256
+`2a5d501b9b9a0c66c246e2d66c08badfc749a893c484db1c8acf945e2565cdf0`.
+`external-checkpoint.md` is 8,341 bytes, SHA-256
+`dd859005a2024f43b505829a33e05aacff3524ec9a76d2ec0ef644e5ef3ea979`.
 The refreshed `jekyll-build.txt` is 5,899 bytes, SHA-256
 `d03d372e69d73061fecd8a07b6ce03932a5c3a15c685fb25ccb6cc4ae92c65de`.
 The parsed metadata summary remains 11,097 bytes, SHA-256
@@ -142,7 +141,7 @@ All six screenshots were visually inspected. The required identity, promise, fre
 type, and intent controls are legible without horizontal clipping; the matrix confirms the useful
 first catalog entry after one type-navigation action.
 
-## Social preview boundary
+## Social preview closure
 
 The page-level `og:image` and `twitter:image` on every route resolve to the reviewed 200 PNG above.
 The source remains 1,158 bytes /
@@ -151,11 +150,17 @@ attachment remain byte-identical at 27,394 bytes /
 `13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d`. The exact CairoSVG 2.8.2
 command and producing environment remain fully bound in `jekyll-build.txt`.
 
-The distinct repository-level GraphQL `openGraphImageUrl` is still GitHub's generated
-`opengraph.githubassets.com` fallback. The Coordinator reported that Chrome's file chooser cannot
-access the local file because the ChatGPT extension lacks local-file URL permission and other
-compliant UI handoffs produced no setting change. This Executor independently verified the fallback
-but made no upload attempt. That exact setting is **BLOCKED** pending Coordinator resolution.
+Authenticated GraphQL now returns the distinct non-fallback repository URL
+`https://repository-images.githubusercontent.com/92145063/3d01cb70-f0b7-406e-b18e-82b18df39588`.
+GET and HEAD both return 200 `image/png`; the response is 27,394 bytes / SHA-256
+`13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d` and is byte-identical to
+`assets/social-preview.png`. Fresh authenticated Chrome Settings inspection independently observed
+that exact URL as the visible card's 640×320 computed background. The 955×510 attachment
+`repository-social-preview-settings.png` is 30,121 bytes / SHA-256
+`e9d158759aa3df45f2eeffde09bccb3c8aed362df3b4bbab30e8c1256860119d`.
+
+The Coordinator delegation attributes the upload to the owner. This Executor only verified the
+resulting state and did not activate the visible `Edit` control or perform an upload/settings action.
 
 ## Antigravity advisory record
 
@@ -180,17 +185,17 @@ This Executor used authenticated read-only REST/GraphQL, public GET/HEAD, Git re
 local exact-SHA build, and live browser reads only. There was no push, tag, release, deploy,
 repository/Pages/settings change, upload, Search Console action, or other external mutation.
 
-Phase B remains `BLOCKED`. The Coordinator must resolve the repository custom-preview upload through
-an authorized compliant UI surface, capture the resulting authenticated GraphQL state, and return
-this refreshed RF/EV to the same Reviewer. Search Console remains separately DEFERRED and
-unauthorized. Complete publication is not claimed.
+F4's custom-preview evidence condition is now satisfied. Phase B remains unchanged in task status
+because this Executor cannot alter lifecycle authority; return this refreshed RF/EV to the same
+Reviewer. Search Console remains separately DEFERRED and unauthorized. Complete publication is not
+claimed before formal review.
 
 ## Attachments
 
 | File | Description |
 |---|---|
 | `public-http.json` | Canonical-LF authenticated repository/Pages/ref/tag and exact public GET/HEAD/body/hash evidence |
-| `external-checkpoint.md` | Human-readable deployed-state, blocker, tag, continuation, and no-mutation checkpoint |
+| `external-checkpoint.md` | Human-readable deployed/settings state, F4 closure, tag, continuation, and no-mutation checkpoint |
 | `jekyll-build.txt` | Original deterministic build/raster proof plus exact-SHA post-publication build comparison |
 | `metadata-summary.json` | Exact local/public-identical route metadata and Dataset summary |
 | `browser-matrix.json` | Canonical-LF six-case live Chrome DOM/head/overflow/navigation/link matrix |
@@ -201,6 +206,7 @@ unauthorized. Complete publication is not claimed.
 | `browser-1366x768-ru.png` | Fresh live RU desktop viewport |
 | `browser-1366x768-kk.png` | Fresh live KK desktop viewport |
 | `social-preview-inspection.png` | Byte-identical final page-preview visual-inspection attachment |
+| `repository-social-preview-settings.png` | Fresh authenticated GitHub Settings card showing the owner-uploaded custom preview |
 | `antigravity-input.txt` | Existing complete content-fed advisory input |
 | `antigravity-output.jsonl` | Existing object-valued stream-json advisory output |
 
