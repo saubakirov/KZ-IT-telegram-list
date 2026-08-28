@@ -7,7 +7,7 @@
 > **Phase HL**: [Phase A HL](HL__phase-a__intake_engine.md)
 > **TS**: [TS Phase A](TS__phase-a__intake_engine.md)
 > **Revision source**: [Formal REVIEW](REVIEW__phase-a__intake_engine.md) (`REVISE`)
-> **Revised implementation SHA**: `3b06f143102bb90b3bd47f994607371bb3f0df45`
+> **Revised implementation SHA**: `20c19505d5e156c3f0fe563877a03f387322aca2`
 > **Accepted unchanged-command smoke SHA**: `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a`
 
 ---
@@ -25,6 +25,9 @@ The formal-review revision closes the trailing-dot authority, recursive integer/
 failed-transport schema, and neutral controlled-path idempotency findings. It also replaces runtime
 summaries with self-contained complete redacted accepted records, binds the Coordinator-owned
 non-revealing allocation receipt, and retains a complete revised-SHA official-image build record.
+The re-review revision closes the remaining F1/F2 findings by deriving every staged byte from the
+fixed ADD action projection and by validating serialized observations as exact possible outputs of
+the unchanged classifier and transport producer before preview, authority, or apply can proceed.
 
 ### New Files
 
@@ -56,7 +59,7 @@ non-revealing allocation receipt, and retains a complete revised-SHA official-im
 | `.claude/commands/kz-release.md` | Made the existing complete release command location-neutral and parity-ready while preserving pre-tag/pre-push approval. |
 | `AGENTS.md` | Registered the truthful three-command project inventory and distinguished availability from execution evidence. |
 
-The implementation budget is exactly 12 paths: 8 new, 4 modified, and 1,957 total
+The implementation budget is exactly 12 paths: 8 new, 4 modified, and 2,230 total
 insertion+deletion lines. Evidence and lifecycle traces are outside that implementation budget.
 
 ## 2. Key Decisions
@@ -73,9 +76,12 @@ insertion+deletion lines. Evidence and lifecycle traces are outside that impleme
    fields exclude JSON booleans, evidence references must be non-blank, and verified observations
    require successful transport.
 4. Preview payload, current owner approval, pending recovery marker, and receipt remain separate
-   objects. A path whose approved before/after hash is equal is neutral/both; changing paths still
-   use B/A/X. Apply may replace bytes only from exact all-before state or a matching durable marked
-   true mixture; A plus neutral is an exact no-op and every unknown/unmarked true mixture stops.
+   objects. Preview first derives the catalog as baseline plus exactly each proposed ADD row and
+   requires all four generator-exact projections; zero-add projections must remain unchanged.
+   Apply rederives and rehashes that state before every write. A path whose approved before/after
+   hash is equal is neutral/both; changing paths still use B/A/X. Catalog-last replacement retains
+   the baseline through partial recovery; A plus neutral is an exact no-op and every unknown,
+   unmarked, or baseline-less true mixture stops.
 5. Claude command files are the explicit sync source, but both runtime copies are complete
    standalone bodies. Exact byte parity and fresh runtime behavior jointly establish portability.
 6. The original implementation was committed cleanly before AC-7. Fresh Claude and non-forked
@@ -92,9 +98,9 @@ insertion+deletion lines. Evidence and lifecycle traces are outside that impleme
 ## 3. Acceptance Criteria
 
 - [x] AC-1 — Every Telegram-like occurrence is accounted for before grouping; only literal fixed root HTTPS authorities produce candidates, including explicit trailing-dot rejection.
-- [x] AC-2 — Arbitrary candidates are fetched once, reconciled through all three unchanged classifier calls, and fail closed on every non-exact tuple.
-- [x] AC-3 — Canonical preview bytes and authority are recursively closed, excluding boolean integers, blank evidence, and verified/failed-transport contradictions.
-- [x] AC-4 — Apply treats equal before/after paths as neutral, remains exact-state idempotent, permits only marked true-mixture recovery, emits a separate receipt, and never touches production in Phase A.
+- [x] AC-2 — Arbitrary candidates are fetched once, reconciled through all three unchanged classifier calls, and only exact producer-possible transport/body/identity/type/result tuples can expose downstream facts.
+- [x] AC-3 — Canonical preview bytes and authority are recursively closed and bind a staged catalog/projection state derived only from the fixed exact ADD rows; reject-only deltas and owner subsets cannot authorize unrelated bytes.
+- [x] AC-4 — Apply rederives staged semantics and hashes before writes, treats equal before/after paths as neutral, remains exact-state idempotent, permits only validated marked recovery, emits a separate receipt, and never touches production in Phase A.
 - [x] AC-5 — Both runtime locations contain exactly the three complete byte-identical `kz-*` commands with non-mutating parity checks and preserved authority stops.
 - [x] AC-6 — Only the committed eight-case calibration entered execution; the non-revealing allocation receipt proves its full-partition membership without exposing holdout/source material.
 - [x] AC-7 — Self-contained complete redacted fresh Claude records and the complete non-forked Codex report prove sentinel routing, stats triage, release approval boundaries, local-body binding limits, and zero mutation.
@@ -102,7 +108,7 @@ insertion+deletion lines. Evidence and lifecycle traces are outside that impleme
 
 ## 4. Verification
 
-- Tests: `python -m unittest scripts.test_catalog_generation scripts.test_kz_intake scripts.test_kz_commands -v` — PASS, 36 tests, including every D1–D3 counterexample and neutral-path failure/idempotency branch.
+- Tests: `python -m unittest scripts.test_catalog_generation scripts.test_kz_intake scripts.test_kz_commands -v` — PASS, 42 tests, including every D1–D3 and F1/F2 counterexample, real-schema/generator action-stage derivation, exact observation tuples, and neutral-path failure/idempotency branches.
 - Command parity: `python scripts/sync_kz_commands.py --check` — PASS, exact `kz-add`, `kz-stats`, `kz-release` inventory.
 - Compile: `python -m py_compile ...` for all five changed/new Python runtime/test modules — PASS.
 - Schema: `python scripts/validate_schema.py` — PASS, 0 errors across 38 groups, 20 channels, 4 bots, 19 categories, and 2 archive entries.
@@ -124,9 +130,9 @@ insertion+deletion lines. Evidence and lifecycle traces are outside that impleme
   without holdout disclosure — PASS.
 - AC-7 runtime: three fresh Claude sessions and one fresh non-forked Codex task at
   `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a` — PASS with complete accepted results, exact
-  runtime hashes, and clean before/after state. Commands are unchanged at revised SHA `3b06f143…`.
+  runtime hashes, and clean before/after state. Commands are unchanged at revised SHA `20c19505…`.
 - Scope: implementation commit contains exactly 12 implementation paths, 8 new/4 modified,
-  1,957 insertion+deletion lines — PASS.
+  2,230 insertion+deletion lines — PASS.
 - Formatting/state: `git diff --check`, final status/staging audit, and five controlled-path hashes
   — PASS; production hashes are unchanged at every checkpoint.
 
@@ -148,6 +154,9 @@ Exact deviations:
 - The formal Reviewer's attempted fresh Jekyll reproduction was policy-rejected before process
   start. This Executor's later supported official-image reproduction at revised SHA started and
   exited 0; the rejected attempt is retained as a limitation, not converted into success.
+- Two post-hash PowerShell cleanup attempts for the temporary built-site directory were policy-
+  rejected before process start. A scoped `git clean -nd` preview followed by the identical scoped
+  `git clean -fd` removed only those untracked build outputs; the evidence record retains both facts.
 
 ## 5. Evidence
 
@@ -181,7 +190,8 @@ flowchart LR
     F --> T[Existing classifier × 3 declared types]
     T --> P[Closed preview payload and human rendering]
     E[Editorial evidence] --> P
-    P --> A[Separate current-owner approval envelope]
+    P --> D[Derive exact catalog plus generator projections]
+    D --> A[Separate current-owner approval envelope]
     A --> G{Controlled paths state}
     G -->|B + neutral| W[Validate staged project, mark pending, replace B bytes]
     G -->|A + neutral or all neutral| N[No-op: already_applied_exact]
