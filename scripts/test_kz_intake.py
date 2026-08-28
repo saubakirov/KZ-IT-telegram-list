@@ -1,4 +1,6 @@
 import json
+import copy
+import shutil
 import tempfile
 import unittest
 from argparse import Namespace
@@ -9,6 +11,7 @@ from urllib.error import HTTPError, URLError
 
 from scripts import kz_intake as intake
 from scripts import validate_links
+from scripts import validate_schema
 
 
 class SourceTests(unittest.TestCase):
@@ -110,6 +113,7 @@ class ObservationTests(unittest.TestCase):
                 self.assertIsNone(result["canonical_handle"])
                 self.assertIsNone(result["member_count"])
                 self.assertFalse(result["target_bound"])
+                intake.validate_observation(result)
 
     def test_transport_retry_contract_and_existing_wrapper(self):
         body = self.preview().encode()
@@ -222,8 +226,9 @@ class PreviewApplyTests(unittest.TestCase):
                     "last_verified": self._observation(stale)["observed_at"], "member_count": 42}
         actions = [{"candidate_id": candidate_id, "action": "add", "reason": "all gates pass",
                     "proposed_entry": proposed}]
-        return intake.build_preview(source, collisions, [self._observation(stale)], editorial,
-                                    actions, intake.path_hashes(self.root), intake.path_hashes(self.stage))
+        with patch.object(intake, "validate_action_stage", return_value=intake.path_hashes(self.stage)):
+            return intake.build_preview(source, collisions, [self._observation(stale)], editorial,
+                                        actions, self.root, self.stage)
 
     def _approval(self, preview):
         return {"schema_version": intake.APPROVAL_VERSION,
@@ -234,10 +239,11 @@ class PreviewApplyTests(unittest.TestCase):
                 "owner_evidence_ref": "owner-event-1", "approved_at": date.today().isoformat()}
 
     def _apply(self, preview=None, approval=None, fail_after=None):
-        return intake.apply_preview(
-            self.root, self.stage, preview or self.preview, approval or self.approval,
-            {"owner-event-1"}, self.pending, lambda _stage: ["schema", "currency"], fail_after,
-        )
+        with patch.object(intake, "validate_action_stage", return_value=intake.path_hashes(self.stage)):
+            return intake.apply_preview(
+                self.root, self.stage, preview or self.preview, approval or self.approval,
+                {"owner-event-1"}, self.pending, lambda _stage: ["schema", "currency"], fail_after,
+            )
 
     def test_preview_render_schema_and_tamper(self):
         rendered = intake.render_preview(self.preview)
@@ -274,8 +280,53 @@ class PreviewApplyTests(unittest.TestCase):
                 intake.validate_preview(tampered)
         tampered = json.loads(json.dumps(self.preview))
         tampered["observations"][0]["transport"]["ok"] = False
-        with self.assertRaisesRegex(intake.IntakeError, "verified observation"):
+        with self.assertRaisesRegex(intake.IntakeError, "failed transport"):
             intake.validate_preview(tampered)
+
+    def test_impossible_classifier_and_transport_tuples_are_rejected(self):
+        paths = (
+            ("type_results", 0, "target_bound", False),
+            ("type_results", 0, "reason", "arbitrary"),
+            ("type_results", 0, "observed_type", "channels"),
+            ("type_results", 1, "visible_name", "Other"),
+            ("transport", "status_code", None),
+            ("body_sha256", None),
+            ("canonical_handle", "other_peer"),
+            ("reason", "arbitrary"),
+        )
+        for path in paths:
+            tampered = json.loads(json.dumps(self.preview))
+            target = tampered["observations"][0]
+            for key in path[:-2]:
+                target = target[key]
+            target[path[-2]] = path[-1]
+            with self.subTest(path=path), self.assertRaises(intake.IntakeError):
+                intake.validate_preview(tampered)
+        tampered = json.loads(json.dumps(self.preview))
+        tampered["observations"][0]["type_results"][0]["reason"] = "arbitrary"
+        approval = dict(self.approval)
+        approval["payload_sha256"] = intake.sha256_bytes(intake.canonical_bytes(tampered))
+        with self.assertRaises(intake.IntakeError):
+            self._apply(tampered, approval)
+        failed = json.loads(json.dumps(self.preview))
+        observation = failed["observations"][0]
+        observation["status"] = "unresolved"; observation["reason"] = "http_500"
+        observation["canonical_handle"] = observation["observed_type"] = None
+        observation["visible_name"] = observation["member_count"] = None
+        observation["target_bound"] = False
+        observation["transport"] = {"ok": False, "reason": "http_500", "status_code": 500, "attempts": 1}
+        with self.assertRaisesRegex(intake.IntakeError, "failed transport"):
+            intake.validate_preview(failed)
+        failed["observations"][0]["body_sha256"] = None
+        failed["observations"][0]["type_results"] = []
+        failed["observations"][0]["transport"]["reason"] = "arbitrary"
+        with self.assertRaisesRegex(intake.IntakeError, "failed transport"):
+            intake.validate_preview(failed)
+        for field, value in (("type", "channels"), ("handle", "other_peer"), ("name", "Other")):
+            tampered = json.loads(json.dumps(self.preview))
+            tampered["actions"][0]["proposed_entry"][field] = value
+            with self.subTest(proposed=field), self.assertRaisesRegex(intake.IntakeError, "observation"):
+                intake.validate_preview(tampered)
 
     def test_approval_binds_payload_actions_exact_set_and_owner_record(self):
         for field, value in (("payload_sha256", "0" * 64), ("actions_sha256", "0" * 64),
@@ -285,6 +336,7 @@ class PreviewApplyTests(unittest.TestCase):
                 intake.validate_approval(self.preview, approval, {"owner-event-1"})
         with self.assertRaises(intake.IntakeError):
             intake.validate_approval(self.preview, self.approval, set())
+
 
     def test_apply_exact_noop_and_unknown_stop(self):
         receipt = self._apply()
@@ -321,8 +373,9 @@ class PreviewApplyTests(unittest.TestCase):
         self._write_tree(self.stage, False)
         preview = self._preview()
         approval = self._approval(preview)
-        self.assertEqual(self._apply(preview, approval)["outcome"], "already_applied_exact")
-        self.assertEqual(self._apply(preview, approval)["outcome"], "already_applied_exact")
+        with self.assertRaisesRegex(intake.IntakeError, "catalog"):
+            intake.apply_preview(self.root, self.stage, preview, approval,
+                                 {"owner-event-1"}, self.pending, lambda _stage: [])
         (self.root / "README.md").write_text("unknown", encoding="utf-8")
         with self.assertRaises(intake.IntakeError):
             self._apply(preview, approval)
@@ -351,18 +404,150 @@ class PreviewApplyTests(unittest.TestCase):
         self._write_tree(self.stage, True)
         self._write_tree(self.root, True)
         collision_preview = self._preview()
-        with self.assertRaisesRegex(intake.IntakeError, "collides"):
+        with self.assertRaisesRegex(intake.IntakeError, "catalog|collides"):
             self._apply(collision_preview, self._approval(collision_preview))
 
     def test_preflight_failure_precedes_marker_and_replacement(self):
         before = intake.path_hashes(self.root)
         def fail(_stage):
             raise intake.IntakeError("schema failed")
-        with self.assertRaisesRegex(intake.IntakeError, "schema failed"):
+        with patch.object(intake, "validate_action_stage", return_value=intake.path_hashes(self.stage)), \
+                self.assertRaisesRegex(intake.IntakeError, "schema failed"):
             intake.apply_preview(self.root, self.stage, self.preview, self.approval,
                                  {"owner-event-1"}, self.pending, fail)
         self.assertEqual(intake.path_hashes(self.root), before)
         self.assertFalse(self.pending.exists())
+
+
+class ActionStageBindingTests(unittest.TestCase):
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        base = Path(self.temporary.name)
+        self.root, self.stage = base / "root", base / "stage"
+        project = Path(__file__).parent.parent
+        for destination in (self.root, self.stage):
+            for path in intake.CONTROLLED_PATHS:
+                target = destination / path
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(project / path, target)
+        (self.stage / "scripts").mkdir()
+        for name in ("validate_schema.py", "generate_readme.py"):
+            shutil.copyfile(project / "scripts" / name, self.stage / "scripts" / name)
+        self.baseline = json.loads((self.root / "data/communities.json").read_text(encoding="utf-8"))
+        self.bundle = self._bundle()
+
+    def tearDown(self):
+        self.temporary.cleanup()
+
+    def _bundle(self, action="add"):
+        source = intake.parse_source("https://t.me/synthetic_peer", "synthetic")
+        candidate_id = source["candidates"][0]["candidate_id"]
+        typed = [
+            validate_links.result("verified" if kind == "groups" else "ambiguous",
+                                  "target_preview_verified" if kind == "groups" else "declared_type_mismatch",
+                                  kind, 7 if kind == "groups" else None, "Synthetic Peer", "groups", True)
+            for kind in validate_links.ENTRY_TYPES
+        ]
+        observation = {"candidate_id": candidate_id, "requested_handle": "synthetic_peer",
+                       "status": "verified", "reason": "one_verified_two_bound_mismatches",
+                       "canonical_handle": "synthetic_peer", "observed_type": "groups",
+                       "visible_name": "Synthetic Peer", "member_count": 7, "target_bound": True,
+                       "observed_at": date.today().isoformat(),
+                       "source_classification": "public_telegram_preview", "body_sha256": "b" * 64,
+                       "transport": {"ok": True, "reason": "fetched", "status_code": 200, "attempts": 1},
+                       "type_results": typed}
+        proposed = {"type": "groups", "name": "Synthetic Peer", "handle": "synthetic_peer",
+                    "description": "Synthetic fixture", "description_ru": "Synthetic RU",
+                    "description_kk": "Synthetic KK", "category": next(iter(self.baseline["categories"])),
+                    "last_verified": date.today().isoformat(), "member_count": 7}
+        return {"source": source,
+                "collisions": [{"candidate_id": candidate_id, "status": "clear", "matched_handles": [],
+                                "cross_input_duplicate": False}],
+                "observations": [observation],
+                "editorial": [{"candidate_id": candidate_id, "it_relevant": True,
+                               "kazakhstan_relevant": True, "purely_commercial": False,
+                               "category_valid": True, "locales_complete": True,
+                               "evidence_refs": ["synthetic:editorial"]}],
+                "actions": [{"candidate_id": candidate_id, "action": action, "reason": "synthetic",
+                             "proposed_entry": proposed if action == "add" else None}]}
+
+    def _write_stage(self, data, stale_projection=False):
+        (self.stage / "data/communities.json").write_text(
+            json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        outputs = intake.generate_readme.generated_outputs(data)
+        for path in intake.CONTROLLED_PATHS[1:]:
+            (self.stage / path).write_text(outputs[intake.generate_readme.PROJECT_ROOT / path],
+                                           encoding="utf-8", newline="\n")
+        if stale_projection:
+            shutil.copyfile(self.root / "README.md", self.stage / "README.md")
+
+    def _exact_add_data(self):
+        data = copy.deepcopy(self.baseline)
+        proposed = dict(self.bundle["actions"][0]["proposed_entry"])
+        data[proposed.pop("type")].append(proposed)
+        return data
+
+    def test_reject_only_cannot_bind_unrelated_real_valid_delta(self):
+        data = copy.deepcopy(self.baseline)
+        data["groups"][0]["description"] += " (synthetic edit)"
+        data["localization_review"]["payload_sha256"] = validate_schema.review_payload_sha256(data)
+        self._write_stage(data)
+        self.assertEqual(intake.validate_staged_project(self.stage),
+                         ["scripts/validate_schema.py", "scripts/generate_readme.py --check"])
+        with self.assertRaisesRegex(intake.IntakeError, "exactly baseline"):
+            intake.build_preview(**self._bundle("reject"), root=self.root, stage_root=self.stage)
+
+    def test_reject_only_exact_unchanged_stage_is_a_noop(self):
+        preview = intake.build_preview(**self._bundle("reject"), root=self.root, stage_root=self.stage)
+        approval = {"schema_version": intake.APPROVAL_VERSION,
+                    "canonical_profile": intake.CANONICAL_PROFILE,
+                    "payload_sha256": intake.preview_sha256(preview),
+                    "actions_sha256": intake.actions_sha256(preview["actions"]),
+                    "approved_candidate_ids": [], "owner_handle": "owner",
+                    "owner_evidence_ref": "owner:synthetic", "approved_at": date.today().isoformat()}
+        receipt = intake.apply_preview(self.root, self.stage, preview, approval, {"owner:synthetic"},
+                                       self.stage.parent / "pending.json")
+        self.assertEqual(receipt["outcome"], "already_applied_exact")
+
+    def test_exact_add_is_bound_and_apply_accepts_only_its_generated_stage(self):
+        self._write_stage(self._exact_add_data())
+        preview = intake.build_preview(**self.bundle, root=self.root, stage_root=self.stage)
+        approval = {"schema_version": intake.APPROVAL_VERSION,
+                    "canonical_profile": intake.CANONICAL_PROFILE,
+                    "payload_sha256": intake.preview_sha256(preview),
+                    "actions_sha256": intake.actions_sha256(preview["actions"]),
+                    "approved_candidate_ids": ["candidate:synthetic_peer"], "owner_handle": "owner",
+                    "owner_evidence_ref": "owner:synthetic", "approved_at": date.today().isoformat()}
+        receipt = intake.apply_preview(self.root, self.stage, preview, approval, {"owner:synthetic"},
+                                       self.stage.parent / "pending.json", lambda _stage: ["synthetic"])
+        self.assertEqual((receipt["outcome"], receipt["applied_candidate_ids"]),
+                         ("applied_exact", ["candidate:synthetic_peer"]))
+
+    def test_extra_edit_delete_reorder_wrong_type_field_and_stale_projection_stop(self):
+        for case in ("extra", "edit", "delete", "reorder", "wrong_type", "proposed", "stale"):
+            with self.subTest(case=case):
+                data, bundle = self._exact_add_data(), copy.deepcopy(self.bundle)
+                if case == "extra": data["groups"].append(dict(data["groups"][-1], handle="synthetic_extra"))
+                elif case == "edit": data["groups"][0]["description"] += " edited"
+                elif case == "delete": del data["groups"][0]
+                elif case == "reorder": data["groups"][0], data["groups"][1] = data["groups"][1], data["groups"][0]
+                elif case == "wrong_type": data["channels"].append(data["groups"].pop())
+                elif case == "proposed": bundle["actions"][0]["proposed_entry"]["description"] = "Changed"
+                self._write_stage(data, case == "stale")
+                with self.assertRaises(intake.IntakeError):
+                    intake.build_preview(**bundle, root=self.root, stage_root=self.stage)
+
+    def test_owner_subset_requires_a_successor_preview(self):
+        self._write_stage(self._exact_add_data())
+        preview = intake.build_preview(**self.bundle, root=self.root, stage_root=self.stage)
+        approval = {"schema_version": intake.APPROVAL_VERSION,
+                    "canonical_profile": intake.CANONICAL_PROFILE,
+                    "payload_sha256": intake.preview_sha256(preview),
+                    "actions_sha256": intake.actions_sha256(preview["actions"]),
+                    "approved_candidate_ids": [], "owner_handle": "owner",
+                    "owner_evidence_ref": "owner:synthetic", "approved_at": date.today().isoformat()}
+        with self.assertRaisesRegex(intake.IntakeError, "exact add set"):
+            intake.validate_approval(preview, approval, {"owner:synthetic"})
 
 
 if __name__ == "__main__":

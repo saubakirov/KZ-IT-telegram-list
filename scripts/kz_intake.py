@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import os
@@ -17,8 +18,9 @@ from typing import Callable
 from urllib.parse import urlsplit
 
 try:
-    from . import validate_links
+    from . import generate_readme, validate_links
 except ImportError:  # Direct script execution.
+    import generate_readme
     import validate_links
 
 CANONICAL_PROFILE = "kz-canonical-json/v1"
@@ -433,23 +435,64 @@ def validate_observation(row: dict[str, object]) -> None:
         raise IntakeError("observation date is invalid") from error
     if row["body_sha256"] is not None and not SHA_RE.fullmatch(row["body_sha256"]):
         raise IntakeError("observation body digest is invalid")
+    transport = row["transport"]
+    if not 1 <= transport["attempts"] <= validate_links.RETRY_ATTEMPTS:
+        raise IntakeError("observation transport attempts differ")
     results = row["type_results"]
+    if transport["ok"]:
+        if transport["reason"] != "fetched" or not isinstance(transport["status_code"], int) or \
+                not 200 <= transport["status_code"] < 300 or row["body_sha256"] is None or len(results) != 3:
+            raise IntakeError("successful transport/body tuple differs")
+    else:
+        reason = transport["reason"]
+        possible_reason = reason == "max_retries_exceeded" or reason.startswith(("url_error:", "error:")) \
+            if transport["status_code"] is None else reason == f"http_{transport['status_code']}"
+        if row["body_sha256"] is not None or results or not possible_reason:
+            raise IntakeError("failed transport exposes body/result facts")
     if results and [item["declared_type"] for item in results] != list(validate_links.ENTRY_TYPES):
         raise IntakeError("typed result order differs")
     verified = [item for item in results if item["classification"] == "verified"]
-    mismatches = [item for item in results if item["classification"] == "ambiguous"
-                  and item["reason"] == "declared_type_mismatch" and item["target_bound"]]
-    accepted = len(verified) == 1 and len(mismatches) == 2 and all(
-        item["observed_type"] == verified[0]["declared_type"] for item in mismatches)
+    accepted = len(verified) == 1 and all(
+        item == (validate_links.result(
+            "verified", "target_preview_verified", item["declared_type"],
+            verified[0]["member_count"], verified[0]["visible_name"],
+            verified[0]["declared_type"], True) if item is verified[0] else validate_links.result(
+                "ambiguous", "declared_type_mismatch", item["declared_type"], None,
+                verified[0]["visible_name"], verified[0]["declared_type"], True))
+        for item in results
+    ) and isinstance(verified[0]["visible_name"], str) and bool(verified[0]["visible_name"].strip()) \
+        and (verified[0]["member_count"] is None or verified[0]["member_count"] >= 0)
+    if results and not accepted:
+        early = {
+            ("failed", "telegram_error_marker"): (False, False),
+            ("failed", "deleted_marker"): (False, False),
+            ("ambiguous", "contact_shell_without_preview"): (False, False),
+            ("non_target", "no_target_preview"): (False, False),
+            ("ambiguous", "conflicting_target_identity"): (False, True),
+            ("ambiguous", "conflicting_preview_identity_text"): (False, True),
+            ("non_target", "preview_does_not_bind_requested_handle"): (False, True),
+            ("ambiguous", "declared_type_not_established"): (True, True),
+        }
+        target_bound, named = early.get((results[0]["classification"], results[0]["reason"]), (None, None))
+        common = {key: results[0][key] for key in TYPE_RESULT_SCHEMA if key != "declared_type"}
+        valid_name = isinstance(common["visible_name"], str) and bool(common["visible_name"].strip()) \
+            if named else common["visible_name"] is None
+        if target_bound is None or any(
+                {key: item[key] for key in TYPE_RESULT_SCHEMA if key != "declared_type"} != common
+                for item in results) or common["target_bound"] != target_bound or \
+                common["observed_type"] is not None or common["member_count"] is not None or \
+                common["archive_candidate"] or not valid_name:
+            raise IntakeError("typed classifier tuple is impossible")
     if row["status"] == "verified":
-        if not row["transport"]["ok"] or not accepted or \
-                row["canonical_handle"].casefold() != row["requested_handle"].casefold() or \
-                not row["target_bound"] or any(row[field] != verified[0][field] for field in
-                                                ("observed_type", "visible_name", "member_count")):
+        if not accepted or row["reason"] != "one_verified_two_bound_mismatches" or \
+                row["canonical_handle"] != row["requested_handle"] or not row["target_bound"] or \
+                any(row[field] != verified[0][field] for field in
+                    ("observed_type", "visible_name", "member_count")):
             raise IntakeError("verified observation tuple differs")
-    elif row["status"] != "unresolved" or any(row[field] is not None for field in
+    elif accepted or row["status"] != "unresolved" or any(row[field] is not None for field in
                                                ("canonical_handle", "observed_type", "visible_name", "member_count")) \
-            or row["target_bound"]:
+            or row["target_bound"] or row["reason"] != (
+                "type_reconciliation_failed" if transport["ok"] else transport["reason"]):
         raise IntakeError("unresolved observation exposes downstream facts")
 
 
@@ -465,7 +508,9 @@ def validate_preview(preview: dict[str, object]) -> None:
         rows = preview[field]
         if [row["candidate_id"] for row in rows] != ids:
             raise IntakeError(f"{field} must have one ordered row per candidate")
-    for observation in preview["observations"]:
+    for candidate, observation in zip(preview["source"]["candidates"], preview["observations"]):
+        if observation["requested_handle"] != candidate["handle"]:
+            raise IntakeError("observation/source identity differs")
         validate_observation(observation)
     if [row["path"] for row in preview["controlled_paths"]] != list(CONTROLLED_PATHS):
         raise IntakeError("controlled path inventory/order differs")
@@ -491,6 +536,12 @@ def validate_preview(preview: dict[str, object]) -> None:
                         and not gate["purely_commercial"] and gate["category_valid"]
                         and gate["locales_complete"] and gate["evidence_refs"]):
                 raise IntakeError("add action does not pass every gate")
+            observation = observations[action["candidate_id"]]
+            if any(entry[field] != observation[observed] for field, observed in (
+                    ("type", "observed_type"), ("name", "visible_name"),
+                    ("handle", "canonical_handle"), ("last_verified", "observed_at"),
+                    ("member_count", "member_count"))):
+                raise IntakeError("proposed entry differs from observation")
         elif entry is not None:
             raise IntakeError("only add actions may carry proposed entries")
     counts = {name: sum(row["action"] == name for row in preview["actions"])
@@ -506,8 +557,10 @@ def validate_preview(preview: dict[str, object]) -> None:
 def build_preview(
     source: dict[str, object], collisions: list[dict[str, object]],
     observations: list[dict[str, object]], editorial: list[dict[str, object]],
-    actions: list[dict[str, object]], before: dict[str, str], after: dict[str, str],
+    actions: list[dict[str, object]], root: Path, stage_root: Path,
 ) -> dict[str, object]:
+    before = path_hashes(root)
+    after = validate_action_stage(root, stage_root, actions)
     ids = [row["candidate_id"] for row in source["candidates"]]
     order = {candidate_id: index for index, candidate_id in enumerate(ids)}
     sort_rows = lambda rows: sorted(rows, key=lambda row: order[row["candidate_id"]])
@@ -583,6 +636,35 @@ def validate_staged_project(stage_root: Path) -> list[str]:
             raise IntakeError(f"staged validation failed: {' '.join(command)}\n{completed.stdout}{completed.stderr}")
         results.append(" ".join(command[1:]))
     return results
+
+
+def validate_action_stage(root: Path, stage_root: Path,
+                          actions: list[dict[str, object]]) -> dict[str, str]:
+    """Prove staged catalog/projections are baseline plus exactly the add actions."""
+    baseline = parse_closed_json((root / CONTROLLED_PATHS[0]).read_text(encoding="utf-8"))
+    staged_data = parse_closed_json((stage_root / CONTROLLED_PATHS[0]).read_text(encoding="utf-8"))
+    if not isinstance(baseline, dict) or not isinstance(staged_data, dict):
+        raise IntakeError("catalog must be an object")
+    expected = copy.deepcopy(baseline)
+    for action in actions:
+        if action["action"] != "add":
+            continue
+        proposed = dict(action["proposed_entry"])
+        entry_type = proposed.pop("type")
+        if entry_type not in validate_links.ENTRY_TYPES or not isinstance(expected.get(entry_type), list):
+            raise IntakeError("proposed catalog type differs")
+        expected[entry_type].append(proposed)
+    if staged_data != expected:
+        raise IntakeError("staged catalog is not exactly baseline plus proposed adds")
+    generated = generate_readme.generated_outputs(expected)
+    for path in CONTROLLED_PATHS[1:]:
+        expected_body = generated[generate_readme.PROJECT_ROOT / path].encode("utf-8")
+        if (stage_root / path).read_bytes() != expected_body:
+            raise IntakeError(f"staged projection is not generator-exact: {path}")
+        if not any(action["action"] == "add" for action in actions) and \
+                (root / path).read_bytes() != expected_body:
+            raise IntakeError(f"zero-add projection differs from baseline: {path}")
+    return path_hashes(stage_root)
 
 
 def recheck_catalog_gates(root: Path, preview: dict[str, object]) -> None:
@@ -661,7 +743,12 @@ def apply_preview(
             raise IntakeError("pending marker differs")
     if "X" in state or ({"B", "A"} <= changing_state and existing_marker is None):
         raise IntakeError("unknown or unmarked mixed controlled-path state")
-    if changing_state <= {"B"}:
+    if "B" in changing_state or not changing_state:
+        if "B" in changing_state and state[0] != "B":
+            raise IntakeError("recovery lacks the bound baseline catalog")
+        if validate_action_stage(root, stage_root, preview["actions"]) != {
+                path: expected[path]["after_sha256"] for path in CONTROLLED_PATHS}:
+            raise IntakeError("derived staged hashes differ from preview")
         recheck_catalog_gates(root, preview)
     validations = preflight(stage_root)
     applied_ids = [row["candidate_id"] for row in preview["actions"] if row["action"] == "add"]
@@ -671,7 +758,8 @@ def apply_preview(
         if existing_marker is None:
             _atomic_write(pending_path, canonical_bytes(marker))
         writes = 0
-        for path, path_state in zip(CONTROLLED_PATHS, state):
+        for path in (*CONTROLLED_PATHS[1:], CONTROLLED_PATHS[0]):
+            path_state = state[CONTROLLED_PATHS.index(path)]
             if path_state == "B":
                 _atomic_write(root / path, staged[path])
                 writes += 1
@@ -761,7 +849,7 @@ def main() -> int:
             bundle = _load(args.bundle)
             if set(bundle) != {"source", "collisions", "observations", "editorial", "actions"}:
                 raise IntakeError("preview bundle fields differ")
-            value = build_preview(**bundle, before=path_hashes(args.root), after=path_hashes(args.stage_root))
+            value = build_preview(**bundle, root=args.root, stage_root=args.stage_root)
             _write(args.output, value)
             _atomic_write(args.render, render_preview(value).encode("utf-8"))
         else:
