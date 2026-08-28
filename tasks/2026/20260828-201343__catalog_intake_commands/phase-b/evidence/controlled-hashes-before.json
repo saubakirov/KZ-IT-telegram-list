@@ -1,0 +1,31 @@
+{
+  "schema_version": "kz-intake-controlled-hashes/v1",
+  "checked_at": "2026-08-29T01:24:52+05:00",
+  "paths": [
+    {
+      "path": "data/communities.json",
+      "bytes": 45260,
+      "sha256": "a46f893d6d73e2ecc760913be9075873b79470b675807cc585933cb457cf963d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 16627,
+      "sha256": "3b1d70624d7f529c6e7f712574783d468afe5025d6c1bc0173466dd80d5c016d"
+    },
+    {
+      "path": "index.md",
+      "bytes": 16536,
+      "sha256": "4fe0fc8eb8e1f5cb996bda984380daa4b472e8fcef15b9b3ed57de7a765890e3"
+    },
+    {
+      "path": "ru/index.md",
+      "bytes": 22412,
+      "sha256": "36002ff6591b18197f745254d3779b797995853e765a4e452d293f9229db0e97"
+    },
+    {
+      "path": "kk/index.md",
+      "bytes": 23004,
+      "sha256": "64227b9e7062308cf12fd995b3b542409806b543b66d91df5c36adc3cb8ef2a7"
+    }
+  ]
+}

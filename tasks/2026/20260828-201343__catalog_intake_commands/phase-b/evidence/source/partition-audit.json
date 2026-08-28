@@ -1,0 +1,64 @@
+{
+  "calibration_handles": [
+    "it_jobs_kz",
+    "devopskaz",
+    "hackathon_kz",
+    "aws_kz",
+    "devs_kz",
+    "tvkrg",
+    "kz_bi_jobs",
+    "itbazarkzchannel"
+  ],
+  "calibration_sha256": "cbdf4f48f859e012445628daa5353c775192c5fd19db6b49e49b0a8cff8eb6d8",
+  "checks": {
+    "case_keys_and_scores_recomputed": true,
+    "eight_lowest_scores_are_calibration": true,
+    "partition_is_disjoint_and_complete": true,
+    "source_byte_slices_and_raw_hashes": true,
+    "source_hashes_and_sizes": true,
+    "source_occurrences_independently_scanned": true
+  },
+  "commitment_sha256": "f7d4530d79e3597453ef5aa62d08295d48304cc1887a7ca1ee1495589aa0255e",
+  "holdout_handles": [
+    "kazakhtelecom_official",
+    "allkzit",
+    "kz_bi_news",
+    "digitalbussinesskz",
+    "itqazaqstan",
+    "ethkz",
+    "go_kz_vacancy",
+    "nfactorial_school",
+    "rootway",
+    "astana_hub",
+    "ai_qadam_kazakhstan",
+    "kolesa_group",
+    "blockchainkz",
+    "astanajkugoutputstream",
+    "anykeykz",
+    "it_kazahstan",
+    "qaz_qa_vacancies",
+    "sysadm_in_job",
+    "sandyq_orda",
+    "helpfixit"
+  ],
+  "overlap_handle": "aws_kz",
+  "partition_sha256": "5b9fb0dd028ac19d02b2c413bca45e8fa3e0e05e8de9b20087bfa883fe2cb732",
+  "result": "verified",
+  "schema_version": "kz-intake-partition-audit/v1",
+  "sealed_metadata_sha256": "e35af73f9e11bc46309f35fcc674ce22d1bb5781699138eb339e4a6b72d69e2b",
+  "source_bytes": {
+    "discovery_batch": 13648,
+    "owner_note": 169
+  },
+  "source_sha256": {
+    "discovery_batch": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+    "owner_note": "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162"
+  },
+  "totals": {
+    "calibration": 8,
+    "holdout": 20,
+    "occurrences": 29,
+    "overlap_cases": 1,
+    "unique_cases": 28
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "kz-intake-holdout-run/v1",
+  "state": "started",
+  "started_at": "2026-08-29T01:26:26+05:00",
+  "executor_commit": "c6e8a99673c8378176f835c5ab6234651d9af6f5",
+  "phase_a_implementation": "9185811696c762b5261e9b90f71bee846b6fc692",
+  "input_sha256": "0f34d2442c8cef810b1a80178c554cd3753db21381e9eea1099d681e4488b966",
+  "case_manifest_sha256": "cd72e6bec05077d9c7798721192073ab2ee7ac864cb83585556db9abec1986ed",
+  "ledger_sha256": "1eee952cef33157da03c7cab2b53da2f1c5d62f5d4227db0e756ac4f8ec767c9",
+  "engine_sha256": "0c032b5c47331163c201ef133258575084a7dfd8d49cb8ac91fe1db2d04f6a14",
+  "classifier_sha256": "66facf97a6512c6bf9796b8467418f99b29af8b7972cee37fd2923af6bb28873",
+  "input_totals": {
+    "occurrences": 20,
+    "candidates": 20,
+    "non_candidates": 0
+  },
+  "calibration_outcomes_consulted_for_phase_b": false,
+  "full_universe_probe_run": false,
+  "phase_a_code_or_rules_changed": false,
+  "controlled_hashes_ref": "../controlled-hashes-before.json",
+  "command": "python scripts/kz_intake.py probe --file <task-controlled holdout input> --output <task-controlled observations>"
+}

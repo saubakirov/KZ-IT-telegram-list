@@ -1,0 +1,10 @@
+{
+    "schema_version":  "kz-intake-sealed-material/v1",
+    "source_hashes":  {
+                          "discovery_batch":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                          "owner_note":  "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162"
+                      },
+    "partition_manifest_sha256":  "5b9fb0dd028ac19d02b2c413bca45e8fa3e0e05e8de9b20087bfa883fe2cb732",
+    "calibration_sha256":  "cbdf4f48f859e012445628daa5353c775192c5fd19db6b49e49b0a8cff8eb6d8",
+    "commitment_sha256":  "f7d4530d79e3597453ef5aa62d08295d48304cc1887a7ca1ee1495589aa0255e"
+}

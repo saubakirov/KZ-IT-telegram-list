@@ -1,0 +1,26 @@
+{
+  "schema_version": "kz-intake-holdout-cases/v1",
+  "partition_sha256": "5b9fb0dd028ac19d02b2c413bca45e8fa3e0e05e8de9b20087bfa883fe2cb732",
+  "cases": [
+    {"case_key": "18b2741bdfef73d961ea5ebd21e06b652b9596e910063f9f9ae1accb857fee6c", "handle": "kazakhtelecom_official", "derived_url": "https://t.me/kazakhtelecom_official"},
+    {"case_key": "1dc5dbcc4a5ce04155752b97a6c8ed0ae32546c6c83000080164e6840726f856", "handle": "allkzit", "derived_url": "https://t.me/allkzit"},
+    {"case_key": "2094d105334175f1c4c80a0ceba84f48d012f028d17faac454985256abed4f6f", "handle": "kz_bi_news", "derived_url": "https://t.me/kz_bi_news"},
+    {"case_key": "3a5bf0962448289dc96895a6ab3cd0bb1dfbed9d79bd8ad94fd06651ce5c4953", "handle": "digitalbussinesskz", "derived_url": "https://t.me/digitalbussinesskz"},
+    {"case_key": "4c09490fcd9cab865efe110a7a084911d2c236ca0a44c769ad0a51763fe85767", "handle": "itqazaqstan", "derived_url": "https://t.me/itqazaqstan"},
+    {"case_key": "56cfd15ca18173f13384cc8239b30a57f4b270ac6fcc3910ecf5ab639f44c01a", "handle": "ethkz", "derived_url": "https://t.me/ethkz"},
+    {"case_key": "6288e6c30989f9c175f879e42315885f8e6ab9d692dc7c91e5c6ed1194d61622", "handle": "go_kz_vacancy", "derived_url": "https://t.me/go_kz_vacancy"},
+    {"case_key": "742d19faa874eaa6151b967727367dd56eec943d71aee68c6e1e7871aaca8b5b", "handle": "nfactorial_school", "derived_url": "https://t.me/nfactorial_school"},
+    {"case_key": "7ba44c49cc6e13918c7f5a2e48bb300d98556e1b68320a1e14c9c93fb80a8307", "handle": "rootway", "derived_url": "https://t.me/rootway"},
+    {"case_key": "7c25add94bc653559abea95862aa4add38fc0b52d27f626652aa1091421538f4", "handle": "astana_hub", "derived_url": "https://t.me/astana_hub"},
+    {"case_key": "7e0ce641b597f3995e129e4420b978f378a160c741633675308a499e5f7cd54c", "handle": "ai_qadam_kazakhstan", "derived_url": "https://t.me/ai_qadam_kazakhstan"},
+    {"case_key": "8be1c1014dbf9544cdcf9218eb32de4f1238ac4f9f8711b64eef49c24699dfc8", "handle": "kolesa_group", "derived_url": "https://t.me/kolesa_group"},
+    {"case_key": "b851727bfcdb1c0f488e3f68333ff9c36fd23927281188e6e84d2aec85612cae", "handle": "blockchainkz", "derived_url": "https://t.me/blockchainkz"},
+    {"case_key": "d351aa186190f4720a94c3367803a861304bb63ca88287b327d7a0768f87f8ec", "handle": "astanajkugoutputstream", "derived_url": "https://t.me/astanajkugoutputstream"},
+    {"case_key": "da8cd3a49cd7c1ddf69d264d108f452b87bb184f540c36d61ae3ec7d6434f76b", "handle": "anykeykz", "derived_url": "https://t.me/anykeykz"},
+    {"case_key": "dcddfda39a051fb5f837f6084230af62f2a956516168f61762b18e95cd4ac12b", "handle": "it_kazahstan", "derived_url": "https://t.me/IT_Kazahstan"},
+    {"case_key": "dd041f396541e0f868f220b9453ce15bd8d8e937bc326375099ff746acd579ca", "handle": "qaz_qa_vacancies", "derived_url": "https://t.me/qaz_qa_vacancies"},
+    {"case_key": "e90df6b8d7976a90a538b2a40673f1302219e330ce0f4a08d0c3e1429e432044", "handle": "sysadm_in_job", "derived_url": "https://t.me/sysadm_in_job"},
+    {"case_key": "f365658f1496eff97dfa4ff527f02883c65157750e420a3b5061258d3bc5ff83", "handle": "sandyq_orda", "derived_url": "https://t.me/sandyq_orda"},
+    {"case_key": "f82a83e61482ab44839c32dfddfdc70dbe0bf45223903f93e9e17e8b2d649539", "handle": "helpfixit", "derived_url": "https://t.me/helpfixit"}
+  ]
+}

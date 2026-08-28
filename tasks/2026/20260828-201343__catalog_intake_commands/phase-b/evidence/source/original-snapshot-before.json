@@ -1,0 +1,16 @@
+{
+  "schema_version": "kz-intake-original-snapshot/v1",
+  "checked_at": "2026-08-29T01:24:52+05:00",
+  "sources": {
+    "discovery_batch": {
+      "bytes": 13648,
+      "sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+      "treatment": "read-and-hash-only; original untracked work is not staged or claimed clean"
+    },
+    "owner_note": {
+      "bytes": 169,
+      "sha256": "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162",
+      "treatment": "read-and-hash-only; original Obsidian note is not edited, moved, or deleted"
+    }
+  }
+}

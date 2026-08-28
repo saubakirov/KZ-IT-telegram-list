@@ -1,0 +1,335 @@
+{
+  "artifacts": {
+    "case_manifest_sha256": "cd72e6bec05077d9c7798721192073ab2ee7ac864cb83585556db9abec1986ed",
+    "input_sha256": "0f34d2442c8cef810b1a80178c554cd3753db21381e9eea1099d681e4488b966",
+    "ledger_sha256": "1eee952cef33157da03c7cab2b53da2f1c5d62f5d4227db0e756ac4f8ec767c9",
+    "observations_sha256": "07e103540f948a4397016b836d7dea3609e36022fce93fd8843a397aea60ae0c"
+  },
+  "checks": {
+    "all_observations_validate_against_closed_producer_schema": true,
+    "all_twenty_cases_have_observation_body_hashes": true,
+    "calibration_outcomes_consulted_for_phase_b_before_run": false,
+    "clean_claim_valid": true,
+    "controlled_production_hashes_unchanged": true,
+    "full_universe_probe_preceded_holdout": false,
+    "holdout_driven_rule_fixture_prompt_or_expected_outcome_change": false,
+    "holdout_was_first_phase_b_probe": true,
+    "phase_a_implementation_and_commands_unchanged": true,
+    "source_ledger_matches_probe_ledger": true
+  },
+  "completed_at": "2026-08-29T01:27:33+05:00",
+  "controlled_sha256_after_holdout": {
+    "README.md": "3b1d70624d7f529c6e7f712574783d468afe5025d6c1bc0173466dd80d5c016d",
+    "data/communities.json": "a46f893d6d73e2ecc760913be9075873b79470b675807cc585933cb457cf963d",
+    "index.md": "4fe0fc8eb8e1f5cb996bda984380daa4b472e8fcef15b9b3ed57de7a765890e3",
+    "kk/index.md": "64227b9e7062308cf12fd995b3b542409806b543b66d91df5c36adc3cb8ef2a7",
+    "ru/index.md": "36002ff6591b18197f745254d3779b797995853e765a4e452d293f9229db0e97"
+  },
+  "executor_commit": "c6e8a99673c8378176f835c5ab6234651d9af6f5",
+  "limitations": [
+    "Only public Telegram preview evidence was used; no authenticated or private fallback was attempted.",
+    "The engine retains exact response-body SHA-256 values and typed observations, not raw Telegram HTML bytes.",
+    "A verified target preview does not by itself establish recent posting activity, Kazakhstan relevance, IT relevance, commerciality, spam risk, or catalog admission."
+  ],
+  "observed_type_totals": {
+    "channels": 13,
+    "groups": 7
+  },
+  "per_candidate": [
+    {
+      "body_sha256": "8e1ca7759935b0db6959a0c083a357cfd108b4667cf220abdd16cb0d3700c687",
+      "candidate_id": "candidate:ai_qadam_kazakhstan",
+      "observed_type": "groups",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "ai_qadam_kazakhstan",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "8816703f9c9f059474d35ab0656c58fefd1d1761273f2c40a6041d1832754355",
+      "candidate_id": "candidate:allkzit",
+      "observed_type": "groups",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "allkzit",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "e68015413aa72d04abe0963e53c8c7ff057700001e58fbc0bb22b1bb7f7f60c5",
+      "candidate_id": "candidate:anykeykz",
+      "observed_type": "groups",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "anykeykz",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "5b598a1b4ebda626ab1427546efe3533ff6ac3c95c384d2ddbac28c84b79ddfb",
+      "candidate_id": "candidate:astana_hub",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "astana_hub",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "f52a5a02560ccf38bf8be1558fc698bd129dd9738b12c90ca4dd6c7bee8e08df",
+      "candidate_id": "candidate:astanajkugoutputstream",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "astanajkugoutputstream",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "86761e1a820e237b08dccbf5b4ae9d70d4f83f06558f2a429f60ca2f4f0c1935",
+      "candidate_id": "candidate:blockchainkz",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "blockchainkz",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "8b6809ad2ae3daf56fae721b2f3419cfb2d9100575579402e801d6bbc40ad00c",
+      "candidate_id": "candidate:digitalbussinesskz",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "digitalbussinesskz",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "a3ba8d877e92db3e1eb21dbd6957a21a8b28d645fb92e0408e23ab3e0dd9f766",
+      "candidate_id": "candidate:ethkz",
+      "observed_type": "groups",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "ethkz",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "2c6fd4780184868856e4ae6c0f690e40173905e9b89b48882467b2e70d093ad6",
+      "candidate_id": "candidate:go_kz_vacancy",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "go_kz_vacancy",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "737fd62027bc6320293a99ce241a6001f9a2625458d5aaaec92f25685f728d67",
+      "candidate_id": "candidate:helpfixit",
+      "observed_type": "groups",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "helpfixit",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "7cefae08336a6e5e25e0ed841108a284fa28cfa857a3e21195608060c092ab8b",
+      "candidate_id": "candidate:it_kazahstan",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "IT_Kazahstan",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "ac07c191763bc9180fb8992ecd8b76380604321388a44845a8b62ea800bc1442",
+      "candidate_id": "candidate:itqazaqstan",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "itqazaqstan",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "292a7fbbc4668ec2bb513e72a511313a3f3edd93ff403a9dfcc279e80f123ded",
+      "candidate_id": "candidate:kazakhtelecom_official",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "kazakhtelecom_official",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "1971cf94579c38ef4c55b15e11f1a2d29f5d8207841d73bbad7224fe7804d5aa",
+      "candidate_id": "candidate:kolesa_group",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "kolesa_group",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "baf92426c2f1a7142476b78cc19f603fb2b074f9710f5d3cddd4cfec3db70518",
+      "candidate_id": "candidate:kz_bi_news",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "kz_bi_news",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "91235774acfd2e3ae579d16e246295b57c7dd60f82202e2ae7433269d5e31fbe",
+      "candidate_id": "candidate:nfactorial_school",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "nfactorial_school",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "8add239f3616a09c31000414ad8d87b6e4a6caef0e2edf7efd13cbe0f2fb144a",
+      "candidate_id": "candidate:qaz_qa_vacancies",
+      "observed_type": "groups",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "qaz_qa_vacancies",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "e79ffb99db0ecfe7ba23cfcc8049fc28d3c248ed00525e8fb0a6ca49a1629899",
+      "candidate_id": "candidate:rootway",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "rootway",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "77523de74de859518a43ed0b77707d5f6efd50d1af1e3cacb65429d4bd0c3d72",
+      "candidate_id": "candidate:sandyq_orda",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "sandyq_orda",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    },
+    {
+      "body_sha256": "76813d8f63af41fe5094832c60d57e64fd048df42d4474f4254a550f6bde96b0",
+      "candidate_id": "candidate:sysadm_in_job",
+      "observed_type": "groups",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "sysadm_in_job",
+      "status": "verified",
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      }
+    }
+  ],
+  "phase_a_implementation": "9185811696c762b5261e9b90f71bee846b6fc692",
+  "result": "clean_holdout_retained",
+  "schema_version": "kz-intake-holdout-audit/v1",
+  "started_at": "2026-08-29T01:26:26+05:00",
+  "totals": {
+    "body_hashes": 20,
+    "candidates": 20,
+    "observations": 20,
+    "occurrences": 20,
+    "unresolved": 0,
+    "verified": 20
+  },
+  "transport_totals": {
+    "fetched": 20
+  }
+}

@@ -1,0 +1,570 @@
+{
+    "schema_version":  "kz-intake-partition/v1",
+    "method":  "source-digest:byte-start:byte-end:raw-span-sha256 -\u003e occurrence key; sorted occurrence keys -\u003e case key; score SHA256(kz-intake-split-v1 NUL case-key); eight lowest scores calibration",
+    "sources":  [
+                    {
+                        "source_id":  "discovery_batch",
+                        "sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                        "bytes":  13648,
+                        "sealed_name":  "discovery-batch.md"
+                    },
+                    {
+                        "source_id":  "owner_note",
+                        "sha256":  "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162",
+                        "bytes":  169,
+                        "sealed_name":  "owner-note.md"
+                    }
+                ],
+    "totals":  {
+                   "occurrences":  29,
+                   "unique_cases":  28,
+                   "overlap_cases":  1,
+                   "calibration":  8,
+                   "holdout":  20
+               },
+    "cases":  [
+                  {
+                      "case_key":  "0ae62429cdcd9b353c740a9e23d01df8e667cdd53b43a80b0bc0bfc0f9075efe",
+                      "score":  "45eb35a71a2918a6a2f0ee56356f1064783b7ef91e78d3d7fc7e5dc21f322bda",
+                      "handle":  "it_jobs_kz",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  6024,
+                                              "byte_end":  6034,
+                                              "raw_span":  "it_jobs_kz",
+                                              "raw_span_sha256":  "cff4e8bae9901e96279f3e5c55a60ec0a68f88e7b01cb214d4e59f391dea7d6d",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/it_jobs_kz",
+                                              "handle":  "it_jobs_kz"
+                                          }
+                                      ],
+                      "partition":  "calibration"
+                  },
+                  {
+                      "case_key":  "1579b752bfd7b55d6e0738ebcecee421fe56806a720dd4c9455a1f4d481868df",
+                      "score":  "3f55c4c3248ea0f2590553f44e151b3a437af6076d34007243ab89331f8d489d",
+                      "handle":  "devopskaz",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  3851,
+                                              "byte_end":  3860,
+                                              "raw_span":  "devopskaz",
+                                              "raw_span_sha256":  "9d2c0dadaab8ebb19bdab40b717c1eef3ffef55eb87ff66ec28e8e22fd71a0b5",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/devopskaz",
+                                              "handle":  "devopskaz"
+                                          }
+                                      ],
+                      "partition":  "calibration"
+                  },
+                  {
+                      "case_key":  "18b2741bdfef73d961ea5ebd21e06b652b9596e910063f9f9ae1accb857fee6c",
+                      "score":  "c6db644a6529f590778d8eb04cdb17415908193ff5050d5731b9f6cbd7309edb",
+                      "handle":  "kazakhtelecom_official",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "owner_note",
+                                              "source_sha256":  "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162",
+                                              "byte_start":  47,
+                                              "byte_end":  82,
+                                              "raw_span":  "https://t.me/kazakhtelecom_official",
+                                              "raw_span_sha256":  "911217cf33109c6779ad62933fcc905d25447672aee20ad2a2a7f5cf821c9196",
+                                              "input_kind":  "public_root_url",
+                                              "derived_url":  "https://t.me/kazakhtelecom_official",
+                                              "handle":  "kazakhtelecom_official"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "1dc5dbcc4a5ce04155752b97a6c8ed0ae32546c6c83000080164e6840726f856",
+                      "score":  "d0e5e73b39f81b83145009b361d454c339af0869b0af646f80a287c8fafd2cc8",
+                      "handle":  "allkzit",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  4198,
+                                              "byte_end":  4205,
+                                              "raw_span":  "allkzit",
+                                              "raw_span_sha256":  "2815582caf707b4eb3c7cb20f0ad3bc8ed9b7ba0fd59e23942872ef0519a5224",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/allkzit",
+                                              "handle":  "allkzit"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "2094d105334175f1c4c80a0ceba84f48d012f028d17faac454985256abed4f6f",
+                      "score":  "bd73e5f0f8055b94a9ff62391533056a76d26328e5d2eaee1c54f906c31c18e8",
+                      "handle":  "kz_bi_news",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  3154,
+                                              "byte_end":  3164,
+                                              "raw_span":  "kz_bi_news",
+                                              "raw_span_sha256":  "66d7373d401468aef4c1db8bdcded07e87d58a85b51c5e15d0e8c47a8377a9b4",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/kz_bi_news",
+                                              "handle":  "kz_bi_news"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "3a5bf0962448289dc96895a6ab3cd0bb1dfbed9d79bd8ad94fd06651ce5c4953",
+                      "score":  "a7858e64afde59454cb6b1da3713644704cec22568e2aee6773ef00ab03c5f17",
+                      "handle":  "digitalbussinesskz",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  4930,
+                                              "byte_end":  4948,
+                                              "raw_span":  "digitalbussinesskz",
+                                              "raw_span_sha256":  "8ea812ec1b0421dafd08c6b19563e96ba297f20940cfde2058b9f18511dbe9fa",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/digitalbussinesskz",
+                                              "handle":  "digitalbussinesskz"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "4c09490fcd9cab865efe110a7a084911d2c236ca0a44c769ad0a51763fe85767",
+                      "score":  "cd58760bd474df0a3c5d077ffbb67efce776a97572cda751d9a7ffb07cf454ce",
+                      "handle":  "itqazaqstan",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "owner_note",
+                                              "source_sha256":  "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162",
+                                              "byte_start":  84,
+                                              "byte_end":  108,
+                                              "raw_span":  "https://t.me/itqazaqstan",
+                                              "raw_span_sha256":  "cfdc3c3d6d6ad1b49ef88966d77512d2b523dd3c221df886e1957012ef05a53e",
+                                              "input_kind":  "public_root_url",
+                                              "derived_url":  "https://t.me/itqazaqstan",
+                                              "handle":  "itqazaqstan"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "4e85be5a3dd41856ee86b52106869dec47bfb0fc438bb4bc86f8725d834125d5",
+                      "score":  "2412ef052fae6bd1b423e72164640c5351b51d425720754996807527737cb7bc",
+                      "handle":  "hackathon_kz",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  3033,
+                                              "byte_end":  3045,
+                                              "raw_span":  "hackathon_kz",
+                                              "raw_span_sha256":  "83cd54841f08b9a51068e1d5d494bdf7f5f8454264fe2f504eb2ed01ae1fb6ab",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/hackathon_kz",
+                                              "handle":  "hackathon_kz"
+                                          }
+                                      ],
+                      "partition":  "calibration"
+                  },
+                  {
+                      "case_key":  "56cfd15ca18173f13384cc8239b30a57f4b270ac6fcc3910ecf5ab639f44c01a",
+                      "score":  "76fdc5783e886f94c122bfed73e54698a88c51dccd0a1f547d2473c7f8138f21",
+                      "handle":  "ethkz",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  4548,
+                                              "byte_end":  4553,
+                                              "raw_span":  "ethkz",
+                                              "raw_span_sha256":  "794bdcde633dfd9ace2aba0bb744ed1b2b3c61ce23e54ebd923c969ec984e714",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/ethkz",
+                                              "handle":  "ethkz"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "5af5e32e91f9276aa13436c8a5476d01e3a3282dec7c15e3b5c7b325a909fda5",
+                      "score":  "0e330d24b80672f806e08b185f3063fb696a74513845f7041ce4833f2eaa17a0",
+                      "handle":  "aws_kz",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  5100,
+                                              "byte_end":  5106,
+                                              "raw_span":  "aws_kz",
+                                              "raw_span_sha256":  "232d39d3497907df4212332b12ebc5e496974d9f0c30df92eba19a183947b7d0",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/aws_kz",
+                                              "handle":  "aws_kz"
+                                          },
+                                          {
+                                              "source_id":  "owner_note",
+                                              "source_sha256":  "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162",
+                                              "byte_start":  0,
+                                              "byte_end":  19,
+                                              "raw_span":  "https://t.me/aws_kz",
+                                              "raw_span_sha256":  "01d0a667f9dd4a35f8de9c98b5e77729aff6e70027f84ace6ce178c1f5514041",
+                                              "input_kind":  "public_root_url",
+                                              "derived_url":  "https://t.me/aws_kz",
+                                              "handle":  "aws_kz"
+                                          }
+                                      ],
+                      "partition":  "calibration"
+                  },
+                  {
+                      "case_key":  "6288e6c30989f9c175f879e42315885f8e6ab9d692dc7c91e5c6ed1194d61622",
+                      "score":  "beb7aff86cd1e193504abecd88e8ed8a50c6f65bcc2e0d2f0fb06fab2ea69a1b",
+                      "handle":  "go_kz_vacancy",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  6193,
+                                              "byte_end":  6206,
+                                              "raw_span":  "go_kz_vacancy",
+                                              "raw_span_sha256":  "cef3c76b59f8d0d2a95358f635b1112883f22983a07c77af4950231500d306f0",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/go_kz_vacancy",
+                                              "handle":  "go_kz_vacancy"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "6f2fda382c02d18ba417b9a43b73cb96d4d1b3eb0ff842cd0189337cc34e3c68",
+                      "score":  "0a30ab52d1ea77b9748c578e7a284b98ad40df1b907ff1eba839f9863d1b1e82",
+                      "handle":  "devs_kz",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  3648,
+                                              "byte_end":  3655,
+                                              "raw_span":  "devs_kz",
+                                              "raw_span_sha256":  "974dcca1c12e7409274b6028e5bf91dcd56a7e10dc9aab1544742038f2ab5196",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/devs_kz",
+                                              "handle":  "devs_kz"
+                                          }
+                                      ],
+                      "partition":  "calibration"
+                  },
+                  {
+                      "case_key":  "742d19faa874eaa6151b967727367dd56eec943d71aee68c6e1e7871aaca8b5b",
+                      "score":  "d569419bc233652bcb7b7b15d71dfcaf17005bc25ca44f9a1af3de434e3bdc35",
+                      "handle":  "nfactorial_school",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  3268,
+                                              "byte_end":  3285,
+                                              "raw_span":  "nfactorial_school",
+                                              "raw_span_sha256":  "6570b20c3ccc032ca6d7d45e0f92819ad234e68fcad03a5391f71b02d5443837",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/nfactorial_school",
+                                              "handle":  "nfactorial_school"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "76f5a4a78aff0c031caf9e39774aecf374a5658bc5ac5ee7ff34d75f7785474e",
+                      "score":  "0d44a5f010eee6baa1b995a45b4af33e3d4cba1b1bc1fc228f6174c9a0c1731e",
+                      "handle":  "tvkrg",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  4726,
+                                              "byte_end":  4731,
+                                              "raw_span":  "tvkrg",
+                                              "raw_span_sha256":  "11cf37837a61ec16f24f04b09ca2b2b1d8d471f93ba0222641e1c5034a50e7b1",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/tvkrg",
+                                              "handle":  "tvkrg"
+                                          }
+                                      ],
+                      "partition":  "calibration"
+                  },
+                  {
+                      "case_key":  "7ba44c49cc6e13918c7f5a2e48bb300d98556e1b68320a1e14c9c93fb80a8307",
+                      "score":  "cdaa62a1c107fa26c762792bb634cf3d4b561f05fc8d2e60044fcbeb1ac96833",
+                      "handle":  "rootway",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  4336,
+                                              "byte_end":  4343,
+                                              "raw_span":  "rootway",
+                                              "raw_span_sha256":  "af164957fd78a52d391dc26f331ac2fd5ecc2ff823cf5c948dff2028954221d8",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/rootway",
+                                              "handle":  "rootway"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "7c25add94bc653559abea95862aa4add38fc0b52d27f626652aa1091421538f4",
+                      "score":  "cc1f25596d24fb9faec9ed754fab38282480aa6319f9590824bc85b87c5fce79",
+                      "handle":  "astana_hub",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  2167,
+                                              "byte_end":  2177,
+                                              "raw_span":  "astana_hub",
+                                              "raw_span_sha256":  "2b49367006dd9ed1dbeb95bd8f7e04296d84b7009e142361471909e5e3e88210",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/astana_hub",
+                                              "handle":  "astana_hub"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "7e0ce641b597f3995e129e4420b978f378a160c741633675308a499e5f7cd54c",
+                      "score":  "fcb09186c224f34145cf2db96118a6e2f7cc10af2c0e7bd3fa10ad279a32935c",
+                      "handle":  "ai_qadam_kazakhstan",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "owner_note",
+                                              "source_sha256":  "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162",
+                                              "byte_start":  137,
+                                              "byte_end":  169,
+                                              "raw_span":  "https://t.me/ai_qadam_kazakhstan",
+                                              "raw_span_sha256":  "662773a70d5ae72ae62c52c20033fee1bc83546c1959dd3642d6d79a2b534d34",
+                                              "input_kind":  "public_root_url",
+                                              "derived_url":  "https://t.me/ai_qadam_kazakhstan",
+                                              "handle":  "ai_qadam_kazakhstan"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "8be1c1014dbf9544cdcf9218eb32de4f1238ac4f9f8711b64eef49c24699dfc8",
+                      "score":  "8b2cfe53a798e8a9a22d575e005f1c02cf21e3908664ea3925e6174e92b72011",
+                      "handle":  "kolesa_group",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  3976,
+                                              "byte_end":  3988,
+                                              "raw_span":  "kolesa_group",
+                                              "raw_span_sha256":  "de172df763cf264f8f11ca367b96a565f15f9732287ae5746f3e261ad84f4c4e",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/kolesa_group",
+                                              "handle":  "kolesa_group"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "b851727bfcdb1c0f488e3f68333ff9c36fd23927281188e6e84d2aec85612cae",
+                      "score":  "e6607a520d778c95823c2d53218b77945b7560e5e908b444d95abeb8b7260532",
+                      "handle":  "blockchainkz",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  2349,
+                                              "byte_end":  2361,
+                                              "raw_span":  "blockchainkz",
+                                              "raw_span_sha256":  "e5758e6a452d800fd9a128f67a84f02e4a27778bfe5567e8f197009a68594a91",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/blockchainkz",
+                                              "handle":  "blockchainkz"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "d351aa186190f4720a94c3367803a861304bb63ca88287b327d7a0768f87f8ec",
+                      "score":  "9a13c881594e4a0a3b7c75ae67f1b0280e10f1c61e01b13679f08db66ad610fe",
+                      "handle":  "astanajkugoutputstream",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  5276,
+                                              "byte_end":  5298,
+                                              "raw_span":  "astanajkugoutputstream",
+                                              "raw_span_sha256":  "f2bee8a18a54c54abfdafa80c9cca0ccee29ec0a35a26932d9864de2d79436db",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/astanajkugoutputstream",
+                                              "handle":  "astanajkugoutputstream"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "d98a86300f88e89f5a6e2290beb33207b144fdd5912a2956193e5581d9f8ce5f",
+                      "score":  "708dece9b3e5bf0239b2086c4d05c39a78030fb92f1737d3fa55ab83321fc8f8",
+                      "handle":  "kz_bi_jobs",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  6117,
+                                              "byte_end":  6127,
+                                              "raw_span":  "kz_bi_jobs",
+                                              "raw_span_sha256":  "d418133ca24e14c77bd44785a5e279f885a87734339504a5edad7c8dddc03303",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/kz_bi_jobs",
+                                              "handle":  "kz_bi_jobs"
+                                          }
+                                      ],
+                      "partition":  "calibration"
+                  },
+                  {
+                      "case_key":  "da82d786985166742f5b541c9f564ab3d9dfb86e04fed6335dfa33ec4889d811",
+                      "score":  "0262d938d1fbe12854a00d390cf4922e2d43386aec7d2c2a838d0bc2e12ef96f",
+                      "handle":  "itbazarkzchannel",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  2628,
+                                              "byte_end":  2644,
+                                              "raw_span":  "itbazarkzchannel",
+                                              "raw_span_sha256":  "180da944cc81380699bfb4bf32e047e58b84476c400da93a3d00bcc3f8e26cc1",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/itbazarkzchannel",
+                                              "handle":  "itbazarkzchannel"
+                                          }
+                                      ],
+                      "partition":  "calibration"
+                  },
+                  {
+                      "case_key":  "da8cd3a49cd7c1ddf69d264d108f452b87bb184f540c36d61ae3ec7d6434f76b",
+                      "score":  "946c002a158844ee048634e0c8670fd9339467193e5f2e4746a0b92180a37520",
+                      "handle":  "anykeykz",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  5557,
+                                              "byte_end":  5565,
+                                              "raw_span":  "anykeykz",
+                                              "raw_span_sha256":  "f9fe3ecad247f2231e5ec85a5ce0f290c94669720c9954d02bd4b7a5d3c7d933",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/anykeykz",
+                                              "handle":  "anykeykz"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "dcddfda39a051fb5f837f6084230af62f2a956516168f61762b18e95cd4ac12b",
+                      "score":  "b48b0d62e3834ff245929e9f646156c74513917d79d7096f5288b0cb74327f7b",
+                      "handle":  "it_kazahstan",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "owner_note",
+                                              "source_sha256":  "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162",
+                                              "byte_start":  110,
+                                              "byte_end":  135,
+                                              "raw_span":  "https://t.me/IT_Kazahstan",
+                                              "raw_span_sha256":  "6299e3e51708d28c60e25b739c48c52071dbe17de28bca19c4bcae76947f525f",
+                                              "input_kind":  "public_root_url",
+                                              "derived_url":  "https://t.me/IT_Kazahstan",
+                                              "handle":  "it_kazahstan"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "dd041f396541e0f868f220b9453ce15bd8d8e937bc326375099ff746acd579ca",
+                      "score":  "fe2cc5e91f888fe17d25822664e2d267e95a156f1b9251027e0ab75e8f826a48",
+                      "handle":  "qaz_qa_vacancies",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  2881,
+                                              "byte_end":  2897,
+                                              "raw_span":  "qaz_qa_vacancies",
+                                              "raw_span_sha256":  "0ad70b8006ed639c3a52bf835faff3b5c80b04caa528748b3ccff5c1944d74fb",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/qaz_qa_vacancies",
+                                              "handle":  "qaz_qa_vacancies"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "e90df6b8d7976a90a538b2a40673f1302219e330ce0f4a08d0c3e1429e432044",
+                      "score":  "c8c7b3ad32858991c053e0ee20ee4bb52e455859e78c765d3e34507d9c6c2a0f",
+                      "handle":  "sysadm_in_job",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  6279,
+                                              "byte_end":  6292,
+                                              "raw_span":  "sysadm_in_job",
+                                              "raw_span_sha256":  "f6ae42a3f3c9e9daa6c3f0cd13443e857a49bc3a8ed34c7ebd67e923aee14995",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/sysadm_in_job",
+                                              "handle":  "sysadm_in_job"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "f365658f1496eff97dfa4ff527f02883c65157750e420a3b5061258d3bc5ff83",
+                      "score":  "9e713c7aa8cd0cb47801a8cc5f1ca7780fa8d50e51ca097f3b9da6d52feddb33",
+                      "handle":  "sandyq_orda",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "owner_note",
+                                              "source_sha256":  "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162",
+                                              "byte_start":  21,
+                                              "byte_end":  45,
+                                              "raw_span":  "https://t.me/sandyq_orda",
+                                              "raw_span_sha256":  "4576d44a3124093fb1685fcde7d5e11b3fff063415a1b6091f81063c65b9ed2e",
+                                              "input_kind":  "public_root_url",
+                                              "derived_url":  "https://t.me/sandyq_orda",
+                                              "handle":  "sandyq_orda"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  },
+                  {
+                      "case_key":  "f82a83e61482ab44839c32dfddfdc70dbe0bf45223903f93e9e17e8b2d649539",
+                      "score":  "bfdf5c41ec06947c520115bd45cae8ee1c9df5d95f4ca33bc3a355882a25c19c",
+                      "handle":  "helpfixit",
+                      "occurrences":  [
+                                          {
+                                              "source_id":  "discovery_batch",
+                                              "source_sha256":  "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb",
+                                              "byte_start":  5442,
+                                              "byte_end":  5451,
+                                              "raw_span":  "helpfixit",
+                                              "raw_span_sha256":  "4be2b95f044ad74943433f7f0ffe41c7fae0df7685fdd78322e75caa91955ae2",
+                                              "input_kind":  "bare_handle_table_cell",
+                                              "derived_url":  "https://t.me/helpfixit",
+                                              "handle":  "helpfixit"
+                                          }
+                                      ],
+                      "partition":  "holdout"
+                  }
+              ]
+}
