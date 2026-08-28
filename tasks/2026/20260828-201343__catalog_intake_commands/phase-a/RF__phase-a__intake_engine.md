@@ -1,13 +1,13 @@
 # RF — 20260828-201343__catalog_intake_commands / Phase A: Intake engine and cross-tool commands
 
-> **Date**: 2026-08-28
+> **Date**: 2026-08-29
 > **Author**: Executor (Codex)
 > **Status**: 🟢 RF — Complete
 > **Parent HL**: [Master HL](../HL-20260828-201343__catalog_intake_commands.md)
 > **Phase HL**: [Phase A HL](HL__phase-a__intake_engine.md)
 > **TS**: [TS Phase A](TS__phase-a__intake_engine.md)
 > **Revision source**: [Formal REVIEW](REVIEW__phase-a__intake_engine.md) (`REVISE`)
-> **Final implementation SHA**: `731b3d6a3350bb3fe41115a4ae9213aaa86bbc6f`
+> **Final implementation SHA**: `9185811696c762b5261e9b90f71bee846b6fc692`
 > **Accepted unchanged-command smoke SHA**: `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a`
 
 ---
@@ -32,6 +32,10 @@ The final exact-findings revision preserves the source byte-for-byte for zero AD
 rebinds localization-review metadata for exact 1/N ADDs under the project's JSON/LF serializer,
 derives locale cardinality invariants from catalog structure, and restricts failed observations to
 the precise attempt/status/reason tuples the retry producer can emit.
+The bounded F2a correction completes that producer closure: failed HTTP tuples now exclude the
+entire 200–299 interval, which remains valid only as successful `fetched` transport at attempts
+1–3. Outside-2xx non-429 terminal HTTP remains valid at attempt 1, and every prior closure remains
+unchanged.
 
 ### New Files
 
@@ -64,7 +68,7 @@ the precise attempt/status/reason tuples the retry producer can emit.
 | `.claude/commands/kz-release.md` | Made the existing complete release command location-neutral and parity-ready while preserving pre-tag/pre-push approval. |
 | `AGENTS.md` | Registered the truthful three-command project inventory and distinguished availability from execution evidence. |
 
-The implementation budget is exactly 13 paths: 8 new, 5 modified, and 2,369 total
+The implementation budget is exactly 13 paths: 8 new, 5 modified, and 2,406 total
 insertion+deletion lines. Evidence and lifecycle traces are outside that implementation budget.
 
 ## 2. Key Decisions
@@ -104,6 +108,9 @@ insertion+deletion lines. Evidence and lifecycle traces are outside that impleme
 9. Locale acceptance counts are derived independently from catalog categories, live/archive entry
    structure, UI registries, and locale non-goals. The baseline report remains
    `keys=en:139,ru:131,kk:131`, but valid 1/N staged catalogs no longer fail a frozen count.
+10. Failed HTTP observations are valid only for attempt-1 matching statuses outside 200–299 and
+    other than 429. Exhaustive boundary tests keep all 2xx statuses in the successful `fetched`
+    family at attempts 1–3 and preserve outside-2xx terminal HTTP behavior.
 
 ## 3. Acceptance Criteria
 
@@ -118,7 +125,7 @@ insertion+deletion lines. Evidence and lifecycle traces are outside that impleme
 
 ## 4. Verification
 
-- Tests: `python -m unittest scripts.test_catalog_generation scripts.test_kz_intake scripts.test_kz_commands -q` — PASS, 44 tests, including D1–D6, both prior F1/F2 closures, all three formal-review exploits, real 0/1/N schema/generator preflight, exact producer tuple families, and neutral-path failure/idempotency branches.
+- Tests: `python -m unittest scripts.test_catalog_generation scripts.test_kz_intake scripts.test_kz_commands -q` — PASS, 45 tests, including D1–D6, all prior F1/F2 closures, F2a examples `http_200/http_204/http_299`, the complete failed/fetched 2xx boundary, real 0/1/N schema/generator preflight, exact producer families, and neutral-path failure/idempotency branches.
 - Command parity: `python scripts/sync_kz_commands.py --check` — PASS, exact `kz-add`, `kz-stats`, `kz-release` inventory.
 - Compile: `python -m py_compile ...` for all six changed/new Python runtime/test/schema modules — PASS.
 - Schema: `python scripts/validate_schema.py` — PASS, 0 errors across 38 groups, 20 channels, 4 bots, 19 categories, and 2 archive entries.
@@ -140,9 +147,9 @@ insertion+deletion lines. Evidence and lifecycle traces are outside that impleme
   without holdout disclosure — PASS.
 - AC-7 runtime: three fresh Claude sessions and one fresh non-forked Codex task at
   `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a` — PASS with complete accepted results, exact
-  runtime hashes, and clean before/after state. Commands are unchanged at final implementation SHA `731b3d6a…`.
+  runtime hashes, and clean before/after state. Commands are unchanged at final implementation SHA `91858116…`.
 - Scope: relative to original implementation base `be830d3766ca4de12ff18198a680253ed133894f`,
-  the implementation contains exactly 13 paths, 8 new/5 modified, and 2,369 insertion+deletion
+  the implementation contains exactly 13 paths, 8 new/5 modified, and 2,406 insertion+deletion
   lines — PASS, below the 2,500-line ceiling.
 - Formatting/state: `git diff --check`, final status/staging audit, and five controlled-path hashes
   — PASS; production hashes are unchanged at every checkpoint.
@@ -155,6 +162,9 @@ Exact deviations:
 - The historical Phase C harness's full `main()` contains an unrelated stale fixed production-date
   assertion. The ONB-approved TS-relevant `run_link_matrix` and `run_command_matrix` were called
   directly and both passed.
+- One focused unittest command initially named a nonexistent test class and failed during loader
+  resolution before executing a test. The corrected exact method passed, followed by the complete
+  45-test suite and every other gate.
 - Before the accepted Claude invocations, one direct PowerShell attempt lost the empty tools
   argument and exited before model execution, one ProcessStartInfo attempt was policy-rejected
   before start, and one quoting probe returned unexecuted tool-call proposal text. All had zero

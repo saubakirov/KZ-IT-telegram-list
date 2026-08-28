@@ -1,10 +1,10 @@
 # EV — 20260828-201343__catalog_intake_commands / Phase A: Intake engine and cross-tool commands
 
-> **Date**: 2026-08-28
+> **Date**: 2026-08-29
 > **Author**: Executor (Codex)
 > **Task**: 20260828-201343__catalog_intake_commands
 > **TS**: [TS Phase A](../TS__phase-a__intake_engine.md)
-> **Final implementation SHA**: `731b3d6a3350bb3fe41115a4ae9213aaa86bbc6f`
+> **Final implementation SHA**: `9185811696c762b5261e9b90f71bee846b6fc692`
 > **Accepted unchanged-command smoke SHA**: `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a`
 
 ---
@@ -25,21 +25,21 @@
 | # | AC | What was verified | Environment | Result | Artifact |
 |---|----|--------------------|-------------|--------|----------|
 | E1 | AC-1 | Exclusive UTF-8 source modes, byte-exact occurrence ledger, literal fixed-host root-URL grammar, explicit non-candidate dispositions, trailing-dot/spoofed-authority rejection, and occurrence-first case-insensitive grouping passed adversarial synthetic tests. | Python unit tests | VERIFIED | `scripts/test_kz_intake.py`; final implementation SHA |
-| E2 | AC-2 | Immutable fetch seam fetched once and fed identical decoded content through all three unchanged classifier calls. Serialized transport accepts only fetched 2xx at attempts 1–3, terminal non-429 HTTP at attempt 1, terminal URL/general errors and `max_retries_exceeded` at attempt 3, and never `http_429`. Exact producer families pass; every Reviewer impossible tuple, failed-transport-with-facts case, identity/type mismatch, and arbitrary reason fails closed. Existing retry, identity-decoy, update, and archive matrices also passed; the unchanged eight calibration observations validate without a network rerun. | Python unit tests; Phase C predecessor harness; retained bounded calibration evidence | VERIFIED | `scripts/test_kz_intake.py`; [`calibration-observations.json`](calibration-observations.json) |
+| E2 | AC-2 | Immutable fetch seam fetched once and fed identical decoded content through all three unchanged classifier calls. Serialized transport accepts fetched status 200–299 at attempts 1–3, rejects failed `http_200` through `http_299`, accepts outside-2xx non-429 terminal HTTP at attempt 1, accepts terminal URL/general errors and `max_retries_exceeded` at attempt 3, and never accepts `http_429`. Exhaustive failed/fetched 2xx boundary tests include Reviewer examples 200/204/299; all prior impossible tuples and every real producer family remain covered. Existing retry, identity-decoy, update, and archive matrices also passed; the unchanged eight calibration observations validate without a network rerun. | Python unit tests; Phase C predecessor harness; retained bounded calibration evidence | VERIFIED | `scripts/test_kz_intake.py`; [`calibration-observations.json`](calibration-observations.json) |
 | E3 | AC-3 | Closed `kz-canonical-json/v1` rejected duplicate/unknown fields, lexical numeric variants, booleans at integer positions, invalid evidence/identity/type/action bindings, and every observation tamper. Preview now derives exact project JSON/LF bytes as baseline plus only fixed ADD rows and the two mechanical locale-review bindings, requires generator-exact projections, and rejects the Reviewer semantic-only zero-ADD reserialization before preview/marker/write. | Python adversarial temporary fixtures using the real schema/generator | VERIFIED | `scripts/test_kz_intake.py`; final implementation SHA |
 | E4 | AC-4 | Real 0/1/N schema/generator preflight passed in isolated projects. Exact ADD mechanically rebound `localization_review.payload_sha256` and `changed_key_count`; baseline output remained `en:139,ru:131,kk:131`, while staged cardinalities grew from catalog structure. Unrelated review metadata, reformatting, edits, reorder, stale projections, unknown state, corrupt markers, and impossible recovery stop. Catalog-last failure and marked N-ADD recovery passed without touching production. | Python temporary directories; real schema/generator; SHA-256 checkpoints | VERIFIED | `scripts/test_kz_intake.py`; `scripts/validate_schema.py`; [`production-hashes-final.json`](production-hashes-final.json) |
 | E5 | AC-5 | Exact three-command inventory exists at both runtime locations; every pair is byte-identical and self-contained with common metadata, root-neutral paths, complete authority/operation/failure/stops, and preserved stats/release boundaries. Check mode was non-mutating and detected drift/missing/extra/thin copies; sync direction was Claude-to-Codex. | Static parity tests and standalone-body inspection | VERIFIED | `scripts/test_kz_commands.py`; `scripts/sync_kz_commands.py`; runtime hashes in both smoke artifacts |
 | E6 | AC-6 | Public commitment, disclosed input, observations, and Coordinator allocation-authority receipt bind the full partition `5b9fb0dd…` and prove 29 occurrences / 28 unique / 1 overlap / 8 calibration / 20 holdout, eight-lowest allocation, and disclosed calibration key/occurrence equality without revealing holdout material. Derived root URLs did not broaden production grammar. | Dedicated worktree; public artifacts; supplemental non-revealing allocation audit | VERIFIED | [`input-commitment.json`](input-commitment.json); [`calibration-input.json`](calibration-input.json); [`calibration-observations.json`](calibration-observations.json); [`partition-audit.json`](partition-audit.json) |
 | E7 | AC-7 | Self-contained complete redacted records retain all three exact Claude invocations and accepted result texts plus the complete fresh non-forked Codex report. Claude's project-setting/local-body proof is stated within its actual limit; Codex explicitly reports absolute loaded paths/hashes. Literal routing files and their hashes are byte-identical at final SHA, so the approved narrow code/schema revision did not require rerunning models. | Detached smoke worktree; Claude and Codex fresh runtimes; final static parity | VERIFIED | [`claude-runtime-smoke.jsonl`](claude-runtime-smoke.jsonl); [`codex-runtime-smoke.md`](codex-runtime-smoke.md) |
-| E8 | AC-8 | All 44 generation/intake/command tests, compile, schema, four projection checks, fresh network-disabled official-image site build, command parity, index validation, predecessor matrices, classifier-body audit, exact scope/LOC audit, and final hashes passed at `731b3d6a…`. Exactly 13 implementation paths remain 8 new/5 modified and 2,369 insertion+deletion lines. Only the three approved implementation files changed after the approved revision base. No production, release, tag, push, or external mutation occurred. | Final exact implementation commit plus clean local worktree | VERIFIED | [`jekyll-build-revision.txt`](jekyll-build-revision.txt); [`site-metadata-summary.json`](site-metadata-summary.json); [`production-hashes-final.json`](production-hashes-final.json); RF §4 |
+| E8 | AC-8 | All 45 generation/intake/command tests, compile, schema, four projection checks, fresh network-disabled official-image site build, command parity, index validation, predecessor matrices, classifier-body audit, exact scope/LOC audit, and final hashes passed at `91858116…`. Exactly 13 implementation paths remain 8 new/5 modified and 2,406 insertion+deletion lines. The F2a correction changes only `scripts/kz_intake.py` and `scripts/test_kz_intake.py`; the cumulative approved revision remains limited to the three authorized implementation paths. No production, release, tag, push, or external mutation occurred. | Final exact implementation commit plus clean local worktree | VERIFIED | [`jekyll-build-revision.txt`](jekyll-build-revision.txt); [`site-metadata-summary.json`](site-metadata-summary.json); [`production-hashes-final.json`](production-hashes-final.json); RF §4 |
 
 ## Verification commands and results
 
 The final approved gate set ran after AC-7 evidence was supplied:
 
 ```text
-python -m unittest scripts.test_catalog_generation scripts.test_kz_intake scripts.test_kz_commands -v
-  PASS — 44 tests, including real 0/1/N preflight and every formal Reviewer exploit
+python -m unittest scripts.test_catalog_generation scripts.test_kz_intake scripts.test_kz_commands -q
+  PASS — 45 tests, including real 0/1/N preflight, every formal Reviewer exploit, and exhaustive failed/fetched 2xx boundaries
 python scripts/sync_kz_commands.py --check
   PASS — kz-add, kz-stats, kz-release exact synchronized inventory
 python -m py_compile scripts/kz_intake.py scripts/sync_kz_commands.py scripts/test_kz_intake.py scripts/test_kz_commands.py scripts/validate_links.py scripts/validate_schema.py
@@ -50,7 +50,7 @@ python scripts/generate_readme.py --check
   PASS — all 4 catalog projections generator-current
 python docs/scripts/gen_index.py --validate
   PASS — 4 tasks validate against the closed schema
-python scripts/test_site_metadata.py --site <revised exact-SHA read-only official-image build>
+python scripts/test_site_metadata.py --site <final exact-SHA read-only official-image build>
   PASS — built EN/RU/KK route structure valid
 python -c "<load Phase C offline_harness.py; run_link_matrix(validate_links); run_command_matrix()>"
   PASS — classifier/retry/identity/update/archive and command predecessor matrices
@@ -58,7 +58,7 @@ git diff --check
   PASS
 ```
 
-The official Jekyll image was already present locally and ran with networking disabled at final SHA `731b3d6a…` with the
+The official Jekyll image was already present locally and ran with networking disabled at final SHA `91858116…` with the
 repository bind-mounted read-only plus one temporary nested output mount. The complete command,
 environment, exit code, output, validation, and output hashes are retained in
 [`jekyll-build-revision.txt`](jekyll-build-revision.txt). The generated metadata summary was
@@ -122,10 +122,12 @@ contextualized Executor and not a `$kz-add`/static-file substitute. Its complete
 exact task identity/input, absolute loaded paths/hashes, complete outputs, and before/after state
 are contained directly in the Markdown artifact.
 
-Final implementation SHA `731b3d6a3350bb3fe41115a4ae9213aaa86bbc6f` changes only
+Final implementation SHA `9185811696c762b5261e9b90f71bee846b6fc692` changes only
 `scripts/kz_intake.py`, `scripts/test_kz_intake.py`, and `scripts/validate_schema.py` after the
-accepted smokes. `AGENTS.md` and all six runtime command files remain byte-identical; the narrow
-revision does not alter literal routing or command behavior, so no fresh model rerun was required.
+accepted smokes. Relative to the prior final implementation `731b3d6a…`, F2a changes only the
+first two files. `AGENTS.md` and all six runtime command files remain byte-identical; the narrow
+consumer/test correction does not alter literal routing or command behavior, so no fresh model
+rerun was required.
 
 ## Controlled production hashes and mutation log
 
