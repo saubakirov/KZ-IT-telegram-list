@@ -24,8 +24,9 @@
 | Component | Description | Key Files |
 |-----------|-------------|-----------|
 | Data store | Single JSON document holding the structured Project North Star, live catalog, metadata, categories, and evidence-backed archive records | `data/communities.json` |
-| Schema validator | Enforces North Star, live-entry, archive, collision, and strict-date contracts; reports valid staleness without making age fatal | `scripts/validate_schema.py` |
+| Schema validator | Enforces North Star, live-entry, archive, collision, strict-date, and localization-review contracts; derives locale cardinality from the current source structure and reports valid staleness without making age fatal | `scripts/validate_schema.py` |
 | Link validator | Classifies Telegram responses against authoritative target identity and declared type; emits machine-readable results and exposes separate evidence-safe update/archive paths | `scripts/validate_links.py` |
+| Candidate intake engine | Parses URLs, text, or UTF-8 files into a lossless candidate ledger; fetches each unique handle once, reuses the existing Telegram classifier, emits exact-state previews, and applies only separately authorized additions with command-parity enforcement | `scripts/kz_intake.py`, `scripts/test_kz_intake.py`, `scripts/sync_kz_commands.py` |
 | Catalog generator | Sole writer for the GitHub mirror and EN/RU/KK catalog projections; renders locale-complete UI, intent navigation, derived stats, categories, entries, and conditional archive output; provides normalized non-mutating `--check` | `scripts/generate_readme.py`, `README.md`, `index.md`, `ru/index.md`, `kk/index.md` |
 | Published discovery surface | Repository-owned Jekyll layout/head logic, responsive CSS, Liquid sitemap, and reviewed preview asset publish the generated EN/RU/KK catalog with self-canonical and reciprocal hreflang, Dataset, Open Graph, and Twitter metadata | `_layouts/default.html`, `_config.yml`, `sitemap.xml`, `assets/css/catalog.css`, `assets/social-preview.svg`, `assets/social-preview.png` |
 | Agent contract | Count-free canonical project rules and project-operation authority boundaries | `AGENTS.md` |
@@ -34,13 +35,17 @@
 | Portfolio view | Derived, non-authoritative index rebuilt from every task's state; also the schema validation gate (`--validate`) | `tasks/00-INDEX.md`, `docs/scripts/gen_index.py` |
 | Participants | One declared profile per participant. Attribution, never authentication | `team/` |
 | Claude Code adapter | Thin pointer to `AGENTS.md` plus Claude-Code-specific context loading and slash-command routing | `CLAUDE.md`, `.claude/commands/` |
-| Project operations | CL contracts for catalog verification/owner triage and dated-snapshot preparation with a hard stop before tag or push | `.claude/commands/kz-stats.md`, `.claude/commands/kz-release.md` |
+| Project operations | Complete synchronized Claude/Codex CL contracts for evidence-backed candidate intake, catalog verification/owner triage, and dated-snapshot preparation with a hard stop before any unapproved apply, tag, or push | `.claude/commands/kz-add.md`, `.claude/commands/kz-stats.md`, `.claude/commands/kz-release.md`, `.agents/skills/kz-add/SKILL.md`, `.agents/skills/kz-stats/SKILL.md`, `.agents/skills/kz-release/SKILL.md` |
 | CI validation | Runs schema validation and non-mutating README currency checks on pull requests and pushes to `master`; never depends on Telegram | `.github/workflows/validate.yml` |
 | Release policy and catalog history | Defines dated verified snapshots and records catalog changes separately from framework releases | `RELEASE.md`, `CHANGELOG.md` |
 
 ### Data flow
 
 ```
+Telegram URLs / text / UTF-8 file
+  └──► kz_intake.py (lossless ledger → fetch once → existing classifier → exact preview)
+          └──► separate current-owner approval → exact-state apply → data/communities.json
+
 data/communities.json
   ├──► validate_schema.py (structure + locale)
   ├──► validate_links.py (liveness/counts; evidence-safe source updates)
@@ -63,6 +68,7 @@ index.md + ru/index.md + kk/index.md
 | Generator currency | `generate_readme.py` is the only writer for `README.md`, `index.md`, `ru/index.md`, and `kk/index.md`. Its normalized UTF-8/newline `--check` is non-mutating and is the shared local, CI, and release-preparation currency gate | [RF TFW-4 Phase C](tasks/TFW-4__showcase_reorg/phase-c/RF__phase-c__pipeline_tooling.md) · [RF catalog discoverability Phase A](tasks/2026/20260827-132641__catalog_discoverability/phase-a/RF__phase-a__multilingual_catalog.md) |
 | Offline CI | CI runs schema validation and generator currency checks only; it does not call Telegram, mutate data/README, archive entries, or perform release actions | [RF TFW-4 Phase C](tasks/TFW-4__showcase_reorg/phase-c/RF__phase-c__pipeline_tooling.md) |
 | Project-command authority | `/kz-stats` preserves four-way owner/evidence triage; `/kz-release` validates completeness and stops before tag/push for explicit owner approval. Command definitions are not evidence that either operation ran | [RF TFW-4 Phase C](tasks/TFW-4__showcase_reorg/phase-c/RF__phase-c__pipeline_tooling.md) |
+| Candidate-intake authority | `/kz-add` keeps preview non-mutating, requires separate current-owner approval bound to the exact preview and catalog state, and applies only exact selected additions. Zero-add is byte-identical; real additions preserve exact JSON/LF while mechanically rebinding localization-review digest and changed-key count; accepted observations must be producer-possible. All `kz-*` Claude/Codex command bodies are complete and byte-identical | [REVIEW catalog intake Phase A](tasks/2026/20260828-201343__catalog_intake_commands/phase-a/REVIEW__phase-a__intake_engine.md) |
 | Multilingual projection integrity | Every EN/RU/KK value and intent destination is explicit in the source; missing, blank, placeholder, or unknown values fail validation. One renderer writes all four projections, and a digest binds language review to exact locale bytes; any locale-content change invalidates that verdict | [REVIEW catalog discoverability Phase A](tasks/2026/20260827-132641__catalog_discoverability/phase-a/REVIEW__phase-a__multilingual_catalog.md) |
 | Published discovery integrity | The public surface is the supported GitHub Pages/Jekyll build of the generated EN/RU/KK projections. Each route has one self-canonical and reciprocal `en`/`ru`/`kk`/`x-default` hreflang set; the repository-owned Liquid sitemap contains those three canonicals; Dataset and social metadata stay consistent with visible content and the reviewed preview PNG; project `robots.txt` and `llms.txt` are not emitted | [REVIEW catalog discoverability Phase B](tasks/2026/20260827-132641__catalog_discoverability/phase-b/REVIEW__phase-b__published_discovery.md) |
 
@@ -90,6 +96,7 @@ index.md + ru/index.md + kk/index.md
 | D18 | A catalog release is an evidence-complete dated snapshot: the immutable full-sweep evidence may be supplemented by exact handle rechecks, while type repairs and death archives require target-bound or owner-bound evidence before publication | The first release showed that a single HTTP shape is not enough: target identity, peer type, historical continuity, explicit archive authority, and a final exact-universe reconciliation prevent ambiguous Telegram responses from becoming catalog facts | [RF TFW-4 Phase D](tasks/TFW-4__showcase_reorg/phase-d/RF__phase-d__live_sweep_release.md) |
 | D19 | Store locale/UI/intent content explicitly in `data/communities.json` and generate the GitHub mirror plus EN/RU/KK projections through one renderer with no fallback | Explicit completeness and one generation path prevent translation drift, preserve locale-invariant community facts, and allow advisory and formal language review to bind to one exact digest | [REVIEW catalog discoverability Phase A](tasks/2026/20260827-132641__catalog_discoverability/phase-a/REVIEW__phase-a__multilingual_catalog.md) |
 | D20 | Publish the generated multilingual catalog through repository-owned Jekyll layout/head/CSS and a Liquid sitemap, using supported GitHub Pages capability and no project robots/llms surface | One static build keeps visible content, canonical/hreflang, Dataset, social metadata, navigation, sitemap, and preview bytes mutually verifiable without a runtime application or unsupported plugin | [REVIEW catalog discoverability Phase B](tasks/2026/20260827-132641__catalog_discoverability/phase-b/REVIEW__phase-b__published_discovery.md) |
+| D21 | Bind candidate intake to an exact preview, current-owner authority, and exact catalog state; keep all six `kz-*` Claude/Codex command bodies complete and byte-identical behind a parity gate | Lossless source provenance, one-fetch classification, closed observation schemas, zero-add byte identity, mechanical locale-review rebinding, and exact command parity prevent ambiguous or stale approval from becoming catalog mutation | [REVIEW catalog intake Phase A](tasks/2026/20260828-201343__catalog_intake_commands/phase-a/REVIEW__phase-a__intake_engine.md) |
 
 ---
 
@@ -106,6 +113,7 @@ index.md + ru/index.md + kk/index.md
 | TFW-4 Phase D | Live sweep & first release | [RF TFW-4 Phase D](tasks/TFW-4__showcase_reorg/phase-d/RF__phase-d__live_sweep_release.md) | Records the verified 2026-08-27 catalog snapshot, exact repair/archive evidence, release commit, annotated tag, publication, and final task closure |
 | Catalog discoverability Phase A | One-source multilingual catalog | [REVIEW Phase A](tasks/2026/20260827-132641__catalog_discoverability/phase-a/REVIEW__phase-a__multilingual_catalog.md) | Approves the digest-bound EN/RU/KK source, one-renderer/four-projection contract, intent navigation, and deterministic regression suite |
 | Catalog discoverability Phase B | Published discovery surface | [REVIEW Phase B](tasks/2026/20260827-132641__catalog_discoverability/phase-b/REVIEW__phase-b__published_discovery.md) | Approves the deployed GitHub Pages/Jekyll routes, canonical/hreflang and Dataset/social metadata, Liquid sitemap, responsive navigation, repository preview, and exact public evidence |
+| Catalog intake Phase A | Intake engine and cross-tool commands | [REVIEW Phase A](tasks/2026/20260828-201343__catalog_intake_commands/phase-a/REVIEW__phase-a__intake_engine.md) | Approves lossless candidate intake, exact-state owner authority, schema/generator-safe apply, closed retry observations, and complete byte-identical `kz-*` Claude/Codex contracts |
 
 ---
 

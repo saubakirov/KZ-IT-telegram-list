@@ -18,7 +18,7 @@
 | Task | Lifecycle | Owner | Goal | Authority |
 |---|---|---|---|---|
 | [**20260828-201343__catalog_intake_commands** — Verified candidate intake and cross-tool catalog commands](2026/20260828-201343__catalog_intake_commands/status.md) | PHASES | saubakirov | Create a safe reusable command for validating and adding one or many Telegram candidates from links or a file | [HL-20260828-201343__catalog_intake_commands.md](2026/20260828-201343__catalog_intake_commands/HL-20260828-201343__catalog_intake_commands.md) |
-| &nbsp;&nbsp;↳ [A — Phase A — Intake engine and cross-tool commands](2026/20260828-201343__catalog_intake_commands/phase-a/status.md) | TS_DRAFT | saubakirov | Implement lossless candidate intake and complete synchronized Claude and Codex project commands | — |
+| &nbsp;&nbsp;↳ [A — Phase A — Intake engine and cross-tool commands](2026/20260828-201343__catalog_intake_commands/phase-a/status.md) | DONE | saubakirov | Implement lossless candidate intake and complete synchronized Claude and Codex project commands | — |
 
 ## Closed — 3
 

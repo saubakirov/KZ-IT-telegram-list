@@ -91,8 +91,8 @@ duplicate.
 - [x] HL status — unchanged under the Reviewer role lock; the approved phase contract remains authoritative.
 - [x] Phase A `status.md` — `updated` reflects this review; no counter was incremented.
 - [x] Other project files — checked for stale information; TD-19 remains correctly Open and no duplicate was added.
-- [ ] tfw-docs: Required — run `/tfw-docs` from the `KNW` lifecycle before Phase A can become `DONE`.
-- [x] tfw-knowledge: N/A — RF/REVIEW contain no human-only Fact Candidates to consolidate.
+- [x] tfw-docs: Applied — `KNOWLEDGE.md` §§1–2 now index the approved intake architecture, operational contract, D21, and key artifact; `TECH_DEBT.md` remains unchanged because TD-19 already covers the only observation.
+- [x] tfw-knowledge: N/A — the Phase A RF, REVIEW, RES traces, and owner context contain no new human-only Fact Candidates to consolidate.
 
 ## 7. Fact Candidates
 
