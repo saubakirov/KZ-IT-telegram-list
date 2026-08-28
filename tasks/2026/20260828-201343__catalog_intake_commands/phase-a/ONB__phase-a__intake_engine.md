@@ -1,6 +1,6 @@
 # ONB — 20260828-201343__catalog_intake_commands / Phase A: Intake engine and cross-tool commands
 
-> **Date**: 2026-08-28
+> **Date**: 2026-08-29
 > **Author**: Executor (Codex)
 > **Status**: 🟠 ONB — Revision authorized; no blocking questions
 > **Parent HL**: [Master HL](../HL-20260828-201343__catalog_intake_commands.md)
@@ -8,6 +8,7 @@
 > **TS**: [TS Phase A](TS__phase-a__intake_engine.md)
 > **Original implementation baseline**: `be830d3766ca4de12ff18198a680253ed133894f`
 > **Approved revision base**: `067528dba201e93d3a8d4efcb525d9bdfcb753d0`
+> **Current REVIEW source**: `e91d2aaff22b3d9d9e9137e7a15d15da85fc3aa2` (`REVISE`, F2a only)
 
 ---
 
@@ -28,6 +29,13 @@ The implementation ceiling remains at most 2500 insertion-plus-deletion lines. O
 `scripts/kz_intake.py`, `scripts/test_kz_intake.py`, and `scripts/validate_schema.py` require new
 implementation edits in this revision.
 
+The current re-review closes every prior finding and returns exactly F2a: failed HTTP tuples with
+2xx status codes still pass because the terminal HTTP predicate excludes only 429. The bounded
+correction is to exclude the complete 200–299 interval from the failed branch while retaining
+successful `fetched` 2xx tuples at attempts 1–3, every non-429 outside-2xx terminal HTTP tuple at
+attempt 1, terminal URL/general errors and `max_retries_exceeded` at attempt 3, and the existing
+`http_429` prohibition. Only `scripts/kz_intake.py` and `scripts/test_kz_intake.py` need edits.
+
 ## 2. Entry Points
 
 - `scripts/validate_links.py` — existing pure `classify_response` authority and combined
@@ -38,6 +46,9 @@ implementation edits in this revision.
   catalog-last recovery, and exact transport-family regression tests.
 - `scripts/validate_schema.py` — replace fixed `139/131/131` acceptance cardinalities with an
   independently data-derived locale payload invariant and truthful dynamic reporting.
+- Current F2a correction — add one outside-2xx predicate in `scripts/kz_intake.py` and direct
+  complete 2xx-boundary regression coverage in `scripts/test_kz_intake.py`; no other entry point
+  or artifact contract changes.
 - `tasks/2026/20260828-201343__catalog_intake_commands/phase-a/REVIEW__phase-a__intake_engine.md`
   and `review/verify.md` — exact exploit definitions and retained prior closures.
 - `tasks/TFW-4__showcase_reorg/phase-c/evidence/offline_harness.py` — predecessor retry,
@@ -70,6 +81,9 @@ continuation through implementation, evidence, RF, lifecycle updates, and local 
    valid field must remain rejected.
 4. Tests must keep production controlled paths untouched while still exercising real preflight
    and catalog-last failure/recovery inside isolated temporary project copies.
+5. Boundary coverage must reject failed `http_200` through `http_299`, explicitly including
+   200/204/299, without narrowing terminal HTTP codes outside that interval or weakening valid
+   fetched 2xx attempts 1–3.
 
 ## 6. Inconsistencies with Code (spec vs reality)
 
@@ -81,6 +95,9 @@ continuation through implementation, evidence, RF, lifecycle updates, and local 
 3. `validate_schema.py` validates fixed locale counts and prints the same constants. Exact localized
    additions therefore fail real preflight even after the review digest and changed-key total are
    mechanically correct; both acceptance and reporting must become data-derived.
+4. After the last revision, failed HTTP validation requires attempt 1, a matching `http_<status>`
+   reason, and status other than 429, but does not exclude 2xx. This admits producer-impossible
+   failed records even though `fetch_preview_with_retry` emits all 2xx responses as `fetched`.
 
 ## 7. Knowledge Citations
 
