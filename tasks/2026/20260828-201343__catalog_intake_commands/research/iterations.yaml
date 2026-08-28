@@ -1,0 +1,12 @@
+task_id: 20260828-201343__catalog_intake_commands
+title: safe candidate intake, synchronized agent commands, and honest holdout validation
+min_iterations: 2
+max_iterations: 5
+iterations:
+  - number: 1
+    focus: "test H2-H4 and establish feasible full-copy adapter, candidate-probe, input, approval, and holdout configurations"
+    hypotheses: [H2, H3, H4]
+    status: pending
+    res_file: research/iter1/RES.md
+    agent: codex-researcher
+    sources: [external, codebase]

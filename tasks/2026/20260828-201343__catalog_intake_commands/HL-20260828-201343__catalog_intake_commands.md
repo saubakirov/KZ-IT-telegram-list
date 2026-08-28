@@ -2,7 +2,7 @@
 
 > **Date**: 2026-08-28
 > **Author**: Coordinator (Codex)
-> **Status**: 📝 HL_DRAFT — Approved; research decision pending
+> **Status**: 🔬 RES — Deep research approved; Iteration 1 pending
 > **Contract**: 🔒 FROZEN — approved by saubakirov 2026-08-28
 > **Frozen**: §1 · §3 · §4 · §5 · §6 · §7 — locked on owner approval
 > **Free**: §2 · §7.2 · §8 · §9 · §10 · §11 — research updates these directly
@@ -376,9 +376,9 @@ identity/editorial/authority decision. Never weaken a gate to make the batch pas
 | # | Hypothesis | Status |
 |---|---|---|
 | H1 | Claude Code commands and Codex repository skills can route the same literal `kz-*` surface to provider-neutral project workflows, including the two existing operations, without copied behavior | refuted — cross-tool feasibility confirmed by owner; thin-link/no-copy architecture superseded by approved A1 requiring full synchronized copies |
-| H2 | The existing Telegram classifier can expose an arbitrary non-mutating candidate probe with a stable summary while preserving every current identity/type/update/archive safety property | open |
-| H3 | One `/kz-add <source>` grammar can unambiguously cover a single URL, multiple URLs, and Markdown/text files while remaining idempotent and accounting for every malformed/duplicate input | open |
-| H4 | The 28-candidate universe can be partitioned into calibration and holdout sets so automated evidence narrows owner work without pretending that theme, Kazakhstan relevance, or commerciality are purely machine facts | open |
+| H2 | The existing Telegram classifier can expose an arbitrary non-mutating candidate probe with a stable summary while preserving every current identity/type/update/archive safety property | needs-research — owner does not know |
+| H3 | One `/kz-add <source>` grammar can unambiguously cover a single URL, multiple URLs, and Markdown/text files while remaining idempotent and accounting for every malformed/duplicate input | needs-research — owner does not know |
+| H4 | The 28-candidate universe can be partitioned into calibration and holdout sets so automated evidence narrows owner work without pretending that theme, Kazakhstan relevance, or commerciality are purely machine facts | needs-research — owner does not know |
 
 ### Risks of Not Researching
 
