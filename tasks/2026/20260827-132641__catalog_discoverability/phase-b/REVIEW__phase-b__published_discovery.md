@@ -1,15 +1,16 @@
 # REVIEW — 20260827-132641__catalog_discoverability / Phase B: Published discovery surface
 
-> **Date**: 2026-08-27
+> **Date**: 2026-08-28
 > **Author**: saubakirov (Codex Reviewer)
 > **Verdict**: ✅ APPROVE — repository-controlled candidate only
-> **Reviewed base**: `b16aac00a7f2b94cbc2e1be29c7c30eaea9350d9`
+> **Reviewed base**: `bd7af42165c341d653e3efbb20091c131c9f7a40`
 > **Prior verdict**: 🔄 REVISE on `ae4898df0b0b5050cf6f23179d4e090ff04f93db`; immutable Reviewer commit `96ea6d965525d14963b9b22251a762eb9682ec95`, integrated as `82ada1c10eabd7eda3c67a5c024a97e342a99764`
+> **Prior repository approval**: ✅ APPROVE on `b16aac00a7f2b94cbc2e1be29c7c30eaea9350d9`; Reviewer source `2379b3a607b8378adcd081feb9172212287fbd36`, integrated as `53b7bba8544c26e2455ee8055af4f0c97d755ad2`
 > **RF**: [RF Phase B](RF__phase-b__published_discovery.md)
 > **TS**: [TS Phase B](TS__phase-b__published_discovery.md)
 > **Stage files**: [`review/map.md`](review/map.md), [`review/verify.md`](review/verify.md), [`review/judge.md`](review/judge.md)
-> This approval does not claim publication and does not satisfy the outstanding external
-> authorization/public-evidence checkpoint.
+> This approval does not claim publication. Owner authorization is now explicit for the exact
+> recorded runbook/settings package; execution and deployed public evidence remain outstanding.
 
 ---
 
@@ -19,9 +20,11 @@
 |---|---|---|---|
 | First | `ae4898df0b0b5050cf6f23179d4e090ff04f93db` | 🔄 REVISE — F1 non-reproducing preview, F2 invalid matrix byte binding, F3 contradictory Phase-HL sitemap sentence | Reviewer source `96ea6d96…`; integrated `82ada1c1…`; prior contents retained in history |
 | Revised | `b16aac00a7f2b94cbc2e1be29c7c30eaea9350d9` | ✅ APPROVE — F1–F3 closed and every green gate independently reproduced | This REVIEW and its three refreshed stage traces |
+| Pre-publication rebind | `bd7af42165c341d653e3efbb20091c131c9f7a40` | ✅ APPROVE — final post-approval integration is trace-only and exact-base deployability is reproduced | Integrated Reviewer `53b7bba8…`; Coordinator checkpoint `bd7af421…`; this refreshed REVIEW/stage set |
 
-The first verdict is not rewritten or retroactively approved. It remains correct for the rejected
-base. This approval binds only to the exact revised repository-controlled bytes named above.
+No earlier verdict is rewritten or retroactively broadened. The first remains correct for the
+rejected base; the second remains correct for `b16aac00…`; this rebind applies only to the exact final
+integrated repository-controlled base named above.
 
 ## 1. Map
 
@@ -43,6 +46,14 @@ and integrated `cd1a233bef3e10c1fe15e82949360e73a623937b` have identical tree
 `d7ae8114751dfdfb6bbfb61b12bbdee23d45669c`; the earlier `d6c2c2c679033d06f1d1f4361227e8485de1be48`
 commit changes only one trailing space in `jekyll-build.txt`.
 
+After the approved `b16aac00…` base, integrated Reviewer commit
+`53b7bba8544c26e2455ee8055af4f0c97d755ad2` changes only this REVIEW and the three review-stage
+files. Its direct child `bd7af42165c341d653e3efbb20091c131c9f7a40` changes only Phase B
+`status.md`, one immutable transition journal event, and the derived portfolio index. No
+implementation, RF, EV, evidence, HL, TS, or ONB byte changed. The latter commit records the phase as
+`BLOCKED`; the owner has since explicitly authorized the exact push/Pages/settings cycle in
+`evidence/external-checkpoint.md`, but no operation has yet run and no public evidence exists.
+
 ## 2. Verify
 
 | # | What was checked | Result | Evidence |
@@ -53,12 +64,13 @@ commit changes only one trailing space in `jekyll-build.txt`.
 | 4 | F3 — Phase HL sitemap wording | ✅ Closed | Phase B HL §3 now says the sitemap is rendered from the repository-owned Jekyll/Liquid page; Phase HL/TS/RF/EV/implementation agree; frozen Master HL is untouched. |
 | 5 | 13/13 implementation paths and final integrated history | ✅ | Scope is exactly 8 new / 5 modified implementation paths; Coordinator and Executor commits retain role ownership; source/integrated Executor tree hashes are identical. |
 | 6 | Schema, generator, Phase A bodies, and tests | ✅ | Schema/generator checks pass; 13/13 tests pass; data/README and stripped EN/RU/KK bodies are byte-identical to Phase A; AST audit proves all 12 predecessor tests unchanged and only one test added. |
-| 7 | Supported GitHub Pages/Jekyll build | ✅ | Fresh exact-`b16aac00…` archive build passes in pinned official image digest; Ruby 3.3.4, Bundler 2.5.11, Jekyll 3.10.0; all output and summary hashes match EV. |
+| 7 | Supported GitHub Pages/Jekyll build | ✅ | Fresh exact-`bd7af421…` archive build passes in the pinned official image digest; all EN/RU/KK/sitemap/CSS/PNG/metadata output hashes match EV. |
 | 8 | Routes, metadata, sitemap, Dataset/social, robots/llms | ✅ | Exactly EN `/`, RU `/ru/`, KK `/kk/`; exact `lang`, self-canonical and four reciprocal alternates; visible-consistent OG/Twitter/Dataset; 338-byte three-URL sitemap; no robots/llms source or output. |
-| 9 | Responsive/browser behavior | ✅ | Fresh in-app Chromium QA at 390×844 and 1366×768 for EN/RU/KK: exact viewports, loaded CSS, no overflow/hidden critical content/executable scripts/fixed overlays, visible screenshots, working type/intent/language clicks, 30/30 local responses at 200. |
+| 9 | Responsive/browser behavior | ✅ | The prior full pass ran fresh in-app Chromium QA at 390×844 and 1366×768 for EN/RU/KK; the trace-only delta leaves every source, matrix, and screenshot blob identical, so that exact evidence remains bound. |
 | 10 | Refreshed Antigravity provenance and bytes | ✅ | Exact executable/model/plan+sandbox/object-valued UTF-8 stream-json/request-review/no-bypass/conversation/hashes verified; SUCCESS/PASS, no findings, no nits. |
-| 11 | Current GitHub/Pages/public checkpoint and runbook | ✅ repository boundary only | Fresh authenticated/public read-only facts match; exact target settings/runbook and `data-2026-08-27` non-reuse rule remain; mutation count is zero; public RU/KK/sitemap remain 404. |
+| 11 | GitHub/Pages/public checkpoint and runbook boundary | ✅ repository boundary only | Checkpoint blob and exact target settings/runbook remain unchanged; fresh remote read confirms `master=e4986e78…` and the existing tag object/peeled commit; authorization is present but unused, mutation count is zero, and public evidence remains pending. |
 | 12 | Knowledge/citation/evidence inventory | ✅ | 21/21 citation rows resolve and semantically hold; all 9 RF evidence references and every attachment exist and match. |
+| 13 | Final integration and proportional rebind | ✅ | Exactly two post-approval commits are trace-only; schema/generator/13 tests pass; Phase A data/README/digest remain exact; final-base build and two preview rerenders reproduce all expected hashes; worktree clean. |
 
 Raw verification, exact commands, hashes, route facts, evidence audit, and citation audit are in
 [`review/verify.md`](review/verify.md).
@@ -75,7 +87,7 @@ zero tool steps, and no permission-bypass flag. Conversation
 its advisory is exactly `PASS`, disposition not required, findings none, nits none. Antigravity
 remains advisory; this REVIEW issues the formal verdict.
 
-Current external checkpoint remains a before-state: authenticated actor `saubakirov`; repository
+The recorded 2026-08-27 external checkpoint remains the authoritative before-state: authenticated actor `saubakirov`; repository
 description retains the old bilingual text and trailing space, homepage is blank, topics are
 `almaty`/`astana`/`kazakhstan`/`telegram`; Pages is built/legacy from `master` `/`, latest commit
 `e4986e787018dbe92f51733e243916eba60cd2c4`; public root is still the 18,994-byte old page,
@@ -83,44 +95,53 @@ description retains the old bilingual text and trailing space, homepage is blank
 `data-2026-08-27` remains ref `45d9c3cb12c1e71c7df7429f1da32028bcfbeb89`, peeled commit
 `ee2e4f8f69b7bfc66b905801f950d8e832caa02f`, and must not be reused, moved, deleted, or replaced.
 
+On 2026-08-28 the Coordinator delegation recorded explicit owner authorization for the exact
+non-force push/Pages cycle and exact repository settings already written in the checkpoint. That
+authorization is permission to execute the recorded continuation; it is not evidence that a push,
+deployment, settings edit, preview upload, or public verification occurred. This Reviewer performed
+none of those operations.
+
 ## 3. Judge
 
 | # | Check | Status | Evidence |
 |---|---|---|---|
-| 1 | DoD met? (all TS acceptance criteria) | ✅ | AC-1–AC-9 hold for exact repository-controlled bytes; AC-7 correctly leaves public work deferred. |
+| 1 | DoD met? (all TS acceptance criteria) | ✅ | AC-1–AC-9 hold for exact `bd7af421…`; authorization is present while AC-7 correctly leaves execution/public evidence deferred. |
 | 2 | Purpose Check — is this what we set out to do? + design soundness | ✅ | The frozen multilingual verified-catalog purpose and README accuracy North Star are served without adjacent surfaces; one-source/static-route/Liquid-sitemap/external-stop design is sound. |
 | 3 | Tech debt documented | ✅ | RF has no observations; prior F1–F3 were fixed in scope, not deferred. |
 | 4 | Style & standards | ✅ | Generated ownership, supported static implementation, naming, trace accuracy, and byte bindings hold. |
 | 5 | Observations collected | ✅ | No separate out-of-scope observation was found. |
 | 6 | RF completeness (§7–9 present) | ✅ | Fact Candidates, Strategic Insights, Diagrams, and prior-finding dispositions are present and appropriate. |
-| 7 | Evidence completeness — does it exist? | ✅ | All RF/EV attachments exist. |
-| 8 | Evidence sufficiency — does it establish the claim? | ✅ | Independent exact-archive, byte, browser, external-state, and provenance checks reproduce every offered green signal. |
+| 7 | Evidence completeness — does it exist? | ✅ | All RF/EV attachments exist; owner authorization is recorded; deployed public evidence is explicitly pending rather than fabricated. |
+| 8 | Evidence sufficiency — does it establish the claim? | ✅ | Exact final-base archive, byte, test, raster, history, and remote-ref checks establish deployability; unchanged prior browser/advisory evidence remains bound to identical implementation blobs. |
 | 9 | Backward compatibility | ✅ | Phase A data/README/body/digest/targets/fragments/tests remain exact. |
-| 10 | Safety | ✅ | Read-only external access, zero mutation, no secret disclosure, non-force/tag-preserving runbook. |
+| 10 | Safety | ✅ | Zero mutation and no secret disclosure; authorization was not exercised; runbook remains non-force and tag-preserving. |
 
 ## 4. Verdict
 
 **✅ APPROVE — repository-controlled candidate only**
 
 Phase B's local candidate is formally approved at exact reviewed base
-`b16aac00a7f2b94cbc2e1be29c7c30eaea9350d9`. F1–F3 are fully closed, every prior green gate
-reproduces, all acceptance criteria hold within the repository boundary, and no current material
-finding or nit remains.
+`bd7af42165c341d653e3efbb20091c131c9f7a40`. F1–F3 remain fully closed; the complete delta from the
+previously approved base is trace-only; proportional Phase A, supported build/metadata/output,
+preview, history, remote-ref, and runbook/tag gates reproduce; all acceptance criteria hold within
+the repository boundary; and no current material finding or nit remains.
 
-This verdict does **not** claim that the candidate is published. It does not authorize a push,
-settings edit, social-preview upload, tag change, Search Console action, or any other external
-mutation. It does not satisfy the outstanding public route/head/browser/social/indexing/retrieval
-evidence checkpoint. The exact proposed settings and publication/public-verification runbook in
-`evidence/external-checkpoint.md` remain authoritative and require explicit owner authorization.
+This verdict does **not** claim that the candidate is published. The owner has now authorized the
+exact push/Pages cycle and exact settings in `evidence/external-checkpoint.md`; that authorization
+must be exercised only by the Coordinator against this exact reviewed SHA. This review performed no
+push, settings edit, social-preview upload, tag change, Search Console action, or other external
+mutation, and it does not satisfy the outstanding public route/head/browser/social/indexing/
+retrieval evidence checkpoint.
 
 ### Required lifecycle
 
-The Coordinator should record the formal approval, then move Phase B from `REV` to `BLOCKED` rather
-than `KNW` or `DONE`, because TS AC-7/AC-9 makes explicit external authorization and deployed public
-evidence the remaining checkpoint. After authorization, the Coordinator executes the exact runbook,
-preserves the existing `data-2026-08-27` tag, refreshes EV/RF with deployed SHA/settings/HTTP/head/
-browser/social evidence, and returns to the same Reviewer pipeline. Until then, no publication claim
-or phase closure is valid.
+Phase B is already `BLOCKED`. With exact authorization now present, the Coordinator may execute the
+recorded runbook against `bd7af42165c341d653e3efbb20091c131c9f7a40`: repeat the mandatory drift
+check, use only an ordinary non-force fast-forward push, preserve the existing `data-2026-08-27`
+tag, wait for the matching Pages build, apply only the authorized exact settings/preview, collect the
+specified public evidence, refresh EV/RF, and return to this same Reviewer pipeline. Keep the phase
+`BLOCKED` until that deployed evidence is formally reviewed; do not move to `KNW` or `DONE` and do
+not claim publication before then.
 
 ## 5. Tech Debt Collected
 
@@ -129,15 +150,16 @@ separate out-of-scope debt.
 
 ## 6. Traces Updated
 
-- [ ] Phase B `status.md` / transition journal — intentionally not modified under the delegated
-  Reviewer-only write boundary; Coordinator must record APPROVE and the `BLOCKED` transition.
+- [x] Phase B `status.md` / transition journal — read and left unchanged under the delegated
+  Reviewer-only write boundary; Coordinator commit `bd7af421…` already records the repository
+  approval checkpoint and `BLOCKED` state.
 - [ ] Master/Phase HL status — intentionally not modified; Coordinator owns phase lifecycle.
 - [x] Existing `review/map.md`, `review/verify.md`, `review/judge.md`, and this REVIEW refreshed in
   place with prior-verdict history preserved.
 - [x] Other project files checked for stale/unauthorized information; no implementation, HL, TS, ONB,
   RF, EV, evidence attachment, TECH_DEBT, knowledge, index, status, or journal file was changed.
-- [x] `tfw-docs`: Deferred — the external authorization/public-evidence checkpoint remains open and
-  no reviewed knowledge/debt delta requires an interim documentation change.
+- [x] `tfw-docs`: Deferred — deployment/public evidence remains open and no reviewed knowledge/debt
+  delta requires an interim documentation change.
 - [x] `tfw-knowledge`: N/A — neither revised RF nor REVIEW contains a human-only Fact Candidate.
 
 The trace-update deferral is the only canonical-workflow deviation. It is required by the explicit
@@ -146,8 +168,10 @@ Reviewer write boundary and does not weaken the formal review gates.
 ## 7. Fact Candidates
 
 No fact candidates. Every review observation was independently discoverable from repository bytes,
-commands, browser output, or read-only external state and therefore fails the Human-Only Test.
+commands, browser output, or read-only external state and therefore fails the Human-Only Test. The
+owner authorization is a bounded lifecycle authority event recorded in the verdict, not a reusable
+project-knowledge candidate.
 
 ---
 
-*REVIEW — 20260827-132641__catalog_discoverability / Phase B: Published discovery surface | 2026-08-27*
+*REVIEW — 20260827-132641__catalog_discoverability / Phase B: Published discovery surface | 2026-08-28*

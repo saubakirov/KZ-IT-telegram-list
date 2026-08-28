@@ -3,9 +3,9 @@
 > **Min verify ratio:** 0.42
 > **RF implementation files claimed:** 13
 > **Files required:** `ceil(13 × 0.42) = 6`
-> **Actual implementation files opened:** 13/13 (100%; retained from the first pass and re-opened proportionally for the revision)
-> **Reviewed base:** `b16aac00a7f2b94cbc2e1be29c7c30eaea9350d9`
-> **Prior formal pass:** 🔄 REVISE on `ae4898df0b0b5050cf6f23179d4e090ff04f93db`; F1–F3 are dispositioned below.
+> **Actual implementation files opened:** 13/13 (100% in the full prior pass); all 13 Git blobs are unchanged after that approved base, and deployment-critical behavior was rerun from an exact final-base archive
+> **Reviewed base:** `bd7af42165c341d653e3efbb20091c131c9f7a40`
+> **Prior formal passes:** 🔄 REVISE on `ae4898df0b0b5050cf6f23179d4e090ff04f93db`; ✅ repository-candidate APPROVE on `b16aac00a7f2b94cbc2e1be29c7c30eaea9350d9`; F1–F3 remain closed.
 
 ## Verification Log
 
@@ -30,6 +30,13 @@ changes one implementation path (`assets/social-preview.png`) plus task-local ev
 Coordinator-owned lifecycle/Phase-HL traces. Executor source commit `de4060bf…` and integrated commit
 `cd1a233b…` have the identical tree `d7ae8114751dfdfb6bbfb61b12bbdee23d45669c`.
 
+The pre-publication rebind adds no implementation delta. `53b7bba8544c26e2455ee8055af4f0c97d755ad2`
+is the prior four-file Reviewer integration commit (tree `4243f913533ab4fbf6dde244f34ae03dda2164d7`),
+and `bd7af42165c341d653e3efbb20091c131c9f7a40` is its direct Coordinator child. The latter changes
+only the Phase B lifecycle carrier, one immutable transition journal event, and the derived portfolio
+index. The full `b16aac00…` → `bd7af421…` path contains no code, implementation, RF, EV, evidence,
+HL, TS, or ONB change.
+
 ## Prior Finding Disposition
 
 | Finding | Required correction | Independent disposition | Status |
@@ -42,17 +49,20 @@ Coordinator-owned lifecycle/Phase-HL traces. Executor source commit `de4060bf…
 
 | AC | Independent result | Evidence |
 |---|---|---|
-| AC-1 | ✅ Holds | Fresh build from exact `b16aac00…` Git archive passed in the pinned official `jekyll-build-pages` image; only EN/RU/KK HTML routes plus repository-owned sitemap were emitted. |
+| AC-1 | ✅ Holds | Fresh build from exact `bd7af421…` Git archive passed in the pinned official `jekyll-build-pages` image; only EN/RU/KK HTML routes plus repository-owned sitemap were emitted. |
 | AC-2 | ✅ Holds | Fresh metadata test and six browser cases confirm exact `lang`, self-canonical, and reciprocal `en`/`ru`/`kk`/`x-default` singleton links on every route. |
 | AC-3 | ✅ Holds | Dataset and social fields equal visible/source title, description, locale, date, canonical, license, and JSON distribution; preview is valid, legible, claim-safe, and exactly reproducible (F1). |
 | AC-4 | ✅ Holds | Fresh sitemap is 338 bytes / `79dcb9bb…` with exactly three canonical URLs; exact source/archive/build contain no project `robots.txt` or `llms.txt`. |
 | AC-5 | ✅ Holds | Independent in-app Chromium QA at 390×844 and 1366×768 for all locales found exact viewports, no overflow, no hidden critical content, no executable/external scripts, and working type/intent/language navigation; 30/30 representative local links returned 200. |
 | AC-6 | ✅ Holds | Digest remains exactly `51db402d…`; schema/generator/13 tests pass; data/README/bodies and all twelve predecessor tests are preserved exactly. |
-| AC-7 | ✅ Holds within repository boundary | Authenticated current state, exact target settings, safe publication runbook, existing-tag non-reuse, and zero mutations are recorded; every public outcome remains correctly DEFERRED. |
-| AC-8 | ✅ Holds | Refreshed Antigravity provenance and PASS are exact; this formal REVIEW independently verifies the candidate and issues APPROVE for repository-controlled bytes only. |
-| AC-9 | ✅ Holds | Thirteen-path implementation scope, role attribution, task-local evidence, clean integrated base, prior-verdict history, and outstanding external checkpoint are all traceable and resumable. |
+| AC-7 | ✅ Holds within repository boundary | Exact target settings/runbook and existing-tag non-reuse remain byte-identical; owner authorization is now explicit, but zero mutations occurred and every public outcome remains correctly DEFERRED. |
+| AC-8 | ✅ Holds | Refreshed Antigravity provenance and PASS remain exact and unchanged; this formal rebind independently verifies the exact final Coordinator base and issues APPROVE for repository-controlled bytes only. |
+| AC-9 | ✅ Holds | Thirteen-path implementation scope, role attribution, trace-only final integration, clean exact base, prior-verdict history, and pending public-evidence return are traceable and resumable. |
 
 ## Commands Executed
+
+Rows 1–14 preserve the prior full-pass command history. Rows R1–R9 below are the proportional
+commands rerun specifically for this exact-base pre-publication rebind.
 
 | # | Command / operation | Result |
 |---|---|---|
@@ -75,13 +85,32 @@ One reviewer-side visibility probe initially used an English-specific text selec
 intent-navigation label. The probe—not the candidate—was corrected to inspect the actual first six
 critical DOM elements; every RU mobile/desktop element was visible. No candidate finding results.
 
+## Pre-publication Rebind Verification
+
+| # | Command / operation | Result |
+|---|---|---|
+| R1 | Ancestry, commit metadata, path, tree, and `git diff --check` audit from `b16aac00…` through `53b7bba8…` to `bd7af421…` | PASS — exactly two direct commits; Reviewer commit changes four review artifacts only; Coordinator commit changes status, one journal event, and derived index only; both diffs clean. |
+| R2 | `python scripts/validate_schema.py` | PASS — 38 groups, 20 channels, 4 bots, 19 categories, 2 archived, zero errors; digest `51db402da00f85f25dd533d415c9d7941402c69b5892952882bafc6122d2a6fc`. |
+| R3 | `python scripts/generate_readme.py --check` | PASS — all four projections current; digest exact. |
+| R4 | `python -m unittest scripts.test_catalog_generation -v` | PASS — 13/13, including the Phase A preservation test; Phase A `data/communities.json` and `README.md` are byte-identical to `d9fe27c6…`. |
+| R5 | Pinned official Pages build from exact `git archive bd7af421…` | PASS — image digest `6791ebfd…`, image ID `ac7c0ad0…`; EN/RU/KK/sitemap/CSS/PNG hashes exactly match EV. |
+| R6 | Exact-archive `scripts/test_site_metadata.py` and output binding | PASS — metadata summary is 11,097 bytes / `bbf30af0…`; EN `64597def…`, RU `fef3499e…`, KK `2d4465e7…`, sitemap `79dcb9bb…`, CSS `6079176c…`; no built robots/llms. |
+| R7 | Checked-in CairoSVG command twice against the exact archive | PASS — candidate and both fresh outputs are 27,394 bytes / `13e34836df46d850b6a3fe4919dce83fa8a38cf7011da289c287696a794c194d`. |
+| R8 | `git ls-remote` plus fast-forward/tag audit | PASS — remote `master` remains `e4986e78…`; reviewed base descends it; `data-2026-08-27` remains object `45d9c3cb…`, peeled commit `ee2e4f8f…`; non-reuse boundary intact. |
+| R9 | Worktree/external-operation audit | PASS — exact base remained clean; no push, deploy, settings edit, upload, tag action, Search Console action, or other external mutation occurred. |
+
+The six-case browser matrix and screenshots were not rerun in this proportional rebind because the
+complete post-approval delta is trace-only and every source, asset, built-output, browser-matrix, and
+screenshot blob is identical to the previously approved base. Their prior full browser verification
+therefore remains bound without substituting a retained worktree copy for exact Git evidence.
+
 ## Claim & Source Checks
 
 | # | Claim / citation checked | Where it appears | Traces to | Holds? |
 |---|---|---|---|---|
 | C1 | Phase A approved body/digest contract is unchanged | TS AC-6; RF §§2–4 | Actual Phase A RF/final REVIEW, immutable base `d9fe27c6…`, generator tests, current blobs | ✅ Exact digest `51db402d…`; data/README/bodies exact; prior twelve tests unchanged |
 | C2 | Repository-owned Liquid sitemap is supported and emits no project robots output | Revised Phase B HL/TS; RF §§2–4 | Coordinator revision `b08d0f1…`, Jekyll source, pinned supported build, exact build inventory | ✅ F3 closed; plugin installed transitively but disabled |
-| C3 | Current Pages/repository/public state is unchanged and no tag/settings mutation occurred | TS AC-7; external checkpoint; RF boundary | Authenticated GitHub GETs, public HTTP bytes, `git ls-remote` | ✅ `master=e4986e…`; Pages legacy `master:/`; tag ref `45d9c3…` peels to `ee2e4f8…`; public RU/KK/sitemap remain 404 |
+| C3 | The recorded publication/settings package remains exact and no tag/settings mutation occurred in review | TS AC-7; external checkpoint; RF boundary | Unchanged checkpoint Git blob plus fresh `git ls-remote` | ✅ checkpoint blob unchanged from `b16aac00…`; `master=e4986e…`; tag ref `45d9c3…` peels to `ee2e4f8…`; owner authorization is present but unused |
 | C4 | Preview is reproducibly generated from the checked-in vector | TS AC-3; RF/EV | Checked-in SVG command and two independent CairoSVG 2.8.2 rerenders | ✅ F1 closed; all three byte sequences are `13e34836…` |
 
 ## Discrepancies Found
@@ -100,7 +129,7 @@ and did not identify a candidate defect.
 | E4 / AC-4 | metadata summary + build log | ✅ | ✅ Exact sitemap; no robots/llms source or output |
 | E5 / AC-5 | canonical-LF matrix + six screenshots | ✅ | ✅ Final Git blob exact; all six cases and attachment hashes independently match |
 | E6 / AC-6 | commands and hashes in EV | ✅ | ✅ Digest/body/data/README/test preservation exact |
-| E7 / AC-7 | `external-checkpoint.md` | ✅ | ✅ Correctly DEFERRED; fresh read-only state matches; exact runbook and tag rule retained |
+| E7 / AC-7 | `external-checkpoint.md` | ✅ | ✅ Exact blob/runbook/settings/tag rule retained; authorization now present, while deployment/public evidence correctly remains DEFERRED |
 | E8 / AC-8 | Antigravity input/output | ✅ | ✅ Exact refreshed PASS/no findings/no nits provenance and bytes |
 | E9 / AC-9 | Git/path/role audit | ✅ | ✅ Scope, authorship, integration tree, same-task continuation, and external stop hold |
 
@@ -168,5 +197,9 @@ verified; 0 irrelevant; 0 hallucinated. The revision changed no citation target 
 - [x] Verified all 21 HL §7.2 / ONB §7 citation rows: 21 resolved/legitimate absences, 21 semantic matches, 0 irrelevant, 0 hallucinated.
 - [x] Verified all 9 RF §5 evidence references and every attachment: 9 exist and 9 match.
 - [x] Formally dispositioned F1–F3 and preserved the prior REVISE as history.
+- [x] Proved the prior APPROVE integration and final Coordinator checkpoint are trace-only, then
+  rebound the formal repository-candidate verdict to exact `bd7af42165c341d653e3efbb20091c131c9f7a40`.
+- [x] Recorded explicit owner authorization separately from deployment evidence and performed zero
+  external mutation.
 
 Stage complete: YES
