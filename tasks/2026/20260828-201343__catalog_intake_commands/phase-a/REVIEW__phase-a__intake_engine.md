@@ -1,6 +1,6 @@
 # REVIEW — 20260828-201343__catalog_intake_commands / Phase A: Intake engine and cross-tool commands
 
-> **Date**: 2026-08-28
+> **Date**: 2026-08-29
 > **Author**: saubakirov (Reviewer, via Codex)
 > **Verdict**: 🔄 REVISE
 > **RF**: [RF Phase A](RF__phase-a__intake_engine.md)
@@ -12,28 +12,29 @@
 
 ## 1. Map
 
-The Executor revised only the intake runtime/tests after the prior review. The new code derives a
-stage from proposed ADD rows, rederives it during apply, writes the catalog last, and validates
-serialized observations against enumerated classifier/transport families while preserving the
-already-reviewed parser, classifier bodies, command copies, evidence, and no-mutation boundary.
+The final revision is integrated at RF base
+`45878d9459e263ed7821dcc84bc400ed0603fb3c`, with implementation
+`731b3d6a3350bb3fe41115a4ae9213aaa86bbc6f`. It changes only the three approved implementation
+files after Coordinator base `067528d…`, adds structural locale-cardinality validation, and claims
+complete closure of all previous action-stage and producer-tuple findings while preserving parser,
+classifier, command/runtime, seal, production-hash, scope, and no-mutation boundaries.
 
 ## 2. Verify
 
 | # | What was checked | Result | Evidence |
 |---|------------------|--------|----------|
-| 1 | All 23 RF-claimed paths plus two public seal-support artifacts | ✅ 100% audited | [Verification log](review/verify.md#verification-log) |
-| 2 | Previous D1–D6 closures | ✅ remain closed | Literal authority, recursive closure, neutral state, complete runtime records, sealed allocation, and exact-SHA build all reproduce. |
-| 3 | Original F1 reject-only unrelated valid stage exploit | ✅ closed | Real valid unrelated delta is rejected before preview. |
-| 4 | Original F2 target-unbound/arbitrary verified and failed-transport-with-facts exploits | ✅ closed | Every original mutation is rejected in preview/apply. |
-| 5 | Full regression/schema/generator/index/compile/predecessor matrices | ✅ | 42 tests and every approved offline deterministic gate pass. |
-| 6 | Classifier semantic preservation and actual result families | ✅ | Six authority bodies are exact to base; all nine actual classifier families and valid transports pass. |
-| 7 | Command completeness/parity/path neutrality and runtime binding | ✅ | Exact pairs and hashes reproduce; Claude limitation and Codex explicit paths are stated without overclaim. |
-| 8 | Scope/LOC, calibration continuity, partition receipt, controlled hashes | ✅ | 12 paths, 8 new/4 modified, 2,230 lines; exact public/sealed bindings; all production blobs unchanged. |
-| 9 | Exact-SHA official-image site build | ✅ | Fresh offline digest-pinned build at `20c19505…` exits 0; summary/output bindings match. |
-| 10 | Zero-add exact no-op | ❌ F1a | A semantically identical catalog reserialization with unchanged projections passes real preflight and is applied with zero IDs, rewriting source bytes. |
-| 11 | One exact ADD with real preflight | ❌ F1b | Action-stage derivation passes, but the existing schema rejects the added locale-review keys; the green unit test substitutes a synthetic preflight. |
-| 12 | Exact failed-transport producer tuples | ❌ F2 | Retry-terminal reasons at early attempts and `http_429` are accepted although the preserved producer cannot emit them. |
-| 13 | Master-HL §7.2 / ONB §7 citations and TD-19 | ✅ | 15/15 citations resolve or are expected-absent and match meaning/application; TD-19 remains accurate and Open. |
+| 1 | All 24 RF-claimed paths plus two public seal-support artifacts | ✅ 100% audited | [Verification log](review/verify.md#verification-log) |
+| 2 | Complete prior D1–D6 closure set | ✅ remains closed | Literal authority, recursive closure, neutral state, complete runtime records, public sealed binding, and exact-SHA build reproduce. |
+| 3 | Original F1 unrelated valid stage exploit | ✅ closed | A real schema/generator-valid unrelated delta is rejected before preview/marker/write. |
+| 4 | Last zero-ADD semantic reserialization exploit | ✅ closed | Real preflight passes, exact-action validation rejects the changed catalog bytes, and root bytes remain unchanged. |
+| 5 | Real zero/one/many ADD stage and apply contract | ✅ closed | Mechanical digest/key-count rebinding, exact JSON/LF, real schema/generator preflight, exact IDs, catalog-last failure, and recovery reproduce. |
+| 6 | Prior F2 classifier/facts and retry-attempt tuple exploits | ✅ closed | Target-unbound/arbitrary verified facts, early retry-terminal errors, nonterminal HTTP errors, and every `http_429` tuple are rejected. |
+| 7 | Full regression/schema/generator/index/compile/predecessor matrices | ✅ | 44 tests and every approved offline deterministic gate pass. |
+| 8 | Data-derived locale invariant and truthful baseline | ✅ | Structural formula grows with real rows, digest binding stays independent, baseline is `139/131/131`, 0 errors. |
+| 9 | Classifier/command/runtime hashes, scope, production hashes, public seal | ✅ | Exact authority bodies and pairs; 13 paths, 8 new/5 modified, 2,369 lines; controlled bytes and public bindings unchanged; holdout identities unopened. |
+| 10 | Exact-SHA official-image site build | ✅ | Fresh network-disabled build at `731b3d6a…` exits 0; output and retained summary hashes match. |
+| 11 | Failed HTTP 2xx producer tuples | ❌ F2a | `ok=false, reason=http_200/http_204/http_299, status_code=2xx, attempts=1` all validate although the producer's 2xx path is fetched success. |
+| 12 | Master-HL §7.2 / ONB §7 citations and TD-19 | ✅ | 15/15 citations resolve or are expected-absent and match meaning/application; TD-19 remains accurate and Open. |
 
 Raw verification log: [review/verify.md](review/verify.md).
 
@@ -41,54 +42,48 @@ Raw verification log: [review/verify.md](review/verify.md).
 
 | # | Check | Status | Evidence |
 |---|-------|--------|----------|
-| 1 | DoD met? (all TS acceptance criteria) | ❌ | AC-2 fails on F2; AC-3/AC-4 fail on F1a/F1b. |
-| 2 | Purpose Check — is this what we set out to do? + design soundness | ❌ | Purpose aligns with the accuracy North Star; design is unsound because zero-add can write, exact add cannot pass required schema, and impossible transport provenance validates. |
-| 3 | Tech debt documented | ✅ | Historical harness issue is already Low/Open TD-19; current findings are not deferred debt. |
-| 4 | Style & standards | ❌ | Scope/naming/parity hold, but exact authority, producer closure, and no-manual-repair standards fail. |
+| 1 | DoD met? (all TS acceptance criteria) | ❌ | AC-2 fails on F2a; AC-1 and AC-3–AC-8 pass. |
+| 2 | Purpose Check — is this what we set out to do? + design soundness | ❌ | Purpose aligns with the accuracy North Star; design is unsound because producer-impossible failed-2xx provenance validates. |
+| 3 | Tech debt documented | ✅ | Historical harness issue is already Low/Open TD-19; F2a is not deferred debt. |
+| 4 | Style & standards | ❌ | Scope, parity, action exactness, and schema structure hold; exact evidence closure does not. |
 | 5 | Observations collected | ✅ | RF observation reproduces and remains correctly triaged as TD-19. |
 | 6 | RF completeness (§7–9 present) | ✅ | Fact Candidates, Strategic Insights, and diagram sections are present and appropriate. |
 | 7 | Evidence completeness — does it exist? | ✅ | All eight EV items and all named repository artifacts exist. |
-| 8 | Evidence sufficiency — does it establish the claim? | ❌ | Green tests/build/hashes are genuine but omit F1a/F1b/F2; E2/E3/E4/E8 are overclaimed. |
-| 9 | Backward compatibility | ❌ | Existing classifiers/commands/projections remain exact, but the new ADD producer is incompatible with its required existing schema validator. |
-| 10 | Safety | ❌ | No review mutation escaped temporary copies, but a zero-ID approval can still rewrite catalog source bytes. |
+| 8 | Evidence sufficiency — does it establish the claim? | ❌ | Green tests/build/hashes omit F2a; E2 and aggregate E8 are overclaimed. |
+| 9 | Backward compatibility | ✅ | Classifiers, predecessor behavior, commands, schema baseline, generator, and production projections remain exact. |
+| 10 | Safety | ❌ | Review caused no external mutation, but fabricated failed-2xx provenance can enter the future owner-evidence boundary. |
 
 ## 4. Verdict
 
 **🔄 REVISE**
 
-The revision closes the exact counterexamples returned in the previous review, and the surrounding
-evidence is strong: D1–D6 remain closed; all 42 tests, predecessor matrices, command parity/runtime
-records, classifier preservation, sealed allocation, exact scope, exact-SHA offline site build,
-and controlled production hashes independently reproduce.
+The revision closes all previously returned counterexamples. D1–D6 remain closed; semantic-only
+zero ADD is rejected with bytes unchanged; real zero/one/many ADD mechanically rebinds locale
+review, preserves exact JSON/LF, passes the real schema/generator gate, and recovers safely; the
+earlier classifier/facts and retry-attempt tuple exploits are rejected. All 44 tests, predecessor
+matrices, parity, compile, schema, generator, index, exact scope, classifier/runtime/production
+hashes, public seal, and fresh exact-SHA offline site build independently reproduce.
 
-Phase A is nevertheless not ready for holdout evaluation or Phase B. The zero-add boundary is not
-byte-exact, the one-add path cannot pass the real schema it is required to run, and failed transport
-records are not fully constrained to tuples the producer can emit. These are implementation/test
-findings within the frozen TS; no HL/TS amendment is required. Non-blocking nits: none.
+Phase A is nevertheless not ready for holdout evaluation or Phase B. The serialized observation
+validator still accepts failed HTTP records with 2xx statuses, while the preserved producer's 2xx
+family is successful `fetched`. This is one bounded implementation/test finding inside the frozen
+TS; no HL/TS amendment is required. Non-blocking nits: none.
 
-### Items to fix
+### Item to fix
 
-1. **F1a — make zero-add a byte-exact no-op.** Require all five staged controlled bytes, including
-   `data/communities.json`, to equal the baseline when no ADD action exists; prove preview/apply
-   reject a semantically identical reserialization before marker/write.
-2. **F1b — make exact ADD pass the real existing schema/generator contract.** Integrate the
-   deterministic locale-review binding changes required by a new localized row into the exact
-   derived stage without permitting unrelated editorial changes. Replace the synthetic exact-add
-   preflight callback with real `validate_staged_project`, and test 0/1/N ADD plus catalog-last
-   failure/recovery through the real gate.
-3. **F2 — close transport tuples against `fetch_preview_with_retry`.** Bind each failure reason and
-   status to its possible attempt count: retry-terminal errors only at the terminal attempt,
-   `max_retries_exceeded` only after all attempts, and no `http_429` result. Keep the direct tests
-   that every exact real producer family passes.
+1. **F2a — exclude 2xx from failed HTTP tuples.** Make the non-429 terminal HTTP branch accept
+   only statuses outside 200–299 at attempt 1, while retaining fetched 2xx at attempts 1–3,
+   URL/general and `max_retries_exceeded` only at attempt 3, and no `http_429`. Add direct
+   `http_200`, `http_204`, and `http_299` rejection tests plus the complete valid producer matrix.
 
 ## 5. Tech Debt Collected
 
 | # | Source | Severity | File | Description | Action |
 |---|--------|----------|------|-------------|--------|
-| 1 | RF Phase A §6 | Low | `tasks/TFW-4__showcase_reorg/phase-c/evidence/offline_harness.py:279` | Historical full harness hardcodes the former oldest-live date and fails before reusable matrices can complete. | Already tracked as TD-19 (Open); owning task updates the snapshot assertion. |
+| 1 | RF Phase A §6 | Low | `tasks/TFW-4__showcase_reorg/phase-c/evidence/offline_harness.py:279` | Historical full harness hardcodes the former oldest-live date and fails before reusable matrices can complete. | Already tracked as TD-19 (Open); owning task updates the assertion. |
 
-F1a/F1b/F2 are current acceptance findings, not deferred debt. `TECH_DEBT.md` already contains
-TD-19, so this review adds no duplicate.
+F2a is a current acceptance finding, not deferred debt. `TECH_DEBT.md` already contains TD-19, so
+this review adds no duplicate.
 
 ## 6. Traces Updated
 
@@ -101,10 +96,9 @@ TD-19, so this review adds no duplicate.
 
 ## 7. Fact Candidates
 
-No fact candidates. The human messages supplied review/sealed-audit authority and evaluation
-boundaries, not new human-only domain facts; F1a/F1b/F2 are independently discoverable repository
-facts.
+No fact candidates. The human instruction supplied review authority and sealed-boundary limits,
+not new human-only domain facts; F2a is independently discoverable from repository code.
 
 ---
 
-*REVIEW — 20260828-201343__catalog_intake_commands / Phase A: Intake engine and cross-tool commands | 2026-08-28*
+*REVIEW — 20260828-201343__catalog_intake_commands / Phase A: Intake engine and cross-tool commands | 2026-08-29*

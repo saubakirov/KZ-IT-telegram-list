@@ -7,49 +7,49 @@
 
 | # | Check | Status | Evidence |
 |---|-------|--------|----------|
-| 1 | DoD met? | ❌ | Verify establishes AC-1/5/6/7 and most regression/build/scope portions of AC-8. F2 violates AC-2's producer-possible tuple requirement; F1a violates AC-3/AC-4 exact action/no-op binding; F1b makes the required real schema preflight reject an exact ADD. |
-| 2 | Two clauses, both answered. **(a) Purpose Check** — is this what we set out to do? **(b) Design soundness** | ❌ | **(a) ✅ Aligned:** the Project North Star says, “A catalog whose value is accuracy,” and the master HL exact-owner boundary protects against the concrete harm of a false or unauthorized catalog row; the work directly serves that clause. **(b) ❌ Unsound:** zero-add approval can rewrite source bytes, exact ADD cannot interoperate with required schema validation, and impossible transport provenance passes, contrary to master-HL P1/P3/P5 and TS P1/P3. |
-| 3 | Tech debt documented | ✅ | RF §6's stale historical-harness assertion is genuine and already recorded as Low/Open TD-19. F1a/F1b/F2 are in-scope acceptance findings, not deferred debt. |
-| 4 | Style & standards | ❌ | Naming, standard-library use, scope, command parity, and path neutrality hold. Exact authority/no-manual-repair standards do not: zero-add is not byte-exact, exact add needs a synthetic preflight substitution, and transport records are not producer-closed. |
-| 5 | Observations collected | ✅ | RF §6's single observation reproduces: the historical full harness has a stale fixed date while its reusable matrices pass. It survives the quality filter and remains TD-19. |
-| 6 | RF completeness (§7–9) | ✅ | RF §7 correctly reports no human-only Fact Candidates; §8 records relevant execution insights; §9 contains a useful intake/apply state-flow diagram. |
-| 7 | Evidence completeness — does the evidence **exist**? | ✅ | All eight EV rows resolve to tests/source or retained repository artifacts; runtime, calibration, partition, build, production-hash, and scope artifacts exist. |
-| 8 | Evidence sufficiency — does the evidence **establish the claim**? | ❌ | The 42 tests, exact build, parity, partition, and hash gates are real but do not prove E2/E3/E4: exact counterexamples F1a/F1b/F2 survive, and the exact-add test explicitly replaces real preflight. |
-| 9 | Backward compatibility | ❌ | Existing classifier bodies, command behavior, and production projections remain exact. However, the new exact ADD stage is rejected by the existing `validate_schema.py` locale-review contract, so the new producer does not interoperate with its required existing downstream validator. |
-| 10 | Safety | ❌ | No secret, credential, live holdout, production write, pull, deployment, release, tag, push, or external mutation occurred during review. The future mutation boundary remains unsafe because zero approved IDs can still rewrite source bytes; fabricated impossible transport provenance is also accepted as a valid unresolved record. |
+| 1 | DoD met? | ❌ | Verify establishes AC-1 and AC-3–AC-8, including every previous review closure. AC-2 still fails because F2a accepts failed HTTP 2xx records that the producer cannot emit. |
+| 2 | Two clauses, both answered. **(a) Purpose Check** — is this what we set out to do? **(b) Design soundness** | ❌ | **(a) ✅ Aligned:** the Project North Star says, “A catalog whose value is accuracy,” and a producer-closed evidence record protects that concrete value. **(b) ❌ Unsound:** `validate_observation` accepts forged failed-2xx provenance contrary to master-HL P1/P3 and TS AC-2/P3. |
+| 3 | Tech debt documented | ✅ | RF §6's stale historical-harness assertion reproduces and is already Low/Open TD-19. F2a is an in-scope acceptance finding, not deferred debt. |
+| 4 | Style & standards | ❌ | Scope, naming, standard-library use, command parity, byte-exact action derivation, and structural locale validation hold. The closed evidence/provenance standard does not hold because failed 2xx tuples validate. |
+| 5 | Observations collected | ✅ | RF §6's single observation is truthful: the full historical harness has a stale date assertion while its reusable matrices pass. TD-19 remains accurate. |
+| 6 | RF completeness (§7–9) | ✅ | RF §7 correctly reports no human-only Fact Candidates; §8 records relevant execution insights; §9 contains a useful intake/apply flow diagram. |
+| 7 | Evidence completeness — does the evidence **exist**? | ✅ | All eight EV rows resolve to code/tests or retained calibration, partition, runtime, build, production-hash, and scope artifacts. |
+| 8 | Evidence sufficiency — does the evidence **establish the claim**? | ❌ | Forty-four tests and all deterministic gates are genuine, but the suite omits failed `http_2xx`; direct counterexamples falsify E2 and aggregate E8. |
+| 9 | Backward compatibility | ✅ | Six classifier authority bodies, predecessor link/command behavior, command/runtime bytes, production data/projections, schema baseline, and generator output remain exact. F2a is a new-input validation defect rather than a regression of the predecessor behavior. |
+| 10 | Safety | ❌ | No holdout reveal, production write, networked build, external mutation, release, tag, push, or deployment occurred. The future evidence boundary remains unsafe because a fabricated failed 2xx transport can be accepted as producer-authentic. |
 
 Rows 7 and 8 differ deliberately: every named evidence artifact exists, while the positive suite
-does not cover and cannot outweigh three independently executable counterexamples.
+does not exercise and cannot outweigh the directly reproduced failed-2xx counterexamples.
 
 ## Purpose Check — row 2 clause (a)
 
 Reference set used: master HL contract baseline at refreeze commit
 `1e8cecc7bb996cdc98a8e1c0602316100dbf4cc9` and the Project North Star in `README.md` § Purpose.
-The frozen master-HL sections remain unchanged from that baseline.
+The frozen master-HL claims remain unchanged from that baseline.
 
-- **Excess and adjacency:** No. Implementation/evidence stay within Phase A intake, command parity,
-  calibration, fixture apply, and verification boundaries.
-- **Deferral confession:** No. Production candidate application remains outside Phase A and did
-  not occur.
-- **Materiality:** Yes. A false or unauthorized catalog row or non-exact source rewrite directly
-  harms the catalog's stated accuracy value.
+- **Excess and adjacency:** No. Implementation and evidence stay within Phase A parsing,
+  observation, owner approval, isolated fixture apply, command parity, calibration, and verification.
+- **Deferral confession:** No. Production candidate application and the sealed holdout remain
+  outside Phase A and were not touched.
+- **Materiality:** Yes. Treating a producer-impossible transport record as valid provenance can
+  admit fabricated evidence into the owner decision boundary, directly harming catalog accuracy.
 
-Outcome: **Aligned**. Checklist row 2 fails only its separate design-soundness clause; there is no
-purpose failure or contract defect.
+Outcome: **Aligned**. Checklist row 2 fails only its independent design-soundness clause; this is
+an implementation/test defect within the frozen contract, not a purpose or contract defect.
 
 ## Contradictions with KNOWLEDGE.md
 
 | # | Knowledge item | RF claim | Contradiction? |
 |---|----------------|----------|----------------|
-| 1 | D1 — JSON source of truth / generated projections | Production catalog/projections remain unchanged; future intake writes source only. | No trace contradiction; hashes hold. F1a is an implementation violation because zero action can still rewrite source bytes. |
+| 1 | D1 — JSON source of truth / generated projections | Zero/one/many ADD action stages are byte-exact and generator-derived. | No — direct exploit reproduction confirms the action/stage contract and controlled production hashes remain exact. |
 | 2 | D2 — offline deterministic work separated from live checks | Offline suites and eight bounded calibration probes are recorded separately. | No. |
 | 3 | D4 — categories live in data | Intake consults the current category map. | No. |
 | 4 | D14 — `kz-*` project operations | All three commands use the project namespace. | No. |
-| 5 | D18 — target-bound evidence and exact-universe reconciliation | RF claims producer-closed serialized observations. | No knowledge-file contradiction, but F2 is an implementation violation of the cited evidence rule. |
-| 6 | D19 — explicit EN/RU/KK without fallback | Exact ADD includes explicit locale fields and claims real schema validation. | No knowledge-file contradiction, but F1b exposes failed integration with the existing locale-review binding. |
+| 5 | D18 — target-bound exact-universe evidence | RF claims serialized observations accept only exact producer families. | No knowledge-file contradiction, but F2a is an implementation violation of the cited evidence rule. |
+| 6 | D19 — explicit EN/RU/KK without fallback | ADD stages mechanically rebind locale review under the real schema. | No — direct 0/1/2 probes and baseline output reproduce. |
 
-No RF Fact Candidate requires challenge. The RF correctly reports none, and F1a/F1b/F2 are
-repository-discoverable implementation facts rather than human-only knowledge.
+No RF Fact Candidate requires challenge. The RF correctly reports none, and F2a is an
+independently discoverable repository fact rather than human-only knowledge.
 
 ## Checkpoint
 

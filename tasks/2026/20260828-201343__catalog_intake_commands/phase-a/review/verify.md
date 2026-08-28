@@ -2,274 +2,256 @@
 > **Mindset:** Auditor. The RF is a declaration, not a fact. Open files. Run commands. Compare claims against reality.
 > **Test:** "If I removed the RF, would the evidence alone prove the work was done?"
 > Min verify ratio: 0.42
-> RF files claimed: 23 (12 implementation paths and 11 RF-created evidence paths)
-> Files to verify: ⌈23 × 0.42⌉ = 10; discrepancies were found, so all 23 claimed paths and two supporting public seal artifacts were audited.
+> RF files claimed: 24 (13 implementation paths and 11 RF-created evidence paths)
+> Files to verify: ⌈24 × 0.42⌉ = 11; all 24 claimed paths and the two supporting public commitment/input artifacts were audited.
 
 ## Verification Log
 
-### V1: `scripts/kz_intake.py`
+### V1: `scripts/kz_intake.py` — direct authority and exploit audit
 
-- **RF claim:** The revision derives staged bytes from exactly the fixed ADD rows, enforces an exact
-  zero-add no-op, rederives before every write/recovery, writes the catalog last, and accepts only
-  producer-possible observation tuples.
-- **Actual:** The original F1/F2 counterexamples are closed: an unrelated schema-valid edit in a
-  reject-only stage is rejected; target-unbound/arbitrary-reason verified classifier tuples and
-  failed transports carrying facts are rejected. Extra/add/edit/delete/reorder/wrong-type/
-  changed-proposal/stale-projection and owner-subset cases also stop. Catalog-last failure injection
-  left all four projections at A while the catalog remained at B, retained a matching marker, and
-  recovered to exact A. All nine actual classifier-output families and valid transport families
-  pass the revised validator.
+- **RF claim:** All prior D1–D6 and F1/F2 findings close. In particular, zero-ADD is byte-exact,
+  exact 1/N ADD mechanically rebinds locale review and passes the real project preflight, and
+  serialized observations accept only tuples the preserved fetch producer can emit.
+- **Actual:** The action/stage findings close under direct temporary-project exploits, not merely
+  the green suite:
+  - semantic-only zero-ADD JSON reserialization passed the real schema/generator preflight but was
+    rejected as `staged bytes are not the exact action result: data/communities.json`; all root
+    controlled bytes remained unchanged and no pending marker appeared;
+  - an unrelated schema/generator-valid reject-only catalog/projection edit was likewise rejected;
+  - real zero ADD returned `already_applied_exact` with zero IDs and byte-identical controlled
+    paths;
+  - real one and two ADD stages equalled baseline plus exactly the proposed row(s) and the two
+    mechanical `localization_review` bindings, used exact UTF-8 `indent=2` JSON with one LF and no
+    CR, matched independently recomputed payload digests/key counts, passed the real
+    `validate_schema.validate_data` and schema/generator preflight, and applied exactly the approved
+    IDs;
+  - the one-ADD counts were `en:140,ru:132,kk:132` with `changed_key_count=404`; the two-ADD counts
+    were `en:141,ru:133,kk:133` with `changed_key_count=407`;
+  - injected two-ADD failure before the catalog replacement left the catalog at B and exact
+    projections/marker recoverable; retry returned `recovered_exact` with both IDs;
+  - an isolated neutral-path state harness reproduced first apply `[B,N,B,B,B] -> applied_exact`
+    and exact rerun `[A,N,A,A,A] -> already_applied_exact`.
 
-  Three material gaps remain:
+  Recursive schema checks reject Boolean integers, blank evidence, verified rows over failed
+  transport, target-unbound or arbitrary-reason verified classifier tuples, and success records
+  missing status/body. Exact fetched 2xx attempts 1–3, non-429 HTTP terminal attempt 1,
+  URL/general terminal attempt 3, and `max_retries_exceeded` attempt 3 pass. Non-429 HTTP attempts
+  2/3, retry-terminal attempts 1/2, and every `http_429` result fail.
 
-  **F1a — zero-add is semantic, not byte-exact.** `validate_action_stage` compares the parsed
-  catalog semantically but checks exact baseline bytes only for the four projections. In an
-  isolated exact-SHA project, the stage used the identical catalog object serialized with different
-  valid JSON bytes and left every projection unchanged. Real schema and generator checks passed;
-  a reject-only preview with an empty approval set was accepted, and apply returned
-  `applied_exact`, zero applied IDs, while rewriting only `data/communities.json`.
+  One material producer-closure gap remains:
 
-  ```text
-  BUILD_ACCEPTED=True
-  REAL_STAGE_SCHEMA_CURRENCY=PASS
-  APPROVED/APPLIED_IDS=[]
-  OUTCOME=applied_exact
-  CHANGED_PATHS=[data/communities.json]
-  ```
-
-  This falsifies the RF's “exact zero-add no-op” claim and the TS AC-3/AC-4 exact
-  action-to-expected-state boundary; owner action, expected state, and applied bytes diverge under
-  TS Definition of Failure §7.
-
-  **F1b — the exact ADD path cannot pass the real project preflight.** Baseline plus exactly the
-  proposed synthetic row and all four generator-derived projections passes
-  `validate_action_stage`. The real `validate_staged_project` then rejects the stage because a new
-  localized row increases the fixed reviewed locale-key counts. Updating other top-level review
-  binding data cannot fit the current action-stage rule, which requires the stage object to equal
-  baseline plus only the proposed row. The green exact-add unit test replaces real preflight with
-  `lambda _stage: ["synthetic"]`, so it does not establish RF E3/E4's real-schema claim.
+  **F2a — failed HTTP records still accept 2xx statuses.** The failed-status branch requires only
+  `attempts == 1`, `status != 429`, and `reason == "http_<status>"`; it does not exclude 200–299.
+  Direct observations created from failed fetch results at status 200, 204, and 299 were all
+  accepted:
 
   ```text
-  ACTION_STAGE_BINDING=PASS
-  REAL_PREFLIGHT=REJECT
-  VALIDATE_SCHEMA_ERRORS=3
-  ERROR_FAMILY=fixed reviewed locale-key counts changed by the new row
+  200 ACCEPTED
+  204 ACCEPTED
+  299 ACCEPTED
   ```
 
-  This makes the isolated add boundary unusable with the real schema required by TS AC-4.
+  The preserved producer returns its normal response path as `ok=True, reason="fetched"`; its
+  `HTTPError` branch is the failed HTTP family. Therefore failed `http_2xx` records are not
+  producer-possible and contradict TS AC-2 and RF/EV E2's exact tuple claim. Outside-2xx terminal
+  HTTP records at attempt 1 continue to validate, so this finding is bounded to the missing 2xx
+  exclusion.
+- **Match:** ❌ — D1–D6 and the previous F1/F2 examples close, but F2a leaves AC-2's exact
+  producer-tuple boundary open.
 
-  **F2 — transport attempt/reason closure is incomplete.** Failed transport validation checks a
-  reason/status shape and an attempts range, but not the producer's retry semantics. It accepts
-  `max_retries_exceeded` at attempt 1, `url_error:*` at attempt 1, `error:*` at attempt 2, and
-  `http_429` at attempts 1 or 3. The preserved producer emits terminal URL/general errors only at
-  attempt 3, emits `max_retries_exceeded` only at attempt 3 after 429 retries, and never emits
-  `http_429`. Each impossible tuple passed a complete unresolved preview with no downstream facts.
-  Exact actual classifier families, non-429 HTTP failure, terminal retry failures, and verified
-  success all passed, so this finding is limited to the remaining impossible producer tuples.
-- **Match:** ❌ — original F1/F2 examples close, but F1a/F1b still fail AC-3/AC-4 and F2 still
-  fails AC-2's “unexpected tuples are unresolved” requirement.
+### V2: `scripts/validate_schema.py`
 
-### V2: `scripts/validate_links.py`
+- **RF claim:** Locale-cardinality validation is independently data-derived, remains bound to the
+  canonical review digest, and reports the truthful current baseline.
+- **Actual:** `expected_locale_payload_counts` derives cardinalities from the three common fields,
+  current categories, current live entries, twice the current archive size, the registered UI
+  keys, locale-specific non-goal lengths, and EN-only README UI keys. It does not contain the old
+  `139/131/131` acceptance constant. Direct 0/1/2-row projections increase the expected counts by
+  exactly 0/1/2 per locale; canonical digest and changed-key checks remain independently computed
+  from the payload. The real baseline reports
+  `keys=en:139,ru:131,kk:131; sha256=51db402d…` and zero errors.
+- **Match:** ✅ — genuine structural invariant, truthful output, and unchanged digest binding.
 
-- **RF claim:** Adds only the immutable fetch seam while preserving the six classifier authority
+### V3: `scripts/validate_links.py`
+
+- **RF claim:** Adds only the immutable fetch/retry seam while preserving the classifier authority
   bodies and predecessor behavior.
-- **Actual:** Independent AST source-span comparison at base
-  `be830d3766ca4de12ff18198a680253ed133894f` and implementation
-  `20c19505d5e156c3f0fe563877a03f387322aca2` is exact for
-  `TelegramPreviewParser`, `parse_member_count`, `handle_from_url`, `observed_preview_type`,
-  `result`, and `classify_response`. Direct predecessor link/command matrices pass retry,
-  identity-decoy/conflict, summary/update/archive, and command behavior. F2 is in the new consumer,
-  not a classifier regression.
+- **Actual:** Direct source-segment comparison between approved base
+  `be830d3766ca4de12ff18198a680253ed133894f` and final implementation
+  `731b3d6a3350bb3fe41115a4ae9213aaa86bbc6f` is exact for `TelegramPreviewParser`,
+  `parse_member_count`, `handle_from_url`, `observed_preview_type`, `result`, and
+  `classify_response`. The predecessor link matrix passes retry, identity decoy/conflict,
+  summary/update/archive, type mismatch, and failure behavior. F2a is in the new serialized-record
+  consumer, not a classifier regression.
 - **Match:** ✅
 
-### V3: six runtime command copies
+### V4: command inventory and runtime records
 
-| Pair | Bytes each | SHA-256 | Actual |
-|---|---:|---|---|
-| `kz-add` | 5,331 | `783fb0f0acc63b484d431d2a4fff9cd2fb65fd75d711ae94dad00d059c9a2414` | Byte-identical, standalone intake/approval/apply contract, root-neutral paths. Its failure rules prohibit the F1a/F1b behavior. |
-| `kz-stats` | 3,761 | `063e7d6043f205bb214d9019c4ad95c02a1e517aa4ac30aa28e53e3d915fcbbe` | Byte-identical complete owner-triage command; repair/archive authority preserved. |
-| `kz-release` | 3,532 | `2d40318e9f4f6e12c4a2d6ed54e9d4119ac007769c0fbe63014d36260ceda8fc` | Byte-identical complete local-release command; exact pre-tag/pre-push owner stop preserved. |
+| Pair / file | Bytes | SHA-256 / result |
+|---|---:|---|
+| `kz-add` pair | 5,331 each | `783fb0f0acc63b484d431d2a4fff9cd2fb65fd75d711ae94dad00d059c9a2414`; byte-identical and complete. |
+| `kz-stats` pair | 3,761 each | `063e7d6043f205bb214d9019c4ad95c02a1e517aa4ac30aa28e53e3d915fcbbe`; byte-identical, triage authority preserved. |
+| `kz-release` pair | 3,532 each | `2d40318e9f4f6e12c4a2d6ed54e9d4119ac007769c0fbe63014d36260ceda8fc`; byte-identical, pre-tag/pre-push stop preserved. |
+| `AGENTS.md` | 8,768 | `cc99f032badca185f3a6fb9ad2375c21941947e181112c249c4e6b058b52d612`; exact three-command inventory and execution warning. |
+| Claude smoke | 13,602 | `55871364d401e6afd55138b0f015dbdd7cca47100d8c4700c0fae64d58ee8f89`; three accepted, exit 0, no tools/network/writes/mutation. |
+| Codex smoke | 4,896 | `9e67f40e970c098a602e5d44318f9eac1048946d88be23850d46142cbb8e85bc`; complete report with explicit loaded paths/hashes. |
 
-- **Match:** ✅ for inventory, parity, completeness, path neutrality, and authority boundaries.
+All seven routing/runtime bytes match smoke SHA `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a`, final
+implementation, integrated RF base, and the current tree. Static parity, standalone completeness,
+path neutrality, sync direction, and the predecessor command matrix pass. Claude's recorded limit
+(behavior plus static local binding, no echoed absolute loaded path) remains stated accurately.
 
-### V4: `scripts/sync_kz_commands.py`, `scripts/test_kz_intake.py`, and `scripts/test_kz_commands.py`
-
-- **RF claim:** Enforce exact command inventory/parity and every revised intake authority branch.
-- **Actual:** Command inventory, metadata, standalone markers, path-neutrality checks, drift/missing/
-  extra/thin detection, and Claude-to-Codex sync all pass. All 42 tests pass. Coverage is
-  insufficient for the three findings:
-  1. the zero-add test uses byte-identical baseline catalog bytes and does not vary harmless JSON
-     serialization;
-  2. the exact-add test supplies a synthetic preflight callback instead of the real schema/
-     generator preflight;
-  3. the impossible-tuple test checks reason/status/fact mismatches but not reason-attempt tuples
-     forbidden by `fetch_preview_with_retry`.
-- **Match:** ⚠️ partial — the suite is green but does not establish the full RF claim.
-
-### V5: `AGENTS.md`
-
-- **RF claim:** Registers all three project commands and distinguishes availability from execution.
-- **Actual:** Exact inventory, execution boundaries, and the availability-versus-live-execution
-  warning are present. The file remains 8,768 bytes /
-  `cc99f032badca185f3a6fb9ad2375c21941947e181112c249c4e6b058b52d612`.
 - **Match:** ✅
+
+### V5: tests and enforcement coverage
+
+- **RF claim:** Forty-four tests include all formal-review exploits and exact producer tuple
+  families.
+- **Actual:** All 44 tests pass, including semantic zero-ADD rejection, real 0/1/N preflight,
+  mechanical locale rebinding, recovery, previous impossible retry tuples, exact classifier
+  families, command parity, and generation/schema regressions. The suite does not include failed
+  `http_2xx` tuples, so its green result does not establish the complete producer-possible claim.
+- **Match:** ⚠️ partial — regression coverage is substantial, but F2a is an uncovered mandatory
+  rejection family.
 
 ### V6: all eleven RF-created evidence paths
 
 | Path / group | Actual |
 |---|---|
-| `calibration-observations.json` | 17,093 bytes / `507938e38a5b655a9373d46bd41edb37be9f0cbd9508522878a504e0ba84c061`; eight disclosed observations and their source ledger all pass the current validator without a network rerun. |
-| Four `production-hashes-*.json` checkpoints | All resolve and match independent Git-blob and working-tree hashes for the five controlled paths. |
+| `calibration-observations.json` | 17,093 bytes / `507938e38a5b655a9373d46bd41edb37be9f0cbd9508522878a504e0ba84c061`; all eight disclosed observations pass the current validator without network rerun. |
+| Four `production-hashes-*.json` files | All resolve and match Git blobs/current bytes for the five controlled production paths. |
 | `site-metadata-summary.json` | 11,097 bytes / `bbf30af0cdf5fbc26d547a80e97d9199035841e47b370cd2b0dc238a527f0552`; independently regenerated byte-for-byte. |
-| `claude-runtime-smoke.jsonl` | 13,602 bytes / `55871364d401e6afd55138b0f015dbdd7cca47100d8c4700c0fae64d58ee8f89`; complete accepted behavior records and excluded harness deviations. It proves project-setting use plus behavior/static path/hash binding, not an absolute loaded-path echo. |
-| `codex-runtime-smoke.md` | 4,896 bytes / `9e67f40e970c098a602e5d44318f9eac1048946d88be23850d46142cbb8e85bc`; complete fresh non-forked report with explicit absolute loaded paths/hashes and unchanged controlled state. |
-| `partition-audit.json` | 1,780 bytes / `6febc8793a7b763d5212cfaff4e96d7c12b9f9525427fb88e0ffdb65c3c2fbff`; authorized sealed reproduction passes in V8. |
-| `jekyll-build-revision.txt` | Complete digest-pinned exact-SHA build record; independently reproduced offline in V9. |
-| `EV__phase-a__intake_engine.md` | E1–E8 use valid statuses and all artifacts exist, but E2/E3/E4 overstate producer closure, real-schema exact-add behavior, and exact zero-add no-op. E8 therefore overstates aggregate acceptance. |
+| `claude-runtime-smoke.jsonl` / `codex-runtime-smoke.md` | Complete accepted records with the exact limitations and path/hash bindings summarized in V4. |
+| `partition-audit.json` | 1,780 bytes / `6febc8793a7b763d5212cfaff4e96d7c12b9f9525427fb88e0ffdb65c3c2fbff`; public allocation receipt remains bound. |
+| `jekyll-build-revision.txt` | Complete digest-pinned final-implementation build record; independently reproduced in V9. |
+| `EV__phase-a__intake_engine.md` | All rows and references exist, but E2 and aggregate E8 overstate transport producer closure because F2a survives. |
 
-- **Match:** ⚠️ partial — artifacts and bindings exist, but the EV's all-verified conclusion does
-  not survive F1a/F1b/F2.
+- **Match:** ⚠️ partial — artifacts and bindings exist; the all-verified conclusion does not
+  survive F2a.
 
 ### V7: exact scope and commit binding
 
-- **RF claim:** Exactly 12 implementation paths, 8 new/4 modified, and 2,230 insertion-plus-
-  deletion lines; only intake code/tests changed after command smokes.
-- **Actual:** The explicit 12-path implementation allowlist at base
-  `be830d3766ca4de12ff18198a680253ed133894f` reproduces 8 new, 4 modified, and exactly 2,230
-  changed lines. Diffing accepted smoke SHA `f8fd50224e4f3a4e0b518a4db4813b034d2dff1a` to revised
-  implementation changes only `scripts/kz_intake.py` and `scripts/test_kz_intake.py`. RF base
-  `2864b216e1f0c85a6d6f11cf7762f60a4d2d8249` adds only evidence/traces after implementation.
+- **RF claim:** Exactly 13 implementation paths, 8 new/5 modified, 2,369 insertion-plus-deletion
+  lines; only three approved implementation files changed after Coordinator base `067528d…`.
+- **Actual:** The explicit implementation allowlist from
+  `be830d3766ca4de12ff18198a680253ed133894f` to
+  `731b3d6a3350bb3fe41115a4ae9213aaa86bbc6f` reproduces exactly 13 paths, 8 new, 5 modified, and
+  2,369 changed lines. Relative to
+  `067528dba201e93d3a8d4efcb525d9bdfcb753d0`, the only implementation paths changed are
+  `scripts/kz_intake.py`, `scripts/test_kz_intake.py`, and `scripts/validate_schema.py`; the other
+  differences are the expected task handoff/lifecycle traces. Integrated RF base is exactly
+  `45878d9459e263ed7821dcc84bc400ed0603fb3c` before Reviewer writes.
 - **Match:** ✅
 
-### V8: authorized sealed partition audit
+### V8: public sealed-boundary audit
 
-- **RF claim:** The public receipt binds exact source snapshots and full partition, proves 29
-  occurrences / 28 cases / one overlap / eight calibration / 20 holdout, assigns the eight lowest
-  content-derived scores to calibration, and exactly matches the disclosed calibration projection.
-- **Actual:** Read-only aggregate reproduction under the explicit post-freeze Reviewer authority
-  established:
-  - exact source bindings: 13,648 bytes /
-    `ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb` and 169 bytes /
-    `1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162`;
-  - exact full-manifest SHA-256
-    `5b9fb0dd028ac19d02b2c413bca45e8fa3e0e05e8de9b20087bfa883fe2cb732`;
-  - every occurrence key, case key, and split score reproduces from the declared domain-separated
-    content formulas; required keys and scores are unique;
-  - exact aggregate `29/28/1/8/20`, exact eight-lowest calibration allocation, and exact disclosed
-    calibration case/occurrence equality;
-  - public commitment, disclosed input, and sealed metadata bindings hold;
-  - public receipt semantics and SHA-256
-    `6febc8793a7b763d5212cfaff4e96d7c12b9f9525427fb88e0ffdb65c3c2fbff` reproduce;
-  - a scoped strong-token scan across all 12 implementation paths and Phase A evidence found zero
-    non-calibration disclosures.
+- **RF claim:** Public artifacts bind 29 occurrences / 28 cases / one overlap / eight calibration /
+  20 holdout without disclosing the sealed holdout.
+- **Actual:** Public hashes remain exact: input commitment `f7d4530d…`, calibration input
+  `cbdf4f48…`, calibration observations `507938e3…`, and partition receipt `6febc879…`.
+  The public receipt records the exact `29/28/1/8/20` totals and the eight disclosed observations
+  validate. Per the explicit review boundary, no sealed holdout identity, URL, case key, score,
+  raw text, or path was opened or inspected.
+- **Match:** ✅ within the permitted non-revealing public evidence boundary; the seal is preserved.
 
-  No holdout identity, URL, raw text, case key, score, or path was copied, listed, retained in a
-  repository artifact, sent to the Executor, or used to change rules.
-- **Match:** ✅ — D5 remains closed.
+### V9: exact-SHA site build and controlled production hashes
 
-### V9: exact-SHA official-image build and controlled production hashes
-
-- **RF claim:** Revised implementation SHA builds with the recorded digest-pinned official image,
-  and production bytes remain unchanged.
-- **Actual:** A fresh Git archive of `20c19505d5e156c3f0fe563877a03f387322aca2` built with the
-  already-local official image at digest
-  `sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041`, source read-only,
-  isolated writable output, and container network disabled. Build and metadata validation exited
-  0; the retained summary was byte-identical and all four built output hashes matched the log.
-  Temporary output was automatically removed. Git blobs at base, smoke, revised implementation,
-  RF base, and the current working tree are identical for all five controlled production paths.
-- **Match:** ✅ — D6 remains closed; no pull, deployment, production write, release, tag, push, or
+- **RF claim:** Final implementation SHA builds in the digest-pinned official image and controlled
+  production bytes remain unchanged.
+- **Actual:** A fresh Git archive of `731b3d6a3350bb3fe41115a4ae9213aaa86bbc6f` built with the
+  already-local image digest
+  `sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041`, read-only source,
+  isolated writable output, and container network disabled. Build and site-metadata validation
+  exited 0. Built hashes reproduced exactly: EN `64597def…`, RU `fef3499e…`, KK `2d4465e7…`,
+  sitemap `79dcb9bb…`; summary `bbf30af0…` was byte-identical. Git blobs at base, smoke, final
+  implementation, integrated RF base, and current tree are identical for the five controlled
+  production paths (`data/communities.json`, EN/RU/KK projections, `README.md`). Temporary build
+  output was removed automatically.
+- **Match:** ✅ — D6 remains closed; no pull, deploy, production write, release, tag, push, or
   external mutation occurred.
 
 ## Commands Executed
 
 | # | Command / audit | Result |
 |---|-----------------|--------|
-| 1 | `python -m unittest scripts.test_catalog_generation scripts.test_kz_intake scripts.test_kz_commands -v` | PASS — 42 tests. |
-| 2 | `python scripts/validate_schema.py` | PASS — 38 groups, 20 channels, 4 bots, 19 categories, 2 archive entries, 0 errors. |
+| 1 | `python -m unittest scripts.test_catalog_generation scripts.test_kz_intake scripts.test_kz_commands -v` | PASS — 44 tests. |
+| 2 | `python scripts/validate_schema.py` | PASS — 38 groups, 20 channels, 4 bots, 19 categories, 2 archive entries, locale counts `139/131/131`, 0 errors. |
 | 3 | `python scripts/generate_readme.py --check` | PASS — all four projections current. |
 | 4 | `python scripts/sync_kz_commands.py --check` | PASS — exact three-command inventory/parity. |
 | 5 | `python docs/scripts/gen_index.py --validate` | PASS — four tasks validate. |
-| 6 | `python -m py_compile` for five changed/new modules | PASS. |
+| 6 | `python -m py_compile` for all six changed/new Python runtime/test/schema modules | PASS. |
 | 7 | Direct Phase C `run_link_matrix` and `run_command_matrix` | PASS — retry, identity, summary/update/archive, stats/release behavior. |
-| 8 | Six classifier authority-body source hashes | PASS — exact to approved base. |
-| 9 | 12-path/8-new/4-modified/2,230-line allowlist audit | PASS. |
-| 10 | Command pair bytes/hashes and standalone-body inspection | PASS. |
-| 11 | Five controlled Git-blob hashes at four revisions plus working tree | PASS — byte-identical. |
-| 12 | Current-validator audit of retained calibration source/observations | PASS — 8/8 accepted, no network rerun. |
-| 13 | Authorized sealed partition recomputation and scoped leakage scan | PASS — exact bindings/allocation/receipt, zero leakage paths. |
-| 14 | Digest-pinned official-image build from exact revised Git archive with network disabled | PASS — build 0, validation 0, output/summary bindings exact. |
-| 15 | Original reject-only unrelated valid stage exploit | PASS closure — rejected before preview. |
-| 16 | Extra/edit/delete/reorder/wrong-type/changed-proposal/stale-projection matrix | PASS closure — all rejected. |
-| 17 | Catalog-last failure injection and marked recovery | PASS — catalog retained at B until final write; exact recovery. |
-| 18 | Re-formatted semantic zero-add stage with real preflight | FAIL contract — accepted and rewrote catalog bytes with zero applied IDs (F1a). |
-| 19 | One exact ADD stage with real preflight | FAIL contract — action-stage derivation passes, real schema rejects (F1b). |
-| 20 | Impossible failure reason/attempt transport tuples | FAIL contract — all tested impossible tuples accepted (F2). |
-| 21 | Exact actual classifier-output and valid transport families | PASS — every real family accepted. |
-| 22 | `git diff --check`, status, and staged-state audit | PASS before reviewer trace writes. |
+| 8 | Literal trailing-dot, recursive schema, classifier-family, and transport-family probes | PASS closures for D1/D2 and prior F2 tuples. |
+| 9 | Real semantic zero-ADD and unrelated-valid-delta exploits | PASS closure — both rejected before marker/write, root bytes unchanged. |
+| 10 | Real 0/1/2 ADD preflight, byte/digest/count checks, failure injection, and recovery | PASS closure — exact stage and outcomes. |
+| 11 | Neutral-path first-apply/rerun state harness | PASS closure — equal path stays neutral. |
+| 12 | Failed `http_200`, `http_204`, and `http_299` observations | **FAIL contract (F2a)** — all accepted. |
+| 13 | Classifier source equality, command/runtime hashes, controlled production hashes | PASS — exact at all required revisions/current tree. |
+| 14 | 13-path/8-new/5-modified/2,369-line allowlist audit and three-file revision audit | PASS. |
+| 15 | Public seal/hash/count audit without opening holdout identities | PASS — bindings/totals preserved. |
+| 16 | Digest-pinned official-image build from exact final Git archive, network disabled | PASS — build 0, metadata 0, retained output/summary hashes exact. |
+| 17 | `git diff --check` and initial worktree/staging audit | PASS before Reviewer trace writes. |
 
 ## Claim & Source Checks
 
-| # | Claim / citation checked | Where it appears | Traces to | Holds? |
-|---|--------------------------|------------------|-----------|--------|
-| C1 | “only exact producer-possible transport/body/identity/type/result tuples” | RF §3 / E2 | `validate_observation`, preserved retry producer, direct tuple matrix | ❌ — impossible reason/attempt tuples pass (F2). |
-| C2 | zero-add exact no-op and exact ADD with real schema/generator | RF §§2–4 / E3/E4 | `validate_action_stage`, `validate_staged_project`, isolated real project probes | ❌ — F1a rewrites zero-add catalog bytes; F1b cannot pass real schema. |
-| C3 | exact calibration/full-partition allocation | RF §4 / E6 | authorized sealed primary inputs, public commitment/input/receipt | ✅ — formulas, hashes, counts, allocation, and disclosed equality reproduce without disclosure. |
-| C4 | fresh runtime behavior and local binding | RF §4 / E7 | complete Claude/Codex artifacts plus static Git bytes | ✅ with stated limit — Claude has behavior/static binding but no loaded-path echo; Codex explicitly reports loaded paths/hashes. |
-| C5 | exact scope, build, and production immutability | RF §4 / E8 | Git objects/diffs, exact-SHA offline official-image build, current hashes | ✅ — 12 paths/2,230 lines, build outputs, and controlled hashes reproduce. |
+| # | Claim / citation checked | Traces to | Holds? |
+|---|--------------------------|-----------|--------|
+| C1 | only producer-possible transport tuples | `fetch_preview_with_retry`, `validate_observation`, direct tuple matrix | ❌ — failed `http_2xx` attempt-1 tuples validate (F2a). |
+| C2 | exact zero/one/many action-to-stage/apply behavior | stage builder, real schema/generator, temporary-project byte/digest/state probes | ✅ — prior F1/F1a/F1b closures reproduce. |
+| C3 | data-derived locale invariant and digest binding | `expected_locale_payload_counts`, canonical payload functions, baseline/1/2-row probes | ✅. |
+| C4 | preserved classifier and command/runtime behavior | source spans, hashes, parity tests, predecessor matrices, smoke artifacts | ✅ with the RF-stated Claude path-echo limitation. |
+| C5 | scope, build, and controlled immutability | Git objects/diffs, exact-SHA offline build, current hashes | ✅ — exact 13 paths/2,369 lines and unchanged production bytes. |
+| C6 | public sealed allocation boundary | commitment/input/observation/receipt artifacts only | ✅ within authority; holdout identities were not inspected. |
 
-All RF/EV, master-HL §7.2, and ONB §7 references resolve. Data and build claims were checked
-against primary sealed inputs, Git objects, or independently generated outputs rather than copied
-from the RF summary.
+All RF/EV, master-HL §7.2, and ONB §7 references resolve. Claims were checked against code,
+Git objects, independently derived temporary states, or independently generated outputs rather
+than accepted from the RF summary.
 
 ## Discrepancies Found
 
-1. **F1a — zero-add bytes are not an exact no-op.** A semantically identical reserialization of
-   the catalog is accepted and applied with zero approved/applied IDs.
-2. **F1b — exact ADD is incompatible with real schema preflight.** Baseline plus exactly one
-   localized row passes action-stage derivation but fails the fixed locale-review key contract; the
-   green test replaces real preflight.
-3. **F2 — failed transport tuples are not producer-closed.** Retry-terminal reasons at early
-   attempts and `http_429` are accepted even though the preserved producer cannot emit them.
+1. **F2a — failed HTTP 2xx tuples are accepted.** The consumer admits
+   `ok=false, reason=http_<2xx>, status_code=<2xx>, attempts=1`, although the producer's 2xx family
+   is `ok=true, reason=fetched`. Add the missing outside-2xx condition and direct rejection tests
+   while retaining every valid producer tuple test.
 
-Previous formal D1–D6 closures remain independently established. The original F1 unrelated-delta
-and F2 target-bound/facts counterexamples also close; the findings above are uncovered branches of
-the same authority requirements, not regressions in those exact closure tests.
+All prior D1–D6 closures, the original F1 unrelated-stage exploit, the prior F2 classifier/facts
+exploits, and the three last REVISE exploits otherwise reproduce as closed. No other material or
+non-blocking finding was found.
 
 ## Evidence Verification
 
 | # | RF Evidence ref | Artifact exists? | Matches claim? |
 |---|-----------------|-----------------|----------------|
-| E1 | AC-1 grammar evidence | ✅ | ✅ — focused/full tests and direct source validation reproduce. |
-| E2 | AC-2 classifier/calibration evidence | ✅ | ❌ — classifier preservation/calibration hold, but F2 admits impossible transport tuples. |
-| E3 | AC-3 preview/authority evidence | ✅ | ❌ — F1a violates exact zero-add action/state binding; F2 leaves a significant tuple family open. |
-| E4 | AC-4 apply/hash evidence | ✅ | ❌ — safe replacement order holds, but F1a is not a no-op and F1b cannot pass real preflight. |
+| E1 | AC-1 grammar evidence | ✅ | ✅ — D1 and source/accounting tests reproduce. |
+| E2 | AC-2 producer/classifier/calibration evidence | ✅ | ❌ — F2a admits failed 2xx tuples the producer cannot emit. |
+| E3 | AC-3 preview/authority evidence | ✅ | ✅ — recursive closure and exact zero/one/many stages reproduce. |
+| E4 | AC-4 apply/hash evidence | ✅ | ✅ — real preflight, neutral paths, catalog-last recovery, and exact reruns reproduce. |
 | E5 | AC-5 command parity evidence | ✅ | ✅ — exact inventory, completeness, parity, neutrality, and authority stops reproduce. |
-| E6 | AC-6 partition/calibration evidence | ✅ | ✅ — authorized primary audit fully reproduces the non-revealing receipt. |
-| E7 | AC-7 Claude/Codex smoke evidence | ✅ | ✅ with recorded limitation — complete behavior/static Claude binding and explicit Codex loaded paths. |
-| E8 | AC-8 regression/build/scope evidence | ✅ | ❌ overall — 42 tests/build/scope/hashes pass, but the suite does not establish AC-2/3/4 due F1a/F1b/F2. |
+| E6 | AC-6 partition/calibration evidence | ✅ | ✅ — public bindings and totals hold without holdout inspection. |
+| E7 | AC-7 Claude/Codex smoke evidence | ✅ | ✅ with recorded limit — complete Claude behavior/static binding and explicit Codex paths. |
+| E8 | AC-8 aggregate evidence | ✅ | ❌ overall — tests/build/scope/hashes pass, but the suite misses F2a and cannot establish full acceptance. |
 
-Evidence totals: 8 items, 8 exist, 4 fully match, 4 are insufficient or overclaimed.
+Evidence totals: 8 items, 8 exist, 6 fully match, 2 are insufficient or overclaimed.
 
 ## Knowledge Citations Verified
 
-| # | Artifact | Priority + exact citation | Link resolves? | Item exists? | Meaning matches? | Relevant to asserted application? |
-|---|----------|---------------------------|----------------|--------------|------------------|-----------------------------------|
-| 1 | HL §7.2 / ONB §7 | PV0-1 — `README.md` § Purpose | ✅ | ✅ | ✅ — accuracy, inclusion gates, and non-goals | ✅ — strict candidate admission |
-| 2 | HL §7.2 / ONB §7 | PV1-1 — `.tfw/README.md` NS2 | ✅ | ✅ | ✅ — purpose, human authority, proportional assurance | ✅ — owner/evidence gates |
-| 3 | HL §7.2 / ONB §7 | PV1-2 — `.tfw/README.md` Methodology values | ✅ | ✅ | ✅ — Structural Enforcement and Portability | ✅ — closed/parity gates |
-| 4 | HL §7.2 / ONB §7 | PV2-1 — `knowledge/philosophy.md` absent | N/A as cited | ✅ absent | ✅ — citation explicitly records absence | ✅ — correctly N/A |
-| 5 | HL §7.2 / ONB §7 | PV3-1 — `KNOWLEDGE.md` D1 | ✅ | ✅ | ✅ — JSON source, generated projections | ✅ |
+| # | Artifact | Priority + exact citation | Link resolves? | Item exists? | Meaning matches? | Relevant? |
+|---|----------|---------------------------|----------------|--------------|------------------|-----------|
+| 1 | HL §7.2 / ONB §7 | PV0-1 — `README.md` § Purpose | ✅ | ✅ | ✅ — accuracy, inclusion gates, non-goals | ✅ |
+| 2 | HL §7.2 / ONB §7 | PV1-1 — `.tfw/README.md` NS2 | ✅ | ✅ | ✅ — purpose, human authority, proportional assurance | ✅ |
+| 3 | HL §7.2 / ONB §7 | PV1-2 — `.tfw/README.md` Methodology values | ✅ | ✅ | ✅ — Structural Enforcement and Portability | ✅ |
+| 4 | HL §7.2 / ONB §7 | PV2-1 — `knowledge/philosophy.md` absent | N/A as cited | ✅ absent | ✅ — citation records absence | ✅ |
+| 5 | HL §7.2 / ONB §7 | PV3-1 — `KNOWLEDGE.md` D1 | ✅ | ✅ | ✅ — JSON source and generated projections | ✅ |
 | 6 | HL §7.2 / ONB §7 | PV3-2 — `KNOWLEDGE.md` D2 | ✅ | ✅ | ✅ — offline/live separation | ✅ |
 | 7 | HL §7.2 / ONB §7 | PV3-3 — `KNOWLEDGE.md` D4 | ✅ | ✅ | ✅ — categories live in data | ✅ |
-| 8 | HL §7.2 / ONB §7 | PV3-4 — `KNOWLEDGE.md` D14 | ✅ | ✅ | ✅ — `kz-*` versus `tfw-*` namespaces | ✅ |
-| 9 | HL §7.2 / ONB §7 | PV3-5 — `KNOWLEDGE.md` D18 | ✅ | ✅ | ✅ — target-bound exact-universe evidence | ✅ — F2 is an implementation violation, not a bad citation |
-| 10 | HL §7.2 / ONB §7 | PV3-6 — `KNOWLEDGE.md` D19 | ✅ | ✅ | ✅ — explicit EN/RU/KK, no fallback | ✅ — F1b exposes an unmet integration requirement |
+| 8 | HL §7.2 / ONB §7 | PV3-4 — `KNOWLEDGE.md` D14 | ✅ | ✅ | ✅ — `kz-*` / `tfw-*` namespaces | ✅ |
+| 9 | HL §7.2 / ONB §7 | PV3-5 — `KNOWLEDGE.md` D18 | ✅ | ✅ | ✅ — target-bound exact-universe evidence | ✅ — F2a violates the application, not the citation. |
+| 10 | HL §7.2 / ONB §7 | PV3-6 — `KNOWLEDGE.md` D19 | ✅ | ✅ | ✅ — explicit EN/RU/KK, no fallback | ✅ |
 | 11 | HL §7.2 / ONB §7 | PV4-1 — conventions §3 Evidence | ✅ | ✅ | ✅ — evidence differs from verification | ✅ |
-| 12 | HL §7.2 / ONB §7 | PV4-2 — conventions §9 | ✅ | ✅ | ✅ — normal thin-adapter rule | ✅ — approved A1 exception is explicit |
+| 12 | HL §7.2 / ONB §7 | PV4-2 — conventions §9 | ✅ | ✅ | ✅ — normal thin-adapter rule | ✅ |
 | 13 | HL §7.2 / ONB §7 | PV4-3 — conventions §11 | ✅ | ✅ | ✅ — no placeholders/manual repair | ✅ |
 | 14 | HL §7.2 / ONB §7 | PV4-4 — conventions §14 | ✅ | ✅ | ✅ — no bonus scope/invented evidence | ✅ |
-| 15 | HL §7.2 / ONB §7 | PV7-1 — `knowledge/domain.md` F1–F2 | ✅ | ✅ | ✅ — historical dead entries remain archived | ✅ — archive collision gate |
+| 15 | HL §7.2 / ONB §7 | PV7-1 — `knowledge/domain.md` F1–F2 | ✅ | ✅ | ✅ — historical dead entries remain archived | ✅ |
 
 Citation totals: 15, resolved/expected-absent 15, semantically verified 15, irrelevant 0,
 hallucinated 0.
@@ -277,7 +259,7 @@ hallucinated 0.
 ## Checkpoint
 
 **Self-check:**
-- [x] Opened ≥ ⌈23 × 0.42⌉ files and recorded findings? All 23 plus two supporting artifacts.
+- [x] Opened ≥ ⌈24 × 0.42⌉ files and recorded findings? All 24 plus two supporting public artifacts.
 - [x] Ran at least 1 build/test command? Full tests and exact-SHA build both ran.
 - [x] Claim & Source Checks filled with primary-source verification?
 - [x] Each RF §3 acceptance check verified against actual files?
@@ -285,6 +267,6 @@ hallucinated 0.
 - [x] All HL §7.2 and ONB §7 citations verified?
   - Total: 15, resolved/expected-absent: 15, semantically verified: 15, irrelevant: 0, hallucinated: 0.
 - [x] Evidence artifacts from RF §5 verified?
-  - Total: 8, exist: 8, fully match: 4, insufficient/overclaimed: 4.
+  - Total: 8, exist: 8, fully match: 6, insufficient/overclaimed: 2.
 
 Stage complete: YES
