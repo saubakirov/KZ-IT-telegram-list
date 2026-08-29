@@ -64,4 +64,5 @@ becomes a task with an ID.
 | `README.ru.md` | Russian translation of the list | Low | `description_ru` already exists in the data |
 | Archive section | Keep dead communities visible as an archive instead of deleting | Low | TFW-02 deleted 12 outright; no record of what they were |
 | Link freshness sweep | Re-run `validate_links.py --update`; all `last_verified` dates read 2026-01-30 | Medium | See TECH_DEBT.md TD-2 |
+| Discovery batch 2026-08-28 | 23 verified candidates, 8 recurring events, per-handle evidence — [`CANDIDATES-2026-08-28.md`](CANDIDATES-2026-08-28.md) | Medium | Add via `/tfw-plan` after Phase D closes; re-verify counts on the day of adding |
 
