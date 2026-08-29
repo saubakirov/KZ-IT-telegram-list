@@ -1,0 +1,79 @@
+{
+  "actions_sha256": "c222aa49fb3481d1142380cf2636327ff73b486baed84af239cdf69ca0e41394",
+  "authority_status": "ABSENT_DO_NOT_APPLY",
+  "controlled_paths": [
+    {
+      "before_sha256": "a46f893d6d73e2ecc760913be9075873b79470b675807cc585933cb457cf963d",
+      "current_production_sha256": "a46f893d6d73e2ecc760913be9075873b79470b675807cc585933cb457cf963d",
+      "expected_after_sha256": "6ac3c3ff94a1d6fc61089a540ec6944b46d3231acc2ae8f069beb78d31737a11",
+      "path": "data/communities.json",
+      "production_equals_before": true
+    },
+    {
+      "before_sha256": "3b1d70624d7f529c6e7f712574783d468afe5025d6c1bc0173466dd80d5c016d",
+      "current_production_sha256": "3b1d70624d7f529c6e7f712574783d468afe5025d6c1bc0173466dd80d5c016d",
+      "expected_after_sha256": "ba748e35c3f489f845a965f50d34c3259558411d8a8e5df020b4026607d864a4",
+      "path": "README.md",
+      "production_equals_before": true
+    },
+    {
+      "before_sha256": "4fe0fc8eb8e1f5cb996bda984380daa4b472e8fcef15b9b3ed57de7a765890e3",
+      "current_production_sha256": "4fe0fc8eb8e1f5cb996bda984380daa4b472e8fcef15b9b3ed57de7a765890e3",
+      "expected_after_sha256": "7bd86232ba707b8ab51a0b37a3d06a4b0b732478b7b1c04d8f53d230a6ba197c",
+      "path": "index.md",
+      "production_equals_before": true
+    },
+    {
+      "before_sha256": "36002ff6591b18197f745254d3779b797995853e765a4e452d293f9229db0e97",
+      "current_production_sha256": "36002ff6591b18197f745254d3779b797995853e765a4e452d293f9229db0e97",
+      "expected_after_sha256": "7bb7ade182c8a05637abac9ff8bc09b9491ba3613b5cb859fdb722a347ade246",
+      "path": "ru/index.md",
+      "production_equals_before": true
+    },
+    {
+      "before_sha256": "64227b9e7062308cf12fd995b3b542409806b543b66d91df5c36adc3cb8ef2a7",
+      "current_production_sha256": "64227b9e7062308cf12fd995b3b542409806b543b66d91df5c36adc3cb8ef2a7",
+      "expected_after_sha256": "666f7b06c6a6c17376d41988e750a57a5a62b015e7ed52058a8adffa3365152a",
+      "path": "kk/index.md",
+      "production_equals_before": true
+    }
+  ],
+  "exact_owner_statement_sha256": "51bc6f9bcbdb1e8aa4cace52f502c42b672bb81d882c862c6752b9b09f78b6e5",
+  "exact_owner_statement_template": "I, saubakirov, approve applying the exact Phase B KZ intake preview payload SHA-256 a6e7444b3be13f6ed06f3268a079c2264001703ce8e83c83f14c65ab65c0dcac, actions SHA-256 c222aa49fb3481d1142380cf2636327ff73b486baed84af239cdf69ca0e41394, and exactly these ordered ADD candidate IDs: candidate:ai_qadam_kazakhstan, candidate:allkzit, candidate:anykeykz, candidate:astana_hub, candidate:astanajkugoutputstream, candidate:aws_kz, candidate:blockchainkz, candidate:devopskaz, candidate:devs_kz, candidate:digitalbussinesskz, candidate:ethkz, candidate:go_kz_vacancy, candidate:hackathon_kz, candidate:it_jobs_kz, candidate:it_kazahstan, candidate:kolesa_group, candidate:kz_bi_jobs, candidate:kz_bi_news, candidate:sandyq_orda, candidate:tvkrg. I approve only the expected controlled-path bytes recorded in tasks/2026/20260828-201343__catalog_intake_commands/phase-b/evidence/preview/preview.json and no other catalog changes.",
+  "invalidation": "Any action, row, copy, evidence, ADD order, controlled before hash, or expected byte change requires a successor preview and new exact approval.",
+  "ordered_add_candidate_ids": [
+    "candidate:ai_qadam_kazakhstan",
+    "candidate:allkzit",
+    "candidate:anykeykz",
+    "candidate:astana_hub",
+    "candidate:astanajkugoutputstream",
+    "candidate:aws_kz",
+    "candidate:blockchainkz",
+    "candidate:devopskaz",
+    "candidate:devs_kz",
+    "candidate:digitalbussinesskz",
+    "candidate:ethkz",
+    "candidate:go_kz_vacancy",
+    "candidate:hackathon_kz",
+    "candidate:it_jobs_kz",
+    "candidate:it_kazahstan",
+    "candidate:kolesa_group",
+    "candidate:kz_bi_jobs",
+    "candidate:kz_bi_news",
+    "candidate:sandyq_orda",
+    "candidate:tvkrg"
+  ],
+  "payload_sha256": "a6e7444b3be13f6ed06f3268a079c2264001703ce8e83c83f14c65ab65c0dcac",
+  "preview_file_sha256": "a6e7444b3be13f6ed06f3268a079c2264001703ce8e83c83f14c65ab65c0dcac",
+  "preview_path": "phase-b/evidence/preview/preview.json",
+  "schema_version": "kz-intake-owner-gate-digest/v1",
+  "totals": {
+    "add": 20,
+    "candidates": 28,
+    "duplicate": 1,
+    "observed": 28,
+    "occurrences": 29,
+    "reject": 3,
+    "unresolved": 4
+  }
+}

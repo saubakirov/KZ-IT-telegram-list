@@ -1,0 +1,1158 @@
+{
+  "meta": {
+    "title": "Awesome Kazakhstan IT Telegram",
+    "title_ru": "IT-сообщества Казахстана в Telegram",
+    "title_kk": "Қазақстанның Telegram-дағы IT қауымдастықтары",
+    "description": "A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community",
+    "description_ru": "Проверенный каталог IT-групп, каналов и ботов для технологического сообщества Казахстана",
+    "description_kk": "Қазақстанның технологиялық қауымдастығына арналған тексерілген Telegram топтары, арналары мен боттарының каталогы",
+    "last_updated": "2026-08-27",
+    "source_repo": "https://github.com/saubakirov/KZ-IT-telegram-list"
+  },
+  "north_star": {
+    "purpose": "A catalog whose value is accuracy. Every entry is a live, verified, IT-relevant Kazakhstan Telegram community — verified by a dated network check, never by recollection.",
+    "purpose_ru": "Каталог, ценность которого — в точности. Каждая запись — действующее, проверенное и связанное с IT Telegram-сообщество Казахстана; проверка подтверждена датированным сетевым запросом, а не воспоминанием.",
+    "purpose_kk": "Құндылығы дәлдігінде жатқан каталог. Әр жазба — Қазақстанға қатысты, IT тақырыбындағы жұмыс істеп тұрған Telegram қауымдастығы; ол есте сақтауға емес, күні көрсетілген желілік тексеруге сүйенеді.",
+    "non_goals": [
+      "A directory of every Kazakhstan Telegram chat — IT relevance is a gate, not a hint.",
+      "A promotion channel — no purely commercial or paid-placement entries.",
+      "A hand-edited list — `README.md` is an artifact; the data is the product.",
+      "An estimator — an unverifiable member count is omitted, never guessed."
+    ],
+    "non_goals_ru": [
+      "Каталог всех Telegram-чатов Казахстана — связь с IT является обязательным критерием, а не пожеланием.",
+      "Рекламная площадка — чисто коммерческие и платные размещения не принимаются.",
+      "Список, редактируемый вручную, — `README.md` является артефактом; продуктом служат данные.",
+      "Оценщик — непроверяемое число участников пропускается, а не придумывается."
+    ],
+    "non_goals_kk": [
+      "Қазақстандағы барлық Telegram чаттарының анықтамалығы емес — IT саласына қатыстылық міндетті шарт.",
+      "Жарнама арнасы емес — тек коммерциялық немесе ақылы орналастырылған жазбалар қабылданбайды.",
+      "Қолмен өңделетін тізім емес — `README.md` артефакт, ал өнімнің өзі — деректер.",
+      "Шамалап бағалау құралы емес — тексерілмейтін қатысушы саны болжанбайды, көрсетілмейді."
+    ]
+  },
+  "archive": [
+    {
+      "name": "Mobile Developers KZ",
+      "handle": "mobile_developers_kz",
+      "description": "Mobile app developers community",
+      "description_ru": "Группа для мобильных разработчиков",
+      "description_kk": "Мобильді қолданба әзірлеушілерінің қауымдастығы",
+      "category": "mobile",
+      "last_verified": "2026-01-30",
+      "type": "groups",
+      "died_on": "2026-08-27",
+      "reason": "Owner verified in Telegram on 2026-08-27 that the historical Mobile Developers KZ community no longer exists.",
+      "reason_ru": "Владелец подтвердил в Telegram 2026-08-27, что историческое сообщество Mobile Developers KZ больше не существует.",
+      "reason_kk": "Иесі 2026-08-27 күні Telegram арқылы бұрынғы Mobile Developers KZ қауымдастығы енді жоқ екенін растады."
+    },
+    {
+      "name": "QA Community KZ",
+      "handle": "kzqacommunity",
+      "description": "QA specialists community",
+      "description_ru": "Сообщество QA-специалистов Казахстана",
+      "description_kk": "Қазақстандағы QA мамандарының қауымдастығы",
+      "category": "qa-testing",
+      "last_verified": "2026-01-30",
+      "member_count": 762,
+      "type": "groups",
+      "died_on": "2026-08-27",
+      "reason": "Owner verified in Telegram on 2026-08-27 that the historical KZ QA community no longer exists.",
+      "reason_ru": "Владелец подтвердил в Telegram 2026-08-27, что историческое сообщество KZ QA больше не существует.",
+      "reason_kk": "Иесі 2026-08-27 күні Telegram арқылы бұрынғы KZ QA қауымдастығы енді жоқ екенін растады."
+    }
+  ],
+  "groups": [
+    {
+      "name": "BI Analysts Kazakhstan",
+      "handle": "kz_bi",
+      "description": "Business Intelligence analysts community",
+      "description_ru": "Сообщество BI-аналитиков",
+      "description_kk": "BI талдаушыларының қауымдастығы",
+      "category": "data-analytics",
+      "last_verified": "2026-08-27",
+      "member_count": 7042
+    },
+    {
+      "name": "TSARKA Cybersecurity",
+      "handle": "cyberseckz",
+      "description": "Cybersecurity discussions in Kazakhstan (TSARKA public group)",
+      "description_ru": "Публичная группа ЦАРКА. Обсуждение вопросов ИБ в Казахстане",
+      "description_kk": "Қазақстандағы киберқауіпсіздік мәселелерін талқылайтын TSARKA ашық тобы",
+      "category": "security",
+      "last_verified": "2026-08-27",
+      "member_count": 5202
+    },
+    {
+      "name": "Frontend Kazakhstan",
+      "handle": "frontendkz",
+      "description": "Frontend developers community",
+      "description_ru": "Сообщество фронтенд-разработчиков Казахстана",
+      "description_kk": "Қазақстандағы фронтенд әзірлеушілер қауымдастығы",
+      "category": "web-development",
+      "last_verified": "2026-08-27",
+      "member_count": 4643
+    },
+    {
+      "name": "The Tech KZ Chat",
+      "handle": "thetechkzchat",
+      "description": "Discussion group for IT and startups news channel",
+      "description_ru": "Чат для участников канала Одним предложением об IT и стартапах",
+      "description_kk": "IT және стартап жаңалықтары арнасының талқылау тобы",
+      "category": "general",
+      "last_verified": "2026-08-27",
+      "member_count": 1246
+    },
+    {
+      "name": "Cursor Kazakhstan / AI Community",
+      "handle": "cursor_kz",
+      "description": "Cursor and AI coding community in Kazakhstan",
+      "description_ru": "Сообщество пользователей Cursor и AI-инструментов в Казахстане",
+      "description_kk": "Қазақстандағы Cursor және AI көмегімен бағдарламалау қауымдастығы",
+      "category": "ai",
+      "last_verified": "2026-08-27",
+      "member_count": 220
+    },
+    {
+      "name": "Automation KZ",
+      "handle": "automation_kz",
+      "description": "Industrial automation and process engineering",
+      "description_ru": "Промышленная автоматизация и инженерия технологических процессов",
+      "description_kk": "Өнеркәсіптік автоматтандыру және технологиялық процестер инженериясы",
+      "category": "devops-sysadmin",
+      "last_verified": "2026-08-27",
+      "member_count": 2902
+    },
+    {
+      "name": "Python Kazakhstan",
+      "handle": "python_kz",
+      "description": "Python developers community",
+      "description_ru": "Сообщество Python-разработчиков Казахстана",
+      "description_kk": "Қазақстандық Python әзірлеушілер қауымдастығы",
+      "category": "programming-languages",
+      "last_verified": "2026-08-27",
+      "member_count": 3035
+    },
+    {
+      "name": "SysAdm.in Forum",
+      "handle": "sysadm_in",
+      "description": "System administrators forum group",
+      "description_ru": "Группа форума системных администраторов forum.sys-adm.in",
+      "description_kk": "Жүйелік әкімшілер форумының тобы",
+      "category": "devops-sysadmin",
+      "last_verified": "2026-08-27",
+      "member_count": 1626
+    },
+    {
+      "name": "IT Bazaar KZ",
+      "handle": "itbazarkz",
+      "description": "IT equipment buy/sell marketplace",
+      "description_ru": "Площадка для покупки и продажи IT-оборудования",
+      "description_kk": "IT жабдықтарын сатып алу және сату алаңы",
+      "category": "marketplace",
+      "last_verified": "2026-08-27",
+      "member_count": 5732
+    },
+    {
+      "name": "IT Freelance KZ",
+      "handle": "itmankz",
+      "description": "Freelance IT jobs in Kazakhstan",
+      "description_ru": "Фриланс-заказы в IT в Казахстане",
+      "description_kk": "Қазақстандағы фриланс IT жұмыстары",
+      "category": "jobs",
+      "last_verified": "2026-08-27",
+      "member_count": 8214
+    },
+    {
+      "name": "Backend Developers Kazakhstan",
+      "handle": "backenderskz",
+      "description": "Backend developers community",
+      "description_ru": "Сообщество бэкенд-разработчиков Казахстана",
+      "description_kk": "Қазақстандағы бэкенд әзірлеушілер қауымдастығы",
+      "category": "web-development",
+      "last_verified": "2026-08-27",
+      "member_count": 3401
+    },
+    {
+      "name": "Astana JUG",
+      "handle": "astanajug",
+      "description": "Java User Group in Astana",
+      "description_ru": "Сообщество Java-разработчиков в Астане",
+      "description_kk": "Астанадағы Java әзірлеушілер қауымдастығы",
+      "category": "programming-languages",
+      "last_verified": "2026-08-27",
+      "member_count": 1867
+    },
+    {
+      "name": "iOS Developers KZ",
+      "handle": "iOSDevelopers_KZ",
+      "description": "iOS developers community",
+      "description_ru": "Сообщество iOS-разработчиков",
+      "description_kk": "iOS әзірлеушілер қауымдастығы",
+      "category": "mobile",
+      "last_verified": "2026-08-27",
+      "member_count": 1549
+    },
+    {
+      "name": "Programmers Kazakhstan",
+      "handle": "devkz",
+      "description": "General programmers community",
+      "description_ru": "Программисты Казахстана",
+      "description_kk": "Қазақстан бағдарламашыларының жалпы қауымдастығы",
+      "category": "general",
+      "last_verified": "2026-08-27",
+      "member_count": 1657
+    },
+    {
+      "name": "GameDev KZ",
+      "handle": "gamedevkz",
+      "description": "Game developers community",
+      "description_ru": "Сообщество разработчиков игр",
+      "description_kk": "Ойын әзірлеушілер қауымдастығы",
+      "category": "gamedev",
+      "last_verified": "2026-08-27",
+      "member_count": 1784
+    },
+    {
+      "name": "Golang Kazakhstan",
+      "handle": "go_kz",
+      "description": "Go programming language community",
+      "description_ru": "Сообщество программистов и почитателей языка Go",
+      "description_kk": "Go тілінің әзірлеушілері мен әуесқойларының қауымдастығы",
+      "category": "programming-languages",
+      "last_verified": "2026-08-27",
+      "member_count": 2049
+    },
+    {
+      "name": "PHP Developers KZ",
+      "handle": "phpdevconf",
+      "description": "PHP developers community",
+      "description_ru": "Сообщество PHP-разработчиков",
+      "description_kk": "PHP әзірлеушілерінің чаты",
+      "category": "programming-languages",
+      "last_verified": "2026-08-27",
+      "member_count": 938
+    },
+    {
+      "name": "Ruby Ata",
+      "handle": "rubyata",
+      "description": "Ruby and Ruby on Rails community",
+      "description_ru": "Сообщество Ruby и Ruby on Rails",
+      "description_kk": "Ruby және Ruby on Rails қауымдастығы",
+      "category": "programming-languages",
+      "last_verified": "2026-08-27",
+      "member_count": 780
+    },
+    {
+      "name": "1C Kazakhstan",
+      "handle": "kz_1C",
+      "description": "1C Enterprise platform discussions",
+      "description_ru": "Обсуждение 1С",
+      "description_kk": "1C:Кәсіпорын платформасын талқылау",
+      "category": "programming-languages",
+      "last_verified": "2026-08-27",
+      "member_count": 2225
+    },
+    {
+      "name": "Flutter Dart KZ",
+      "handle": "dart_kz",
+      "description": "Flutter and Dart developers community",
+      "description_ru": "Сообщество для разработчиков на Flutter/Dart",
+      "description_kk": "Flutter және Dart әзірлеушілер қауымдастығы",
+      "category": "mobile",
+      "last_verified": "2026-08-27",
+      "member_count": 1142
+    },
+    {
+      "name": ".NET Kazakhstan",
+      "handle": "dotnetgroup",
+      "description": ".NET developers community",
+      "description_ru": "Сообщество разработчиков .NET",
+      "description_kk": ".NET әзірлеушілер қауымдастығы",
+      "category": "programming-languages",
+      "last_verified": "2026-08-27",
+      "member_count": 91
+    },
+    {
+      "name": "DevNull KZ",
+      "handle": "devnullkz",
+      "description": "Night owl IT admins chat",
+      "description_ru": "Ночной чат IT-специалистов и системных администраторов",
+      "description_kk": "Түнгі IT мамандары мен әкімшілерінің чаты",
+      "category": "devops-sysadmin",
+      "last_verified": "2026-08-27",
+      "member_count": 737
+    },
+    {
+      "name": "MikroTik KZ",
+      "handle": "MikroTikKZ",
+      "description": "MikroTik networking equipment",
+      "description_ru": "Сообщество о сетевом оборудовании MikroTik",
+      "description_kk": "MikroTik желілік жабдығы туралы қауымдастық",
+      "category": "devops-sysadmin",
+      "last_verified": "2026-08-27",
+      "member_count": 658
+    },
+    {
+      "name": "Radiotech KZ",
+      "handle": "radiotechkz",
+      "description": "Electronics and radio engineering forum",
+      "description_ru": "Группа Radiotech.kz, форум по электронике",
+      "description_kk": "Электроника және радиотехника форумы",
+      "category": "hardware",
+      "last_verified": "2026-08-27",
+      "member_count": 759
+    },
+    {
+      "name": "R0 Crew KZ",
+      "handle": "r0crewKZ",
+      "description": "R0 security research group",
+      "description_ru": "Группа R0 в Казахстане",
+      "description_kk": "R0 қауіпсіздік зерттеу тобы",
+      "category": "security",
+      "last_verified": "2026-08-27",
+      "member_count": 328
+    },
+    {
+      "name": "VoIP Kazakhstan",
+      "handle": "sipvoipkz",
+      "description": "VoIP and SIP telephony",
+      "description_ru": "Обсуждаем VoIP в Казахстане",
+      "description_kk": "VoIP және SIP телефониясын талқылау",
+      "category": "devops-sysadmin",
+      "last_verified": "2026-08-27",
+      "member_count": 672
+    },
+    {
+      "name": "DIY Kazakhstan",
+      "handle": "diykz",
+      "description": "DIY makers and hobbyists",
+      "description_ru": "Сообщество DIY-мастеров и любителей технического творчества",
+      "description_kk": "DIY шеберлері мен әуесқойлары",
+      "category": "hardware",
+      "last_verified": "2026-08-27",
+      "member_count": 364
+    },
+    {
+      "name": "KZLUG",
+      "handle": "kzlug",
+      "description": "Kazakhstan Linux Users Group",
+      "description_ru": "Группа пользователей Linux Казахстана",
+      "description_kk": "Қазақстандағы Linux пайдаланушылар тобы",
+      "category": "devops-sysadmin",
+      "last_verified": "2026-08-27",
+      "member_count": 401
+    },
+    {
+      "name": "CCTV Kazakhstan",
+      "handle": "cctvkz",
+      "description": "Video surveillance systems discussion",
+      "description_ru": "Обсуждение видеонаблюдения в Казахстане",
+      "description_kk": "Бейнебақылау жүйелерін талқылау",
+      "category": "hardware",
+      "last_verified": "2026-08-27",
+      "member_count": 414
+    },
+    {
+      "name": "C/C++ Kazakhstan",
+      "handle": "cppkz",
+      "description": "C and C++ developers community",
+      "description_ru": "Сообщество разработчиков C и C++",
+      "description_kk": "C және C++ әзірлеушілер қауымдастығы",
+      "category": "programming-languages",
+      "last_verified": "2026-08-27",
+      "member_count": 414
+    },
+    {
+      "name": "Rust Kazakhstan",
+      "handle": "rustlang_kz",
+      "description": "Rust programming language community",
+      "description_ru": "Сообщество Rust-разработчиков",
+      "description_kk": "Rust әзірлеушілер қауымдастығы",
+      "category": "programming-languages",
+      "last_verified": "2026-08-27",
+      "member_count": 230
+    },
+    {
+      "name": "Ruby KZ",
+      "handle": "rubykz",
+      "description": "Ruby developers community",
+      "description_ru": "Сообщество Ruby-разработчиков Казахстана",
+      "description_kk": "Қазақстандағы Ruby әзірлеушілер қауымдастығы",
+      "category": "programming-languages",
+      "last_verified": "2026-08-27",
+      "member_count": 70
+    },
+    {
+      "name": "DWH Kazakhstan",
+      "handle": "dwhkz",
+      "description": "Data Warehouse and Big Data discussions",
+      "description_ru": "Обсуждение хранилищ данных и Big Data",
+      "description_kk": "Деректер қоймасы мен Big Data мәселелерін талқылау",
+      "category": "data-analytics",
+      "last_verified": "2026-08-27",
+      "member_count": 275
+    },
+    {
+      "name": "AQA Kazakhstan",
+      "handle": "AQA_kz",
+      "description": "QA automation engineers community",
+      "description_ru": "Сообщество инженеров по автоматизации тестирования в Казахстане",
+      "description_kk": "Қазақстандағы QA автоматтандыру инженерлерінің қауымдастығы",
+      "category": "qa-testing",
+      "last_verified": "2026-08-27",
+      "member_count": 200
+    },
+    {
+      "name": "Illuminati Inc",
+      "handle": "illuminatinc",
+      "description": "IT community for knowledge sharing",
+      "description_ru": "IT-сообщество для обмена опытом и полезной информацией",
+      "description_kk": "Тәжірибе мен пайдалы ақпарат алмасатын IT қауымдастығы",
+      "category": "general",
+      "last_verified": "2026-08-27",
+      "member_count": 123
+    },
+    {
+      "name": "Team Leads KZ",
+      "handle": "teamleads_kz",
+      "description": "Team leads and engineering managers",
+      "description_ru": "Сообщество тимлидов и инженерных менеджеров",
+      "description_kk": "Тимлидтер мен инженерлік менеджерлер қауымдастығы",
+      "category": "management",
+      "last_verified": "2026-08-27",
+      "member_count": 553
+    },
+    {
+      "name": "Projects Kazakhstan",
+      "handle": "projects_kz",
+      "description": "Project management community",
+      "description_ru": "Проектное сообщество Казахстана",
+      "description_kk": "Қазақстандағы жобаларды басқару қауымдастығы",
+      "category": "management",
+      "last_verified": "2026-08-27",
+      "member_count": 1777
+    },
+    {
+      "name": "DevSecOps KZ",
+      "handle": "devsecopskz",
+      "description": "DevSecOps and security automation community",
+      "description_ru": "Сообщество DevSecOps и автоматизации безопасности",
+      "description_kk": "DevSecOps және қауіпсіздікті автоматтандыру қауымдастығы",
+      "category": "devops-sysadmin",
+      "last_verified": "2026-08-27",
+      "member_count": 810
+    },
+    {
+      "category": "ai",
+      "description": "Kazakhstan chapter of AI Qadam for learning and applying artificial intelligence.",
+      "description_kk": "Жасанды интеллектті үйренуге және іс жүзінде қолдануға арналған AI Qadam-ның Қазақстандағы қауымдастығы.",
+      "description_ru": "Казахстанское отделение AI Qadam для изучения и практического применения искусственного интеллекта.",
+      "handle": "ai_qadam_kazakhstan",
+      "last_verified": "2026-08-29",
+      "member_count": 413,
+      "name": "AI Qadam Kazakhstan"
+    },
+    {
+      "category": "general",
+      "description": "Kazakhstan IT professionals' community for discussion and peer support.",
+      "description_kk": "Қазақстандағы IT мамандарының пікір алмасу және өзара көмек қауымдастығы.",
+      "description_ru": "Сообщество IT-специалистов Казахстана для общения и взаимопомощи.",
+      "handle": "allkzit",
+      "last_verified": "2026-08-29",
+      "member_count": 3013,
+      "name": "IT.kz - все айтишники Казахстана"
+    },
+    {
+      "category": "devops-sysadmin",
+      "description": "Community for Kazakhstan helpdesk and junior system-administration specialists.",
+      "description_kk": "Қазақстандағы техникалық қолдау және жүйелік әкімшілендіруді бастап жүрген мамандар қауымдастығы.",
+      "description_ru": "Сообщество казахстанских эникейщиков и начинающих системных администраторов.",
+      "handle": "anykeykz",
+      "last_verified": "2026-08-29",
+      "member_count": 31,
+      "name": "Казахстанский Эникей - вестник с офисных полей"
+    },
+    {
+      "category": "devops-sysadmin",
+      "description": "Kazakhstan networking community for routing, wireless, VPN, and network equipment.",
+      "description_kk": "Маршруттау, сымсыз желілер, VPN және желілік жабдықтар жөніндегі Қазақстан қауымдастығы.",
+      "description_ru": "Казахстанское сетевое сообщество о маршрутизации, беспроводных сетях, VPN и сетевом оборудовании.",
+      "handle": "ethkz",
+      "last_verified": "2026-08-29",
+      "member_count": 1227,
+      "name": "Сеть.kz"
+    }
+  ],
+  "channels": [
+    {
+      "name": "Datanomika",
+      "handle": "datanomika",
+      "description": "Data visualization, dashboards, business intelligence",
+      "description_ru": "Визуализация данных, интерактивная отчётность и BI",
+      "description_kk": "Деректерді визуализациялау, дашбордтар және бизнес-аналитика",
+      "last_verified": "2026-08-27",
+      "member_count": 2731
+    },
+    {
+      "name": "Землетрясения | Казахстан",
+      "handle": "kzquake",
+      "description": "Earthquake monitoring in Kazakhstan",
+      "description_ru": "Оперативные сообщения о землетрясениях на территории Казахстана",
+      "description_kk": "Қазақстан аумағындағы жер сілкіністері туралы жедел хабарламалар",
+      "last_verified": "2026-08-27",
+      "member_count": 1983
+    },
+    {
+      "name": "Mobile Jobs KZ",
+      "handle": "mobilejobskz",
+      "description": "Mobile developer job postings",
+      "description_ru": "Вакансии для мобильных разработчиков",
+      "description_kk": "Мобильді әзірлеушілерге арналған бос жұмыс орындары",
+      "category": "jobs",
+      "last_verified": "2026-08-27",
+      "member_count": 276
+    },
+    {
+      "name": "DevKZ Jobs",
+      "handle": "devkz_jobs",
+      "description": "Developer job postings",
+      "description_ru": "Вакансии для разработчиков",
+      "description_kk": "Әзірлеушілерге арналған бос жұмыс орындары",
+      "category": "jobs",
+      "last_verified": "2026-08-27",
+      "member_count": 24596
+    },
+    {
+      "name": "Dev Skills",
+      "handle": "DevSkills",
+      "description": "Free IT resources, materials, courses",
+      "description_ru": "Бесплатные IT-ресурсы, материалы и курсы",
+      "description_kk": "Тегін IT ресурстары, материалдар мен курстар",
+      "category": "education",
+      "last_verified": "2026-08-27",
+      "member_count": 93
+    },
+    {
+      "name": "ML Jobs KZ",
+      "handle": "ml_jobs_kz",
+      "description": "ML and Data Science job postings",
+      "description_ru": "Вакансии в области ML и Data Science",
+      "description_kk": "ML және Data Science саласындағы бос жұмыс орындары",
+      "category": "jobs",
+      "last_verified": "2026-08-27",
+      "member_count": 11001
+    },
+    {
+      "name": "TSARKA News",
+      "handle": "certkznews",
+      "description": "TSARKA cybersecurity news",
+      "description_ru": "Новости ЦАРКА (Центра анализа и расследования кибератак)",
+      "description_kk": "TSARKA киберқауіпсіздік жаңалықтары",
+      "category": "security",
+      "last_verified": "2026-08-27",
+      "member_count": 5905
+    },
+    {
+      "name": "The Tech KZ",
+      "handle": "thetechkz",
+      "description": "IT and startup news in one sentence",
+      "description_ru": "Новости IT и стартапов в одном предложении",
+      "description_kk": "IT және стартап жаңалықтары бір сөйлеммен",
+      "category": "news",
+      "last_verified": "2026-08-27",
+      "member_count": 26654
+    },
+    {
+      "name": "NU ACM-W",
+      "handle": "nu_acm_w",
+      "description": "Women in Computing at Nazarbayev University",
+      "description_ru": "Сообщество женщин в области вычислительных наук в Назарбаев Университете",
+      "description_kk": "Назарбаев Университетіндегі есептеу саласындағы әйелдер қауымдастығы",
+      "category": "education",
+      "last_verified": "2026-08-27",
+      "member_count": 884
+    },
+    {
+      "name": "Bluescreen KZ",
+      "handle": "bluescreenkz",
+      "description": "Tech news, games, cybersecurity in simple language",
+      "description_ru": "Новости технологий, игр и кибербезопасности простым языком",
+      "description_kk": "Технология, ойындар және киберқауіпсіздік жаңалықтары қарапайым тілмен",
+      "category": "news",
+      "last_verified": "2026-08-27",
+      "member_count": 24571
+    },
+    {
+      "name": "Work IT KZ",
+      "handle": "workitkz",
+      "description": "IT job postings Kazakhstan",
+      "description_ru": "IT-вакансии в Казахстане",
+      "description_kk": "Қазақстандағы IT бос жұмыс орындары",
+      "category": "jobs",
+      "last_verified": "2026-08-27",
+      "member_count": 34811
+    },
+    {
+      "name": "KZ IT Events",
+      "handle": "kz_it_events",
+      "description": "IT events announcements in Kazakhstan",
+      "description_ru": "Анонсы IT-событий в Казахстане и в онлайне",
+      "description_kk": "Қазақстандағы және онлайн IT іс-шараларының анонстары",
+      "category": "events",
+      "last_verified": "2026-08-27",
+      "member_count": 1976
+    },
+    {
+      "name": "SysAdm.in InfoSec",
+      "handle": "sysadm_in_channel",
+      "description": "InfoSec news and articles",
+      "description_ru": "Новости и статьи об информационной безопасности",
+      "description_kk": "Ақпараттық қауіпсіздік жаңалықтары мен мақалалары",
+      "category": "security",
+      "last_verified": "2026-08-27",
+      "member_count": 12951
+    },
+    {
+      "name": "SysAdm.in Articles",
+      "handle": "sysadm_in_up",
+      "description": "IT articles for expanding knowledge",
+      "description_ru": "IT-статьи для расширения кругозора",
+      "description_kk": "IT бойынша білімді кеңейтетін мақалалар",
+      "category": "education",
+      "last_verified": "2026-08-27",
+      "member_count": 1095
+    },
+    {
+      "name": "Saubakirov",
+      "handle": "saubakirov",
+      "description": "Personal channel by Sanzhar Aubakirov - tech, startups, engineering",
+      "description_ru": "Личный канал Санжара Аубакирова о технологиях, стартапах и инженерии",
+      "description_kk": "Санжар Әубәкіровтің технология, стартап және инженерия туралы жеке арнасы",
+      "category": "education",
+      "last_verified": "2026-08-27",
+      "member_count": 87
+    },
+    {
+      "name": "DS/ML KZ News",
+      "handle": "dsmlkz_news",
+      "description": "Data Science and Machine Learning news in Kazakhstan",
+      "description_ru": "Новости казахстанского сообщества Data Science и Machine Learning",
+      "description_kk": "Қазақстандағы Data Science және Machine Learning жаңалықтары",
+      "category": "data-analytics",
+      "last_verified": "2026-08-27",
+      "member_count": 4987
+    },
+    {
+      "name": "Cloud Ready KZ",
+      "handle": "cloudreadykz",
+      "description": "Cloud technologies and infrastructure",
+      "description_ru": "Облачные технологии и инфраструктура",
+      "description_kk": "Бұлттық технологиялар мен инфрақұрылым",
+      "category": "devops-sysadmin",
+      "last_verified": "2026-08-27",
+      "member_count": 161
+    },
+    {
+      "name": "Cloud Native KZ",
+      "handle": "cloudnativekz",
+      "description": "Cloud native, Kubernetes, and container technologies",
+      "description_ru": "Cloud native, Kubernetes и контейнерные технологии",
+      "description_kk": "Cloud native, Kubernetes және контейнерлік технологиялар",
+      "category": "devops-sysadmin",
+      "last_verified": "2026-08-27",
+      "member_count": 1249
+    },
+    {
+      "name": "DevSecOps Jobs KZ",
+      "handle": "devsecopskz_jobs",
+      "description": "DevOps and DevSecOps job postings",
+      "description_ru": "Вакансии в сфере DevOps и DevSecOps",
+      "description_kk": "DevOps және DevSecOps бос жұмыс орындары",
+      "category": "jobs",
+      "last_verified": "2026-08-27",
+      "member_count": 322
+    },
+    {
+      "name": "Clevers KZ",
+      "handle": "cleverskz",
+      "description": "Math olympiads and competitive programming in Kazakhstan",
+      "description_ru": "Математические олимпиады и спортивное программирование в Казахстане",
+      "description_kk": "Қазақстандағы математика олимпиадалары мен спорттық бағдарламалау",
+      "category": "education",
+      "last_verified": "2026-08-27",
+      "member_count": 1805
+    },
+    {
+      "category": "startups",
+      "description": "Official Astana Hub channel with Kazakhstan startup ecosystem news, programs, and events.",
+      "description_kk": "Қазақстанның стартап экожүйесіндегі жаңалықтар, бағдарламалар мен іс-шаралар туралы Astana Hub-тың ресми арнасы.",
+      "description_ru": "Официальный канал Astana Hub с новостями, программами и событиями стартап-экосистемы Казахстана.",
+      "handle": "astana_hub",
+      "last_verified": "2026-08-29",
+      "member_count": 13572,
+      "name": "Astana Hub ️ ✔"
+    },
+    {
+      "category": "programming-languages",
+      "description": "Announcements and learning resources from the Astana Java user group.",
+      "description_kk": "Астана Java пайдаланушылары тобының хабарландырулары мен оқу материалдары.",
+      "description_ru": "Анонсы и учебные материалы сообщества Java-разработчиков Астаны.",
+      "handle": "astanajkugoutputstream",
+      "last_verified": "2026-08-29",
+      "member_count": 724,
+      "name": "Astana JKUG OutputStream"
+    },
+    {
+      "category": "devops-sysadmin",
+      "description": "Announcements for the AWS User Group Kazakhstan community.",
+      "description_kk": "AWS User Group Kazakhstan қауымдастығының хабарландыру арнасы.",
+      "description_ru": "Канал анонсов сообщества AWS User Group Kazakhstan.",
+      "handle": "aws_kz",
+      "last_verified": "2026-08-29",
+      "member_count": 267,
+      "name": "AWS User Group Kazakhstan Announcements Channel"
+    },
+    {
+      "category": "blockchain",
+      "description": "Kazakhstan community for AI, blockchain, and digital-asset technology.",
+      "description_kk": "Қазақстандағы жасанды интеллект, блокчейн және цифрлық активтер технологиялары қауымдастығы.",
+      "description_ru": "Казахстанское сообщество по искусственному интеллекту, блокчейну и технологиям цифровых активов.",
+      "handle": "blockchainkz",
+      "last_verified": "2026-08-29",
+      "member_count": 289,
+      "name": "BlockchainKZ Association of AI & Blockchain technology developers and users"
+    },
+    {
+      "category": "devops-sysadmin",
+      "description": "Kazakhstan DevOps channel covering cloud infrastructure, Linux, CI/CD, and high-load systems.",
+      "description_kk": "Бұлттық инфрақұрылым, Linux, CI/CD және жоғары жүктемелі жүйелер туралы қазақстандық DevOps арнасы.",
+      "description_ru": "Казахстанский DevOps-канал об облачной инфраструктуре, Linux, CI/CD и высоконагруженных системах.",
+      "handle": "devopskaz",
+      "last_verified": "2026-08-29",
+      "member_count": 6652,
+      "name": "KazDevOps"
+    },
+    {
+      "category": "jobs",
+      "description": "Kazakhstan IT careers, workshops, meetups, and professional-development channel.",
+      "description_kk": "Қазақстандағы IT мансабы, воркшоптар, митаптар және кәсіби даму туралы арна.",
+      "description_ru": "Канал об IT-карьере, воркшопах, митапах и профессиональном развитии в Казахстане.",
+      "handle": "devs_kz",
+      "last_verified": "2026-08-29",
+      "member_count": 10373,
+      "name": "Devs.kz"
+    },
+    {
+      "category": "news",
+      "description": "Kazakhstan technology and business publication covering IT, startups, and digital products.",
+      "description_kk": "IT, стартаптар және цифрлық өнімдер туралы жазатын қазақстандық технология және бизнес басылымы.",
+      "description_ru": "Казахстанское издание о технологиях и бизнесе, освещающее IT, стартапы и цифровые продукты.",
+      "handle": "digitalbussinesskz",
+      "last_verified": "2026-08-29",
+      "member_count": 8362,
+      "name": "DigitalBusiness.kz"
+    },
+    {
+      "category": "jobs",
+      "description": "Go developer vacancies in Kazakhstan and international roles relevant to the local community.",
+      "description_kk": "Қазақстандағы Go әзірлеушілеріне және жергілікті қауымдастыққа қатысты халықаралық бос орындар.",
+      "description_ru": "Вакансии Go-разработчиков в Казахстане и зарубежные позиции для местного сообщества.",
+      "handle": "go_kz_vacancy",
+      "last_verified": "2026-08-29",
+      "member_count": 2262,
+      "name": "Golang vacancies in KZ"
+    },
+    {
+      "category": "events",
+      "description": "Hackathon news and event announcements in Kazakhstan.",
+      "description_kk": "Қазақстандағы хакатон жаңалықтары мен іс-шаралар хабарландырулары.",
+      "description_ru": "Новости и анонсы хакатонов в Казахстане.",
+      "handle": "hackathon_kz",
+      "last_verified": "2026-08-29",
+      "member_count": 254,
+      "name": "Hackathon kz"
+    },
+    {
+      "category": "jobs",
+      "description": "IT vacancies in Kazakhstan and worldwide, with salary ranges when available.",
+      "description_kk": "Қазақстандағы және әлемдегі IT бос орындары; бар болса жалақы ауқымы көрсетіледі.",
+      "description_ru": "IT-вакансии в Казахстане и мире с указанием вилки зарплаты, когда она доступна.",
+      "handle": "it_jobs_kz",
+      "last_verified": "2026-08-29",
+      "member_count": 9702,
+      "name": "IT Jobs (DSML.KZ)"
+    },
+    {
+      "category": "news",
+      "description": "News for Kazakhstan IT specialists, low-voltage systems professionals, and technology entrepreneurs.",
+      "description_kk": "Қазақстандағы IT мамандарына, әлсіз ток жүйелері мамандарына және технология кәсіпкерлеріне арналған жаңалықтар арнасы.",
+      "description_ru": "Новости для IT-специалистов, слаботочников и технологических предпринимателей Казахстана.",
+      "handle": "IT_Kazahstan",
+      "last_verified": "2026-08-29",
+      "member_count": 714,
+      "name": "IT Kazakhstan"
+    },
+    {
+      "category": "general",
+      "description": "Kolesa Group channel sharing Kazakhstan product-development experience, internships, and technology events.",
+      "description_kk": "Kolesa Group-тың Қазақстандағы өнім әзірлеу тәжірибесі, тағылымдамалары және технологиялық іс-шаралары туралы арнасы.",
+      "description_ru": "Канал Kolesa Group об опыте разработки продуктов в Казахстане, стажировках и технологических событиях.",
+      "handle": "kolesa_group",
+      "last_verified": "2026-08-29",
+      "member_count": 7116,
+      "name": "Kolesa Group"
+    },
+    {
+      "category": "jobs",
+      "description": "Data analytics and business intelligence vacancies for Kazakhstan professionals.",
+      "description_kk": "Қазақстандағы деректер талдауы және Business Intelligence мамандарына арналған бос орындар.",
+      "description_ru": "Вакансии в аналитике данных и Business Intelligence для специалистов Казахстана.",
+      "handle": "kz_bi_jobs",
+      "last_verified": "2026-08-29",
+      "member_count": 5479,
+      "name": "KZ BI Data Jobs"
+    },
+    {
+      "category": "data-analytics",
+      "description": "Kazakhstan data analytics and business intelligence news, events, and community updates.",
+      "description_kk": "Қазақстандағы деректер талдауы мен Business Intelligence жаңалықтары, іс-шаралары және қауымдастық хабарлары.",
+      "description_ru": "Новости, события и обновления казахстанского сообщества аналитики данных и Business Intelligence.",
+      "handle": "kz_bi_news",
+      "last_verified": "2026-08-29",
+      "member_count": 959,
+      "name": "KZ BI News & Events"
+    },
+    {
+      "category": "news",
+      "description": "News and analysis on B2B and B2G digitalization in Kazakhstan.",
+      "description_kk": "Қазақстандағы B2B және B2G цифрландыру туралы жаңалықтар мен талдау.",
+      "description_ru": "Новости и аналитика о цифровизации B2B и B2G в Казахстане.",
+      "handle": "sandyq_orda",
+      "last_verified": "2026-08-29",
+      "member_count": 7071,
+      "name": "Цифровая Орда 🇰🇿"
+    },
+    {
+      "category": "startups",
+      "description": "Karaganda technology and startup hub channel for events, news, and networking.",
+      "description_kk": "Қарағандыдағы технология және стартап хабының іс-шаралар, жаңалықтар және нетворкинг арнасы.",
+      "description_ru": "Канал технологического и стартап-хаба Караганды с событиями, новостями и нетворкингом.",
+      "handle": "tvkrg",
+      "last_verified": "2026-08-29",
+      "member_count": 1232,
+      "name": "Terricon Valley | IT и Бизнес | Караганда"
+    }
+  ],
+  "bots": [
+    {
+      "name": "KazPost Bot",
+      "handle": "KazPostBot",
+      "description": "Track parcels, currency rates, traffic fines via Kazpost",
+      "description_ru": "Отслеживание посылок, проверка курса валют Казпочты и штрафов ПДД",
+      "description_kk": "Қазпошта арқылы сәлемдемелерді, валюта бағамын және жол айыппұлдарын тексеру",
+      "last_verified": "2026-08-27",
+      "member_count": 99622
+    },
+    {
+      "name": "Shtraf KZ Bot",
+      "handle": "ShtrafKZBot",
+      "description": "Check and track fines, taxes, penalties",
+      "description_ru": "Проверка задолженностей и уведомления о штрафах, налогах и пенях",
+      "description_kk": "Айыппұлдарды, салықтарды және өсімпұлдарды тексеру және бақылау",
+      "last_verified": "2026-08-27"
+    },
+    {
+      "name": "Get Telegram ID Bot",
+      "handle": "Get_Telegram_ID_bot",
+      "description": "Get user and channel IDs",
+      "description_ru": "Бот сообщает ID пользователей и каналов",
+      "description_kk": "Пайдаланушылар мен арналардың ID мәнін алу",
+      "last_verified": "2026-08-27"
+    },
+    {
+      "name": "Chat Prettier Bot",
+      "handle": "chat_prettier_bot",
+      "description": "Moderation bot: warnings, bans, message cleanup",
+      "description_ru": "Бот для модерации: предупреждения, блокировки и очистка служебных сообщений",
+      "description_kk": "Модерация боты: ескерту, бұғаттау және хабарламаларды тазалау",
+      "last_verified": "2026-08-27"
+    }
+  ],
+  "categories": {
+    "ai": "AI",
+    "programming-languages": "Programming Languages",
+    "web-development": "Web Development",
+    "mobile": "Mobile Development",
+    "data-analytics": "Data & Analytics",
+    "devops-sysadmin": "DevOps & SysAdmin",
+    "security": "Security",
+    "qa-testing": "QA & Testing",
+    "gamedev": "Game Development",
+    "hardware": "Hardware & Electronics",
+    "blockchain": "Blockchain",
+    "management": "Engineering Management",
+    "general": "General",
+    "jobs": "Jobs & Careers",
+    "education": "Education & Learning",
+    "news": "News",
+    "events": "Events",
+    "startups": "Startups",
+    "marketplace": "Marketplace"
+  },
+  "category_labels": {
+    "ru": {
+      "ai": "Искусственный интеллект",
+      "programming-languages": "Языки программирования",
+      "web-development": "Веб-разработка",
+      "mobile": "Мобильная разработка",
+      "data-analytics": "Данные и аналитика",
+      "devops-sysadmin": "DevOps и системное администрирование",
+      "security": "Безопасность",
+      "qa-testing": "QA и тестирование",
+      "gamedev": "Разработка игр",
+      "hardware": "Аппаратное обеспечение и электроника",
+      "blockchain": "Блокчейн",
+      "management": "Инженерный менеджмент",
+      "general": "Общее",
+      "jobs": "Работа и карьера",
+      "education": "Образование и обучение",
+      "news": "Новости",
+      "events": "События",
+      "startups": "Стартапы",
+      "marketplace": "Маркетплейс"
+    },
+    "kk": {
+      "ai": "Жасанды интеллект",
+      "programming-languages": "Бағдарламалау тілдері",
+      "web-development": "Веб-әзірлеу",
+      "mobile": "Мобильді әзірлеу",
+      "data-analytics": "Деректер және аналитика",
+      "devops-sysadmin": "DevOps және жүйелік әкімшілендіру",
+      "security": "Қауіпсіздік",
+      "qa-testing": "QA және тестілеу",
+      "gamedev": "Ойын әзірлеу",
+      "hardware": "Аппараттық құралдар және электроника",
+      "blockchain": "Блокчейн",
+      "management": "Инженерлік басқару",
+      "general": "Жалпы",
+      "jobs": "Жұмыс және мансап",
+      "education": "Білім және оқу",
+      "news": "Жаңалықтар",
+      "events": "Іс-шаралар",
+      "startups": "Стартаптар",
+      "marketplace": "Маркетплейс"
+    }
+  },
+  "locales": [
+    "en",
+    "ru",
+    "kk"
+  ],
+  "ui": {
+    "en": {
+      "nav.languages": "Languages",
+      "nav.types": "Browse by type",
+      "nav.intents": "Browse by intent",
+      "stats.groups": "groups",
+      "stats.channels": "channels",
+      "stats.bots": "bots",
+      "stats.categories": "categories",
+      "stats.verified": "verified",
+      "section.contents": "Browse",
+      "section.purpose": "Purpose",
+      "section.groups": "Groups",
+      "section.channels": "Channels",
+      "section.bots": "Bots",
+      "section.archive": "Archive",
+      "section.contributing": "Contributing",
+      "section.data": "Machine-readable data",
+      "section.license": "License",
+      "north_star.non_goals_intro": "This catalog is not:",
+      "bots.intro": "Bots created by Kazakhstan developers:",
+      "archive.summary": "Archived communities",
+      "archive.column.type": "Type",
+      "archive.column.community": "Community",
+      "archive.column.description": "Description",
+      "archive.column.member_count": "Last known members",
+      "archive.column.last_verified": "Last verified",
+      "archive.column.died_on": "Died on",
+      "archive.column.reason": "Reason",
+      "type.group": "Group",
+      "type.channel": "Channel",
+      "type.bot": "Bot",
+      "contributing.prompt": "Contributions are welcome! Please read the contribution guidelines first.",
+      "data.download_label": "Download the canonical JSON catalog",
+      "generated.notice": "This catalog is generated. Edit data/communities.json and run python scripts/generate_readme.py; direct edits are overwritten.",
+      "license.waiver": "To the extent possible under law, the authors have waived all copyright and related rights to this work.",
+      "intent.ai": "AI",
+      "intent.startups": "Startups",
+      "intent.jobs": "Jobs",
+      "intent.events": "Events",
+      "intent.engineering": "Engineering"
+    },
+    "ru": {
+      "nav.languages": "Языки",
+      "nav.types": "По типу",
+      "nav.intents": "По задаче",
+      "stats.groups": "групп",
+      "stats.channels": "каналов",
+      "stats.bots": "бота",
+      "stats.categories": "категорий",
+      "stats.verified": "проверено",
+      "section.contents": "Навигация",
+      "section.purpose": "Назначение",
+      "section.groups": "Группы",
+      "section.channels": "Каналы",
+      "section.bots": "Боты",
+      "section.archive": "Архив",
+      "section.contributing": "Как внести вклад",
+      "section.data": "Машиночитаемые данные",
+      "section.license": "Лицензия",
+      "north_star.non_goals_intro": "Этот каталог — не:",
+      "bots.intro": "Боты казахстанских разработчиков:",
+      "archive.summary": "Архивные сообщества",
+      "archive.column.type": "Тип",
+      "archive.column.community": "Сообщество",
+      "archive.column.description": "Описание",
+      "archive.column.member_count": "Последнее число участников",
+      "archive.column.last_verified": "Последняя проверка",
+      "archive.column.died_on": "Дата закрытия",
+      "archive.column.reason": "Причина",
+      "type.group": "Группа",
+      "type.channel": "Канал",
+      "type.bot": "Бот",
+      "contributing.prompt": "Предложения приветствуются! Сначала прочитайте правила участия.",
+      "data.download_label": "Скачать канонический каталог JSON",
+      "generated.notice": "Этот каталог сгенерирован. Изменяйте data/communities.json и запускайте python scripts/generate_readme.py; прямые правки будут перезаписаны.",
+      "license.waiver": "В максимально допустимой законом мере авторы отказались от авторских и смежных прав на эту работу.",
+      "intent.ai": "ИИ",
+      "intent.startups": "Стартапы",
+      "intent.jobs": "Работа",
+      "intent.events": "События",
+      "intent.engineering": "Инженерия"
+    },
+    "kk": {
+      "nav.languages": "Тілдер",
+      "nav.types": "Түрі бойынша",
+      "nav.intents": "Бағыт бойынша",
+      "stats.groups": "топ",
+      "stats.channels": "арна",
+      "stats.bots": "бот",
+      "stats.categories": "санат",
+      "stats.verified": "тексерілді",
+      "section.contents": "Навигация",
+      "section.purpose": "Мақсаты",
+      "section.groups": "Топтар",
+      "section.channels": "Арналар",
+      "section.bots": "Боттар",
+      "section.archive": "Мұрағат",
+      "section.contributing": "Үлес қосу",
+      "section.data": "Машина оқитын деректер",
+      "section.license": "Лицензия",
+      "north_star.non_goals_intro": "Бұл каталог мыналарға арналмаған:",
+      "bots.intro": "Қазақстандық әзірлеушілер жасаған боттар:",
+      "archive.summary": "Мұрағатталған қауымдастықтар",
+      "archive.column.type": "Түрі",
+      "archive.column.community": "Қауымдастық",
+      "archive.column.description": "Сипаттама",
+      "archive.column.member_count": "Соңғы белгілі қатысушы саны",
+      "archive.column.last_verified": "Соңғы тексеру",
+      "archive.column.died_on": "Жабылған күні",
+      "archive.column.reason": "Себебі",
+      "type.group": "Топ",
+      "type.channel": "Арна",
+      "type.bot": "Бот",
+      "contributing.prompt": "Үлес қосуға болады! Алдымен үлес қосу нұсқаулығын оқыңыз.",
+      "data.download_label": "Негізгі JSON каталогын жүктеу",
+      "generated.notice": "Бұл каталог автоматты түрде жасалады. data/communities.json файлын өзгертіп, python scripts/generate_readme.py пәрменін іске қосыңыз; тікелей түзетулер қайта жазылады.",
+      "license.waiver": "Заң мүмкіндік берген шекте авторлар осы еңбекке қатысты авторлық және сабақтас құқықтардан бас тартты.",
+      "intent.ai": "Жасанды интеллект",
+      "intent.startups": "Стартаптар",
+      "intent.jobs": "Жұмыс",
+      "intent.events": "Іс-шаралар",
+      "intent.engineering": "Инженерия"
+    }
+  },
+  "readme_ui": {
+    "section.project_workflow": "Project workflow",
+    "workflow.intro": "This project uses Trace-First Workflow: decisions and their reasoning remain as durable traces instead of disappearing in chat history.",
+    "workflow.portfolio.label": "Task portfolio",
+    "workflow.portfolio.description": "every task, lifecycle, and owner; each task's status.md is authoritative",
+    "workflow.knowledge.label": "Project knowledge",
+    "workflow.knowledge.description": "architecture decisions and project principles",
+    "workflow.agents.label": "Agent contract",
+    "workflow.agents.description": "how AI agents work in this repository"
+  },
+  "intents": {
+    "ai": {
+      "categories": [
+        "ai"
+      ],
+      "exceptional_handles": [
+        "ml_jobs_kz",
+        "dsmlkz_news"
+      ]
+    },
+    "startups": {
+      "categories": [
+        "startups"
+      ],
+      "exceptional_handles": [
+        "thetechkzchat",
+        "thetechkz",
+        "saubakirov"
+      ]
+    },
+    "jobs": {
+      "categories": [
+        "jobs"
+      ],
+      "exceptional_handles": []
+    },
+    "events": {
+      "categories": [
+        "events"
+      ],
+      "exceptional_handles": []
+    },
+    "engineering": {
+      "categories": [
+        "ai",
+        "blockchain",
+        "data-analytics",
+        "devops-sysadmin",
+        "gamedev",
+        "hardware",
+        "mobile",
+        "programming-languages",
+        "qa-testing",
+        "security",
+        "web-development"
+      ],
+      "exceptional_handles": [
+        "devkz",
+        "illuminatinc",
+        "teamleads_kz",
+        "datanomika",
+        "DevSkills",
+        "nu_acm_w",
+        "sysadm_in_up",
+        "saubakirov",
+        "cleverskz",
+        "Get_Telegram_ID_bot"
+      ]
+    }
+  },
+  "localization_review": {
+    "status": "CANDIDATE",
+    "acceptance_authority": "TFW REVIEW",
+    "canonicalization": "NFC + sorted-key compact UTF-8 JSON",
+    "payload_sha256": "b07912bb12ee0429b46249853545503f1f0e2ed358f3c23af73b5e1dcdc6bc5c",
+    "prior_approved_ref": null,
+    "prior_approved_digest": null,
+    "changed_keys": "ALL",
+    "changed_key_count": 461
+  }
+}
