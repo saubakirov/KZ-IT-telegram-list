@@ -19,6 +19,7 @@
 |---|---|---|---|---|
 | [**20260828-201343__catalog_intake_commands** — Verified candidate intake and cross-tool catalog commands](2026/20260828-201343__catalog_intake_commands/status.md) | PHASES | saubakirov | Create a safe reusable command for validating and adding one or many Telegram candidates from links or a file | [HL-20260828-201343__catalog_intake_commands.md](2026/20260828-201343__catalog_intake_commands/HL-20260828-201343__catalog_intake_commands.md) |
 | &nbsp;&nbsp;↳ [A — Phase A — Intake engine and cross-tool commands](2026/20260828-201343__catalog_intake_commands/phase-a/status.md) | DONE | saubakirov | Implement lossless candidate intake and complete synchronized Claude and Codex project commands | — |
+| &nbsp;&nbsp;↳ [B — Phase B — Clean candidate run and catalog integration](2026/20260828-201343__catalog_intake_commands/phase-b/status.md) | BLOCKED | saubakirov | Evaluate the sealed holdout first, reconcile all candidate occurrences, and prepare an exact approval-bound catalog change | — |
 
 ## Closed — 3
 
