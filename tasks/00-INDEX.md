@@ -9,24 +9,21 @@
 |---|---|
 | Source | 3 task state files, 4 snapshot rows |
 | Containers searched | `tasks/` |
-| Freshness | newest task state update: 20260828-212500 |
+| Freshness | newest task state update: 20260829-122523 |
 | Unresolved inputs | 0 |
 | Generator | `python docs/scripts/gen_index.py` |
 
-## In flight — 1
+## In flight — 0
 
-| Task | Lifecycle | Owner | Goal | Authority |
-|---|---|---|---|---|
-| [**20260828-201343__catalog_intake_commands** — Verified candidate intake and cross-tool catalog commands](2026/20260828-201343__catalog_intake_commands/status.md) | PHASES | saubakirov | Create a safe reusable command for validating and adding one or many Telegram candidates from links or a file | [HL-20260828-201343__catalog_intake_commands.md](2026/20260828-201343__catalog_intake_commands/HL-20260828-201343__catalog_intake_commands.md) |
-| &nbsp;&nbsp;↳ [A — Phase A — Intake engine and cross-tool commands](2026/20260828-201343__catalog_intake_commands/phase-a/status.md) | DONE | saubakirov | Implement lossless candidate intake and complete synchronized Claude and Codex project commands | — |
-| &nbsp;&nbsp;↳ [B — Phase B — Clean candidate run and catalog integration](2026/20260828-201343__catalog_intake_commands/phase-b/status.md) | RF | saubakirov | Evaluate the sealed holdout first, reconcile all candidate occurrences, and prepare an exact approval-bound catalog change | — |
+No task is in flight.
 
-## Closed — 3
+## Closed — 4
 
 | Task | Outcome | Record |
 |---|---|---|
 | **TFW-4** — Showcase reorganization | DONE · Four reviewed phases completed; verified snapshot data-2026-08-27 published and project memory closed | [state](TFW-4__showcase_reorg/status.md) |
 | **20260827-132641__catalog_discoverability** — Catalog discoverability and multilingual presentation | DONE · Published and verified the multilingual discovery surface while preserving the approved catalog data and generated-body contract | [state](2026/20260827-132641__catalog_discoverability/status.md) |
+| **20260828-201343__catalog_intake_commands** — Verified candidate intake and cross-tool catalog commands | DONE · Delivered lossless intake commands and exact evidence-backed integration of 20 verified Telegram communities across Claude and Codex | [state](2026/20260828-201343__catalog_intake_commands/status.md) |
 | **TFW-3** — Initialize TFW 1.3.0 — framework install, Claude Code adapter, legacy migration | ✅ DONE | [task folder](TFW-3__tfw_init/) |
 
 1 of those closed before TFW 2.0.0 and carry no state file.

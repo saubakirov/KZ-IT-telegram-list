@@ -65,8 +65,8 @@ The task advances to `KNW`. This verdict does not perform `/tfw-docs` or `/tfw-k
 - [x] HL status — not modified; Reviewer role lock applies and phase lifecycle lives in `status.md`.
 - [x] Phase B `status.md` — `updated: 20260829-121840`.
 - [x] Other project files — checked; the derived task index is non-authoritative and its KNW refresh remains part of pending docs work.
-- [ ] tfw-docs: Deferred — pending Coordinator workflow.
-- [ ] tfw-knowledge: Deferred — pending Coordinator workflow; no current human-only Fact Candidates.
+- [x] tfw-docs: N/A (minor) — Phase B applies the existing D21 contract without a new architecture decision, deprecation, or convention; TD-20 and TD-21 are already recorded.
+- [x] tfw-knowledge: N/A — Phase B RF/REVIEW/RES contain no Fact Candidates; the execution insight is discoverable from the reviewed contract and fails the Human-Only Test.
 
 ## 7. Fact Candidates
 
