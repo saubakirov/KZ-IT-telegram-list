@@ -1,0 +1,60 @@
+{
+  "controlled_sha256": {
+    "README.md": "6a617bb1fa77e990c4a99be95f300a4c683037d268939e55c55239a6f6a19f22",
+    "data/communities.json": "2e22e23bad0c7f4672ea66db8388b003f428c1c97c1e654d25255342a94883be",
+    "index.md": "86a3fdba59ee980ba967a68f93fcbf3ff83b5872e357a7610e1d21aa583cd151",
+    "kk/index.md": "225be2519c01d20291ba8a1925a53e30e1ed04d3b02c9090c93910e1d92be894",
+    "ru/index.md": "188e82cc64017a5c839bb23613641262e0ff86ab946bd0b94b7befbb0ed96184"
+  },
+  "result": "exact_reviewed_controlled_bytes_with_recorded_validation_surface",
+  "schema_version": "kz-intake-apply-stage/v1",
+  "validation_surface_sha256": {
+    ".agents/skills/kz-add/SKILL.md": "783fb0f0acc63b484d431d2a4fff9cd2fb65fd75d711ae94dad00d059c9a2414",
+    ".agents/skills/kz-release/SKILL.md": "2d40318e9f4f6e12c4a2d6ed54e9d4119ac007769c0fbe63014d36260ceda8fc",
+    ".agents/skills/kz-stats/SKILL.md": "063e7d6043f205bb214d9019c4ad95c02a1e517aa4ac30aa28e53e3d915fcbbe",
+    ".claude/commands/kz-add.md": "783fb0f0acc63b484d431d2a4fff9cd2fb65fd75d711ae94dad00d059c9a2414",
+    ".claude/commands/kz-release.md": "2d40318e9f4f6e12c4a2d6ed54e9d4119ac007769c0fbe63014d36260ceda8fc",
+    ".claude/commands/kz-stats.md": "063e7d6043f205bb214d9019c4ad95c02a1e517aa4ac30aa28e53e3d915fcbbe",
+    "scripts/generate_readme.py": "02b0f15b9cbdccf20edbfff94c2d5c7a98e96156af15fb3dc982f66bbc924701",
+    "scripts/kz_intake.py": "0c032b5c47331163c201ef133258575084a7dfd8d49cb8ac91fe1db2d04f6a14",
+    "scripts/sync_kz_commands.py": "9d474eccb5f975392b4f7853f24d2a3b32d2a7f67cf019bed9ef13496859f7c9",
+    "scripts/test_catalog_generation.py": "bca900ba039597722cd7169d67ead2ab6ab8fc3fabde1588785da6a25bf10de0",
+    "scripts/test_kz_commands.py": "d4a2a518789f899cb1ce15212c0e8b30b7c51f3c29f35dcac0e978da2445a7e3",
+    "scripts/test_kz_intake.py": "dc62b2bc9afd5c413a53706c3ca22ada9cc4b0ed2014cd48643619ad698997e8",
+    "scripts/test_site_metadata.py": "230d6a0763a2e3a76efa7a7d7f008ec3fcf4fa096c6571474a0d1a9cfdf4c180",
+    "scripts/validate_links.py": "66facf97a6512c6bf9796b8467418f99b29af8b7972cee37fd2923af6bb28873",
+    "scripts/validate_schema.py": "6b52468a2adb55e9dc91ed301ba8f7e34cb2e3cfe7f900bf5f14895078134004",
+    "stage_invariant_tests.py": "62fa20ebfbd0ca4602c345a4a0eed631856694dd24ff47945ca97995848065c1"
+  },
+  "validations": [
+    {
+      "command": [
+        "D:\\python\\Python313\\python.exe",
+        "scripts/validate_schema.py"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "[INFO] Validating 42 groups...\n[INFO] Validating 36 channels...\n[INFO] Validating 4 bots...\n[INFO] Freshness: oldest_live=2026-08-27; older_than_90_days=0\n[INFO] Categories: 19\n[INFO] Archive entries: 2\n[INFO] Locale payload: keys=en:159,ru:151,kk:151; sha256=b07912bb12ee0429b46249853545503f1f0e2ed358f3c23af73b5e1dcdc6bc5c\n[INFO] Errors: 0\n[SUCCESS] Schema is valid\n"
+    },
+    {
+      "command": [
+        "D:\\python\\Python313\\python.exe",
+        "scripts/generate_readme.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "[SUCCESS] All 4 catalog projections are generator-current\n[INFO] Locale payload sha256=b07912bb12ee0429b46249853545503f1f0e2ed358f3c23af73b5e1dcdc6bc5c\n"
+    },
+    {
+      "command": [
+        "D:\\python\\Python313\\python.exe",
+        "scripts/sync_kz_commands.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "[OK] synchronized complete command inventory: kz-add, kz-stats, kz-release\n"
+    }
+  ]
+}

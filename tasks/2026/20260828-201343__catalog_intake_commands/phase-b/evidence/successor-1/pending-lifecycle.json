@@ -1,0 +1,16 @@
+{
+  "approval_sha256": "5b85d0657fd6e4412cdfd81d1b34b2a124d0a4daaaa9d36b8f3b4a5672af261b",
+  "before_state": [
+    "B",
+    "B",
+    "B",
+    "B",
+    "B"
+  ],
+  "execution_id": "eb936a16d77ab45c0fe23fb337fbb281e1bc25a62b4db874685c53e3be5a2f52",
+  "payload_sha256": "2c15bda20e49c81db83a442da4ebf9010fdba8240b8a28c5678b8e856dc7b9d7",
+  "pending_path": "phase-b/evidence/successor-1/pending.json",
+  "pending_removed_after_exact_success": true,
+  "receipt_outcome": "applied_exact",
+  "schema_version": "kz-intake-pending-lifecycle-evidence/v1"
+}
