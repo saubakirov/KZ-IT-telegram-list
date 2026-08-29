@@ -625,7 +625,7 @@ class ActionStageBindingTests(unittest.TestCase):
         self._write_expected()
         preview = intake.build_preview(**self.bundle, root=self.root, stage_root=self.stage)
         staged = json.loads((self.stage / "data/communities.json").read_text(encoding="utf-8"))
-        self.assertEqual(staged["localization_review"]["changed_key_count"], 404)
+        self.assertEqual(staged["localization_review"]["changed_key_count"], 464)
         self.assertEqual(staged["localization_review"]["payload_sha256"],
                          validate_schema.review_payload_sha256(staged))
         receipt = intake.apply_preview(self.root, self.stage, preview, self._approval(preview),

@@ -53,8 +53,10 @@ except ImportError:  # Direct script execution.
     )
 
 PROJECT_ROOT = Path(__file__).parent.parent
-APPROVED_PHASE_A_REF = "d9fe27c6dce80008326fa8eb731d3aff40fd3726"
-APPROVED_LOCALE_DIGEST = "51db402da00f85f25dd533d415c9d7941402c69b5892952882bafc6122d2a6fc"
+# Pinned to the reviewed post-apply snapshot of 20260828-201343__catalog_intake_commands
+# Phase B (82 live entries), which superseded the Phase A pre-apply snapshot. See TD-20.
+APPROVED_PHASE_A_REF = "cc2ac3cfadf9a9797bd019daacd9bdfdab0a02a5"
+APPROVED_LOCALE_DIGEST = "b07912bb12ee0429b46249853545503f1f0e2ed358f3c23af73b5e1dcdc6bc5c"
 PHASE_A_TEST_NAMES = {
     "test_production_schema_and_review_binding",
     "test_all_outputs_are_current_and_semantically_valid",
@@ -115,12 +117,12 @@ class CatalogGenerationTests(unittest.TestCase):
         )
 
     def test_production_schema_and_review_binding(self) -> None:
-        errors, freshness = validate_data(self.data, today=date(2026, 8, 27))
+        errors, freshness = validate_data(self.data, today=date(2026, 8, 29))
         self.assertEqual([], errors)
         self.assertEqual(0, freshness["stale_count"])
         payload = build_review_payload(self.data)
-        self.assertEqual({"en": 139, "ru": 131, "kk": 131}, {key: len(value) for key, value in payload.items()})
-        self.assertEqual(401, len(review_payload_keys(self.data)))
+        self.assertEqual({"en": 159, "ru": 151, "kk": 151}, {key: len(value) for key, value in payload.items()})
+        self.assertEqual(461, len(review_payload_keys(self.data)))
         self.assertEqual(
             self.data["localization_review"]["payload_sha256"],
             review_payload_sha256(self.data),
@@ -181,10 +183,10 @@ class CatalogGenerationTests(unittest.TestCase):
             counts[intent] = len(selected)
             union.update(selected)
         self.assertEqual(
-            {"ai": 3, "startups": 3, "jobs": 6, "events": 1, "engineering": 46},
+            {"ai": 4, "startups": 5, "jobs": 10, "events": 2, "engineering": 54},
             counts,
         )
-        self.assertEqual(55, len(union))
+        self.assertEqual(70, len(union))
 
     def test_special_character_fixture_is_portable(self) -> None:
         raw = r"Pipe | [brackets] *emphasis* _underscore_ `backtick` \\ <angle> & ampersand"
