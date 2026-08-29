@@ -1,0 +1,18 @@
+{
+  "authority_result": "executor_render_complete_persistent_reviewer_pending",
+  "checks": {
+    "all_20_ordered_add_ids_present": true,
+    "all_28_dispositions_and_reasons_present": true,
+    "all_29_occurrences_present": true,
+    "all_five_before_expected_after_hashes_present": true,
+    "all_proposed_fields_and_en_ru_kk_copy_present": true,
+    "exact_owner_statement_present_and_marked_non_authoritative": true,
+    "payload_and_actions_sha_present": true,
+    "stage_snapshot_limitation_not_misreported_as_full_pass": true
+  },
+  "readiness_sha256": "ef9097ee2144f25915430a22748a333ced52ad0309f3a024f9135b5997f5dc7d",
+  "result": "complete_executor_render_only",
+  "reviewer_readiness_sha256": null,
+  "reviewer_state_at_render": "PERSISTENT_REVIEWER_AUDIT_PENDING",
+  "schema_version": "kz-intake-readiness-render-audit/v1"
+}

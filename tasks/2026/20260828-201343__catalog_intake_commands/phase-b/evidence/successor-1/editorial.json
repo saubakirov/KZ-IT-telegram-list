@@ -1,0 +1,366 @@
+[
+  {
+    "candidate_id": "candidate:ai_qadam_kazakhstan",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:ai_qadam_kazakhstan",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:ai_qadam_kazakhstan",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:ai_qadam_kazakhstan"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:allkzit",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:allkzit",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:allkzit",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:allkzit"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:anykeykz",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:anykeykz",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:anykeykz",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:anykeykz"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:astana_hub",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:astana_hub",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:astana_hub",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:astana_hub"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:astanajkugoutputstream",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:astanajkugoutputstream",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:astanajkugoutputstream",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:astanajkugoutputstream"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:aws_kz",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:aws_kz",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:aws_kz",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:aws_kz"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:blockchainkz",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:blockchainkz",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:blockchainkz",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:blockchainkz"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:devopskaz",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:devopskaz",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:devopskaz",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:devopskaz"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:devs_kz",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:devs_kz",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:devs_kz",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:devs_kz"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:digitalbussinesskz",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:digitalbussinesskz",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:digitalbussinesskz",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:digitalbussinesskz"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:ethkz",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:ethkz",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:ethkz",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:ethkz"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:go_kz_vacancy",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:go_kz_vacancy",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:go_kz_vacancy",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:go_kz_vacancy"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:hackathon_kz",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:hackathon_kz",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:hackathon_kz",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:hackathon_kz"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:helpfixit",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:helpfixit",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:helpfixit",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:helpfixit"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": false,
+    "locales_complete": false,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:it_jobs_kz",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:it_jobs_kz",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:it_jobs_kz",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:it_jobs_kz"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:it_kazahstan",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:it_kazahstan",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:it_kazahstan",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:it_kazahstan"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:itbazarkzchannel",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:itbazarkzchannel",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:itbazarkzchannel",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:itbazarkzchannel"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": false,
+    "purely_commercial": true
+  },
+  {
+    "candidate_id": "candidate:itqazaqstan",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:itqazaqstan",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:itqazaqstan",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:itqazaqstan"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": false,
+    "purely_commercial": true
+  },
+  {
+    "candidate_id": "candidate:kazakhtelecom_official",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:kazakhtelecom_official",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:kazakhtelecom_official",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:kazakhtelecom_official"
+    ],
+    "it_relevant": false,
+    "kazakhstan_relevant": true,
+    "locales_complete": false,
+    "purely_commercial": true
+  },
+  {
+    "candidate_id": "candidate:kolesa_group",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:kolesa_group",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:kolesa_group",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:kolesa_group"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:kz_bi_jobs",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:kz_bi_jobs",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:kz_bi_jobs",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:kz_bi_jobs"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:kz_bi_news",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:kz_bi_news",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:kz_bi_news",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:kz_bi_news"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:nfactorial_school",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:nfactorial_school",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:nfactorial_school",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:nfactorial_school"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": false,
+    "purely_commercial": true
+  },
+  {
+    "candidate_id": "candidate:qaz_qa_vacancies",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:qaz_qa_vacancies",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:qaz_qa_vacancies",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:qaz_qa_vacancies"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": false,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:rootway",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:rootway",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:rootway",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:rootway"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": false,
+    "locales_complete": false,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:sandyq_orda",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:sandyq_orda",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:sandyq_orda",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:sandyq_orda"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:sysadm_in_job",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:sysadm_in_job",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:sysadm_in_job",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:sysadm_in_job"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": false,
+    "locales_complete": false,
+    "purely_commercial": false
+  },
+  {
+    "candidate_id": "candidate:tvkrg",
+    "category_valid": true,
+    "evidence_refs": [
+      "phase-b/evidence/successor-1/observations.json candidate_id=candidate:tvkrg",
+      "phase-b/evidence/successor-1/editorial-public-evidence.json candidate_id=candidate:tvkrg",
+      "phase-b/evidence/successor-1/collisions.json candidate_id=candidate:tvkrg"
+    ],
+    "it_relevant": true,
+    "kazakhstan_relevant": true,
+    "locales_complete": true,
+    "purely_commercial": false
+  }
+]

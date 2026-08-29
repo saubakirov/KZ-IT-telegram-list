@@ -1,0 +1,246 @@
+{
+  "occurrences": [
+    {
+      "action": "add",
+      "candidate_id": "candidate:astana_hub",
+      "occurrence_id": "occurrence:0001",
+      "raw_text": "https://t.me/astana_hub",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category startups.",
+      "source_ordinal": 1
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:blockchainkz",
+      "occurrence_id": "occurrence:0002",
+      "raw_text": "https://t.me/blockchainkz",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category blockchain.",
+      "source_ordinal": 2
+    },
+    {
+      "action": "duplicate",
+      "candidate_id": "candidate:itbazarkzchannel",
+      "occurrence_id": "occurrence:0003",
+      "raw_text": "https://t.me/itbazarkzchannel",
+      "reason": "The public description points to live catalog group @itbazarkz and retained channel messages redirect to that group, so this advertising mirror is a canonical duplicate.",
+      "source_ordinal": 3
+    },
+    {
+      "action": "unresolved",
+      "candidate_id": "candidate:qaz_qa_vacancies",
+      "occurrence_id": "occurrence:0004",
+      "raw_text": "https://t.me/qaz_qa_vacancies",
+      "reason": "The target name and online count suggest Kazakhstan QA vacancies, but no public description or messages expose scope, rules, or spam risk; admission remains unresolved.",
+      "source_ordinal": 4
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:hackathon_kz",
+      "occurrence_id": "occurrence:0005",
+      "raw_text": "https://t.me/hackathon_kz",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category events.",
+      "source_ordinal": 5
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:kz_bi_news",
+      "occurrence_id": "occurrence:0006",
+      "raw_text": "https://t.me/kz_bi_news",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category data-analytics.",
+      "source_ordinal": 6
+    },
+    {
+      "action": "reject",
+      "candidate_id": "candidate:nfactorial_school",
+      "occurrence_id": "occurrence:0007",
+      "raw_text": "https://t.me/nfactorial_school",
+      "reason": "The retained public description and recent posts are a school lead funnel with consultation and WhatsApp sales calls; it fails the purely-commercial gate.",
+      "source_ordinal": 7
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:devs_kz",
+      "occurrence_id": "occurrence:0008",
+      "raw_text": "https://t.me/devs_kz",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs.",
+      "source_ordinal": 8
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:devopskaz",
+      "occurrence_id": "occurrence:0009",
+      "raw_text": "https://t.me/devopskaz",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin.",
+      "source_ordinal": 9
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:kolesa_group",
+      "occurrence_id": "occurrence:0010",
+      "raw_text": "https://t.me/kolesa_group",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category general.",
+      "source_ordinal": 10
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:allkzit",
+      "occurrence_id": "occurrence:0011",
+      "raw_text": "https://t.me/allkzit",
+      "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category general.",
+      "source_ordinal": 11
+    },
+    {
+      "action": "unresolved",
+      "candidate_id": "candidate:rootway",
+      "occurrence_id": "occurrence:0012",
+      "raw_text": "https://t.me/rootway",
+      "reason": "The public target is a live system-administration learning channel, but retained evidence contains no Kazakhstan audience or relevance signal; admission remains unresolved.",
+      "source_ordinal": 12
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:ethkz",
+      "occurrence_id": "occurrence:0013",
+      "raw_text": "https://t.me/ethkz",
+      "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin.",
+      "source_ordinal": 13
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:tvkrg",
+      "occurrence_id": "occurrence:0014",
+      "raw_text": "https://t.me/tvkrg",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category startups.",
+      "source_ordinal": 14
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:digitalbussinesskz",
+      "occurrence_id": "occurrence:0015",
+      "raw_text": "https://t.me/digitalbussinesskz",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category news.",
+      "source_ordinal": 15
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:aws_kz",
+      "occurrence_id": "occurrence:0016",
+      "raw_text": "https://t.me/aws_kz",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin.",
+      "source_ordinal": 16
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:astanajkugoutputstream",
+      "occurrence_id": "occurrence:0017",
+      "raw_text": "https://t.me/astanajkugoutputstream",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category programming-languages.",
+      "source_ordinal": 17
+    },
+    {
+      "action": "unresolved",
+      "candidate_id": "candidate:helpfixit",
+      "occurrence_id": "occurrence:0018",
+      "raw_text": "https://t.me/helpfixit",
+      "reason": "Public evidence verifies a live computer-help group but contains no Kazakhstan audience or relevance signal; admission remains unresolved.",
+      "source_ordinal": 18
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:anykeykz",
+      "occurrence_id": "occurrence:0019",
+      "raw_text": "https://t.me/anykeykz",
+      "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin.",
+      "source_ordinal": 19
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:it_jobs_kz",
+      "occurrence_id": "occurrence:0020",
+      "raw_text": "https://t.me/it_jobs_kz",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs.",
+      "source_ordinal": 20
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:kz_bi_jobs",
+      "occurrence_id": "occurrence:0021",
+      "raw_text": "https://t.me/kz_bi_jobs",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs.",
+      "source_ordinal": 21
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:go_kz_vacancy",
+      "occurrence_id": "occurrence:0022",
+      "raw_text": "https://t.me/go_kz_vacancy",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs.",
+      "source_ordinal": 22
+    },
+    {
+      "action": "unresolved",
+      "candidate_id": "candidate:sysadm_in_job",
+      "occurrence_id": "occurrence:0023",
+      "raw_text": "https://t.me/sysadm_in_job",
+      "reason": "The public target is a live IT jobs group with rules, but no retained target evidence establishes Kazakhstan audience or relevance; admission remains unresolved.",
+      "source_ordinal": 23
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:aws_kz",
+      "occurrence_id": "occurrence:0024",
+      "raw_text": "https://t.me/aws_kz",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin.",
+      "source_ordinal": 24
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:sandyq_orda",
+      "occurrence_id": "occurrence:0025",
+      "raw_text": "https://t.me/sandyq_orda",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category news.",
+      "source_ordinal": 25
+    },
+    {
+      "action": "reject",
+      "candidate_id": "candidate:kazakhtelecom_official",
+      "occurrence_id": "occurrence:0026",
+      "raw_text": "https://t.me/kazakhtelecom_official",
+      "reason": "The target is an official telecom operator corporate feed, not an IT community or specialist resource; it fails community-scope and commerciality gates.",
+      "source_ordinal": 26
+    },
+    {
+      "action": "reject",
+      "candidate_id": "candidate:itqazaqstan",
+      "occurrence_id": "occurrence:0027",
+      "raw_text": "https://t.me/itqazaqstan",
+      "reason": "The public description centers paid service access, promotions, and integrator work; commercial/spam risk fails the non-commercial admission gate.",
+      "source_ordinal": 27
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:it_kazahstan",
+      "occurrence_id": "occurrence:0028",
+      "raw_text": "https://t.me/IT_Kazahstan",
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category news.",
+      "source_ordinal": 28
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:ai_qadam_kazakhstan",
+      "occurrence_id": "occurrence:0029",
+      "raw_text": "https://t.me/ai_qadam_kazakhstan",
+      "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category ai.",
+      "source_ordinal": 29
+    }
+  ],
+  "schema_version": "kz-intake-occurrence-accounting/v1",
+  "totals": {
+    "accounted_occurrences": 29,
+    "add_cases": 20,
+    "candidate_cases": 28,
+    "duplicate_cases": 1,
+    "reject_cases": 3,
+    "source_occurrences": 29,
+    "unresolved_cases": 4
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "actions_sha256": "bc9316cd181d7abc9bc8f5b095a81255fff5b7d87039c89b558e7fabde695ac7",
+  "artifact_sha256": {
+    "action-digest.json": "6af93c0faa91354561251ccaaf24f163f48875483cf57a5c94c71ea5f19ef32f",
+    "actions.json": "11302d1e53eef5f089b68d4ed454818f333f8f3d5001bed6e3062d8cb04eae60",
+    "bundle.json": "6d2f8b0715ee6c58aa2925c4ee2ff277d6cf9a31b9234363ce35ea2ddae92a02",
+    "collisions.json": "2d6d9c4701654dc9defc8e17cd9027399ca85c94fd7533ac17b4751f428b54f0",
+    "controlled-hashes.json": "697457a3dce7bffdc0f05970086163d35d0b78d869944c5ba1dbbad6aedd03fe",
+    "editorial-public-evidence.json": "8fe526f98fb3406395956d7a50e6d5981145081f1d22300bd75d11c6866323ca",
+    "editorial.json": "4bcc23ada53e71fc3ce3e00f13ecbff2e370390b99ce508462c6108e04a28f3b",
+    "judgements.json": "71d2cd8b94b0ab7ad448ddd3e5da583347c4e84c90150125fea552b115db43a8",
+    "ledger.json": "e81683423dd0ea048ea79013cc56e8dbd893a51dd4a1e240f1a564558aa39bf6",
+    "observations.json": "85ebd755d6649e51b963ad6861915987a1fe9153f0ffc965a2164d4a20ea4422",
+    "occurrence-accounting.json": "ce1e5438993979f707ad9191b48e2d795185f72c5fbeda9638f3b5a9ab9f20db",
+    "preview.json": "2c15bda20e49c81db83a442da4ebf9010fdba8240b8a28c5678b8e856dc7b9d7",
+    "preview.md": "a684ecb6614f66d2a15b26cd146da5cd78a08d2d4b7e0e4b0e075f681ab981f0",
+    "readiness.md": "ef9097ee2144f25915430a22748a333ced52ad0309f3a024f9135b5997f5dc7d",
+    "renderer-audit.json": "70c57b8feffe5324466db8ea6c45dfac5ca7953de8a070772b91fb9b50cec9dc",
+    "stage-manifest.json": "67fdb0840caac38a6fdec8abb24617fee5a822f0b0f7d15e7398561e47688e21"
+  },
+  "changed_proposed_member_counts": [
+    {
+      "before": 13572,
+      "candidate_id": "candidate:astana_hub",
+      "successor": 13568
+    },
+    {
+      "before": 8362,
+      "candidate_id": "candidate:digitalbussinesskz",
+      "successor": 8361
+    },
+    {
+      "before": 1227,
+      "candidate_id": "candidate:ethkz",
+      "successor": 1226
+    },
+    {
+      "before": 9702,
+      "candidate_id": "candidate:it_jobs_kz",
+      "successor": 9703
+    },
+    {
+      "before": 7116,
+      "candidate_id": "candidate:kolesa_group",
+      "successor": 7117
+    },
+    {
+      "before": 5479,
+      "candidate_id": "candidate:kz_bi_jobs",
+      "successor": 5478
+    }
+  ],
+  "checks": {
+    "actions_remain_20_3_1_4": true,
+    "all_exact_live_archive_collisions_clear": true,
+    "all_five_production_paths_equal_before": true,
+    "copy_and_other_proposed_fields_unchanged": true,
+    "fresh_observations_reused_without_probe": true,
+    "isolated_stage_equals_preview_after": true,
+    "old_bound_artifacts_equal_c2725b3": true,
+    "only_aws_kz_cross_input_duplicate": true,
+    "only_six_add_member_counts_changed": true,
+    "persistent_reviewer_audit_pending": true,
+    "staged_schema_generator_and_41_invariants_passed": true,
+    "successor_approval_envelope_absent": true,
+    "unchanged_production_45_tests_passed": true
+  },
+  "controlled_before_sha256": {
+    "README.md": "3b1d70624d7f529c6e7f712574783d468afe5025d6c1bc0173466dd80d5c016d",
+    "data/communities.json": "a46f893d6d73e2ecc760913be9075873b79470b675807cc585933cb457cf963d",
+    "index.md": "4fe0fc8eb8e1f5cb996bda984380daa4b472e8fcef15b9b3ed57de7a765890e3",
+    "kk/index.md": "64227b9e7062308cf12fd995b3b542409806b543b66d91df5c36adc3cb8ef2a7",
+    "ru/index.md": "36002ff6591b18197f745254d3779b797995853e765a4e452d293f9229db0e97"
+  },
+  "controlled_expected_after_sha256": {
+    "README.md": "6a617bb1fa77e990c4a99be95f300a4c683037d268939e55c55239a6f6a19f22",
+    "data/communities.json": "2e22e23bad0c7f4672ea66db8388b003f428c1c97c1e654d25255342a94883be",
+    "index.md": "86a3fdba59ee980ba967a68f93fcbf3ff83b5872e357a7610e1d21aa583cd151",
+    "kk/index.md": "225be2519c01d20291ba8a1925a53e30e1ed04d3b02c9090c93910e1d92be894",
+    "ru/index.md": "188e82cc64017a5c839bb23613641262e0ff86ab946bd0b94b7befbb0ed96184"
+  },
+  "limitations": [
+    "No new public probe was run; successor 1 consumes the committed freshness observations exactly.",
+    "The retained public observations are point-in-time evidence and require another exact freshness gate before any later apply.",
+    "Persistent Reviewer readiness and a new exact current owner approval are both absent."
+  ],
+  "ordered_add_candidate_ids": [
+    "candidate:ai_qadam_kazakhstan",
+    "candidate:allkzit",
+    "candidate:anykeykz",
+    "candidate:astana_hub",
+    "candidate:astanajkugoutputstream",
+    "candidate:aws_kz",
+    "candidate:blockchainkz",
+    "candidate:devopskaz",
+    "candidate:devs_kz",
+    "candidate:digitalbussinesskz",
+    "candidate:ethkz",
+    "candidate:go_kz_vacancy",
+    "candidate:hackathon_kz",
+    "candidate:it_jobs_kz",
+    "candidate:it_kazahstan",
+    "candidate:kolesa_group",
+    "candidate:kz_bi_jobs",
+    "candidate:kz_bi_news",
+    "candidate:sandyq_orda",
+    "candidate:tvkrg"
+  ],
+  "payload_sha256": "2c15bda20e49c81db83a442da4ebf9010fdba8240b8a28c5678b8e856dc7b9d7",
+  "predecessor_commit": "c2725b329664a402332341a064cfca19a0928532",
+  "preview_file_sha256": "2c15bda20e49c81db83a442da4ebf9010fdba8240b8a28c5678b8e856dc7b9d7",
+  "result": "verified_executor_successor_readiness_reviewer_pending",
+  "schema_version": "kz-intake-successor-readiness-audit/v1",
+  "totals": {
+    "add": 20,
+    "candidates": 28,
+    "duplicate": 1,
+    "observed": 28,
+    "occurrences": 29,
+    "reject": 3,
+    "unresolved": 4
+  }
+}

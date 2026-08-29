@@ -1,0 +1,155 @@
+{
+  "actions_sha256": "bc9316cd181d7abc9bc8f5b095a81255fff5b7d87039c89b558e7fabde695ac7",
+  "checks": {
+    "catalog_intake_command_regressions_passed": true,
+    "command_adapter_sync_passed": true,
+    "four_baseline_snapshot_only_tests_classified_not_modified": true,
+    "generator_currency_passed": true,
+    "production_controlled_paths_written": false,
+    "python_compile_passed": true,
+    "retained_bytes_equal_expected_action_stage": true,
+    "schema_validation_passed": true,
+    "temporary_bytes_equal_retained_stage": true
+  },
+  "controlled_paths": [
+    {
+      "bytes": 58346,
+      "path": "data/communities.json",
+      "sha256": "2e22e23bad0c7f4672ea66db8388b003f428c1c97c1e654d25255342a94883be"
+    },
+    {
+      "bytes": 21697,
+      "path": "README.md",
+      "sha256": "6a617bb1fa77e990c4a99be95f300a4c683037d268939e55c55239a6f6a19f22"
+    },
+    {
+      "bytes": 21606,
+      "path": "index.md",
+      "sha256": "86a3fdba59ee980ba967a68f93fcbf3ff83b5872e357a7610e1d21aa583cd151"
+    },
+    {
+      "bytes": 29091,
+      "path": "ru/index.md",
+      "sha256": "188e82cc64017a5c839bb23613641262e0ff86ab946bd0b94b7befbb0ed96184"
+    },
+    {
+      "bytes": 30087,
+      "path": "kk/index.md",
+      "sha256": "225be2519c01d20291ba8a1925a53e30e1ed04d3b02c9090c93910e1d92be894"
+    }
+  ],
+  "full_suite_stage_snapshot_probe": {
+    "classification": "baseline_snapshot_expectations_only",
+    "command": [
+      "D:\\python\\Python313\\python.exe",
+      "-m",
+      "unittest",
+      "scripts.test_catalog_generation",
+      "scripts.test_kz_intake",
+      "scripts.test_kz_commands",
+      "-q"
+    ],
+    "returncode": 1,
+    "stderr": "usage: python.exe -m unittest parse [-h] (--text TEXT | --file FILE)\n                                    [--output OUTPUT]\npython.exe -m unittest parse: error: one of the arguments --text --file is required\nusage: python.exe -m unittest parse [-h] (--text TEXT | --file FILE)\n                                    [--output OUTPUT]\npython.exe -m unittest parse: error: argument --file: not allowed with argument --text\n======================================================================\nFAIL: test_intent_membership_matches_reviewed_snapshot (scripts.test_catalog_generation.CatalogGenerationTests.test_intent_membership_matches_reviewed_snapshot)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"E:\\TEMP\\kz-intake-phase-b-stage-al61pfh5\\scripts\\test_catalog_generation.py\", line 183, in test_intent_membership_matches_reviewed_snapshot\n    self.assertEqual(\n    ~~~~~~~~~~~~~~~~^\n        {\"ai\": 3, \"startups\": 3, \"jobs\": 6, \"events\": 1, \"engineering\": 46},\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        counts,\n        ^^^^^^^\n    )\n    ^\nAssertionError: {'ai': 3, 'startups': 3, 'jobs': 6, 'events': 1, 'engineering': 46} != {'ai': 4, 'startups': 5, 'jobs': 10, 'events': 2, 'engineering': 54}\n- {'ai': 3, 'engineering': 46, 'events': 1, 'jobs': 6, 'startups': 3}\n?        ^                  -            ^          ^              ^\n\n+ {'ai': 4, 'engineering': 54, 'events': 2, 'jobs': 10, 'startups': 5}\n?        ^                 +             ^          ^^              ^\n\n\n======================================================================\nFAIL: test_phase_a_body_digest_readme_and_test_contract_are_preserved (scripts.test_catalog_generation.CatalogGenerationTests.test_phase_a_body_digest_readme_and_test_contract_are_preserved)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"E:\\TEMP\\kz-intake-phase-b-stage-al61pfh5\\scripts\\test_catalog_generation.py\", line 304, in test_phase_a_body_digest_readme_and_test_contract_are_preserved\n    self.assertEqual(APPROVED_LOCALE_DIGEST, review_payload_sha256(self.data))\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: '51db402da00f85f25dd533d415c9d7941402c69b5892952882bafc6122d2a6fc' != 'b07912bb12ee0429b46249853545503f1f0e2ed358f3c23af73b5e1dcdc6bc5c'\n- 51db402da00f85f25dd533d415c9d7941402c69b5892952882bafc6122d2a6fc\n+ b07912bb12ee0429b46249853545503f1f0e2ed358f3c23af73b5e1dcdc6bc5c\n\n\n======================================================================\nFAIL: test_production_schema_and_review_binding (scripts.test_catalog_generation.CatalogGenerationTests.test_production_schema_and_review_binding)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"E:\\TEMP\\kz-intake-phase-b-stage-al61pfh5\\scripts\\test_catalog_generation.py\", line 122, in test_production_schema_and_review_binding\n    self.assertEqual({\"en\": 139, \"ru\": 131, \"kk\": 131}, {key: len(value) for key, value in payload.items()})\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'en': 139, 'ru': 131, 'kk': 131} != {'en': 159, 'ru': 151, 'kk': 151}\n- {'en': 139, 'kk': 131, 'ru': 131}\n?         ^          ^          ^\n\n+ {'en': 159, 'kk': 151, 'ru': 151}\n?         ^          ^          ^\n\n\n======================================================================\nFAIL: test_exact_add_is_bound_and_apply_accepts_only_its_generated_stage (scripts.test_kz_intake.ActionStageBindingTests.test_exact_add_is_bound_and_apply_accepts_only_its_generated_stage)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"E:\\TEMP\\kz-intake-phase-b-stage-al61pfh5\\scripts\\test_kz_intake.py\", line 628, in test_exact_add_is_bound_and_apply_accepts_only_its_generated_stage\n    self.assertEqual(staged[\"localization_review\"][\"changed_key_count\"], 404)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 464 != 404\n\n----------------------------------------------------------------------\nRan 45 tests in 3.530s\n\nFAILED (failures=4)\n",
+    "stdout": "[WARNING] Rate limited; waiting 2.0s before retry\n[WARNING] Rate limited; waiting 2.0s before retry\n[WARNING] Rate limited; waiting 4.0s before retry\n[WARNING] Rate limited; waiting 8.0s before retry\n"
+  },
+  "prepared_at": "2026-08-29T10:54:13+05:00",
+  "production_root_mutated": false,
+  "retained_stage": "phase-b/evidence/successor-1/stage",
+  "schema_version": "kz-intake-isolated-stage/v1",
+  "temporary_validation_stage": {
+    "isolated_outside_repository": true,
+    "path_redacted": true,
+    "removed_after_validation": true
+  },
+  "unchanged_production_full_suite": {
+    "command": [
+      "D:\\python\\Python313\\python.exe",
+      "-m",
+      "unittest",
+      "scripts.test_catalog_generation",
+      "scripts.test_kz_intake",
+      "scripts.test_kz_commands",
+      "-q"
+    ],
+    "returncode": 0,
+    "stderr": "usage: python.exe -m unittest parse [-h] (--text TEXT | --file FILE)\n                                    [--output OUTPUT]\npython.exe -m unittest parse: error: one of the arguments --text --file is required\nusage: python.exe -m unittest parse [-h] (--text TEXT | --file FILE)\n                                    [--output OUTPUT]\npython.exe -m unittest parse: error: argument --file: not allowed with argument --text\n----------------------------------------------------------------------\nRan 45 tests in 4.514s\n\nOK\n",
+    "stdout": "[WARNING] Rate limited; waiting 2.0s before retry\n[WARNING] Rate limited; waiting 2.0s before retry\n[WARNING] Rate limited; waiting 4.0s before retry\n[WARNING] Rate limited; waiting 8.0s before retry\n"
+  },
+  "validation_contract_commands": [
+    "scripts/validate_schema.py",
+    "scripts/generate_readme.py --check"
+  ],
+  "validation_results": [
+    {
+      "command": [
+        "D:\\python\\Python313\\python.exe",
+        "scripts/validate_schema.py"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "[INFO] Validating 42 groups...\n[INFO] Validating 36 channels...\n[INFO] Validating 4 bots...\n[INFO] Freshness: oldest_live=2026-08-27; older_than_90_days=0\n[INFO] Categories: 19\n[INFO] Archive entries: 2\n[INFO] Locale payload: keys=en:159,ru:151,kk:151; sha256=b07912bb12ee0429b46249853545503f1f0e2ed358f3c23af73b5e1dcdc6bc5c\n[INFO] Errors: 0\n[SUCCESS] Schema is valid\n"
+    },
+    {
+      "command": [
+        "D:\\python\\Python313\\python.exe",
+        "scripts/generate_readme.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "[SUCCESS] All 4 catalog projections are generator-current\n[INFO] Locale payload sha256=b07912bb12ee0429b46249853545503f1f0e2ed358f3c23af73b5e1dcdc6bc5c\n"
+    },
+    {
+      "command": [
+        "D:\\python\\Python313\\python.exe",
+        "stage_invariant_tests.py"
+      ],
+      "returncode": 0,
+      "stderr": ".................................usage: stage_invariant_tests.py parse [-h] (--text TEXT | --file FILE)\n                                      [--output OUTPUT]\nstage_invariant_tests.py parse: error: one of the arguments --text --file is required\nusage: stage_invariant_tests.py parse [-h] (--text TEXT | --file FILE)\n                                      [--output OUTPUT]\nstage_invariant_tests.py parse: error: argument --file: not allowed with argument --text\n........\n----------------------------------------------------------------------\nRan 41 tests in 3.165s\n\nOK\n",
+      "stdout": "{\"excluded_baseline_snapshot_only\": [\"scripts.test_catalog_generation.CatalogGenerationTests.test_intent_membership_matches_reviewed_snapshot\", \"scripts.test_catalog_generation.CatalogGenerationTests.test_phase_a_body_digest_readme_and_test_contract_are_preserved\", \"scripts.test_catalog_generation.CatalogGenerationTests.test_production_schema_and_review_binding\", \"scripts.test_kz_intake.ActionStageBindingTests.test_exact_add_is_bound_and_apply_accepts_only_its_generated_stage\"], \"loaded\": 45, \"schema_version\": \"kz-intake-stage-invariant-suite/v1\", \"selected\": 41}\n[WARNING] Rate limited; waiting 2.0s before retry\n[WARNING] Rate limited; waiting 2.0s before retry\n[WARNING] Rate limited; waiting 4.0s before retry\n[WARNING] Rate limited; waiting 8.0s before retry\n"
+    },
+    {
+      "command": [
+        "D:\\python\\Python313\\python.exe",
+        "scripts/sync_kz_commands.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "[OK] synchronized complete command inventory: kz-add, kz-stats, kz-release\n"
+    },
+    {
+      "command": [
+        "D:\\python\\Python313\\python.exe",
+        "-m",
+        "py_compile",
+        "scripts/kz_intake.py",
+        "scripts/validate_links.py",
+        "scripts/validate_schema.py",
+        "scripts/generate_readme.py"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "validation_surface_sha256": {
+    ".agents/skills/kz-add/SKILL.md": "783fb0f0acc63b484d431d2a4fff9cd2fb65fd75d711ae94dad00d059c9a2414",
+    ".agents/skills/kz-release/SKILL.md": "2d40318e9f4f6e12c4a2d6ed54e9d4119ac007769c0fbe63014d36260ceda8fc",
+    ".agents/skills/kz-stats/SKILL.md": "063e7d6043f205bb214d9019c4ad95c02a1e517aa4ac30aa28e53e3d915fcbbe",
+    ".claude/commands/kz-add.md": "783fb0f0acc63b484d431d2a4fff9cd2fb65fd75d711ae94dad00d059c9a2414",
+    ".claude/commands/kz-release.md": "2d40318e9f4f6e12c4a2d6ed54e9d4119ac007769c0fbe63014d36260ceda8fc",
+    ".claude/commands/kz-stats.md": "063e7d6043f205bb214d9019c4ad95c02a1e517aa4ac30aa28e53e3d915fcbbe",
+    "scripts/generate_readme.py": "02b0f15b9cbdccf20edbfff94c2d5c7a98e96156af15fb3dc982f66bbc924701",
+    "scripts/kz_intake.py": "0c032b5c47331163c201ef133258575084a7dfd8d49cb8ac91fe1db2d04f6a14",
+    "scripts/sync_kz_commands.py": "9d474eccb5f975392b4f7853f24d2a3b32d2a7f67cf019bed9ef13496859f7c9",
+    "scripts/test_catalog_generation.py": "bca900ba039597722cd7169d67ead2ab6ab8fc3fabde1588785da6a25bf10de0",
+    "scripts/test_kz_commands.py": "d4a2a518789f899cb1ce15212c0e8b30b7c51f3c29f35dcac0e978da2445a7e3",
+    "scripts/test_kz_intake.py": "dc62b2bc9afd5c413a53706c3ca22ada9cc4b0ed2014cd48643619ad698997e8",
+    "scripts/test_site_metadata.py": "230d6a0763a2e3a76efa7a7d7f008ec3fcf4fa096c6571474a0d1a9cfdf4c180",
+    "scripts/validate_links.py": "66facf97a6512c6bf9796b8467418f99b29af8b7972cee37fd2923af6bb28873",
+    "scripts/validate_schema.py": "6b52468a2adb55e9dc91ed301ba8f7e34cb2e3cfe7f900bf5f14895078134004",
+    "stage_invariant_tests.py": "62fa20ebfbd0ca4602c345a4a0eed631856694dd24ff47945ca97995848065c1"
+  }
+}

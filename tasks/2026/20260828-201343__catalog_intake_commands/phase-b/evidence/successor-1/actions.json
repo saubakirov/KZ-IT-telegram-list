@@ -1,0 +1,370 @@
+[
+  {
+    "action": "add",
+    "candidate_id": "candidate:ai_qadam_kazakhstan",
+    "proposed_entry": {
+      "category": "ai",
+      "description": "Kazakhstan chapter of AI Qadam for learning and applying artificial intelligence.",
+      "description_kk": "Жасанды интеллектті үйренуге және іс жүзінде қолдануға арналған AI Qadam-ның Қазақстандағы қауымдастығы.",
+      "description_ru": "Казахстанское отделение AI Qadam для изучения и практического применения искусственного интеллекта.",
+      "handle": "ai_qadam_kazakhstan",
+      "last_verified": "2026-08-29",
+      "member_count": 413,
+      "name": "AI Qadam Kazakhstan",
+      "type": "groups"
+    },
+    "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category ai."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:allkzit",
+    "proposed_entry": {
+      "category": "general",
+      "description": "Kazakhstan IT professionals' community for discussion and peer support.",
+      "description_kk": "Қазақстандағы IT мамандарының пікір алмасу және өзара көмек қауымдастығы.",
+      "description_ru": "Сообщество IT-специалистов Казахстана для общения и взаимопомощи.",
+      "handle": "allkzit",
+      "last_verified": "2026-08-29",
+      "member_count": 3013,
+      "name": "IT.kz - все айтишники Казахстана",
+      "type": "groups"
+    },
+    "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category general."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:anykeykz",
+    "proposed_entry": {
+      "category": "devops-sysadmin",
+      "description": "Community for Kazakhstan helpdesk and junior system-administration specialists.",
+      "description_kk": "Қазақстандағы техникалық қолдау және жүйелік әкімшілендіруді бастап жүрген мамандар қауымдастығы.",
+      "description_ru": "Сообщество казахстанских эникейщиков и начинающих системных администраторов.",
+      "handle": "anykeykz",
+      "last_verified": "2026-08-29",
+      "member_count": 31,
+      "name": "Казахстанский Эникей - вестник с офисных полей",
+      "type": "groups"
+    },
+    "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:astana_hub",
+    "proposed_entry": {
+      "category": "startups",
+      "description": "Official Astana Hub channel with Kazakhstan startup ecosystem news, programs, and events.",
+      "description_kk": "Қазақстанның стартап экожүйесіндегі жаңалықтар, бағдарламалар мен іс-шаралар туралы Astana Hub-тың ресми арнасы.",
+      "description_ru": "Официальный канал Astana Hub с новостями, программами и событиями стартап-экосистемы Казахстана.",
+      "handle": "astana_hub",
+      "last_verified": "2026-08-29",
+      "member_count": 13568,
+      "name": "Astana Hub ️ ✔",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category startups."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:astanajkugoutputstream",
+    "proposed_entry": {
+      "category": "programming-languages",
+      "description": "Announcements and learning resources from the Astana Java user group.",
+      "description_kk": "Астана Java пайдаланушылары тобының хабарландырулары мен оқу материалдары.",
+      "description_ru": "Анонсы и учебные материалы сообщества Java-разработчиков Астаны.",
+      "handle": "astanajkugoutputstream",
+      "last_verified": "2026-08-29",
+      "member_count": 724,
+      "name": "Astana JKUG OutputStream",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category programming-languages."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:aws_kz",
+    "proposed_entry": {
+      "category": "devops-sysadmin",
+      "description": "Announcements for the AWS User Group Kazakhstan community.",
+      "description_kk": "AWS User Group Kazakhstan қауымдастығының хабарландыру арнасы.",
+      "description_ru": "Канал анонсов сообщества AWS User Group Kazakhstan.",
+      "handle": "aws_kz",
+      "last_verified": "2026-08-29",
+      "member_count": 267,
+      "name": "AWS User Group Kazakhstan Announcements Channel",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:blockchainkz",
+    "proposed_entry": {
+      "category": "blockchain",
+      "description": "Kazakhstan community for AI, blockchain, and digital-asset technology.",
+      "description_kk": "Қазақстандағы жасанды интеллект, блокчейн және цифрлық активтер технологиялары қауымдастығы.",
+      "description_ru": "Казахстанское сообщество по искусственному интеллекту, блокчейну и технологиям цифровых активов.",
+      "handle": "blockchainkz",
+      "last_verified": "2026-08-29",
+      "member_count": 289,
+      "name": "BlockchainKZ Association of AI & Blockchain technology developers and users",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category blockchain."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:devopskaz",
+    "proposed_entry": {
+      "category": "devops-sysadmin",
+      "description": "Kazakhstan DevOps channel covering cloud infrastructure, Linux, CI/CD, and high-load systems.",
+      "description_kk": "Бұлттық инфрақұрылым, Linux, CI/CD және жоғары жүктемелі жүйелер туралы қазақстандық DevOps арнасы.",
+      "description_ru": "Казахстанский DevOps-канал об облачной инфраструктуре, Linux, CI/CD и высоконагруженных системах.",
+      "handle": "devopskaz",
+      "last_verified": "2026-08-29",
+      "member_count": 6652,
+      "name": "KazDevOps",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:devs_kz",
+    "proposed_entry": {
+      "category": "jobs",
+      "description": "Kazakhstan IT careers, workshops, meetups, and professional-development channel.",
+      "description_kk": "Қазақстандағы IT мансабы, воркшоптар, митаптар және кәсіби даму туралы арна.",
+      "description_ru": "Канал об IT-карьере, воркшопах, митапах и профессиональном развитии в Казахстане.",
+      "handle": "devs_kz",
+      "last_verified": "2026-08-29",
+      "member_count": 10373,
+      "name": "Devs.kz",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:digitalbussinesskz",
+    "proposed_entry": {
+      "category": "news",
+      "description": "Kazakhstan technology and business publication covering IT, startups, and digital products.",
+      "description_kk": "IT, стартаптар және цифрлық өнімдер туралы жазатын қазақстандық технология және бизнес басылымы.",
+      "description_ru": "Казахстанское издание о технологиях и бизнесе, освещающее IT, стартапы и цифровые продукты.",
+      "handle": "digitalbussinesskz",
+      "last_verified": "2026-08-29",
+      "member_count": 8361,
+      "name": "DigitalBusiness.kz",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category news."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:ethkz",
+    "proposed_entry": {
+      "category": "devops-sysadmin",
+      "description": "Kazakhstan networking community for routing, wireless, VPN, and network equipment.",
+      "description_kk": "Маршруттау, сымсыз желілер, VPN және желілік жабдықтар жөніндегі Қазақстан қауымдастығы.",
+      "description_ru": "Казахстанское сетевое сообщество о маршрутизации, беспроводных сетях, VPN и сетевом оборудовании.",
+      "handle": "ethkz",
+      "last_verified": "2026-08-29",
+      "member_count": 1226,
+      "name": "Сеть.kz",
+      "type": "groups"
+    },
+    "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:go_kz_vacancy",
+    "proposed_entry": {
+      "category": "jobs",
+      "description": "Go developer vacancies in Kazakhstan and international roles relevant to the local community.",
+      "description_kk": "Қазақстандағы Go әзірлеушілеріне және жергілікті қауымдастыққа қатысты халықаралық бос орындар.",
+      "description_ru": "Вакансии Go-разработчиков в Казахстане и зарубежные позиции для местного сообщества.",
+      "handle": "go_kz_vacancy",
+      "last_verified": "2026-08-29",
+      "member_count": 2262,
+      "name": "Golang vacancies in KZ",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:hackathon_kz",
+    "proposed_entry": {
+      "category": "events",
+      "description": "Hackathon news and event announcements in Kazakhstan.",
+      "description_kk": "Қазақстандағы хакатон жаңалықтары мен іс-шаралар хабарландырулары.",
+      "description_ru": "Новости и анонсы хакатонов в Казахстане.",
+      "handle": "hackathon_kz",
+      "last_verified": "2026-08-29",
+      "member_count": 254,
+      "name": "Hackathon kz",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category events."
+  },
+  {
+    "action": "unresolved",
+    "candidate_id": "candidate:helpfixit",
+    "proposed_entry": null,
+    "reason": "Public evidence verifies a live computer-help group but contains no Kazakhstan audience or relevance signal; admission remains unresolved."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:it_jobs_kz",
+    "proposed_entry": {
+      "category": "jobs",
+      "description": "IT vacancies in Kazakhstan and worldwide, with salary ranges when available.",
+      "description_kk": "Қазақстандағы және әлемдегі IT бос орындары; бар болса жалақы ауқымы көрсетіледі.",
+      "description_ru": "IT-вакансии в Казахстане и мире с указанием вилки зарплаты, когда она доступна.",
+      "handle": "it_jobs_kz",
+      "last_verified": "2026-08-29",
+      "member_count": 9703,
+      "name": "IT Jobs (DSML.KZ)",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:it_kazahstan",
+    "proposed_entry": {
+      "category": "news",
+      "description": "News for Kazakhstan IT specialists, low-voltage systems professionals, and technology entrepreneurs.",
+      "description_kk": "Қазақстандағы IT мамандарына, әлсіз ток жүйелері мамандарына және технология кәсіпкерлеріне арналған жаңалықтар арнасы.",
+      "description_ru": "Новости для IT-специалистов, слаботочников и технологических предпринимателей Казахстана.",
+      "handle": "IT_Kazahstan",
+      "last_verified": "2026-08-29",
+      "member_count": 714,
+      "name": "IT Kazakhstan",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category news."
+  },
+  {
+    "action": "duplicate",
+    "candidate_id": "candidate:itbazarkzchannel",
+    "proposed_entry": null,
+    "reason": "The public description points to live catalog group @itbazarkz and retained channel messages redirect to that group, so this advertising mirror is a canonical duplicate."
+  },
+  {
+    "action": "reject",
+    "candidate_id": "candidate:itqazaqstan",
+    "proposed_entry": null,
+    "reason": "The public description centers paid service access, promotions, and integrator work; commercial/spam risk fails the non-commercial admission gate."
+  },
+  {
+    "action": "reject",
+    "candidate_id": "candidate:kazakhtelecom_official",
+    "proposed_entry": null,
+    "reason": "The target is an official telecom operator corporate feed, not an IT community or specialist resource; it fails community-scope and commerciality gates."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:kolesa_group",
+    "proposed_entry": {
+      "category": "general",
+      "description": "Kolesa Group channel sharing Kazakhstan product-development experience, internships, and technology events.",
+      "description_kk": "Kolesa Group-тың Қазақстандағы өнім әзірлеу тәжірибесі, тағылымдамалары және технологиялық іс-шаралары туралы арнасы.",
+      "description_ru": "Канал Kolesa Group об опыте разработки продуктов в Казахстане, стажировках и технологических событиях.",
+      "handle": "kolesa_group",
+      "last_verified": "2026-08-29",
+      "member_count": 7117,
+      "name": "Kolesa Group",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category general."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:kz_bi_jobs",
+    "proposed_entry": {
+      "category": "jobs",
+      "description": "Data analytics and business intelligence vacancies for Kazakhstan professionals.",
+      "description_kk": "Қазақстандағы деректер талдауы және Business Intelligence мамандарына арналған бос орындар.",
+      "description_ru": "Вакансии в аналитике данных и Business Intelligence для специалистов Казахстана.",
+      "handle": "kz_bi_jobs",
+      "last_verified": "2026-08-29",
+      "member_count": 5478,
+      "name": "KZ BI Data Jobs",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:kz_bi_news",
+    "proposed_entry": {
+      "category": "data-analytics",
+      "description": "Kazakhstan data analytics and business intelligence news, events, and community updates.",
+      "description_kk": "Қазақстандағы деректер талдауы мен Business Intelligence жаңалықтары, іс-шаралары және қауымдастық хабарлары.",
+      "description_ru": "Новости, события и обновления казахстанского сообщества аналитики данных и Business Intelligence.",
+      "handle": "kz_bi_news",
+      "last_verified": "2026-08-29",
+      "member_count": 959,
+      "name": "KZ BI News & Events",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category data-analytics."
+  },
+  {
+    "action": "reject",
+    "candidate_id": "candidate:nfactorial_school",
+    "proposed_entry": null,
+    "reason": "The retained public description and recent posts are a school lead funnel with consultation and WhatsApp sales calls; it fails the purely-commercial gate."
+  },
+  {
+    "action": "unresolved",
+    "candidate_id": "candidate:qaz_qa_vacancies",
+    "proposed_entry": null,
+    "reason": "The target name and online count suggest Kazakhstan QA vacancies, but no public description or messages expose scope, rules, or spam risk; admission remains unresolved."
+  },
+  {
+    "action": "unresolved",
+    "candidate_id": "candidate:rootway",
+    "proposed_entry": null,
+    "reason": "The public target is a live system-administration learning channel, but retained evidence contains no Kazakhstan audience or relevance signal; admission remains unresolved."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:sandyq_orda",
+    "proposed_entry": {
+      "category": "news",
+      "description": "News and analysis on B2B and B2G digitalization in Kazakhstan.",
+      "description_kk": "Қазақстандағы B2B және B2G цифрландыру туралы жаңалықтар мен талдау.",
+      "description_ru": "Новости и аналитика о цифровизации B2B и B2G в Казахстане.",
+      "handle": "sandyq_orda",
+      "last_verified": "2026-08-29",
+      "member_count": 7071,
+      "name": "Цифровая Орда 🇰🇿",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category news."
+  },
+  {
+    "action": "unresolved",
+    "candidate_id": "candidate:sysadm_in_job",
+    "proposed_entry": null,
+    "reason": "The public target is a live IT jobs group with rules, but no retained target evidence establishes Kazakhstan audience or relevance; admission remains unresolved."
+  },
+  {
+    "action": "add",
+    "candidate_id": "candidate:tvkrg",
+    "proposed_entry": {
+      "category": "startups",
+      "description": "Karaganda technology and startup hub channel for events, news, and networking.",
+      "description_kk": "Қарағандыдағы технология және стартап хабының іс-шаралар, жаңалықтар және нетворкинг арнасы.",
+      "description_ru": "Канал технологического и стартап-хаба Караганды с событиями, новостями и нетворкингом.",
+      "handle": "tvkrg",
+      "last_verified": "2026-08-29",
+      "member_count": 1232,
+      "name": "Terricon Valley | IT и Бизнес | Караганда",
+      "type": "channels"
+    },
+    "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category startups."
+  }
+]
