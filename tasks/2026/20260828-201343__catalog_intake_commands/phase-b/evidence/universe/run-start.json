@@ -1,0 +1,9 @@
+{
+  "classifier_sha256": "66facf97a6512c6bf9796b8467418f99b29af8b7972cee37fd2923af6bb28873",
+  "engine_sha256": "0c032b5c47331163c201ef133258575084a7dfd8d49cb8ac91fe1db2d04f6a14",
+  "executor_commit": "4d06114d6abab5f268d50485867279aec51d4bca",
+  "holdout_audit_sha256": "8b163ba338d2e77f0df91449343a2d8cb54a355076812067db1cfdc2570435ac",
+  "holdout_checkpoint_commit": "4d06114d6abab5f268d50485867279aec51d4bca",
+  "schema_version": "kz-intake-universe-run-start/v1",
+  "started_at": "2026-08-29T06:44:32+05:00"
+}

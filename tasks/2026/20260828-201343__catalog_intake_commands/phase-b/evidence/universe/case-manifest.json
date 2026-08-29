@@ -1,0 +1,501 @@
+{
+  "cases": [
+    {
+      "case_key": "0ae62429cdcd9b353c740a9e23d01df8e667cdd53b43a80b0bc0bfc0f9075efe",
+      "handle": "it_jobs_kz",
+      "occurrence_count": 1,
+      "partition": "calibration"
+    },
+    {
+      "case_key": "1579b752bfd7b55d6e0738ebcecee421fe56806a720dd4c9455a1f4d481868df",
+      "handle": "devopskaz",
+      "occurrence_count": 1,
+      "partition": "calibration"
+    },
+    {
+      "case_key": "18b2741bdfef73d961ea5ebd21e06b652b9596e910063f9f9ae1accb857fee6c",
+      "handle": "kazakhtelecom_official",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "1dc5dbcc4a5ce04155752b97a6c8ed0ae32546c6c83000080164e6840726f856",
+      "handle": "allkzit",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "2094d105334175f1c4c80a0ceba84f48d012f028d17faac454985256abed4f6f",
+      "handle": "kz_bi_news",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "3a5bf0962448289dc96895a6ab3cd0bb1dfbed9d79bd8ad94fd06651ce5c4953",
+      "handle": "digitalbussinesskz",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "4c09490fcd9cab865efe110a7a084911d2c236ca0a44c769ad0a51763fe85767",
+      "handle": "itqazaqstan",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "4e85be5a3dd41856ee86b52106869dec47bfb0fc438bb4bc86f8725d834125d5",
+      "handle": "hackathon_kz",
+      "occurrence_count": 1,
+      "partition": "calibration"
+    },
+    {
+      "case_key": "56cfd15ca18173f13384cc8239b30a57f4b270ac6fcc3910ecf5ab639f44c01a",
+      "handle": "ethkz",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "5af5e32e91f9276aa13436c8a5476d01e3a3282dec7c15e3b5c7b325a909fda5",
+      "handle": "aws_kz",
+      "occurrence_count": 2,
+      "partition": "calibration"
+    },
+    {
+      "case_key": "6288e6c30989f9c175f879e42315885f8e6ab9d692dc7c91e5c6ed1194d61622",
+      "handle": "go_kz_vacancy",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "6f2fda382c02d18ba417b9a43b73cb96d4d1b3eb0ff842cd0189337cc34e3c68",
+      "handle": "devs_kz",
+      "occurrence_count": 1,
+      "partition": "calibration"
+    },
+    {
+      "case_key": "742d19faa874eaa6151b967727367dd56eec943d71aee68c6e1e7871aaca8b5b",
+      "handle": "nfactorial_school",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "76f5a4a78aff0c031caf9e39774aecf374a5658bc5ac5ee7ff34d75f7785474e",
+      "handle": "tvkrg",
+      "occurrence_count": 1,
+      "partition": "calibration"
+    },
+    {
+      "case_key": "7ba44c49cc6e13918c7f5a2e48bb300d98556e1b68320a1e14c9c93fb80a8307",
+      "handle": "rootway",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "7c25add94bc653559abea95862aa4add38fc0b52d27f626652aa1091421538f4",
+      "handle": "astana_hub",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "7e0ce641b597f3995e129e4420b978f378a160c741633675308a499e5f7cd54c",
+      "handle": "ai_qadam_kazakhstan",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "8be1c1014dbf9544cdcf9218eb32de4f1238ac4f9f8711b64eef49c24699dfc8",
+      "handle": "kolesa_group",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "b851727bfcdb1c0f488e3f68333ff9c36fd23927281188e6e84d2aec85612cae",
+      "handle": "blockchainkz",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "d351aa186190f4720a94c3367803a861304bb63ca88287b327d7a0768f87f8ec",
+      "handle": "astanajkugoutputstream",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "d98a86300f88e89f5a6e2290beb33207b144fdd5912a2956193e5581d9f8ce5f",
+      "handle": "kz_bi_jobs",
+      "occurrence_count": 1,
+      "partition": "calibration"
+    },
+    {
+      "case_key": "da82d786985166742f5b541c9f564ab3d9dfb86e04fed6335dfa33ec4889d811",
+      "handle": "itbazarkzchannel",
+      "occurrence_count": 1,
+      "partition": "calibration"
+    },
+    {
+      "case_key": "da8cd3a49cd7c1ddf69d264d108f452b87bb184f540c36d61ae3ec7d6434f76b",
+      "handle": "anykeykz",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "dcddfda39a051fb5f837f6084230af62f2a956516168f61762b18e95cd4ac12b",
+      "handle": "it_kazahstan",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "dd041f396541e0f868f220b9453ce15bd8d8e937bc326375099ff746acd579ca",
+      "handle": "qaz_qa_vacancies",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "e90df6b8d7976a90a538b2a40673f1302219e330ce0f4a08d0c3e1429e432044",
+      "handle": "sysadm_in_job",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "f365658f1496eff97dfa4ff527f02883c65157750e420a3b5061258d3bc5ff83",
+      "handle": "sandyq_orda",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    },
+    {
+      "case_key": "f82a83e61482ab44839c32dfddfdc70dbe0bf45223903f93e9e17e8b2d649539",
+      "handle": "helpfixit",
+      "occurrence_count": 1,
+      "partition": "holdout"
+    }
+  ],
+  "input_sha256": "08482a427d6e4b39bb05ae75fd802c777e05f2045f380527ab8fdd309493727b",
+  "occurrences": [
+    {
+      "byte_end": 2177,
+      "byte_start": 2167,
+      "case_key": "7c25add94bc653559abea95862aa4add38fc0b52d27f626652aa1091421538f4",
+      "derived_url": "https://t.me/astana_hub",
+      "handle": "astana_hub",
+      "partition": "holdout",
+      "raw_span_sha256": "2b49367006dd9ed1dbeb95bd8f7e04296d84b7009e142361471909e5e3e88210",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 2361,
+      "byte_start": 2349,
+      "case_key": "b851727bfcdb1c0f488e3f68333ff9c36fd23927281188e6e84d2aec85612cae",
+      "derived_url": "https://t.me/blockchainkz",
+      "handle": "blockchainkz",
+      "partition": "holdout",
+      "raw_span_sha256": "e5758e6a452d800fd9a128f67a84f02e4a27778bfe5567e8f197009a68594a91",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 2644,
+      "byte_start": 2628,
+      "case_key": "da82d786985166742f5b541c9f564ab3d9dfb86e04fed6335dfa33ec4889d811",
+      "derived_url": "https://t.me/itbazarkzchannel",
+      "handle": "itbazarkzchannel",
+      "partition": "calibration",
+      "raw_span_sha256": "180da944cc81380699bfb4bf32e047e58b84476c400da93a3d00bcc3f8e26cc1",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 2897,
+      "byte_start": 2881,
+      "case_key": "dd041f396541e0f868f220b9453ce15bd8d8e937bc326375099ff746acd579ca",
+      "derived_url": "https://t.me/qaz_qa_vacancies",
+      "handle": "qaz_qa_vacancies",
+      "partition": "holdout",
+      "raw_span_sha256": "0ad70b8006ed639c3a52bf835faff3b5c80b04caa528748b3ccff5c1944d74fb",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 3045,
+      "byte_start": 3033,
+      "case_key": "4e85be5a3dd41856ee86b52106869dec47bfb0fc438bb4bc86f8725d834125d5",
+      "derived_url": "https://t.me/hackathon_kz",
+      "handle": "hackathon_kz",
+      "partition": "calibration",
+      "raw_span_sha256": "83cd54841f08b9a51068e1d5d494bdf7f5f8454264fe2f504eb2ed01ae1fb6ab",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 3164,
+      "byte_start": 3154,
+      "case_key": "2094d105334175f1c4c80a0ceba84f48d012f028d17faac454985256abed4f6f",
+      "derived_url": "https://t.me/kz_bi_news",
+      "handle": "kz_bi_news",
+      "partition": "holdout",
+      "raw_span_sha256": "66d7373d401468aef4c1db8bdcded07e87d58a85b51c5e15d0e8c47a8377a9b4",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 3285,
+      "byte_start": 3268,
+      "case_key": "742d19faa874eaa6151b967727367dd56eec943d71aee68c6e1e7871aaca8b5b",
+      "derived_url": "https://t.me/nfactorial_school",
+      "handle": "nfactorial_school",
+      "partition": "holdout",
+      "raw_span_sha256": "6570b20c3ccc032ca6d7d45e0f92819ad234e68fcad03a5391f71b02d5443837",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 3655,
+      "byte_start": 3648,
+      "case_key": "6f2fda382c02d18ba417b9a43b73cb96d4d1b3eb0ff842cd0189337cc34e3c68",
+      "derived_url": "https://t.me/devs_kz",
+      "handle": "devs_kz",
+      "partition": "calibration",
+      "raw_span_sha256": "974dcca1c12e7409274b6028e5bf91dcd56a7e10dc9aab1544742038f2ab5196",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 3860,
+      "byte_start": 3851,
+      "case_key": "1579b752bfd7b55d6e0738ebcecee421fe56806a720dd4c9455a1f4d481868df",
+      "derived_url": "https://t.me/devopskaz",
+      "handle": "devopskaz",
+      "partition": "calibration",
+      "raw_span_sha256": "9d2c0dadaab8ebb19bdab40b717c1eef3ffef55eb87ff66ec28e8e22fd71a0b5",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 3988,
+      "byte_start": 3976,
+      "case_key": "8be1c1014dbf9544cdcf9218eb32de4f1238ac4f9f8711b64eef49c24699dfc8",
+      "derived_url": "https://t.me/kolesa_group",
+      "handle": "kolesa_group",
+      "partition": "holdout",
+      "raw_span_sha256": "de172df763cf264f8f11ca367b96a565f15f9732287ae5746f3e261ad84f4c4e",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 4205,
+      "byte_start": 4198,
+      "case_key": "1dc5dbcc4a5ce04155752b97a6c8ed0ae32546c6c83000080164e6840726f856",
+      "derived_url": "https://t.me/allkzit",
+      "handle": "allkzit",
+      "partition": "holdout",
+      "raw_span_sha256": "2815582caf707b4eb3c7cb20f0ad3bc8ed9b7ba0fd59e23942872ef0519a5224",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 4343,
+      "byte_start": 4336,
+      "case_key": "7ba44c49cc6e13918c7f5a2e48bb300d98556e1b68320a1e14c9c93fb80a8307",
+      "derived_url": "https://t.me/rootway",
+      "handle": "rootway",
+      "partition": "holdout",
+      "raw_span_sha256": "af164957fd78a52d391dc26f331ac2fd5ecc2ff823cf5c948dff2028954221d8",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 4553,
+      "byte_start": 4548,
+      "case_key": "56cfd15ca18173f13384cc8239b30a57f4b270ac6fcc3910ecf5ab639f44c01a",
+      "derived_url": "https://t.me/ethkz",
+      "handle": "ethkz",
+      "partition": "holdout",
+      "raw_span_sha256": "794bdcde633dfd9ace2aba0bb744ed1b2b3c61ce23e54ebd923c969ec984e714",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 4731,
+      "byte_start": 4726,
+      "case_key": "76f5a4a78aff0c031caf9e39774aecf374a5658bc5ac5ee7ff34d75f7785474e",
+      "derived_url": "https://t.me/tvkrg",
+      "handle": "tvkrg",
+      "partition": "calibration",
+      "raw_span_sha256": "11cf37837a61ec16f24f04b09ca2b2b1d8d471f93ba0222641e1c5034a50e7b1",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 4948,
+      "byte_start": 4930,
+      "case_key": "3a5bf0962448289dc96895a6ab3cd0bb1dfbed9d79bd8ad94fd06651ce5c4953",
+      "derived_url": "https://t.me/digitalbussinesskz",
+      "handle": "digitalbussinesskz",
+      "partition": "holdout",
+      "raw_span_sha256": "8ea812ec1b0421dafd08c6b19563e96ba297f20940cfde2058b9f18511dbe9fa",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 5106,
+      "byte_start": 5100,
+      "case_key": "5af5e32e91f9276aa13436c8a5476d01e3a3282dec7c15e3b5c7b325a909fda5",
+      "derived_url": "https://t.me/aws_kz",
+      "handle": "aws_kz",
+      "partition": "calibration",
+      "raw_span_sha256": "232d39d3497907df4212332b12ebc5e496974d9f0c30df92eba19a183947b7d0",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 5298,
+      "byte_start": 5276,
+      "case_key": "d351aa186190f4720a94c3367803a861304bb63ca88287b327d7a0768f87f8ec",
+      "derived_url": "https://t.me/astanajkugoutputstream",
+      "handle": "astanajkugoutputstream",
+      "partition": "holdout",
+      "raw_span_sha256": "f2bee8a18a54c54abfdafa80c9cca0ccee29ec0a35a26932d9864de2d79436db",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 5451,
+      "byte_start": 5442,
+      "case_key": "f82a83e61482ab44839c32dfddfdc70dbe0bf45223903f93e9e17e8b2d649539",
+      "derived_url": "https://t.me/helpfixit",
+      "handle": "helpfixit",
+      "partition": "holdout",
+      "raw_span_sha256": "4be2b95f044ad74943433f7f0ffe41c7fae0df7685fdd78322e75caa91955ae2",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 5565,
+      "byte_start": 5557,
+      "case_key": "da8cd3a49cd7c1ddf69d264d108f452b87bb184f540c36d61ae3ec7d6434f76b",
+      "derived_url": "https://t.me/anykeykz",
+      "handle": "anykeykz",
+      "partition": "holdout",
+      "raw_span_sha256": "f9fe3ecad247f2231e5ec85a5ce0f290c94669720c9954d02bd4b7a5d3c7d933",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 6034,
+      "byte_start": 6024,
+      "case_key": "0ae62429cdcd9b353c740a9e23d01df8e667cdd53b43a80b0bc0bfc0f9075efe",
+      "derived_url": "https://t.me/it_jobs_kz",
+      "handle": "it_jobs_kz",
+      "partition": "calibration",
+      "raw_span_sha256": "cff4e8bae9901e96279f3e5c55a60ec0a68f88e7b01cb214d4e59f391dea7d6d",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 6127,
+      "byte_start": 6117,
+      "case_key": "d98a86300f88e89f5a6e2290beb33207b144fdd5912a2956193e5581d9f8ce5f",
+      "derived_url": "https://t.me/kz_bi_jobs",
+      "handle": "kz_bi_jobs",
+      "partition": "calibration",
+      "raw_span_sha256": "d418133ca24e14c77bd44785a5e279f885a87734339504a5edad7c8dddc03303",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 6206,
+      "byte_start": 6193,
+      "case_key": "6288e6c30989f9c175f879e42315885f8e6ab9d692dc7c91e5c6ed1194d61622",
+      "derived_url": "https://t.me/go_kz_vacancy",
+      "handle": "go_kz_vacancy",
+      "partition": "holdout",
+      "raw_span_sha256": "cef3c76b59f8d0d2a95358f635b1112883f22983a07c77af4950231500d306f0",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 6292,
+      "byte_start": 6279,
+      "case_key": "e90df6b8d7976a90a538b2a40673f1302219e330ce0f4a08d0c3e1429e432044",
+      "derived_url": "https://t.me/sysadm_in_job",
+      "handle": "sysadm_in_job",
+      "partition": "holdout",
+      "raw_span_sha256": "f6ae42a3f3c9e9daa6c3f0cd13443e857a49bc3a8ed34c7ebd67e923aee14995",
+      "source_id": "discovery_batch",
+      "source_sha256": "ffeb4b3903ae4a4eda2ee2676f31887552cc6b510ecedd65f8830e86fbef6ebb"
+    },
+    {
+      "byte_end": 19,
+      "byte_start": 0,
+      "case_key": "5af5e32e91f9276aa13436c8a5476d01e3a3282dec7c15e3b5c7b325a909fda5",
+      "derived_url": "https://t.me/aws_kz",
+      "handle": "aws_kz",
+      "partition": "calibration",
+      "raw_span_sha256": "01d0a667f9dd4a35f8de9c98b5e77729aff6e70027f84ace6ce178c1f5514041",
+      "source_id": "owner_note",
+      "source_sha256": "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162"
+    },
+    {
+      "byte_end": 45,
+      "byte_start": 21,
+      "case_key": "f365658f1496eff97dfa4ff527f02883c65157750e420a3b5061258d3bc5ff83",
+      "derived_url": "https://t.me/sandyq_orda",
+      "handle": "sandyq_orda",
+      "partition": "holdout",
+      "raw_span_sha256": "4576d44a3124093fb1685fcde7d5e11b3fff063415a1b6091f81063c65b9ed2e",
+      "source_id": "owner_note",
+      "source_sha256": "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162"
+    },
+    {
+      "byte_end": 82,
+      "byte_start": 47,
+      "case_key": "18b2741bdfef73d961ea5ebd21e06b652b9596e910063f9f9ae1accb857fee6c",
+      "derived_url": "https://t.me/kazakhtelecom_official",
+      "handle": "kazakhtelecom_official",
+      "partition": "holdout",
+      "raw_span_sha256": "911217cf33109c6779ad62933fcc905d25447672aee20ad2a2a7f5cf821c9196",
+      "source_id": "owner_note",
+      "source_sha256": "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162"
+    },
+    {
+      "byte_end": 108,
+      "byte_start": 84,
+      "case_key": "4c09490fcd9cab865efe110a7a084911d2c236ca0a44c769ad0a51763fe85767",
+      "derived_url": "https://t.me/itqazaqstan",
+      "handle": "itqazaqstan",
+      "partition": "holdout",
+      "raw_span_sha256": "cfdc3c3d6d6ad1b49ef88966d77512d2b523dd3c221df886e1957012ef05a53e",
+      "source_id": "owner_note",
+      "source_sha256": "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162"
+    },
+    {
+      "byte_end": 135,
+      "byte_start": 110,
+      "case_key": "dcddfda39a051fb5f837f6084230af62f2a956516168f61762b18e95cd4ac12b",
+      "derived_url": "https://t.me/IT_Kazahstan",
+      "handle": "it_kazahstan",
+      "partition": "holdout",
+      "raw_span_sha256": "6299e3e51708d28c60e25b739c48c52071dbe17de28bca19c4bcae76947f525f",
+      "source_id": "owner_note",
+      "source_sha256": "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162"
+    },
+    {
+      "byte_end": 169,
+      "byte_start": 137,
+      "case_key": "7e0ce641b597f3995e129e4420b978f378a160c741633675308a499e5f7cd54c",
+      "derived_url": "https://t.me/ai_qadam_kazakhstan",
+      "handle": "ai_qadam_kazakhstan",
+      "partition": "holdout",
+      "raw_span_sha256": "662773a70d5ae72ae62c52c20033fee1bc83546c1959dd3642d6d79a2b534d34",
+      "source_id": "owner_note",
+      "source_sha256": "1fdc1286cb8c5ba1f04507c163a60b6b5171bc3c53123af1debb753b1d29a162"
+    }
+  ],
+  "partition_sha256": "5b9fb0dd028ac19d02b2c413bca45e8fa3e0e05e8de9b20087bfa883fe2cb732",
+  "schema_version": "kz-intake-universe-cases/v1",
+  "totals": {
+    "occurrences": 29,
+    "overlap_cases": 1,
+    "unique_cases": 28
+  }
+}

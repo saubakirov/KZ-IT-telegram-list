@@ -1,0 +1,99 @@
+{
+  "artifacts": {
+    "actions.json": {
+      "bytes": 21188,
+      "sha256": "57523de9e630cb4d1fe06b4352f00c5392190bf5918c05daf8950d4f81968fef"
+    },
+    "bundle.json": {
+      "bytes": 108457,
+      "sha256": "f1952a444cb6fc21069de095f3f4f9740caba4f60b6e4d11b1a830b032ed17c5"
+    },
+    "case-manifest.json": {
+      "bytes": 19614,
+      "sha256": "d328c3f06fd12eb0ef402ce5482e817df110daede78322a6d77c648494a62a0a"
+    },
+    "collisions.json": {
+      "bytes": 3915,
+      "sha256": "2d6d9c4701654dc9defc8e17cd9027399ca85c94fd7533ac17b4751f428b54f0"
+    },
+    "editorial-public-evidence.json": {
+      "bytes": 245824,
+      "sha256": "8fe526f98fb3406395956d7a50e6d5981145081f1d22300bd75d11c6866323ca"
+    },
+    "editorial.json": {
+      "bytes": 14235,
+      "sha256": "5a6314b89774c4234e013f62064081cf79c2991ab5957c6b2afb8c3e3956771d"
+    },
+    "input.txt": {
+      "bytes": 741,
+      "sha256": "08482a427d6e4b39bb05ae75fd802c777e05f2045f380527ab8fdd309493727b"
+    },
+    "judgements.json": {
+      "bytes": 143622,
+      "sha256": "1fbbb8dbfce1a42befb750e871d17d2a99aa531f1806559cdfe45cf8e2bcadff"
+    },
+    "ledger.json": {
+      "bytes": 12932,
+      "sha256": "e81683423dd0ea048ea79013cc56e8dbd893a51dd4a1e240f1a564558aa39bf6"
+    },
+    "observations.json": {
+      "bytes": 47267,
+      "sha256": "f883af36e15db09e5c0ca76ae6c1c1a85e71515165426df0abe00aa2bbc0a88c"
+    },
+    "occurrence-accounting.json": {
+      "bytes": 11202,
+      "sha256": "ce1e5438993979f707ad9191b48e2d795185f72c5fbeda9638f3b5a9ab9f20db"
+    },
+    "run-start.json": {
+      "bytes": 515,
+      "sha256": "a3a95ecc59e24dbf1c2e6cc99a8e81cc5a700ce5ffdca6cfd89bf60897fa1481"
+    }
+  },
+  "checks": {
+    "all_28_candidates_have_one_judgement_and_action": true,
+    "all_29_occurrences_accounted": true,
+    "all_closed_observations_validate": true,
+    "all_exact_live_archive_collisions_clear": true,
+    "all_targets_exactly_bound_and_live": true,
+    "bounded_public_editorial_evidence_covers_every_candidate": true,
+    "canonical_alias_near_handle_checks_retained": true,
+    "controlled_production_hashes_unchanged": true,
+    "holdout_checkpoint_precedes_universe_start": true,
+    "only_aws_kz_has_two_source_occurrences": true,
+    "phase_a_implementation_and_commands_unchanged": true,
+    "preliminary_discovery_claims_not_used_as_current_facts": true,
+    "source_probe_ledger_exact_match": true
+  },
+  "completed_at": "2026-08-29T07:52:59+05:00",
+  "controlled_sha256_after_universe": {
+    "README.md": "3b1d70624d7f529c6e7f712574783d468afe5025d6c1bc0173466dd80d5c016d",
+    "data/communities.json": "a46f893d6d73e2ecc760913be9075873b79470b675807cc585933cb457cf963d",
+    "index.md": "4fe0fc8eb8e1f5cb996bda984380daa4b472e8fcef15b9b3ed57de7a765890e3",
+    "kk/index.md": "64227b9e7062308cf12fd995b3b542409806b543b66d91df5c36adc3cb8ef2a7",
+    "ru/index.md": "36002ff6591b18197f745254d3779b797995853e765a4e452d293f9229db0e97"
+  },
+  "holdout_audit_sha256": "8b163ba338d2e77f0df91449343a2d8cb54a355076812067db1cfdc2570435ac",
+  "holdout_checkpoint_commit": "4d06114d6abab5f268d50485867279aec51d4bca",
+  "limitations": [
+    "No authenticated or private Telegram access was used.",
+    "Public group history is not exposed; current online counts are only point-in-time activity signals.",
+    "No Phase A engine, rule, prompt, or fixture was changed after holdout evaluation.",
+    "Unresolved candidates remain unresolved; preliminary discovery claims were not promoted to current facts."
+  ],
+  "result": "verified_post_holdout_reconciliation",
+  "schema_version": "kz-intake-universe-audit/v1",
+  "started_at": "2026-08-29T06:44:32+05:00",
+  "totals": {
+    "actions": {
+      "add": 20,
+      "duplicate": 1,
+      "reject": 3,
+      "unresolved": 4
+    },
+    "channels": 21,
+    "groups": 7,
+    "source_occurrences": 29,
+    "unique_candidates": 28,
+    "verified_public_targets": 28
+  }
+}

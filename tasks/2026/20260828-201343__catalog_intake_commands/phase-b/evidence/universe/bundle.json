@@ -1,0 +1,2955 @@
+{
+  "actions": [
+    {
+      "action": "add",
+      "candidate_id": "candidate:ai_qadam_kazakhstan",
+      "proposed_entry": {
+        "category": "ai",
+        "description": "Kazakhstan chapter of AI Qadam for learning and applying artificial intelligence.",
+        "description_kk": "Жасанды интеллектті үйренуге және іс жүзінде қолдануға арналған AI Qadam-ның Қазақстандағы қауымдастығы.",
+        "description_ru": "Казахстанское отделение AI Qadam для изучения и практического применения искусственного интеллекта.",
+        "handle": "ai_qadam_kazakhstan",
+        "last_verified": "2026-08-29",
+        "member_count": 413,
+        "name": "AI Qadam Kazakhstan",
+        "type": "groups"
+      },
+      "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category ai."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:allkzit",
+      "proposed_entry": {
+        "category": "general",
+        "description": "Kazakhstan IT professionals' community for discussion and peer support.",
+        "description_kk": "Қазақстандағы IT мамандарының пікір алмасу және өзара көмек қауымдастығы.",
+        "description_ru": "Сообщество IT-специалистов Казахстана для общения и взаимопомощи.",
+        "handle": "allkzit",
+        "last_verified": "2026-08-29",
+        "member_count": 3013,
+        "name": "IT.kz - все айтишники Казахстана",
+        "type": "groups"
+      },
+      "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category general."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:anykeykz",
+      "proposed_entry": {
+        "category": "devops-sysadmin",
+        "description": "Community for Kazakhstan helpdesk and junior system-administration specialists.",
+        "description_kk": "Қазақстандағы техникалық қолдау және жүйелік әкімшілендіруді бастап жүрген мамандар қауымдастығы.",
+        "description_ru": "Сообщество казахстанских эникейщиков и начинающих системных администраторов.",
+        "handle": "anykeykz",
+        "last_verified": "2026-08-29",
+        "member_count": 31,
+        "name": "Казахстанский Эникей - вестник с офисных полей",
+        "type": "groups"
+      },
+      "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:astana_hub",
+      "proposed_entry": {
+        "category": "startups",
+        "description": "Official Astana Hub channel with Kazakhstan startup ecosystem news, programs, and events.",
+        "description_kk": "Қазақстанның стартап экожүйесіндегі жаңалықтар, бағдарламалар мен іс-шаралар туралы Astana Hub-тың ресми арнасы.",
+        "description_ru": "Официальный канал Astana Hub с новостями, программами и событиями стартап-экосистемы Казахстана.",
+        "handle": "astana_hub",
+        "last_verified": "2026-08-29",
+        "member_count": 13572,
+        "name": "Astana Hub ️ ✔",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category startups."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:astanajkugoutputstream",
+      "proposed_entry": {
+        "category": "programming-languages",
+        "description": "Announcements and learning resources from the Astana Java user group.",
+        "description_kk": "Астана Java пайдаланушылары тобының хабарландырулары мен оқу материалдары.",
+        "description_ru": "Анонсы и учебные материалы сообщества Java-разработчиков Астаны.",
+        "handle": "astanajkugoutputstream",
+        "last_verified": "2026-08-29",
+        "member_count": 724,
+        "name": "Astana JKUG OutputStream",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category programming-languages."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:aws_kz",
+      "proposed_entry": {
+        "category": "devops-sysadmin",
+        "description": "Announcements for the AWS User Group Kazakhstan community.",
+        "description_kk": "AWS User Group Kazakhstan қауымдастығының хабарландыру арнасы.",
+        "description_ru": "Канал анонсов сообщества AWS User Group Kazakhstan.",
+        "handle": "aws_kz",
+        "last_verified": "2026-08-29",
+        "member_count": 267,
+        "name": "AWS User Group Kazakhstan Announcements Channel",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:blockchainkz",
+      "proposed_entry": {
+        "category": "blockchain",
+        "description": "Kazakhstan community for AI, blockchain, and digital-asset technology.",
+        "description_kk": "Қазақстандағы жасанды интеллект, блокчейн және цифрлық активтер технологиялары қауымдастығы.",
+        "description_ru": "Казахстанское сообщество по искусственному интеллекту, блокчейну и технологиям цифровых активов.",
+        "handle": "blockchainkz",
+        "last_verified": "2026-08-29",
+        "member_count": 289,
+        "name": "BlockchainKZ Association of AI & Blockchain technology developers and users",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category blockchain."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:devopskaz",
+      "proposed_entry": {
+        "category": "devops-sysadmin",
+        "description": "Kazakhstan DevOps channel covering cloud infrastructure, Linux, CI/CD, and high-load systems.",
+        "description_kk": "Бұлттық инфрақұрылым, Linux, CI/CD және жоғары жүктемелі жүйелер туралы қазақстандық DevOps арнасы.",
+        "description_ru": "Казахстанский DevOps-канал об облачной инфраструктуре, Linux, CI/CD и высоконагруженных системах.",
+        "handle": "devopskaz",
+        "last_verified": "2026-08-29",
+        "member_count": 6652,
+        "name": "KazDevOps",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:devs_kz",
+      "proposed_entry": {
+        "category": "jobs",
+        "description": "Kazakhstan IT careers, workshops, meetups, and professional-development channel.",
+        "description_kk": "Қазақстандағы IT мансабы, воркшоптар, митаптар және кәсіби даму туралы арна.",
+        "description_ru": "Канал об IT-карьере, воркшопах, митапах и профессиональном развитии в Казахстане.",
+        "handle": "devs_kz",
+        "last_verified": "2026-08-29",
+        "member_count": 10373,
+        "name": "Devs.kz",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:digitalbussinesskz",
+      "proposed_entry": {
+        "category": "news",
+        "description": "Kazakhstan technology and business publication covering IT, startups, and digital products.",
+        "description_kk": "IT, стартаптар және цифрлық өнімдер туралы жазатын қазақстандық технология және бизнес басылымы.",
+        "description_ru": "Казахстанское издание о технологиях и бизнесе, освещающее IT, стартапы и цифровые продукты.",
+        "handle": "digitalbussinesskz",
+        "last_verified": "2026-08-29",
+        "member_count": 8362,
+        "name": "DigitalBusiness.kz",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category news."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:ethkz",
+      "proposed_entry": {
+        "category": "devops-sysadmin",
+        "description": "Kazakhstan networking community for routing, wireless, VPN, and network equipment.",
+        "description_kk": "Маршруттау, сымсыз желілер, VPN және желілік жабдықтар жөніндегі Қазақстан қауымдастығы.",
+        "description_ru": "Казахстанское сетевое сообщество о маршрутизации, беспроводных сетях, VPN и сетевом оборудовании.",
+        "handle": "ethkz",
+        "last_verified": "2026-08-29",
+        "member_count": 1227,
+        "name": "Сеть.kz",
+        "type": "groups"
+      },
+      "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:go_kz_vacancy",
+      "proposed_entry": {
+        "category": "jobs",
+        "description": "Go developer vacancies in Kazakhstan and international roles relevant to the local community.",
+        "description_kk": "Қазақстандағы Go әзірлеушілеріне және жергілікті қауымдастыққа қатысты халықаралық бос орындар.",
+        "description_ru": "Вакансии Go-разработчиков в Казахстане и зарубежные позиции для местного сообщества.",
+        "handle": "go_kz_vacancy",
+        "last_verified": "2026-08-29",
+        "member_count": 2262,
+        "name": "Golang vacancies in KZ",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:hackathon_kz",
+      "proposed_entry": {
+        "category": "events",
+        "description": "Hackathon news and event announcements in Kazakhstan.",
+        "description_kk": "Қазақстандағы хакатон жаңалықтары мен іс-шаралар хабарландырулары.",
+        "description_ru": "Новости и анонсы хакатонов в Казахстане.",
+        "handle": "hackathon_kz",
+        "last_verified": "2026-08-29",
+        "member_count": 254,
+        "name": "Hackathon kz",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category events."
+    },
+    {
+      "action": "unresolved",
+      "candidate_id": "candidate:helpfixit",
+      "proposed_entry": null,
+      "reason": "Public evidence verifies a live computer-help group but contains no Kazakhstan audience or relevance signal; admission remains unresolved."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:it_jobs_kz",
+      "proposed_entry": {
+        "category": "jobs",
+        "description": "IT vacancies in Kazakhstan and worldwide, with salary ranges when available.",
+        "description_kk": "Қазақстандағы және әлемдегі IT бос орындары; бар болса жалақы ауқымы көрсетіледі.",
+        "description_ru": "IT-вакансии в Казахстане и мире с указанием вилки зарплаты, когда она доступна.",
+        "handle": "it_jobs_kz",
+        "last_verified": "2026-08-29",
+        "member_count": 9702,
+        "name": "IT Jobs (DSML.KZ)",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:it_kazahstan",
+      "proposed_entry": {
+        "category": "news",
+        "description": "News for Kazakhstan IT specialists, low-voltage systems professionals, and technology entrepreneurs.",
+        "description_kk": "Қазақстандағы IT мамандарына, әлсіз ток жүйелері мамандарына және технология кәсіпкерлеріне арналған жаңалықтар арнасы.",
+        "description_ru": "Новости для IT-специалистов, слаботочников и технологических предпринимателей Казахстана.",
+        "handle": "IT_Kazahstan",
+        "last_verified": "2026-08-29",
+        "member_count": 714,
+        "name": "IT Kazakhstan",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category news."
+    },
+    {
+      "action": "duplicate",
+      "candidate_id": "candidate:itbazarkzchannel",
+      "proposed_entry": null,
+      "reason": "The public description points to live catalog group @itbazarkz and retained channel messages redirect to that group, so this advertising mirror is a canonical duplicate."
+    },
+    {
+      "action": "reject",
+      "candidate_id": "candidate:itqazaqstan",
+      "proposed_entry": null,
+      "reason": "The public description centers paid service access, promotions, and integrator work; commercial/spam risk fails the non-commercial admission gate."
+    },
+    {
+      "action": "reject",
+      "candidate_id": "candidate:kazakhtelecom_official",
+      "proposed_entry": null,
+      "reason": "The target is an official telecom operator corporate feed, not an IT community or specialist resource; it fails community-scope and commerciality gates."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:kolesa_group",
+      "proposed_entry": {
+        "category": "general",
+        "description": "Kolesa Group channel sharing Kazakhstan product-development experience, internships, and technology events.",
+        "description_kk": "Kolesa Group-тың Қазақстандағы өнім әзірлеу тәжірибесі, тағылымдамалары және технологиялық іс-шаралары туралы арнасы.",
+        "description_ru": "Канал Kolesa Group об опыте разработки продуктов в Казахстане, стажировках и технологических событиях.",
+        "handle": "kolesa_group",
+        "last_verified": "2026-08-29",
+        "member_count": 7116,
+        "name": "Kolesa Group",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category general."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:kz_bi_jobs",
+      "proposed_entry": {
+        "category": "jobs",
+        "description": "Data analytics and business intelligence vacancies for Kazakhstan professionals.",
+        "description_kk": "Қазақстандағы деректер талдауы және Business Intelligence мамандарына арналған бос орындар.",
+        "description_ru": "Вакансии в аналитике данных и Business Intelligence для специалистов Казахстана.",
+        "handle": "kz_bi_jobs",
+        "last_verified": "2026-08-29",
+        "member_count": 5479,
+        "name": "KZ BI Data Jobs",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:kz_bi_news",
+      "proposed_entry": {
+        "category": "data-analytics",
+        "description": "Kazakhstan data analytics and business intelligence news, events, and community updates.",
+        "description_kk": "Қазақстандағы деректер талдауы мен Business Intelligence жаңалықтары, іс-шаралары және қауымдастық хабарлары.",
+        "description_ru": "Новости, события и обновления казахстанского сообщества аналитики данных и Business Intelligence.",
+        "handle": "kz_bi_news",
+        "last_verified": "2026-08-29",
+        "member_count": 959,
+        "name": "KZ BI News & Events",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category data-analytics."
+    },
+    {
+      "action": "reject",
+      "candidate_id": "candidate:nfactorial_school",
+      "proposed_entry": null,
+      "reason": "The retained public description and recent posts are a school lead funnel with consultation and WhatsApp sales calls; it fails the purely-commercial gate."
+    },
+    {
+      "action": "unresolved",
+      "candidate_id": "candidate:qaz_qa_vacancies",
+      "proposed_entry": null,
+      "reason": "The target name and online count suggest Kazakhstan QA vacancies, but no public description or messages expose scope, rules, or spam risk; admission remains unresolved."
+    },
+    {
+      "action": "unresolved",
+      "candidate_id": "candidate:rootway",
+      "proposed_entry": null,
+      "reason": "The public target is a live system-administration learning channel, but retained evidence contains no Kazakhstan audience or relevance signal; admission remains unresolved."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:sandyq_orda",
+      "proposed_entry": {
+        "category": "news",
+        "description": "News and analysis on B2B and B2G digitalization in Kazakhstan.",
+        "description_kk": "Қазақстандағы B2B және B2G цифрландыру туралы жаңалықтар мен талдау.",
+        "description_ru": "Новости и аналитика о цифровизации B2B и B2G в Казахстане.",
+        "handle": "sandyq_orda",
+        "last_verified": "2026-08-29",
+        "member_count": 7071,
+        "name": "Цифровая Орда 🇰🇿",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category news."
+    },
+    {
+      "action": "unresolved",
+      "candidate_id": "candidate:sysadm_in_job",
+      "proposed_entry": null,
+      "reason": "The public target is a live IT jobs group with rules, but no retained target evidence establishes Kazakhstan audience or relevance; admission remains unresolved."
+    },
+    {
+      "action": "add",
+      "candidate_id": "candidate:tvkrg",
+      "proposed_entry": {
+        "category": "startups",
+        "description": "Karaganda technology and startup hub channel for events, news, and networking.",
+        "description_kk": "Қарағандыдағы технология және стартап хабының іс-шаралар, жаңалықтар және нетворкинг арнасы.",
+        "description_ru": "Канал технологического и стартап-хаба Караганды с событиями, новостями и нетворкингом.",
+        "handle": "tvkrg",
+        "last_verified": "2026-08-29",
+        "member_count": 1232,
+        "name": "Terricon Valley | IT и Бизнес | Караганда",
+        "type": "channels"
+      },
+      "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category startups."
+    }
+  ],
+  "collisions": [
+    {
+      "candidate_id": "candidate:ai_qadam_kazakhstan",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:allkzit",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:anykeykz",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:astana_hub",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:astanajkugoutputstream",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:aws_kz",
+      "cross_input_duplicate": true,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:blockchainkz",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:devopskaz",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:devs_kz",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:digitalbussinesskz",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:ethkz",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:go_kz_vacancy",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:hackathon_kz",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:helpfixit",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:it_jobs_kz",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:it_kazahstan",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:itbazarkzchannel",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:itqazaqstan",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:kazakhtelecom_official",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:kolesa_group",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:kz_bi_jobs",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:kz_bi_news",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:nfactorial_school",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:qaz_qa_vacancies",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:rootway",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:sandyq_orda",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:sysadm_in_job",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    },
+    {
+      "candidate_id": "candidate:tvkrg",
+      "cross_input_duplicate": false,
+      "matched_handles": [],
+      "status": "clear"
+    }
+  ],
+  "editorial": [
+    {
+      "candidate_id": "candidate:ai_qadam_kazakhstan",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:ai_qadam_kazakhstan",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:ai_qadam_kazakhstan",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:ai_qadam_kazakhstan"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:allkzit",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:allkzit",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:allkzit",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:allkzit"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:anykeykz",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:anykeykz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:anykeykz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:anykeykz"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:astana_hub",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:astana_hub",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:astana_hub",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:astana_hub"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:astanajkugoutputstream",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:astanajkugoutputstream",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:astanajkugoutputstream",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:astanajkugoutputstream"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:aws_kz",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:aws_kz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:aws_kz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:aws_kz"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:blockchainkz",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:blockchainkz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:blockchainkz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:blockchainkz"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:devopskaz",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:devopskaz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:devopskaz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:devopskaz"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:devs_kz",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:devs_kz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:devs_kz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:devs_kz"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:digitalbussinesskz",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:digitalbussinesskz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:digitalbussinesskz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:digitalbussinesskz"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:ethkz",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:ethkz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:ethkz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:ethkz"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:go_kz_vacancy",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:go_kz_vacancy",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:go_kz_vacancy",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:go_kz_vacancy"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:hackathon_kz",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:hackathon_kz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:hackathon_kz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:hackathon_kz"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:helpfixit",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:helpfixit",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:helpfixit",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:helpfixit"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": false,
+      "locales_complete": false,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:it_jobs_kz",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:it_jobs_kz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:it_jobs_kz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:it_jobs_kz"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:it_kazahstan",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:it_kazahstan",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:it_kazahstan",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:it_kazahstan"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:itbazarkzchannel",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:itbazarkzchannel",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:itbazarkzchannel",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:itbazarkzchannel"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": false,
+      "purely_commercial": true
+    },
+    {
+      "candidate_id": "candidate:itqazaqstan",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:itqazaqstan",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:itqazaqstan",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:itqazaqstan"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": false,
+      "purely_commercial": true
+    },
+    {
+      "candidate_id": "candidate:kazakhtelecom_official",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:kazakhtelecom_official",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:kazakhtelecom_official",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:kazakhtelecom_official"
+      ],
+      "it_relevant": false,
+      "kazakhstan_relevant": true,
+      "locales_complete": false,
+      "purely_commercial": true
+    },
+    {
+      "candidate_id": "candidate:kolesa_group",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:kolesa_group",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:kolesa_group",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:kolesa_group"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:kz_bi_jobs",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:kz_bi_jobs",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:kz_bi_jobs",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:kz_bi_jobs"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:kz_bi_news",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:kz_bi_news",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:kz_bi_news",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:kz_bi_news"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:nfactorial_school",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:nfactorial_school",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:nfactorial_school",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:nfactorial_school"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": false,
+      "purely_commercial": true
+    },
+    {
+      "candidate_id": "candidate:qaz_qa_vacancies",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:qaz_qa_vacancies",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:qaz_qa_vacancies",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:qaz_qa_vacancies"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": false,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:rootway",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:rootway",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:rootway",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:rootway"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": false,
+      "locales_complete": false,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:sandyq_orda",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:sandyq_orda",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:sandyq_orda",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:sandyq_orda"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:sysadm_in_job",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:sysadm_in_job",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:sysadm_in_job",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:sysadm_in_job"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": false,
+      "locales_complete": false,
+      "purely_commercial": false
+    },
+    {
+      "candidate_id": "candidate:tvkrg",
+      "category_valid": true,
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:tvkrg",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:tvkrg",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:tvkrg"
+      ],
+      "it_relevant": true,
+      "kazakhstan_relevant": true,
+      "locales_complete": true,
+      "purely_commercial": false
+    }
+  ],
+  "observations": [
+    {
+      "body_sha256": "0cd5ae6adada7ac24172e6c62b7e808abfecab3037ca0bce5a7b4e69c677fbe5",
+      "candidate_id": "candidate:ai_qadam_kazakhstan",
+      "canonical_handle": "ai_qadam_kazakhstan",
+      "member_count": 413,
+      "observed_at": "2026-08-29",
+      "observed_type": "groups",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "ai_qadam_kazakhstan",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "groups",
+          "member_count": 413,
+          "observed_type": "groups",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "AI Qadam Kazakhstan"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "channels",
+          "member_count": null,
+          "observed_type": "groups",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "AI Qadam Kazakhstan"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "groups",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "AI Qadam Kazakhstan"
+        }
+      ],
+      "visible_name": "AI Qadam Kazakhstan"
+    },
+    {
+      "body_sha256": "4668a55e4b3289afe050fe54e8faf7868db703c88d57b8cf7e7a67d780850f35",
+      "candidate_id": "candidate:allkzit",
+      "canonical_handle": "allkzit",
+      "member_count": 3013,
+      "observed_at": "2026-08-29",
+      "observed_type": "groups",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "allkzit",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "groups",
+          "member_count": 3013,
+          "observed_type": "groups",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "IT.kz - все айтишники Казахстана"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "channels",
+          "member_count": null,
+          "observed_type": "groups",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "IT.kz - все айтишники Казахстана"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "groups",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "IT.kz - все айтишники Казахстана"
+        }
+      ],
+      "visible_name": "IT.kz - все айтишники Казахстана"
+    },
+    {
+      "body_sha256": "c2b6445fb7760c4317c7cb46802e59ded4d76f5f018ac2290bff5b9e6cb9e251",
+      "candidate_id": "candidate:anykeykz",
+      "canonical_handle": "anykeykz",
+      "member_count": 31,
+      "observed_at": "2026-08-29",
+      "observed_type": "groups",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "anykeykz",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "groups",
+          "member_count": 31,
+          "observed_type": "groups",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "Казахстанский Эникей - вестник с офисных полей"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "channels",
+          "member_count": null,
+          "observed_type": "groups",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Казахстанский Эникей - вестник с офисных полей"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "groups",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Казахстанский Эникей - вестник с офисных полей"
+        }
+      ],
+      "visible_name": "Казахстанский Эникей - вестник с офисных полей"
+    },
+    {
+      "body_sha256": "d1be4b9e4e04617dd5ce210c54c686c834255580c5cf47adb47cc1d8858f7380",
+      "candidate_id": "candidate:astana_hub",
+      "canonical_handle": "astana_hub",
+      "member_count": 13572,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "astana_hub",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Astana Hub ️ ✔"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 13572,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "Astana Hub ️ ✔"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Astana Hub ️ ✔"
+        }
+      ],
+      "visible_name": "Astana Hub ️ ✔"
+    },
+    {
+      "body_sha256": "9ac90b72e0ee09109cd688a6d544f035d181ed86f9c5c36e7114d47ec6c72c40",
+      "candidate_id": "candidate:astanajkugoutputstream",
+      "canonical_handle": "astanajkugoutputstream",
+      "member_count": 724,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "astanajkugoutputstream",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Astana JKUG OutputStream"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 724,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "Astana JKUG OutputStream"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Astana JKUG OutputStream"
+        }
+      ],
+      "visible_name": "Astana JKUG OutputStream"
+    },
+    {
+      "body_sha256": "9f97e016a189d420703b234cc223358ff5199ac13de9de9f5d7d22004366427c",
+      "candidate_id": "candidate:aws_kz",
+      "canonical_handle": "aws_kz",
+      "member_count": 267,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "aws_kz",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "AWS User Group Kazakhstan Announcements Channel"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 267,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "AWS User Group Kazakhstan Announcements Channel"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "AWS User Group Kazakhstan Announcements Channel"
+        }
+      ],
+      "visible_name": "AWS User Group Kazakhstan Announcements Channel"
+    },
+    {
+      "body_sha256": "330bc15b6a33a034a786738eb28c94d184060f49a88adb36d862651c6cc9e4fb",
+      "candidate_id": "candidate:blockchainkz",
+      "canonical_handle": "blockchainkz",
+      "member_count": 289,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "blockchainkz",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "BlockchainKZ Association of AI & Blockchain technology developers and users"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 289,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "BlockchainKZ Association of AI & Blockchain technology developers and users"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "BlockchainKZ Association of AI & Blockchain technology developers and users"
+        }
+      ],
+      "visible_name": "BlockchainKZ Association of AI & Blockchain technology developers and users"
+    },
+    {
+      "body_sha256": "45e6afbfe6d4fd6bfa99d7eaedc31c19ee2371da7f6c7ca120a72947f8741f7d",
+      "candidate_id": "candidate:devopskaz",
+      "canonical_handle": "devopskaz",
+      "member_count": 6652,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "devopskaz",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "KazDevOps"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 6652,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "KazDevOps"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "KazDevOps"
+        }
+      ],
+      "visible_name": "KazDevOps"
+    },
+    {
+      "body_sha256": "45ce6cfcff7e1a47846a6e76b954fa8dd0809c3ed2e696c443d694a40bc10300",
+      "candidate_id": "candidate:devs_kz",
+      "canonical_handle": "devs_kz",
+      "member_count": 10373,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "devs_kz",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Devs.kz"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 10373,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "Devs.kz"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Devs.kz"
+        }
+      ],
+      "visible_name": "Devs.kz"
+    },
+    {
+      "body_sha256": "e7db5afe10f6afa917cfeaf145bd6c3e644f31b7a7609608b61ab51a1b80936c",
+      "candidate_id": "candidate:digitalbussinesskz",
+      "canonical_handle": "digitalbussinesskz",
+      "member_count": 8362,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "digitalbussinesskz",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "DigitalBusiness.kz"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 8362,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "DigitalBusiness.kz"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "DigitalBusiness.kz"
+        }
+      ],
+      "visible_name": "DigitalBusiness.kz"
+    },
+    {
+      "body_sha256": "8cbcc52e0e5b23959d708cb10ac5bf9937c34d62c868447d1628699f9789be38",
+      "candidate_id": "candidate:ethkz",
+      "canonical_handle": "ethkz",
+      "member_count": 1227,
+      "observed_at": "2026-08-29",
+      "observed_type": "groups",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "ethkz",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "groups",
+          "member_count": 1227,
+          "observed_type": "groups",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "Сеть.kz"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "channels",
+          "member_count": null,
+          "observed_type": "groups",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Сеть.kz"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "groups",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Сеть.kz"
+        }
+      ],
+      "visible_name": "Сеть.kz"
+    },
+    {
+      "body_sha256": "965e769302fd6cb7f1869858c2ee05be999b583a06aa5866ac68792d80a6b2a2",
+      "candidate_id": "candidate:go_kz_vacancy",
+      "canonical_handle": "go_kz_vacancy",
+      "member_count": 2262,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "go_kz_vacancy",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Golang vacancies in KZ"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 2262,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "Golang vacancies in KZ"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Golang vacancies in KZ"
+        }
+      ],
+      "visible_name": "Golang vacancies in KZ"
+    },
+    {
+      "body_sha256": "0aecebc5ef96941f9b85f0256428398783b70eda7d9b8db9798061a1a41df5a7",
+      "candidate_id": "candidate:hackathon_kz",
+      "canonical_handle": "hackathon_kz",
+      "member_count": 254,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "hackathon_kz",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Hackathon kz"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 254,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "Hackathon kz"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Hackathon kz"
+        }
+      ],
+      "visible_name": "Hackathon kz"
+    },
+    {
+      "body_sha256": "a0fb3f26cbfff08660bf451bc2d2533e4e59e66a2f0b867e3e1a398b76ddb23f",
+      "candidate_id": "candidate:helpfixit",
+      "canonical_handle": "helpfixit",
+      "member_count": 318,
+      "observed_at": "2026-08-29",
+      "observed_type": "groups",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "helpfixit",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "groups",
+          "member_count": 318,
+          "observed_type": "groups",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "Computer help"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "channels",
+          "member_count": null,
+          "observed_type": "groups",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Computer help"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "groups",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Computer help"
+        }
+      ],
+      "visible_name": "Computer help"
+    },
+    {
+      "body_sha256": "e81c863066b9cec20e64c7a3016ed5f23586c7b340027aa4f8c804c3b5f275ae",
+      "candidate_id": "candidate:it_jobs_kz",
+      "canonical_handle": "it_jobs_kz",
+      "member_count": 9702,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "it_jobs_kz",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "IT Jobs (DSML.KZ)"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 9702,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "IT Jobs (DSML.KZ)"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "IT Jobs (DSML.KZ)"
+        }
+      ],
+      "visible_name": "IT Jobs (DSML.KZ)"
+    },
+    {
+      "body_sha256": "cf38d2ecbda3763fe033463706530526eeec2b0f22a6ad2e7bcd9838f9349433",
+      "candidate_id": "candidate:it_kazahstan",
+      "canonical_handle": "IT_Kazahstan",
+      "member_count": 714,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "IT_Kazahstan",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "IT Kazakhstan"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 714,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "IT Kazakhstan"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "IT Kazakhstan"
+        }
+      ],
+      "visible_name": "IT Kazakhstan"
+    },
+    {
+      "body_sha256": "cfe82336029e949e0e923c4ac8b51a5e6c8c22055ba2fbc54264f24a3fd91104",
+      "candidate_id": "candidate:itbazarkzchannel",
+      "canonical_handle": "itbazarkzchannel",
+      "member_count": 2451,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "itbazarkzchannel",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "IT Барахолка - Только объявления"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 2451,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "IT Барахолка - Только объявления"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "IT Барахолка - Только объявления"
+        }
+      ],
+      "visible_name": "IT Барахолка - Только объявления"
+    },
+    {
+      "body_sha256": "ce674524a232a33bce7d20b05168237b4916c995abfc370366955d3f1629fbd2",
+      "candidate_id": "candidate:itqazaqstan",
+      "canonical_handle": "itqazaqstan",
+      "member_count": 281,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "itqazaqstan",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "IT Kazakhstan 🇰🇿 Все для слаботочников Казахстана"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 281,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "IT Kazakhstan 🇰🇿 Все для слаботочников Казахстана"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "IT Kazakhstan 🇰🇿 Все для слаботочников Казахстана"
+        }
+      ],
+      "visible_name": "IT Kazakhstan 🇰🇿 Все для слаботочников Казахстана"
+    },
+    {
+      "body_sha256": "004ae970f6719b2aa5df6a8d82b8b318117e1e83031a8a40fa9f27fc3fe1ba44",
+      "candidate_id": "candidate:kazakhtelecom_official",
+      "canonical_handle": "kazakhtelecom_official",
+      "member_count": 5153,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "kazakhtelecom_official",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "telecomkz"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 5153,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "telecomkz"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "telecomkz"
+        }
+      ],
+      "visible_name": "telecomkz"
+    },
+    {
+      "body_sha256": "aab15c7269d74159da17866bd089990b49ea2fa699a6896be14fea3e55ac40ca",
+      "candidate_id": "candidate:kolesa_group",
+      "canonical_handle": "kolesa_group",
+      "member_count": 7116,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "kolesa_group",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Kolesa Group"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 7116,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "Kolesa Group"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Kolesa Group"
+        }
+      ],
+      "visible_name": "Kolesa Group"
+    },
+    {
+      "body_sha256": "74f47fc26c69133d9931f10e98065bc3ffeffd757386919c048cbce3f2ed456a",
+      "candidate_id": "candidate:kz_bi_jobs",
+      "canonical_handle": "kz_bi_jobs",
+      "member_count": 5479,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "kz_bi_jobs",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "KZ BI Data Jobs"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 5479,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "KZ BI Data Jobs"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "KZ BI Data Jobs"
+        }
+      ],
+      "visible_name": "KZ BI Data Jobs"
+    },
+    {
+      "body_sha256": "f9bedf4e63f2d61a6cb819afc9ac222a44bd6fa69683ee2156782d606a2185a6",
+      "candidate_id": "candidate:kz_bi_news",
+      "canonical_handle": "kz_bi_news",
+      "member_count": 959,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "kz_bi_news",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "KZ BI News & Events"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 959,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "KZ BI News & Events"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "KZ BI News & Events"
+        }
+      ],
+      "visible_name": "KZ BI News & Events"
+    },
+    {
+      "body_sha256": "641a11a4c35f71dfcdfb8ffde00f61ec5e1c29cdf4d8192c013c8a2d78c6941c",
+      "candidate_id": "candidate:nfactorial_school",
+      "canonical_handle": "nfactorial_school",
+      "member_count": 435,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "nfactorial_school",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Телеграммы nFactorial School"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 435,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "Телеграммы nFactorial School"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Телеграммы nFactorial School"
+        }
+      ],
+      "visible_name": "Телеграммы nFactorial School"
+    },
+    {
+      "body_sha256": "e1d576d14198e3e6343e4a4952acedcd413aa4fb7ff71ae23a55fb337bea6774",
+      "candidate_id": "candidate:qaz_qa_vacancies",
+      "canonical_handle": "qaz_qa_vacancies",
+      "member_count": 602,
+      "observed_at": "2026-08-29",
+      "observed_type": "groups",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "qaz_qa_vacancies",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "groups",
+          "member_count": 602,
+          "observed_type": "groups",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "KZ QA Vacancies"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "channels",
+          "member_count": null,
+          "observed_type": "groups",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "KZ QA Vacancies"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "groups",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "KZ QA Vacancies"
+        }
+      ],
+      "visible_name": "KZ QA Vacancies"
+    },
+    {
+      "body_sha256": "4eb4d6b3fef437483b948d7d8d39ba1b0380f5a138671c126eb4be3733019ee9",
+      "candidate_id": "candidate:rootway",
+      "canonical_handle": "rootway",
+      "member_count": 1215,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "rootway",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Путь Админа"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 1215,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "Путь Админа"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Путь Админа"
+        }
+      ],
+      "visible_name": "Путь Админа"
+    },
+    {
+      "body_sha256": "501583e49cf794f8e9401a3d193b93899fda0ee6782fc1d706af1728417960e2",
+      "candidate_id": "candidate:sandyq_orda",
+      "canonical_handle": "sandyq_orda",
+      "member_count": 7071,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "sandyq_orda",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Цифровая Орда 🇰🇿"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 7071,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "Цифровая Орда 🇰🇿"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Цифровая Орда 🇰🇿"
+        }
+      ],
+      "visible_name": "Цифровая Орда 🇰🇿"
+    },
+    {
+      "body_sha256": "b6ade14a76d1d778986e8db1695152daa8ba433bdacdeb34145b4292a4098209",
+      "candidate_id": "candidate:sysadm_in_job",
+      "canonical_handle": "sysadm_in_job",
+      "member_count": 832,
+      "observed_at": "2026-08-29",
+      "observed_type": "groups",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "sysadm_in_job",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "groups",
+          "member_count": 832,
+          "observed_type": "groups",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "Sys-Admin Job"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "channels",
+          "member_count": null,
+          "observed_type": "groups",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Sys-Admin Job"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "groups",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Sys-Admin Job"
+        }
+      ],
+      "visible_name": "Sys-Admin Job"
+    },
+    {
+      "body_sha256": "6e592492a5eba23331d5d348e84c6f6f0a7f2cd9e6d3ce92c66f7674b7aea732",
+      "candidate_id": "candidate:tvkrg",
+      "canonical_handle": "tvkrg",
+      "member_count": 1232,
+      "observed_at": "2026-08-29",
+      "observed_type": "channels",
+      "reason": "one_verified_two_bound_mismatches",
+      "requested_handle": "tvkrg",
+      "source_classification": "public_telegram_preview",
+      "status": "verified",
+      "target_bound": true,
+      "transport": {
+        "attempts": 1,
+        "ok": true,
+        "reason": "fetched",
+        "status_code": 200
+      },
+      "type_results": [
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "groups",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Terricon Valley | IT и Бизнес | Караганда"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "verified",
+          "declared_type": "channels",
+          "member_count": 1232,
+          "observed_type": "channels",
+          "reason": "target_preview_verified",
+          "target_bound": true,
+          "visible_name": "Terricon Valley | IT и Бизнес | Караганда"
+        },
+        {
+          "archive_candidate": false,
+          "classification": "ambiguous",
+          "declared_type": "bots",
+          "member_count": null,
+          "observed_type": "channels",
+          "reason": "declared_type_mismatch",
+          "target_bound": true,
+          "visible_name": "Terricon Valley | IT и Бизнес | Караганда"
+        }
+      ],
+      "visible_name": "Terricon Valley | IT и Бизнес | Караганда"
+    }
+  ],
+  "source": {
+    "candidates": [
+      {
+        "candidate_id": "candidate:ai_qadam_kazakhstan",
+        "handle": "ai_qadam_kazakhstan",
+        "occurrence_ids": [
+          "occurrence:0029"
+        ]
+      },
+      {
+        "candidate_id": "candidate:allkzit",
+        "handle": "allkzit",
+        "occurrence_ids": [
+          "occurrence:0011"
+        ]
+      },
+      {
+        "candidate_id": "candidate:anykeykz",
+        "handle": "anykeykz",
+        "occurrence_ids": [
+          "occurrence:0019"
+        ]
+      },
+      {
+        "candidate_id": "candidate:astana_hub",
+        "handle": "astana_hub",
+        "occurrence_ids": [
+          "occurrence:0001"
+        ]
+      },
+      {
+        "candidate_id": "candidate:astanajkugoutputstream",
+        "handle": "astanajkugoutputstream",
+        "occurrence_ids": [
+          "occurrence:0017"
+        ]
+      },
+      {
+        "candidate_id": "candidate:aws_kz",
+        "handle": "aws_kz",
+        "occurrence_ids": [
+          "occurrence:0016",
+          "occurrence:0024"
+        ]
+      },
+      {
+        "candidate_id": "candidate:blockchainkz",
+        "handle": "blockchainkz",
+        "occurrence_ids": [
+          "occurrence:0002"
+        ]
+      },
+      {
+        "candidate_id": "candidate:devopskaz",
+        "handle": "devopskaz",
+        "occurrence_ids": [
+          "occurrence:0009"
+        ]
+      },
+      {
+        "candidate_id": "candidate:devs_kz",
+        "handle": "devs_kz",
+        "occurrence_ids": [
+          "occurrence:0008"
+        ]
+      },
+      {
+        "candidate_id": "candidate:digitalbussinesskz",
+        "handle": "digitalbussinesskz",
+        "occurrence_ids": [
+          "occurrence:0015"
+        ]
+      },
+      {
+        "candidate_id": "candidate:ethkz",
+        "handle": "ethkz",
+        "occurrence_ids": [
+          "occurrence:0013"
+        ]
+      },
+      {
+        "candidate_id": "candidate:go_kz_vacancy",
+        "handle": "go_kz_vacancy",
+        "occurrence_ids": [
+          "occurrence:0022"
+        ]
+      },
+      {
+        "candidate_id": "candidate:hackathon_kz",
+        "handle": "hackathon_kz",
+        "occurrence_ids": [
+          "occurrence:0005"
+        ]
+      },
+      {
+        "candidate_id": "candidate:helpfixit",
+        "handle": "helpfixit",
+        "occurrence_ids": [
+          "occurrence:0018"
+        ]
+      },
+      {
+        "candidate_id": "candidate:it_jobs_kz",
+        "handle": "it_jobs_kz",
+        "occurrence_ids": [
+          "occurrence:0020"
+        ]
+      },
+      {
+        "candidate_id": "candidate:it_kazahstan",
+        "handle": "IT_Kazahstan",
+        "occurrence_ids": [
+          "occurrence:0028"
+        ]
+      },
+      {
+        "candidate_id": "candidate:itbazarkzchannel",
+        "handle": "itbazarkzchannel",
+        "occurrence_ids": [
+          "occurrence:0003"
+        ]
+      },
+      {
+        "candidate_id": "candidate:itqazaqstan",
+        "handle": "itqazaqstan",
+        "occurrence_ids": [
+          "occurrence:0027"
+        ]
+      },
+      {
+        "candidate_id": "candidate:kazakhtelecom_official",
+        "handle": "kazakhtelecom_official",
+        "occurrence_ids": [
+          "occurrence:0026"
+        ]
+      },
+      {
+        "candidate_id": "candidate:kolesa_group",
+        "handle": "kolesa_group",
+        "occurrence_ids": [
+          "occurrence:0010"
+        ]
+      },
+      {
+        "candidate_id": "candidate:kz_bi_jobs",
+        "handle": "kz_bi_jobs",
+        "occurrence_ids": [
+          "occurrence:0021"
+        ]
+      },
+      {
+        "candidate_id": "candidate:kz_bi_news",
+        "handle": "kz_bi_news",
+        "occurrence_ids": [
+          "occurrence:0006"
+        ]
+      },
+      {
+        "candidate_id": "candidate:nfactorial_school",
+        "handle": "nfactorial_school",
+        "occurrence_ids": [
+          "occurrence:0007"
+        ]
+      },
+      {
+        "candidate_id": "candidate:qaz_qa_vacancies",
+        "handle": "qaz_qa_vacancies",
+        "occurrence_ids": [
+          "occurrence:0004"
+        ]
+      },
+      {
+        "candidate_id": "candidate:rootway",
+        "handle": "rootway",
+        "occurrence_ids": [
+          "occurrence:0012"
+        ]
+      },
+      {
+        "candidate_id": "candidate:sandyq_orda",
+        "handle": "sandyq_orda",
+        "occurrence_ids": [
+          "occurrence:0025"
+        ]
+      },
+      {
+        "candidate_id": "candidate:sysadm_in_job",
+        "handle": "sysadm_in_job",
+        "occurrence_ids": [
+          "occurrence:0023"
+        ]
+      },
+      {
+        "candidate_id": "candidate:tvkrg",
+        "handle": "tvkrg",
+        "occurrence_ids": [
+          "occurrence:0014"
+        ]
+      }
+    ],
+    "occurrences": [
+      {
+        "byte_end": 23,
+        "byte_start": 0,
+        "candidate_id": "candidate:astana_hub",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0001",
+        "ordinal": 1,
+        "raw_text": "https://t.me/astana_hub",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f617374616e615f687562",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/astana_hub"
+      },
+      {
+        "byte_end": 49,
+        "byte_start": 24,
+        "candidate_id": "candidate:blockchainkz",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0002",
+        "ordinal": 2,
+        "raw_text": "https://t.me/blockchainkz",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f626c6f636b636861696e6b7a",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/blockchainkz"
+      },
+      {
+        "byte_end": 79,
+        "byte_start": 50,
+        "candidate_id": "candidate:itbazarkzchannel",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0003",
+        "ordinal": 3,
+        "raw_text": "https://t.me/itbazarkzchannel",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f697462617a61726b7a6368616e6e656c",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/itbazarkzchannel"
+      },
+      {
+        "byte_end": 109,
+        "byte_start": 80,
+        "candidate_id": "candidate:qaz_qa_vacancies",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0004",
+        "ordinal": 4,
+        "raw_text": "https://t.me/qaz_qa_vacancies",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f71617a5f71615f766163616e63696573",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/qaz_qa_vacancies"
+      },
+      {
+        "byte_end": 135,
+        "byte_start": 110,
+        "candidate_id": "candidate:hackathon_kz",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0005",
+        "ordinal": 5,
+        "raw_text": "https://t.me/hackathon_kz",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f6861636b6174686f6e5f6b7a",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/hackathon_kz"
+      },
+      {
+        "byte_end": 159,
+        "byte_start": 136,
+        "candidate_id": "candidate:kz_bi_news",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0006",
+        "ordinal": 6,
+        "raw_text": "https://t.me/kz_bi_news",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f6b7a5f62695f6e657773",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/kz_bi_news"
+      },
+      {
+        "byte_end": 190,
+        "byte_start": 160,
+        "candidate_id": "candidate:nfactorial_school",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0007",
+        "ordinal": 7,
+        "raw_text": "https://t.me/nfactorial_school",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f6e666163746f7269616c5f7363686f6f6c",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/nfactorial_school"
+      },
+      {
+        "byte_end": 211,
+        "byte_start": 191,
+        "candidate_id": "candidate:devs_kz",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0008",
+        "ordinal": 8,
+        "raw_text": "https://t.me/devs_kz",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f646576735f6b7a",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/devs_kz"
+      },
+      {
+        "byte_end": 234,
+        "byte_start": 212,
+        "candidate_id": "candidate:devopskaz",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0009",
+        "ordinal": 9,
+        "raw_text": "https://t.me/devopskaz",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f6465766f70736b617a",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/devopskaz"
+      },
+      {
+        "byte_end": 260,
+        "byte_start": 235,
+        "candidate_id": "candidate:kolesa_group",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0010",
+        "ordinal": 10,
+        "raw_text": "https://t.me/kolesa_group",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f6b6f6c6573615f67726f7570",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/kolesa_group"
+      },
+      {
+        "byte_end": 281,
+        "byte_start": 261,
+        "candidate_id": "candidate:allkzit",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0011",
+        "ordinal": 11,
+        "raw_text": "https://t.me/allkzit",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f616c6c6b7a6974",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/allkzit"
+      },
+      {
+        "byte_end": 302,
+        "byte_start": 282,
+        "candidate_id": "candidate:rootway",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0012",
+        "ordinal": 12,
+        "raw_text": "https://t.me/rootway",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f726f6f74776179",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/rootway"
+      },
+      {
+        "byte_end": 321,
+        "byte_start": 303,
+        "candidate_id": "candidate:ethkz",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0013",
+        "ordinal": 13,
+        "raw_text": "https://t.me/ethkz",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f6574686b7a",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/ethkz"
+      },
+      {
+        "byte_end": 340,
+        "byte_start": 322,
+        "candidate_id": "candidate:tvkrg",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0014",
+        "ordinal": 14,
+        "raw_text": "https://t.me/tvkrg",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f74766b7267",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/tvkrg"
+      },
+      {
+        "byte_end": 372,
+        "byte_start": 341,
+        "candidate_id": "candidate:digitalbussinesskz",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0015",
+        "ordinal": 15,
+        "raw_text": "https://t.me/digitalbussinesskz",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f6469676974616c62757373696e6573736b7a",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/digitalbussinesskz"
+      },
+      {
+        "byte_end": 392,
+        "byte_start": 373,
+        "candidate_id": "candidate:aws_kz",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0016",
+        "ordinal": 16,
+        "raw_text": "https://t.me/aws_kz",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f6177735f6b7a",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/aws_kz"
+      },
+      {
+        "byte_end": 428,
+        "byte_start": 393,
+        "candidate_id": "candidate:astanajkugoutputstream",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0017",
+        "ordinal": 17,
+        "raw_text": "https://t.me/astanajkugoutputstream",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f617374616e616a6b75676f757470757473747265616d",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/astanajkugoutputstream"
+      },
+      {
+        "byte_end": 451,
+        "byte_start": 429,
+        "candidate_id": "candidate:helpfixit",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0018",
+        "ordinal": 18,
+        "raw_text": "https://t.me/helpfixit",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f68656c706669786974",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/helpfixit"
+      },
+      {
+        "byte_end": 473,
+        "byte_start": 452,
+        "candidate_id": "candidate:anykeykz",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0019",
+        "ordinal": 19,
+        "raw_text": "https://t.me/anykeykz",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f616e796b65796b7a",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/anykeykz"
+      },
+      {
+        "byte_end": 497,
+        "byte_start": 474,
+        "candidate_id": "candidate:it_jobs_kz",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0020",
+        "ordinal": 20,
+        "raw_text": "https://t.me/it_jobs_kz",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f69745f6a6f62735f6b7a",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/it_jobs_kz"
+      },
+      {
+        "byte_end": 521,
+        "byte_start": 498,
+        "candidate_id": "candidate:kz_bi_jobs",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0021",
+        "ordinal": 21,
+        "raw_text": "https://t.me/kz_bi_jobs",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f6b7a5f62695f6a6f6273",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/kz_bi_jobs"
+      },
+      {
+        "byte_end": 548,
+        "byte_start": 522,
+        "candidate_id": "candidate:go_kz_vacancy",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0022",
+        "ordinal": 22,
+        "raw_text": "https://t.me/go_kz_vacancy",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f676f5f6b7a5f766163616e6379",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/go_kz_vacancy"
+      },
+      {
+        "byte_end": 575,
+        "byte_start": 549,
+        "candidate_id": "candidate:sysadm_in_job",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0023",
+        "ordinal": 23,
+        "raw_text": "https://t.me/sysadm_in_job",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f73797361646d5f696e5f6a6f62",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/sysadm_in_job"
+      },
+      {
+        "byte_end": 595,
+        "byte_start": 576,
+        "candidate_id": "candidate:aws_kz",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0024",
+        "ordinal": 24,
+        "raw_text": "https://t.me/aws_kz",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f6177735f6b7a",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/aws_kz"
+      },
+      {
+        "byte_end": 620,
+        "byte_start": 596,
+        "candidate_id": "candidate:sandyq_orda",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0025",
+        "ordinal": 25,
+        "raw_text": "https://t.me/sandyq_orda",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f73616e6479715f6f726461",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/sandyq_orda"
+      },
+      {
+        "byte_end": 656,
+        "byte_start": 621,
+        "candidate_id": "candidate:kazakhtelecom_official",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0026",
+        "ordinal": 26,
+        "raw_text": "https://t.me/kazakhtelecom_official",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f6b617a616b6874656c65636f6d5f6f6666696369616c",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/kazakhtelecom_official"
+      },
+      {
+        "byte_end": 681,
+        "byte_start": 657,
+        "candidate_id": "candidate:itqazaqstan",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0027",
+        "ordinal": 27,
+        "raw_text": "https://t.me/itqazaqstan",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f697471617a61717374616e",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/itqazaqstan"
+      },
+      {
+        "byte_end": 707,
+        "byte_start": 682,
+        "candidate_id": "candidate:it_kazahstan",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0028",
+        "ordinal": 28,
+        "raw_text": "https://t.me/IT_Kazahstan",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f49545f4b617a61687374616e",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/IT_Kazahstan"
+      },
+      {
+        "byte_end": 740,
+        "byte_start": 708,
+        "candidate_id": "candidate:ai_qadam_kazakhstan",
+        "link_kind": "candidate",
+        "occurrence_id": "occurrence:0029",
+        "ordinal": 29,
+        "raw_text": "https://t.me/ai_qadam_kazakhstan",
+        "raw_utf8_hex": "68747470733a2f2f742e6d652f61695f716164616d5f6b617a616b687374616e",
+        "source_id": "file:input.txt",
+        "trimmed_suffix": "",
+        "url_text": "https://t.me/ai_qadam_kazakhstan"
+      }
+    ],
+    "schema_version": "kz-intake-source/v1",
+    "source_bytes": 741,
+    "source_id": "file:input.txt",
+    "source_sha256": "08482a427d6e4b39bb05ae75fd802c777e05f2045f380527ab8fdd309493727b",
+    "totals": {
+      "candidates": 28,
+      "non_candidates": 0,
+      "occurrences": 29
+    }
+  }
+}

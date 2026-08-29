@@ -1,0 +1,3269 @@
+{
+  "candidates": [
+    {
+      "activity": {
+        "evidence": "current public preview 413 members, 23 online",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "413 members, 23 online",
+        "retained_public_timestamps": []
+      },
+      "candidate_id": "candidate:ai_qadam_kazakhstan",
+      "category": {
+        "proposed": "ai",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:ai_qadam_kazakhstan",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "No sales offer or advertising purpose appears in the retained public description; risk is low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Kazakhstan chapter of AI Qadam for learning and applying artificial intelligence.",
+        "description_kk": "Жасанды интеллектті үйренуге және іс жүзінде қолдануға арналған AI Qadam-ның Қазақстандағы қауымдастығы.",
+        "description_ru": "Казахстанское отделение AI Qadam для изучения и практического применения искусственного интеллекта."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category ai."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:ai_qadam_kazakhstan",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:ai_qadam_kazakhstan",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:ai_qadam_kazakhstan"
+      ],
+      "identity": {
+        "canonical_handle": "ai_qadam_kazakhstan",
+        "engine_body_sha256": "0cd5ae6adada7ac24172e6c62b7e808abfecab3037ca0bce5a7b4e69c677fbe5",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "ai_qadam_kazakhstan",
+        "target_bound": true,
+        "visible_name": "AI Qadam Kazakhstan"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 413,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "AI Qadam Kazakhstan 🇰🇿 — first international chapter of AI Qadam. From AI newcomers to skilled specialists applying it in life and work. KZ / RU / EN.",
+        "reason": "The public description explicitly identifies a Kazakhstan AI chapter for newcomers and practitioners."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0029"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "groups",
+            "member_count": 413,
+            "observed_type": "groups",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "AI Qadam Kazakhstan"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "channels",
+            "member_count": null,
+            "observed_type": "groups",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "AI Qadam Kazakhstan"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "groups",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "AI Qadam Kazakhstan"
+          }
+        ],
+        "observed": "groups",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "current public preview 3 013 members, 86 online",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "3 013 members, 86 online",
+        "retained_public_timestamps": []
+      },
+      "candidate_id": "candidate:allkzit",
+      "category": {
+        "proposed": "general",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:allkzit",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "The retained public preview exposes rules, not a sales or advertising offer; group content remains non-public and risk is medium-low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Kazakhstan IT professionals' community for discussion and peer support.",
+        "description_kk": "Қазақстандағы IT мамандарының пікір алмасу және өзара көмек қауымдастығы.",
+        "description_ru": "Сообщество IT-специалистов Казахстана для общения и взаимопомощи."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category general."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:allkzit",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:allkzit",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:allkzit"
+      ],
+      "identity": {
+        "canonical_handle": "allkzit",
+        "engine_body_sha256": "4668a55e4b3289afe050fe54e8faf7868db703c88d57b8cf7e7a67d780850f35",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "allkzit",
+        "target_bound": true,
+        "visible_name": "IT.kz - все айтишники Казахстана"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 3013,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "Nometa.xyz Правила https://sync.unwar.kz/s/telegram-rules/doc/obshie-pravila-qHW7zfijq7",
+        "reason": "The target-bound public name explicitly identifies Kazakhstan IT professionals and the description links community rules."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0011"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "groups",
+            "member_count": 3013,
+            "observed_type": "groups",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "IT.kz - все айтишники Казахстана"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "channels",
+            "member_count": null,
+            "observed_type": "groups",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "IT.kz - все айтишники Казахстана"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "groups",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "IT.kz - все айтишники Казахстана"
+          }
+        ],
+        "observed": "groups",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "current public preview 31 members, 2 online",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "31 members, 2 online",
+        "retained_public_timestamps": []
+      },
+      "candidate_id": "candidate:anykeykz",
+      "category": {
+        "proposed": "devops-sysadmin",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:anykeykz",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "No promotional or sales purpose is visible in the retained description; risk is low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Community for Kazakhstan helpdesk and junior system-administration specialists.",
+        "description_kk": "Қазақстандағы техникалық қолдау және жүйелік әкімшілендіруді бастап жүрген мамандар қауымдастығы.",
+        "description_ru": "Сообщество казахстанских эникейщиков и начинающих системных администраторов."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:anykeykz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:anykeykz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:anykeykz"
+      ],
+      "identity": {
+        "canonical_handle": "anykeykz",
+        "engine_body_sha256": "c2b6445fb7760c4317c7cb46802e59ded4d76f5f018ac2290bff5b9e6cb9e251",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "anykeykz",
+        "target_bound": true,
+        "visible_name": "Казахстанский Эникей - вестник с офисных полей"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 31,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "Эникейщики всех фирм - объединяйтесь! Расти до сисадминов проще вместе.",
+        "reason": "The public name and description identify a Kazakhstan peer group for helpdesk staff progressing toward system administration."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0019"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "groups",
+            "member_count": 31,
+            "observed_type": "groups",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "Казахстанский Эникей - вестник с офисных полей"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "channels",
+            "member_count": null,
+            "observed_type": "groups",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Казахстанский Эникей - вестник с офисных полей"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "groups",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Казахстанский Эникей - вестник с офисных полей"
+          }
+        ],
+        "observed": "groups",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-28T15:53:19+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "13 572 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-27T14:51:32+00:00",
+          "2026-08-28T05:03:19+00:00",
+          "2026-08-28T13:30:17+00:00",
+          "2026-08-28T13:46:23+00:00",
+          "2026-08-28T15:53:19+00:00"
+        ]
+      },
+      "candidate_id": "candidate:astana_hub",
+      "category": {
+        "proposed": "startups",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:astana_hub",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "The retained evidence shows ecosystem information and support, not a product-sales-only feed; risk is low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Official Astana Hub channel with Kazakhstan startup ecosystem news, programs, and events.",
+        "description_kk": "Қазақстанның стартап экожүйесіндегі жаңалықтар, бағдарламалар мен іс-шаралар туралы Astana Hub-тың ресми арнасы.",
+        "description_ru": "Официальный канал Astana Hub с новостями, программами и событиями стартап-экосистемы Казахстана."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category startups."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:astana_hub",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:astana_hub",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:astana_hub"
+      ],
+      "identity": {
+        "canonical_handle": "astana_hub",
+        "engine_body_sha256": "d1be4b9e4e04617dd5ce210c54c686c834255580c5cf47adb47cc1d8858f7380",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "astana_hub",
+        "target_bound": true,
+        "visible_name": "Astana Hub ️ ✔"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 13572,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "The official channel of Astana Hub For prompt response to infrastructure-related issues, contact @AstanaHub_HelpDesk_bot Information support guidelines: https://astanahub.com/regulations/",
+        "reason": "The official Astana Hub target publishes current Kazakhstan technology programs and events."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0001"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Astana Hub ️ ✔"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 13572,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "Astana Hub ️ ✔"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Astana Hub ️ ✔"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-15T12:21:54+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "724 subscribers",
+        "retained_public_timestamps": [
+          "2026-06-02T09:58:35+00:00",
+          "2026-06-02T10:00:51+00:00",
+          "2026-06-05T07:38:39+00:00",
+          "2026-07-09T08:01:10+00:00",
+          "2026-08-15T12:21:54+00:00"
+        ]
+      },
+      "candidate_id": "candidate:astanajkugoutputstream",
+      "category": {
+        "proposed": "programming-languages",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "Distinct announcement/learning channel linked to live catalog group astanajug; different handle, type, and public function, so not an alias duplicate.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:astanajkugoutputstream",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "Vacancy submissions are mentioned, but the retained feed is community/event oriented rather than purely commercial; risk is medium-low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Announcements and learning resources from the Astana Java user group.",
+        "description_kk": "Астана Java пайдаланушылары тобының хабарландырулары мен оқу материалдары.",
+        "description_ru": "Анонсы и учебные материалы сообщества Java-разработчиков Астаны."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category programming-languages."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:astanajkugoutputstream",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:astanajkugoutputstream",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:astanajkugoutputstream"
+      ],
+      "identity": {
+        "canonical_handle": "astanajkugoutputstream",
+        "engine_body_sha256": "9ac90b72e0ee09109cd688a6d544f035d181ed86f9c5c36e7114d47ec6c72c40",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "astanajkugoutputstream",
+        "target_bound": true,
+        "visible_name": "Astana JKUG OutputStream"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 724,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "Channel of Astana JKUG community @astanajug . If you want to publish vacancy please contact to admins Admins: @esvalukhin @yerzhanm",
+        "reason": "The public description binds the channel to the Astana JKUG Java community and its current posts contain learning and event material."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0017"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Astana JKUG OutputStream"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 724,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "Astana JKUG OutputStream"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Astana JKUG OutputStream"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-28T16:06:17+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "267 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-05T09:19:35+00:00",
+          "2026-08-10T15:10:22+00:00",
+          "2026-08-19T07:29:18+00:00",
+          "2026-08-26T14:23:08+00:00",
+          "2026-08-28T16:06:17+00:00"
+        ]
+      },
+      "candidate_id": "candidate:aws_kz",
+      "category": {
+        "proposed": "devops-sysadmin",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": true,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:aws_kz",
+          "cross_input_duplicate": true,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "The retained description and current event posts are community announcements, not a sales-only feed; risk is low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Announcements for the AWS User Group Kazakhstan community.",
+        "description_kk": "AWS User Group Kazakhstan қауымдастығының хабарландыру арнасы.",
+        "description_ru": "Канал анонсов сообщества AWS User Group Kazakhstan."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:aws_kz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:aws_kz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:aws_kz"
+      ],
+      "identity": {
+        "canonical_handle": "aws_kz",
+        "engine_body_sha256": "9f97e016a189d420703b234cc223358ff5199ac13de9de9f5d7d22004366427c",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "aws_kz",
+        "target_bound": true,
+        "visible_name": "AWS User Group Kazakhstan Announcements Channel"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 267,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "Announcements Channel для AWS User Group Kazakhstan - линк к самой группе https://t.me/+gW5rq9jWcx44ZmZi",
+        "reason": "The public description explicitly identifies the AWS User Group Kazakhstan announcement channel."
+      },
+      "source_occurrence_count": 2,
+      "source_occurrence_ids": [
+        "occurrence:0016",
+        "occurrence:0024"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "AWS User Group Kazakhstan Announcements Channel"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 267,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "AWS User Group Kazakhstan Announcements Channel"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "AWS User Group Kazakhstan Announcements Channel"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-07-13T13:47:09+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "289 subscribers",
+        "retained_public_timestamps": [
+          "2026-04-20T05:44:18+00:00",
+          "2026-04-21T05:26:28+00:00",
+          "2026-06-22T07:42:32+00:00",
+          "2026-07-08T06:01:28+00:00",
+          "2026-07-13T13:47:09+00:00"
+        ]
+      },
+      "candidate_id": "candidate:blockchainkz",
+      "category": {
+        "proposed": "blockchain",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:blockchainkz",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "No sales-only purpose is visible in the retained evidence; risk is low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Kazakhstan community for AI, blockchain, and digital-asset technology.",
+        "description_kk": "Қазақстандағы жасанды интеллект, блокчейн және цифрлық активтер технологиялары қауымдастығы.",
+        "description_ru": "Казахстанское сообщество по искусственному интеллекту, блокчейну и технологиям цифровых активов."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category blockchain."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:blockchainkz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:blockchainkz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:blockchainkz"
+      ],
+      "identity": {
+        "canonical_handle": "blockchainkz",
+        "engine_body_sha256": "330bc15b6a33a034a786738eb28c94d184060f49a88adb36d862651c6cc9e4fb",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "blockchainkz",
+        "target_bound": true,
+        "visible_name": "BlockchainKZ Association of AI & Blockchain technology developers and users"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 289,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "Kazakhstan AI & Blockchain community",
+        "reason": "The public description explicitly identifies a Kazakhstan AI and blockchain community; retained posts cover Kazakhstan digital-asset policy."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0002"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "BlockchainKZ Association of AI & Blockchain technology developers and users"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 289,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "BlockchainKZ Association of AI & Blockchain technology developers and users"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "BlockchainKZ Association of AI & Blockchain technology developers and users"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-28T10:04:16+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "6 652 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-26T12:04:02+00:00",
+          "2026-08-27T06:07:28+00:00",
+          "2026-08-27T10:03:13+00:00",
+          "2026-08-28T07:00:34+00:00",
+          "2026-08-28T10:04:16+00:00"
+        ]
+      },
+      "candidate_id": "candidate:devopskaz",
+      "category": {
+        "proposed": "devops-sysadmin",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:devopskaz",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "The description includes support and advertising contacts, but the current feed is not sales-only; promotional risk is medium."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Kazakhstan DevOps channel covering cloud infrastructure, Linux, CI/CD, and high-load systems.",
+        "description_kk": "Бұлттық инфрақұрылым, Linux, CI/CD және жоғары жүктемелі жүйелер туралы қазақстандық DevOps арнасы.",
+        "description_ru": "Казахстанский DevOps-канал об облачной инфраструктуре, Linux, CI/CD и высоконагруженных системах."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:devopskaz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:devopskaz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:devopskaz"
+      ],
+      "identity": {
+        "canonical_handle": "devopskaz",
+        "engine_body_sha256": "45e6afbfe6d4fd6bfa99d7eaedc31c19ee2371da7f6c7ca120a72947f8741f7d",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "devopskaz",
+        "target_bound": true,
+        "visible_name": "KazDevOps"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 6652,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "Канал о DevOps во всех проявлениях: K8s, CI/CD, HighLoad, AI/ML, Cloud, Linux Возьмем на поддержку DevOps: https://core247.kz/ По рекламе @UlKonovalova",
+        "reason": "The target-bound KazDevOps identity and public description explicitly cover DevOps, cloud, Linux, CI/CD, and high-load systems."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0009"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "KazDevOps"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 6652,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "KazDevOps"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "KazDevOps"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-27T14:06:27+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "10 373 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-26T11:27:52+00:00",
+          "2026-08-27T10:47:16+00:00",
+          "2026-08-27T10:55:05+00:00",
+          "2026-08-27T13:31:23+00:00",
+          "2026-08-27T14:06:27+00:00"
+        ]
+      },
+      "candidate_id": "candidate:devs_kz",
+      "category": {
+        "proposed": "jobs",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "Distinct target from live catalog devkz: different handle, visible name, body hash, and career/workshop scope.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:devs_kz",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "Advertising and a course are disclosed, but the retained description and feed also contain broader career and professional content; risk is medium."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Kazakhstan IT careers, workshops, meetups, and professional-development channel.",
+        "description_kk": "Қазақстандағы IT мансабы, воркшоптар, митаптар және кәсіби даму туралы арна.",
+        "description_ru": "Канал об IT-карьере, воркшопах, митапах и профессиональном развитии в Казахстане."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:devs_kz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:devs_kz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:devs_kz"
+      ],
+      "identity": {
+        "canonical_handle": "devs_kz",
+        "engine_body_sha256": "45ce6cfcff7e1a47846a6e76b954fa8dd0809c3ed2e696c443d694a40bc10300",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "devs_kz",
+        "target_bound": true,
+        "visible_name": "Devs.kz"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 10373,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "IT карьера в Казахстане и мире. Воркшопы и митапы Google и др. компаний. Наш офиц. портал devs.kz Обратная связь @AskarAi Аскар Айтуов Реклама: https://t.me/devs_kz/5211 Youtube @devs_kz Курс AI Product engineer: https://t.me/+CG8Tpmy0RtxkZjZi",
+        "reason": "The public description explicitly covers Kazakhstan IT careers, workshops, and meetups."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0008"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Devs.kz"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 10373,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "Devs.kz"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Devs.kz"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-28T14:37:42+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "8 362 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-28T06:59:42+00:00",
+          "2026-08-28T08:01:52+00:00",
+          "2026-08-28T11:01:06+00:00",
+          "2026-08-28T13:34:13+00:00",
+          "2026-08-28T14:37:42+00:00"
+        ]
+      },
+      "candidate_id": "candidate:digitalbussinesskz",
+      "category": {
+        "proposed": "news",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:digitalbussinesskz",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "This is a professional publication rather than a community chat, but the retained feed is editorial content, not a sales-only channel; risk is medium-low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Kazakhstan technology and business publication covering IT, startups, and digital products.",
+        "description_kk": "IT, стартаптар және цифрлық өнімдер туралы жазатын қазақстандық технология және бизнес басылымы.",
+        "description_ru": "Казахстанское издание о технологиях и бизнесе, освещающее IT, стартапы и цифровые продукты."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category news."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:digitalbussinesskz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:digitalbussinesskz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:digitalbussinesskz"
+      ],
+      "identity": {
+        "canonical_handle": "digitalbussinesskz",
+        "engine_body_sha256": "e7db5afe10f6afa917cfeaf145bd6c3e644f31b7a7609608b61ab51a1b80936c",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "digitalbussinesskz",
+        "target_bound": true,
+        "visible_name": "DigitalBusiness.kz"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 8362,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "Простым языком о том, что происходит с деньгами казахстанцев, налогами и бизнесом. ➤ О сделках и успехах предпринимателей. ➤ О технологиях, стартапах и ИТ. ➤ Как устроен бизнес изнутри. Cвязь с редакцией: editor@digitalbusiness.kz",
+        "reason": "The public description explicitly covers Kazakhstan business, technology, startups, and IT, with current visible posts."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0015"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "DigitalBusiness.kz"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 8362,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "DigitalBusiness.kz"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "DigitalBusiness.kz"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "current public preview 1 227 members, 31 online",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "1 227 members, 31 online",
+        "retained_public_timestamps": []
+      },
+      "candidate_id": "candidate:ethkz",
+      "category": {
+        "proposed": "devops-sysadmin",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:ethkz",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "No sales or advertising purpose is visible in the retained description; risk is low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Kazakhstan networking community for routing, wireless, VPN, and network equipment.",
+        "description_kk": "Маршруттау, сымсыз желілер, VPN және желілік жабдықтар жөніндегі Қазақстан қауымдастығы.",
+        "description_ru": "Казахстанское сетевое сообщество о маршрутизации, беспроводных сетях, VPN и сетевом оборудовании."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound group is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category devops-sysadmin."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:ethkz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:ethkz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:ethkz"
+      ],
+      "identity": {
+        "canonical_handle": "ethkz",
+        "engine_body_sha256": "8cbcc52e0e5b23959d708cb10ac5bf9937c34d62c868447d1628699f9789be38",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "ethkz",
+        "target_bound": true,
+        "visible_name": "Сеть.kz"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 1227,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "Вначале было слово, и слово было 2 байта. И слово надо было передать. Choose your destiny! 127.0.0.0/24: eth,wifi,wan. route,nat,masq. ubiquti/mikrotik cisco/juniper paloalto/fortigate Ipsec/sstp Vpn/dontgiveafuck",
+        "reason": "The target identity uses the .kz/KZ marker and the public description is specifically about networking protocols and equipment."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0013"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "groups",
+            "member_count": 1227,
+            "observed_type": "groups",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "Сеть.kz"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "channels",
+            "member_count": null,
+            "observed_type": "groups",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Сеть.kz"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "groups",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Сеть.kz"
+          }
+        ],
+        "observed": "groups",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-18T17:25:05+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "2 262 subscribers",
+        "retained_public_timestamps": [
+          "2026-07-16T08:00:19+00:00",
+          "2026-07-31T09:53:14+00:00",
+          "2026-08-10T11:17:23+00:00",
+          "2026-08-18T09:22:27+00:00",
+          "2026-08-18T17:25:05+00:00"
+        ]
+      },
+      "candidate_id": "candidate:go_kz_vacancy",
+      "category": {
+        "proposed": "jobs",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "Distinct jobs channel linked to live catalog group go_kz; separate handle, type, and vacancy function.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:go_kz_vacancy",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "Vacancies are the declared catalog-relevant purpose; no unrelated sales or spam signal appears in retained evidence; risk is low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Go developer vacancies in Kazakhstan and international roles relevant to the local community.",
+        "description_kk": "Қазақстандағы Go әзірлеушілеріне және жергілікті қауымдастыққа қатысты халықаралық бос орындар.",
+        "description_ru": "Вакансии Go-разработчиков в Казахстане и зарубежные позиции для местного сообщества."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:go_kz_vacancy",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:go_kz_vacancy",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:go_kz_vacancy"
+      ],
+      "identity": {
+        "canonical_handle": "go_kz_vacancy",
+        "engine_body_sha256": "965e769302fd6cb7f1869858c2ee05be999b583a06aa5866ac68792d80a6b2a2",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "go_kz_vacancy",
+        "target_bound": true,
+        "visible_name": "Golang vacancies in KZ"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 2262,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "Вакансии Го разработчиков в Казахстане (и зарубежом) Golang devs KZ group: @go_kz Для размещения обращаться к @unstppbl",
+        "reason": "The public description explicitly identifies Go developer vacancies in Kazakhstan and links the local Go community."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0022"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Golang vacancies in KZ"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 2262,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "Golang vacancies in KZ"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Golang vacancies in KZ"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-27T17:34:07+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "254 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-26T10:11:34+00:00",
+          "2026-08-26T10:36:03+00:00",
+          "2026-08-27T13:13:01+00:00",
+          "2026-08-27T15:31:49+00:00",
+          "2026-08-27T17:34:07+00:00"
+        ]
+      },
+      "candidate_id": "candidate:hackathon_kz",
+      "category": {
+        "proposed": "events",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:hackathon_kz",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "Registration links serve the declared event purpose and no unrelated sales-only pattern appears; risk is low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Hackathon news and event announcements in Kazakhstan.",
+        "description_kk": "Қазақстандағы хакатон жаңалықтары мен іс-шаралар хабарландырулары.",
+        "description_ru": "Новости и анонсы хакатонов в Казахстане."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category events."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:hackathon_kz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:hackathon_kz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:hackathon_kz"
+      ],
+      "identity": {
+        "canonical_handle": "hackathon_kz",
+        "engine_body_sha256": "0aecebc5ef96941f9b85f0256428398783b70eda7d9b8db9798061a1a41df5a7",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "hackathon_kz",
+        "target_bound": true,
+        "visible_name": "Hackathon kz"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 254,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "Канал с новостями и обновлениями по Хакатонам в Казахстане Сайт: https://hackathon.kz Писать: @Goslinuly",
+        "reason": "The public description explicitly identifies Kazakhstan hackathon news and current event announcements."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0005"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Hackathon kz"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 254,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "Hackathon kz"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Hackathon kz"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "current public preview 318 members, 10 online",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "318 members, 10 online",
+        "retained_public_timestamps": []
+      },
+      "candidate_id": "candidate:helpfixit",
+      "category": {
+        "proposed": "devops-sysadmin",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:helpfixit",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "Public evidence verifies a live computer-help group but contains no Kazakhstan audience or relevance signal; admission remains unresolved."
+      },
+      "copy": null,
+      "disposition": {
+        "action": "unresolved",
+        "reason": "Public evidence verifies a live computer-help group but contains no Kazakhstan audience or relevance signal; admission remains unresolved."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:helpfixit",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:helpfixit",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:helpfixit"
+      ],
+      "identity": {
+        "canonical_handle": "helpfixit",
+        "engine_body_sha256": "a0fb3f26cbfff08660bf451bc2d2533e4e59e66a2f0b867e3e1a398b76ddb23f",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "helpfixit",
+        "target_bound": true,
+        "visible_name": "Computer help"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 318,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": false,
+        "public_description_excerpt": "IT people here, helping you fix your computer problems and issues Помощь новичкам и не только в компьютерных вопросах.",
+        "reason": "Public evidence verifies a live computer-help group but contains no Kazakhstan audience or relevance signal; admission remains unresolved."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0018"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "groups",
+            "member_count": 318,
+            "observed_type": "groups",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "Computer help"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "channels",
+            "member_count": null,
+            "observed_type": "groups",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Computer help"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "groups",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Computer help"
+          }
+        ],
+        "observed": "groups",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-28T17:20:22+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "9 702 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-12T13:07:13+00:00",
+          "2026-08-21T14:10:32+00:00",
+          "2026-08-22T06:36:19+00:00",
+          "2026-08-26T13:53:36+00:00",
+          "2026-08-28T17:20:22+00:00"
+        ]
+      },
+      "candidate_id": "candidate:it_jobs_kz",
+      "category": {
+        "proposed": "jobs",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:it_jobs_kz",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "Vacancies are the declared catalog-relevant purpose; no unrelated sales-only signal appears in retained evidence; risk is low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "IT vacancies in Kazakhstan and worldwide, with salary ranges when available.",
+        "description_kk": "Қазақстандағы және әлемдегі IT бос орындары; бар болса жалақы ауқымы көрсетіледі.",
+        "description_ru": "IT-вакансии в Казахстане и мире с указанием вилки зарплаты, когда она доступна."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:it_jobs_kz",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:it_jobs_kz",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:it_jobs_kz"
+      ],
+      "identity": {
+        "canonical_handle": "it_jobs_kz",
+        "engine_body_sha256": "e81c863066b9cec20e64c7a3016ed5f23586c7b340027aa4f8c804c3b5f275ae",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "it_jobs_kz",
+        "target_bound": true,
+        "visible_name": "IT Jobs (DSML.KZ)"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 9702,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "IT vacancies in Kazakhstan and worldwide with salary range Vacancies related to Data Science are posted in @ml_jobs_kz Қазақстандағы және әлемдегі ең жақсы IT вакансиялары. Лучшие IT вакансии в Казахстане и мире.",
+        "reason": "The multilingual public description explicitly identifies IT vacancies in Kazakhstan and worldwide."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0020"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "IT Jobs (DSML.KZ)"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 9702,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "IT Jobs (DSML.KZ)"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "IT Jobs (DSML.KZ)"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-28T07:56:59+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "714 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-27T10:41:07+00:00",
+          "2026-08-27T10:53:19+00:00",
+          "2026-08-27T11:51:58+00:00",
+          "2026-08-28T05:24:50+00:00",
+          "2026-08-28T07:56:59+00:00"
+        ]
+      },
+      "candidate_id": "candidate:it_kazahstan",
+      "category": {
+        "proposed": "news",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "Distinct from itqazaqstan: different canonical handles, response hashes, descriptions, and broad-news versus paid-integrator-service scope.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:it_kazahstan",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "No sales-only purpose is stated and the retained current posts are informational; risk is medium-low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "News for Kazakhstan IT specialists, low-voltage systems professionals, and technology entrepreneurs.",
+        "description_kk": "Қазақстандағы IT мамандарына, әлсіз ток жүйелері мамандарына және технология кәсіпкерлеріне арналған жаңалықтар арнасы.",
+        "description_ru": "Новости для IT-специалистов, слаботочников и технологических предпринимателей Казахстана."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category news."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:it_kazahstan",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:it_kazahstan",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:it_kazahstan"
+      ],
+      "identity": {
+        "canonical_handle": "IT_Kazahstan",
+        "engine_body_sha256": "cf38d2ecbda3763fe033463706530526eeec2b0f22a6ad2e7bcd9838f9349433",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "IT_Kazahstan",
+        "target_bound": true,
+        "visible_name": "IT Kazakhstan"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 714,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "🖥️ КАНАЛ ДЛЯ IT-СПЕЦИАЛИСТОВ, СЛАБОТОЧНИКОВ, БИЗНЕСМЕНОВ И ПРЕДПРИНИМАТЕЛЕЙ КАЗАХСТАНА 🇰🇿 Объединяем профессионалов для общения, помощи и сотрудничества!",
+        "reason": "The public description explicitly identifies Kazakhstan IT and low-voltage-system professionals, and current posts are technology news."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0028"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "IT Kazakhstan"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 714,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "IT Kazakhstan"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "IT Kazakhstan"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-28T19:04:15+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "2 451 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-28T13:26:50+00:00",
+          "2026-08-28T13:54:46+00:00",
+          "2026-08-28T14:01:34+00:00",
+          "2026-08-28T14:15:31+00:00",
+          "2026-08-28T19:04:15+00:00"
+        ]
+      },
+      "candidate_id": "candidate:itbazarkzchannel",
+      "category": {
+        "proposed": "marketplace",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "Canonical mirror of live catalog group itbazarkz: description names the group and retained messages redirect to group posts.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:itbazarkzchannel",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": true,
+        "reason": "The public description points to live catalog group @itbazarkz and retained channel messages redirect to that group, so this advertising mirror is a canonical duplicate."
+      },
+      "copy": null,
+      "disposition": {
+        "action": "duplicate",
+        "reason": "The public description points to live catalog group @itbazarkz and retained channel messages redirect to that group, so this advertising mirror is a canonical duplicate."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:itbazarkzchannel",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:itbazarkzchannel",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:itbazarkzchannel"
+      ],
+      "identity": {
+        "canonical_handle": "itbazarkzchannel",
+        "engine_body_sha256": "cfe82336029e949e0e923c4ac8b51a5e6c8c22055ba2fbc54264f24a3fd91104",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "itbazarkzchannel",
+        "target_bound": true,
+        "visible_name": "IT Барахолка - Только объявления"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 2451,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "IT bazar KZ @itbazarkz @workitkz @sipvoipkz @devnullkz @itmankz @fixitkz @kz_1c @cctvkz @diykz @ethkz @kzlug @rootway",
+        "reason": "The public description points to live catalog group @itbazarkz and retained channel messages redirect to that group, so this advertising mirror is a canonical duplicate."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0003"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "IT Барахолка - Только объявления"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 2451,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "IT Барахолка - Только объявления"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "IT Барахолка - Только объявления"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-21T06:50:33+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "281 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-18T07:53:41+00:00",
+          "2026-08-18T08:37:05+00:00",
+          "2026-08-20T05:23:20+00:00",
+          "2026-08-20T07:38:37+00:00",
+          "2026-08-21T06:50:33+00:00"
+        ]
+      },
+      "candidate_id": "candidate:itqazaqstan",
+      "category": {
+        "proposed": "marketplace",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "Distinct from IT_Kazahstan: different canonical handles, response hashes, descriptions, and paid-integrator-service versus broad-news scope.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:itqazaqstan",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": true,
+        "reason": "The public description centers paid service access, promotions, and integrator work; commercial/spam risk fails the non-commercial admission gate."
+      },
+      "copy": null,
+      "disposition": {
+        "action": "reject",
+        "reason": "The public description centers paid service access, promotions, and integrator work; commercial/spam risk fails the non-commercial admission gate."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:itqazaqstan",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:itqazaqstan",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:itqazaqstan"
+      ],
+      "identity": {
+        "canonical_handle": "itqazaqstan",
+        "engine_body_sha256": "ce674524a232a33bce7d20b05168237b4916c995abfc370366955d3f1629fbd2",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "itqazaqstan",
+        "target_bound": true,
+        "visible_name": "IT Kazakhstan 🇰🇿 Все для слаботочников Казахстана"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 281,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "👨‍💻 Незаменимый ресурс для каждого интегратора Казахстана Видеонаблюдение I Безопасность I Сети 📰Новости рынка 👷‍♂️Работы по слаботочке и не только 🔥Акции 💻Доступ к сервису - коммерческое за минуту",
+        "reason": "The public description centers paid service access, promotions, and integrator work; commercial/spam risk fails the non-commercial admission gate."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0027"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "IT Kazakhstan 🇰🇿 Все для слаботочников Казахстана"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 281,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "IT Kazakhstan 🇰🇿 Все для слаботочников Казахстана"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "IT Kazakhstan 🇰🇿 Все для слаботочников Казахстана"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-25T10:20:41+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "5 153 subscribers",
+        "retained_public_timestamps": [
+          "2026-07-28T10:49:35+00:00",
+          "2026-07-28T10:50:11+00:00",
+          "2026-08-25T09:55:28+00:00",
+          "2026-08-25T10:20:25+00:00",
+          "2026-08-25T10:20:41+00:00"
+        ]
+      },
+      "candidate_id": "candidate:kazakhtelecom_official",
+      "category": {
+        "proposed": "news",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:kazakhtelecom_official",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": true,
+        "reason": "The target is an official telecom operator corporate feed, not an IT community or specialist resource; it fails community-scope and commerciality gates."
+      },
+      "copy": null,
+      "disposition": {
+        "action": "reject",
+        "reason": "The target is an official telecom operator corporate feed, not an IT community or specialist resource; it fails community-scope and commerciality gates."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:kazakhtelecom_official",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:kazakhtelecom_official",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:kazakhtelecom_official"
+      ],
+      "identity": {
+        "canonical_handle": "kazakhtelecom_official",
+        "engine_body_sha256": "004ae970f6719b2aa5df6a8d82b8b318117e1e83031a8a40fa9f27fc3fe1ba44",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "kazakhtelecom_official",
+        "target_bound": true,
+        "visible_name": "telecomkz"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 5153,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": false,
+        "kazakhstan": true,
+        "public_description_excerpt": "Қазақстандағы ең ірі ақпараттық-коммуникациялық оператор | Крупнейший инфокоммуникационный оператор в Казахстане",
+        "reason": "The target is an official telecom operator corporate feed, not an IT community or specialist resource; it fails community-scope and commerciality gates."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0026"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "telecomkz"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 5153,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "telecomkz"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "telecomkz"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-28T13:05:19+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "7 116 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-21T12:44:35+00:00",
+          "2026-08-26T06:51:14+00:00",
+          "2026-08-26T13:19:13+00:00",
+          "2026-08-27T13:52:01+00:00",
+          "2026-08-28T13:05:19+00:00"
+        ]
+      },
+      "candidate_id": "candidate:kolesa_group",
+      "category": {
+        "proposed": "general",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:kolesa_group",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "The source is corporate, but the declared and retained content includes technical knowledge and community opportunities rather than product sales only; risk is medium."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Kolesa Group channel sharing Kazakhstan product-development experience, internships, and technology events.",
+        "description_kk": "Kolesa Group-тың Қазақстандағы өнім әзірлеу тәжірибесі, тағылымдамалары және технологиялық іс-шаралары туралы арнасы.",
+        "description_ru": "Канал Kolesa Group об опыте разработки продуктов в Казахстане, стажировках и технологических событиях."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category general."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:kolesa_group",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:kolesa_group",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:kolesa_group"
+      ],
+      "identity": {
+        "canonical_handle": "kolesa_group",
+        "engine_body_sha256": "aab15c7269d74159da17866bd089990b49ea2fa699a6896be14fea3e55ac40ca",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "kolesa_group",
+        "target_bound": true,
+        "visible_name": "Kolesa Group"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 7116,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "Казахстанская IT-компания, на рынке с 1996 года. Строим IT-продукты №1 в Казахстане и Узбекистане. Делимся своим опытом и полезностями во всех IT-направлениях, анонсируем наши стажировки и мероприятия. Подробнее о нас тут: https://kolesa.group/",
+        "reason": "The public description identifies a Kazakhstan IT company sharing technical experience, internships, and events."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0010"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Kolesa Group"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 7116,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "Kolesa Group"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Kolesa Group"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-28T18:03:45+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "5 479 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-25T14:21:34+00:00",
+          "2026-08-25T16:01:39+00:00",
+          "2026-08-26T08:03:52+00:00",
+          "2026-08-27T16:04:23+00:00",
+          "2026-08-28T18:03:45+00:00"
+        ]
+      },
+      "candidate_id": "candidate:kz_bi_jobs",
+      "category": {
+        "proposed": "jobs",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "Distinct vacancy channel linked to live catalog group kz_bi; separate handle, type, and jobs function.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:kz_bi_jobs",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "Vacancies are the declared catalog-relevant purpose and posting rules are public; risk is low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Data analytics and business intelligence vacancies for Kazakhstan professionals.",
+        "description_kk": "Қазақстандағы деректер талдауы және Business Intelligence мамандарына арналған бос орындар.",
+        "description_ru": "Вакансии в аналитике данных и Business Intelligence для специалистов Казахстана."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category jobs."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:kz_bi_jobs",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:kz_bi_jobs",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:kz_bi_jobs"
+      ],
+      "identity": {
+        "canonical_handle": "kz_bi_jobs",
+        "engine_body_sha256": "74f47fc26c69133d9931f10e98065bc3ffeffd757386919c048cbce3f2ed456a",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "kz_bi_jobs",
+        "target_bound": true,
+        "visible_name": "KZ BI Data Jobs"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 5479,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "❗️Правила размещения вакансий https://t.me/kz_bi_jobs/634 ❗️Правила общие https://t.me/kz_bi_news/422 Основатель: @rekhert Новости и события @kz_bi_news Чат @kz_bi",
+        "reason": "The target-bound KZ BI identity, linked local BI community, and current vacancy posts establish Kazakhstan data-career relevance."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0021"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "KZ BI Data Jobs"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 5479,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "KZ BI Data Jobs"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "KZ BI Data Jobs"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-26T10:45:17+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "959 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-18T11:31:16+00:00",
+          "2026-08-21T08:49:45+00:00",
+          "2026-08-21T12:02:33+00:00",
+          "2026-08-24T10:49:09+00:00",
+          "2026-08-26T10:45:17+00:00"
+        ]
+      },
+      "candidate_id": "candidate:kz_bi_news",
+      "category": {
+        "proposed": "data-analytics",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "Distinct news/events channel linked to live catalog group kz_bi; separate handle, type, and editorial function.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:kz_bi_news",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "A workshop registration appears in retained posts, but the channel is broader community news and events rather than sales-only; risk is medium-low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Kazakhstan data analytics and business intelligence news, events, and community updates.",
+        "description_kk": "Қазақстандағы деректер талдауы мен Business Intelligence жаңалықтары, іс-шаралары және қауымдастық хабарлары.",
+        "description_ru": "Новости, события и обновления казахстанского сообщества аналитики данных и Business Intelligence."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category data-analytics."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:kz_bi_news",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:kz_bi_news",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:kz_bi_news"
+      ],
+      "identity": {
+        "canonical_handle": "kz_bi_news",
+        "engine_body_sha256": "f9bedf4e63f2d61a6cb819afc9ac222a44bd6fa69683ee2156782d606a2185a6",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "kz_bi_news",
+        "target_bound": true,
+        "visible_name": "KZ BI News & Events"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 959,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "Data-аналитика🤓📊 и Business Intelligence 📈💰😎 в Казахстане 🇰🇿 ❗️Правила https://t.me/kz_bi_news/422 Админ: @rekhert Новости и события @kz_bi_news Вакансии @kz_bi_jobs Чат @kz_bi",
+        "reason": "The public description explicitly identifies Kazakhstan data analytics and Business Intelligence news and events."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0006"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "KZ BI News & Events"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 959,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "KZ BI News & Events"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "KZ BI News & Events"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-25T06:05:23+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "435 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-24T12:07:53+00:00",
+          "2026-08-24T12:07:56+00:00",
+          "2026-08-24T18:08:21+00:00",
+          "2026-08-24T18:08:23+00:00",
+          "2026-08-25T06:05:23+00:00"
+        ]
+      },
+      "candidate_id": "candidate:nfactorial_school",
+      "category": {
+        "proposed": "education",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:nfactorial_school",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": true,
+        "reason": "The retained public description and recent posts are a school lead funnel with consultation and WhatsApp sales calls; it fails the purely-commercial gate."
+      },
+      "copy": null,
+      "disposition": {
+        "action": "reject",
+        "reason": "The retained public description and recent posts are a school lead funnel with consultation and WhatsApp sales calls; it fails the purely-commercial gate."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:nfactorial_school",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:nfactorial_school",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:nfactorial_school"
+      ],
+      "identity": {
+        "canonical_handle": "nfactorial_school",
+        "engine_body_sha256": "641a11a4c35f71dfcdfb8ffde00f61ec5e1c29cdf4d8192c013c8a2d78c6941c",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "nfactorial_school",
+        "target_bound": true,
+        "visible_name": "Телеграммы nFactorial School"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 435,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "🚀 Помогаем каждому начать успешный путь в IT https://taplink.cc/nfactorial.school",
+        "reason": "The retained public description and recent posts are a school lead funnel with consultation and WhatsApp sales calls; it fails the purely-commercial gate."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0007"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Телеграммы nFactorial School"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 435,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "Телеграммы nFactorial School"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Телеграммы nFactorial School"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "current public preview 602 members, 18 online",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "602 members, 18 online",
+        "retained_public_timestamps": []
+      },
+      "candidate_id": "candidate:qaz_qa_vacancies",
+      "category": {
+        "proposed": "jobs",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:qaz_qa_vacancies",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "The target name and online count suggest Kazakhstan QA vacancies, but no public description or messages expose scope, rules, or spam risk; admission remains unresolved."
+      },
+      "copy": null,
+      "disposition": {
+        "action": "unresolved",
+        "reason": "The target name and online count suggest Kazakhstan QA vacancies, but no public description or messages expose scope, rules, or spam risk; admission remains unresolved."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:qaz_qa_vacancies",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:qaz_qa_vacancies",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:qaz_qa_vacancies"
+      ],
+      "identity": {
+        "canonical_handle": "qaz_qa_vacancies",
+        "engine_body_sha256": "e1d576d14198e3e6343e4a4952acedcd413aa4fb7ff71ae23a55fb337bea6774",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "qaz_qa_vacancies",
+        "target_bound": true,
+        "visible_name": "KZ QA Vacancies"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 602,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "You can view and join @qaz_qa_vacancies right away.",
+        "reason": "The target name and online count suggest Kazakhstan QA vacancies, but no public description or messages expose scope, rules, or spam risk; admission remains unresolved."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0004"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "groups",
+            "member_count": 602,
+            "observed_type": "groups",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "KZ QA Vacancies"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "channels",
+            "member_count": null,
+            "observed_type": "groups",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "KZ QA Vacancies"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "groups",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "KZ QA Vacancies"
+          }
+        ],
+        "observed": "groups",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-26T14:46:39+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "1 215 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-15T21:07:16+00:00",
+          "2026-08-17T19:15:46+00:00",
+          "2026-08-17T19:24:36+00:00",
+          "2026-08-20T13:47:57+00:00",
+          "2026-08-26T14:46:39+00:00"
+        ]
+      },
+      "candidate_id": "candidate:rootway",
+      "category": {
+        "proposed": "devops-sysadmin",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:rootway",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "The public target is a live system-administration learning channel, but retained evidence contains no Kazakhstan audience or relevance signal; admission remains unresolved."
+      },
+      "copy": null,
+      "disposition": {
+        "action": "unresolved",
+        "reason": "The public target is a live system-administration learning channel, but retained evidence contains no Kazakhstan audience or relevance signal; admission remains unresolved."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:rootway",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:rootway",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:rootway"
+      ],
+      "identity": {
+        "canonical_handle": "rootway",
+        "engine_body_sha256": "4eb4d6b3fef437483b948d7d8d39ba1b0380f5a138671c126eb4be3733019ee9",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "rootway",
+        "target_bound": true,
+        "visible_name": "Путь Админа"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 1215,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": false,
+        "public_description_excerpt": "В основном ссылки для саморазвития. https://t.me/rootway/1191 - список чатов",
+        "reason": "The public target is a live system-administration learning channel, but retained evidence contains no Kazakhstan audience or relevance signal; admission remains unresolved."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0012"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Путь Админа"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 1215,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "Путь Админа"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Путь Админа"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-28T12:35:40+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "7 071 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-10T12:48:38+00:00",
+          "2026-08-17T12:16:03+00:00",
+          "2026-08-21T12:34:13+00:00",
+          "2026-08-26T14:57:53+00:00",
+          "2026-08-28T12:35:40+00:00"
+        ]
+      },
+      "candidate_id": "candidate:sandyq_orda",
+      "category": {
+        "proposed": "news",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:sandyq_orda",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "The retained feed is topical reporting, not a product-sales-only channel; risk is low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "News and analysis on B2B and B2G digitalization in Kazakhstan.",
+        "description_kk": "Қазақстандағы B2B және B2G цифрландыру туралы жаңалықтар мен талдау.",
+        "description_ru": "Новости и аналитика о цифровизации B2B и B2G в Казахстане."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category news."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:sandyq_orda",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:sandyq_orda",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:sandyq_orda"
+      ],
+      "identity": {
+        "canonical_handle": "sandyq_orda",
+        "engine_body_sha256": "501583e49cf794f8e9401a3d193b93899fda0ee6782fc1d706af1728417960e2",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "sandyq_orda",
+        "target_bound": true,
+        "visible_name": "Цифровая Орда 🇰🇿"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 7071,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "Пишем о цифровизации B2B/B2G в Казахстане.",
+        "reason": "The public description and current posts explicitly cover B2B/B2G digitalization in Kazakhstan."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0025"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Цифровая Орда 🇰🇿"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 7071,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "Цифровая Орда 🇰🇿"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Цифровая Орда 🇰🇿"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "current public preview 832 members, 25 online",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "832 members, 25 online",
+        "retained_public_timestamps": []
+      },
+      "candidate_id": "candidate:sysadm_in_job",
+      "category": {
+        "proposed": "jobs",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "Distinct jobs group within the SysAdm.in ecosystem; no same-target alias evidence, but Kazakhstan relevance remains unresolved.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:sysadm_in_job",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "The public target is a live IT jobs group with rules, but no retained target evidence establishes Kazakhstan audience or relevance; admission remains unresolved."
+      },
+      "copy": null,
+      "disposition": {
+        "action": "unresolved",
+        "reason": "The public target is a live IT jobs group with rules, but no retained target evidence establishes Kazakhstan audience or relevance; admission remains unresolved."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:sysadm_in_job",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:sysadm_in_job",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:sysadm_in_job"
+      ],
+      "identity": {
+        "canonical_handle": "sysadm_in_job",
+        "engine_body_sha256": "b6ade14a76d1d778986e8db1695152daa8ba433bdacdeb34145b4292a4098209",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "sysadm_in_job",
+        "target_bound": true,
+        "visible_name": "Sys-Admin Job"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 832,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": false,
+        "public_description_excerpt": "Поиск работы, предложения работы в области ИТ * Правила / Описание - https://github.com/m0zgen/forum-chat-rules/blob/master/Sys-Admin-job-group.md",
+        "reason": "The public target is a live IT jobs group with rules, but no retained target evidence establishes Kazakhstan audience or relevance; admission remains unresolved."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0023"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "groups",
+            "member_count": 832,
+            "observed_type": "groups",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "Sys-Admin Job"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "channels",
+            "member_count": null,
+            "observed_type": "groups",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Sys-Admin Job"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "groups",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Sys-Admin Job"
+          }
+        ],
+        "observed": "groups",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    },
+    {
+      "activity": {
+        "evidence": "latest public stream post 2026-08-21T05:48:17+00:00",
+        "limitation": "A public timestamp or online count establishes a current public signal, not long-term posting quality.",
+        "public_preview_extra": "1 232 subscribers",
+        "retained_public_timestamps": [
+          "2026-08-13T09:36:16+00:00",
+          "2026-08-17T09:03:59+00:00",
+          "2026-08-17T10:00:47+00:00",
+          "2026-08-18T09:17:49+00:00",
+          "2026-08-21T05:48:17+00:00"
+        ]
+      },
+      "candidate_id": "candidate:tvkrg",
+      "category": {
+        "proposed": "startups",
+        "valid_in_baseline": true
+      },
+      "collisions": {
+        "canonical_alias_near_handle": "No exact live/archive match, canonical redirect, public same-target alias, or material near-handle collision was found.",
+        "cross_input_duplicate": false,
+        "exact_live_or_archive": {
+          "candidate_id": "candidate:tvkrg",
+          "cross_input_duplicate": false,
+          "matched_handles": [],
+          "status": "clear"
+        }
+      },
+      "commerciality_spam": {
+        "limitation": "Only the bounded public description and up to three visible public-stream excerpts were inspected; private history was not accessed.",
+        "purely_commercial": false,
+        "reason": "The retained evidence is ecosystem programming and community events, not a sales-only feed; risk is low."
+      },
+      "copy": {
+        "assessment": "Concise neutral parallel meaning; facts bounded to retained evidence.",
+        "description": "Karaganda technology and startup hub channel for events, news, and networking.",
+        "description_kk": "Қарағандыдағы технология және стартап хабының іс-шаралар, жаңалықтар және нетворкинг арнасы.",
+        "description_ru": "Канал технологического и стартап-хаба Караганды с событиями, новостями и нетворкингом."
+      },
+      "disposition": {
+        "action": "add",
+        "reason": "Target-bound channel is live; public evidence supports Kazakhstan and IT relevance, current activity, non-pure-commercial admission, and category startups."
+      },
+      "evidence_refs": [
+        "phase-b/evidence/universe/observations.json candidate_id=candidate:tvkrg",
+        "phase-b/evidence/universe/editorial-public-evidence.json candidate_id=candidate:tvkrg",
+        "phase-b/evidence/universe/collisions.json candidate_id=candidate:tvkrg"
+      ],
+      "identity": {
+        "canonical_handle": "tvkrg",
+        "engine_body_sha256": "6e592492a5eba23331d5d348e84c6f6f0a7f2cd9e6d3ce92c66f7674b7aea732",
+        "identity_result": "verified_exact_public_target",
+        "requested_handle": "tvkrg",
+        "target_bound": true,
+        "visible_name": "Terricon Valley | IT и Бизнес | Караганда"
+      },
+      "liveness": {
+        "observed_at": "2026-08-29",
+        "result": "live_public_preview",
+        "status": "verified",
+        "transport": {
+          "attempts": 1,
+          "ok": true,
+          "reason": "fetched",
+          "status_code": 200
+        }
+      },
+      "observed_facts": {
+        "count_semantics": "Observed once by the approved engine; never estimated.",
+        "member_count": 1232,
+        "verification_date": "2026-08-29"
+      },
+      "relevance": {
+        "it_or_startup": true,
+        "kazakhstan": true,
+        "public_description_excerpt": "Мероприятия, новости, нетворкинг. Вступить в чат-коммьюнити: https://t.me/terricon_verify_bot Сайт: https://terricon.kz/",
+        "reason": "The public name identifies IT and business in Karaganda; the description and current posts show hub events and networking."
+      },
+      "source_occurrence_count": 1,
+      "source_occurrence_ids": [
+        "occurrence:0014"
+      ],
+      "type": {
+        "declared_type_trials": [
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "groups",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Terricon Valley | IT и Бизнес | Караганда"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "verified",
+            "declared_type": "channels",
+            "member_count": 1232,
+            "observed_type": "channels",
+            "reason": "target_preview_verified",
+            "target_bound": true,
+            "visible_name": "Terricon Valley | IT и Бизнес | Караганда"
+          },
+          {
+            "archive_candidate": false,
+            "classification": "ambiguous",
+            "declared_type": "bots",
+            "member_count": null,
+            "observed_type": "channels",
+            "reason": "declared_type_mismatch",
+            "target_bound": true,
+            "visible_name": "Terricon Valley | IT и Бизнес | Караганда"
+          }
+        ],
+        "observed": "channels",
+        "result": "one_verified_two_target_bound_declared_type_mismatches"
+      }
+    }
+  ],
+  "catalog_before_sha256": "a46f893d6d73e2ecc760913be9075873b79470b675807cc585933cb457cf963d",
+  "global_limitations": [
+    "No authenticated or private Telegram access was used.",
+    "Public group history is not exposed; current online counts are only point-in-time activity signals.",
+    "No Phase A engine, rule, prompt, or fixture was changed after holdout evaluation.",
+    "Unresolved candidates remain unresolved; preliminary discovery claims were not promoted to current facts."
+  ],
+  "schema_version": "kz-intake-candidate-judgements/v1",
+  "totals": {
+    "add": 20,
+    "duplicate": 1,
+    "reject": 3,
+    "unresolved": 4
+  }
+}
