@@ -5,7 +5,7 @@ lang: ru
 title: "IT-сообщества Казахстана в Telegram"
 description: "Проверенный каталог IT-групп, каналов и ботов для технологического сообщества Казахстана"
 canonical_url: "https://saubakirov.github.io/KZ-IT-telegram-list/ru/"
-last_modified: 2026-08-27
+last_modified: 2026-11-20
 og_locale: ru_RU
 og_locale_alternates:
   - en_US
@@ -36,7 +36,7 @@ sitemap: true
 ### <a id="type-groups-category-ai"></a>Группы · Искусственный интеллект
 
 - <a id="entry-ai_qadam_kazakhstan"></a>[AI Qadam Kazakhstan](https://t.me/ai_qadam_kazakhstan) · `@ai_qadam_kazakhstan` · `413` · проверено `2026-08-29` — Казахстанское отделение AI Qadam для изучения и практического применения искусственного интеллекта.
-- <a id="entry-cursor_kz"></a>[Cursor Kazakhstan / AI Community](https://t.me/cursor_kz) · `@cursor_kz` · `220` · проверено `2026-08-27` — Сообщество пользователей Cursor и AI-инструментов в Казахстане
+- <a id="entry-agentic_kz"></a>[Agentic KZ / AI Community (ex. Cursor Kazakhstan)](https://t.me/agentic_kz) · `@agentic_kz` · `273` · проверено `2026-11-20` — Сообщество пользователей AI в Казахстане (ранее Cursor Kazakhstan)
 
 ### <a id="type-groups-category-programming-languages"></a>Группы · Языки программирования
 

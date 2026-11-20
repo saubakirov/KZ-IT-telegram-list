@@ -21,7 +21,7 @@
 ### <a id="type-groups-category-ai"></a>Groups · AI
 
 - <a id="entry-ai_qadam_kazakhstan"></a>[AI Qadam Kazakhstan](https://t.me/ai_qadam_kazakhstan) · `@ai_qadam_kazakhstan` · `413` · verified `2026-08-29` — Kazakhstan chapter of AI Qadam for learning and applying artificial intelligence.
-- <a id="entry-cursor_kz"></a>[Cursor Kazakhstan / AI Community](https://t.me/cursor_kz) · `@cursor_kz` · `220` · verified `2026-08-27` — Cursor and AI coding community in Kazakhstan
+- <a id="entry-agentic_kz"></a>[Agentic KZ / AI Community (ex. Cursor Kazakhstan)](https://t.me/agentic_kz) · `@agentic_kz` · `273` · verified `2026-11-20` — AI user community in Kazakhstan (formerly Cursor Kazakhstan)
 
 ### <a id="type-groups-category-programming-languages"></a>Groups · Programming Languages
 

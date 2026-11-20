@@ -247,7 +247,7 @@ class CatalogGenerationTests(unittest.TestCase):
         self.assert_invalid(missing_intent_reference, "RES-2 baseline")
 
         redundant_exception = copy.deepcopy(self.data)
-        redundant_exception["intents"]["ai"]["exceptional_handles"].append("cursor_kz")
+        redundant_exception["intents"]["ai"]["exceptional_handles"].append("agentic_kz")
         self.assert_invalid(redundant_exception, "RES-2 baseline")
 
     def test_stale_digest_and_duplicate_destination_fail(self) -> None:
@@ -266,8 +266,8 @@ class CatalogGenerationTests(unittest.TestCase):
         broken = content.replace("](#type-groups)", "](#missing-fragment)", 1)
         self.assertTrue(any("unresolved fragments" in error for error in presentation_errors(broken, self.data, projection)))
 
-        lost = content.replace("](https://t.me/cursor_kz)", "](https://example.invalid/cursor_kz)", 1)
-        self.assertTrue(any("cursor_kz" in error for error in presentation_errors(lost, self.data, projection)))
+        lost = content.replace("](https://t.me/agentic_kz)", "](https://example.invalid/agentic_kz)", 1)
+        self.assertTrue(any("agentic_kz" in error for error in presentation_errors(lost, self.data, projection)))
 
         duplicate = content + '\n<a id="type-groups"></a>\n'
         self.assertTrue(any("duplicate destinations" in error for error in presentation_errors(duplicate, self.data, projection)))
