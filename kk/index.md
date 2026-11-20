@@ -5,7 +5,7 @@ lang: kk
 title: "Қазақстанның Telegram-дағы IT қауымдастықтары"
 description: "Қазақстанның технологиялық қауымдастығына арналған тексерілген Telegram топтары, арналары мен боттарының каталогы"
 canonical_url: "https://saubakirov.github.io/KZ-IT-telegram-list/kk/"
-last_modified: 2026-08-27
+last_modified: 2026-11-20
 og_locale: kk_KZ
 og_locale_alternates:
   - en_US
@@ -36,7 +36,7 @@ sitemap: true
 ### <a id="type-groups-category-ai"></a>Топтар · Жасанды интеллект
 
 - <a id="entry-ai_qadam_kazakhstan"></a>[AI Qadam Kazakhstan](https://t.me/ai_qadam_kazakhstan) · `@ai_qadam_kazakhstan` · `413` · тексерілді `2026-08-29` — Жасанды интеллектті үйренуге және іс жүзінде қолдануға арналған AI Qadam-ның Қазақстандағы қауымдастығы.
-- <a id="entry-cursor_kz"></a>[Cursor Kazakhstan / AI Community](https://t.me/cursor_kz) · `@cursor_kz` · `220` · тексерілді `2026-08-27` — Қазақстандағы Cursor және AI көмегімен бағдарламалау қауымдастығы
+- <a id="entry-agentic_kz"></a>[Agentic KZ / AI Community (ex. Cursor Kazakhstan)](https://t.me/agentic_kz) · `@agentic_kz` · `273` · тексерілді `2026-11-20` — Қазақстандағы AI пайдаланушыларының қауымдастығы (бұрын Cursor Kazakhstan)
 
 ### <a id="type-groups-category-programming-languages"></a>Топтар · Бағдарламалау тілдері
 

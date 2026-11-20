@@ -6,7 +6,7 @@
     "description": "A curated list of IT-related Telegram groups, channels, and bots for the Kazakhstan tech community",
     "description_ru": "Проверенный каталог IT-групп, каналов и ботов для технологического сообщества Казахстана",
     "description_kk": "Қазақстанның технологиялық қауымдастығына арналған тексерілген Telegram топтары, арналары мен боттарының каталогы",
-    "last_updated": "2026-08-27",
+    "last_updated": "2026-11-20",
     "source_repo": "https://github.com/saubakirov/KZ-IT-telegram-list"
   },
   "north_star": {
@@ -105,14 +105,14 @@
       "member_count": 1246
     },
     {
-      "name": "Cursor Kazakhstan / AI Community",
-      "handle": "cursor_kz",
-      "description": "Cursor and AI coding community in Kazakhstan",
-      "description_ru": "Сообщество пользователей Cursor и AI-инструментов в Казахстане",
-      "description_kk": "Қазақстандағы Cursor және AI көмегімен бағдарламалау қауымдастығы",
+      "name": "Agentic KZ / AI Community (ex. Cursor Kazakhstan)",
+      "handle": "agentic_kz",
+      "description": "AI user community in Kazakhstan (formerly Cursor Kazakhstan)",
+      "description_ru": "Сообщество пользователей AI в Казахстане (ранее Cursor Kazakhstan)",
+      "description_kk": "Қазақстандағы AI пайдаланушыларының қауымдастығы (бұрын Cursor Kazakhstan)",
       "category": "ai",
-      "last_verified": "2026-08-27",
-      "member_count": 220
+      "last_verified": "2026-11-20",
+      "member_count": 273
     },
     {
       "name": "Automation KZ",
@@ -1149,7 +1149,7 @@
     "status": "CANDIDATE",
     "acceptance_authority": "TFW REVIEW",
     "canonicalization": "NFC + sorted-key compact UTF-8 JSON",
-    "payload_sha256": "b07912bb12ee0429b46249853545503f1f0e2ed358f3c23af73b5e1dcdc6bc5c",
+    "payload_sha256": "e0a5c520ead21d5c764cc5143e5fd5fbf82b0d61b38538d581b4b5b95ac54a56",
     "prior_approved_ref": null,
     "prior_approved_digest": null,
     "changed_keys": "ALL",
